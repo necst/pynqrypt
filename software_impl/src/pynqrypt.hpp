@@ -8,6 +8,7 @@
 namespace crypto {
 
 static const int AES_ROUNDS = 10;
+static const int NONCE_SIZE = 12;
 static const int BLOCK_SIZE = 16;
 static const int KEY_SIZE = 16;
 static const int NUM_ROUNDS = 10;
@@ -21,9 +22,13 @@ class Pynqrypt {
 
     private:
         aes_atom key[BLOCK_SIZE];
-        aes_atom nonce[BLOCK_SIZE];
+        aes_atom nonce[NONCE_SIZE];
 
         aes_atom round_keys[AES_ROUNDS + 1][BLOCK_SIZE];
+
+        // ctr functions
+        void ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset);
+        void ctr_xor_block(aes_atom *block, size_t block_size, aes_atom block_nonce[16]);
 
         // encryption functions
         void aes_encrypt_block(aes_atom state[BLOCK_SIZE]);
@@ -52,12 +57,12 @@ class Pynqrypt {
 
         ~Pynqrypt() = default;
 
-        std::vector<aes_atom> encrypt(
+        std::vector<aes_atom> ctr_encrypt(
             std::vector<aes_atom> plaintext,
             off64_t offset = 0
         );
         
-        std::vector<aes_atom> decrypt(
+        std::vector<aes_atom> ctr_decrypt(
             std::vector<aes_atom> ciphertext,
             off64_t offset = 0
         );

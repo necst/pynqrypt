@@ -2,13 +2,14 @@
 #include "pynqrypt.hpp"
 
 #include <iostream>
+#include <fstream>
 
 using namespace crypto;
 
 void PynqryptTest::run()
 {
     std::vector<aes_atom> key = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    std::vector<aes_atom> nonce = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    std::vector<aes_atom> nonce = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     auto pynqrypt = Pynqrypt(key, nonce);
 
@@ -92,6 +93,29 @@ void PynqryptTest::run()
         return;
     } else {
         std::cout << "aes_decrypt passed" << std::endl;
+    }
+
+    std::cout << "Validating ctr encryption and decryption" << std::endl;
+
+    std::vector<aes_atom> plaintext;
+    for (int i = 0; i < 1024; i++) {
+        plaintext.push_back(i % 256);
+    }
+
+    auto ciphertext = encrypter.ctr_encrypt(plaintext);
+
+    std::ofstream file;
+    file.open("ciphertext", std::ios::out | std::ios::binary);
+    file.write((char*)ciphertext.data(), ciphertext.size());
+    file.close();
+
+    auto decrypted = encrypter.ctr_decrypt(ciphertext);
+
+    if (!std::equal(std::begin(plaintext), std::end(plaintext), std::begin(decrypted))) {
+        std::cout << "ctr_encrypt and ctr_decrypt failed" << std::endl;
+        return;
+    } else {
+        std::cout << "ctr_encrypt and ctr_decrypt passed" << std::endl;
     }
 
 }
