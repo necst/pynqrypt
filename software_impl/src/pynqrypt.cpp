@@ -26,7 +26,7 @@ std::vector<aes_atom> Pynqrypt::ctr_encrypt(std::vector<aes_atom> plaintext, off
     for (size_t i = 0; i < plaintext.size(); i += 16) {
         size_t block_size = std::min(plaintext.size() - i, (size_t)16);
         std::copy(&plaintext[i], &plaintext[i + block_size], block);
-        ctr_compute_nonce(block_nonce, offset + i);
+        ctr_compute_nonce(block_nonce, offset + i / 16);
         aes_encrypt_block(block_nonce);
         ctr_xor_block(block, block_size, block_nonce);
         ciphertext.insert(ciphertext.end(), block, block + block_size);
