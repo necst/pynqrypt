@@ -7,8 +7,8 @@ Pynqrypt::Pynqrypt(std::vector<aes_atom> key, std::vector<aes_atom> nonce)
 {
     if (key.size() != 16)
         throw std::invalid_argument("Key must be 16 bytes");
-    if (nonce.size() != 16)
-        throw std::invalid_argument("Nonce must be 16 bytes");
+    if (nonce.size() != 12)
+        throw std::invalid_argument("Nonce must be 12 bytes");
 
     std::copy(key.begin(), key.end(), this->key);
     std::copy(nonce.begin(), nonce.end(), this->nonce);
@@ -16,16 +16,44 @@ Pynqrypt::Pynqrypt(std::vector<aes_atom> key, std::vector<aes_atom> nonce)
     aes_generate_round_keys();
 }
 
-std::vector<aes_atom> Pynqrypt::encrypt(std::vector<aes_atom> plaintext, off64_t offset)
+std::vector<aes_atom> Pynqrypt::ctr_encrypt(std::vector<aes_atom> plaintext, off64_t offset)
 {
-    std::vector<aes_atom> ciphertext(plaintext.size());
+    std::vector<aes_atom> ciphertext;
+    
+    aes_atom block_nonce[16];
+    aes_atom block[16];
+
+    for (size_t i = 0; i < plaintext.size(); i += 16) {
+        size_t block_size = std::min(plaintext.size() - i, (size_t)16);
+        std::copy(&plaintext[i], &plaintext[i + block_size], block);
+        ctr_compute_nonce(block_nonce, offset + i);
+        aes_encrypt_block(block_nonce);
+        ctr_xor_block(block, block_size, block_nonce);
+        ciphertext.insert(ciphertext.end(), block, block + block_size);
+    }
+
     return ciphertext;
 }
 
-std::vector<aes_atom> Pynqrypt::decrypt(std::vector<aes_atom> ciphertext, off64_t offset)
+std::vector<aes_atom> Pynqrypt::ctr_decrypt(std::vector<aes_atom> ciphertext, off64_t offset)
 {
-    std::vector<aes_atom> plaintext(ciphertext.size());
-    return plaintext;
+    return ctr_encrypt(ciphertext, offset);
+}
+
+void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
+{
+    std::copy(nonce, nonce + NONCE_SIZE, block_nonce);
+
+    block_nonce[12] = (offset >> 24) & 0xFF;
+    block_nonce[13] = (offset >> 16) & 0xFF;
+    block_nonce[14] = (offset >> 8) & 0xFF;
+    block_nonce[15] = offset & 0xFF;
+}
+
+void Pynqrypt::ctr_xor_block(aes_atom *block, size_t block_size, aes_atom block_nonce[16])
+{
+    for (size_t i = 0; i < block_size; i++)
+        block[i] ^= block_nonce[i];
 }
 
 // encryption functions
