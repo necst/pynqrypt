@@ -3,8 +3,6 @@
 #include <stdexcept>
 #include <vector>
 
-#include "test.hpp"
-
 namespace crypto {
 
 static const int AES_ROUNDS = 10;
@@ -17,8 +15,6 @@ using aes_atom = uint8_t;
 using aes_word = uint32_t;
 
 class Pynqrypt {
-
-    friend class PynqryptTest;
 
     private:
         aes_atom key[BLOCK_SIZE];
