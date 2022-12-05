@@ -1,7 +1,7 @@
 # Stolen from https://makefiletutorial.com/#makefile-cookbook
 
 # Thanks to Job Vranish (https://spin.atomicobject.com/2016/08/26/makefile-c-projects/)
-TARGET_EXEC := final_program
+TARGET_EXEC := pynqrypt
 
 BUILD_DIR := ./build
 SRC_DIRS := ./src
@@ -47,7 +47,7 @@ clean:
 	rm -r $(BUILD_DIR)
 
 test: $(BUILD_DIR)/$(TARGET_EXEC)
-	$(BUILD_DIR)/$(TARGET_EXEC)
+	python3 test.py
 
 
 # Include the .d makefiles. The - at the front suppresses the errors of missing
