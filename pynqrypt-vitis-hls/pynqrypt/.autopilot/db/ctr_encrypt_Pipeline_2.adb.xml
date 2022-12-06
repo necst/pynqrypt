@@ -130,10 +130,10 @@ load-store-loop.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, 
 
 <Node id="11" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-load-store-loop.i:4 %empty_31 = add i4 %loop_index_i_load, i4 1
+load-store-loop.i:4 %empty_29 = add i4 %loop_index_i_load, i4 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_31"/></StgValue>
+<StgValue><ssdm name="empty_29"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -209,7 +209,7 @@ load-store-loop.i.split:2 %this_nonce_load = load i4 %this_nonce_addr
 
 <Node id="19" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-load-store-loop.i.split:5 %store_ln0 = store i4 %empty_31, i4 %loop_index_i
+load-store-loop.i.split:5 %store_ln0 = store i4 %empty_29, i4 %loop_index_i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -342,9 +342,9 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="58" from="StgValue_55" to="empty" fromId="55" toId="11">
 </dataflow>
-<dataflow id="59" from="loop_index_i_load" to="empty_31" fromId="8" toId="12">
+<dataflow id="59" from="loop_index_i_load" to="empty_29" fromId="8" toId="12">
 </dataflow>
-<dataflow id="61" from="StgValue_60" to="empty_31" fromId="60" toId="12">
+<dataflow id="61" from="StgValue_60" to="empty_29" fromId="60" toId="12">
 </dataflow>
 <dataflow id="62" from="exitcond3" to="br_ln0" fromId="10" toId="13">
 </dataflow>
@@ -358,7 +358,7 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="68" from="this_nonce_addr" to="this_nonce_load" fromId="15" toId="16">
 </dataflow>
-<dataflow id="69" from="empty_31" to="store_ln0" fromId="12" toId="17">
+<dataflow id="69" from="empty_29" to="store_ln0" fromId="12" toId="17">
 </dataflow>
 <dataflow id="70" from="loop_index_i" to="store_ln0" fromId="5" toId="17">
 </dataflow>

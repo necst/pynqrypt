@@ -32,23 +32,44 @@ module pynqrypt_encrypt_aes_encrypt_block (
         state_q1
 );
 
-parameter    ap_ST_fsm_state1 = 17'd1;
-parameter    ap_ST_fsm_state2 = 17'd2;
-parameter    ap_ST_fsm_state3 = 17'd4;
-parameter    ap_ST_fsm_state4 = 17'd8;
-parameter    ap_ST_fsm_state5 = 17'd16;
-parameter    ap_ST_fsm_state6 = 17'd32;
-parameter    ap_ST_fsm_state7 = 17'd64;
-parameter    ap_ST_fsm_state8 = 17'd128;
-parameter    ap_ST_fsm_state9 = 17'd256;
-parameter    ap_ST_fsm_state10 = 17'd512;
-parameter    ap_ST_fsm_state11 = 17'd1024;
-parameter    ap_ST_fsm_state12 = 17'd2048;
-parameter    ap_ST_fsm_state13 = 17'd4096;
-parameter    ap_ST_fsm_state14 = 17'd8192;
-parameter    ap_ST_fsm_state15 = 17'd16384;
-parameter    ap_ST_fsm_state16 = 17'd32768;
-parameter    ap_ST_fsm_state17 = 17'd65536;
+parameter    ap_ST_fsm_state1 = 38'd1;
+parameter    ap_ST_fsm_state2 = 38'd2;
+parameter    ap_ST_fsm_state3 = 38'd4;
+parameter    ap_ST_fsm_state4 = 38'd8;
+parameter    ap_ST_fsm_state5 = 38'd16;
+parameter    ap_ST_fsm_state6 = 38'd32;
+parameter    ap_ST_fsm_state7 = 38'd64;
+parameter    ap_ST_fsm_state8 = 38'd128;
+parameter    ap_ST_fsm_state9 = 38'd256;
+parameter    ap_ST_fsm_state10 = 38'd512;
+parameter    ap_ST_fsm_state11 = 38'd1024;
+parameter    ap_ST_fsm_state12 = 38'd2048;
+parameter    ap_ST_fsm_state13 = 38'd4096;
+parameter    ap_ST_fsm_state14 = 38'd8192;
+parameter    ap_ST_fsm_state15 = 38'd16384;
+parameter    ap_ST_fsm_state16 = 38'd32768;
+parameter    ap_ST_fsm_state17 = 38'd65536;
+parameter    ap_ST_fsm_state18 = 38'd131072;
+parameter    ap_ST_fsm_state19 = 38'd262144;
+parameter    ap_ST_fsm_state20 = 38'd524288;
+parameter    ap_ST_fsm_state21 = 38'd1048576;
+parameter    ap_ST_fsm_state22 = 38'd2097152;
+parameter    ap_ST_fsm_state23 = 38'd4194304;
+parameter    ap_ST_fsm_state24 = 38'd8388608;
+parameter    ap_ST_fsm_state25 = 38'd16777216;
+parameter    ap_ST_fsm_state26 = 38'd33554432;
+parameter    ap_ST_fsm_state27 = 38'd67108864;
+parameter    ap_ST_fsm_state28 = 38'd134217728;
+parameter    ap_ST_fsm_state29 = 38'd268435456;
+parameter    ap_ST_fsm_state30 = 38'd536870912;
+parameter    ap_ST_fsm_state31 = 38'd1073741824;
+parameter    ap_ST_fsm_state32 = 38'd2147483648;
+parameter    ap_ST_fsm_state33 = 38'd4294967296;
+parameter    ap_ST_fsm_state34 = 38'd8589934592;
+parameter    ap_ST_fsm_state35 = 38'd17179869184;
+parameter    ap_ST_fsm_state36 = 38'd34359738368;
+parameter    ap_ST_fsm_state37 = 38'd68719476736;
+parameter    ap_ST_fsm_state38 = 38'd137438953472;
 
 input   ap_clk;
 input   ap_rst;
@@ -78,6 +99,7 @@ reg ap_idle;
 reg ap_ready;
 reg[7:0] pynqrypt_round_keys_address0;
 reg pynqrypt_round_keys_ce0;
+reg[7:0] pynqrypt_round_keys_address1;
 reg pynqrypt_round_keys_ce1;
 reg[3:0] state_address0;
 reg state_ce0;
@@ -88,92 +110,180 @@ reg state_ce1;
 reg state_we1;
 reg[7:0] state_d1;
 
-(* fsm_encoding = "none" *) reg   [16:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [37:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg   [7:0] crypto_aes_sbox_address0;
-reg    crypto_aes_sbox_ce0;
-wire   [7:0] crypto_aes_sbox_q0;
-reg   [7:0] reg_224;
-wire    ap_CS_fsm_state8;
-wire    ap_CS_fsm_state11;
-reg   [7:0] reg_230;
-wire    ap_CS_fsm_state10;
-wire    ap_CS_fsm_state12;
-reg   [7:0] reg_236;
-wire    ap_CS_fsm_state9;
-wire    ap_CS_fsm_state13;
-reg   [7:0] reg_241;
+reg   [7:0] aes_sbox2_address0;
+reg    aes_sbox2_ce0;
+wire   [7:0] aes_sbox2_q0;
+reg   [7:0] aes_sbox2_address1;
+reg    aes_sbox2_ce1;
+wire   [7:0] aes_sbox2_q1;
+reg   [7:0] reg_916;
 wire    ap_CS_fsm_state2;
-wire   [0:0] icmp_ln221_fu_262_p2;
-reg   [3:0] state_addr_reg_301;
-wire   [3:0] state_addr_2_reg_306;
-wire    ap_CS_fsm_state7;
-wire   [3:0] state_addr_3_reg_311;
-wire   [3:0] state_addr_10_reg_339;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_done;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_idle;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_ready;
-wire   [3:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_address0;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_ce0;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_we0;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_d0;
-wire   [3:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_address1;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_ce1;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_we1;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_d1;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_address0;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_ce0;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_address1;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_ce1;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_crypto_aes_sbox_address0;
-wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_crypto_aes_sbox_ce0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_done;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_idle;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_ready;
-wire   [3:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_address0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_ce0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_we0;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_d0;
-wire   [3:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_address1;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_ce1;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_crypto_aes_sbox_address0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_crypto_aes_sbox_ce0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_done;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_idle;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_ready;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_pynqrypt_round_keys_address0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_pynqrypt_round_keys_ce0;
-wire   [3:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_address0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_ce0;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_we0;
-wire   [7:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_d0;
-wire   [3:0] grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_address1;
-wire    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_ce1;
-reg    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start_reg;
-wire    ap_CS_fsm_state4;
-reg    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start_reg;
-wire    ap_CS_fsm_state5;
-wire    ap_CS_fsm_state6;
-reg    grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start_reg;
-wire    ap_CS_fsm_state16;
-wire    ap_CS_fsm_state17;
-wire   [63:0] zext_ln221_fu_256_p1;
-reg   [4:0] i_fu_54;
-wire   [4:0] add_ln221_fu_268_p2;
+wire    ap_CS_fsm_state9;
+reg   [7:0] reg_920;
 wire    ap_CS_fsm_state3;
-wire   [7:0] xor_ln222_fu_279_p2;
+reg   [7:0] reg_924;
+wire    ap_CS_fsm_state10;
+wire   [3:0] state_addr_reg_1253;
+wire   [3:0] state_addr_1_reg_1258;
+wire   [3:0] state_addr_2_reg_1263;
+reg   [7:0] state_load_3_reg_1280;
+wire    ap_CS_fsm_state4;
+reg   [7:0] state_load_4_reg_1285;
+reg   [7:0] state_load_5_reg_1302;
+wire    ap_CS_fsm_state5;
+reg   [7:0] state_load_6_reg_1307;
+reg   [7:0] state_load_7_reg_1324;
+wire    ap_CS_fsm_state6;
+reg   [7:0] state_load_8_reg_1329;
+reg   [7:0] state_load_9_reg_1346;
+wire    ap_CS_fsm_state7;
+reg   [7:0] state_load_10_reg_1351;
+wire    ap_CS_fsm_state8;
+reg   [7:0] state_load_11_reg_1378;
+reg   [7:0] state_load_12_reg_1383;
+wire   [7:0] xor_ln233_fu_928_p2;
+reg   [7:0] xor_ln233_reg_1400;
+wire    ap_CS_fsm_state11;
+wire    ap_CS_fsm_state12;
+wire    ap_CS_fsm_state13;
 wire    ap_CS_fsm_state14;
 wire    ap_CS_fsm_state15;
-reg   [16:0] ap_NS_fsm;
+wire    ap_CS_fsm_state19;
+wire    ap_CS_fsm_state20;
+wire    ap_CS_fsm_state21;
+wire    ap_CS_fsm_state22;
+wire    ap_CS_fsm_state23;
+wire    ap_CS_fsm_state24;
+wire    ap_CS_fsm_state25;
+wire    ap_CS_fsm_state26;
+wire    ap_CS_fsm_state30;
+wire    ap_CS_fsm_state31;
+wire    ap_CS_fsm_state32;
+wire    ap_CS_fsm_state33;
+wire    ap_CS_fsm_state34;
+wire    ap_CS_fsm_state35;
+wire    ap_CS_fsm_state36;
+wire    ap_CS_fsm_state37;
+reg   [3:0] temp_address0;
+reg    temp_ce0;
+reg    temp_we0;
+wire   [7:0] temp_q0;
+reg   [3:0] temp_address1;
+reg    temp_ce1;
+wire   [7:0] temp_q1;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_done;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_idle;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_ready;
+wire   [3:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_address0;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_ce0;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_we0;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_d0;
+wire   [3:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_address1;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_ce1;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_we1;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_d1;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_address0;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_ce0;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_address1;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_ce1;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_p_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_p_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_1_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_1_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_2_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_2_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_3_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_3_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_4_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_4_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_5_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_5_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_6_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_6_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_7_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_7_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_8_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_8_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_9_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_9_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_10_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_10_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_11_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_11_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_12_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_12_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_13_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_13_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_14_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_14_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_15_phi_out;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_15_phi_out_ap_vld;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_address0;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_ce0;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_address1;
+wire    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_ce1;
+wire    grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start;
+wire    grp_aes_encrypt_block_Pipeline_2_fu_895_ap_done;
+wire    grp_aes_encrypt_block_Pipeline_2_fu_895_ap_idle;
+wire    grp_aes_encrypt_block_Pipeline_2_fu_895_ap_ready;
+wire   [3:0] grp_aes_encrypt_block_Pipeline_2_fu_895_state_address0;
+wire    grp_aes_encrypt_block_Pipeline_2_fu_895_state_ce0;
+wire   [3:0] grp_aes_encrypt_block_Pipeline_2_fu_895_temp_address0;
+wire    grp_aes_encrypt_block_Pipeline_2_fu_895_temp_ce0;
+wire    grp_aes_encrypt_block_Pipeline_2_fu_895_temp_we0;
+wire   [7:0] grp_aes_encrypt_block_Pipeline_2_fu_895_temp_d0;
+reg    grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start_reg;
+wire    ap_CS_fsm_state17;
+wire    ap_CS_fsm_state18;
+reg    grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start_reg;
+wire    ap_CS_fsm_state28;
+wire    ap_CS_fsm_state29;
+wire   [63:0] zext_ln72_fu_1035_p1;
+wire   [63:0] zext_ln72_1_fu_1040_p1;
+wire   [63:0] zext_ln72_2_fu_1051_p1;
+wire   [63:0] zext_ln72_3_fu_1056_p1;
+wire   [63:0] zext_ln72_4_fu_1067_p1;
+wire   [63:0] zext_ln72_5_fu_1072_p1;
+wire   [63:0] zext_ln72_6_fu_1083_p1;
+wire   [63:0] zext_ln72_7_fu_1088_p1;
+wire   [63:0] zext_ln72_8_fu_1099_p1;
+wire   [63:0] zext_ln72_9_fu_1104_p1;
+wire   [63:0] zext_ln72_10_fu_1115_p1;
+wire   [63:0] zext_ln72_11_fu_1120_p1;
+wire   [63:0] zext_ln72_12_fu_1131_p1;
+wire   [63:0] zext_ln72_13_fu_1136_p1;
+wire   [63:0] zext_ln72_14_fu_1147_p1;
+wire   [63:0] zext_ln72_15_fu_1152_p1;
+wire   [7:0] xor_ln233_1_fu_934_p2;
+wire   [7:0] xor_ln233_2_fu_941_p2;
+wire   [7:0] xor_ln233_3_fu_948_p2;
+wire   [7:0] xor_ln233_4_fu_954_p2;
+wire   [7:0] xor_ln233_5_fu_960_p2;
+wire   [7:0] xor_ln233_6_fu_966_p2;
+wire   [7:0] xor_ln233_7_fu_972_p2;
+wire   [7:0] xor_ln233_8_fu_978_p2;
+wire   [7:0] xor_ln233_9_fu_984_p2;
+wire   [7:0] xor_ln233_10_fu_990_p2;
+wire   [7:0] xor_ln233_11_fu_996_p2;
+wire   [7:0] xor_ln233_12_fu_1002_p2;
+wire   [7:0] xor_ln233_13_fu_1008_p2;
+wire    ap_CS_fsm_state16;
+wire   [7:0] xor_ln233_14_fu_1015_p2;
+wire   [7:0] xor_ln233_15_fu_1022_p2;
+wire    ap_CS_fsm_state27;
+wire   [7:0] grp_fu_902_p2;
+wire   [7:0] grp_fu_909_p2;
+wire    ap_CS_fsm_state38;
+reg   [37:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
 wire    ap_ST_fsm_state3_blk;
-reg    ap_ST_fsm_state4_blk;
+wire    ap_ST_fsm_state4_blk;
 wire    ap_ST_fsm_state5_blk;
-reg    ap_ST_fsm_state6_blk;
+wire    ap_ST_fsm_state6_blk;
 wire    ap_ST_fsm_state7_blk;
 wire    ap_ST_fsm_state8_blk;
 wire    ap_ST_fsm_state9_blk;
@@ -184,93 +294,147 @@ wire    ap_ST_fsm_state13_blk;
 wire    ap_ST_fsm_state14_blk;
 wire    ap_ST_fsm_state15_blk;
 wire    ap_ST_fsm_state16_blk;
-reg    ap_ST_fsm_state17_blk;
+wire    ap_ST_fsm_state17_blk;
+reg    ap_ST_fsm_state18_blk;
+wire    ap_ST_fsm_state19_blk;
+wire    ap_ST_fsm_state20_blk;
+wire    ap_ST_fsm_state21_blk;
+wire    ap_ST_fsm_state22_blk;
+wire    ap_ST_fsm_state23_blk;
+wire    ap_ST_fsm_state24_blk;
+wire    ap_ST_fsm_state25_blk;
+wire    ap_ST_fsm_state26_blk;
+wire    ap_ST_fsm_state27_blk;
+wire    ap_ST_fsm_state28_blk;
+reg    ap_ST_fsm_state29_blk;
+wire    ap_ST_fsm_state30_blk;
+wire    ap_ST_fsm_state31_blk;
+wire    ap_ST_fsm_state32_blk;
+wire    ap_ST_fsm_state33_blk;
+wire    ap_ST_fsm_state34_blk;
+wire    ap_ST_fsm_state35_blk;
+wire    ap_ST_fsm_state36_blk;
+wire    ap_ST_fsm_state37_blk;
+wire    ap_ST_fsm_state38_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 17'd1;
-#0 grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start_reg = 1'b0;
-#0 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start_reg = 1'b0;
-#0 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 38'd1;
+#0 grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start_reg = 1'b0;
+#0 grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start_reg = 1'b0;
 end
 
-pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R #(
+pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R #(
     .DataWidth( 8 ),
     .AddressRange( 256 ),
     .AddressWidth( 8 ))
-crypto_aes_sbox_U(
+aes_sbox2_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(crypto_aes_sbox_address0),
-    .ce0(crypto_aes_sbox_ce0),
-    .q0(crypto_aes_sbox_q0)
+    .address0(aes_sbox2_address0),
+    .ce0(aes_sbox2_ce0),
+    .q0(aes_sbox2_q0),
+    .address1(aes_sbox2_address1),
+    .ce1(aes_sbox2_ce1),
+    .q1(aes_sbox2_q1)
 );
 
-pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198(
+pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W #(
+    .DataWidth( 8 ),
+    .AddressRange( 16 ),
+    .AddressWidth( 4 ))
+temp_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(temp_address0),
+    .ce0(temp_ce0),
+    .we0(temp_we0),
+    .d0(grp_aes_encrypt_block_Pipeline_2_fu_895_temp_d0),
+    .q0(temp_q0),
+    .address1(temp_address1),
+    .ce1(temp_ce1),
+    .q1(temp_q1)
+);
+
+pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start),
-    .ap_done(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_done),
-    .ap_idle(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_idle),
-    .ap_ready(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_ready),
-    .state_address0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_address0),
-    .state_ce0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_ce0),
-    .state_we0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_we0),
-    .state_d0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_d0),
+    .ap_start(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start),
+    .ap_done(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_done),
+    .ap_idle(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_idle),
+    .ap_ready(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_ready),
+    .xor_ln233(xor_ln233_reg_1400),
+    .state_address0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_address0),
+    .state_ce0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_ce0),
+    .state_we0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_we0),
+    .state_d0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_d0),
     .state_q0(state_q0),
-    .state_address1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_address1),
-    .state_ce1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_ce1),
-    .state_we1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_we1),
-    .state_d1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_d1),
+    .state_address1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_address1),
+    .state_ce1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_ce1),
+    .state_we1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_we1),
+    .state_d1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_d1),
     .state_q1(state_q1),
-    .pynqrypt_round_keys_address0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_address0),
-    .pynqrypt_round_keys_ce0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_ce0),
+    .pynqrypt_round_keys_address0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_address0),
+    .pynqrypt_round_keys_ce0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_ce0),
     .pynqrypt_round_keys_q0(pynqrypt_round_keys_q0),
-    .pynqrypt_round_keys_address1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_address1),
-    .pynqrypt_round_keys_ce1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_ce1),
+    .pynqrypt_round_keys_address1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_address1),
+    .pynqrypt_round_keys_ce1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_ce1),
     .pynqrypt_round_keys_q1(pynqrypt_round_keys_q1),
-    .crypto_aes_sbox_address0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_crypto_aes_sbox_address0),
-    .crypto_aes_sbox_ce0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_crypto_aes_sbox_ce0),
-    .crypto_aes_sbox_q0(crypto_aes_sbox_q0)
+    .p_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_p_out),
+    .p_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_p_out_ap_vld),
+    .conv6_i36_1_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_1_phi_out),
+    .conv6_i36_1_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_1_phi_out_ap_vld),
+    .conv6_i36_2_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_2_phi_out),
+    .conv6_i36_2_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_2_phi_out_ap_vld),
+    .conv6_i36_3_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_3_phi_out),
+    .conv6_i36_3_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_3_phi_out_ap_vld),
+    .conv6_i36_4_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_4_phi_out),
+    .conv6_i36_4_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_4_phi_out_ap_vld),
+    .conv6_i36_5_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_5_phi_out),
+    .conv6_i36_5_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_5_phi_out_ap_vld),
+    .conv6_i36_6_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_6_phi_out),
+    .conv6_i36_6_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_6_phi_out_ap_vld),
+    .conv6_i36_7_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_7_phi_out),
+    .conv6_i36_7_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_7_phi_out_ap_vld),
+    .conv6_i36_8_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_8_phi_out),
+    .conv6_i36_8_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_8_phi_out_ap_vld),
+    .conv6_i36_9_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_9_phi_out),
+    .conv6_i36_9_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_9_phi_out_ap_vld),
+    .conv6_i36_10_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_10_phi_out),
+    .conv6_i36_10_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_10_phi_out_ap_vld),
+    .conv6_i36_11_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_11_phi_out),
+    .conv6_i36_11_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_11_phi_out_ap_vld),
+    .conv6_i36_12_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_12_phi_out),
+    .conv6_i36_12_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_12_phi_out_ap_vld),
+    .conv6_i36_13_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_13_phi_out),
+    .conv6_i36_13_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_13_phi_out_ap_vld),
+    .conv6_i36_14_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_14_phi_out),
+    .conv6_i36_14_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_14_phi_out_ap_vld),
+    .conv6_i36_15_phi_out(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_15_phi_out),
+    .conv6_i36_15_phi_out_ap_vld(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_15_phi_out_ap_vld),
+    .aes_sbox2_address0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_address0),
+    .aes_sbox2_ce0(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_ce0),
+    .aes_sbox2_q0(aes_sbox2_q0),
+    .aes_sbox2_address1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_address1),
+    .aes_sbox2_ce1(grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_ce1),
+    .aes_sbox2_q1(aes_sbox2_q1)
 );
 
-pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208(
+pynqrypt_encrypt_aes_encrypt_block_Pipeline_2 grp_aes_encrypt_block_Pipeline_2_fu_895(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start),
-    .ap_done(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_done),
-    .ap_idle(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_idle),
-    .ap_ready(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_ready),
-    .state_address0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_address0),
-    .state_ce0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_ce0),
-    .state_we0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_we0),
-    .state_d0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_d0),
-    .state_address1(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_address1),
-    .state_ce1(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_ce1),
-    .state_q1(state_q1),
-    .crypto_aes_sbox_address0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_crypto_aes_sbox_address0),
-    .crypto_aes_sbox_ce0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_crypto_aes_sbox_ce0),
-    .crypto_aes_sbox_q0(crypto_aes_sbox_q0)
-);
-
-pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start),
-    .ap_done(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_done),
-    .ap_idle(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_idle),
-    .ap_ready(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_ready),
-    .pynqrypt_round_keys_address0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_pynqrypt_round_keys_address0),
-    .pynqrypt_round_keys_ce0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_pynqrypt_round_keys_ce0),
-    .pynqrypt_round_keys_q0(pynqrypt_round_keys_q0),
-    .state_address0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_address0),
-    .state_ce0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_ce0),
-    .state_we0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_we0),
-    .state_d0(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_d0),
-    .state_address1(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_address1),
-    .state_ce1(grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_ce1),
-    .state_q1(state_q1)
+    .ap_start(grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start),
+    .ap_done(grp_aes_encrypt_block_Pipeline_2_fu_895_ap_done),
+    .ap_idle(grp_aes_encrypt_block_Pipeline_2_fu_895_ap_idle),
+    .ap_ready(grp_aes_encrypt_block_Pipeline_2_fu_895_ap_ready),
+    .state_address0(grp_aes_encrypt_block_Pipeline_2_fu_895_state_address0),
+    .state_ce0(grp_aes_encrypt_block_Pipeline_2_fu_895_state_ce0),
+    .state_q0(state_q0),
+    .temp_address0(grp_aes_encrypt_block_Pipeline_2_fu_895_temp_address0),
+    .temp_ce0(grp_aes_encrypt_block_Pipeline_2_fu_895_temp_ce0),
+    .temp_we0(grp_aes_encrypt_block_Pipeline_2_fu_895_temp_we0),
+    .temp_d0(grp_aes_encrypt_block_Pipeline_2_fu_895_temp_d0)
 );
 
 always @ (posedge ap_clk) begin
@@ -283,79 +447,152 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start_reg <= 1'b0;
+        grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state16)) begin
-            grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start_reg <= 1'b1;
-        end else if ((grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_ready == 1'b1)) begin
-            grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state28)) begin
+            grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start_reg <= 1'b1;
+        end else if ((grp_aes_encrypt_block_Pipeline_2_fu_895_ap_ready == 1'b1)) begin
+            grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start_reg <= 1'b0;
+        grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state5)) begin
-            grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start_reg <= 1'b1;
-        end else if ((grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_ready == 1'b1)) begin
-            grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state17)) begin
+            grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start_reg <= 1'b1;
+        end else if ((grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_ready == 1'b1)) begin
+            grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start_reg <= 1'b0;
+    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state9))) begin
+        reg_916 <= state_q0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state9))) begin
+        reg_920 <= state_q1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state3))) begin
+        reg_924 <= state_q0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        state_load_10_reg_1351 <= state_q1;
+        state_load_9_reg_1346 <= state_q0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        state_load_11_reg_1378 <= state_q0;
+        state_load_12_reg_1383 <= state_q1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        state_load_3_reg_1280 <= state_q0;
+        state_load_4_reg_1285 <= state_q1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        state_load_5_reg_1302 <= state_q0;
+        state_load_6_reg_1307 <= state_q1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        state_load_7_reg_1324 <= state_q0;
+        state_load_8_reg_1329 <= state_q1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state9)) begin
+        xor_ln233_reg_1400 <= xor_ln233_fu_928_p2;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state26)) begin
+        aes_sbox2_address0 = zext_ln72_15_fu_1152_p1;
+    end else if ((1'b1 == ap_CS_fsm_state25)) begin
+        aes_sbox2_address0 = zext_ln72_13_fu_1136_p1;
+    end else if ((1'b1 == ap_CS_fsm_state24)) begin
+        aes_sbox2_address0 = zext_ln72_11_fu_1120_p1;
+    end else if ((1'b1 == ap_CS_fsm_state23)) begin
+        aes_sbox2_address0 = zext_ln72_9_fu_1104_p1;
+    end else if ((1'b1 == ap_CS_fsm_state22)) begin
+        aes_sbox2_address0 = zext_ln72_7_fu_1088_p1;
+    end else if ((1'b1 == ap_CS_fsm_state21)) begin
+        aes_sbox2_address0 = zext_ln72_5_fu_1072_p1;
+    end else if ((1'b1 == ap_CS_fsm_state20)) begin
+        aes_sbox2_address0 = zext_ln72_3_fu_1056_p1;
+    end else if ((1'b1 == ap_CS_fsm_state19)) begin
+        aes_sbox2_address0 = zext_ln72_1_fu_1040_p1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        aes_sbox2_address0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_address0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd1))) begin
-            grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start_reg <= 1'b1;
-        end else if ((grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_ready == 1'b1)) begin
-            grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start_reg <= 1'b0;
-        end
+        aes_sbox2_address0 = 'bx;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        i_fu_54 <= 5'd0;
-    end else if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd0))) begin
-        i_fu_54 <= add_ln221_fu_268_p2;
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state26)) begin
+        aes_sbox2_address1 = zext_ln72_14_fu_1147_p1;
+    end else if ((1'b1 == ap_CS_fsm_state25)) begin
+        aes_sbox2_address1 = zext_ln72_12_fu_1131_p1;
+    end else if ((1'b1 == ap_CS_fsm_state24)) begin
+        aes_sbox2_address1 = zext_ln72_10_fu_1115_p1;
+    end else if ((1'b1 == ap_CS_fsm_state23)) begin
+        aes_sbox2_address1 = zext_ln72_8_fu_1099_p1;
+    end else if ((1'b1 == ap_CS_fsm_state22)) begin
+        aes_sbox2_address1 = zext_ln72_6_fu_1083_p1;
+    end else if ((1'b1 == ap_CS_fsm_state21)) begin
+        aes_sbox2_address1 = zext_ln72_4_fu_1067_p1;
+    end else if ((1'b1 == ap_CS_fsm_state20)) begin
+        aes_sbox2_address1 = zext_ln72_2_fu_1051_p1;
+    end else if ((1'b1 == ap_CS_fsm_state19)) begin
+        aes_sbox2_address1 = zext_ln72_fu_1035_p1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        aes_sbox2_address1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_address1;
+    end else begin
+        aes_sbox2_address1 = 'bx;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state11)) begin
-        reg_224 <= state_q0;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        reg_224 <= state_q1;
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state19))) begin
+        aes_sbox2_ce0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        aes_sbox2_ce0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_ce0;
+    end else begin
+        aes_sbox2_ce0 = 1'b0;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state13)) begin
-        reg_241 <= state_q0;
-    end else if (((1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state11))) begin
-        reg_241 <= state_q1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state8))) begin
-        reg_230 <= state_q0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state9))) begin
-        reg_236 <= state_q1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd0))) begin
-        state_addr_reg_301 <= zext_ln221_fu_256_p1;
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state19))) begin
+        aes_sbox2_ce1 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        aes_sbox2_ce1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_aes_sbox2_ce1;
+    end else begin
+        aes_sbox2_ce1 = 1'b0;
     end
 end
 
@@ -373,13 +610,17 @@ assign ap_ST_fsm_state15_blk = 1'b0;
 
 assign ap_ST_fsm_state16_blk = 1'b0;
 
+assign ap_ST_fsm_state17_blk = 1'b0;
+
 always @ (*) begin
-    if ((grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_done == 1'b0)) begin
-        ap_ST_fsm_state17_blk = 1'b1;
+    if ((grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_done == 1'b0)) begin
+        ap_ST_fsm_state18_blk = 1'b1;
     end else begin
-        ap_ST_fsm_state17_blk = 1'b0;
+        ap_ST_fsm_state18_blk = 1'b0;
     end
 end
+
+assign ap_ST_fsm_state19_blk = 1'b0;
 
 always @ (*) begin
     if ((ap_start == 1'b0)) begin
@@ -389,27 +630,59 @@ always @ (*) begin
     end
 end
 
+assign ap_ST_fsm_state20_blk = 1'b0;
+
+assign ap_ST_fsm_state21_blk = 1'b0;
+
+assign ap_ST_fsm_state22_blk = 1'b0;
+
+assign ap_ST_fsm_state23_blk = 1'b0;
+
+assign ap_ST_fsm_state24_blk = 1'b0;
+
+assign ap_ST_fsm_state25_blk = 1'b0;
+
+assign ap_ST_fsm_state26_blk = 1'b0;
+
+assign ap_ST_fsm_state27_blk = 1'b0;
+
+assign ap_ST_fsm_state28_blk = 1'b0;
+
+always @ (*) begin
+    if ((grp_aes_encrypt_block_Pipeline_2_fu_895_ap_done == 1'b0)) begin
+        ap_ST_fsm_state29_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state29_blk = 1'b0;
+    end
+end
+
 assign ap_ST_fsm_state2_blk = 1'b0;
+
+assign ap_ST_fsm_state30_blk = 1'b0;
+
+assign ap_ST_fsm_state31_blk = 1'b0;
+
+assign ap_ST_fsm_state32_blk = 1'b0;
+
+assign ap_ST_fsm_state33_blk = 1'b0;
+
+assign ap_ST_fsm_state34_blk = 1'b0;
+
+assign ap_ST_fsm_state35_blk = 1'b0;
+
+assign ap_ST_fsm_state36_blk = 1'b0;
+
+assign ap_ST_fsm_state37_blk = 1'b0;
+
+assign ap_ST_fsm_state38_blk = 1'b0;
 
 assign ap_ST_fsm_state3_blk = 1'b0;
 
-always @ (*) begin
-    if ((grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_done == 1'b0)) begin
-        ap_ST_fsm_state4_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state4_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state4_blk = 1'b0;
 
 assign ap_ST_fsm_state5_blk = 1'b0;
 
-always @ (*) begin
-    if ((grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_done == 1'b0)) begin
-        ap_ST_fsm_state6_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state6_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state6_blk = 1'b0;
 
 assign ap_ST_fsm_state7_blk = 1'b0;
 
@@ -418,7 +691,7 @@ assign ap_ST_fsm_state8_blk = 1'b0;
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((1'b1 == ap_CS_fsm_state17) & (grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_done == 1'b1)))) begin
+    if (((1'b1 == ap_CS_fsm_state38) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -434,7 +707,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state17) & (grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_done == 1'b1))) begin
+    if ((1'b1 == ap_CS_fsm_state38)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -442,208 +715,352 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        crypto_aes_sbox_address0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_crypto_aes_sbox_address0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        crypto_aes_sbox_address0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_crypto_aes_sbox_address0;
-    end else begin
-        crypto_aes_sbox_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        crypto_aes_sbox_ce0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_crypto_aes_sbox_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        crypto_aes_sbox_ce0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_crypto_aes_sbox_ce0;
-    end else begin
-        crypto_aes_sbox_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd0))) begin
-        pynqrypt_round_keys_address0 = zext_ln221_fu_256_p1;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        pynqrypt_round_keys_address0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_pynqrypt_round_keys_address0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_address0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_address0;
+    if ((1'b1 == ap_CS_fsm_state37)) begin
+        pynqrypt_round_keys_address0 = 64'd175;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        pynqrypt_round_keys_address0 = 64'd173;
+    end else if ((1'b1 == ap_CS_fsm_state35)) begin
+        pynqrypt_round_keys_address0 = 64'd171;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        pynqrypt_round_keys_address0 = 64'd169;
+    end else if ((1'b1 == ap_CS_fsm_state33)) begin
+        pynqrypt_round_keys_address0 = 64'd167;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        pynqrypt_round_keys_address0 = 64'd165;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        pynqrypt_round_keys_address0 = 64'd163;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        pynqrypt_round_keys_address0 = 64'd161;
+    end else if ((1'b1 == ap_CS_fsm_state15)) begin
+        pynqrypt_round_keys_address0 = 64'd15;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        pynqrypt_round_keys_address0 = 64'd13;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        pynqrypt_round_keys_address0 = 64'd11;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        pynqrypt_round_keys_address0 = 64'd9;
+    end else if ((1'b1 == ap_CS_fsm_state11)) begin
+        pynqrypt_round_keys_address0 = 64'd7;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        pynqrypt_round_keys_address0 = 64'd5;
+    end else if ((1'b1 == ap_CS_fsm_state9)) begin
+        pynqrypt_round_keys_address0 = 64'd3;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        pynqrypt_round_keys_address0 = 64'd1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        pynqrypt_round_keys_address0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_address0;
     end else begin
         pynqrypt_round_keys_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd0))) begin
+    if ((1'b1 == ap_CS_fsm_state37)) begin
+        pynqrypt_round_keys_address1 = 64'd174;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        pynqrypt_round_keys_address1 = 64'd172;
+    end else if ((1'b1 == ap_CS_fsm_state35)) begin
+        pynqrypt_round_keys_address1 = 64'd170;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        pynqrypt_round_keys_address1 = 64'd168;
+    end else if ((1'b1 == ap_CS_fsm_state33)) begin
+        pynqrypt_round_keys_address1 = 64'd166;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        pynqrypt_round_keys_address1 = 64'd164;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        pynqrypt_round_keys_address1 = 64'd162;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        pynqrypt_round_keys_address1 = 64'd160;
+    end else if ((1'b1 == ap_CS_fsm_state15)) begin
+        pynqrypt_round_keys_address1 = 64'd14;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        pynqrypt_round_keys_address1 = 64'd12;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        pynqrypt_round_keys_address1 = 64'd10;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        pynqrypt_round_keys_address1 = 64'd8;
+    end else if ((1'b1 == ap_CS_fsm_state11)) begin
+        pynqrypt_round_keys_address1 = 64'd6;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        pynqrypt_round_keys_address1 = 64'd4;
+    end else if ((1'b1 == ap_CS_fsm_state9)) begin
+        pynqrypt_round_keys_address1 = 64'd2;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        pynqrypt_round_keys_address1 = 64'd0;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        pynqrypt_round_keys_address1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_address1;
+    end else begin
+        pynqrypt_round_keys_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9))) begin
         pynqrypt_round_keys_ce0 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        pynqrypt_round_keys_ce0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_pynqrypt_round_keys_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_ce0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        pynqrypt_round_keys_ce0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_ce0;
     end else begin
         pynqrypt_round_keys_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_ce1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_ce1;
+    if (((1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9))) begin
+        pynqrypt_round_keys_ce1 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        pynqrypt_round_keys_ce1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_pynqrypt_round_keys_ce1;
     end else begin
         pynqrypt_round_keys_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state15)) begin
-        state_address0 = state_addr_10_reg_339;
-    end else if ((1'b1 == ap_CS_fsm_state14)) begin
-        state_address0 = 64'd5;
-    end else if ((1'b1 == ap_CS_fsm_state13)) begin
-        state_address0 = state_addr_3_reg_311;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        state_address0 = 64'd15;
-    end else if ((1'b1 == ap_CS_fsm_state11)) begin
-        state_address0 = 64'd13;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        state_address0 = 64'd9;
-    end else if ((1'b1 == ap_CS_fsm_state9)) begin
+    if (((1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state20))) begin
+        state_address0 = state_addr_reg_1253;
+    end else if (((1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state16))) begin
+        state_address0 = 64'd14;
+    end else if (((1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state15))) begin
+        state_address0 = 64'd12;
+    end else if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state14))) begin
+        state_address0 = 64'd10;
+    end else if (((1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state13))) begin
+        state_address0 = 64'd8;
+    end else if (((1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state12))) begin
         state_address0 = 64'd6;
+    end else if (((1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state11))) begin
+        state_address0 = 64'd4;
+    end else if (((1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state10))) begin
+        state_address0 = state_addr_2_reg_1263;
+    end else if ((1'b1 == ap_CS_fsm_state9)) begin
+        state_address0 = 64'd15;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        state_address0 = 64'd3;
+        state_address0 = 64'd13;
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        state_address0 = 64'd2;
-    end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        state_address0 = state_addr_reg_301;
-    end else if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd0))) begin
-        state_address0 = zext_ln221_fu_256_p1;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        state_address0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_address0;
+        state_address0 = 64'd11;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        state_address0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_address0;
+        state_address0 = 64'd9;
+    end else if ((1'b1 == ap_CS_fsm_state5)) begin
+        state_address0 = 64'd7;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_address0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_address0;
+        state_address0 = 64'd5;
+    end else if ((1'b1 == ap_CS_fsm_state3)) begin
+        state_address0 = 64'd3;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        state_address0 = 64'd2;
+    end else if ((1'b1 == ap_CS_fsm_state1)) begin
+        state_address0 = 64'd0;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        state_address0 = grp_aes_encrypt_block_Pipeline_2_fu_895_state_address0;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_address0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_address0;
     end else begin
         state_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state15)) begin
-        state_address1 = 64'd6;
-    end else if ((1'b1 == ap_CS_fsm_state14)) begin
-        state_address1 = 64'd3;
-    end else if ((1'b1 == ap_CS_fsm_state13)) begin
-        state_address1 = state_addr_2_reg_306;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        state_address1 = 64'd14;
-    end else if ((1'b1 == ap_CS_fsm_state11)) begin
+    if (((1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state16))) begin
+        state_address1 = 64'd15;
+    end else if (((1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state15))) begin
+        state_address1 = 64'd13;
+    end else if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state14))) begin
         state_address1 = 64'd11;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        state_address1 = 64'd10;
-    end else if ((1'b1 == ap_CS_fsm_state9)) begin
+    end else if (((1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state13))) begin
+        state_address1 = 64'd9;
+    end else if (((1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state12))) begin
         state_address1 = 64'd7;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+    end else if (((1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state11))) begin
         state_address1 = 64'd5;
+    end else if (((1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state10))) begin
+        state_address1 = 64'd3;
+    end else if (((1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state9))) begin
+        state_address1 = state_addr_1_reg_1258;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        state_address1 = 64'd14;
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        state_address1 = 64'd1;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        state_address1 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_address1;
+        state_address1 = 64'd12;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        state_address1 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_address1;
+        state_address1 = 64'd10;
+    end else if ((1'b1 == ap_CS_fsm_state5)) begin
+        state_address1 = 64'd8;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_address1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_address1;
+        state_address1 = 64'd6;
+    end else if ((1'b1 == ap_CS_fsm_state3)) begin
+        state_address1 = 64'd4;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        state_address1 = 64'd1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_address1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_address1;
     end else begin
         state_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state7) | ((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd0)))) begin
+    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state9) | ((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)))) begin
         state_ce0 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        state_ce0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        state_ce0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_ce0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        state_ce0 = grp_aes_encrypt_block_Pipeline_2_fu_895_state_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_ce0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_ce0;
     end else begin
         state_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state7))) begin
+    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state9))) begin
         state_ce1 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        state_ce1 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_ce1;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        state_ce1 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_ce1;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_ce1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_ce1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_ce1;
     end else begin
         state_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state15)) begin
-        state_d0 = reg_230;
+    if (((1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31))) begin
+        state_d0 = grp_fu_902_p2;
+    end else if (((1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20))) begin
+        state_d0 = aes_sbox2_q1;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        state_d0 = xor_ln233_14_fu_1015_p2;
+    end else if ((1'b1 == ap_CS_fsm_state15)) begin
+        state_d0 = xor_ln233_12_fu_1002_p2;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        state_d0 = xor_ln233_10_fu_990_p2;
     end else if ((1'b1 == ap_CS_fsm_state13)) begin
-        state_d0 = reg_241;
+        state_d0 = xor_ln233_8_fu_978_p2;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        state_d0 = state_q1;
-    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state14))) begin
-        state_d0 = reg_224;
-    end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        state_d0 = xor_ln222_fu_279_p2;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        state_d0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_d0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        state_d0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_d0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_d0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_d0;
+        state_d0 = xor_ln233_6_fu_966_p2;
+    end else if ((1'b1 == ap_CS_fsm_state11)) begin
+        state_d0 = xor_ln233_4_fu_954_p2;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        state_d0 = xor_ln233_2_fu_941_p2;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_d0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_d0;
     end else begin
         state_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state15))) begin
-        state_d1 = reg_236;
-    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state14))) begin
-        state_d1 = reg_241;
-    end else if (((1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state10))) begin
-        state_d1 = reg_230;
+    if (((1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31))) begin
+        state_d1 = grp_fu_909_p2;
+    end else if (((1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20))) begin
+        state_d1 = aes_sbox2_q0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        state_d1 = xor_ln233_15_fu_1022_p2;
+    end else if ((1'b1 == ap_CS_fsm_state15)) begin
+        state_d1 = xor_ln233_13_fu_1008_p2;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        state_d1 = xor_ln233_11_fu_996_p2;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        state_d1 = xor_ln233_9_fu_984_p2;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        state_d1 = xor_ln233_7_fu_972_p2;
+    end else if ((1'b1 == ap_CS_fsm_state11)) begin
+        state_d1 = xor_ln233_5_fu_960_p2;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        state_d1 = xor_ln233_3_fu_948_p2;
     end else if ((1'b1 == ap_CS_fsm_state9)) begin
-        state_d1 = state_q0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_d1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_d1;
+        state_d1 = xor_ln233_1_fu_934_p2;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_d1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_d1;
     end else begin
         state_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
         state_we0 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state17)) begin
-        state_we0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_state_we0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        state_we0 = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_state_we0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_we0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_we0;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_we0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_we0;
     end else begin
         state_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14))) begin
+    if (((1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9))) begin
         state_we1 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        state_we1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_state_we1;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        state_we1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_state_we1;
     end else begin
         state_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state37)) begin
+        temp_address0 = 64'd11;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        temp_address0 = 64'd1;
+    end else if ((1'b1 == ap_CS_fsm_state35)) begin
+        temp_address0 = 64'd7;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        temp_address0 = 64'd13;
+    end else if ((1'b1 == ap_CS_fsm_state33)) begin
+        temp_address0 = 64'd3;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        temp_address0 = 64'd9;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        temp_address0 = 64'd15;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        temp_address0 = 64'd5;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        temp_address0 = grp_aes_encrypt_block_Pipeline_2_fu_895_temp_address0;
+    end else begin
+        temp_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state37)) begin
+        temp_address1 = 64'd6;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        temp_address1 = 64'd12;
+    end else if ((1'b1 == ap_CS_fsm_state35)) begin
+        temp_address1 = 64'd2;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        temp_address1 = 64'd8;
+    end else if ((1'b1 == ap_CS_fsm_state33)) begin
+        temp_address1 = 64'd14;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        temp_address1 = 64'd4;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        temp_address1 = 64'd10;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        temp_address1 = 64'd0;
+    end else begin
+        temp_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state30))) begin
+        temp_ce0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        temp_ce0 = grp_aes_encrypt_block_Pipeline_2_fu_895_temp_ce0;
+    end else begin
+        temp_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state30))) begin
+        temp_ce1 = 1'b1;
+    end else begin
+        temp_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state29)) begin
+        temp_we0 = grp_aes_encrypt_block_Pipeline_2_fu_895_temp_we0;
+    end else begin
+        temp_we0 = 1'b0;
     end
 end
 
@@ -657,31 +1074,19 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln221_fu_262_p2 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state3;
-            end
+            ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
-            ap_NS_fsm = ap_ST_fsm_state2;
+            ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((1'b1 == ap_CS_fsm_state4) & (grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_done == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state5;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end
+            ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state5 : begin
             ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state6 : begin
-            if (((1'b1 == ap_CS_fsm_state6) & (grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_done == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state7;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state6;
-            end
+            ap_NS_fsm = ap_ST_fsm_state7;
         end
         ap_ST_fsm_state7 : begin
             ap_NS_fsm = ap_ST_fsm_state8;
@@ -714,19 +1119,84 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state17;
         end
         ap_ST_fsm_state17 : begin
-            if (((1'b1 == ap_CS_fsm_state17) & (grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_done == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
+            ap_NS_fsm = ap_ST_fsm_state18;
+        end
+        ap_ST_fsm_state18 : begin
+            if (((grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
+                ap_NS_fsm = ap_ST_fsm_state19;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state17;
+                ap_NS_fsm = ap_ST_fsm_state18;
             end
+        end
+        ap_ST_fsm_state19 : begin
+            ap_NS_fsm = ap_ST_fsm_state20;
+        end
+        ap_ST_fsm_state20 : begin
+            ap_NS_fsm = ap_ST_fsm_state21;
+        end
+        ap_ST_fsm_state21 : begin
+            ap_NS_fsm = ap_ST_fsm_state22;
+        end
+        ap_ST_fsm_state22 : begin
+            ap_NS_fsm = ap_ST_fsm_state23;
+        end
+        ap_ST_fsm_state23 : begin
+            ap_NS_fsm = ap_ST_fsm_state24;
+        end
+        ap_ST_fsm_state24 : begin
+            ap_NS_fsm = ap_ST_fsm_state25;
+        end
+        ap_ST_fsm_state25 : begin
+            ap_NS_fsm = ap_ST_fsm_state26;
+        end
+        ap_ST_fsm_state26 : begin
+            ap_NS_fsm = ap_ST_fsm_state27;
+        end
+        ap_ST_fsm_state27 : begin
+            ap_NS_fsm = ap_ST_fsm_state28;
+        end
+        ap_ST_fsm_state28 : begin
+            ap_NS_fsm = ap_ST_fsm_state29;
+        end
+        ap_ST_fsm_state29 : begin
+            if (((grp_aes_encrypt_block_Pipeline_2_fu_895_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state29))) begin
+                ap_NS_fsm = ap_ST_fsm_state30;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state29;
+            end
+        end
+        ap_ST_fsm_state30 : begin
+            ap_NS_fsm = ap_ST_fsm_state31;
+        end
+        ap_ST_fsm_state31 : begin
+            ap_NS_fsm = ap_ST_fsm_state32;
+        end
+        ap_ST_fsm_state32 : begin
+            ap_NS_fsm = ap_ST_fsm_state33;
+        end
+        ap_ST_fsm_state33 : begin
+            ap_NS_fsm = ap_ST_fsm_state34;
+        end
+        ap_ST_fsm_state34 : begin
+            ap_NS_fsm = ap_ST_fsm_state35;
+        end
+        ap_ST_fsm_state35 : begin
+            ap_NS_fsm = ap_ST_fsm_state36;
+        end
+        ap_ST_fsm_state36 : begin
+            ap_NS_fsm = ap_ST_fsm_state37;
+        end
+        ap_ST_fsm_state37 : begin
+            ap_NS_fsm = ap_ST_fsm_state38;
+        end
+        ap_ST_fsm_state38 : begin
+            ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
             ap_NS_fsm = 'bx;
         end
     endcase
 end
-
-assign add_ln221_fu_268_p2 = (i_fu_54 + 5'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -746,9 +1216,51 @@ assign ap_CS_fsm_state16 = ap_CS_fsm[32'd15];
 
 assign ap_CS_fsm_state17 = ap_CS_fsm[32'd16];
 
+assign ap_CS_fsm_state18 = ap_CS_fsm[32'd17];
+
+assign ap_CS_fsm_state19 = ap_CS_fsm[32'd18];
+
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
+assign ap_CS_fsm_state20 = ap_CS_fsm[32'd19];
+
+assign ap_CS_fsm_state21 = ap_CS_fsm[32'd20];
+
+assign ap_CS_fsm_state22 = ap_CS_fsm[32'd21];
+
+assign ap_CS_fsm_state23 = ap_CS_fsm[32'd22];
+
+assign ap_CS_fsm_state24 = ap_CS_fsm[32'd23];
+
+assign ap_CS_fsm_state25 = ap_CS_fsm[32'd24];
+
+assign ap_CS_fsm_state26 = ap_CS_fsm[32'd25];
+
+assign ap_CS_fsm_state27 = ap_CS_fsm[32'd26];
+
+assign ap_CS_fsm_state28 = ap_CS_fsm[32'd27];
+
+assign ap_CS_fsm_state29 = ap_CS_fsm[32'd28];
+
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
+
+assign ap_CS_fsm_state30 = ap_CS_fsm[32'd29];
+
+assign ap_CS_fsm_state31 = ap_CS_fsm[32'd30];
+
+assign ap_CS_fsm_state32 = ap_CS_fsm[32'd31];
+
+assign ap_CS_fsm_state33 = ap_CS_fsm[32'd32];
+
+assign ap_CS_fsm_state34 = ap_CS_fsm[32'd33];
+
+assign ap_CS_fsm_state35 = ap_CS_fsm[32'd34];
+
+assign ap_CS_fsm_state36 = ap_CS_fsm[32'd35];
+
+assign ap_CS_fsm_state37 = ap_CS_fsm[32'd36];
+
+assign ap_CS_fsm_state38 = ap_CS_fsm[32'd37];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
@@ -762,24 +1274,82 @@ assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
-assign grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_ap_start_reg;
+assign grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start = grp_aes_encrypt_block_Pipeline_2_fu_895_ap_start_reg;
 
-assign grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start = grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_ap_start_reg;
+assign grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_ap_start_reg;
 
-assign grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_ap_start_reg;
+assign grp_fu_902_p2 = (temp_q1 ^ pynqrypt_round_keys_q1);
 
-assign icmp_ln221_fu_262_p2 = ((i_fu_54 == 5'd16) ? 1'b1 : 1'b0);
+assign grp_fu_909_p2 = (temp_q0 ^ pynqrypt_round_keys_q0);
 
-assign pynqrypt_round_keys_address1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_pynqrypt_round_keys_address1;
+assign state_addr_1_reg_1258 = 64'd1;
 
-assign state_addr_10_reg_339 = 64'd9;
+assign state_addr_2_reg_1263 = 64'd2;
 
-assign state_addr_2_reg_306 = 64'd1;
+assign state_addr_reg_1253 = 64'd0;
 
-assign state_addr_3_reg_311 = 64'd2;
+assign xor_ln233_10_fu_990_p2 = (state_load_10_reg_1351 ^ pynqrypt_round_keys_q1);
 
-assign xor_ln222_fu_279_p2 = (state_q0 ^ pynqrypt_round_keys_q0);
+assign xor_ln233_11_fu_996_p2 = (state_load_11_reg_1378 ^ pynqrypt_round_keys_q0);
 
-assign zext_ln221_fu_256_p1 = i_fu_54;
+assign xor_ln233_12_fu_1002_p2 = (state_load_12_reg_1383 ^ pynqrypt_round_keys_q1);
+
+assign xor_ln233_13_fu_1008_p2 = (reg_916 ^ pynqrypt_round_keys_q0);
+
+assign xor_ln233_14_fu_1015_p2 = (reg_920 ^ pynqrypt_round_keys_q1);
+
+assign xor_ln233_15_fu_1022_p2 = (reg_924 ^ pynqrypt_round_keys_q0);
+
+assign xor_ln233_1_fu_934_p2 = (reg_920 ^ pynqrypt_round_keys_q0);
+
+assign xor_ln233_2_fu_941_p2 = (reg_924 ^ pynqrypt_round_keys_q1);
+
+assign xor_ln233_3_fu_948_p2 = (state_load_3_reg_1280 ^ pynqrypt_round_keys_q0);
+
+assign xor_ln233_4_fu_954_p2 = (state_load_4_reg_1285 ^ pynqrypt_round_keys_q1);
+
+assign xor_ln233_5_fu_960_p2 = (state_load_5_reg_1302 ^ pynqrypt_round_keys_q0);
+
+assign xor_ln233_6_fu_966_p2 = (state_load_6_reg_1307 ^ pynqrypt_round_keys_q1);
+
+assign xor_ln233_7_fu_972_p2 = (state_load_7_reg_1324 ^ pynqrypt_round_keys_q0);
+
+assign xor_ln233_8_fu_978_p2 = (state_load_8_reg_1329 ^ pynqrypt_round_keys_q1);
+
+assign xor_ln233_9_fu_984_p2 = (state_load_9_reg_1346 ^ pynqrypt_round_keys_q0);
+
+assign xor_ln233_fu_928_p2 = (reg_916 ^ pynqrypt_round_keys_q1);
+
+assign zext_ln72_10_fu_1115_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_10_phi_out;
+
+assign zext_ln72_11_fu_1120_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_11_phi_out;
+
+assign zext_ln72_12_fu_1131_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_12_phi_out;
+
+assign zext_ln72_13_fu_1136_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_13_phi_out;
+
+assign zext_ln72_14_fu_1147_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_14_phi_out;
+
+assign zext_ln72_15_fu_1152_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_15_phi_out;
+
+assign zext_ln72_1_fu_1040_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_1_phi_out;
+
+assign zext_ln72_2_fu_1051_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_2_phi_out;
+
+assign zext_ln72_3_fu_1056_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_3_phi_out;
+
+assign zext_ln72_4_fu_1067_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_4_phi_out;
+
+assign zext_ln72_5_fu_1072_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_5_phi_out;
+
+assign zext_ln72_6_fu_1083_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_6_phi_out;
+
+assign zext_ln72_7_fu_1088_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_7_phi_out;
+
+assign zext_ln72_8_fu_1099_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_8_phi_out;
+
+assign zext_ln72_9_fu_1104_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_conv6_i36_9_phi_out;
+
+assign zext_ln72_fu_1035_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_p_out;
 
 endmodule //pynqrypt_encrypt_aes_encrypt_block

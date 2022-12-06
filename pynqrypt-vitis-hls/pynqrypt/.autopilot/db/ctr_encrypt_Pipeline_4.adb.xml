@@ -52,7 +52,7 @@ newFuncRoot:0 %loop_index = alloca i32 1
 
 <Node id="6" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_3, void @empty_13, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_11, void @empty_3, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -318,10 +318,10 @@ loop-memcpy-expansion:5 %write_ln0 = write void @_ssdm_op_Write.m_axi.p1i8, i64 
 
 <Node id="20" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-loop-memcpy-expansion:8 %empty_30 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0
+loop-memcpy-expansion:8 %empty_28 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0
 
 ]]></Node>
-<StgValue><ssdm name="empty_30"/></StgValue>
+<StgValue><ssdm name="empty_28"/></StgValue>
 </operation>
 
 <operation id="25" st_id="4" stage="1" lat="1">
@@ -379,9 +379,9 @@ for.inc.loopexit.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="55" from="StgValue_54" to="specinterface_ln0" fromId="54" toId="7">
 </dataflow>
-<dataflow id="57" from="empty_3" to="specinterface_ln0" fromId="56" toId="7">
+<dataflow id="57" from="empty_11" to="specinterface_ln0" fromId="56" toId="7">
 </dataflow>
-<dataflow id="59" from="empty_13" to="specinterface_ln0" fromId="58" toId="7">
+<dataflow id="59" from="empty_3" to="specinterface_ln0" fromId="58" toId="7">
 </dataflow>
 <dataflow id="60" from="empty_2" to="specinterface_ln0" fromId="51" toId="7">
 </dataflow>
@@ -463,13 +463,13 @@ for.inc.loopexit.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="108" from="StgValue_107" to="write_ln0" fromId="107" toId="23">
 </dataflow>
-<dataflow id="110" from="_ssdm_op_SpecLoopTripCount" to="empty_30" fromId="109" toId="24">
+<dataflow id="110" from="_ssdm_op_SpecLoopTripCount" to="empty_28" fromId="109" toId="24">
 </dataflow>
-<dataflow id="111" from="StgValue_87" to="empty_30" fromId="87" toId="24">
+<dataflow id="111" from="StgValue_87" to="empty_28" fromId="87" toId="24">
 </dataflow>
-<dataflow id="113" from="StgValue_112" to="empty_30" fromId="112" toId="24">
+<dataflow id="113" from="StgValue_112" to="empty_28" fromId="112" toId="24">
 </dataflow>
-<dataflow id="114" from="StgValue_76" to="empty_30" fromId="76" toId="24">
+<dataflow id="114" from="StgValue_76" to="empty_28" fromId="76" toId="24">
 </dataflow>
 <dataflow id="115" from="exitcond" to="StgValue_3" fromId="17" toId="3">
 </dataflow>

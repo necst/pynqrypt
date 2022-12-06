@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670322033442">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670322908213">
   <ports id="1" name="this_nonce" type="PortType" coreName="RAM" coreId="2036689759" bitwidth="8" iftype="IfTypeRegister" arraysize="12">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="2" name="pynqrypt_round_keys" type="PortType" coreName="RAM" coreId="2036689759" bitwidth="8" iftype="IfTypeRegister" arraysize="176">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="plaintext_length" type="PortType" coreName="FIFO_SRL" coreId="2415586256" bitwidth="64" iftype="IfTypeRom">
+  <ports id="3" name="plaintext_length" type="PortType" coreName="FIFO_SRL" coreId="930506432" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="4" name="gmem" type="PortType" coreId="54" bitwidth="8" direction="DirInOut" iftype="IfTypeFifo">
@@ -19,10 +19,10 @@
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="plaintext" type="PortType" coreName="FIFO_SRL" coreId="4294967295" bitwidth="64" iftype="IfTypeRom">
+  <ports id="5" name="plaintext" type="PortType" coreName="FIFO_SRL" coreId="930882368" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="ciphertext" type="PortType" coreName="FIFO_SRL" coreId="2415569456" bitwidth="64" iftype="IfTypeRom">
+  <ports id="6" name="ciphertext" type="PortType" coreName="FIFO_SRL" coreId="3241989938" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="89" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.2"/>
@@ -169,13 +169,13 @@
   <edges id="-239" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@ports.3"/>
   <blocks id="29" name="entry" type="BlockType">
     <controlOutputObjs>for.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i" originalName="i" coreId="2414911712" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i" originalName="i" coreId="930206160" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="indvars_iv6" coreId="4294967295" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="indvars_iv6" coreId="30" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -215,27 +215,27 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="block_nonce_addr" coreId="0" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="block_nonce_addr" coreId="1797268061" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="block_nonce_addr_1" coreId="1924282994" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="block_nonce_addr_1" coreId="0" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="block_nonce_addr_2" coreId="176" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="block_nonce_addr_2" coreId="0" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="block_nonce_addr_3" coreId="2037543278" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="block_nonce_addr_3" coreId="0" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="trunc_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="trunc_ln23_fu_246_p1" coreId="2215430848" contextFuncName="ctr_encrypt" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="trunc_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="trunc_ln23_fu_246_p1" coreId="931983136" contextFuncName="ctr_encrypt" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
@@ -253,7 +253,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="indvars_iv6_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2414593808" contextFuncName="ctr_encrypt" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="indvars_iv6_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="931985984" contextFuncName="ctr_encrypt" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>xor</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
@@ -263,7 +263,7 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2415558544" contextFuncName="ctr_encrypt" opcode="br" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="931991104" contextFuncName="ctr_encrypt" opcode="br" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <controlInputObjs>for.body</controlInputObjs>
     </node_objs>
@@ -281,7 +281,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body.split</controlOutputObjs>
     <controlOutputObjs>for.end.loopexit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="i_4" lineNumber="24" originalName="i" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2215433632" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="i_4" lineNumber="24" originalName="i" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="930207376" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -302,7 +302,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2414912816" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="931104304" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.end.loopexit</controlInputObjs>
@@ -319,7 +319,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>loop-memcpy-expansion2.preheader</controlOutputObjs>
     <controlOutputObjs>post-loop-memcpy-expansion1</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="indvars_iv6_load_1" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2215644376" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="indvars_iv6_load_1" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1210203513" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -346,7 +346,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="trunc_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="trunc_ln24_fu_280_p1" coreId="2215575344" contextFuncName="ctr_encrypt" bitwidth="32" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="trunc_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="trunc_ln24_fu_280_p1" coreId="0" contextFuncName="ctr_encrypt" bitwidth="32" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -404,7 +404,7 @@
       <dataOutputObjs>br</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln25" lineNumber="25" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1924910691" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="2.0" m_display="0" m_delay="1.58" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln25" lineNumber="25" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="931985984" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="2.0" m_display="0" m_delay="1.58" m_topoIndex="35" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="25" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>post-loop-memcpy-expansion1</controlInputObjs>
@@ -433,7 +433,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_ctr_encrypt_Pipeline_1_fu_202" coreId="2413950240" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_ctr_encrypt_Pipeline_1_fu_202" coreId="931995344" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
@@ -442,7 +442,7 @@
       <dataOutputObjs>gmem</dataOutputObjs>
       <constName>ctr_encrypt_Pipeline_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln0" coreId="1924173623" opcode="br" nodeLabel="10.0" m_display="0" m_delay="1.58" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln0" coreId="931985984" opcode="br" nodeLabel="10.0" m_display="0" m_delay="1.58" m_topoIndex="39" m_clusterGroupNumber="-1">
       <controlInputObjs>post-loop-memcpy-expansion1</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
@@ -456,7 +456,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>loop-memcpy-expansion.preheader</controlOutputObjs>
     <controlOutputObjs>for.inc</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="icmp_ln25_pr" lineNumber="25" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="176" contextFuncName="ctr_encrypt" bitwidth="1" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="icmp_ln25_pr" lineNumber="25" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" bitwidth="1" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="25" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
@@ -464,7 +464,7 @@
       <controlInputObjs>loop-memcpy-expansion2.preheader</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln0" rtlName="grp_ctr_encrypt_Pipeline_2_fu_211" coreId="1924169112" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln0" rtlName="grp_ctr_encrypt_Pipeline_2_fu_211" coreId="927460880" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <dataInputObjs>this_nonce</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>ctr_encrypt_Pipeline_2</constName>
@@ -480,7 +480,7 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="trunc_ln3" lineNumber="38" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d0" coreId="2035063149" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="12.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="trunc_ln3" lineNumber="38" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d0" coreId="929496384" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="12.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="38" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -491,7 +491,7 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln4" lineNumber="39" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d1" coreId="1923963050" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="13.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln4" lineNumber="39" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d1" coreId="931846592" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="13.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="39" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -502,7 +502,7 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="trunc_ln5" lineNumber="40" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d0" coreId="1924164137" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="13.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="trunc_ln5" lineNumber="40" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d0" coreId="928374000" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="13.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="40" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -513,20 +513,20 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="_ln27" lineNumber="27" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_aes_encrypt_block_fu_218" coreId="2415433120" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="_ln27" lineNumber="27" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_aes_encrypt_block_fu_218" coreId="929722632" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="27" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>pynqrypt_round_keys</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>aes_encrypt_block</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227" coreId="2035085707" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="4.36" m_topoIndex="50" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227" coreId="542329928" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="4.36" m_topoIndex="50" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>ctr_encrypt_Pipeline_loop_ctr_xor_block</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln29" lineNumber="29" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2214901440" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="17.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln29" lineNumber="29" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="929722240" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="17.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="29" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>phi</dataInputObjs>
       <controlInputObjs>for.inc</controlInputObjs>
@@ -547,7 +547,7 @@
     <controlInputObjs>post-loop-memcpy-expansion1</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.inc</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="gmem_addr_1" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1925104755" contextFuncName="ctr_encrypt" bitwidth="8" opcode="getelementptr" nodeLabel="17.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="gmem_addr_1" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1702258035" contextFuncName="ctr_encrypt" bitwidth="8" opcode="getelementptr" nodeLabel="17.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
@@ -555,12 +555,12 @@
       <dataOutputObjs>writeresp</dataOutputObjs>
       <dataOutputObjs>gmem</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="empty_33" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writereq" nodeLabel="17.0" m_display="0" m_delay="7.3" m_topoIndex="54" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="empty_31" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writereq" nodeLabel="17.0" m_display="0" m_delay="7.3" m_topoIndex="54" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_ctr_encrypt_Pipeline_4_fu_234" coreId="1923404338" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_ctr_encrypt_Pipeline_4_fu_234" coreId="931367344" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
@@ -569,11 +569,11 @@
       <dataOutputObjs>gmem</dataOutputObjs>
       <constName>ctr_encrypt_Pipeline_4</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="empty_34" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writeresp" nodeLabel="20.0" nodeLatency="4" m_display="0" m_delay="7.3" m_topoIndex="56" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="empty_32" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writeresp" nodeLabel="20.0" nodeLatency="4" m_display="0" m_delay="7.3" m_topoIndex="56" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2414593808" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="24.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="931104304" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="24.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <controlInputObjs>for.inc</controlInputObjs>
     </node_objs>
@@ -588,7 +588,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="indvars_iv6_load" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1924431912" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="indvars_iv6_load" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="930906312" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -605,17 +605,17 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="indvars_iv6_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2414593808" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="24.0" m_display="0" m_delay="1.58" m_topoIndex="61" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="indvars_iv6_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3241480055" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="24.0" m_display="0" m_delay="1.58" m_topoIndex="61" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="i_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2413941952" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="24.0" m_display="0" m_delay="1.58" m_topoIndex="62" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="i_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="930510560" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="24.0" m_display="0" m_delay="1.58" m_topoIndex="62" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="24.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="24.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <controlInputObjs>for.body</controlInputObjs>
     </node_objs>
@@ -626,7 +626,7 @@
   <blocks id="83" name="for.end.loopexit" type="BlockType">
     <controlInputObjs>for.body</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln31" lineNumber="31" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2415347728" contextFuncName="ctr_encrypt" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln31" lineNumber="31" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="931104304" contextFuncName="ctr_encrypt" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="31" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
@@ -864,6 +864,9 @@
   <ioNodes realName="store_ln23_store_fu_267">
     <nodeIds>27</nodeIds>
   </ioNodes>
+  <memoryPorts dataString="aes_sbox2" portID="100">
+    <nodeIds>65</nodeIds>
+  </memoryPorts>
   <memoryPorts dataString="block_nonce">
     <nodeIds>60</nodeIds>
     <nodeIds>64</nodeIds>
@@ -876,9 +879,6 @@
     <nodeIds>56</nodeIds>
     <nodeIds>65</nodeIds>
     <nodeIds>66</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="crypto_aes_sbox" portID="100">
-    <nodeIds>65</nodeIds>
   </memoryPorts>
   <ioPorts name="ciphertext">
     <contents name="read">

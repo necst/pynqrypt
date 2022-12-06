@@ -72,11 +72,11 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "pynqrypt_round_keys", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "aes_sbox3", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "crypto_aes_rcon", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "loop_generate_round_keys", "PipelineType" : "NotSupport"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.aes_sbox3_U", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.crypto_aes_sbox_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.crypto_aes_rcon_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
@@ -84,7 +84,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	aes_generate_round_keys_Pipeline_loop_generate_round_keys {
 		pynqrypt_round_keys {Type IO LastRead 8 FirstWrite 8}
-		aes_sbox3 {Type I LastRead -1 FirstWrite -1}
+		crypto_aes_sbox {Type I LastRead -1 FirstWrite -1}
 		crypto_aes_rcon {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0

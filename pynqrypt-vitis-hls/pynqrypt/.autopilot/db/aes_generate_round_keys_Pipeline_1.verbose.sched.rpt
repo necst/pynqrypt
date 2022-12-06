@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_generate_round_keys_Pipeline_1'
 ================================================================
-* Date:           Tue Dec  6 11:20:27 2022
+* Date:           Tue Dec  6 11:35:02 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -92,12 +92,12 @@ ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%loop_index_load = load i5 %loop_ind
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (1.36ns)   --->   "%exitcond8228 = icmp_eq  i5 %loop_index_load, i5 16"   --->   Operation 10 'icmp' 'exitcond8228' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (1.78ns)   --->   "%empty_35 = add i5 %loop_index_load, i5 1"   --->   Operation 12 'add' 'empty_35' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (1.78ns)   --->   "%empty_33 = add i5 %loop_index_load, i5 1"   --->   Operation 12 'add' 'empty_33' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond8228, void %load-store-loop.split, void %for.inc.preheader.exitStub"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%loop_index_cast = zext i5 %loop_index_load"   --->   Operation 14 'zext' 'loop_index_cast' <Predicate = (!exitcond8228)> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%this_key_addr = getelementptr i8 %this_key, i64 0, i64 %loop_index_cast"   --->   Operation 15 'getelementptr' 'this_key_addr' <Predicate = (!exitcond8228)> <Delay = 0.00>
 ST_1 : Operation 16 [2/2] (2.32ns)   --->   "%this_key_load = load i4 %this_key_addr"   --->   Operation 16 'load' 'this_key_load' <Predicate = (!exitcond8228)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
-ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 %empty_35, i5 %loop_index"   --->   Operation 17 'store' 'store_ln0' <Predicate = (!exitcond8228)> <Delay = 1.58>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 %empty_33, i5 %loop_index"   --->   Operation 17 'store' 'store_ln0' <Predicate = (!exitcond8228)> <Delay = 1.58>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 22 'ret' 'ret_ln0' <Predicate = (exitcond8228)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 5.57>
@@ -116,8 +116,8 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 The critical path consists of the following:
 	'alloca' operation ('loop_index') [3]  (0 ns)
 	'load' operation ('loop_index_load') on local variable 'loop_index' [7]  (0 ns)
-	'add' operation ('empty_35') [11]  (1.78 ns)
-	'store' operation ('store_ln0') of variable 'empty_35' on local variable 'loop_index' [19]  (1.59 ns)
+	'add' operation ('empty_33') [11]  (1.78 ns)
+	'store' operation ('store_ln0') of variable 'empty_33' on local variable 'loop_index' [19]  (1.59 ns)
 
  <State 2>: 5.58ns
 The critical path consists of the following:

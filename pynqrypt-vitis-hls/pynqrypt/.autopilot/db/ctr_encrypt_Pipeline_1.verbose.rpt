@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'ctr_encrypt_Pipeline_1'
 ================================================================
-* Date:           Tue Dec  6 11:20:31 2022
+* Date:           Tue Dec  6 11:35:06 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -237,7 +237,7 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 1.58>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%loop_index3 = alloca i32 1"   --->   Operation 5 'alloca' 'loop_index3' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_3, void @empty_13, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_11, void @empty_3, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%select_ln23_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %select_ln23"   --->   Operation 7 'read' 'select_ln23_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%add_ln24_2_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %add_ln24_2"   --->   Operation 8 'read' 'add_ln24_2_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (1.58ns)   --->   "%store_ln0 = store i64 0, i64 %loop_index3"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
@@ -255,7 +255,7 @@ State 3 <SV = 2> <Delay = 2.32>
 ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 17 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%block_addr = getelementptr i8 %block_r, i64 0, i64 %loop_index3_load"   --->   Operation 18 'getelementptr' 'block_addr' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 19 [1/1] (2.32ns)   --->   "%store_ln0 = store i8 %gmem_addr_read, i4 %block_addr"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
-ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%empty_32 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0"   --->   Operation 20 'speclooptripcount' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%empty_30 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0"   --->   Operation 20 'speclooptripcount' 'empty_30' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 21 [1/1] (1.58ns)   --->   "%store_ln0 = store i64 %empty, i64 %loop_index3"   --->   Operation 21 'store' 'store_ln0' <Predicate = (!exitcond9)> <Delay = 1.58>
 ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln0 = br void %loop-memcpy-expansion2"   --->   Operation 22 'br' 'br_ln0' <Predicate = (!exitcond9)> <Delay = 0.00>
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 23 'ret' 'ret_ln0' <Predicate = (exitcond9)> <Delay = 0.00>
@@ -297,7 +297,7 @@ br_ln0            (br               ) [ 0000]
 specpipeline_ln0  (specpipeline     ) [ 0000]
 block_addr        (getelementptr    ) [ 0000]
 store_ln0         (store            ) [ 0000]
-empty_32          (speclooptripcount) [ 0000]
+empty_30          (speclooptripcount) [ 0000]
 store_ln0         (store            ) [ 0000]
 br_ln0            (br               ) [ 0000]
 ret_ln0           (ret              ) [ 0000]
@@ -402,7 +402,7 @@ ret_ln0           (ret              ) [ 0000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_11"/></StgValue>
 </bind>
 </comp>
 
@@ -411,7 +411,7 @@ ret_ln0           (ret              ) [ 0000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_13"/></StgValue>
+<StgValue><ssdm name="empty_3"/></StgValue>
 </bind>
 </comp>
 

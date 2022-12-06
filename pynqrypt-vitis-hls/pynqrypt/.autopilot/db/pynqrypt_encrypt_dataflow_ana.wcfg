@@ -195,53 +195,37 @@
                <obj_property name="Render_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_fu_218_activity.dataflowTxWaveData.Cycles</obj_property>
                <obj_property name="Value_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_fu_218_activity.dataflowTxWaveData.OutStanding</obj_property>
                <obj_property name="Detail_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_fu_218_activity.dataflowTxTooltipData</obj_property>
-               <wvobject type="group" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity">
-                  <obj_property name="label">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity</obj_property>
+               <wvobject type="group" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity">
+                  <obj_property name="label">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity</obj_property>
                   <obj_property name="DisplayName">label</obj_property>
                   <obj_property name="UseFullPath">true</obj_property>
-                  <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity</obj_property>
-                  <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity</obj_property>
+                  <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity</obj_property>
                   <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                   <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                   <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                   <obj_property name="UseCustomSignalColor">true</obj_property>
                   <obj_property name="CustomSignalColor">turquoise</obj_property>
                   <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-                  <obj_property name="Render_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity.dataflowTxWaveData.Cycles</obj_property>
-                  <obj_property name="Value_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity.dataflowTxWaveData.OutStanding</obj_property>
-                  <obj_property name="Detail_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity.dataflowTxTooltipData</obj_property>
+                  <obj_property name="Render_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity.dataflowTxTooltipData</obj_property>
                </wvobject>
-               <wvobject type="group" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity">
-                  <obj_property name="label">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity</obj_property>
+               <wvobject type="group" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/grp_aes_encrypt_block_Pipeline_2_fu_895_activity">
+                  <obj_property name="label">grp_aes_encrypt_block_Pipeline_2_fu_895_activity</obj_property>
                   <obj_property name="DisplayName">label</obj_property>
                   <obj_property name="UseFullPath">true</obj_property>
-                  <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity</obj_property>
-                  <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity</obj_property>
+                  <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_2_fu_895_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_2_fu_895_activity</obj_property>
                   <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                   <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                   <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                   <obj_property name="UseCustomSignalColor">true</obj_property>
                   <obj_property name="CustomSignalColor">turquoise</obj_property>
                   <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-                  <obj_property name="Render_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity.dataflowTxWaveData.Cycles</obj_property>
-                  <obj_property name="Value_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity.dataflowTxWaveData.OutStanding</obj_property>
-                  <obj_property name="Detail_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity.dataflowTxTooltipData</obj_property>
-               </wvobject>
-               <wvobject type="group" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity">
-                  <obj_property name="label">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity</obj_property>
-                  <obj_property name="DisplayName">label</obj_property>
-                  <obj_property name="UseFullPath">true</obj_property>
-                  <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity</obj_property>
-                  <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity</obj_property>
-                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-                  <obj_property name="UseCustomSignalColor">true</obj_property>
-                  <obj_property name="CustomSignalColor">turquoise</obj_property>
-                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-                  <obj_property name="Render_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity.dataflowTxWaveData.Cycles</obj_property>
-                  <obj_property name="Value_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity.dataflowTxWaveData.OutStanding</obj_property>
-                  <obj_property name="Detail_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity.dataflowTxTooltipData</obj_property>
+                  <obj_property name="Render_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/grp_aes_encrypt_block_Pipeline_2_fu_895_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/grp_aes_encrypt_block_Pipeline_2_fu_895_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/grp_aes_encrypt_block_Pipeline_2_fu_895_activity.dataflowTxTooltipData</obj_property>
                </wvobject>
             </wvobject>
             <wvobject type="group" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227/grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_activity">
@@ -596,16 +580,16 @@
                   <obj_property name="DisplayName">label</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject type="group" fp_name="aes_sbox3_group">
-               <obj_property name="label">aes_sbox3(PIPO)</obj_property>
+            <wvobject type="group" fp_name="crypto_aes_sbox_group">
+               <obj_property name="label">crypto_aes_sbox(PIPO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/aes_generate_round_keys_U0/aes_sbox3_address0">
+               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/aes_generate_round_keys_U0/crypto_aes_sbox_address0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/aes_generate_round_keys_U0/aes_sbox3_q0">
+               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/aes_generate_round_keys_U0/crypto_aes_sbox_q0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/aes_generate_round_keys_U0/aes_sbox3_ce0">
-                  <obj_property name="ElementShortName">aes_sbox3_ce0</obj_property>
-                  <obj_property name="ObjectShortName">aes_sbox3_ce0</obj_property>
+               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/aes_generate_round_keys_U0/crypto_aes_sbox_ce0">
+                  <obj_property name="ElementShortName">crypto_aes_sbox_ce0</obj_property>
+                  <obj_property name="ObjectShortName">crypto_aes_sbox_ce0</obj_property>
                </wvobject>
                <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/aes_generate_round_keys_U0/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
@@ -820,16 +804,16 @@
                   <obj_property name="ObjectShortName">ciphertext_read</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject type="group" fp_name="crypto_aes_sbox_group">
-               <obj_property name="label">crypto_aes_sbox(PIPO)</obj_property>
+            <wvobject type="group" fp_name="aes_sbox2_group">
+               <obj_property name="label">aes_sbox2(PIPO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/crypto_aes_sbox_address0">
+               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/aes_sbox2_address0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/crypto_aes_sbox_q0">
+               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/aes_sbox2_q0">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/crypto_aes_sbox_ce0">
-                  <obj_property name="ElementShortName">crypto_aes_sbox_ce0</obj_property>
-                  <obj_property name="ObjectShortName">crypto_aes_sbox_ce0</obj_property>
+               <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/aes_sbox2_ce0">
+                  <obj_property name="ElementShortName">aes_sbox2_ce0</obj_property>
+                  <obj_property name="ObjectShortName">aes_sbox2_ce0</obj_property>
                </wvobject>
                <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
@@ -906,17 +890,13 @@
          <wvobject type="group" fp_name="grp_aes_encrypt_block_fu_218_group">
             <obj_property name="label">grp_aes_encrypt_block_fu_218</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="protoinst" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity">
-               <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity</obj_property>
+            <wvobject type="protoinst" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity">
+               <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_activity</obj_property>
             </wvobject>
-            <wvobject type="protoinst" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity">
-               <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity</obj_property>
-            </wvobject>
-            <wvobject type="protoinst" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity">
-               <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity</obj_property>
+            <wvobject type="protoinst" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/grp_aes_encrypt_block_Pipeline_2_fu_895_activity">
+               <obj_property name="ElementShortName">grp_aes_encrypt_block_Pipeline_2_fu_895_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_aes_encrypt_block_Pipeline_2_fu_895_activity</obj_property>
             </wvobject>
             <wvobject type="group" fp_name="grp_aes_encrypt_block_fu_218_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
@@ -934,61 +914,41 @@
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_group">
-               <obj_property name="label">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198</obj_property>
+            <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_group">
+               <obj_property name="label">grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_Handshake_group">
+               <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868_Handshake_group">
                   <obj_property name="label">Block-level handshake</obj_property>
                   <obj_property name="DisplayName">label</obj_property>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/ap_start">
+                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/ap_start">
                      <obj_property name="ElementShortName">ap_start</obj_property>
                      <obj_property name="ObjectShortName">ap_start</obj_property>
                   </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/ap_ready">
+                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/ap_ready">
                      <obj_property name="ElementShortName">ap_ready</obj_property>
                      <obj_property name="ObjectShortName">ap_ready</obj_property>
                   </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/ap_done">
+                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/ap_done">
                      <obj_property name="ElementShortName">ap_done</obj_property>
                      <obj_property name="ObjectShortName">ap_done</obj_property>
                   </wvobject>
                </wvobject>
             </wvobject>
-            <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_group">
-               <obj_property name="label">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208</obj_property>
+            <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_2_fu_895_group">
+               <obj_property name="label">grp_aes_encrypt_block_Pipeline_2_fu_895</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_Handshake_group">
+               <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_2_fu_895_Handshake_group">
                   <obj_property name="label">Block-level handshake</obj_property>
                   <obj_property name="DisplayName">label</obj_property>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/ap_start">
+                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/ap_start">
                      <obj_property name="ElementShortName">ap_start</obj_property>
                      <obj_property name="ObjectShortName">ap_start</obj_property>
                   </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/ap_ready">
+                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/ap_ready">
                      <obj_property name="ElementShortName">ap_ready</obj_property>
                      <obj_property name="ObjectShortName">ap_ready</obj_property>
                   </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/ap_done">
-                     <obj_property name="ElementShortName">ap_done</obj_property>
-                     <obj_property name="ObjectShortName">ap_done</obj_property>
-                  </wvobject>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_group">
-               <obj_property name="label">grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="group" fp_name="grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_Handshake_group">
-                  <obj_property name="label">Block-level handshake</obj_property>
-                  <obj_property name="DisplayName">label</obj_property>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/ap_start">
-                     <obj_property name="ElementShortName">ap_start</obj_property>
-                     <obj_property name="ObjectShortName">ap_start</obj_property>
-                  </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/ap_ready">
-                     <obj_property name="ElementShortName">ap_ready</obj_property>
-                     <obj_property name="ObjectShortName">ap_ready</obj_property>
-                  </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/ap_done">
+                  <wvobject type="logic" fp_name="/apatb_pynqrypt_encrypt_top/AESL_inst_pynqrypt_encrypt/ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_2_fu_895/ap_done">
                      <obj_property name="ElementShortName">ap_done</obj_property>
                      <obj_property name="ObjectShortName">ap_done</obj_property>
                   </wvobject>

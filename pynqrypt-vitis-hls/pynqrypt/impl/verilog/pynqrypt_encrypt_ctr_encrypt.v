@@ -484,7 +484,7 @@ block_nonce_U(
     .q1(block_nonce_q1)
 );
 
-pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W #(
+pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W #(
     .DataWidth( 8 ),
     .AddressRange( 16 ),
     .AddressWidth( 4 ))

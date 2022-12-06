@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 24 \
+    id 25 \
     name state \
     reset_level 1 \
     sync_rst true \
@@ -30,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 25 \
+    id 26 \
     name pynqrypt_round_keys \
     reset_level 1 \
     sync_rst true \
@@ -49,20 +49,275 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 26 \
-    name crypto_aes_sbox \
+    id 43 \
+    name aes_sbox2 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename crypto_aes_sbox \
+    corename aes_sbox2 \
     op interface \
-    ports { crypto_aes_sbox_address0 { O 8 vector } crypto_aes_sbox_ce0 { O 1 bit } crypto_aes_sbox_q0 { I 8 vector } } \
+    ports { aes_sbox2_address0 { O 8 vector } aes_sbox2_ce0 { O 1 bit } aes_sbox2_q0 { I 8 vector } aes_sbox2_address1 { O 8 vector } aes_sbox2_ce1 { O 1 bit } aes_sbox2_q1 { I 8 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'crypto_aes_sbox'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'aes_sbox2'"
 }
 }
 
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 24 \
+    name xor_ln233 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_xor_ln233 \
+    op interface \
+    ports { xor_ln233 { I 8 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 27 \
+    name p_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_out \
+    op interface \
+    ports { p_out { O 8 vector } p_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 28 \
+    name conv6_i36_1_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_1_phi_out \
+    op interface \
+    ports { conv6_i36_1_phi_out { O 8 vector } conv6_i36_1_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 29 \
+    name conv6_i36_2_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_2_phi_out \
+    op interface \
+    ports { conv6_i36_2_phi_out { O 8 vector } conv6_i36_2_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 30 \
+    name conv6_i36_3_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_3_phi_out \
+    op interface \
+    ports { conv6_i36_3_phi_out { O 8 vector } conv6_i36_3_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 31 \
+    name conv6_i36_4_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_4_phi_out \
+    op interface \
+    ports { conv6_i36_4_phi_out { O 8 vector } conv6_i36_4_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 32 \
+    name conv6_i36_5_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_5_phi_out \
+    op interface \
+    ports { conv6_i36_5_phi_out { O 8 vector } conv6_i36_5_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 33 \
+    name conv6_i36_6_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_6_phi_out \
+    op interface \
+    ports { conv6_i36_6_phi_out { O 8 vector } conv6_i36_6_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 34 \
+    name conv6_i36_7_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_7_phi_out \
+    op interface \
+    ports { conv6_i36_7_phi_out { O 8 vector } conv6_i36_7_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 35 \
+    name conv6_i36_8_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_8_phi_out \
+    op interface \
+    ports { conv6_i36_8_phi_out { O 8 vector } conv6_i36_8_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 36 \
+    name conv6_i36_9_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_9_phi_out \
+    op interface \
+    ports { conv6_i36_9_phi_out { O 8 vector } conv6_i36_9_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 37 \
+    name conv6_i36_10_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_10_phi_out \
+    op interface \
+    ports { conv6_i36_10_phi_out { O 8 vector } conv6_i36_10_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 38 \
+    name conv6_i36_11_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_11_phi_out \
+    op interface \
+    ports { conv6_i36_11_phi_out { O 8 vector } conv6_i36_11_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 39 \
+    name conv6_i36_12_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_12_phi_out \
+    op interface \
+    ports { conv6_i36_12_phi_out { O 8 vector } conv6_i36_12_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 40 \
+    name conv6_i36_13_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_13_phi_out \
+    op interface \
+    ports { conv6_i36_13_phi_out { O 8 vector } conv6_i36_13_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 41 \
+    name conv6_i36_14_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_14_phi_out \
+    op interface \
+    ports { conv6_i36_14_phi_out { O 8 vector } conv6_i36_14_phi_out_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 42 \
+    name conv6_i36_15_phi_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv6_i36_15_phi_out \
+    op interface \
+    ports { conv6_i36_15_phi_out { O 8 vector } conv6_i36_15_phi_out_ap_vld { O 1 bit } } \
+} "
+}
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

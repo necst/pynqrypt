@@ -13,23 +13,26 @@ set SynModuleInfo {
   }
   {SRCNAME aes_generate_round_keys_Pipeline_loop_generate_round_keys MODELNAME aes_generate_round_keys_Pipeline_loop_generate_round_keys RTLNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys
     SUBMODULES {
-      {MODELNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R RTLNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb RTLNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb RTLNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud RTLNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME aes_generate_round_keys MODELNAME aes_generate_round_keys RTLNAME pynqrypt_encrypt_aes_generate_round_keys}
   {SRCNAME ctr_encrypt_Pipeline_1 MODELNAME ctr_encrypt_Pipeline_1 RTLNAME pynqrypt_encrypt_ctr_encrypt_Pipeline_1}
   {SRCNAME ctr_encrypt_Pipeline_2 MODELNAME ctr_encrypt_Pipeline_2 RTLNAME pynqrypt_encrypt_ctr_encrypt_Pipeline_2}
   {SRCNAME aes_encrypt_block_Pipeline_loop_aes_encrypt_block MODELNAME aes_encrypt_block_Pipeline_loop_aes_encrypt_block RTLNAME pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block}
-  {SRCNAME aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 MODELNAME aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 RTLNAME pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1}
-  {SRCNAME aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 MODELNAME aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 RTLNAME pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1}
-  {SRCNAME aes_encrypt_block MODELNAME aes_encrypt_block RTLNAME pynqrypt_encrypt_aes_encrypt_block}
+  {SRCNAME aes_encrypt_block_Pipeline_2 MODELNAME aes_encrypt_block_Pipeline_2 RTLNAME pynqrypt_encrypt_aes_encrypt_block_Pipeline_2}
+  {SRCNAME aes_encrypt_block MODELNAME aes_encrypt_block RTLNAME pynqrypt_encrypt_aes_encrypt_block
+    SUBMODULES {
+      {MODELNAME pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R RTLNAME pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W RTLNAME pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+    }
+  }
   {SRCNAME ctr_encrypt_Pipeline_loop_ctr_xor_block MODELNAME ctr_encrypt_Pipeline_loop_ctr_xor_block RTLNAME pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block}
   {SRCNAME ctr_encrypt_Pipeline_4 MODELNAME ctr_encrypt_Pipeline_4 RTLNAME pynqrypt_encrypt_ctr_encrypt_Pipeline_4}
   {SRCNAME ctr_encrypt MODELNAME ctr_encrypt RTLNAME pynqrypt_encrypt_ctr_encrypt
     SUBMODULES {
       {MODELNAME pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W RTLNAME pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W RTLNAME pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME pynqrypt_encrypt MODELNAME pynqrypt_encrypt RTLNAME pynqrypt_encrypt IS_TOP 1

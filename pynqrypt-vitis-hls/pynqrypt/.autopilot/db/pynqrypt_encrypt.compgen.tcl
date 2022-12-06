@@ -121,7 +121,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 54 \
+			id 70 \
 			corename pynqrypt_encrypt_control_axilite \
 			name pynqrypt_encrypt_control_s_axi \
 			ports {$port_control} \

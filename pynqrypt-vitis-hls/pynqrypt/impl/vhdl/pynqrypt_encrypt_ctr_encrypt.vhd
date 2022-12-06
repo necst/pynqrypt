@@ -620,7 +620,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W IS
+    component pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -660,7 +660,7 @@ begin
         d1 => block_nonce_d1,
         q1 => block_nonce_q1);
 
-    block_U : component pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W
+    block_U : component pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W
     generic map (
         DataWidth => 8,
         AddressRange => 16,

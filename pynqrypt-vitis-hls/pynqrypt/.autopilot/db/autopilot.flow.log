@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt opened at Tue Dec 06 11:20:11 CET 2022
+INFO-FLOW: Workspace /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt opened at Tue Dec 06 11:34:46 CET 2022
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7z020i-clg400-1L 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: /xilinx/Vitis_HLS/2022.2/lib/lnx64
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /xilinx//Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020i-clg400-1L'
-Command       create_platform done; 0.19 sec.
+Command       create_platform done; 0.18 sec.
 Execute       source /xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -22,10 +22,10 @@ Execute         source /xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir
 Execute         source /xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7z020i-clg400-1L -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.27 sec.
+Command     set_part done; 0.26 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 0.34 sec.
+Command   open_solution done; 0.33 sec.
 Execute   set_part xc7z020i-clg400-1L 
 INFO: [HLS 200-1510] Running: set_part xc7z020i-clg400-1L 
 Execute     create_platform xc7z020i-clg400-1L -board  
@@ -52,7 +52,7 @@ INFO: [HLS 200-1510] Running: set_directive_top -name pynqrypt_encrypt pynqrypt_
 Execute   csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 10.02 seconds; current allocated memory: 201.828 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 10.01 seconds; current allocated memory: 201.824 MB.
 INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling hw-impl/src/pynqrypt.cpp as C++
@@ -66,7 +66,7 @@ Execute       source /xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.t
 Execute       source /xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp -hls-platform-db-name=/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020iclg400-1L > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/clang.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.14 sec.
+Command       ap_eval done; 0.15 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/.systemc_flag -fix-errors /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
@@ -74,6 +74,7 @@ Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/mr
 INFO-FLOW: exec /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/all.directive.json -fix-errors /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
 Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.11 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
@@ -86,7 +87,7 @@ Execute       ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/cl
 Execute       ap_part_info -name xc7z020i-clg400-1L -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.bc -hls-platform-db-name=/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020iclg400-1L > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp.clang.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 0.16 sec.
+Command       ap_eval done; 0.15 sec.
 INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt_hls.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling hw-impl/src/pynqrypt_hls.cpp as C++
@@ -98,13 +99,13 @@ INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
 Execute       set_directive_top pynqrypt_encrypt -name=pynqrypt_encrypt 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp -hls-platform-db-name=/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020iclg400-1L > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/clang.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.13 sec.
+Command       ap_eval done; 0.14 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/.systemc_flag -fix-errors /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/all.directive.json -fix-errors /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.16 sec.
+Command       clang_tidy done; 0.17 sec.
 Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.3 seconds per iteration
@@ -112,14 +113,14 @@ INFO-FLOW: Calling xilinx-label-all-loops ...
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp std=gnu++14 -target fpga  
 Execute         ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 0.11 sec.
-Command       clang_tidy done; 0.11 sec.
+Command         ap_eval done; 0.12 sec.
+Command       clang_tidy done; 0.12 sec.
 Execute       ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
 Execute       ap_part_info -name xc7z020i-clg400-1L -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.bc -hls-platform-db-name=/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020iclg400-1L > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.clang.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 0.14 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.65 seconds. CPU system time: 0.36 seconds. Elapsed time: 2.01 seconds; current allocated memory: 201.828 MB.
+Command       ap_eval done; 0.15 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.71 seconds. CPU system time: 0.34 seconds. Elapsed time: 2.04 seconds; current allocated memory: 201.910 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.0.bc -args  "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.g.bc" "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.g.bc"  
@@ -131,14 +132,14 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.2.m1.bc -args /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.1.lower.bc -only-needed /xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.1.lower.bc -only-needed /xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.2.m1.bc > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 1.58 sec.
+Command         ap_eval done; 1.59 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.58 sec.
+Command       run_link_or_opt done; 1.59 sec.
 Execute       run_link_or_opt -opt -out /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.3.fpc.bc -args /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=pynqrypt_encrypt -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=pynqrypt_encrypt -reflow-float-conversion -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.3.fpc.bc > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 0.56 sec.
+Command         ap_eval done; 0.55 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.56 sec.
+Command       run_link_or_opt done; 0.55 sec.
 Execute       run_link_or_opt -out /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.4.m2.bc -args /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.4.m2.bc > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 INFO-FLOW: 
@@ -150,75 +151,78 @@ INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 Execute       ap_eval exec -ignorestderr /xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=pynqrypt_encrypt -mllvm -hls-db-dir -mllvm /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.5.gdce.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020iclg400-1L > /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command       ap_eval done; 0.35 sec.
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:189:0)
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:189:0)
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:189:0)
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:189:0)
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' (hw-impl/src/pynqrypt.cpp:96:0)
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:51:0)
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:51:0)
-INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:51:0)
+Command       ap_eval done; 0.44 sec.
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:52:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:63:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:62:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:61:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:58:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:57:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:55:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:56:9)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_231_1' (hw-impl/src/pynqrypt.cpp:231:20) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_1' (hw-impl/src/pynqrypt.cpp:70:19) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_106_1' (hw-impl/src/pynqrypt.cpp:106:23) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 4 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:51:0)
 INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
 INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
 INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)' (hw-impl/src/pynqrypt_hls.cpp:9:0)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:200:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:246:14)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:247:14)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:248:14)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:255:29)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:255:18)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:206:29)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:272:27)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:272:39)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:272:25)
 WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:208:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:209:29)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:211:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:212:23)
-WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:214:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:257:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:258:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:259:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:18)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:214:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:27)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:39)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:25)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:216:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:217:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:219:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:220:23)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:222:10)
 INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 8 in loop 'anonymous'() has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 8 in loop 'anonymous'() has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.57 seconds. CPU system time: 0.29 seconds. Elapsed time: 2.86 seconds; current allocated memory: 203.445 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 203.445 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.71 seconds. CPU system time: 0.23 seconds. Elapsed time: 2.95 seconds; current allocated memory: 203.691 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 203.691 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top pynqrypt_encrypt -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.0.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 204.871 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 205.898 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.1.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.2.prechk.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 205.758 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 206.559 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.g.1.bc to /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.o.1.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-510] Pipelining loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:54) in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_68_1' (hw-impl/src/pynqrypt.cpp:68) in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_221_1' (hw-impl/src/pynqrypt.cpp:221) in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' in function 'crypto::Pynqrypt::ctr_encrypt' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.2' in function 'crypto::Pynqrypt::ctr_encrypt' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'loop_ctr_xor_block' (hw-impl/src/pynqrypt.cpp:45) in function 'crypto::Pynqrypt::ctr_encrypt' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.4' in function 'crypto::Pynqrypt::ctr_encrypt' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'crypto::Pynqrypt::aes_generate_round_keys' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'loop_generate_round_keys' (hw-impl/src/pynqrypt.cpp:191) in function 'crypto::Pynqrypt::aes_generate_round_keys' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_generate_round_keys' (hw-impl/src/pynqrypt.cpp:199) in function 'crypto::Pynqrypt::aes_generate_round_keys' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'pynqrypt_encrypt' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'pynqrypt_encrypt' automatically.
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_generate_round_keys' (hw-impl/src/pynqrypt.cpp:191) in function 'crypto::Pynqrypt::aes_generate_round_keys' for pipelining.
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:54) in function 'crypto::Pynqrypt::aes_encrypt_block' for pipelining.
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'crypto::Pynqrypt::aes_shift_rows' (hw-impl/src/pynqrypt.cpp:74:1).
-INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_254_1' (hw-impl/src/pynqrypt.cpp:191) in function 'crypto::Pynqrypt::aes_generate_round_keys' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_271_1' (hw-impl/src/pynqrypt.cpp:271) in function 'crypto::Pynqrypt::aes_generate_round_keys' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_68_1' (hw-impl/src/pynqrypt.cpp:68) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16.
-INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_99_1' (hw-impl/src/pynqrypt.cpp:99) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_221_1' (hw-impl/src/pynqrypt.cpp:221) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16.
-INFO: [HLS 200-489] Unrolling loop 'Loop-1' in function 'crypto::Pynqrypt::aes_shift_rows' completely with a factor of 16.
-INFO: [XFORM 203-102] Partitioning array 'temp' (hw-impl/src/pynqrypt.cpp:74) automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_generate_round_keys' (hw-impl/src/pynqrypt.cpp:199) in function 'crypto::Pynqrypt::aes_generate_round_keys' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_265_1' (hw-impl/src/pynqrypt.cpp:199) in function 'crypto::Pynqrypt::aes_generate_round_keys' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_282_1' (hw-impl/src/pynqrypt.cpp:282) in function 'crypto::Pynqrypt::aes_generate_round_keys' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'temp' (hw-impl/src/pynqrypt.cpp:79) automatically.
 INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' to a process function for dataflow in function 'pynqrypt_encrypt'.
 INFO: [XFORM 203-721] Changing loop 'Loop_2_proc' to a process function for dataflow in function 'pynqrypt_encrypt'.
 INFO: [XFORM 203-712] Applying dataflow to function 'pynqrypt_encrypt' (hw-impl/src/pynqrypt_hls.cpp:6), detected/extracted 5 process function(s): 
@@ -227,12 +231,11 @@ INFO: [XFORM 203-712] Applying dataflow to function 'pynqrypt_encrypt' (hw-impl/
 	 'Loop_2_proc'
 	 'crypto::Pynqrypt::aes_generate_round_keys'
 	 'crypto::Pynqrypt::ctr_encrypt'.
-Command         transform done; 0.12 sec.
+Command         transform done; 0.17 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.o.1.tmp.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-602] Inlining function 'crypto::Pynqrypt::aes_shift_rows' into 'crypto::Pynqrypt::aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:56) automatically.
-INFO: [XFORM 203-11] Balancing expressions in function 'crypto::Pynqrypt::aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:54:23)...60 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 230.078 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'crypto::Pynqrypt::aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0:1)...93 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 231.984 MB.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.o.2.bc -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [HLS 200-960] Cannot flatten loop 'loop_ctr_encrypt' (hw-impl/src/pynqrypt.cpp:23:35) in function 'crypto::Pynqrypt::ctr_encrypt' more than one sub loop.
@@ -244,29 +247,18 @@ INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl
 INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:40:21)
 INFO: [HLS 200-472] Inferring partial write operation for 'block' (hw-impl/src/pynqrypt.cpp:46:18)
 INFO: [HLS 200-472] Inferring partial write operation for 'pynqrypt.round_keys' 
-INFO: [HLS 200-472] Inferring partial write operation for 'pynqrypt.round_keys' (hw-impl/src/pynqrypt.cpp:272:25)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:222:18)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:69:18)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:78:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:79:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:80:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:82:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:83:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:84:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:86:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:87:15)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:88:15)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:90:15)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:91:15)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:92:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'pynqrypt.round_keys' (hw-impl/src/pynqrypt.cpp:283:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:233:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:72:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' 
 INFO: [HLS 200-472] Inferring partial write operation for 'pynqrypt.nonce' 
 INFO: [HLS 200-472] Inferring partial write operation for 'pynqrypt.key' 
 WARNING: [HLS 200-1449] Process ctr_encrypt has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
-Command         transform done; 0.33 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.31 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.33 seconds; current allocated memory: 367.395 MB.
+Command         transform done; 0.19 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 359.309 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.57 sec.
-Command     elaborate done; 5.44 sec.
+Command       opt_and_import_c done; 0.53 sec.
+Command     elaborate done; 5.52 sec.
 Execute     ap_eval exec zip -j /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -279,8 +271,7 @@ Execute       preproc_iomode -model ctr_encrypt
 Execute       preproc_iomode -model ctr_encrypt_Pipeline_4 
 Execute       preproc_iomode -model ctr_encrypt_Pipeline_loop_ctr_xor_block 
 Execute       preproc_iomode -model aes_encrypt_block 
-Execute       preproc_iomode -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       preproc_iomode -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
+Execute       preproc_iomode -model aes_encrypt_block_Pipeline_2 
 Execute       preproc_iomode -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 Execute       preproc_iomode -model ctr_encrypt_Pipeline_2 
 Execute       preproc_iomode -model ctr_encrypt_Pipeline_1 
@@ -291,7 +282,7 @@ Execute       preproc_iomode -model Loop_2_proc
 Execute       preproc_iomode -model Loop_1_proc 
 Execute       preproc_iomode -model entry_proc 
 Execute       get_model_list pynqrypt_encrypt -filter all-wo-channel 
-INFO-FLOW: Model list for configure: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
+INFO-FLOW: Model list for configure: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_2 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
 INFO-FLOW: Configuring Module : entry_proc ...
 Execute       set_default_model entry_proc 
 Execute       apply_spec_resource_limit entry_proc 
@@ -319,12 +310,9 @@ Execute       apply_spec_resource_limit ctr_encrypt_Pipeline_2
 INFO-FLOW: Configuring Module : aes_encrypt_block_Pipeline_loop_aes_encrypt_block ...
 Execute       set_default_model aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 Execute       apply_spec_resource_limit aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
-INFO-FLOW: Configuring Module : aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 ...
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       apply_spec_resource_limit aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-INFO-FLOW: Configuring Module : aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 ...
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       apply_spec_resource_limit aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
+INFO-FLOW: Configuring Module : aes_encrypt_block_Pipeline_2 ...
+Execute       set_default_model aes_encrypt_block_Pipeline_2 
+Execute       apply_spec_resource_limit aes_encrypt_block_Pipeline_2 
 INFO-FLOW: Configuring Module : aes_encrypt_block ...
 Execute       set_default_model aes_encrypt_block 
 Execute       apply_spec_resource_limit aes_encrypt_block 
@@ -340,7 +328,7 @@ Execute       apply_spec_resource_limit ctr_encrypt
 INFO-FLOW: Configuring Module : pynqrypt_encrypt ...
 Execute       set_default_model pynqrypt_encrypt 
 Execute       apply_spec_resource_limit pynqrypt_encrypt 
-INFO-FLOW: Model list for preprocess: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
+INFO-FLOW: Model list for preprocess: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_2 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
 INFO-FLOW: Preprocessing Module: entry_proc ...
 Execute       set_default_model entry_proc 
 Execute       cdfg_preprocess -model entry_proc 
@@ -377,14 +365,10 @@ INFO-FLOW: Preprocessing Module: aes_encrypt_block_Pipeline_loop_aes_encrypt_blo
 Execute       set_default_model aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 Execute       cdfg_preprocess -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
-INFO-FLOW: Preprocessing Module: aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 ...
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       cdfg_preprocess -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-INFO-FLOW: Preprocessing Module: aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 ...
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       cdfg_preprocess -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
+INFO-FLOW: Preprocessing Module: aes_encrypt_block_Pipeline_2 ...
+Execute       set_default_model aes_encrypt_block_Pipeline_2 
+Execute       cdfg_preprocess -model aes_encrypt_block_Pipeline_2 
+Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_2 
 INFO-FLOW: Preprocessing Module: aes_encrypt_block ...
 Execute       set_default_model aes_encrypt_block 
 Execute       cdfg_preprocess -model aes_encrypt_block 
@@ -405,7 +389,7 @@ INFO-FLOW: Preprocessing Module: pynqrypt_encrypt ...
 Execute       set_default_model pynqrypt_encrypt 
 Execute       cdfg_preprocess -model pynqrypt_encrypt 
 Execute       rtl_gen_preprocess pynqrypt_encrypt 
-INFO-FLOW: Model list for synthesis: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
+INFO-FLOW: Model list for synthesis: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_2 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -413,7 +397,7 @@ Execute       set_default_model entry_proc
 Execute       schedule -model entry_proc 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 367.902 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 360.027 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/entry_proc.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/entry_proc.sched.adb -f 
@@ -425,7 +409,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 368.062 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 360.082 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/entry_proc.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/entry_proc.bind.adb -f 
@@ -439,7 +423,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 369.039 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 361.102 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_1_proc.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_1_proc.sched.adb -f 
@@ -451,7 +435,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 369.039 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 361.102 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_1_proc.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_1_proc.bind.adb -f 
@@ -465,7 +449,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 369.340 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 361.359 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_2_proc.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_2_proc.sched.adb -f 
@@ -477,7 +461,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 369.340 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 361.359 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_2_proc.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_2_proc.bind.adb -f 
@@ -491,7 +475,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 369.582 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 361.621 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_1.sched.adb -f 
@@ -503,7 +487,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 369.582 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 361.621 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_1.bind.adb -f 
@@ -515,16 +499,16 @@ Execute       set_default_model aes_generate_round_keys_Pipeline_loop_generate_r
 Execute       schedule -model aes_generate_round_keys_Pipeline_loop_generate_round_keys 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_generate_round_keys'.
-WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('pynqrypt_round_keys_addr_28_write_ln272', hw-impl/src/pynqrypt.cpp:272) of variable 'xor_ln272_12', hw-impl/src/pynqrypt.cpp:272 on array 'pynqrypt_round_keys' and 'load' operation ('temp', hw-impl/src/pynqrypt.cpp:200) on array 'pynqrypt_round_keys'.
-WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('pynqrypt_round_keys_addr_28_write_ln272', hw-impl/src/pynqrypt.cpp:272) of variable 'xor_ln272_12', hw-impl/src/pynqrypt.cpp:272 on array 'pynqrypt_round_keys' and 'load' operation ('temp', hw-impl/src/pynqrypt.cpp:200) on array 'pynqrypt_round_keys'.
-WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('pynqrypt_round_keys_addr_31_write_ln272', hw-impl/src/pynqrypt.cpp:272) of variable 'xor_ln272_15', hw-impl/src/pynqrypt.cpp:272 on array 'pynqrypt_round_keys' and 'load' operation ('pynqrypt_round_keys_load_3', hw-impl/src/pynqrypt.cpp:200) on array 'pynqrypt_round_keys'.
-WARNING: [HLS 200-885] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to schedule 'load' operation ('pynqrypt_round_keys_load_2', hw-impl/src/pynqrypt.cpp:200) on array 'pynqrypt_round_keys' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'pynqrypt_round_keys'.
-WARNING: [HLS 200-885] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to schedule 'store' operation ('pynqrypt_round_keys_addr_17_write_ln272', hw-impl/src/pynqrypt.cpp:272) of variable 'xor_ln272_5', hw-impl/src/pynqrypt.cpp:272 on array 'pynqrypt_round_keys' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'pynqrypt_round_keys'.
-WARNING: [HLS 200-885] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to schedule 'store' operation ('pynqrypt_round_keys_addr_29_write_ln272', hw-impl/src/pynqrypt.cpp:272) of variable 'xor_ln272_13', hw-impl/src/pynqrypt.cpp:272 on array 'pynqrypt_round_keys' due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array 'pynqrypt_round_keys'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('pynqrypt_round_keys_addr_28_write_ln283', hw-impl/src/pynqrypt.cpp:283) of variable 'xor_ln283_12', hw-impl/src/pynqrypt.cpp:283 on array 'pynqrypt_round_keys' and 'load' operation ('temp', hw-impl/src/pynqrypt.cpp:208) on array 'pynqrypt_round_keys'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('pynqrypt_round_keys_addr_28_write_ln283', hw-impl/src/pynqrypt.cpp:283) of variable 'xor_ln283_12', hw-impl/src/pynqrypt.cpp:283 on array 'pynqrypt_round_keys' and 'load' operation ('temp', hw-impl/src/pynqrypt.cpp:208) on array 'pynqrypt_round_keys'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('pynqrypt_round_keys_addr_31_write_ln283', hw-impl/src/pynqrypt.cpp:283) of variable 'xor_ln283_15', hw-impl/src/pynqrypt.cpp:283 on array 'pynqrypt_round_keys' and 'load' operation ('pynqrypt_round_keys_load_3', hw-impl/src/pynqrypt.cpp:208) on array 'pynqrypt_round_keys'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to schedule 'load' operation ('pynqrypt_round_keys_load_2', hw-impl/src/pynqrypt.cpp:208) on array 'pynqrypt_round_keys' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'pynqrypt_round_keys'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to schedule 'store' operation ('pynqrypt_round_keys_addr_17_write_ln283', hw-impl/src/pynqrypt.cpp:283) of variable 'xor_ln283_5', hw-impl/src/pynqrypt.cpp:283 on array 'pynqrypt_round_keys' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'pynqrypt_round_keys'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' (loop 'loop_generate_round_keys'): Unable to schedule 'store' operation ('pynqrypt_round_keys_addr_29_write_ln283', hw-impl/src/pynqrypt.cpp:283) of variable 'xor_ln283_13', hw-impl/src/pynqrypt.cpp:283 on array 'pynqrypt_round_keys' due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array 'pynqrypt_round_keys'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 16, Depth = 16, loop 'loop_generate_round_keys'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.2 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 370.953 MB.
+Command       schedule done; 0.22 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 362.930 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.sched.adb -f 
@@ -536,7 +520,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 370.953 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 362.930 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.bind.adb -f 
@@ -548,7 +532,7 @@ Execute       set_default_model aes_generate_round_keys
 Execute       schedule -model aes_generate_round_keys 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 370.953 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 362.930 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys.sched.adb -f 
@@ -560,7 +544,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 370.953 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 362.930 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys.bind.adb -f 
@@ -574,7 +558,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 371.391 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 363.434 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_1.sched.adb -f 
@@ -586,7 +570,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 371.391 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 363.434 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_1.bind.adb -f 
@@ -600,7 +584,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 371.613 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 363.688 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_2.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_2.sched.adb -f 
@@ -612,7 +596,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 371.613 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 363.688 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_2.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_2.bind.adb -f 
@@ -624,15 +608,17 @@ Execute       set_default_model aes_encrypt_block_Pipeline_loop_aes_encrypt_bloc
 Execute       schedule -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_aes_encrypt_block'.
-WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln222', hw-impl/src/pynqrypt.cpp:222) of variable 'xor_ln222_14', hw-impl/src/pynqrypt.cpp:222 on array 'state' and 'load' operation ('state_load_12', hw-impl/src/pynqrypt.cpp:69) on array 'state'.
-WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln222', hw-impl/src/pynqrypt.cpp:222) of variable 'xor_ln222_14', hw-impl/src/pynqrypt.cpp:222 on array 'state' and 'load' operation ('state_load_12', hw-impl/src/pynqrypt.cpp:69) on array 'state'.
-WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln222', hw-impl/src/pynqrypt.cpp:222) of variable 'xor_ln222_14', hw-impl/src/pynqrypt.cpp:222 on array 'state' and 'load' operation ('state_load_12', hw-impl/src/pynqrypt.cpp:69) on array 'state'.
-WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'load' operation ('state_load_2', hw-impl/src/pynqrypt.cpp:69) on array 'state' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'state'.
-WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'load' operation ('state_load_14', hw-impl/src/pynqrypt.cpp:69) on array 'state' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'state'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 20, Depth = 20, loop 'loop_aes_encrypt_block'
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'xor' operation ('tmp2', hw-impl/src/pynqrypt.cpp:109) and 'load' operation ('tmp3', hw-impl/src/pynqrypt.cpp:72) on array 'aes_sbox2'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'load' operation ('state_load_1', hw-impl/src/pynqrypt.cpp:72) on array 'state' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_5_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_42', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_2_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_45', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 13). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_47', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 14). Please consider using a memory core with more ports or partitioning the array 'state'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 15, Depth = 15, loop 'loop_aes_encrypt_block'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.76 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.76 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.77 seconds; current allocated memory: 373.961 MB.
+Command       schedule done; 0.47 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.48 seconds; current allocated memory: 366.426 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.sched.adb -f 
@@ -644,64 +630,38 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 373.961 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 366.426 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Command       syn_report done; 0.23 sec.
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.bind.adb -f 
 INFO-FLOW: Finish binding aes_encrypt_block_Pipeline_loop_aes_encrypt_block.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_VITIS_LOOP_68_1' 
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       schedule -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
+Execute       set_default_model aes_encrypt_block_Pipeline_2 
+Execute       schedule -model aes_encrypt_block_Pipeline_2 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_68_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_68_1'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 374.223 MB.
-Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.verbose.sched.rpt 
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 366.488 MB.
+Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
-Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.sched.adb -f 
-INFO-FLOW: Finish scheduling aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       bind -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
+Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.sched.adb -f 
+INFO-FLOW: Finish scheduling aes_encrypt_block_Pipeline_2.
+Execute       set_default_model aes_encrypt_block_Pipeline_2 
+Execute       bind -model aes_encrypt_block_Pipeline_2 
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 374.223 MB.
-Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.verbose.bind.rpt 
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 366.488 MB.
+Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.bind.adb -f 
-INFO-FLOW: Finish binding aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_VITIS_LOOP_221_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       schedule -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_221_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_221_1'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 374.648 MB.
-Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.verbose.sched.rpt 
-Execute         AP::get_flow_target_display_name
-Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.sched.adb -f 
-INFO-FLOW: Finish scheduling aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.
-Execute       set_default_model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       bind -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 374.648 MB.
-Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.verbose.bind.rpt 
-Execute         AP::get_flow_target_display_name
-Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.bind.adb -f 
-INFO-FLOW: Finish binding aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.
+Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.bind.adb -f 
+INFO-FLOW: Finish binding aes_encrypt_block_Pipeline_2.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -709,9 +669,11 @@ Execute       set_default_model aes_encrypt_block
 Execute       schedule -model aes_encrypt_block 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 374.793 MB.
+Command       schedule done; 0.16 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 368.914 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.11 sec.
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.sched.adb -f 
 INFO-FLOW: Finish scheduling aes_encrypt_block.
 Execute       set_default_model aes_encrypt_block 
@@ -721,10 +683,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 374.793 MB.
+Command       bind done; 0.14 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 368.914 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.2 sec.
+Command       syn_report done; 0.27 sec.
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.bind.adb -f 
 INFO-FLOW: Finish binding aes_encrypt_block.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -736,7 +699,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_ctr_xor_block'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_ctr_xor_block'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 375.230 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 368.914 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.sched.adb -f 
@@ -748,7 +711,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 375.230 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 368.914 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.bind.adb -f 
@@ -762,7 +725,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 375.488 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 369.023 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_4.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_4.sched.adb -f 
@@ -774,7 +737,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 375.488 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 369.023 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_4.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_4.bind.adb -f 
@@ -786,7 +749,7 @@ Execute       set_default_model ctr_encrypt
 Execute       schedule -model ctr_encrypt 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 375.957 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 369.488 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.sched.adb -f 
@@ -798,11 +761,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.12 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 375.957 MB.
+Command       bind done; 0.13 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 369.488 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.26 sec.
+Command       syn_report done; 0.28 sec.
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.bind.adb -f 
 INFO-FLOW: Finish binding ctr_encrypt.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -813,7 +776,7 @@ Execute       schedule -model pynqrypt_encrypt
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 WARNING: [HLS 200-1019] Consider increasing the depth of PIPO pynqrypt_nonce (from Loop_2_proc_U0 to ctr_encrypt_U0) to 3 to improve performance and/or avoid deadlocks.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 375.957 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 369.488 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.sched.adb -f 
@@ -825,11 +788,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.12 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 375.992 MB.
+Command       bind done; 0.13 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 369.508 MB.
 Execute       syn_report -verbosereport -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.32 sec.
+Command       syn_report done; 0.35 sec.
 Execute       db_write -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.bind.adb -f 
 INFO-FLOW: Finish binding pynqrypt_encrypt.
 Execute       get_model_list pynqrypt_encrypt -filter all-wo-channel 
@@ -843,20 +806,19 @@ Execute       rtl_gen_preprocess aes_generate_round_keys
 Execute       rtl_gen_preprocess ctr_encrypt_Pipeline_1 
 Execute       rtl_gen_preprocess ctr_encrypt_Pipeline_2 
 Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
-Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
+Execute       rtl_gen_preprocess aes_encrypt_block_Pipeline_2 
 Execute       rtl_gen_preprocess aes_encrypt_block 
 Execute       rtl_gen_preprocess ctr_encrypt_Pipeline_loop_ctr_xor_block 
 Execute       rtl_gen_preprocess ctr_encrypt_Pipeline_4 
 Execute       rtl_gen_preprocess ctr_encrypt 
 Execute       rtl_gen_preprocess pynqrypt_encrypt 
-INFO-FLOW: Model list for RTL generation: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
+INFO-FLOW: Model list for RTL generation: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_2 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model entry_proc -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/entry_proc.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 376.332 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 369.816 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl entry_proc -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_entry_proc 
 Execute       gen_rtl entry_proc -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_entry_proc 
@@ -874,7 +836,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model Loop_1_proc -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_1_proc.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_1_proc' pipeline 'Loop 1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_1_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 377.020 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 370.480 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl Loop_1_proc -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_Loop_1_proc 
 Execute       gen_rtl Loop_1_proc -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_Loop_1_proc 
@@ -892,7 +854,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model Loop_2_proc -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/Loop_2_proc.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_2_proc' pipeline 'Loop 1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_2_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 377.770 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 371.293 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl Loop_2_proc -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_Loop_2_proc 
 Execute       gen_rtl Loop_2_proc -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_Loop_2_proc 
@@ -910,7 +872,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model aes_generate_round_keys_Pipeline_1 -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_1.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes_generate_round_keys_Pipeline_1' pipeline 'Loop 1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_generate_round_keys_Pipeline_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 378.484 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 372.004 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl aes_generate_round_keys_Pipeline_1 -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_1 
 Execute       gen_rtl aes_generate_round_keys_Pipeline_1 -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_1 
@@ -926,11 +888,12 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'aes_generate_round_keys_Pipeline_loop_generate_round_keys' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model aes_generate_round_keys_Pipeline_loop_generate_round_keys -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.compgen.tcl 
-INFO: [SYN 201-210] Renamed object name 'aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROM_AUTO_1R' to 'aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROM_AUTO_1R' to 'aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROM_AUTO_1R' to 'aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud' due to the length limit 80
 INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_generate_round_keys_Pipeline_loop_generate_round_keys'.
-INFO: [RTMG 210-279] Implementing memory 'pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 380.203 MB.
+INFO: [RTMG 210-279] Implementing memory 'pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 373.730 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl aes_generate_round_keys_Pipeline_loop_generate_round_keys -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys 
 Execute       gen_rtl aes_generate_round_keys_Pipeline_loop_generate_round_keys -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys 
@@ -939,7 +902,7 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model aes_generate_round_keys_Pipeline_loop_generate_round_keys -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_generate_round_keys_Pipeline_loop_generate_round_keys_csynth.xml 
 Execute       syn_report -verbosereport -model aes_generate_round_keys_Pipeline_loop_generate_round_keys -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.13 sec.
+Command       syn_report done; 0.12 sec.
 Execute       db_write -model aes_generate_round_keys_Pipeline_loop_generate_round_keys -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.adb 
 Execute       db_write -model aes_generate_round_keys_Pipeline_loop_generate_round_keys -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info aes_generate_round_keys_Pipeline_loop_generate_round_keys -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys 
@@ -948,7 +911,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'aes_generate_round_keys'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model aes_generate_round_keys -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_generate_round_keys'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 383.477 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 376.988 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl aes_generate_round_keys -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_generate_round_keys 
 Execute       gen_rtl aes_generate_round_keys -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_generate_round_keys 
@@ -978,7 +941,7 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'ctr_encrypt_Pipeline_1/m_axi
 WARNING: [RTGEN 206-101] Setting dangling out port 'ctr_encrypt_Pipeline_1/m_axi_gmem_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'ctr_encrypt_Pipeline_1/m_axi_gmem_ARUSER' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ctr_encrypt_Pipeline_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 384.238 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 377.746 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl ctr_encrypt_Pipeline_1 -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_ctr_encrypt_Pipeline_1 
 Execute       gen_rtl ctr_encrypt_Pipeline_1 -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_1 
@@ -996,7 +959,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model ctr_encrypt_Pipeline_2 -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_2.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ctr_encrypt_Pipeline_2' pipeline 'Loop 1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ctr_encrypt_Pipeline_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 385.027 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 378.547 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl ctr_encrypt_Pipeline_2 -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_ctr_encrypt_Pipeline_2 
 Execute       gen_rtl ctr_encrypt_Pipeline_2 -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_2 
@@ -1013,62 +976,46 @@ INFO: [HLS 200-10] -- Generating RTL for module 'aes_encrypt_block_Pipeline_loop
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model aes_encrypt_block_Pipeline_loop_aes_encrypt_block -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 387.492 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 381.113 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl aes_encrypt_block_Pipeline_loop_aes_encrypt_block -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 Execute       gen_rtl aes_encrypt_block_Pipeline_loop_aes_encrypt_block -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 Execute       syn_report -csynth -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_loop_aes_encrypt_block_csynth.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.13 sec.
+Command       syn_report done; 0.14 sec.
 Execute       syn_report -rtlxml -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_loop_aes_encrypt_block_csynth.xml 
 Execute       syn_report -verbosereport -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.29 sec.
+Command       syn_report done; 0.3 sec.
 Execute       db_write -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.adb 
 Execute       db_write -model aes_encrypt_block_Pipeline_loop_aes_encrypt_block -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info aes_encrypt_block_Pipeline_loop_aes_encrypt_block -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'aes_encrypt_block_Pipeline_VITIS_LOOP_68_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'aes_encrypt_block_Pipeline_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes_encrypt_block_Pipeline_VITIS_LOOP_68_1' pipeline 'VITIS_LOOP_68_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_encrypt_block_Pipeline_VITIS_LOOP_68_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.61 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.63 seconds; current allocated memory: 392.863 MB.
+Execute       create_rtl_model aes_encrypt_block_Pipeline_2 -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes_encrypt_block_Pipeline_2' pipeline 'Loop 1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_encrypt_block_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.67 seconds. CPU system time: 0 seconds. Elapsed time: 0.67 seconds; current allocated memory: 387.961 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
-Execute       gen_rtl aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       gen_rtl aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-Execute       syn_report -csynth -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_csynth.rpt 
+Execute       gen_rtl aes_encrypt_block_Pipeline_2 -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2 
+Execute       gen_rtl aes_encrypt_block_Pipeline_2 -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2 
+Execute       syn_report -csynth -model aes_encrypt_block_Pipeline_2 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_2_csynth.rpt 
 Execute         AP::get_flow_target_display_name
-Execute       syn_report -rtlxml -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_csynth.xml 
-Execute       syn_report -verbosereport -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.verbose.rpt 
+Execute       syn_report -rtlxml -model aes_encrypt_block_Pipeline_2 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_2_csynth.xml 
+Execute       syn_report -verbosereport -model aes_encrypt_block_Pipeline_2 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Execute       db_write -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.adb 
-Execute       db_write -model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'aes_encrypt_block_Pipeline_VITIS_LOOP_221_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes_encrypt_block_Pipeline_VITIS_LOOP_221_1' pipeline 'VITIS_LOOP_221_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_encrypt_block_Pipeline_VITIS_LOOP_221_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 393.652 MB.
-Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
-Execute       gen_rtl aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       gen_rtl aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
-Execute       syn_report -csynth -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_csynth.rpt 
-Execute         AP::get_flow_target_display_name
-Execute       syn_report -rtlxml -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_csynth.xml 
-Execute       syn_report -verbosereport -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.verbose.rpt 
-Execute         AP::get_flow_target_display_name
-Execute       db_write -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.adb 
-Execute       db_write -model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 
+Execute       db_write -model aes_encrypt_block_Pipeline_2 -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.adb 
+Execute       db_write -model aes_encrypt_block_Pipeline_2 -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info aes_encrypt_block_Pipeline_2 -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'aes_encrypt_block' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model aes_encrypt_block -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_encrypt_block'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 394.898 MB.
+INFO: [RTMG 210-279] Implementing memory 'pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 389.680 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl aes_encrypt_block -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_aes_encrypt_block 
 Execute       gen_rtl aes_encrypt_block -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_aes_encrypt_block 
@@ -1077,7 +1024,7 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model aes_encrypt_block -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/aes_encrypt_block_csynth.xml 
 Execute       syn_report -verbosereport -model aes_encrypt_block -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.21 sec.
+Command       syn_report done; 0.28 sec.
 Execute       db_write -model aes_encrypt_block -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.adb 
 Execute       db_write -model aes_encrypt_block -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info aes_encrypt_block -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block 
@@ -1087,7 +1034,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model ctr_encrypt_Pipeline_loop_ctr_xor_block -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ctr_encrypt_Pipeline_loop_ctr_xor_block' pipeline 'loop_ctr_xor_block' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ctr_encrypt_Pipeline_loop_ctr_xor_block'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 396.441 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 394.414 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl ctr_encrypt_Pipeline_loop_ctr_xor_block -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block 
 Execute       gen_rtl ctr_encrypt_Pipeline_loop_ctr_xor_block -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block 
@@ -1118,7 +1065,7 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'ctr_encrypt_Pipeline_4/m_axi
 WARNING: [RTGEN 206-101] Setting dangling out port 'ctr_encrypt_Pipeline_4/m_axi_gmem_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'ctr_encrypt_Pipeline_4/m_axi_gmem_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ctr_encrypt_Pipeline_4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 397.418 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 395.371 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl ctr_encrypt_Pipeline_4 -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_ctr_encrypt_Pipeline_4 
 Execute       gen_rtl ctr_encrypt_Pipeline_4 -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_4 
@@ -1136,8 +1083,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model ctr_encrypt -top_prefix pynqrypt_encrypt_ -sub_prefix pynqrypt_encrypt_ -mg_file /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ctr_encrypt'.
 INFO: [RTMG 210-278] Implementing memory 'pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 399.473 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 397.457 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl ctr_encrypt -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt_ctr_encrypt 
 Execute       gen_rtl ctr_encrypt -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt_ctr_encrypt 
@@ -1146,7 +1092,7 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model ctr_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/ctr_encrypt_csynth.xml 
 Execute       syn_report -verbosereport -model ctr_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.27 sec.
+Command       syn_report done; 0.3 sec.
 Execute       db_write -model ctr_encrypt -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.adb 
 Execute       db_write -model ctr_encrypt -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info ctr_encrypt -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt 
@@ -1173,7 +1119,7 @@ INFO: [RTMG 210-278] Implementing memory 'pynqrypt_encrypt_pynqrypt_nonce_RAM_AU
 INFO: [RTMG 210-285] Implementing FIFO 'plaintext_length_c_U(pynqrypt_encrypt_fifo_w64_d4_S)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'plaintext_c_U(pynqrypt_encrypt_fifo_w64_d4_S)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'ciphertext_c_U(pynqrypt_encrypt_fifo_w64_d4_S)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 402.461 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 400.359 MB.
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.rtl_wrap.cfg.tcl 
 Execute       gen_rtl pynqrypt_encrypt -istop -style xilinx -f -lang vhdl -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/vhdl/pynqrypt_encrypt 
 Execute       gen_rtl pynqrypt_encrypt -istop -style xilinx -f -lang vlog -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/verilog/pynqrypt_encrypt 
@@ -1182,20 +1128,20 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model pynqrypt_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/pynqrypt_encrypt_csynth.xml 
 Execute       syn_report -verbosereport -model pynqrypt_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.33 sec.
+Command       syn_report done; 0.36 sec.
 Execute       db_write -model pynqrypt_encrypt -f -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.adb 
 Execute       db_write -model pynqrypt_encrypt -bindview -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info pynqrypt_encrypt -p /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt 
 Execute       export_constraint_db -f -tool general -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.constraint.tcl 
 Execute       syn_report -designview -model pynqrypt_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.design.xml 
-Command       syn_report done; 0.31 sec.
+Command       syn_report done; 0.34 sec.
 Execute       syn_report -csynthDesign -model pynqrypt_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/syn/report/csynth.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       syn_report -wcfg -model pynqrypt_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model pynqrypt_encrypt -o /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.protoinst 
 Execute       sc_get_clocks pynqrypt_encrypt 
 Execute       sc_get_portdomain pynqrypt_encrypt 
-INFO-FLOW: Model list for RTL component generation: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
+INFO-FLOW: Model list for RTL component generation: entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_2 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
 INFO-FLOW: Handling components in module [entry_proc] ... 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/entry_proc.compgen.tcl 
 INFO-FLOW: Handling components in module [Loop_1_proc] ... 
@@ -1212,10 +1158,10 @@ INFO-FLOW: Found component pynqrypt_encrypt_flow_control_loop_pipe_sequential_in
 INFO-FLOW: Append model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [aes_generate_round_keys_Pipeline_loop_generate_round_keys] ... 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_generate_round_keys_Pipeline_loop_generate_round_keys.compgen.tcl 
-INFO-FLOW: Found component pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R.
-INFO-FLOW: Append model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R
-INFO-FLOW: Found component pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb.
-INFO-FLOW: Append model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb
+INFO-FLOW: Found component pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb.
+INFO-FLOW: Append model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb
+INFO-FLOW: Found component pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud.
+INFO-FLOW: Append model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud
 INFO-FLOW: Found component pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [aes_generate_round_keys] ... 
@@ -1232,16 +1178,16 @@ INFO-FLOW: Handling components in module [aes_encrypt_block_Pipeline_loop_aes_en
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.compgen.tcl 
 INFO-FLOW: Found component pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-INFO-FLOW: Handling components in module [aes_encrypt_block_Pipeline_VITIS_LOOP_68_1] ... 
-Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.compgen.tcl 
-INFO-FLOW: Found component pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.
-INFO-FLOW: Append model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-INFO-FLOW: Handling components in module [aes_encrypt_block_Pipeline_VITIS_LOOP_221_1] ... 
-Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.compgen.tcl 
+INFO-FLOW: Handling components in module [aes_encrypt_block_Pipeline_2] ... 
+Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.compgen.tcl 
 INFO-FLOW: Found component pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [aes_encrypt_block] ... 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.compgen.tcl 
+INFO-FLOW: Found component pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R.
+INFO-FLOW: Append model pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R
+INFO-FLOW: Found component pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.
+INFO-FLOW: Append model pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W
 INFO-FLOW: Handling components in module [ctr_encrypt_Pipeline_loop_ctr_xor_block] ... 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.compgen.tcl 
 INFO-FLOW: Found component pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.
@@ -1254,8 +1200,6 @@ INFO-FLOW: Handling components in module [ctr_encrypt] ...
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.compgen.tcl 
 INFO-FLOW: Found component pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W.
 INFO-FLOW: Append model pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W
-INFO-FLOW: Found component pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W.
-INFO-FLOW: Append model pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W
 INFO-FLOW: Handling components in module [pynqrypt_encrypt] ... 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.compgen.tcl 
 INFO-FLOW: Found component pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W_memcore.
@@ -1289,31 +1233,30 @@ INFO-FLOW: Append model aes_generate_round_keys
 INFO-FLOW: Append model ctr_encrypt_Pipeline_1
 INFO-FLOW: Append model ctr_encrypt_Pipeline_2
 INFO-FLOW: Append model aes_encrypt_block_Pipeline_loop_aes_encrypt_block
-INFO-FLOW: Append model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1
-INFO-FLOW: Append model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1
+INFO-FLOW: Append model aes_encrypt_block_Pipeline_2
 INFO-FLOW: Append model aes_encrypt_block
 INFO-FLOW: Append model ctr_encrypt_Pipeline_loop_ctr_xor_block
 INFO-FLOW: Append model ctr_encrypt_Pipeline_4
 INFO-FLOW: Append model ctr_encrypt
 INFO-FLOW: Append model pynqrypt_encrypt
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: pynqrypt_encrypt_flow_control_loop_pipe pynqrypt_encrypt_flow_control_loop_pipe pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W_memcore pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W_memcore pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W_memcore pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W pynqrypt_encrypt_fifo_w64_d4_S pynqrypt_encrypt_fifo_w64_d4_S pynqrypt_encrypt_fifo_w64_d4_S pynqrypt_encrypt_gmem_m_axi pynqrypt_encrypt_control_s_axi entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
+INFO-FLOW: All models in this session: pynqrypt_encrypt_flow_control_loop_pipe pynqrypt_encrypt_flow_control_loop_pipe pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_flow_control_loop_pipe_sequential_init pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W_memcore pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W_memcore pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W_memcore pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W pynqrypt_encrypt_fifo_w64_d4_S pynqrypt_encrypt_fifo_w64_d4_S pynqrypt_encrypt_fifo_w64_d4_S pynqrypt_encrypt_gmem_m_axi pynqrypt_encrypt_control_s_axi entry_proc Loop_1_proc Loop_2_proc aes_generate_round_keys_Pipeline_1 aes_generate_round_keys_Pipeline_loop_generate_round_keys aes_generate_round_keys ctr_encrypt_Pipeline_1 ctr_encrypt_Pipeline_2 aes_encrypt_block_Pipeline_loop_aes_encrypt_block aes_encrypt_block_Pipeline_2 aes_encrypt_block ctr_encrypt_Pipeline_loop_ctr_xor_block ctr_encrypt_Pipeline_4 ctr_encrypt pynqrypt_encrypt
 INFO-FLOW: Generating /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/autopilot.rtl.models.txt file...
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-INFO-FLOW: To file: write model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R
-INFO-FLOW: To file: write model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb
+INFO-FLOW: To file: write model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb
+INFO-FLOW: To file: write model pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R
+INFO-FLOW: To file: write model pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W
-INFO-FLOW: To file: write model pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W_memcore
 INFO-FLOW: To file: write model pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W_memcore
@@ -1334,8 +1277,7 @@ INFO-FLOW: To file: write model aes_generate_round_keys
 INFO-FLOW: To file: write model ctr_encrypt_Pipeline_1
 INFO-FLOW: To file: write model ctr_encrypt_Pipeline_2
 INFO-FLOW: To file: write model aes_encrypt_block_Pipeline_loop_aes_encrypt_block
-INFO-FLOW: To file: write model aes_encrypt_block_Pipeline_VITIS_LOOP_68_1
-INFO-FLOW: To file: write model aes_encrypt_block_Pipeline_VITIS_LOOP_221_1
+INFO-FLOW: To file: write model aes_encrypt_block_Pipeline_2
 INFO-FLOW: To file: write model aes_encrypt_block
 INFO-FLOW: To file: write model ctr_encrypt_Pipeline_loop_ctr_xor_block
 INFO-FLOW: To file: write model ctr_encrypt_Pipeline_4
@@ -1372,18 +1314,18 @@ INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/vhdl' dstVlogDir='/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/vlog' tclDir='/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db' modelList='pynqrypt_encrypt_flow_control_loop_pipe
 pynqrypt_encrypt_flow_control_loop_pipe
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R
-pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb
+pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb
+pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
+pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R
+pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W
-pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W
 pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W_memcore
 pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W
 pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W_memcore
@@ -1404,8 +1346,7 @@ aes_generate_round_keys
 ctr_encrypt_Pipeline_1
 ctr_encrypt_Pipeline_2
 aes_encrypt_block_Pipeline_loop_aes_encrypt_block
-aes_encrypt_block_Pipeline_VITIS_LOOP_68_1
-aes_encrypt_block_Pipeline_VITIS_LOOP_221_1
+aes_encrypt_block_Pipeline_2
 aes_encrypt_block
 ctr_encrypt_Pipeline_loop_ctr_xor_block
 ctr_encrypt_Pipeline_4
@@ -1426,15 +1367,14 @@ Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynq
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_1.compgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_2.compgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.compgen.tcl 
-Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.compgen.tcl 
-Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.compgen.tcl 
+Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.compgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.compgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.compgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_4.compgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt.compgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.compgen.tcl 
 Execute         source ./control.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.81 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.83 seconds; current allocated memory: 405.664 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.87 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.89 seconds; current allocated memory: 403.789 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='pynqrypt_encrypt_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -1450,18 +1390,18 @@ INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/mrindeciso/Do
 INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='pynqrypt_encrypt_flow_control_loop_pipe
 pynqrypt_encrypt_flow_control_loop_pipe
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R
-pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb
+pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb
+pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
-pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
+pynqrypt_encrypt_aes_encrypt_block_aes_sbox2_ROM_AUTO_1R
+pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W
-pynqrypt_encrypt_ctr_encrypt_block_RAM_AUTO_1R1W
 pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W_memcore
 pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W
 pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W_memcore
@@ -1482,8 +1422,7 @@ aes_generate_round_keys
 ctr_encrypt_Pipeline_1
 ctr_encrypt_Pipeline_2
 aes_encrypt_block_Pipeline_loop_aes_encrypt_block
-aes_encrypt_block_Pipeline_VITIS_LOOP_68_1
-aes_encrypt_block_Pipeline_VITIS_LOOP_221_1
+aes_encrypt_block_Pipeline_2
 aes_encrypt_block
 ctr_encrypt_Pipeline_loop_ctr_xor_block
 ctr_encrypt_Pipeline_4
@@ -1507,8 +1446,7 @@ Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynq
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_1.tbgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_2.tbgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_loop_aes_encrypt_block.tbgen.tcl 
-Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_68_1.tbgen.tcl 
-Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_VITIS_LOOP_221_1.tbgen.tcl 
+Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block_Pipeline_2.tbgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/aes_encrypt_block.tbgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_loop_ctr_xor_block.tbgen.tcl 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/ctr_encrypt_Pipeline_4.tbgen.tcl 
@@ -1520,20 +1458,20 @@ Execute       ap_part_info -name xc7z020i-clg400-1L -data info -quiet
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_encrypt.constraint.tcl 
 Execute       sc_get_clocks pynqrypt_encrypt 
 Execute       source /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE pynqrypt_encrypt LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE pynqrypt_encrypt LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST pynqrypt_encrypt MODULE2INSTS {pynqrypt_encrypt pynqrypt_encrypt Loop_1_proc Loop_1_proc_U0 Loop_2_proc Loop_2_proc_U0 aes_generate_round_keys aes_generate_round_keys_U0 aes_generate_round_keys_Pipeline_1 grp_aes_generate_round_keys_Pipeline_1_fu_12 aes_generate_round_keys_Pipeline_loop_generate_round_keys grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20 entry_proc entry_proc_U0 ctr_encrypt ctr_encrypt_U0 ctr_encrypt_Pipeline_1 grp_ctr_encrypt_Pipeline_1_fu_202 ctr_encrypt_Pipeline_2 grp_ctr_encrypt_Pipeline_2_fu_211 aes_encrypt_block grp_aes_encrypt_block_fu_218 aes_encrypt_block_Pipeline_loop_aes_encrypt_block grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198 aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216 ctr_encrypt_Pipeline_loop_ctr_xor_block grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 ctr_encrypt_Pipeline_4 grp_ctr_encrypt_Pipeline_4_fu_234} INST2MODULE {pynqrypt_encrypt pynqrypt_encrypt Loop_1_proc_U0 Loop_1_proc Loop_2_proc_U0 Loop_2_proc aes_generate_round_keys_U0 aes_generate_round_keys grp_aes_generate_round_keys_Pipeline_1_fu_12 aes_generate_round_keys_Pipeline_1 grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20 aes_generate_round_keys_Pipeline_loop_generate_round_keys entry_proc_U0 entry_proc ctr_encrypt_U0 ctr_encrypt grp_ctr_encrypt_Pipeline_1_fu_202 ctr_encrypt_Pipeline_1 grp_ctr_encrypt_Pipeline_2_fu_211 ctr_encrypt_Pipeline_2 grp_aes_encrypt_block_fu_218 aes_encrypt_block grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198 aes_encrypt_block_Pipeline_loop_aes_encrypt_block grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208 aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216 aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 ctr_encrypt_Pipeline_loop_ctr_xor_block grp_ctr_encrypt_Pipeline_4_fu_234 ctr_encrypt_Pipeline_4} INSTDATA {pynqrypt_encrypt {DEPTH 1 CHILDREN {Loop_1_proc_U0 Loop_2_proc_U0 aes_generate_round_keys_U0 entry_proc_U0 ctr_encrypt_U0}} Loop_1_proc_U0 {DEPTH 2 CHILDREN {}} Loop_2_proc_U0 {DEPTH 2 CHILDREN {}} aes_generate_round_keys_U0 {DEPTH 2 CHILDREN {grp_aes_generate_round_keys_Pipeline_1_fu_12 grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20}} grp_aes_generate_round_keys_Pipeline_1_fu_12 {DEPTH 3 CHILDREN {}} grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20 {DEPTH 3 CHILDREN {}} entry_proc_U0 {DEPTH 2 CHILDREN {}} ctr_encrypt_U0 {DEPTH 2 CHILDREN {grp_ctr_encrypt_Pipeline_1_fu_202 grp_ctr_encrypt_Pipeline_2_fu_211 grp_aes_encrypt_block_fu_218 grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 grp_ctr_encrypt_Pipeline_4_fu_234}} grp_ctr_encrypt_Pipeline_1_fu_202 {DEPTH 3 CHILDREN {}} grp_ctr_encrypt_Pipeline_2_fu_211 {DEPTH 3 CHILDREN {}} grp_aes_encrypt_block_fu_218 {DEPTH 3 CHILDREN {grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208 grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216}} grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198 {DEPTH 4 CHILDREN {}} grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208 {DEPTH 4 CHILDREN {}} grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216 {DEPTH 4 CHILDREN {}} grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 {DEPTH 3 CHILDREN {}} grp_ctr_encrypt_Pipeline_4_fu_234 {DEPTH 3 CHILDREN {}}} MODULEDATA {Loop_1_proc {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_51_fu_85_p2 SOURCE {} VARIABLE empty_51 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} Loop_2_proc {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_50_fu_85_p2 SOURCE {} VARIABLE empty_50 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_generate_round_keys_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_35_fu_71_p2 SOURCE {} VARIABLE empty_35 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_generate_round_keys_Pipeline_loop_generate_round_keys {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln200_fu_454_p2 SOURCE hw-impl/src/pynqrypt.cpp:200 VARIABLE add_ln200 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln200_1_fu_465_p2 SOURCE hw-impl/src/pynqrypt.cpp:200 VARIABLE add_ln200_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln200_2_fu_497_p2 SOURCE hw-impl/src/pynqrypt.cpp:200 VARIABLE add_ln200_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln200_3_fu_507_p2 SOURCE hw-impl/src/pynqrypt.cpp:200 VARIABLE add_ln200_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln204_fu_486_p2 SOURCE hw-impl/src/pynqrypt.cpp:204 VARIABLE add_ln204 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln206_fu_527_p2 SOURCE hw-impl/src/pynqrypt.cpp:206 VARIABLE add_ln206 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln206_1_fu_537_p2 SOURCE hw-impl/src/pynqrypt.cpp:206 VARIABLE add_ln206_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln206_2_fu_551_p2 SOURCE hw-impl/src/pynqrypt.cpp:206 VARIABLE add_ln206_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln206_3_fu_561_p2 SOURCE hw-impl/src/pynqrypt.cpp:206 VARIABLE add_ln206_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln209_fu_597_p2 SOURCE hw-impl/src/pynqrypt.cpp:209 VARIABLE add_ln209 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln209_1_fu_607_p2 SOURCE hw-impl/src/pynqrypt.cpp:209 VARIABLE add_ln209_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln209_2_fu_623_p2 SOURCE hw-impl/src/pynqrypt.cpp:209 VARIABLE add_ln209_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln209_3_fu_633_p2 SOURCE hw-impl/src/pynqrypt.cpp:209 VARIABLE add_ln209_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln212_fu_643_p2 SOURCE hw-impl/src/pynqrypt.cpp:212 VARIABLE add_ln212 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln212_1_fu_653_p2 SOURCE hw-impl/src/pynqrypt.cpp:212 VARIABLE add_ln212_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln212_2_fu_663_p2 SOURCE hw-impl/src/pynqrypt.cpp:212 VARIABLE add_ln212_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln212_3_fu_673_p2 SOURCE hw-impl/src/pynqrypt.cpp:212 VARIABLE add_ln212_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln199_fu_889_p2 SOURCE hw-impl/src/pynqrypt.cpp:199 VARIABLE add_ln199 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME aes_sbox3_U SOURCE {} VARIABLE aes_sbox3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME crypto_aes_rcon_U SOURCE {} VARIABLE crypto_aes_rcon LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 0 BRAM 1 URAM 0}} ctr_encrypt_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_fu_92_p2 SOURCE {} VARIABLE empty LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ctr_encrypt_Pipeline_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_31_fu_71_p2 SOURCE {} VARIABLE empty_31 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_encrypt_block_Pipeline_loop_aes_encrypt_block {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_613_p2 SOURCE hw-impl/src/pynqrypt.cpp:54 VARIABLE add_ln54 LOOP loop_aes_encrypt_block BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln68_fu_79_p2 SOURCE hw-impl/src/pynqrypt.cpp:68 VARIABLE add_ln68 LOOP VITIS_LOOP_68_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln221_fu_82_p2 SOURCE hw-impl/src/pynqrypt.cpp:221 VARIABLE add_ln221 LOOP VITIS_LOOP_221_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_encrypt_block {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln221_fu_268_p2 SOURCE hw-impl/src/pynqrypt.cpp:221 VARIABLE add_ln221 LOOP VITIS_LOOP_221_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME crypto_aes_sbox_U SOURCE {} VARIABLE crypto_aes_sbox LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 0 BRAM 1 URAM 0}} ctr_encrypt_Pipeline_loop_ctr_xor_block {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_2_fu_88_p2 SOURCE hw-impl/src/pynqrypt.cpp:45 VARIABLE i_2 LOOP loop_ctr_xor_block BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ctr_encrypt_Pipeline_4 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_fu_97_p2 SOURCE {} VARIABLE empty LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ctr_encrypt {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME block_nonce_U SOURCE hw-impl/src/pynqrypt.cpp:20 VARIABLE block_nonce LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME block_U SOURCE hw-impl/src/pynqrypt.cpp:21 VARIABLE block LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_fu_284_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_3_fu_295_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24_3 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_1_fu_314_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24_1 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_2_fu_319_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24_2 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_5_fu_401_p2 SOURCE hw-impl/src/pynqrypt.cpp:23 VARIABLE i_5 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln23_fu_406_p2 SOURCE hw-impl/src/pynqrypt.cpp:23 VARIABLE add_ln23 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 1 URAM 0}} pynqrypt_encrypt {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME ciphertext_c_U SOURCE hw-impl/src/pynqrypt_hls.cpp:22 VARIABLE ciphertext_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME plaintext_c_U SOURCE hw-impl/src/pynqrypt_hls.cpp:22 VARIABLE plaintext_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME plaintext_length_c_U SOURCE hw-impl/src/pynqrypt_hls.cpp:22 VARIABLE plaintext_length_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME pynqrypt_round_keys_U SOURCE {} VARIABLE pynqrypt_round_keys LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME pynqrypt_key_U SOURCE hw-impl/src/pynqrypt_hls.cpp:20 VARIABLE pynqrypt_key LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME pynqrypt_nonce_U SOURCE hw-impl/src/pynqrypt_hls.cpp:20 VARIABLE pynqrypt_nonce LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 0 BRAM 4 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} aes_generate_round_keys {AREA {DSP 0 BRAM 1 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE pynqrypt_encrypt LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE pynqrypt_encrypt LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST pynqrypt_encrypt MODULE2INSTS {pynqrypt_encrypt pynqrypt_encrypt Loop_1_proc Loop_1_proc_U0 Loop_2_proc Loop_2_proc_U0 aes_generate_round_keys aes_generate_round_keys_U0 aes_generate_round_keys_Pipeline_1 grp_aes_generate_round_keys_Pipeline_1_fu_12 aes_generate_round_keys_Pipeline_loop_generate_round_keys grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20 entry_proc entry_proc_U0 ctr_encrypt ctr_encrypt_U0 ctr_encrypt_Pipeline_1 grp_ctr_encrypt_Pipeline_1_fu_202 ctr_encrypt_Pipeline_2 grp_ctr_encrypt_Pipeline_2_fu_211 aes_encrypt_block grp_aes_encrypt_block_fu_218 aes_encrypt_block_Pipeline_loop_aes_encrypt_block grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868 aes_encrypt_block_Pipeline_2 grp_aes_encrypt_block_Pipeline_2_fu_895 ctr_encrypt_Pipeline_loop_ctr_xor_block grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 ctr_encrypt_Pipeline_4 grp_ctr_encrypt_Pipeline_4_fu_234} INST2MODULE {pynqrypt_encrypt pynqrypt_encrypt Loop_1_proc_U0 Loop_1_proc Loop_2_proc_U0 Loop_2_proc aes_generate_round_keys_U0 aes_generate_round_keys grp_aes_generate_round_keys_Pipeline_1_fu_12 aes_generate_round_keys_Pipeline_1 grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20 aes_generate_round_keys_Pipeline_loop_generate_round_keys entry_proc_U0 entry_proc ctr_encrypt_U0 ctr_encrypt grp_ctr_encrypt_Pipeline_1_fu_202 ctr_encrypt_Pipeline_1 grp_ctr_encrypt_Pipeline_2_fu_211 ctr_encrypt_Pipeline_2 grp_aes_encrypt_block_fu_218 aes_encrypt_block grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868 aes_encrypt_block_Pipeline_loop_aes_encrypt_block grp_aes_encrypt_block_Pipeline_2_fu_895 aes_encrypt_block_Pipeline_2 grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 ctr_encrypt_Pipeline_loop_ctr_xor_block grp_ctr_encrypt_Pipeline_4_fu_234 ctr_encrypt_Pipeline_4} INSTDATA {pynqrypt_encrypt {DEPTH 1 CHILDREN {Loop_1_proc_U0 Loop_2_proc_U0 aes_generate_round_keys_U0 entry_proc_U0 ctr_encrypt_U0}} Loop_1_proc_U0 {DEPTH 2 CHILDREN {}} Loop_2_proc_U0 {DEPTH 2 CHILDREN {}} aes_generate_round_keys_U0 {DEPTH 2 CHILDREN {grp_aes_generate_round_keys_Pipeline_1_fu_12 grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20}} grp_aes_generate_round_keys_Pipeline_1_fu_12 {DEPTH 3 CHILDREN {}} grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20 {DEPTH 3 CHILDREN {}} entry_proc_U0 {DEPTH 2 CHILDREN {}} ctr_encrypt_U0 {DEPTH 2 CHILDREN {grp_ctr_encrypt_Pipeline_1_fu_202 grp_ctr_encrypt_Pipeline_2_fu_211 grp_aes_encrypt_block_fu_218 grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 grp_ctr_encrypt_Pipeline_4_fu_234}} grp_ctr_encrypt_Pipeline_1_fu_202 {DEPTH 3 CHILDREN {}} grp_ctr_encrypt_Pipeline_2_fu_211 {DEPTH 3 CHILDREN {}} grp_aes_encrypt_block_fu_218 {DEPTH 3 CHILDREN {grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868 grp_aes_encrypt_block_Pipeline_2_fu_895}} grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868 {DEPTH 4 CHILDREN {}} grp_aes_encrypt_block_Pipeline_2_fu_895 {DEPTH 4 CHILDREN {}} grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 {DEPTH 3 CHILDREN {}} grp_ctr_encrypt_Pipeline_4_fu_234 {DEPTH 3 CHILDREN {}}} MODULEDATA {Loop_1_proc {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_48_fu_85_p2 SOURCE {} VARIABLE empty_48 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} Loop_2_proc {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_47_fu_85_p2 SOURCE {} VARIABLE empty_47 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_generate_round_keys_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_33_fu_71_p2 SOURCE {} VARIABLE empty_33 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_generate_round_keys_Pipeline_loop_generate_round_keys {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln208_fu_454_p2 SOURCE hw-impl/src/pynqrypt.cpp:208 VARIABLE add_ln208 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln208_1_fu_465_p2 SOURCE hw-impl/src/pynqrypt.cpp:208 VARIABLE add_ln208_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln208_2_fu_497_p2 SOURCE hw-impl/src/pynqrypt.cpp:208 VARIABLE add_ln208_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln208_3_fu_507_p2 SOURCE hw-impl/src/pynqrypt.cpp:208 VARIABLE add_ln208_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln212_fu_486_p2 SOURCE hw-impl/src/pynqrypt.cpp:212 VARIABLE add_ln212 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln214_fu_527_p2 SOURCE hw-impl/src/pynqrypt.cpp:214 VARIABLE add_ln214 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln214_1_fu_537_p2 SOURCE hw-impl/src/pynqrypt.cpp:214 VARIABLE add_ln214_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln214_2_fu_551_p2 SOURCE hw-impl/src/pynqrypt.cpp:214 VARIABLE add_ln214_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln214_3_fu_561_p2 SOURCE hw-impl/src/pynqrypt.cpp:214 VARIABLE add_ln214_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln217_fu_597_p2 SOURCE hw-impl/src/pynqrypt.cpp:217 VARIABLE add_ln217 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln217_1_fu_607_p2 SOURCE hw-impl/src/pynqrypt.cpp:217 VARIABLE add_ln217_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln217_2_fu_623_p2 SOURCE hw-impl/src/pynqrypt.cpp:217 VARIABLE add_ln217_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln217_3_fu_633_p2 SOURCE hw-impl/src/pynqrypt.cpp:217 VARIABLE add_ln217_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln220_fu_643_p2 SOURCE hw-impl/src/pynqrypt.cpp:220 VARIABLE add_ln220 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln220_1_fu_653_p2 SOURCE hw-impl/src/pynqrypt.cpp:220 VARIABLE add_ln220_1 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln220_2_fu_663_p2 SOURCE hw-impl/src/pynqrypt.cpp:220 VARIABLE add_ln220_2 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln220_3_fu_673_p2 SOURCE hw-impl/src/pynqrypt.cpp:220 VARIABLE add_ln220_3 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln207_fu_889_p2 SOURCE hw-impl/src/pynqrypt.cpp:207 VARIABLE add_ln207 LOOP loop_generate_round_keys BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME crypto_aes_sbox_U SOURCE {} VARIABLE crypto_aes_sbox LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME crypto_aes_rcon_U SOURCE {} VARIABLE crypto_aes_rcon LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 0 BRAM 1 URAM 0}} ctr_encrypt_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_fu_92_p2 SOURCE {} VARIABLE empty LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ctr_encrypt_Pipeline_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_29_fu_71_p2 SOURCE {} VARIABLE empty_29 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_encrypt_block_Pipeline_loop_aes_encrypt_block {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_799_p2 SOURCE hw-impl/src/pynqrypt.cpp:54 VARIABLE add_ln54 LOOP loop_aes_encrypt_block BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_encrypt_block_Pipeline_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_35_fu_71_p2 SOURCE {} VARIABLE empty_35 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} aes_encrypt_block {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME temp_U SOURCE hw-impl/src/pynqrypt.cpp:79 VARIABLE temp LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_2p PRAGMA {} RTLNAME aes_sbox2_U SOURCE {} VARIABLE aes_sbox2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_2p}}} AREA {DSP 0 BRAM 1 URAM 0}} ctr_encrypt_Pipeline_loop_ctr_xor_block {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_2_fu_88_p2 SOURCE hw-impl/src/pynqrypt.cpp:45 VARIABLE i_2 LOOP loop_ctr_xor_block BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ctr_encrypt_Pipeline_4 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_fu_97_p2 SOURCE {} VARIABLE empty LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ctr_encrypt {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME block_nonce_U SOURCE hw-impl/src/pynqrypt.cpp:20 VARIABLE block_nonce LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME block_U SOURCE hw-impl/src/pynqrypt.cpp:21 VARIABLE block LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_fu_284_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_3_fu_295_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24_3 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_1_fu_314_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24_1 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_2_fu_319_p2 SOURCE hw-impl/src/pynqrypt.cpp:24 VARIABLE add_ln24_2 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_5_fu_401_p2 SOURCE hw-impl/src/pynqrypt.cpp:23 VARIABLE i_5 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln23_fu_406_p2 SOURCE hw-impl/src/pynqrypt.cpp:23 VARIABLE add_ln23 LOOP loop_ctr_encrypt BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 1 URAM 0}} pynqrypt_encrypt {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME ciphertext_c_U SOURCE hw-impl/src/pynqrypt_hls.cpp:22 VARIABLE ciphertext_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME plaintext_c_U SOURCE hw-impl/src/pynqrypt_hls.cpp:22 VARIABLE plaintext_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME plaintext_length_c_U SOURCE hw-impl/src/pynqrypt_hls.cpp:22 VARIABLE plaintext_length_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME pynqrypt_round_keys_U SOURCE {} VARIABLE pynqrypt_round_keys LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME pynqrypt_key_U SOURCE hw-impl/src/pynqrypt_hls.cpp:20 VARIABLE pynqrypt_key LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME pynqrypt_nonce_U SOURCE hw-impl/src/pynqrypt_hls.cpp:20 VARIABLE pynqrypt_nonce LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 0 BRAM 4 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} aes_generate_round_keys {AREA {DSP 0 BRAM 1 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.56 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.59 seconds; current allocated memory: 416.801 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.58 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.59 seconds; current allocated memory: 414.855 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for pynqrypt_encrypt.
 INFO: [VLOG 209-307] Generating Verilog RTL for pynqrypt_encrypt.
 Execute       syn_report -model pynqrypt_encrypt -printsummary 
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-Command     autosyn done; 7.32 sec.
-Command   csynth_design done; 12.79 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11.92 seconds. CPU system time: 0.84 seconds. Elapsed time: 12.79 seconds; current allocated memory: 216.109 MB.
-Command ap_source done; 23.23 sec.
+Command     autosyn done; 7.63 sec.
+Command   csynth_design done; 13.17 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12.41 seconds. CPU system time: 0.74 seconds. Elapsed time: 13.17 seconds; current allocated memory: 214.055 MB.
+Command ap_source done; 23.59 sec.
 Execute cleanup_all 

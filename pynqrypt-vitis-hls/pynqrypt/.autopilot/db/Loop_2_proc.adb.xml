@@ -55,7 +55,7 @@ newFuncRoot:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %non
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %nonce, void @empty_12, i32 0, i32 0, void @empty_2, i32 1, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %nonce, void @empty, i32 0, i32 0, void @empty_2, i32 1, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -160,10 +160,10 @@ load-store-loop.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, 
 
 <Node id="13" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-load-store-loop.i:4 %empty_50 = add i4 %loop_index_i_load, i4 1
+load-store-loop.i:4 %empty_47 = add i4 %loop_index_i_load, i4 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_50"/></StgValue>
+<StgValue><ssdm name="empty_47"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -239,7 +239,7 @@ load-store-loop.i.split:2 %nonce_load = load i4 %nonce_addr
 
 <Node id="21" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-load-store-loop.i.split:5 %store_ln0 = store i4 %empty_50, i4 %loop_index_i
+load-store-loop.i.split:5 %store_ln0 = store i4 %empty_47, i4 %loop_index_i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -356,7 +356,7 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="49" from="nonce" to="specinterface_ln0" fromId="34" toId="7">
 </dataflow>
-<dataflow id="51" from="empty_12" to="specinterface_ln0" fromId="50" toId="7">
+<dataflow id="51" from="empty" to="specinterface_ln0" fromId="50" toId="7">
 </dataflow>
 <dataflow id="53" from="StgValue_52" to="specinterface_ln0" fromId="52" toId="7">
 </dataflow>
@@ -420,9 +420,9 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="91" from="StgValue_88" to="empty" fromId="88" toId="13">
 </dataflow>
-<dataflow id="92" from="loop_index_i_load" to="empty_50" fromId="10" toId="14">
+<dataflow id="92" from="loop_index_i_load" to="empty_47" fromId="10" toId="14">
 </dataflow>
-<dataflow id="94" from="StgValue_93" to="empty_50" fromId="93" toId="14">
+<dataflow id="94" from="StgValue_93" to="empty_47" fromId="93" toId="14">
 </dataflow>
 <dataflow id="95" from="exitcond2" to="br_ln0" fromId="12" toId="15">
 </dataflow>
@@ -436,7 +436,7 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="101" from="nonce_addr" to="nonce_load" fromId="17" toId="18">
 </dataflow>
-<dataflow id="102" from="empty_50" to="store_ln0" fromId="14" toId="19">
+<dataflow id="102" from="empty_47" to="store_ln0" fromId="14" toId="19">
 </dataflow>
 <dataflow id="103" from="loop_index_i" to="store_ln0" fromId="5" toId="19">
 </dataflow>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'ctr_encrypt'" level="0">
-<item name = "Date">Tue Dec  6 11:20:30 2022
+<item name = "Date">Tue Dec  6 11:35:04 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -33,7 +33,7 @@
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_ctr_encrypt_Pipeline_1_fu_202">ctr_encrypt_Pipeline_1, 4, ?, 40.000 ns, ?, 4, ?, no</column>
 <column name="grp_ctr_encrypt_Pipeline_2_fu_211">ctr_encrypt_Pipeline_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_aes_encrypt_block_fu_218">aes_encrypt_block, 266, 266, 2.660 us, 2.660 us, 266, 266, no</column>
+<column name="grp_aes_encrypt_block_fu_218">aes_encrypt_block, 192, 192, 1.920 us, 1.920 us, 192, 192, no</column>
 <column name="grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227">ctr_encrypt_Pipeline_loop_ctr_xor_block, ?, ?, ?, ?, ?, ?, no</column>
 <column name="grp_ctr_encrypt_Pipeline_4_fu_234">ctr_encrypt_Pipeline_4, 5, ?, 50.000 ns, ?, 5, ?, no</column>
 </table>

@@ -63,7 +63,7 @@ attribute shreg_extract : string;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal loop_index5_i_i_i_fu_40 : STD_LOGIC_VECTOR (4 downto 0);
-    signal empty_51_fu_85_p2 : STD_LOGIC_VECTOR (4 downto 0);
+    signal empty_48_fu_85_p2 : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_loop_index5_i_i_i_load : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_continue_int : STD_LOGIC;
@@ -163,7 +163,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_boolean_1 = ap_condition_91)) then
                 if ((exitcond13_i_i_fu_79_p2 = ap_const_lv1_0)) then 
-                    loop_index5_i_i_i_fu_40 <= empty_51_fu_85_p2;
+                    loop_index5_i_i_i_fu_40 <= empty_48_fu_85_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
                     loop_index5_i_i_i_fu_40 <= ap_const_lv5_0;
                 end if;
@@ -279,7 +279,7 @@ begin
         end if; 
     end process;
 
-    empty_51_fu_85_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_loop_index5_i_i_i_load) + unsigned(ap_const_lv5_1));
+    empty_48_fu_85_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_loop_index5_i_i_i_load) + unsigned(ap_const_lv5_1));
     exitcond13_i_i_fu_79_p2 <= "1" when (ap_sig_allocacmp_loop_index5_i_i_i_load = ap_const_lv5_10) else "0";
     key_address0 <= loop_index5_i_i_i_cast_fu_91_p1(4 - 1 downto 0);
 

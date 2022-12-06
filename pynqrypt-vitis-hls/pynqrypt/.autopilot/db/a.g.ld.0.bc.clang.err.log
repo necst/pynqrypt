@@ -1,67 +1,78 @@
-remark: hw-impl/src/pynqrypt.cpp:189:0: Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
-remark: hw-impl/src/pynqrypt.cpp:189:0: Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
-remark: hw-impl/src/pynqrypt.cpp:189:0: Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
-remark: hw-impl/src/pynqrypt.cpp:189:0: Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
-remark: hw-impl/src/pynqrypt.cpp:96:0: Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'
-remark: hw-impl/src/pynqrypt.cpp:51:0: Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-remark: hw-impl/src/pynqrypt.cpp:51:0: Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-remark: hw-impl/src/pynqrypt.cpp:51:0: Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:52:5: Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:63:5: Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:62:5: Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:61:5: Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:58:9: Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:57:9: Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:55:9: Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:56:9: Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:51:0: Unrolling loop 'VITIS_LOOP_231_1' (hw-impl/src/pynqrypt.cpp:231:20) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16
+remark: hw-impl/src/pynqrypt.cpp:51:0: Unrolling loop 'VITIS_LOOP_70_1' (hw-impl/src/pynqrypt.cpp:70:19) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16
+remark: hw-impl/src/pynqrypt.cpp:51:0: Unrolling loop 'VITIS_LOOP_70_1' (hw-impl/src/pynqrypt.cpp:70:19) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16
+remark: hw-impl/src/pynqrypt.cpp:51:0: Unrolling loop 'VITIS_LOOP_106_1' (hw-impl/src/pynqrypt.cpp:106:23) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 4
+remark: hw-impl/src/pynqrypt.cpp:51:0: Unrolling loop 'VITIS_LOOP_231_1' (hw-impl/src/pynqrypt.cpp:231:20) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16
+remark: hw-impl/src/pynqrypt.cpp:51:0: Unrolling loop 'VITIS_LOOP_231_1' (hw-impl/src/pynqrypt.cpp:231:20) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16
+remark: hw-impl/src/pynqrypt.cpp:197:0: Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:197:0: Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:197:0: Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:197:0: Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:51:0: Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
 remark: hw-impl/src/pynqrypt.cpp:19:0: Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
 remark: hw-impl/src/pynqrypt.cpp:19:0: Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
 remark: hw-impl/src/pynqrypt_hls.cpp:9:0: Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-warning: hw-impl/src/pynqrypt.cpp:200:16: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:246:14: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:247:14: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:248:14: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:255:29: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:255:18: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:206:29: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
 warning: hw-impl/src/pynqrypt.cpp:208:16: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:209:29: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:211:16: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:212:23: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:214:10: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:257:14: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:258:14: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:259:14: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:18: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:214:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:216:16: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:217:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:219:16: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:220:23: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:222:10: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
 remark: <unknown>:0:0: Sequential read of variable length has been inferred _XLX_SEP_ OldID=loop-memcpy-expansion2.load.4,  _XLX_SEP_ scevgepseq plaintext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
 remark: <unknown>:0:0: Sequential write of variable length has been inferred _XLX_SEP_ OldID=loop-memcpy-expansion.store.6,  _XLX_SEP_ scevgep2seq ciphertext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
 remark: hw-impl/src/pynqrypt.cpp:23:23: Could not analyze the loop bounds _XLX_SEP_ loop_ctr_encrypt hw-impl/src/pynqrypt.cpp:23:23 crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
 remark: <unknown>:0:0: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgep2seq ciphertext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
 remark: <unknown>:0:0: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgepseq plaintext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
-warning: hw-impl/src/pynqrypt.cpp:200:16: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:246:14: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:247:14: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:248:14: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:255:29: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:255:18: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:206:29: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
 warning: hw-impl/src/pynqrypt.cpp:208:16: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:209:29: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:211:16: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:212:23: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:214:10: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:27: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:39: The program may have out of bound array access
-warning: hw-impl/src/pynqrypt.cpp:272:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:257:14: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:258:14: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:259:14: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:18: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:214:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:216:16: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:217:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:219:16: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:220:23: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:222:10: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:283:25: The program may have out of bound array access
 remark: <unknown>:0:0: Multiple burst reads of variable length and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq  gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1) 
 remark: <unknown>:0:0: Multiple burst reads of variable length and bit width 8 in loop 'anonymous'() has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 remark: <unknown>:0:0: Multiple burst writes of variable length and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq1  gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1) 

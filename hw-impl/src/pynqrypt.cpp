@@ -65,14 +65,19 @@ void Pynqrypt::aes_encrypt_block(aes_atom state[BLOCK_SIZE])
 
 void Pynqrypt::aes_sub_bytes(aes_atom state[BLOCK_SIZE])
 {
+	#pragma HLS INLINE
+
     for (int i = 0; i < BLOCK_SIZE; i++)
+		#pragma HLS UNROLL
         state[i] = aes_sbox[state[i]];
 }
 
 void Pynqrypt::aes_shift_rows(aes_atom state[BLOCK_SIZE])
 {
+	#pragma HLS INLINE
+
     aes_atom temp[BLOCK_SIZE];
-    memcpy(temp, state, BLOCK_SIZE);
+    memcpy_aes_shift_rows: memcpy(temp, state, BLOCK_SIZE);
 
     state[0] = temp[0];
     state[1] = temp[5];
@@ -94,9 +99,12 @@ void Pynqrypt::aes_shift_rows(aes_atom state[BLOCK_SIZE])
 
 void Pynqrypt::aes_mix_columns(aes_atom state[BLOCK_SIZE])
 {
+	#pragma HLS INLINE
+
     aes_atom tmp1, tmp2, tmp3;
 
     for (int i = 0; i < 4; i++) {	
+		#pragma HLS UNROLL
         tmp3 = state[(i * 4)];
         tmp1 = state[(i * 4)] ^ state[(i * 4) + 1] ^ state[(i * 4) + 2] ^ state[(i * 4) + 3] ;
         tmp2 = state[(i * 4)] ^ state[(i * 4) + 1] ; 
@@ -218,7 +226,10 @@ void Pynqrypt::aes_generate_round_keys()
 
 void Pynqrypt::aes_add_round_key(aes_atom state[BLOCK_SIZE], off_t round_key_index)
 {
+	#pragma HLS INLINE
+
     for (int i = 0; i < BLOCK_SIZE; i++)
+		#pragma HLS UNROLL
         state[i] ^= round_keys[round_key_index][i];
 }
 

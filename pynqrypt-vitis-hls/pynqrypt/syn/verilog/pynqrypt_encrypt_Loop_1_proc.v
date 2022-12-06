@@ -64,7 +64,7 @@ reg   [63:0] loop_index5_i_i_i_cast_reg_111;
 reg    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
 reg   [4:0] loop_index5_i_i_i_fu_40;
-wire   [4:0] empty_51_fu_85_p2;
+wire   [4:0] empty_48_fu_85_p2;
 wire    ap_loop_init;
 reg   [4:0] ap_sig_allocacmp_loop_index5_i_i_i_load;
 wire    ap_continue_int;
@@ -133,7 +133,7 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_condition_91)) begin
         if ((exitcond13_i_i_fu_79_p2 == 1'd0)) begin
-            loop_index5_i_i_i_fu_40 <= empty_51_fu_85_p2;
+            loop_index5_i_i_i_fu_40 <= empty_48_fu_85_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             loop_index5_i_i_i_fu_40 <= 5'd0;
         end
@@ -257,7 +257,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_51_fu_85_p2 = (ap_sig_allocacmp_loop_index5_i_i_i_load + 5'd1);
+assign empty_48_fu_85_p2 = (ap_sig_allocacmp_loop_index5_i_i_i_load + 5'd1);
 
 assign exitcond13_i_i_fu_79_p2 = ((ap_sig_allocacmp_loop_index5_i_i_i_load == 5'd16) ? 1'b1 : 1'b0);
 

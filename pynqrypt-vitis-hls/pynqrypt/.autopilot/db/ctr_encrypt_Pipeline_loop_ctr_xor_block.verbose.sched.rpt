@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'ctr_encrypt_Pipeline_loop_ctr_xor_block'
 ================================================================
-* Date:           Tue Dec  6 11:20:30 2022
+* Date:           Tue Dec  6 11:35:04 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -103,7 +103,7 @@ ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln45 = store i5 %i_2, i5 %i"
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 26 'ret' 'ret_ln0' <Predicate = (icmp_ln45)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 5.63>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln45 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [hw-impl/src/pynqrypt.cpp:45]   --->   Operation 20 'specloopname' 'specloopname_ln45' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln45 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [hw-impl/src/pynqrypt.cpp:45]   --->   Operation 20 'specloopname' 'specloopname_ln45' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 21 [1/2] (2.32ns)   --->   "%block_nonce_load = load i4 %block_nonce_addr" [hw-impl/src/pynqrypt.cpp:46]   --->   Operation 21 'load' 'block_nonce_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
 ST_2 : Operation 22 [1/2] (2.32ns)   --->   "%block_load = load i4 %block_addr" [hw-impl/src/pynqrypt.cpp:46]   --->   Operation 22 'load' 'block_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
 ST_2 : Operation 23 [1/1] (0.99ns)   --->   "%xor_ln46 = xor i8 %block_load, i8 %block_nonce_load" [hw-impl/src/pynqrypt.cpp:46]   --->   Operation 23 'xor' 'xor_ln46' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
