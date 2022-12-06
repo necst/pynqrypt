@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../hw-impl/src/test.cpp ../../../../hw-impl/src/pynqrypt.cpp ../../../../hw-impl/src/pynqrypt_hls.cpp
+HLS_SOURCES = ../../../../hw-impl/src/test.cpp ../../../../hw-impl/src/pynqrypt_hls.cpp ../../../../hw-impl/src/pynqrypt.cpp
 
 override TARGET := csim.exe
 
@@ -79,14 +79,14 @@ $(ObjDir)/test.o: ../../../../hw-impl/src/test.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/test.d
 
-$(ObjDir)/pynqrypt.o: ../../../../hw-impl/src/pynqrypt.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../hw-impl/src/pynqrypt.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/pynqrypt.d
-
 $(ObjDir)/pynqrypt_hls.o: ../../../../hw-impl/src/pynqrypt_hls.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../hw-impl/src/pynqrypt_hls.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/pynqrypt_hls.d
+
+$(ObjDir)/pynqrypt.o: ../../../../hw-impl/src/pynqrypt.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../hw-impl/src/pynqrypt.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/pynqrypt.d

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block'
 ================================================================
-* Date:           Tue Dec  6 11:35:06 2022
+* Date:           Tue Dec  6 12:01:17 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -57,15 +57,15 @@
 |Expression       |        -|    -|       0|    894|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       -|      -|    -|
-|Memory           |        -|    -|       -|      -|    -|
+|Memory           |        1|    -|       0|      0|    -|
 |Multiplexer      |        -|    -|       -|    548|    -|
 |Register         |        -|    -|     440|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     440|   1442|    0|
+|Total            |        1|    0|     440|   1442|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    0|      ~0|      2|    0|
+|Utilization (%)  |       ~0|    0|      ~0|      2|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -76,7 +76,13 @@
     N/A
 
     * Memory: 
-    N/A
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory      |                                     Module                                    | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |crypto_aes_sbox_U  |aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total              |                                                                               |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
 
     * FIFO: 
     N/A
@@ -210,12 +216,12 @@
     +------------------------------+----+-----------+-----+-----------+
     |             Name             | LUT| Input Size| Bits| Total Bits|
     +------------------------------+----+-----------+-----+-----------+
-    |aes_sbox2_address0            |  53|         10|    8|         80|
-    |aes_sbox2_address1            |  42|          8|    8|         64|
     |ap_NS_fsm                     |  65|         16|    1|         16|
     |ap_done_int                   |   9|          2|    1|          2|
     |ap_sig_allocacmp_i_7          |   9|          2|    4|          8|
     |ap_sig_allocacmp_p_load18     |   9|          2|    8|         16|
+    |crypto_aes_sbox_address0      |  53|         10|    8|         80|
+    |crypto_aes_sbox_address1      |  42|          8|    8|         64|
     |empty_fu_198                  |   9|          2|    8|         16|
     |i_fu_202                      |   9|          2|    4|          8|
     |pynqrypt_round_keys_address0  |  48|          9|    8|         72|
@@ -235,13 +241,6 @@
     +--------------------------------------+----+----+-----+-----------+
     |                 Name                 | FF | LUT| Bits| Const Bits|
     +--------------------------------------+----+----+-----+-----------+
-    |aes_sbox2_load_11_reg_2281            |   8|   0|    8|          0|
-    |aes_sbox2_load_15_reg_2423            |   8|   0|    8|          0|
-    |aes_sbox2_load_2_reg_2309             |   8|   0|    8|          0|
-    |aes_sbox2_load_3_reg_2316             |   8|   0|    8|          0|
-    |aes_sbox2_load_5_reg_2368             |   8|   0|    8|          0|
-    |aes_sbox2_load_7_reg_2405             |   8|   0|    8|          0|
-    |aes_sbox2_load_9_reg_2451             |   8|   0|    8|          0|
     |ap_CS_fsm                             |  15|   0|   15|          0|
     |ap_done_reg                           |   1|   0|    1|          0|
     |conv6_i36_10_phi_fu_158               |   8|   0|    8|          0|
@@ -259,6 +258,13 @@
     |conv6_i36_7_phi_fu_170                |   8|   0|    8|          0|
     |conv6_i36_8_phi_fu_166                |   8|   0|    8|          0|
     |conv6_i36_9_phi_fu_162                |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_10_reg_2405      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_12_reg_2451      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_14_reg_2281      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_18_reg_2423      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_5_reg_2309       |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_6_reg_2316       |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_8_reg_2368       |   8|   0|    8|          0|
     |empty_fu_198                          |   8|   0|    8|          0|
     |i_fu_202                              |   4|   0|    4|          0|
     |pynqrypt_round_keys_load_16_reg_2251  |   8|   0|    8|          0|
@@ -359,11 +365,5 @@
 |conv6_i36_14_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_14_phi_out|       pointer|
 |conv6_i36_15_phi_out          |  out|    8|      ap_vld|                               conv6_i36_15_phi_out|       pointer|
 |conv6_i36_15_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_15_phi_out|       pointer|
-|aes_sbox2_address0            |  out|    8|   ap_memory|                                          aes_sbox2|         array|
-|aes_sbox2_ce0                 |  out|    1|   ap_memory|                                          aes_sbox2|         array|
-|aes_sbox2_q0                  |   in|    8|   ap_memory|                                          aes_sbox2|         array|
-|aes_sbox2_address1            |  out|    8|   ap_memory|                                          aes_sbox2|         array|
-|aes_sbox2_ce1                 |  out|    1|   ap_memory|                                          aes_sbox2|         array|
-|aes_sbox2_q1                  |   in|    8|   ap_memory|                                          aes_sbox2|         array|
 +------------------------------+-----+-----+------------+---------------------------------------------------+--------------+
 

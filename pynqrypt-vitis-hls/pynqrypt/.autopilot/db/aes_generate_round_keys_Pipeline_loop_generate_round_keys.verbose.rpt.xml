@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_generate_round_keys_Pipeline_loop_generate_round_keys'" level="0">
-<item name = "Date">Tue Dec  6 11:35:06 2022
+<item name = "Date">Tue Dec  6 12:01:16 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>

@@ -12,7 +12,6 @@ module pynqrypt_encrypt_aes_generate_round_keys (
         ap_rst,
         ap_start,
         ap_done,
-        ap_continue,
         ap_idle,
         ap_ready,
         this_key_address0,
@@ -39,7 +38,6 @@ input   ap_clk;
 input   ap_rst;
 input   ap_start;
 output   ap_done;
-input   ap_continue;
 output   ap_idle;
 output   ap_ready;
 output  [3:0] this_key_address0;
@@ -66,7 +64,6 @@ reg[7:0] pynqrypt_round_keys_d0;
 reg pynqrypt_round_keys_ce1;
 reg pynqrypt_round_keys_we1;
 
-reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 wire    grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start;
@@ -92,13 +89,11 @@ wire    grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_pynq
 wire    grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_pynqrypt_round_keys_we1;
 wire   [7:0] grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_pynqrypt_round_keys_d1;
 reg    grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg;
-reg    ap_block_state1_ignore_call0;
 wire    ap_CS_fsm_state2;
 reg    grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_start_reg;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
 reg   [3:0] ap_NS_fsm;
-reg    ap_block_state1;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
 wire    ap_ST_fsm_state3_blk;
@@ -107,7 +102,6 @@ wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 4'd1;
 #0 grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg = 1'b0;
 #0 grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_start_reg = 1'b0;
@@ -158,21 +152,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_done_reg <= 1'b0;
-    end else begin
-        if ((ap_continue == 1'b1)) begin
-            ap_done_reg <= 1'b0;
-        end else if (((grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
-            ap_done_reg <= 1'b1;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
         grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg <= 1'b0;
     end else begin
-        if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
             grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg <= 1'b1;
         end else if ((grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_ready == 1'b1)) begin
             grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg <= 1'b0;
@@ -193,7 +175,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) | (ap_done_reg == 1'b1))) begin
+    if ((ap_start == 1'b0)) begin
         ap_ST_fsm_state1_blk = 1'b1;
     end else begin
         ap_ST_fsm_state1_blk = 1'b0;
@@ -219,10 +201,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4)))) begin
         ap_done = 1'b1;
     end else begin
-        ap_done = ap_done_reg;
+        ap_done = 1'b0;
     end
 end
 
@@ -301,7 +283,7 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
@@ -337,14 +319,6 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
-
-always @ (*) begin
-    ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
-end
-
-always @ (*) begin
-    ap_block_state1_ignore_call0 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
-end
 
 assign grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start = grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg;
 

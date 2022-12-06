@@ -62,13 +62,7 @@ module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block (
         conv6_i36_14_phi_out,
         conv6_i36_14_phi_out_ap_vld,
         conv6_i36_15_phi_out,
-        conv6_i36_15_phi_out_ap_vld,
-        aes_sbox2_address0,
-        aes_sbox2_ce0,
-        aes_sbox2_q0,
-        aes_sbox2_address1,
-        aes_sbox2_ce1,
-        aes_sbox2_q1
+        conv6_i36_15_phi_out_ap_vld
 );
 
 parameter    ap_ST_fsm_state1 = 15'd1;
@@ -142,12 +136,6 @@ output  [7:0] conv6_i36_14_phi_out;
 output   conv6_i36_14_phi_out_ap_vld;
 output  [7:0] conv6_i36_15_phi_out;
 output   conv6_i36_15_phi_out_ap_vld;
-output  [7:0] aes_sbox2_address0;
-output   aes_sbox2_ce0;
-input  [7:0] aes_sbox2_q0;
-output  [7:0] aes_sbox2_address1;
-output   aes_sbox2_ce1;
-input  [7:0] aes_sbox2_q1;
 
 reg ap_idle;
 reg[3:0] state_address0;
@@ -178,10 +166,6 @@ reg conv6_i36_12_phi_out_ap_vld;
 reg conv6_i36_13_phi_out_ap_vld;
 reg conv6_i36_14_phi_out_ap_vld;
 reg conv6_i36_15_phi_out_ap_vld;
-reg[7:0] aes_sbox2_address0;
-reg aes_sbox2_ce0;
-reg[7:0] aes_sbox2_address1;
-reg aes_sbox2_ce1;
 
 (* fsm_encoding = "none" *) reg   [14:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
@@ -192,6 +176,12 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_CS_fsm_state15;
 wire    ap_block_state15_pp0_stage14_iter0;
+reg   [7:0] crypto_aes_sbox_address0;
+reg    crypto_aes_sbox_ce0;
+wire   [7:0] crypto_aes_sbox_q0;
+reg   [7:0] crypto_aes_sbox_address1;
+reg    crypto_aes_sbox_ce1;
+wire   [7:0] crypto_aes_sbox_q1;
 reg   [7:0] reg_729;
 wire    ap_CS_fsm_state2;
 wire    ap_block_state2_pp0_stage1_iter0;
@@ -214,11 +204,11 @@ reg   [7:0] tmp3_reg_2209;
 reg   [7:0] pynqrypt_round_keys_load_reg_2226;
 reg   [7:0] pynqrypt_round_keys_load_16_reg_2251;
 reg   [7:0] pynqrypt_round_keys_load_17_reg_2256;
-reg   [7:0] aes_sbox2_load_11_reg_2281;
+reg   [7:0] crypto_aes_sbox_load_14_reg_2281;
 reg   [7:0] pynqrypt_round_keys_load_18_reg_2289;
 reg   [7:0] pynqrypt_round_keys_load_19_reg_2294;
-reg   [7:0] aes_sbox2_load_2_reg_2309;
-reg   [7:0] aes_sbox2_load_3_reg_2316;
+reg   [7:0] crypto_aes_sbox_load_5_reg_2309;
+reg   [7:0] crypto_aes_sbox_load_6_reg_2316;
 wire   [7:0] tmp2_12_fu_910_p2;
 reg   [7:0] tmp2_12_reg_2334;
 wire   [7:0] xor_ln109_7_fu_916_p2;
@@ -227,16 +217,16 @@ reg   [7:0] pynqrypt_round_keys_load_21_reg_2346;
 reg   [7:0] tmp3_1_reg_2361;
 wire    ap_CS_fsm_state6;
 wire    ap_block_state6_pp0_stage5_iter0;
-reg   [7:0] aes_sbox2_load_5_reg_2368;
+reg   [7:0] crypto_aes_sbox_load_8_reg_2368;
 reg   [7:0] pynqrypt_round_keys_load_22_reg_2385;
 reg   [7:0] pynqrypt_round_keys_load_23_reg_2390;
-reg   [7:0] aes_sbox2_load_7_reg_2405;
+reg   [7:0] crypto_aes_sbox_load_10_reg_2405;
 wire    ap_CS_fsm_state7;
 wire    ap_block_state7_pp0_stage6_iter0;
-reg   [7:0] aes_sbox2_load_15_reg_2423;
+reg   [7:0] crypto_aes_sbox_load_18_reg_2423;
 reg   [7:0] pynqrypt_round_keys_load_24_reg_2431;
 reg   [7:0] pynqrypt_round_keys_load_25_reg_2436;
-reg   [7:0] aes_sbox2_load_9_reg_2451;
+reg   [7:0] crypto_aes_sbox_load_12_reg_2451;
 wire   [7:0] tmp1_3_fu_1063_p2;
 reg   [7:0] tmp1_3_reg_2468;
 reg   [7:0] pynqrypt_round_keys_load_26_reg_2473;
@@ -484,6 +474,21 @@ initial begin
 #0 ap_done_reg = 1'b0;
 end
 
+pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R #(
+    .DataWidth( 8 ),
+    .AddressRange( 256 ),
+    .AddressWidth( 8 ))
+crypto_aes_sbox_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(crypto_aes_sbox_address0),
+    .ce0(crypto_aes_sbox_ce0),
+    .q0(crypto_aes_sbox_q0),
+    .address1(crypto_aes_sbox_address1),
+    .ce1(crypto_aes_sbox_ce1),
+    .q1(crypto_aes_sbox_q1)
+);
+
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init flow_control_loop_pipe_sequential_init_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
@@ -547,63 +552,17 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state8)) begin
-        reg_738 <= aes_sbox2_q1;
+        reg_738 <= crypto_aes_sbox_q1;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        reg_738 <= aes_sbox2_q0;
+        reg_738 <= crypto_aes_sbox_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state9)) begin
-        reg_743 <= aes_sbox2_q0;
+        reg_743 <= crypto_aes_sbox_q0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        reg_743 <= aes_sbox2_q1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        aes_sbox2_load_11_reg_2281 <= aes_sbox2_q0;
-        pynqrypt_round_keys_load_18_reg_2289 <= pynqrypt_round_keys_q1;
-        pynqrypt_round_keys_load_19_reg_2294 <= pynqrypt_round_keys_q0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
-        aes_sbox2_load_15_reg_2423 <= aes_sbox2_q0;
-        aes_sbox2_load_7_reg_2405 <= aes_sbox2_q1;
-        pynqrypt_round_keys_load_24_reg_2431 <= pynqrypt_round_keys_q1;
-        pynqrypt_round_keys_load_25_reg_2436 <= pynqrypt_round_keys_q0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
-        aes_sbox2_load_2_reg_2309 <= aes_sbox2_q1;
-        aes_sbox2_load_3_reg_2316 <= aes_sbox2_q0;
-        conv6_i36_15_phi_fu_138 <= xor_ln233_47_fu_981_p2;
-        pynqrypt_round_keys_load_21_reg_2346 <= pynqrypt_round_keys_q0;
-        tmp2_12_reg_2334 <= tmp2_12_fu_910_p2;
-        xor_ln109_7_reg_2341 <= xor_ln109_7_fu_916_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        aes_sbox2_load_5_reg_2368 <= aes_sbox2_q0;
-        pynqrypt_round_keys_load_22_reg_2385 <= pynqrypt_round_keys_q1;
-        pynqrypt_round_keys_load_23_reg_2390 <= pynqrypt_round_keys_q0;
-        tmp3_1_reg_2361 <= aes_sbox2_q1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state8)) begin
-        aes_sbox2_load_9_reg_2451 <= aes_sbox2_q0;
-        conv6_i36_12_phi_fu_150 <= xor_ln233_44_fu_1105_p2;
-        pynqrypt_round_keys_load_26_reg_2473 <= pynqrypt_round_keys_q1;
-        tmp1_3_reg_2468 <= tmp1_3_fu_1063_p2;
+        reg_743 <= crypto_aes_sbox_q1;
     end
 end
 
@@ -633,9 +592,55 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        conv6_i36_12_phi_fu_150 <= xor_ln233_44_fu_1105_p2;
+        crypto_aes_sbox_load_12_reg_2451 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_26_reg_2473 <= pynqrypt_round_keys_q1;
+        tmp1_3_reg_2468 <= tmp1_3_fu_1063_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state9)) begin
         conv6_i36_13_phi_fu_146 <= xor_ln233_45_fu_1214_p2;
         conv6_i36_14_phi_fu_142 <= xor_ln233_46_fu_1237_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        conv6_i36_15_phi_fu_138 <= xor_ln233_47_fu_981_p2;
+        crypto_aes_sbox_load_5_reg_2309 <= crypto_aes_sbox_q1;
+        crypto_aes_sbox_load_6_reg_2316 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_21_reg_2346 <= pynqrypt_round_keys_q0;
+        tmp2_12_reg_2334 <= tmp2_12_fu_910_p2;
+        xor_ln109_7_reg_2341 <= xor_ln109_7_fu_916_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        crypto_aes_sbox_load_10_reg_2405 <= crypto_aes_sbox_q1;
+        crypto_aes_sbox_load_18_reg_2423 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_24_reg_2431 <= pynqrypt_round_keys_q1;
+        pynqrypt_round_keys_load_25_reg_2436 <= pynqrypt_round_keys_q0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        crypto_aes_sbox_load_14_reg_2281 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_18_reg_2289 <= pynqrypt_round_keys_q1;
+        pynqrypt_round_keys_load_19_reg_2294 <= pynqrypt_round_keys_q0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        crypto_aes_sbox_load_8_reg_2368 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_22_reg_2385 <= pynqrypt_round_keys_q1;
+        pynqrypt_round_keys_load_23_reg_2390 <= pynqrypt_round_keys_q0;
+        tmp3_1_reg_2361 <= crypto_aes_sbox_q1;
     end
 end
 
@@ -649,79 +654,19 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
         pynqrypt_round_keys_load_reg_2226 <= pynqrypt_round_keys_q1;
-        tmp3_reg_2209 <= aes_sbox2_q0;
+        tmp3_reg_2209 <= crypto_aes_sbox_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state3))) begin
-        reg_734 <= aes_sbox2_q1;
+        reg_734 <= crypto_aes_sbox_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln54_fu_761_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         shl_ln1_reg_2181[7 : 4] <= shl_ln1_fu_775_p3[7 : 4];
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        aes_sbox2_address0 = zext_ln72_14_fu_1137_p1;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        aes_sbox2_address0 = zext_ln72_13_fu_1058_p1;
-    end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        aes_sbox2_address0 = zext_ln72_9_fu_1028_p1;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        aes_sbox2_address0 = zext_ln72_15_fu_998_p1;
-    end else if ((1'b1 == ap_CS_fsm_state5)) begin
-        aes_sbox2_address0 = zext_ln72_5_fu_905_p1;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        aes_sbox2_address0 = zext_ln72_3_fu_875_p1;
-    end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        aes_sbox2_address0 = zext_ln72_11_fu_845_p1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        aes_sbox2_address0 = zext_ln72_12_fu_815_p1;
-    end else if (((icmp_ln54_fu_761_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-        aes_sbox2_address0 = zext_ln72_fu_770_p1;
-    end else begin
-        aes_sbox2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state8)) begin
-        aes_sbox2_address1 = zext_ln72_10_fu_1053_p1;
-    end else if ((1'b1 == ap_CS_fsm_state7)) begin
-        aes_sbox2_address1 = zext_ln72_8_fu_1023_p1;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        aes_sbox2_address1 = zext_ln72_7_fu_993_p1;
-    end else if ((1'b1 == ap_CS_fsm_state5)) begin
-        aes_sbox2_address1 = zext_ln72_4_fu_900_p1;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        aes_sbox2_address1 = zext_ln72_2_fu_870_p1;
-    end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        aes_sbox2_address1 = zext_ln72_6_fu_840_p1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        aes_sbox2_address1 = zext_ln72_1_fu_810_p1;
-    end else begin
-        aes_sbox2_address1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2) | ((icmp_ln54_fu_761_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1)))) begin
-        aes_sbox2_ce0 = 1'b1;
-    end else begin
-        aes_sbox2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2))) begin
-        aes_sbox2_ce1 = 1'b1;
-    end else begin
-        aes_sbox2_ce1 = 1'b0;
     end
 end
 
@@ -930,6 +875,66 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state9)) begin
+        crypto_aes_sbox_address0 = zext_ln72_14_fu_1137_p1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        crypto_aes_sbox_address0 = zext_ln72_13_fu_1058_p1;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        crypto_aes_sbox_address0 = zext_ln72_9_fu_1028_p1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        crypto_aes_sbox_address0 = zext_ln72_15_fu_998_p1;
+    end else if ((1'b1 == ap_CS_fsm_state5)) begin
+        crypto_aes_sbox_address0 = zext_ln72_5_fu_905_p1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        crypto_aes_sbox_address0 = zext_ln72_3_fu_875_p1;
+    end else if ((1'b1 == ap_CS_fsm_state3)) begin
+        crypto_aes_sbox_address0 = zext_ln72_11_fu_845_p1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        crypto_aes_sbox_address0 = zext_ln72_12_fu_815_p1;
+    end else if (((icmp_ln54_fu_761_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+        crypto_aes_sbox_address0 = zext_ln72_fu_770_p1;
+    end else begin
+        crypto_aes_sbox_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        crypto_aes_sbox_address1 = zext_ln72_10_fu_1053_p1;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        crypto_aes_sbox_address1 = zext_ln72_8_fu_1023_p1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        crypto_aes_sbox_address1 = zext_ln72_7_fu_993_p1;
+    end else if ((1'b1 == ap_CS_fsm_state5)) begin
+        crypto_aes_sbox_address1 = zext_ln72_4_fu_900_p1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        crypto_aes_sbox_address1 = zext_ln72_2_fu_870_p1;
+    end else if ((1'b1 == ap_CS_fsm_state3)) begin
+        crypto_aes_sbox_address1 = zext_ln72_6_fu_840_p1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        crypto_aes_sbox_address1 = zext_ln72_1_fu_810_p1;
+    end else begin
+        crypto_aes_sbox_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2) | ((icmp_ln54_fu_761_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1)))) begin
+        crypto_aes_sbox_ce0 = 1'b1;
+    end else begin
+        crypto_aes_sbox_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2))) begin
+        crypto_aes_sbox_ce1 = 1'b1;
+    end else begin
+        crypto_aes_sbox_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
     if (((icmp_ln54_fu_761_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         p_out_ap_vld = 1'b1;
     end else begin
@@ -1066,7 +1071,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2) | ((icmp_ln54_fu_761_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1)))) begin
+    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2) | ((icmp_ln54_fu_761_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1)))) begin
         state_ce1 = 1'b1;
     end else begin
         state_ce1 = 1'b0;
@@ -1124,7 +1129,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state9))) begin
+    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state9))) begin
         state_we1 = 1'b1;
     end else begin
         state_we1 = 1'b0;
@@ -1386,45 +1391,45 @@ assign shl_ln239_9_fu_1531_p2 = tmp2_9_fu_1526_p2 << 8'd1;
 
 assign shl_ln239_fu_1269_p2 = tmp2_fu_1254_p2 << 8'd1;
 
-assign tmp1_1_fu_1381_p2 = (xor_ln109_3_fu_1375_p2 ^ aes_sbox2_load_3_reg_2316);
+assign tmp1_1_fu_1381_p2 = (xor_ln109_3_fu_1375_p2 ^ crypto_aes_sbox_load_6_reg_2316);
 
-assign tmp1_2_fu_1499_p2 = (xor_ln109_5_fu_1494_p2 ^ aes_sbox2_load_7_reg_2405);
+assign tmp1_2_fu_1499_p2 = (xor_ln109_5_fu_1494_p2 ^ crypto_aes_sbox_load_10_reg_2405);
 
-assign tmp1_3_fu_1063_p2 = (xor_ln109_7_reg_2341 ^ aes_sbox2_load_11_reg_2281);
+assign tmp1_3_fu_1063_p2 = (xor_ln109_7_reg_2341 ^ crypto_aes_sbox_load_14_reg_2281);
 
-assign tmp1_fu_1264_p2 = (xor_ln109_1_fu_1258_p2 ^ aes_sbox2_load_15_reg_2423);
+assign tmp1_fu_1264_p2 = (xor_ln109_1_fu_1258_p2 ^ crypto_aes_sbox_load_18_reg_2423);
 
-assign tmp2_10_fu_1553_p2 = (aes_sbox2_load_7_reg_2405 ^ aes_sbox2_load_2_reg_2309);
+assign tmp2_10_fu_1553_p2 = (crypto_aes_sbox_load_5_reg_2309 ^ crypto_aes_sbox_load_10_reg_2405);
 
-assign tmp2_11_fu_1579_p2 = (reg_738 ^ aes_sbox2_load_7_reg_2405);
+assign tmp2_11_fu_1579_p2 = (reg_738 ^ crypto_aes_sbox_load_10_reg_2405);
 
 assign tmp2_12_fu_910_p2 = (reg_738 ^ reg_734);
 
 assign tmp2_13_fu_1142_p2 = (reg_743 ^ reg_734);
 
-assign tmp2_14_fu_1170_p2 = (reg_743 ^ aes_sbox2_load_11_reg_2281);
+assign tmp2_14_fu_1170_p2 = (reg_743 ^ crypto_aes_sbox_load_14_reg_2281);
 
-assign tmp2_15_fu_922_p2 = (reg_738 ^ aes_sbox2_load_11_reg_2281);
+assign tmp2_15_fu_922_p2 = (reg_738 ^ crypto_aes_sbox_load_14_reg_2281);
 
-assign tmp2_1_fu_1291_p2 = (reg_734 ^ aes_sbox2_load_5_reg_2368);
+assign tmp2_1_fu_1291_p2 = (reg_734 ^ crypto_aes_sbox_load_8_reg_2368);
 
-assign tmp2_2_fu_1318_p2 = (reg_734 ^ aes_sbox2_load_15_reg_2423);
+assign tmp2_2_fu_1318_p2 = (reg_734 ^ crypto_aes_sbox_load_18_reg_2423);
 
-assign tmp2_3_fu_1345_p2 = (tmp3_reg_2209 ^ aes_sbox2_load_15_reg_2423);
+assign tmp2_3_fu_1345_p2 = (tmp3_reg_2209 ^ crypto_aes_sbox_load_18_reg_2423);
 
-assign tmp2_4_fu_1371_p2 = (tmp3_1_reg_2361 ^ aes_sbox2_load_9_reg_2451);
+assign tmp2_4_fu_1371_p2 = (tmp3_1_reg_2361 ^ crypto_aes_sbox_load_12_reg_2451);
 
-assign tmp2_5_fu_1408_p2 = (aes_sbox2_q0 ^ aes_sbox2_load_9_reg_2451);
+assign tmp2_5_fu_1408_p2 = (crypto_aes_sbox_q0 ^ crypto_aes_sbox_load_12_reg_2451);
 
-assign tmp2_6_fu_1435_p2 = (aes_sbox2_q0 ^ aes_sbox2_load_3_reg_2316);
+assign tmp2_6_fu_1435_p2 = (crypto_aes_sbox_q0 ^ crypto_aes_sbox_load_6_reg_2316);
 
-assign tmp2_7_fu_1462_p2 = (tmp3_1_reg_2361 ^ aes_sbox2_load_3_reg_2316);
+assign tmp2_7_fu_1462_p2 = (tmp3_1_reg_2361 ^ crypto_aes_sbox_load_6_reg_2316);
 
 assign tmp2_8_fu_1488_p2 = (reg_743 ^ reg_738);
 
-assign tmp2_9_fu_1526_p2 = (reg_743 ^ aes_sbox2_load_2_reg_2309);
+assign tmp2_9_fu_1526_p2 = (reg_743 ^ crypto_aes_sbox_load_5_reg_2309);
 
-assign tmp2_fu_1254_p2 = (tmp3_reg_2209 ^ aes_sbox2_load_5_reg_2368);
+assign tmp2_fu_1254_p2 = (tmp3_reg_2209 ^ crypto_aes_sbox_load_8_reg_2368);
 
 assign tmp_10_fu_1563_p3 = tmp2_10_fu_1553_p2[32'd7];
 
@@ -1460,9 +1465,9 @@ assign tmp_fu_1275_p3 = tmp2_fu_1254_p2[32'd7];
 
 assign xor_ln109_1_fu_1258_p2 = (tmp2_fu_1254_p2 ^ reg_734);
 
-assign xor_ln109_3_fu_1375_p2 = (tmp2_4_fu_1371_p2 ^ aes_sbox2_q0);
+assign xor_ln109_3_fu_1375_p2 = (tmp2_4_fu_1371_p2 ^ crypto_aes_sbox_q0);
 
-assign xor_ln109_5_fu_1494_p2 = (tmp2_8_fu_1488_p2 ^ aes_sbox2_load_2_reg_2309);
+assign xor_ln109_5_fu_1494_p2 = (tmp2_8_fu_1488_p2 ^ crypto_aes_sbox_load_5_reg_2309);
 
 assign xor_ln109_7_fu_916_p2 = (tmp2_12_fu_910_p2 ^ reg_743);
 
@@ -1488,7 +1493,7 @@ assign xor_ln233_19_fu_1707_p2 = (xor_ln233_18_fu_1701_p2 ^ xor_ln233_16_fu_1691
 
 assign xor_ln233_1_fu_1606_p2 = (tmp3_reg_2209 ^ pynqrypt_round_keys_load_reg_2226);
 
-assign xor_ln233_20_fu_1713_p2 = (reg_729 ^ aes_sbox2_load_9_reg_2451);
+assign xor_ln233_20_fu_1713_p2 = (reg_729 ^ crypto_aes_sbox_load_12_reg_2451);
 
 assign xor_ln233_21_fu_1718_p2 = (tmp1_1_fu_1381_p2 ^ shl_ln239_5_fu_1413_p2);
 
@@ -1496,7 +1501,7 @@ assign xor_ln233_22_fu_1724_p2 = (xor_ln233_21_fu_1718_p2 ^ select_ln118_1_fu_14
 
 assign xor_ln233_23_fu_1730_p2 = (xor_ln233_22_fu_1724_p2 ^ xor_ln233_20_fu_1713_p2);
 
-assign xor_ln233_24_fu_1736_p2 = (pynqrypt_round_keys_load_21_reg_2346 ^ aes_sbox2_load_3_reg_2316);
+assign xor_ln233_24_fu_1736_p2 = (pynqrypt_round_keys_load_21_reg_2346 ^ crypto_aes_sbox_load_6_reg_2316);
 
 assign xor_ln233_25_fu_1740_p2 = (tmp2_4_fu_1371_p2 ^ select_ln122_1_fu_1454_p3);
 
@@ -1528,7 +1533,7 @@ assign xor_ln233_37_fu_1809_p2 = (xor_ln233_36_fu_1803_p2 ^ select_ln118_2_fu_15
 
 assign xor_ln233_38_fu_1815_p2 = (xor_ln233_37_fu_1809_p2 ^ xor_ln233_35_fu_1798_p2);
 
-assign xor_ln233_39_fu_1821_p2 = (pynqrypt_round_keys_load_25_reg_2436 ^ aes_sbox2_load_7_reg_2405);
+assign xor_ln233_39_fu_1821_p2 = (pynqrypt_round_keys_load_25_reg_2436 ^ crypto_aes_sbox_load_10_reg_2405);
 
 assign xor_ln233_3_fu_1616_p2 = (xor_ln233_2_fu_1610_p2 ^ shl_ln239_fu_1269_p2);
 
@@ -1566,7 +1571,7 @@ assign xor_ln233_54_fu_1203_p2 = (tmp1_3_reg_2468 ^ shl_ln239_13_fu_1148_p2);
 
 assign xor_ln233_55_fu_1208_p2 = (xor_ln233_54_fu_1203_p2 ^ select_ln118_3_fu_1162_p3);
 
-assign xor_ln233_56_fu_1221_p2 = (pynqrypt_round_keys_q0 ^ aes_sbox2_load_11_reg_2281);
+assign xor_ln233_56_fu_1221_p2 = (pynqrypt_round_keys_q0 ^ crypto_aes_sbox_load_14_reg_2281);
 
 assign xor_ln233_57_fu_1226_p2 = (tmp2_12_reg_2334 ^ select_ln122_3_fu_1189_p3);
 
@@ -1574,7 +1579,7 @@ assign xor_ln233_58_fu_1231_p2 = (xor_ln233_57_fu_1226_p2 ^ shl_ln239_14_fu_1175
 
 assign xor_ln233_59_fu_969_p2 = (xor_ln109_7_fu_916_p2 ^ reg_729);
 
-assign xor_ln233_5_fu_1628_p2 = (pynqrypt_round_keys_load_16_reg_2251 ^ aes_sbox2_load_5_reg_2368);
+assign xor_ln233_5_fu_1628_p2 = (pynqrypt_round_keys_load_16_reg_2251 ^ crypto_aes_sbox_load_8_reg_2368);
 
 assign xor_ln233_60_fu_975_p2 = (shl_ln239_15_fu_927_p2 ^ select_ln227_fu_941_p3);
 
@@ -1584,7 +1589,7 @@ assign xor_ln233_7_fu_1638_p2 = (xor_ln233_6_fu_1632_p2 ^ select_ln118_fu_1310_p
 
 assign xor_ln233_8_fu_1644_p2 = (xor_ln233_7_fu_1638_p2 ^ xor_ln233_5_fu_1628_p2);
 
-assign xor_ln233_9_fu_1651_p2 = (pynqrypt_round_keys_load_17_reg_2256 ^ aes_sbox2_load_15_reg_2423);
+assign xor_ln233_9_fu_1651_p2 = (pynqrypt_round_keys_load_17_reg_2256 ^ crypto_aes_sbox_load_18_reg_2423);
 
 assign zext_ln233_10_fu_1018_p1 = or_ln233_9_fu_1013_p2;
 

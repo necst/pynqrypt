@@ -23813,7 +23813,5 @@ __attribute__((sdx_kernel("pynqrypt_encrypt", 0))) void pynqrypt_encrypt(
 
  crypto::Pynqrypt pynqrypt(key, nonce);
 
-#pragma HLS DATAFLOW
-
  pynqrypt.ctr_encrypt(plaintext_length, plaintext, ciphertext, 0);
 }
