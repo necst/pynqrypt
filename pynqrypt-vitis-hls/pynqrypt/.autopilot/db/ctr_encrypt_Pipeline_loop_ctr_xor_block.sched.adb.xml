@@ -274,7 +274,7 @@ _ZN6crypto8Pynqrypt13ctr_xor_blockEPhmS1_.exit.loopexit.exitStub:0 %ret_ln0 = re
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i.split:0 %specloopname_ln45 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18
+for.inc.i.split:0 %specloopname_ln45 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln45"/></StgValue>

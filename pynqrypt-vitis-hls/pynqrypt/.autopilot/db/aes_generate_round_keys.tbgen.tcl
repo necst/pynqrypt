@@ -88,9 +88,9 @@ set RtlHierarchyInfo {[
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_1_fu_12", "Port" : "pynqrypt_round_keys", "Inst_start_state" : "1", "Inst_end_state" : "2"},
 					{"ID" : "3", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20", "Port" : "pynqrypt_round_keys", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "aes_sbox3", "Type" : "Memory", "Direction" : "I",
+			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20", "Port" : "aes_sbox3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20", "Port" : "crypto_aes_sbox", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "crypto_aes_rcon", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "3", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20", "Port" : "crypto_aes_rcon", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
@@ -131,11 +131,11 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "pynqrypt_round_keys", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "aes_sbox3", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "crypto_aes_rcon", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "loop_generate_round_keys", "PipelineType" : "NotSupport"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20.aes_sbox3_U", "Parent" : "3"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20.crypto_aes_sbox_U", "Parent" : "3"},
 	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20.crypto_aes_rcon_U", "Parent" : "3"},
 	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"}]}
 
@@ -144,14 +144,14 @@ set ArgLastReadFirstWriteLatency {
 	aes_generate_round_keys {
 		this_key {Type I LastRead 0 FirstWrite -1}
 		pynqrypt_round_keys {Type IO LastRead 8 FirstWrite 1}
-		aes_sbox3 {Type I LastRead -1 FirstWrite -1}
+		crypto_aes_sbox {Type I LastRead -1 FirstWrite -1}
 		crypto_aes_rcon {Type I LastRead -1 FirstWrite -1}}
 	aes_generate_round_keys_Pipeline_1 {
 		this_key {Type I LastRead 0 FirstWrite -1}
 		pynqrypt_round_keys {Type O LastRead -1 FirstWrite 1}}
 	aes_generate_round_keys_Pipeline_loop_generate_round_keys {
 		pynqrypt_round_keys {Type IO LastRead 8 FirstWrite 8}
-		aes_sbox3 {Type I LastRead -1 FirstWrite -1}
+		crypto_aes_sbox {Type I LastRead -1 FirstWrite -1}
 		crypto_aes_rcon {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0

@@ -1,12 +1,12 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 

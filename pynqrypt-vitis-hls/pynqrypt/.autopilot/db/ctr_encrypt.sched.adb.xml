@@ -306,7 +306,7 @@ entry:7 %plaintext_length_read = read i64 @_ssdm_op_Read.ap_fifo.i64P0A, i64 %pl
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_3, void @empty_13, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
+entry:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_11, void @empty_3, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -772,7 +772,7 @@ for.body.split:3 %select_ln23 = select i1 %icmp_ln23, i64 %xor_ln23_1, i64 16
 
 <Node id="38" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body.split:4 %specloopname_ln23 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19
+for.body.split:4 %specloopname_ln23 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln23"/></StgValue>
@@ -1157,7 +1157,7 @@ post-loop-memcpy-expansion1:9 %store_ln40 = store i8 %trunc_ln5, i4 %block_nonce
 
 <Node id="65" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %crypto_aes_sbox
+post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %aes_sbox2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln27"/></StgValue>
@@ -1175,7 +1175,7 @@ post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %py
 
 <Node id="65" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %crypto_aes_sbox
+post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %aes_sbox2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln27"/></StgValue>
@@ -1273,10 +1273,10 @@ loop-memcpy-expansion.preheader:0 %gmem_addr_1 = getelementptr i8 %gmem, i64 %ad
 
 <Node id="70" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:1 %empty_33 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i8, i8 %gmem_addr_1, i32 %select_ln24
+loop-memcpy-expansion.preheader:1 %empty_31 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i8, i8 %gmem_addr_1, i32 %select_ln24
 
 ]]></Node>
-<StgValue><ssdm name="empty_33"/></StgValue>
+<StgValue><ssdm name="empty_31"/></StgValue>
 </operation>
 </state>
 
@@ -1327,10 +1327,10 @@ loop-memcpy-expansion.preheader:2 %call_ln24 = call void @ctr_encrypt_Pipeline_4
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1345,10 +1345,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1363,10 +1363,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1381,10 +1381,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1400,10 +1400,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 
 <operation id="102" st_id="25" stage="1" lat="1">

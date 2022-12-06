@@ -306,7 +306,7 @@ entry:7 %plaintext_length_read = read i64 @_ssdm_op_Read.ap_fifo.i64P0A, i64 %pl
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_3, void @empty_13, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
+entry:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_11, void @empty_3, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -774,7 +774,7 @@ for.body.split:3 %select_ln23 = select i1 %icmp_ln23, i64 %xor_ln23_1, i64 16
 
 <Node id="38" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body.split:4 %specloopname_ln23 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19
+for.body.split:4 %specloopname_ln23 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln23"/></StgValue>
@@ -1159,7 +1159,7 @@ post-loop-memcpy-expansion1:9 %store_ln40 = store i8 %trunc_ln5, i4 %block_nonce
 
 <Node id="65" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %crypto_aes_sbox
+post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %aes_sbox2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln27"/></StgValue>
@@ -1177,7 +1177,7 @@ post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %py
 
 <Node id="65" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %crypto_aes_sbox
+post-loop-memcpy-expansion1:10 %call_ln27 = call void @aes_encrypt_block, i8 %pynqrypt_round_keys, i8 %block_nonce, i8 %aes_sbox2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln27"/></StgValue>
@@ -1275,10 +1275,10 @@ loop-memcpy-expansion.preheader:0 %gmem_addr_1 = getelementptr i8 %gmem, i64 %ad
 
 <Node id="70" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:1 %empty_33 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i8, i64 %gmem_addr_1, i32 %select_ln24
+loop-memcpy-expansion.preheader:1 %empty_31 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i8, i64 %gmem_addr_1, i32 %select_ln24
 
 ]]></Node>
-<StgValue><ssdm name="empty_33"/></StgValue>
+<StgValue><ssdm name="empty_31"/></StgValue>
 </operation>
 </state>
 
@@ -1329,10 +1329,10 @@ loop-memcpy-expansion.preheader:2 %call_ln24 = call void @ctr_encrypt_Pipeline_4
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1347,10 +1347,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1365,10 +1365,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1383,10 +1383,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 </state>
 
@@ -1402,10 +1402,10 @@ loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-loop-memcpy-expansion.preheader:3 %empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
+loop-memcpy-expansion.preheader:3 %empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i64 %gmem_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 
 <operation id="102" st_id="25" stage="1" lat="1">
@@ -1538,8 +1538,8 @@ for.inc:5 %br_ln23 = br void %for.body
 <port id="145" name="ciphertext" dir="0" iftype="3">
 <core>FIFO_SRL</core><StgValue><ssdm name="ciphertext"/></StgValue>
 </port>
-<port id="146" name="crypto_aes_sbox" dir="0" iftype="1">
-<core>ROM</core><StgValue><ssdm name="crypto_aes_sbox"/><MemPortTyVec>1 </MemPortTyVec>
+<port id="146" name="aes_sbox2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="aes_sbox2"/><MemPortTyVec>1 1 </MemPortTyVec>
 </StgValue>
 </port>
 </ports>
@@ -1692,9 +1692,9 @@ for.inc:5 %br_ln23 = br void %for.body
 </dataflow>
 <dataflow id="232" from="StgValue_231" to="specinterface_ln0" fromId="231" toId="34">
 </dataflow>
-<dataflow id="234" from="empty_3" to="specinterface_ln0" fromId="233" toId="34">
+<dataflow id="234" from="empty_11" to="specinterface_ln0" fromId="233" toId="34">
 </dataflow>
-<dataflow id="236" from="empty_13" to="specinterface_ln0" fromId="235" toId="34">
+<dataflow id="236" from="empty_3" to="specinterface_ln0" fromId="235" toId="34">
 </dataflow>
 <dataflow id="237" from="empty_2" to="specinterface_ln0" fromId="228" toId="34">
 </dataflow>
@@ -1822,7 +1822,7 @@ for.inc:5 %br_ln23 = br void %for.body
 </dataflow>
 <dataflow id="309" from="_ssdm_op_SpecLoopName" to="specloopname_ln23" fromId="308" toId="64">
 </dataflow>
-<dataflow id="311" from="empty_19" to="specloopname_ln23" fromId="310" toId="64">
+<dataflow id="311" from="empty_4" to="specloopname_ln23" fromId="310" toId="64">
 </dataflow>
 <dataflow id="312" from="icmp_ln25" to="br_ln25" fromId="58" toId="65">
 </dataflow>
@@ -1958,7 +1958,7 @@ for.inc:5 %br_ln23 = br void %for.body
 </dataflow>
 <dataflow id="391" from="block_nonce" to="call_ln27" fromId="35" toId="87">
 </dataflow>
-<dataflow id="392" from="crypto_aes_sbox" to="call_ln27" fromId="146" toId="87">
+<dataflow id="392" from="aes_sbox2" to="call_ln27" fromId="146" toId="87">
 </dataflow>
 <dataflow id="393" from="aes_encrypt_block" to="call_ln27" fromId="388" toId="88">
 </dataflow>
@@ -1966,7 +1966,7 @@ for.inc:5 %br_ln23 = br void %for.body
 </dataflow>
 <dataflow id="395" from="block_nonce" to="call_ln27" fromId="35" toId="88">
 </dataflow>
-<dataflow id="396" from="crypto_aes_sbox" to="call_ln27" fromId="146" toId="88">
+<dataflow id="396" from="aes_sbox2" to="call_ln27" fromId="146" toId="88">
 </dataflow>
 <dataflow id="398" from="ctr_encrypt_Pipeline_loop_ctr_xor_block" to="call_ln23" fromId="397" toId="89">
 </dataflow>
@@ -2006,11 +2006,11 @@ for.inc:5 %br_ln23 = br void %for.body
 </dataflow>
 <dataflow id="413" from="add_ln24_1" to="gmem_addr_1" fromId="56" toId="93">
 </dataflow>
-<dataflow id="415" from="_ssdm_op_WriteReq.m_axi.p1i8" to="empty_33" fromId="414" toId="94">
+<dataflow id="415" from="_ssdm_op_WriteReq.m_axi.p1i8" to="empty_31" fromId="414" toId="94">
 </dataflow>
-<dataflow id="416" from="gmem_addr_1" to="empty_33" fromId="93" toId="94">
+<dataflow id="416" from="gmem_addr_1" to="empty_31" fromId="93" toId="94">
 </dataflow>
-<dataflow id="417" from="select_ln24" to="empty_33" fromId="55" toId="94">
+<dataflow id="417" from="select_ln24" to="empty_31" fromId="55" toId="94">
 </dataflow>
 <dataflow id="419" from="ctr_encrypt_Pipeline_4" to="call_ln24" fromId="418" toId="95">
 </dataflow>
@@ -2032,25 +2032,25 @@ for.inc:5 %br_ln23 = br void %for.body
 </dataflow>
 <dataflow id="428" from="select_ln23" to="call_ln24" fromId="63" toId="96">
 </dataflow>
-<dataflow id="430" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_34" fromId="429" toId="97">
+<dataflow id="430" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_32" fromId="429" toId="97">
 </dataflow>
-<dataflow id="431" from="gmem_addr_1" to="empty_34" fromId="93" toId="97">
+<dataflow id="431" from="gmem_addr_1" to="empty_32" fromId="93" toId="97">
 </dataflow>
-<dataflow id="432" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_34" fromId="429" toId="98">
+<dataflow id="432" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_32" fromId="429" toId="98">
 </dataflow>
-<dataflow id="433" from="gmem_addr_1" to="empty_34" fromId="93" toId="98">
+<dataflow id="433" from="gmem_addr_1" to="empty_32" fromId="93" toId="98">
 </dataflow>
-<dataflow id="434" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_34" fromId="429" toId="99">
+<dataflow id="434" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_32" fromId="429" toId="99">
 </dataflow>
-<dataflow id="435" from="gmem_addr_1" to="empty_34" fromId="93" toId="99">
+<dataflow id="435" from="gmem_addr_1" to="empty_32" fromId="93" toId="99">
 </dataflow>
-<dataflow id="436" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_34" fromId="429" toId="100">
+<dataflow id="436" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_32" fromId="429" toId="100">
 </dataflow>
-<dataflow id="437" from="gmem_addr_1" to="empty_34" fromId="93" toId="100">
+<dataflow id="437" from="gmem_addr_1" to="empty_32" fromId="93" toId="100">
 </dataflow>
-<dataflow id="438" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_34" fromId="429" toId="101">
+<dataflow id="438" from="_ssdm_op_WriteResp.m_axi.p1i8" to="empty_32" fromId="429" toId="101">
 </dataflow>
-<dataflow id="439" from="gmem_addr_1" to="empty_34" fromId="93" toId="101">
+<dataflow id="439" from="gmem_addr_1" to="empty_32" fromId="93" toId="101">
 </dataflow>
 <dataflow id="440" from="indvars_iv6" to="indvars_iv6_load" fromId="27" toId="103">
 </dataflow>

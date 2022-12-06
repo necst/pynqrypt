@@ -13,16 +13,50 @@ set hasInterrupt 0
 set C_modelName {aes_encrypt_block_Pipeline_loop_aes_encrypt_block}
 set C_modelType { void 0 }
 set C_modelArgList {
+	{ xor_ln233 int 8 regular  }
 	{ state int 8 regular {array 16 { 2 2 } 1 1 }  }
 	{ pynqrypt_round_keys int 8 regular {array 176 { 1 1 } 1 1 }  }
-	{ crypto_aes_sbox int 8 regular {array 256 { 1 } 1 1 } {global 0}  }
+	{ p_out int 8 regular {pointer 1}  }
+	{ conv6_i36_1_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_2_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_3_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_4_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_5_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_6_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_7_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_8_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_9_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_10_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_11_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_12_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_13_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_14_phi_out int 8 regular {pointer 1}  }
+	{ conv6_i36_15_phi_out int 8 regular {pointer 1}  }
+	{ aes_sbox2 int 8 regular {array 256 { 1 1 } 1 1 } {global 0}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "state", "interface" : "memory", "bitwidth" : 8, "direction" : "READWRITE"} , 
+	{ "Name" : "xor_ln233", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
+ 	{ "Name" : "state", "interface" : "memory", "bitwidth" : 8, "direction" : "READWRITE"} , 
  	{ "Name" : "pynqrypt_round_keys", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY"} , 
- 	{ "Name" : "crypto_aes_sbox", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY", "extern" : 0} ]}
+ 	{ "Name" : "p_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_1_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_2_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_3_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_4_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_5_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_6_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_7_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_8_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_9_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_10_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_11_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_12_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_13_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_14_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "conv6_i36_15_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "aes_sbox2", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY", "extern" : 0} ]}
 # RTL Port declarations: 
-set portNum 25
+set portNum 61
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -30,25 +64,61 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ state_address0 sc_out sc_lv 4 signal 0 } 
-	{ state_ce0 sc_out sc_logic 1 signal 0 } 
-	{ state_we0 sc_out sc_logic 1 signal 0 } 
-	{ state_d0 sc_out sc_lv 8 signal 0 } 
-	{ state_q0 sc_in sc_lv 8 signal 0 } 
-	{ state_address1 sc_out sc_lv 4 signal 0 } 
-	{ state_ce1 sc_out sc_logic 1 signal 0 } 
-	{ state_we1 sc_out sc_logic 1 signal 0 } 
-	{ state_d1 sc_out sc_lv 8 signal 0 } 
-	{ state_q1 sc_in sc_lv 8 signal 0 } 
-	{ pynqrypt_round_keys_address0 sc_out sc_lv 8 signal 1 } 
-	{ pynqrypt_round_keys_ce0 sc_out sc_logic 1 signal 1 } 
-	{ pynqrypt_round_keys_q0 sc_in sc_lv 8 signal 1 } 
-	{ pynqrypt_round_keys_address1 sc_out sc_lv 8 signal 1 } 
-	{ pynqrypt_round_keys_ce1 sc_out sc_logic 1 signal 1 } 
-	{ pynqrypt_round_keys_q1 sc_in sc_lv 8 signal 1 } 
-	{ crypto_aes_sbox_address0 sc_out sc_lv 8 signal 2 } 
-	{ crypto_aes_sbox_ce0 sc_out sc_logic 1 signal 2 } 
-	{ crypto_aes_sbox_q0 sc_in sc_lv 8 signal 2 } 
+	{ xor_ln233 sc_in sc_lv 8 signal 0 } 
+	{ state_address0 sc_out sc_lv 4 signal 1 } 
+	{ state_ce0 sc_out sc_logic 1 signal 1 } 
+	{ state_we0 sc_out sc_logic 1 signal 1 } 
+	{ state_d0 sc_out sc_lv 8 signal 1 } 
+	{ state_q0 sc_in sc_lv 8 signal 1 } 
+	{ state_address1 sc_out sc_lv 4 signal 1 } 
+	{ state_ce1 sc_out sc_logic 1 signal 1 } 
+	{ state_we1 sc_out sc_logic 1 signal 1 } 
+	{ state_d1 sc_out sc_lv 8 signal 1 } 
+	{ state_q1 sc_in sc_lv 8 signal 1 } 
+	{ pynqrypt_round_keys_address0 sc_out sc_lv 8 signal 2 } 
+	{ pynqrypt_round_keys_ce0 sc_out sc_logic 1 signal 2 } 
+	{ pynqrypt_round_keys_q0 sc_in sc_lv 8 signal 2 } 
+	{ pynqrypt_round_keys_address1 sc_out sc_lv 8 signal 2 } 
+	{ pynqrypt_round_keys_ce1 sc_out sc_logic 1 signal 2 } 
+	{ pynqrypt_round_keys_q1 sc_in sc_lv 8 signal 2 } 
+	{ p_out sc_out sc_lv 8 signal 3 } 
+	{ p_out_ap_vld sc_out sc_logic 1 outvld 3 } 
+	{ conv6_i36_1_phi_out sc_out sc_lv 8 signal 4 } 
+	{ conv6_i36_1_phi_out_ap_vld sc_out sc_logic 1 outvld 4 } 
+	{ conv6_i36_2_phi_out sc_out sc_lv 8 signal 5 } 
+	{ conv6_i36_2_phi_out_ap_vld sc_out sc_logic 1 outvld 5 } 
+	{ conv6_i36_3_phi_out sc_out sc_lv 8 signal 6 } 
+	{ conv6_i36_3_phi_out_ap_vld sc_out sc_logic 1 outvld 6 } 
+	{ conv6_i36_4_phi_out sc_out sc_lv 8 signal 7 } 
+	{ conv6_i36_4_phi_out_ap_vld sc_out sc_logic 1 outvld 7 } 
+	{ conv6_i36_5_phi_out sc_out sc_lv 8 signal 8 } 
+	{ conv6_i36_5_phi_out_ap_vld sc_out sc_logic 1 outvld 8 } 
+	{ conv6_i36_6_phi_out sc_out sc_lv 8 signal 9 } 
+	{ conv6_i36_6_phi_out_ap_vld sc_out sc_logic 1 outvld 9 } 
+	{ conv6_i36_7_phi_out sc_out sc_lv 8 signal 10 } 
+	{ conv6_i36_7_phi_out_ap_vld sc_out sc_logic 1 outvld 10 } 
+	{ conv6_i36_8_phi_out sc_out sc_lv 8 signal 11 } 
+	{ conv6_i36_8_phi_out_ap_vld sc_out sc_logic 1 outvld 11 } 
+	{ conv6_i36_9_phi_out sc_out sc_lv 8 signal 12 } 
+	{ conv6_i36_9_phi_out_ap_vld sc_out sc_logic 1 outvld 12 } 
+	{ conv6_i36_10_phi_out sc_out sc_lv 8 signal 13 } 
+	{ conv6_i36_10_phi_out_ap_vld sc_out sc_logic 1 outvld 13 } 
+	{ conv6_i36_11_phi_out sc_out sc_lv 8 signal 14 } 
+	{ conv6_i36_11_phi_out_ap_vld sc_out sc_logic 1 outvld 14 } 
+	{ conv6_i36_12_phi_out sc_out sc_lv 8 signal 15 } 
+	{ conv6_i36_12_phi_out_ap_vld sc_out sc_logic 1 outvld 15 } 
+	{ conv6_i36_13_phi_out sc_out sc_lv 8 signal 16 } 
+	{ conv6_i36_13_phi_out_ap_vld sc_out sc_logic 1 outvld 16 } 
+	{ conv6_i36_14_phi_out sc_out sc_lv 8 signal 17 } 
+	{ conv6_i36_14_phi_out_ap_vld sc_out sc_logic 1 outvld 17 } 
+	{ conv6_i36_15_phi_out sc_out sc_lv 8 signal 18 } 
+	{ conv6_i36_15_phi_out_ap_vld sc_out sc_logic 1 outvld 18 } 
+	{ aes_sbox2_address0 sc_out sc_lv 8 signal 19 } 
+	{ aes_sbox2_ce0 sc_out sc_logic 1 signal 19 } 
+	{ aes_sbox2_q0 sc_in sc_lv 8 signal 19 } 
+	{ aes_sbox2_address1 sc_out sc_lv 8 signal 19 } 
+	{ aes_sbox2_ce1 sc_out sc_logic 1 signal 19 } 
+	{ aes_sbox2_q1 sc_in sc_lv 8 signal 19 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -57,6 +127,7 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "xor_ln233", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "xor_ln233", "role": "default" }} , 
  	{ "name": "state_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "state", "role": "address0" }} , 
  	{ "name": "state_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "state", "role": "ce0" }} , 
  	{ "name": "state_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "state", "role": "we0" }} , 
@@ -73,9 +144,44 @@ set NewPortList {[
  	{ "name": "pynqrypt_round_keys_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "pynqrypt_round_keys", "role": "address1" }} , 
  	{ "name": "pynqrypt_round_keys_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "pynqrypt_round_keys", "role": "ce1" }} , 
  	{ "name": "pynqrypt_round_keys_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "pynqrypt_round_keys", "role": "q1" }} , 
- 	{ "name": "crypto_aes_sbox_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "crypto_aes_sbox", "role": "address0" }} , 
- 	{ "name": "crypto_aes_sbox_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "crypto_aes_sbox", "role": "ce0" }} , 
- 	{ "name": "crypto_aes_sbox_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "crypto_aes_sbox", "role": "q0" }}  ]}
+ 	{ "name": "p_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "p_out", "role": "default" }} , 
+ 	{ "name": "p_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "p_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_1_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_1_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_1_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_1_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_2_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_2_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_2_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_2_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_3_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_3_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_3_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_3_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_4_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_4_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_4_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_4_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_5_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_5_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_5_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_5_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_6_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_6_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_6_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_6_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_7_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_7_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_7_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_7_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_8_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_8_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_8_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_8_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_9_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_9_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_9_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_9_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_10_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_10_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_10_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_10_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_11_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_11_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_11_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_11_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_12_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_12_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_12_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_12_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_13_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_13_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_13_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_13_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_14_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_14_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_14_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_14_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "conv6_i36_15_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_15_phi_out", "role": "default" }} , 
+ 	{ "name": "conv6_i36_15_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_15_phi_out", "role": "ap_vld" }} , 
+ 	{ "name": "aes_sbox2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "address0" }} , 
+ 	{ "name": "aes_sbox2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "ce0" }} , 
+ 	{ "name": "aes_sbox2_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "q0" }} , 
+ 	{ "name": "aes_sbox2_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "address1" }} , 
+ 	{ "name": "aes_sbox2_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "ce1" }} , 
+ 	{ "name": "aes_sbox2_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "q1" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -84,7 +190,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "182", "EstimateLatencyMax" : "182",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "137", "EstimateLatencyMax" : "137",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -93,9 +199,26 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "xor_ln233", "Type" : "None", "Direction" : "I"},
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "pynqrypt_round_keys", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "p_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_1_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_2_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_3_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_4_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_5_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_6_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_7_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_8_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_9_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_10_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_11_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_12_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_13_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_14_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "conv6_i36_15_phi_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "aes_sbox2", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "loop_aes_encrypt_block", "PipelineType" : "NotSupport"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
@@ -103,22 +226,56 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	aes_encrypt_block_Pipeline_loop_aes_encrypt_block {
-		state {Type IO LastRead 8 FirstWrite 6}
+		xor_ln233 {Type I LastRead 0 FirstWrite -1}
+		state {Type IO LastRead 7 FirstWrite 4}
 		pynqrypt_round_keys {Type I LastRead 8 FirstWrite -1}
-		crypto_aes_sbox {Type I LastRead 16 FirstWrite -1}}}
+		p_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_1_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_2_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_3_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_4_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_5_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_6_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_7_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_8_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_9_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_10_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_11_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_12_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_13_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_14_phi_out {Type O LastRead -1 FirstWrite 0}
+		conv6_i36_15_phi_out {Type O LastRead -1 FirstWrite 0}
+		aes_sbox2 {Type I LastRead 9 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "182", "Max" : "182"}
-	, {"Name" : "Interval", "Min" : "182", "Max" : "182"}
+	{"Name" : "Latency", "Min" : "137", "Max" : "137"}
+	, {"Name" : "Interval", "Min" : "137", "Max" : "137"}
 ]}
 
 set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	state { ap_memory {  { state_address0 mem_address 1 4 }  { state_ce0 mem_ce 1 1 }  { state_we0 mem_we 1 1 }  { state_d0 mem_din 1 8 }  { state_q0 in_data 0 8 }  { state_address1 MemPortADDR2 1 4 }  { state_ce1 MemPortCE2 1 1 }  { state_we1 MemPortWE2 1 1 }  { state_d1 MemPortDIN2 1 8 }  { state_q1 MemPortDOUT2 0 8 } } }
+	xor_ln233 { ap_none {  { xor_ln233 in_data 0 8 } } }
+	state { ap_memory {  { state_address0 mem_address 1 4 }  { state_ce0 mem_ce 1 1 }  { state_we0 mem_we 1 1 }  { state_d0 mem_din 1 8 }  { state_q0 in_data 0 8 }  { state_address1 MemPortADDR2 1 4 }  { state_ce1 MemPortCE2 1 1 }  { state_we1 MemPortWE2 1 1 }  { state_d1 MemPortDIN2 1 8 }  { state_q1 in_data 0 8 } } }
 	pynqrypt_round_keys { ap_memory {  { pynqrypt_round_keys_address0 mem_address 1 8 }  { pynqrypt_round_keys_ce0 mem_ce 1 1 }  { pynqrypt_round_keys_q0 in_data 0 8 }  { pynqrypt_round_keys_address1 MemPortADDR2 1 8 }  { pynqrypt_round_keys_ce1 MemPortCE2 1 1 }  { pynqrypt_round_keys_q1 in_data 0 8 } } }
-	crypto_aes_sbox { ap_memory {  { crypto_aes_sbox_address0 mem_address 1 8 }  { crypto_aes_sbox_ce0 mem_ce 1 1 }  { crypto_aes_sbox_q0 in_data 0 8 } } }
+	p_out { ap_vld {  { p_out out_data 1 8 }  { p_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_1_phi_out { ap_vld {  { conv6_i36_1_phi_out out_data 1 8 }  { conv6_i36_1_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_2_phi_out { ap_vld {  { conv6_i36_2_phi_out out_data 1 8 }  { conv6_i36_2_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_3_phi_out { ap_vld {  { conv6_i36_3_phi_out out_data 1 8 }  { conv6_i36_3_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_4_phi_out { ap_vld {  { conv6_i36_4_phi_out out_data 1 8 }  { conv6_i36_4_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_5_phi_out { ap_vld {  { conv6_i36_5_phi_out out_data 1 8 }  { conv6_i36_5_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_6_phi_out { ap_vld {  { conv6_i36_6_phi_out out_data 1 8 }  { conv6_i36_6_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_7_phi_out { ap_vld {  { conv6_i36_7_phi_out out_data 1 8 }  { conv6_i36_7_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_8_phi_out { ap_vld {  { conv6_i36_8_phi_out out_data 1 8 }  { conv6_i36_8_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_9_phi_out { ap_vld {  { conv6_i36_9_phi_out out_data 1 8 }  { conv6_i36_9_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_10_phi_out { ap_vld {  { conv6_i36_10_phi_out out_data 1 8 }  { conv6_i36_10_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_11_phi_out { ap_vld {  { conv6_i36_11_phi_out out_data 1 8 }  { conv6_i36_11_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_12_phi_out { ap_vld {  { conv6_i36_12_phi_out out_data 1 8 }  { conv6_i36_12_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_13_phi_out { ap_vld {  { conv6_i36_13_phi_out out_data 1 8 }  { conv6_i36_13_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_14_phi_out { ap_vld {  { conv6_i36_14_phi_out out_data 1 8 }  { conv6_i36_14_phi_out_ap_vld out_vld 1 1 } } }
+	conv6_i36_15_phi_out { ap_vld {  { conv6_i36_15_phi_out out_data 1 8 }  { conv6_i36_15_phi_out_ap_vld out_vld 1 1 } } }
+	aes_sbox2 { ap_memory {  { aes_sbox2_address0 mem_address 1 8 }  { aes_sbox2_ce0 mem_ce 1 1 }  { aes_sbox2_q0 in_data 0 8 }  { aes_sbox2_address1 MemPortADDR2 1 8 }  { aes_sbox2_ce1 MemPortCE2 1 1 }  { aes_sbox2_q1 MemPortDOUT2 0 8 } } }
 }

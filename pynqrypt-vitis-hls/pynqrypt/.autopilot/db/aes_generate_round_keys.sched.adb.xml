@@ -73,7 +73,7 @@ entry:0 %call_ln0 = call void @aes_generate_round_keys_Pipeline_1, i8 %this_key,
 
 <Node id="6" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:1 %call_ln0 = call void @aes_generate_round_keys_Pipeline_loop_generate_round_keys, i8 %pynqrypt_round_keys, i8 %aes_sbox3, i8 %crypto_aes_rcon
+entry:1 %call_ln0 = call void @aes_generate_round_keys_Pipeline_loop_generate_round_keys, i8 %pynqrypt_round_keys, i8 %crypto_aes_sbox, i8 %crypto_aes_rcon
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -91,7 +91,7 @@ entry:1 %call_ln0 = call void @aes_generate_round_keys_Pipeline_loop_generate_ro
 
 <Node id="6" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:1 %call_ln0 = call void @aes_generate_round_keys_Pipeline_loop_generate_round_keys, i8 %pynqrypt_round_keys, i8 %aes_sbox3, i8 %crypto_aes_rcon
+entry:1 %call_ln0 = call void @aes_generate_round_keys_Pipeline_loop_generate_round_keys, i8 %pynqrypt_round_keys, i8 %crypto_aes_sbox, i8 %crypto_aes_rcon
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -106,10 +106,10 @@ entry:1 %call_ln0 = call void @aes_generate_round_keys_Pipeline_loop_generate_ro
 
 <Node id="7" bw="0">
 <![CDATA[
-entry:2 %ret_ln217 = ret
+entry:2 %ret_ln225 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln217"/></StgValue>
+<StgValue><ssdm name="ret_ln225"/></StgValue>
 </operation>
 </state>
 </state_list>
