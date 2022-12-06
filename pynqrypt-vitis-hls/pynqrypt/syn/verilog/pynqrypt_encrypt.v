@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=3297,HLS_SYN_LUT=7359,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=3292,HLS_SYN_LUT=7637,HLS_VERSION=2022_2}" *)
 
 module pynqrypt_encrypt (
         ap_clk,
@@ -169,6 +169,8 @@ wire   [7:0] pynqrypt_round_keys_i_q0;
 wire   [7:0] pynqrypt_round_keys_i_q1;
 wire   [7:0] pynqrypt_round_keys_t_q0;
 wire   [7:0] pynqrypt_round_keys_t_q1;
+wire   [7:0] pynqrypt_key_i_q0;
+wire   [7:0] pynqrypt_key_t_q0;
 wire   [7:0] pynqrypt_nonce_i_q0;
 wire   [7:0] pynqrypt_nonce_t_q0;
 wire   [7:0] key_q0;
@@ -210,12 +212,12 @@ wire    Loop_1_proc_U0_ap_done;
 wire    Loop_1_proc_U0_ap_continue;
 wire    Loop_1_proc_U0_ap_idle;
 wire    Loop_1_proc_U0_ap_ready;
-wire   [7:0] Loop_1_proc_U0_pynqrypt_key_din;
-wire    Loop_1_proc_U0_pynqrypt_key_write;
-wire    Loop_1_proc_U0_start_out;
-wire    Loop_1_proc_U0_start_write;
 wire   [3:0] Loop_1_proc_U0_key_address0;
 wire    Loop_1_proc_U0_key_ce0;
+wire   [3:0] Loop_1_proc_U0_pynqrypt_key_address0;
+wire    Loop_1_proc_U0_pynqrypt_key_ce0;
+wire    Loop_1_proc_U0_pynqrypt_key_we0;
+wire   [7:0] Loop_1_proc_U0_pynqrypt_key_d0;
 wire    Loop_2_proc_U0_ap_start;
 wire    Loop_2_proc_U0_ap_done;
 wire    Loop_2_proc_U0_ap_continue;
@@ -227,20 +229,21 @@ wire   [3:0] Loop_2_proc_U0_pynqrypt_nonce_address0;
 wire    Loop_2_proc_U0_pynqrypt_nonce_ce0;
 wire    Loop_2_proc_U0_pynqrypt_nonce_we0;
 wire   [7:0] Loop_2_proc_U0_pynqrypt_nonce_d0;
-wire    Loop_3_proc_U0_ap_start;
-wire    Loop_3_proc_U0_ap_done;
-wire    Loop_3_proc_U0_ap_continue;
-wire    Loop_3_proc_U0_ap_idle;
-wire    Loop_3_proc_U0_ap_ready;
-wire    Loop_3_proc_U0_pynqrypt_key_read;
-wire   [7:0] Loop_3_proc_U0_pynqrypt_round_keys_address0;
-wire    Loop_3_proc_U0_pynqrypt_round_keys_ce0;
-wire    Loop_3_proc_U0_pynqrypt_round_keys_we0;
-wire   [7:0] Loop_3_proc_U0_pynqrypt_round_keys_d0;
-wire   [7:0] Loop_3_proc_U0_pynqrypt_round_keys_address1;
-wire    Loop_3_proc_U0_pynqrypt_round_keys_ce1;
-wire    Loop_3_proc_U0_pynqrypt_round_keys_we1;
-wire   [7:0] Loop_3_proc_U0_pynqrypt_round_keys_d1;
+wire    aes_generate_round_keys_U0_ap_start;
+wire    aes_generate_round_keys_U0_ap_done;
+wire    aes_generate_round_keys_U0_ap_continue;
+wire    aes_generate_round_keys_U0_ap_idle;
+wire    aes_generate_round_keys_U0_ap_ready;
+wire   [3:0] aes_generate_round_keys_U0_this_key_address0;
+wire    aes_generate_round_keys_U0_this_key_ce0;
+wire   [7:0] aes_generate_round_keys_U0_pynqrypt_round_keys_address0;
+wire    aes_generate_round_keys_U0_pynqrypt_round_keys_ce0;
+wire    aes_generate_round_keys_U0_pynqrypt_round_keys_we0;
+wire   [7:0] aes_generate_round_keys_U0_pynqrypt_round_keys_d0;
+wire   [7:0] aes_generate_round_keys_U0_pynqrypt_round_keys_address1;
+wire    aes_generate_round_keys_U0_pynqrypt_round_keys_ce1;
+wire    aes_generate_round_keys_U0_pynqrypt_round_keys_we1;
+wire   [7:0] aes_generate_round_keys_U0_pynqrypt_round_keys_d1;
 wire    ctr_encrypt_U0_ap_start;
 wire    ctr_encrypt_U0_ap_done;
 wire    ctr_encrypt_U0_ap_continue;
@@ -287,6 +290,8 @@ wire    ctr_encrypt_U0_m_axi_gmem_RREADY;
 wire    ctr_encrypt_U0_m_axi_gmem_BREADY;
 wire    ctr_encrypt_U0_plaintext_read;
 wire    ctr_encrypt_U0_ciphertext_read;
+wire    pynqrypt_key_i_full_n;
+wire    pynqrypt_key_t_empty_n;
 wire    pynqrypt_nonce_i_full_n;
 wire    pynqrypt_nonce_t_empty_n;
 wire    pynqrypt_round_keys_i_full_n;
@@ -306,11 +311,6 @@ wire   [63:0] ciphertext_c_dout;
 wire   [2:0] ciphertext_c_num_data_valid;
 wire   [2:0] ciphertext_c_fifo_cap;
 wire    ciphertext_c_empty_n;
-wire    pynqrypt_key_full_n;
-wire   [7:0] pynqrypt_key_dout;
-wire   [4:0] pynqrypt_key_num_data_valid;
-wire   [4:0] pynqrypt_key_fifo_cap;
-wire    pynqrypt_key_empty_n;
 wire    ap_sync_ready;
 reg    ap_sync_reg_entry_proc_U0_ap_ready;
 wire    ap_sync_entry_proc_U0_ap_ready;
@@ -320,10 +320,6 @@ reg    ap_sync_reg_Loop_2_proc_U0_ap_ready;
 wire    ap_sync_Loop_2_proc_U0_ap_ready;
 reg    ap_sync_reg_ctr_encrypt_U0_ap_ready;
 wire    ap_sync_ctr_encrypt_U0_ap_ready;
-wire   [0:0] start_for_Loop_3_proc_U0_din;
-wire    start_for_Loop_3_proc_U0_full_n;
-wire   [0:0] start_for_Loop_3_proc_U0_dout;
-wire    start_for_Loop_3_proc_U0_empty_n;
 wire    ap_ce_reg;
 
 // power-on initialization
@@ -341,15 +337,15 @@ pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W #(
 pynqrypt_round_keys_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .i_address0(Loop_3_proc_U0_pynqrypt_round_keys_address0),
-    .i_ce0(Loop_3_proc_U0_pynqrypt_round_keys_ce0),
-    .i_we0(Loop_3_proc_U0_pynqrypt_round_keys_we0),
-    .i_d0(Loop_3_proc_U0_pynqrypt_round_keys_d0),
+    .i_address0(aes_generate_round_keys_U0_pynqrypt_round_keys_address0),
+    .i_ce0(aes_generate_round_keys_U0_pynqrypt_round_keys_ce0),
+    .i_we0(aes_generate_round_keys_U0_pynqrypt_round_keys_we0),
+    .i_d0(aes_generate_round_keys_U0_pynqrypt_round_keys_d0),
     .i_q0(pynqrypt_round_keys_i_q0),
-    .i_address1(Loop_3_proc_U0_pynqrypt_round_keys_address1),
-    .i_ce1(Loop_3_proc_U0_pynqrypt_round_keys_ce1),
-    .i_we1(Loop_3_proc_U0_pynqrypt_round_keys_we1),
-    .i_d1(Loop_3_proc_U0_pynqrypt_round_keys_d1),
+    .i_address1(aes_generate_round_keys_U0_pynqrypt_round_keys_address1),
+    .i_ce1(aes_generate_round_keys_U0_pynqrypt_round_keys_ce1),
+    .i_we1(aes_generate_round_keys_U0_pynqrypt_round_keys_we1),
+    .i_d1(aes_generate_round_keys_U0_pynqrypt_round_keys_d1),
     .i_q1(pynqrypt_round_keys_i_q1),
     .t_address0(ctr_encrypt_U0_pynqrypt_round_keys_address0),
     .t_ce0(ctr_encrypt_U0_pynqrypt_round_keys_ce0),
@@ -364,9 +360,34 @@ pynqrypt_round_keys_U(
     .i_ce(1'b1),
     .t_ce(1'b1),
     .i_full_n(pynqrypt_round_keys_i_full_n),
-    .i_write(Loop_3_proc_U0_ap_done),
+    .i_write(aes_generate_round_keys_U0_ap_done),
     .t_empty_n(pynqrypt_round_keys_t_empty_n),
     .t_read(ctr_encrypt_U0_ap_ready)
+);
+
+pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W #(
+    .DataWidth( 8 ),
+    .AddressRange( 16 ),
+    .AddressWidth( 4 ))
+pynqrypt_key_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .i_address0(Loop_1_proc_U0_pynqrypt_key_address0),
+    .i_ce0(Loop_1_proc_U0_pynqrypt_key_ce0),
+    .i_we0(Loop_1_proc_U0_pynqrypt_key_we0),
+    .i_d0(Loop_1_proc_U0_pynqrypt_key_d0),
+    .i_q0(pynqrypt_key_i_q0),
+    .t_address0(aes_generate_round_keys_U0_this_key_address0),
+    .t_ce0(aes_generate_round_keys_U0_this_key_ce0),
+    .t_we0(1'b0),
+    .t_d0(8'd0),
+    .t_q0(pynqrypt_key_t_q0),
+    .i_ce(1'b1),
+    .t_ce(1'b1),
+    .i_full_n(pynqrypt_key_i_full_n),
+    .i_write(Loop_1_proc_U0_ap_done),
+    .t_empty_n(pynqrypt_key_t_empty_n),
+    .t_read(aes_generate_round_keys_U0_ap_ready)
 );
 
 pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W #(
@@ -556,21 +577,17 @@ pynqrypt_encrypt_Loop_1_proc Loop_1_proc_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .ap_start(Loop_1_proc_U0_ap_start),
-    .start_full_n(start_for_Loop_3_proc_U0_full_n),
     .ap_done(Loop_1_proc_U0_ap_done),
     .ap_continue(Loop_1_proc_U0_ap_continue),
     .ap_idle(Loop_1_proc_U0_ap_idle),
     .ap_ready(Loop_1_proc_U0_ap_ready),
-    .pynqrypt_key_din(Loop_1_proc_U0_pynqrypt_key_din),
-    .pynqrypt_key_num_data_valid(pynqrypt_key_num_data_valid),
-    .pynqrypt_key_fifo_cap(pynqrypt_key_fifo_cap),
-    .pynqrypt_key_full_n(pynqrypt_key_full_n),
-    .pynqrypt_key_write(Loop_1_proc_U0_pynqrypt_key_write),
-    .start_out(Loop_1_proc_U0_start_out),
-    .start_write(Loop_1_proc_U0_start_write),
     .key_address0(Loop_1_proc_U0_key_address0),
     .key_ce0(Loop_1_proc_U0_key_ce0),
-    .key_q0(key_q0)
+    .key_q0(key_q0),
+    .pynqrypt_key_address0(Loop_1_proc_U0_pynqrypt_key_address0),
+    .pynqrypt_key_ce0(Loop_1_proc_U0_pynqrypt_key_ce0),
+    .pynqrypt_key_we0(Loop_1_proc_U0_pynqrypt_key_we0),
+    .pynqrypt_key_d0(Loop_1_proc_U0_pynqrypt_key_d0)
 );
 
 pynqrypt_encrypt_Loop_2_proc Loop_2_proc_U0(
@@ -590,28 +607,26 @@ pynqrypt_encrypt_Loop_2_proc Loop_2_proc_U0(
     .pynqrypt_nonce_d0(Loop_2_proc_U0_pynqrypt_nonce_d0)
 );
 
-pynqrypt_encrypt_Loop_3_proc Loop_3_proc_U0(
+pynqrypt_encrypt_aes_generate_round_keys aes_generate_round_keys_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(Loop_3_proc_U0_ap_start),
-    .ap_done(Loop_3_proc_U0_ap_done),
-    .ap_continue(Loop_3_proc_U0_ap_continue),
-    .ap_idle(Loop_3_proc_U0_ap_idle),
-    .ap_ready(Loop_3_proc_U0_ap_ready),
-    .pynqrypt_key_dout(pynqrypt_key_dout),
-    .pynqrypt_key_num_data_valid(pynqrypt_key_num_data_valid),
-    .pynqrypt_key_fifo_cap(pynqrypt_key_fifo_cap),
-    .pynqrypt_key_empty_n(pynqrypt_key_empty_n),
-    .pynqrypt_key_read(Loop_3_proc_U0_pynqrypt_key_read),
-    .pynqrypt_round_keys_address0(Loop_3_proc_U0_pynqrypt_round_keys_address0),
-    .pynqrypt_round_keys_ce0(Loop_3_proc_U0_pynqrypt_round_keys_ce0),
-    .pynqrypt_round_keys_we0(Loop_3_proc_U0_pynqrypt_round_keys_we0),
-    .pynqrypt_round_keys_d0(Loop_3_proc_U0_pynqrypt_round_keys_d0),
+    .ap_start(aes_generate_round_keys_U0_ap_start),
+    .ap_done(aes_generate_round_keys_U0_ap_done),
+    .ap_continue(aes_generate_round_keys_U0_ap_continue),
+    .ap_idle(aes_generate_round_keys_U0_ap_idle),
+    .ap_ready(aes_generate_round_keys_U0_ap_ready),
+    .this_key_address0(aes_generate_round_keys_U0_this_key_address0),
+    .this_key_ce0(aes_generate_round_keys_U0_this_key_ce0),
+    .this_key_q0(pynqrypt_key_t_q0),
+    .pynqrypt_round_keys_address0(aes_generate_round_keys_U0_pynqrypt_round_keys_address0),
+    .pynqrypt_round_keys_ce0(aes_generate_round_keys_U0_pynqrypt_round_keys_ce0),
+    .pynqrypt_round_keys_we0(aes_generate_round_keys_U0_pynqrypt_round_keys_we0),
+    .pynqrypt_round_keys_d0(aes_generate_round_keys_U0_pynqrypt_round_keys_d0),
     .pynqrypt_round_keys_q0(pynqrypt_round_keys_i_q0),
-    .pynqrypt_round_keys_address1(Loop_3_proc_U0_pynqrypt_round_keys_address1),
-    .pynqrypt_round_keys_ce1(Loop_3_proc_U0_pynqrypt_round_keys_ce1),
-    .pynqrypt_round_keys_we1(Loop_3_proc_U0_pynqrypt_round_keys_we1),
-    .pynqrypt_round_keys_d1(Loop_3_proc_U0_pynqrypt_round_keys_d1),
+    .pynqrypt_round_keys_address1(aes_generate_round_keys_U0_pynqrypt_round_keys_address1),
+    .pynqrypt_round_keys_ce1(aes_generate_round_keys_U0_pynqrypt_round_keys_ce1),
+    .pynqrypt_round_keys_we1(aes_generate_round_keys_U0_pynqrypt_round_keys_we1),
+    .pynqrypt_round_keys_d1(aes_generate_round_keys_U0_pynqrypt_round_keys_d1),
     .pynqrypt_round_keys_q1(pynqrypt_round_keys_i_q1)
 );
 
@@ -740,34 +755,6 @@ pynqrypt_encrypt_fifo_w64_d4_S ciphertext_c_U(
     .if_read(ctr_encrypt_U0_ciphertext_read)
 );
 
-pynqrypt_encrypt_fifo_w8_d16_S pynqrypt_key_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(Loop_1_proc_U0_pynqrypt_key_din),
-    .if_full_n(pynqrypt_key_full_n),
-    .if_write(Loop_1_proc_U0_pynqrypt_key_write),
-    .if_dout(pynqrypt_key_dout),
-    .if_num_data_valid(pynqrypt_key_num_data_valid),
-    .if_fifo_cap(pynqrypt_key_fifo_cap),
-    .if_empty_n(pynqrypt_key_empty_n),
-    .if_read(Loop_3_proc_U0_pynqrypt_key_read)
-);
-
-pynqrypt_encrypt_start_for_Loop_3_proc_U0 start_for_Loop_3_proc_U0_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(start_for_Loop_3_proc_U0_din),
-    .if_full_n(start_for_Loop_3_proc_U0_full_n),
-    .if_write(Loop_1_proc_U0_start_write),
-    .if_dout(start_for_Loop_3_proc_U0_dout),
-    .if_empty_n(start_for_Loop_3_proc_U0_empty_n),
-    .if_read(Loop_3_proc_U0_ap_ready)
-);
-
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         ap_sync_reg_Loop_1_proc_U0_ap_ready <= 1'b0;
@@ -816,7 +803,7 @@ always @ (posedge ap_clk) begin
     end
 end
 
-assign Loop_1_proc_U0_ap_continue = 1'b1;
+assign Loop_1_proc_U0_ap_continue = pynqrypt_key_i_full_n;
 
 assign Loop_1_proc_U0_ap_start = ((ap_sync_reg_Loop_1_proc_U0_ap_ready ^ 1'b1) & ap_start);
 
@@ -824,13 +811,13 @@ assign Loop_2_proc_U0_ap_continue = pynqrypt_nonce_i_full_n;
 
 assign Loop_2_proc_U0_ap_start = ((ap_sync_reg_Loop_2_proc_U0_ap_ready ^ 1'b1) & ap_start);
 
-assign Loop_3_proc_U0_ap_continue = pynqrypt_round_keys_i_full_n;
+assign aes_generate_round_keys_U0_ap_continue = pynqrypt_round_keys_i_full_n;
 
-assign Loop_3_proc_U0_ap_start = start_for_Loop_3_proc_U0_empty_n;
+assign aes_generate_round_keys_U0_ap_start = pynqrypt_key_t_empty_n;
 
 assign ap_done = ctr_encrypt_U0_ap_done;
 
-assign ap_idle = ((pynqrypt_round_keys_t_empty_n ^ 1'b1) & (pynqrypt_nonce_t_empty_n ^ 1'b1) & entry_proc_U0_ap_idle & ctr_encrypt_U0_ap_idle & Loop_3_proc_U0_ap_idle & Loop_2_proc_U0_ap_idle & Loop_1_proc_U0_ap_idle);
+assign ap_idle = ((pynqrypt_round_keys_t_empty_n ^ 1'b1) & (pynqrypt_nonce_t_empty_n ^ 1'b1) & (pynqrypt_key_t_empty_n ^ 1'b1) & entry_proc_U0_ap_idle & ctr_encrypt_U0_ap_idle & aes_generate_round_keys_U0_ap_idle & Loop_2_proc_U0_ap_idle & Loop_1_proc_U0_ap_idle);
 
 assign ap_ready = ap_sync_ready;
 
@@ -869,7 +856,5 @@ assign gmem_RLAST = 1'b0;
 assign gmem_RRESP = 2'd0;
 
 assign gmem_RUSER = 1'd0;
-
-assign start_for_Loop_3_proc_U0_din = 1'b1;
 
 endmodule //pynqrypt_encrypt

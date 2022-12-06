@@ -5,6 +5,8 @@
 
 using namespace crypto;
 
+#define min(a, b) ((a > b) ? (b) : (a))
+
 Pynqrypt::Pynqrypt(aes_atom key[16], aes_atom nonce[12])
 {
     memcpy(this->key, key, 16);
@@ -18,8 +20,8 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_atom *plaintext, aes_ato
     aes_atom block_nonce[16];
     aes_atom block[16];
 
-    for (size_t i = 0; i < plaintext_length; i += 16) {
-        size_t block_size = std::min(plaintext_length - i, (size_t)16);
+    loop_ctr_encrypt: for (size_t i = 0; i < plaintext_length; i += 16) {
+        size_t block_size = min(plaintext_length - i, (size_t)16);
         memcpy(block, &plaintext[i], block_size);
         ctr_compute_nonce(block_nonce, offset + i / 16);
         aes_encrypt_block(block_nonce);
@@ -40,7 +42,7 @@ void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
 
 void Pynqrypt::ctr_xor_block(aes_atom *block, size_t block_size, aes_atom block_nonce[16])
 {
-    for (size_t i = 0; i < block_size; i++)
+    loop_ctr_xor_block: for (size_t i = 0; i < block_size; i++)
         block[i] ^= block_nonce[i];
 }
 
@@ -49,7 +51,7 @@ void Pynqrypt::aes_encrypt_block(aes_atom state[BLOCK_SIZE])
 {
     aes_add_round_key(state, 0);
 
-    for (int i = 1; i < NUM_ROUNDS; i++) {
+    loop_aes_encrypt_block: for (int i = 1; i < NUM_ROUNDS; i++) {
         aes_sub_bytes(state);
         aes_shift_rows(state);
         aes_mix_columns(state);
@@ -185,7 +187,7 @@ void Pynqrypt::aes_inv_mix_columns(aes_atom state[BLOCK_SIZE])
 // common functions
 void Pynqrypt::aes_generate_round_keys() 
 {
-    https://en.wikipedia.org/wiki/AES_key_schedule
+    // https://en.wikipedia.org/wiki/AES_key_schedule
     aes_word temp;
 
     auto _round_key = static_cast<aes_word*>(static_cast<void*>(&round_keys));
@@ -194,19 +196,23 @@ void Pynqrypt::aes_generate_round_keys()
     memcpy(_round_key, _key, 4 * sizeof(aes_word));
 
     // All other round keys are found from the previous round keys.
-    int i = 4;
-    while (i < 44) {
+    loop_generate_round_keys: for (int i = 4; i < 44; i += 4) {
         temp = _round_key[i - 1];
 
-        if (i % 4 == 0) {
-            aes_rotate_word(temp);
-            aes_sub_word(temp);
-            aes_xor_round_constant(temp, (i / 4) - 1);
-        }
+		aes_rotate_word(temp);
+		aes_sub_word(temp);
+		aes_xor_round_constant(temp, (i / 4) - 1);
 
-        aes_xor_words(temp, _round_key[i - 4], _round_key[i]);
+        aes_xor_words(temp, _round_key[i - 4], _round_key[i + 0]);
 
-        i++;
+        temp = _round_key[i + 0];
+        aes_xor_words(temp, _round_key[i - 3], _round_key[i + 1]);
+
+        temp = _round_key[i + 1];
+		aes_xor_words(temp, _round_key[i - 2], _round_key[i + 2]);
+
+		temp = _round_key[i + 2];
+		aes_xor_words(temp, _round_key[i - 1], _round_key[i + 3]);
     }
 }
 

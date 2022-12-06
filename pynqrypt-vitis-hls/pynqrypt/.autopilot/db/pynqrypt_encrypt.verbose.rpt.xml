@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pynqrypt_encrypt'" level="0">
-<item name = "Date">Tue Dec  6 01:26:18 2022
+<item name = "Date">Tue Dec  6 11:20:33 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -33,7 +33,7 @@
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="Loop_1_proc_U0">Loop_1_proc, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
 <column name="Loop_2_proc_U0">Loop_2_proc, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="Loop_3_proc_U0">Loop_3_proc, 343, 343, 3.430 us, 3.430 us, 343, 343, no</column>
+<column name="aes_generate_round_keys_U0">aes_generate_round_keys, 183, 183, 1.830 us, 1.830 us, 183, 183, no</column>
 <column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="ctr_encrypt_U0">ctr_encrypt, ?, ?, ?, ?, ?, ?, no</column>
 </table>
@@ -53,24 +53,24 @@
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 20, -</column>
-<column name="FIFO">-, -, 396, 272, -</column>
-<column name="Instance">2, -, 2889, 7028, 0</column>
-<column name="Memory">2, -, 8, 3, 0</column>
+<column name="FIFO">-, -, 297, 204, -</column>
+<column name="Instance">2, -, 2975, 7370, 0</column>
+<column name="Memory">2, -, 16, 7, 0</column>
 <column name="Multiplexer">-, -, -, 36, -</column>
 <column name="Register">-, -, 4, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, 0, 3, 13, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 0, 3, 14, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="Loop_1_proc_U0">Loop_1_proc, 0, 0, 9, 83, 0</column>
+<column name="Loop_1_proc_U0">Loop_1_proc, 0, 0, 13, 65, 0</column>
 <column name="Loop_2_proc_U0">Loop_2_proc, 0, 0, 11, 64, 0</column>
-<column name="Loop_3_proc_U0">Loop_3_proc, 1, 0, 183, 656, 0</column>
+<column name="aes_generate_round_keys_U0">aes_generate_round_keys, 1, 0, 287, 1106, 0</column>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 406, 568, 0</column>
-<column name="ctr_encrypt_U0">ctr_encrypt, 1, 0, 1524, 4181, 0</column>
+<column name="ctr_encrypt_U0">ctr_encrypt, 1, 0, 1502, 4091, 0</column>
 <column name="entry_proc_U0">entry_proc, 0, 0, 2, 38, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 754, 1438, 0</column>
 </table>
@@ -81,6 +81,7 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="pynqrypt_key_U">pynqrypt_key_RAM_AUTO_1R1W, 0, 8, 4, 0, 16, 8, 1, 128</column>
 <column name="pynqrypt_nonce_U">pynqrypt_nonce_RAM_AUTO_1R1W, 0, 8, 3, 0, 12, 8, 1, 96</column>
 <column name="pynqrypt_round_keys_U">pynqrypt_round_keys_RAM_AUTO_1R1W, 2, 0, 0, 0, 176, 8, 1, 1408</column>
 </table>
@@ -90,7 +91,6 @@
 <column name="ciphertext_c_U">0, 99, 0, -, 4, 64, 256</column>
 <column name="plaintext_c_U">0, 99, 0, -, 4, 64, 256</column>
 <column name="plaintext_length_c_U">0, 99, 0, -, 4, 64, 256</column>
-<column name="pynqrypt_key_U">0, 99, 0, -, 16, 8, 128</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">

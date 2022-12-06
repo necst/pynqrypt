@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Loop_2_proc'" level="0">
-<item name = "Date">Tue Dec  6 01:26:16 2022
+<item name = "Date">Tue Dec  6 11:20:31 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_68_fu_85_p2">+, 0, 0, 13, 4, 1</column>
+<column name="empty_50_fu_85_p2">+, 0, 0, 13, 4, 1</column>
 <column name="ap_condition_91">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond1011_fu_79_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="exitcond2_fu_79_p2">icmp, 0, 0, 9, 4, 4</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>

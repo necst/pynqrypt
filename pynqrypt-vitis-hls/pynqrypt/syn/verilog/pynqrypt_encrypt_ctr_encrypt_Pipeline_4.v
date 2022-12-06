@@ -60,11 +60,11 @@ module pynqrypt_encrypt_ctr_encrypt_Pipeline_4 (
         m_axi_gmem_BRESP,
         m_axi_gmem_BID,
         m_axi_gmem_BUSER,
-        add_ln22_1,
+        add_ln24_1,
         block_r_address0,
         block_r_ce0,
         block_r_q0,
-        zext_ln22
+        select_ln23
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -121,11 +121,11 @@ output   m_axi_gmem_BREADY;
 input  [1:0] m_axi_gmem_BRESP;
 input  [0:0] m_axi_gmem_BID;
 input  [0:0] m_axi_gmem_BUSER;
-input  [63:0] add_ln22_1;
+input  [63:0] add_ln24_1;
 output  [3:0] block_r_address0;
 output   block_r_ce0;
 input  [7:0] block_r_q0;
-input  [4:0] zext_ln22;
+input  [63:0] select_ln23;
 
 reg ap_idle;
 reg m_axi_gmem_WVALID;
@@ -143,21 +143,19 @@ wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_state3_pp0_stage0_iter2;
 wire    ap_block_state4_pp0_stage0_iter3;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond17_fu_109_p2;
+wire   [0:0] exitcond_fu_103_p2;
 reg    ap_condition_exit_pp0_iter1_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg    gmem_blk_n_W;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
-wire   [63:0] zext_ln22_cast_fu_85_p1;
-reg   [63:0] zext_ln22_cast_reg_130;
-wire   [63:0] empty_fu_103_p2;
-reg   [63:0] empty_reg_145;
-reg   [0:0] exitcond17_reg_150;
-reg   [7:0] block_load_reg_154;
+wire   [63:0] empty_fu_97_p2;
+reg   [63:0] empty_reg_139;
+reg   [0:0] exitcond_reg_144;
+reg   [7:0] block_load_reg_148;
 wire    ap_block_pp0_stage0_01001;
-reg   [63:0] loop_index_fu_48;
+reg   [63:0] loop_index_fu_46;
 reg   [63:0] ap_sig_allocacmp_loop_index_load;
 wire    ap_loop_init;
 reg    ap_done_reg;
@@ -257,9 +255,9 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b0 == ap_block_pp0_stage0_11001)) begin
         if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-            loop_index_fu_48 <= 64'd0;
-        end else if (((ap_enable_reg_pp0_iter2 == 1'b1) & (exitcond17_reg_150 == 1'd0))) begin
-            loop_index_fu_48 <= empty_reg_145;
+            loop_index_fu_46 <= 64'd0;
+        end else if (((ap_enable_reg_pp0_iter2 == 1'b1) & (exitcond_reg_144 == 1'd0))) begin
+            loop_index_fu_46 <= empty_reg_139;
         end
     end
 end
@@ -267,20 +265,19 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready;
-        empty_reg_145 <= empty_fu_103_p2;
-        exitcond17_reg_150 <= exitcond17_fu_109_p2;
-        zext_ln22_cast_reg_130[4 : 0] <= zext_ln22_cast_fu_85_p1[4 : 0];
+        empty_reg_139 <= empty_fu_97_p2;
+        exitcond_reg_144 <= exitcond_fu_103_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b0 == ap_block_pp0_stage0_11001)) begin
-        block_load_reg_154 <= block_r_q0;
+        block_load_reg_148 <= block_r_q0;
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond17_fu_109_p2 == 1'd1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond_fu_103_p2 == 1'd1))) begin
         ap_condition_exit_pp0_iter1_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter1_stage0 = 1'b0;
@@ -320,10 +317,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter2 == 1'b1) & (exitcond17_reg_150 == 1'd0))) begin
-        ap_sig_allocacmp_loop_index_load = empty_reg_145;
+    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter2 == 1'b1) & (exitcond_reg_144 == 1'd0))) begin
+        ap_sig_allocacmp_loop_index_load = empty_reg_139;
     end else begin
-        ap_sig_allocacmp_loop_index_load = loop_index_fu_48;
+        ap_sig_allocacmp_loop_index_load = loop_index_fu_46;
     end
 end
 
@@ -392,9 +389,9 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter1_stage0;
 
 assign block_r_address0 = ap_sig_allocacmp_loop_index_load;
 
-assign empty_fu_103_p2 = (ap_sig_allocacmp_loop_index_load + 64'd1);
+assign empty_fu_97_p2 = (ap_sig_allocacmp_loop_index_load + 64'd1);
 
-assign exitcond17_fu_109_p2 = ((empty_fu_103_p2 == zext_ln22_cast_reg_130) ? 1'b1 : 1'b0);
+assign exitcond_fu_103_p2 = ((empty_fu_97_p2 == select_ln23) ? 1'b1 : 1'b0);
 
 assign m_axi_gmem_ARADDR = 64'd0;
 
@@ -448,7 +445,7 @@ assign m_axi_gmem_BREADY = 1'b0;
 
 assign m_axi_gmem_RREADY = 1'b0;
 
-assign m_axi_gmem_WDATA = block_load_reg_154;
+assign m_axi_gmem_WDATA = block_load_reg_148;
 
 assign m_axi_gmem_WID = 1'd0;
 
@@ -457,11 +454,5 @@ assign m_axi_gmem_WLAST = 1'b0;
 assign m_axi_gmem_WSTRB = 1'd1;
 
 assign m_axi_gmem_WUSER = 1'd0;
-
-assign zext_ln22_cast_fu_85_p1 = zext_ln22;
-
-always @ (posedge ap_clk) begin
-    zext_ln22_cast_reg_130[63:5] <= 59'b00000000000000000000000000000000000000000000000000000000000;
-end
 
 endmodule //pynqrypt_encrypt_ctr_encrypt_Pipeline_4

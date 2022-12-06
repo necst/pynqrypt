@@ -1,0 +1,235 @@
+
+
+================================================================
+== Vitis HLS Report for 'aes_generate_round_keys_Pipeline_loop_generate_round_keys'
+================================================================
+* Date:           Tue Dec  6 11:20:31 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        pynqrypt-vitis-hls
+* Solution:       pynqrypt (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020i-clg400-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.508 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      162|      162|  1.620 us|  1.620 us|  162|  162|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |          Loop Name         |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_generate_round_keys  |      160|      160|        16|         16|          1|    10|       yes|
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    533|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        1|    -|       8|      2|    -|
+|Multiplexer      |        -|    -|       -|    400|    -|
+|Register         |        -|    -|     259|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        1|    0|     267|    935|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory      |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |aes_sbox3_U        |aes_generate_round_keys_Pipeline_loop_generate_round_keys_aes_sbox3_ROM_AUTO_1R   |        1|  0|   0|    0|   256|    8|     1|         2048|
+    |crypto_aes_rcon_U  |aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMbkb  |        0|  8|   2|    0|    10|    8|     1|           80|
+    +-------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total              |                                                                                  |        1|  8|   2|    0|   266|   16|     2|         2128|
+    +-------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln199_fu_889_p2       |         +|   0|  0|  14|           6|           3|
+    |add_ln200_1_fu_465_p2     |         +|   0|  0|  15|           8|           3|
+    |add_ln200_2_fu_497_p2     |         +|   0|  0|  15|           8|           3|
+    |add_ln200_3_fu_507_p2     |         +|   0|  0|  15|           8|           2|
+    |add_ln200_fu_454_p2       |         +|   0|  0|  15|           8|           4|
+    |add_ln204_fu_486_p2       |         +|   0|  0|  13|           4|           2|
+    |add_ln206_1_fu_537_p2     |         +|   0|  0|  15|           8|           5|
+    |add_ln206_2_fu_551_p2     |         +|   0|  0|  15|           8|           5|
+    |add_ln206_3_fu_561_p2     |         +|   0|  0|  15|           8|           5|
+    |add_ln206_fu_527_p2       |         +|   0|  0|  15|           8|           6|
+    |add_ln209_1_fu_607_p2     |         +|   0|  0|  15|           8|           5|
+    |add_ln209_2_fu_623_p2     |         +|   0|  0|  15|           8|           5|
+    |add_ln209_3_fu_633_p2     |         +|   0|  0|  15|           8|           5|
+    |add_ln209_fu_597_p2       |         +|   0|  0|  15|           8|           5|
+    |add_ln212_1_fu_653_p2     |         +|   0|  0|  15|           8|           4|
+    |add_ln212_2_fu_663_p2     |         +|   0|  0|  15|           8|           4|
+    |add_ln212_3_fu_673_p2     |         +|   0|  0|  15|           8|           4|
+    |add_ln212_fu_643_p2       |         +|   0|  0|  15|           8|           5|
+    |icmp_ln199_fu_440_p2      |      icmp|   0|  0|  10|           6|           6|
+    |atoms_result_1_fu_735_p2  |        or|   0|  0|   8|           8|           3|
+    |atoms_result_2_fu_793_p2  |        or|   0|  0|   8|           8|           4|
+    |atoms_result_3_fu_849_p2  |        or|   0|  0|   8|           8|           4|
+    |or_ln272_10_fu_869_p2     |        or|   0|  0|   8|           8|           4|
+    |or_ln272_11_fu_879_p2     |        or|   0|  0|   8|           8|           4|
+    |or_ln272_1_fu_707_p2      |        or|   0|  0|   8|           8|           2|
+    |or_ln272_2_fu_717_p2      |        or|   0|  0|   8|           8|           2|
+    |or_ln272_3_fu_745_p2      |        or|   0|  0|   8|           8|           3|
+    |or_ln272_4_fu_763_p2      |        or|   0|  0|   8|           8|           3|
+    |or_ln272_5_fu_773_p2      |        or|   0|  0|   8|           8|           3|
+    |or_ln272_6_fu_803_p2      |        or|   0|  0|   8|           8|           4|
+    |or_ln272_7_fu_821_p2      |        or|   0|  0|   8|           8|           4|
+    |or_ln272_8_fu_831_p2      |        or|   0|  0|   8|           8|           4|
+    |or_ln272_9_fu_859_p2      |        or|   0|  0|   8|           8|           4|
+    |or_ln272_fu_687_p2        |        or|   0|  0|   8|           8|           1|
+    |xor_ln262_fu_571_p2       |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_10_fu_783_p2    |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_11_fu_788_p2    |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_12_fu_813_p2    |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_13_fu_817_p2    |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_14_fu_841_p2    |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_15_fu_845_p2    |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_1_fu_581_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_2_fu_591_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_3_fu_617_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_4_fu_697_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_5_fu_702_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_6_fu_727_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_7_fu_731_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_8_fu_755_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_9_fu_759_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln272_fu_575_p2       |       xor|   0|  0|   8|           8|           8|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0| 533|         400|         266|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |aes_sbox3_address0            |  25|          5|    8|         40|
+    |ap_NS_fsm                     |  81|         17|    1|         17|
+    |ap_done_int                   |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_6          |   9|          2|    6|         12|
+    |i_fu_104                      |   9|          2|    6|         12|
+    |pynqrypt_round_keys_address0  |  81|         17|    8|        136|
+    |pynqrypt_round_keys_address1  |  81|         17|    8|        136|
+    |pynqrypt_round_keys_d0        |  48|          9|    8|         72|
+    |pynqrypt_round_keys_d1        |  48|          9|    8|         72|
+    |reg_423                       |   9|          2|    8|         16|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         | 400|         82|   62|        515|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |aes_sbox3_load_reg_1005               |   8|   0|    8|          0|
+    |ap_CS_fsm                             |  16|   0|   16|          0|
+    |ap_done_reg                           |   1|   0|    1|          0|
+    |atoms_result_reg_914                  |   6|   0|    8|          2|
+    |crypto_aes_rcon_load_reg_989          |   8|   0|    8|          0|
+    |i_6_reg_906                           |   6|   0|    6|          0|
+    |i_fu_104                              |   6|   0|    6|          0|
+    |pynqrypt_round_keys_load_10_reg_1089  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_11_reg_1094  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_12_reg_1109  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_13_reg_1114  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_1_reg_969    |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_2_reg_994    |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_3_reg_999    |   8|   0|    8|          0|
+    |reg_423                               |   8|   0|    8|          0|
+    |reg_428                               |   8|   0|    8|          0|
+    |temp_reg_963                          |   8|   0|    8|          0|
+    |xor_ln272_10_reg_1165                 |   8|   0|    8|          0|
+    |xor_ln272_11_reg_1171                 |   8|   0|    8|          0|
+    |xor_ln272_12_reg_1177                 |   8|   0|    8|          0|
+    |xor_ln272_13_reg_1182                 |   8|   0|    8|          0|
+    |xor_ln272_14_reg_1187                 |   8|   0|    8|          0|
+    |xor_ln272_15_reg_1192                 |   8|   0|    8|          0|
+    |xor_ln272_1_reg_1046                  |   8|   0|    8|          0|
+    |xor_ln272_2_reg_1057                  |   8|   0|    8|          0|
+    |xor_ln272_3_reg_1073                  |   8|   0|    8|          0|
+    |xor_ln272_4_reg_1129                  |   8|   0|    8|          0|
+    |xor_ln272_5_reg_1135                  |   8|   0|    8|          0|
+    |xor_ln272_6_reg_1141                  |   8|   0|    8|          0|
+    |xor_ln272_7_reg_1147                  |   8|   0|    8|          0|
+    |xor_ln272_8_reg_1153                  |   8|   0|    8|          0|
+    |xor_ln272_9_reg_1159                  |   8|   0|    8|          0|
+    |xor_ln272_reg_1040                    |   8|   0|    8|          0|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 259|   0|  261|          2|
+    +--------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |                       Source Object                       |    C Type    |
++------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  aes_generate_round_keys_Pipeline_loop_generate_round_keys|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  aes_generate_round_keys_Pipeline_loop_generate_round_keys|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  aes_generate_round_keys_Pipeline_loop_generate_round_keys|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  aes_generate_round_keys_Pipeline_loop_generate_round_keys|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  aes_generate_round_keys_Pipeline_loop_generate_round_keys|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  aes_generate_round_keys_Pipeline_loop_generate_round_keys|  return value|
+|pynqrypt_round_keys_address0  |  out|    8|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_ce0       |  out|    1|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_we0       |  out|    1|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_d0        |  out|    8|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_q0        |   in|    8|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_address1  |  out|    8|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_ce1       |  out|    1|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_we1       |  out|    1|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_d1        |  out|    8|   ap_memory|                                        pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_q1        |   in|    8|   ap_memory|                                        pynqrypt_round_keys|         array|
++------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+

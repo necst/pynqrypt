@@ -55,7 +55,7 @@ reg    ap_done_reg;
 reg    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond1011_fu_79_p2;
+wire   [0:0] exitcond2_fu_79_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -64,7 +64,7 @@ reg   [63:0] loop_index_i_cast_reg_111;
 reg    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
 reg   [3:0] loop_index_i_fu_40;
-wire   [3:0] empty_68_fu_85_p2;
+wire   [3:0] empty_50_fu_85_p2;
 wire    ap_loop_init;
 reg   [3:0] ap_sig_allocacmp_loop_index_i_load;
 wire    ap_continue_int;
@@ -132,8 +132,8 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_condition_91)) begin
-        if ((exitcond1011_fu_79_p2 == 1'd0)) begin
-            loop_index_i_fu_40 <= empty_68_fu_85_p2;
+        if ((exitcond2_fu_79_p2 == 1'd0)) begin
+            loop_index_i_fu_40 <= empty_50_fu_85_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             loop_index_i_fu_40 <= 4'd0;
         end
@@ -141,13 +141,13 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((exitcond1011_fu_79_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond2_fu_79_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         loop_index_i_cast_reg_111[3 : 0] <= loop_index_i_cast_fu_91_p1[3 : 0];
     end
 end
 
 always @ (*) begin
-    if (((exitcond1011_fu_79_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond2_fu_79_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -257,9 +257,9 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_68_fu_85_p2 = (ap_sig_allocacmp_loop_index_i_load + 4'd1);
+assign empty_50_fu_85_p2 = (ap_sig_allocacmp_loop_index_i_load + 4'd1);
 
-assign exitcond1011_fu_79_p2 = ((ap_sig_allocacmp_loop_index_i_load == 4'd12) ? 1'b1 : 1'b0);
+assign exitcond2_fu_79_p2 = ((ap_sig_allocacmp_loop_index_i_load == 4'd12) ? 1'b1 : 1'b0);
 
 assign loop_index_i_cast_fu_91_p1 = ap_sig_allocacmp_loop_index_i_load;
 

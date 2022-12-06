@@ -11,21 +11,17 @@ module pynqrypt_encrypt_Loop_1_proc (
         ap_clk,
         ap_rst,
         ap_start,
-        start_full_n,
         ap_done,
         ap_continue,
         ap_idle,
         ap_ready,
-        pynqrypt_key_din,
-        pynqrypt_key_num_data_valid,
-        pynqrypt_key_fifo_cap,
-        pynqrypt_key_full_n,
-        pynqrypt_key_write,
-        start_out,
-        start_write,
         key_address0,
         key_ce0,
-        key_q0
+        key_q0,
+        pynqrypt_key_address0,
+        pynqrypt_key_ce0,
+        pynqrypt_key_we0,
+        pynqrypt_key_d0
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -33,63 +29,54 @@ parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
 input   ap_clk;
 input   ap_rst;
 input   ap_start;
-input   start_full_n;
 output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output  [7:0] pynqrypt_key_din;
-input  [4:0] pynqrypt_key_num_data_valid;
-input  [4:0] pynqrypt_key_fifo_cap;
-input   pynqrypt_key_full_n;
-output   pynqrypt_key_write;
-output   start_out;
-output   start_write;
 output  [3:0] key_address0;
 output   key_ce0;
 input  [7:0] key_q0;
+output  [3:0] pynqrypt_key_address0;
+output   pynqrypt_key_ce0;
+output   pynqrypt_key_we0;
+output  [7:0] pynqrypt_key_d0;
 
 reg ap_idle;
-reg pynqrypt_key_write;
-reg start_write;
 reg key_ce0;
+reg pynqrypt_key_ce0;
+reg pynqrypt_key_we0;
 
-reg    real_start;
-reg    start_once_reg;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
 wire    ap_enable_reg_pp0_iter0;
 reg    ap_enable_reg_pp0_iter1;
 reg    ap_idle_pp0;
-wire    internal_ap_ready;
 reg    ap_done_reg;
 reg    ap_block_state1_pp0_stage0_iter0;
-reg    ap_block_state2_pp0_stage0_iter1;
+wire    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond1112_i_i_fu_81_p2;
+wire   [0:0] exitcond13_i_i_fu_79_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg    pynqrypt_key_blk_n;
-wire    ap_block_pp0_stage0;
+wire   [63:0] loop_index5_i_i_i_cast_fu_91_p1;
+reg   [63:0] loop_index5_i_i_i_cast_reg_111;
 reg    ap_block_pp0_stage0_11001;
-wire   [63:0] loop_index5_i_i_i_cast_fu_93_p1;
-reg   [4:0] loop_index5_i_i_i_fu_48;
-wire   [4:0] empty_69_fu_87_p2;
+wire    ap_block_pp0_stage0;
+reg   [4:0] loop_index5_i_i_i_fu_40;
+wire   [4:0] empty_51_fu_85_p2;
 wire    ap_loop_init;
 reg   [4:0] ap_sig_allocacmp_loop_index5_i_i_i_load;
-reg    ap_block_pp0_stage0_01001;
 wire    ap_continue_int;
 reg    ap_done_int;
 reg   [0:0] ap_NS_fsm;
 wire    ap_enable_pp0;
 wire    ap_start_int;
-reg    ap_condition_106;
+reg    ap_condition_91;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 start_once_reg = 1'b0;
 #0 ap_CS_fsm = 1'd1;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
 #0 ap_done_reg = 1'b0;
@@ -98,8 +85,8 @@ end
 pynqrypt_encrypt_flow_control_loop_pipe flow_control_loop_pipe_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(real_start),
-    .ap_ready(internal_ap_ready),
+    .ap_start(ap_start),
+    .ap_ready(ap_ready),
     .ap_done(ap_done),
     .ap_start_int(ap_start_int),
     .ap_loop_init(ap_loop_init),
@@ -144,29 +131,23 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        start_once_reg <= 1'b0;
-    end else begin
-        if (((real_start == 1'b1) & (internal_ap_ready == 1'b0))) begin
-            start_once_reg <= 1'b1;
-        end else if ((internal_ap_ready == 1'b1)) begin
-            start_once_reg <= 1'b0;
+    if ((1'b1 == ap_condition_91)) begin
+        if ((exitcond13_i_i_fu_79_p2 == 1'd0)) begin
+            loop_index5_i_i_i_fu_40 <= empty_51_fu_85_p2;
+        end else if ((ap_loop_init == 1'b1)) begin
+            loop_index5_i_i_i_fu_40 <= 5'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_106)) begin
-        if ((exitcond1112_i_i_fu_81_p2 == 1'd0)) begin
-            loop_index5_i_i_i_fu_48 <= empty_69_fu_87_p2;
-        end else if ((ap_loop_init == 1'b1)) begin
-            loop_index5_i_i_i_fu_48 <= 5'd0;
-        end
+    if (((exitcond13_i_i_fu_79_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        loop_index5_i_i_i_cast_reg_111[4 : 0] <= loop_index5_i_i_i_cast_fu_91_p1[4 : 0];
     end
 end
 
 always @ (*) begin
-    if (((exitcond1112_i_i_fu_81_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond13_i_i_fu_79_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -206,10 +187,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
+    if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_sig_allocacmp_loop_index5_i_i_i_load = 5'd0;
     end else begin
-        ap_sig_allocacmp_loop_index5_i_i_i_load = loop_index5_i_i_i_fu_48;
+        ap_sig_allocacmp_loop_index5_i_i_i_load = loop_index5_i_i_i_fu_40;
     end
 end
 
@@ -222,34 +203,18 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        pynqrypt_key_blk_n = pynqrypt_key_full_n;
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        pynqrypt_key_ce0 = 1'b1;
     end else begin
-        pynqrypt_key_blk_n = 1'b1;
+        pynqrypt_key_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        pynqrypt_key_write = 1'b1;
+        pynqrypt_key_we0 = 1'b1;
     end else begin
-        pynqrypt_key_write = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((start_full_n == 1'b0) & (start_once_reg == 1'b0))) begin
-        real_start = 1'b0;
-    end else begin
-        real_start = ap_start;
-    end
-end
-
-always @ (*) begin
-    if (((real_start == 1'b1) & (start_once_reg == 1'b0))) begin
-        start_write = 1'b1;
-    end else begin
-        start_write = 1'b0;
+        pynqrypt_key_we0 = 1'b0;
     end
 end
 
@@ -269,27 +234,21 @@ assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((ap_done_reg == 1'b1) | ((pynqrypt_key_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_11001 = ((ap_done_reg == 1'b1) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((ap_done_reg == 1'b1) | ((pynqrypt_key_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
-end
-
-always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((ap_done_reg == 1'b1) | ((pynqrypt_key_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_subdone = ((ap_done_reg == 1'b1) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
     ap_block_state1_pp0_stage0_iter0 = (ap_done_reg == 1'b1);
 end
 
-always @ (*) begin
-    ap_block_state2_pp0_stage0_iter1 = (pynqrypt_key_full_n == 1'b0);
-end
+assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_condition_106 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+    ap_condition_91 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
@@ -298,18 +257,20 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign ap_ready = internal_ap_ready;
+assign empty_51_fu_85_p2 = (ap_sig_allocacmp_loop_index5_i_i_i_load + 5'd1);
 
-assign empty_69_fu_87_p2 = (ap_sig_allocacmp_loop_index5_i_i_i_load + 5'd1);
+assign exitcond13_i_i_fu_79_p2 = ((ap_sig_allocacmp_loop_index5_i_i_i_load == 5'd16) ? 1'b1 : 1'b0);
 
-assign exitcond1112_i_i_fu_81_p2 = ((ap_sig_allocacmp_loop_index5_i_i_i_load == 5'd16) ? 1'b1 : 1'b0);
+assign key_address0 = loop_index5_i_i_i_cast_fu_91_p1;
 
-assign key_address0 = loop_index5_i_i_i_cast_fu_93_p1;
+assign loop_index5_i_i_i_cast_fu_91_p1 = ap_sig_allocacmp_loop_index5_i_i_i_load;
 
-assign loop_index5_i_i_i_cast_fu_93_p1 = ap_sig_allocacmp_loop_index5_i_i_i_load;
+assign pynqrypt_key_address0 = loop_index5_i_i_i_cast_reg_111;
 
-assign pynqrypt_key_din = key_q0;
+assign pynqrypt_key_d0 = key_q0;
 
-assign start_out = real_start;
+always @ (posedge ap_clk) begin
+    loop_index5_i_i_i_cast_reg_111[63:5] <= 59'b00000000000000000000000000000000000000000000000000000000000;
+end
 
 endmodule //pynqrypt_encrypt_Loop_1_proc

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'ctr_encrypt_Pipeline_1'" level="0">
-<item name = "Date">Tue Dec  6 01:26:17 2022
+<item name = "Date">Tue Dec  6 11:20:31 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -53,7 +53,7 @@
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 54, -</column>
-<column name="Register">-, -, 211, -, -</column>
+<column name="Register">-, -, 206, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_fu_98_p2">+, 0, 0, 71, 64, 1</column>
+<column name="empty_fu_92_p2">+, 0, 0, 71, 64, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond_fu_104_p2">icmp, 0, 0, 29, 64, 64</column>
+<column name="exitcond9_fu_98_p2">icmp, 0, 0, 29, 64, 64</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -91,7 +91,7 @@
 <column name="ap_loop_exit_ready_pp0_iter2_reg">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_loop_index3_load">9, 2, 64, 128</column>
 <column name="gmem_blk_n_R">9, 2, 1, 2</column>
-<column name="loop_index3_fu_46">9, 2, 64, 128</column>
+<column name="loop_index3_fu_44">9, 2, 64, 128</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -101,12 +101,11 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
-<column name="empty_reg_140">64, 0, 64, 0</column>
-<column name="exitcond_reg_145">1, 0, 1, 0</column>
-<column name="gmem_addr_read_reg_135">8, 0, 8, 0</column>
-<column name="loop_index3_fu_46">64, 0, 64, 0</column>
-<column name="loop_index3_load_reg_130">64, 0, 64, 0</column>
-<column name="zext_ln22_cast_reg_125">5, 0, 64, 59</column>
+<column name="empty_reg_134">64, 0, 64, 0</column>
+<column name="exitcond9_reg_139">1, 0, 1, 0</column>
+<column name="gmem_addr_read_reg_129">8, 0, 8, 0</column>
+<column name="loop_index3_fu_44">64, 0, 64, 0</column>
+<column name="loop_index3_load_reg_124">64, 0, 64, 0</column>
 </table>
 </item>
 </section>
@@ -168,12 +167,12 @@
 <column name="m_axi_gmem_BRESP">in, 2, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
-<column name="add_ln22_2">in, 64, ap_none, add_ln22_2, scalar</column>
+<column name="add_ln24_2">in, 64, ap_none, add_ln24_2, scalar</column>
 <column name="block_r_address0">out, 4, ap_memory, block_r, array</column>
 <column name="block_r_ce0">out, 1, ap_memory, block_r, array</column>
 <column name="block_r_we0">out, 1, ap_memory, block_r, array</column>
 <column name="block_r_d0">out, 8, ap_memory, block_r, array</column>
-<column name="zext_ln22">in, 5, ap_none, zext_ln22, scalar</column>
+<column name="select_ln23">in, 64, ap_none, select_ln23, scalar</column>
 </table>
 </item>
 </section>

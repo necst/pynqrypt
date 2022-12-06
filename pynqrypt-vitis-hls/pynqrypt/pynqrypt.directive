@@ -5,6 +5,16 @@
                 <option name="name" value="pynqrypt_encrypt"/>
             </pragma>
         </directive>
+        <directive functionName="pynqrypt_encrypt" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="pynqrypt_encrypt"/>
+            </pragma>
+        </directive>
+        <directive functionName="pynqrypt_encrypt" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="pynqrypt_encrypt"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Loop_2_proc'
 ================================================================
-* Date:           Tue Dec  6 01:26:13 2022
+* Date:           Tue Dec  6 11:20:27 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -87,20 +87,20 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 3.32>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%loop_index_i = alloca i32 1"   --->   Operation 5 'alloca' 'loop_index_i' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %nonce, i64 666, i64 207, i64 1"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %nonce, void @empty_3, i32 0, i32 0, void @empty_2, i32 1, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %nonce, void @empty_12, i32 0, i32 0, void @empty_2, i32 1, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 0, i4 %loop_index_i"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.i"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%loop_index_i_load = load i4 %loop_index_i"   --->   Operation 10 'load' 'loop_index_i_load' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 11 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (1.30ns)   --->   "%exitcond1011 = icmp_eq  i4 %loop_index_i_load, i4 12"   --->   Operation 12 'icmp' 'exitcond1011' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (1.30ns)   --->   "%exitcond2 = icmp_eq  i4 %loop_index_i_load, i4 12"   --->   Operation 12 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 12, i64 12, i64 12"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (1.73ns)   --->   "%empty_68 = add i4 %loop_index_i_load, i4 1"   --->   Operation 14 'add' 'empty_68' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond1011, void %load-store-loop.i.split, void %load-store-loop.i.i.exitStub"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%loop_index_i_cast = zext i4 %loop_index_i_load"   --->   Operation 16 'zext' 'loop_index_i_cast' <Predicate = (!exitcond1011)> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%nonce_addr = getelementptr i8 %nonce, i64 0, i64 %loop_index_i_cast"   --->   Operation 17 'getelementptr' 'nonce_addr' <Predicate = (!exitcond1011)> <Delay = 0.00>
-ST_1 : Operation 18 [2/2] (2.32ns)   --->   "%nonce_load = load i4 %nonce_addr"   --->   Operation 18 'load' 'nonce_load' <Predicate = (!exitcond1011)> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 12> <RAM>
-ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 %empty_68, i4 %loop_index_i"   --->   Operation 19 'store' 'store_ln0' <Predicate = (!exitcond1011)> <Delay = 1.58>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 24 'ret' 'ret_ln0' <Predicate = (exitcond1011)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.73ns)   --->   "%empty_50 = add i4 %loop_index_i_load, i4 1"   --->   Operation 14 'add' 'empty_50' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond2, void %load-store-loop.i.split, void %_ZN6crypto8PynqryptC2EPhS1_.exit.exitStub"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%loop_index_i_cast = zext i4 %loop_index_i_load"   --->   Operation 16 'zext' 'loop_index_i_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%nonce_addr = getelementptr i8 %nonce, i64 0, i64 %loop_index_i_cast"   --->   Operation 17 'getelementptr' 'nonce_addr' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (2.32ns)   --->   "%nonce_load = load i4 %nonce_addr"   --->   Operation 18 'load' 'nonce_load' <Predicate = (!exitcond2)> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 12> <RAM>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 %empty_50, i4 %loop_index_i"   --->   Operation 19 'store' 'store_ln0' <Predicate = (!exitcond2)> <Delay = 1.58>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 24 'ret' 'ret_ln0' <Predicate = (exitcond2)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 4.64>
 ST_2 : Operation 20 [1/2] (2.32ns)   --->   "%nonce_load = load i4 %nonce_addr"   --->   Operation 20 'load' 'nonce_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 12> <RAM>
@@ -118,8 +118,8 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 The critical path consists of the following:
 	'alloca' operation ('loop_index_i') [3]  (0 ns)
 	'load' operation ('loop_index_i_load') on local variable 'loop_index_i' [9]  (0 ns)
-	'add' operation ('empty_68') [13]  (1.74 ns)
-	'store' operation ('store_ln0') of variable 'empty_68' on local variable 'loop_index_i' [21]  (1.59 ns)
+	'add' operation ('empty_50') [13]  (1.74 ns)
+	'store' operation ('store_ln0') of variable 'empty_50' on local variable 'loop_index_i' [21]  (1.59 ns)
 
  <State 2>: 4.64ns
 The critical path consists of the following:

@@ -87,23 +87,23 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "pynqrypt_round_keys", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198", "Port" : "pynqrypt_round_keys", "Inst_start_state" : "2", "Inst_end_state" : "4"},
-					{"ID" : "6", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216", "Port" : "pynqrypt_round_keys", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "6", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216", "Port" : "pynqrypt_round_keys", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "2", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198", "Port" : "pynqrypt_round_keys", "Inst_start_state" : "2", "Inst_end_state" : "4"}]},
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198", "Port" : "state", "Inst_start_state" : "2", "Inst_end_state" : "4"},
-					{"ID" : "4", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208", "Port" : "state", "Inst_start_state" : "5", "Inst_end_state" : "6"},
-					{"ID" : "6", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216", "Port" : "state", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "6", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216", "Port" : "state", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "2", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198", "Port" : "state", "Inst_start_state" : "2", "Inst_end_state" : "4"},
+					{"ID" : "4", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208", "Port" : "state", "Inst_start_state" : "5", "Inst_end_state" : "6"}]},
 			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198", "Port" : "crypto_aes_sbox", "Inst_start_state" : "2", "Inst_end_state" : "4"},
-					{"ID" : "4", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208", "Port" : "crypto_aes_sbox", "Inst_start_state" : "5", "Inst_end_state" : "6"}]}],
+					{"ID" : "2", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198", "Port" : "crypto_aes_sbox", "Inst_start_state" : "2", "Inst_end_state" : "4"},
+					{"ID" : "4", "SubInstance" : "grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208", "Port" : "crypto_aes_sbox", "Inst_start_state" : "5", "Inst_end_state" : "6"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_215_1", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_221_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "17", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state3"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state4"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.crypto_aes_sbox_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198", "Parent" : "0", "Child" : ["3"],
-		"CDFG" : "aes_encrypt_block_Pipeline_VITIS_LOOP_52_1",
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198", "Parent" : "0", "Child" : ["3"],
+		"CDFG" : "aes_encrypt_block_Pipeline_loop_aes_encrypt_block",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -121,10 +121,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "pynqrypt_round_keys", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_52_1", "PipelineType" : "NotSupport"}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208", "Parent" : "0", "Child" : ["5"],
-		"CDFG" : "aes_encrypt_block_Pipeline_VITIS_LOOP_66_1",
+			{"Name" : "loop_aes_encrypt_block", "PipelineType" : "NotSupport"}]},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208", "Parent" : "0", "Child" : ["5"],
+		"CDFG" : "aes_encrypt_block_Pipeline_VITIS_LOOP_68_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -141,11 +141,11 @@ set RtlHierarchyInfo {[
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_66_1", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_68_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216", "Parent" : "0", "Child" : ["7"],
-		"CDFG" : "aes_encrypt_block_Pipeline_VITIS_LOOP_215_1",
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216", "Parent" : "0", "Child" : ["7"],
+		"CDFG" : "aes_encrypt_block_Pipeline_VITIS_LOOP_221_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -162,9 +162,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "pynqrypt_round_keys", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_215_1", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_221_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"}]}
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -172,14 +172,14 @@ set ArgLastReadFirstWriteLatency {
 		pynqrypt_round_keys {Type I LastRead 8 FirstWrite -1}
 		state {Type IO LastRead 11 FirstWrite 1}
 		crypto_aes_sbox {Type I LastRead -1 FirstWrite -1}}
-	aes_encrypt_block_Pipeline_VITIS_LOOP_52_1 {
+	aes_encrypt_block_Pipeline_loop_aes_encrypt_block {
 		state {Type IO LastRead 8 FirstWrite 6}
 		pynqrypt_round_keys {Type I LastRead 8 FirstWrite -1}
 		crypto_aes_sbox {Type I LastRead 16 FirstWrite -1}}
-	aes_encrypt_block_Pipeline_VITIS_LOOP_66_1 {
+	aes_encrypt_block_Pipeline_VITIS_LOOP_68_1 {
 		state {Type IO LastRead 0 FirstWrite 2}
 		crypto_aes_sbox {Type I LastRead 1 FirstWrite -1}}
-	aes_encrypt_block_Pipeline_VITIS_LOOP_215_1 {
+	aes_encrypt_block_Pipeline_VITIS_LOOP_221_1 {
 		pynqrypt_round_keys {Type I LastRead 0 FirstWrite -1}
 		state {Type IO LastRead 0 FirstWrite 1}}}
 

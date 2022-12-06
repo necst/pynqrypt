@@ -52,7 +52,7 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond153_fu_65_p2;
+wire   [0:0] exitcond3_fu_65_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -61,7 +61,7 @@ reg   [63:0] loop_index_i_cast_reg_97;
 wire    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
 reg   [3:0] loop_index_i_fu_26;
-wire   [3:0] empty_36_fu_71_p2;
+wire   [3:0] empty_31_fu_71_p2;
 wire    ap_loop_init;
 reg   [3:0] ap_sig_allocacmp_loop_index_i_load;
 reg    ap_done_reg;
@@ -128,8 +128,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((exitcond153_fu_65_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            loop_index_i_fu_26 <= empty_36_fu_71_p2;
+        if (((exitcond3_fu_65_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            loop_index_i_fu_26 <= empty_31_fu_71_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             loop_index_i_fu_26 <= 4'd0;
         end
@@ -137,13 +137,13 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((exitcond153_fu_65_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond3_fu_65_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         loop_index_i_cast_reg_97[3 : 0] <= loop_index_i_cast_fu_77_p1[3 : 0];
     end
 end
 
 always @ (*) begin
-    if (((exitcond153_fu_65_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond3_fu_65_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -247,9 +247,9 @@ assign block_nonce_address0 = loop_index_i_cast_reg_97;
 
 assign block_nonce_d0 = this_nonce_q0;
 
-assign empty_36_fu_71_p2 = (ap_sig_allocacmp_loop_index_i_load + 4'd1);
+assign empty_31_fu_71_p2 = (ap_sig_allocacmp_loop_index_i_load + 4'd1);
 
-assign exitcond153_fu_65_p2 = ((ap_sig_allocacmp_loop_index_i_load == 4'd12) ? 1'b1 : 1'b0);
+assign exitcond3_fu_65_p2 = ((ap_sig_allocacmp_loop_index_i_load == 4'd12) ? 1'b1 : 1'b0);
 
 assign loop_index_i_cast_fu_77_p1 = ap_sig_allocacmp_loop_index_i_load;
 

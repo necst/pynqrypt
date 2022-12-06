@@ -100,10 +100,10 @@ load-store-loop.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline
 
 <Node id="9" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-load-store-loop.i:2 %exitcond153 = icmp_eq  i4 %loop_index_i_load, i4 12
+load-store-loop.i:2 %exitcond3 = icmp_eq  i4 %loop_index_i_load, i4 12
 
 ]]></Node>
-<StgValue><ssdm name="exitcond153"/></StgValue>
+<StgValue><ssdm name="exitcond3"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -130,10 +130,10 @@ load-store-loop.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, 
 
 <Node id="11" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-load-store-loop.i:4 %empty_36 = add i4 %loop_index_i_load, i4 1
+load-store-loop.i:4 %empty_31 = add i4 %loop_index_i_load, i4 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty_31"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -145,7 +145,7 @@ load-store-loop.i:4 %empty_36 = add i4 %loop_index_i_load, i4 1
 
 <Node id="12" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-load-store-loop.i:5 %br_ln0 = br i1 %exitcond153, void %load-store-loop.i.split, void %_ZN6crypto8Pynqrypt17ctr_compute_nonceEPhl.exit.exitStub
+load-store-loop.i:5 %br_ln0 = br i1 %exitcond3, void %load-store-loop.i.split, void %_ZN6crypto8Pynqrypt17ctr_compute_nonceEPhl.exit.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -155,7 +155,7 @@ load-store-loop.i:5 %br_ln0 = br i1 %exitcond153, void %load-store-loop.i.split,
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond153" val="0"/>
+<or_exp><and_exp><literal name="exitcond3" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -171,7 +171,7 @@ load-store-loop.i.split:0 %loop_index_i_cast = zext i4 %loop_index_i_load
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond153" val="0"/>
+<or_exp><and_exp><literal name="exitcond3" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -187,7 +187,7 @@ load-store-loop.i.split:1 %this_nonce_addr = getelementptr i8 %this_nonce, i64 0
 <core>RAM</core>
 <MemPortIdVec>0 </MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond153" val="0"/>
+<or_exp><and_exp><literal name="exitcond3" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -203,13 +203,13 @@ load-store-loop.i.split:2 %this_nonce_load = load i4 %this_nonce_addr
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond153" val="0"/>
+<or_exp><and_exp><literal name="exitcond3" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="19" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-load-store-loop.i.split:5 %store_ln0 = store i4 %empty_36, i4 %loop_index_i
+load-store-loop.i.split:5 %store_ln0 = store i4 %empty_31, i4 %loop_index_i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -219,7 +219,7 @@ load-store-loop.i.split:5 %store_ln0 = store i4 %empty_36, i4 %loop_index_i
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond153" val="1"/>
+<or_exp><and_exp><literal name="exitcond3" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -330,9 +330,9 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="49" from="p_str" to="specpipeline_ln0" fromId="48" toId="9">
 </dataflow>
-<dataflow id="50" from="loop_index_i_load" to="exitcond153" fromId="8" toId="10">
+<dataflow id="50" from="loop_index_i_load" to="exitcond3" fromId="8" toId="10">
 </dataflow>
-<dataflow id="52" from="StgValue_51" to="exitcond153" fromId="51" toId="10">
+<dataflow id="52" from="StgValue_51" to="exitcond3" fromId="51" toId="10">
 </dataflow>
 <dataflow id="54" from="_ssdm_op_SpecLoopTripCount" to="empty" fromId="53" toId="11">
 </dataflow>
@@ -342,11 +342,11 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="58" from="StgValue_55" to="empty" fromId="55" toId="11">
 </dataflow>
-<dataflow id="59" from="loop_index_i_load" to="empty_36" fromId="8" toId="12">
+<dataflow id="59" from="loop_index_i_load" to="empty_31" fromId="8" toId="12">
 </dataflow>
-<dataflow id="61" from="StgValue_60" to="empty_36" fromId="60" toId="12">
+<dataflow id="61" from="StgValue_60" to="empty_31" fromId="60" toId="12">
 </dataflow>
-<dataflow id="62" from="exitcond153" to="br_ln0" fromId="10" toId="13">
+<dataflow id="62" from="exitcond3" to="br_ln0" fromId="10" toId="13">
 </dataflow>
 <dataflow id="63" from="loop_index_i_load" to="loop_index_i_cast" fromId="8" toId="14">
 </dataflow>
@@ -358,7 +358,7 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="68" from="this_nonce_addr" to="this_nonce_load" fromId="15" toId="16">
 </dataflow>
-<dataflow id="69" from="empty_36" to="store_ln0" fromId="12" toId="17">
+<dataflow id="69" from="empty_31" to="store_ln0" fromId="12" toId="17">
 </dataflow>
 <dataflow id="70" from="loop_index_i" to="store_ln0" fromId="5" toId="17">
 </dataflow>
@@ -374,7 +374,7 @@ load-store-loop.i.split:6 %br_ln0 = br void %load-store-loop.i
 </dataflow>
 <dataflow id="76" from="block_nonce_addr" to="store_ln0" fromId="19" toId="20">
 </dataflow>
-<dataflow id="77" from="exitcond153" to="StgValue_2" fromId="10" toId="2">
+<dataflow id="77" from="exitcond3" to="StgValue_2" fromId="10" toId="2">
 </dataflow>
 </dataflows>
 

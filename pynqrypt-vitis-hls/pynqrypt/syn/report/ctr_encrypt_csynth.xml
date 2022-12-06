@@ -32,7 +32,7 @@
 <Interval-max>undef</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_21_1>
+<loop_ctr_encrypt>
 <Slack>7.30</Slack>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
@@ -40,15 +40,15 @@
 <IterationLatency>undef</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_21_1>
+</loop_ctr_encrypt>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>1</BRAM_18K>
-<FF>1524</FF>
-<LUT>4181</LUT>
+<FF>1502</FF>
+<LUT>4091</LUT>
 <URAM>0</URAM>
 <DSP>0</DSP>
 </Resources>

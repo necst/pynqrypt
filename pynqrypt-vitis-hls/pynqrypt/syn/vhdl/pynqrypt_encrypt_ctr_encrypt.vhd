@@ -94,51 +94,49 @@ end;
 architecture behav of pynqrypt_encrypt_ctr_encrypt is 
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000000001";
-    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000000010";
-    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000000100";
-    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000001000";
-    constant ap_ST_fsm_state5 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000010000";
-    constant ap_ST_fsm_state6 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000100000";
-    constant ap_ST_fsm_state7 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000001000000";
-    constant ap_ST_fsm_state8 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000010000000";
-    constant ap_ST_fsm_state9 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000100000000";
-    constant ap_ST_fsm_state10 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000001000000000";
-    constant ap_ST_fsm_state11 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000010000000000";
-    constant ap_ST_fsm_state12 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000100000000000";
-    constant ap_ST_fsm_state13 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000001000000000000";
-    constant ap_ST_fsm_state14 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000010000000000000";
-    constant ap_ST_fsm_state15 : STD_LOGIC_VECTOR (25 downto 0) := "00000000000100000000000000";
-    constant ap_ST_fsm_state16 : STD_LOGIC_VECTOR (25 downto 0) := "00000000001000000000000000";
-    constant ap_ST_fsm_state17 : STD_LOGIC_VECTOR (25 downto 0) := "00000000010000000000000000";
-    constant ap_ST_fsm_state18 : STD_LOGIC_VECTOR (25 downto 0) := "00000000100000000000000000";
-    constant ap_ST_fsm_state19 : STD_LOGIC_VECTOR (25 downto 0) := "00000001000000000000000000";
-    constant ap_ST_fsm_state20 : STD_LOGIC_VECTOR (25 downto 0) := "00000010000000000000000000";
-    constant ap_ST_fsm_state21 : STD_LOGIC_VECTOR (25 downto 0) := "00000100000000000000000000";
-    constant ap_ST_fsm_state22 : STD_LOGIC_VECTOR (25 downto 0) := "00001000000000000000000000";
-    constant ap_ST_fsm_state23 : STD_LOGIC_VECTOR (25 downto 0) := "00010000000000000000000000";
-    constant ap_ST_fsm_state24 : STD_LOGIC_VECTOR (25 downto 0) := "00100000000000000000000000";
-    constant ap_ST_fsm_state25 : STD_LOGIC_VECTOR (25 downto 0) := "01000000000000000000000000";
-    constant ap_ST_fsm_state26 : STD_LOGIC_VECTOR (25 downto 0) := "10000000000000000000000000";
+    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000000000001";
+    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000000000010";
+    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000000000100";
+    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000000001000";
+    constant ap_ST_fsm_state5 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000000010000";
+    constant ap_ST_fsm_state6 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000000100000";
+    constant ap_ST_fsm_state7 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000001000000";
+    constant ap_ST_fsm_state8 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000010000000";
+    constant ap_ST_fsm_state9 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000100000000";
+    constant ap_ST_fsm_state10 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000001000000000";
+    constant ap_ST_fsm_state11 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000010000000000";
+    constant ap_ST_fsm_state12 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000100000000000";
+    constant ap_ST_fsm_state13 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000001000000000000";
+    constant ap_ST_fsm_state14 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000010000000000000";
+    constant ap_ST_fsm_state15 : STD_LOGIC_VECTOR (24 downto 0) := "0000000000100000000000000";
+    constant ap_ST_fsm_state16 : STD_LOGIC_VECTOR (24 downto 0) := "0000000001000000000000000";
+    constant ap_ST_fsm_state17 : STD_LOGIC_VECTOR (24 downto 0) := "0000000010000000000000000";
+    constant ap_ST_fsm_state18 : STD_LOGIC_VECTOR (24 downto 0) := "0000000100000000000000000";
+    constant ap_ST_fsm_state19 : STD_LOGIC_VECTOR (24 downto 0) := "0000001000000000000000000";
+    constant ap_ST_fsm_state20 : STD_LOGIC_VECTOR (24 downto 0) := "0000010000000000000000000";
+    constant ap_ST_fsm_state21 : STD_LOGIC_VECTOR (24 downto 0) := "0000100000000000000000000";
+    constant ap_ST_fsm_state22 : STD_LOGIC_VECTOR (24 downto 0) := "0001000000000000000000000";
+    constant ap_ST_fsm_state23 : STD_LOGIC_VECTOR (24 downto 0) := "0010000000000000000000000";
+    constant ap_ST_fsm_state24 : STD_LOGIC_VECTOR (24 downto 0) := "0100000000000000000000000";
+    constant ap_ST_fsm_state25 : STD_LOGIC_VECTOR (24 downto 0) := "1000000000000000000000000";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
-    constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
-    constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
-    constant ap_const_lv32_12 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010010";
-    constant ap_const_lv32_19 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011001";
-    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
+    constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
+    constant ap_const_lv32_11 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010001";
+    constant ap_const_lv32_18 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011000";
+    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_boolean_0 : BOOLEAN := false;
-    constant ap_const_lv32_B : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001011";
-    constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
     constant ap_const_lv32_A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001010";
-    constant ap_const_lv32_C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001100";
+    constant ap_const_lv32_8 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001000";
+    constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
+    constant ap_const_lv32_B : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001011";
+    constant ap_const_lv32_E : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001110";
     constant ap_const_lv32_F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001111";
     constant ap_const_lv32_10 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010000";
-    constant ap_const_lv32_11 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010001";
+    constant ap_const_lv32_12 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010010";
     constant ap_const_lv32_13 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010011";
-    constant ap_const_lv32_14 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010100";
     constant ap_const_lv64_C : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000001100";
     constant ap_const_lv64_D : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000001101";
     constant ap_const_lv64_E : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000001110";
@@ -147,16 +145,15 @@ architecture behav of pynqrypt_encrypt_ctr_encrypt is
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv64_0 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
+    constant ap_const_lv32_C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001100";
     constant ap_const_lv32_D : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001101";
-    constant ap_const_lv32_E : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001110";
     constant ap_const_lv64_FFFFFFFFFFFFFFFF : STD_LOGIC_VECTOR (63 downto 0) := "1111111111111111111111111111111111111111111111111111111111111111";
     constant ap_const_lv32_FFFFFFFF : STD_LOGIC_VECTOR (31 downto 0) := "11111111111111111111111111111111";
     constant ap_const_lv64_FFFFFFFFFFFFFFEF : STD_LOGIC_VECTOR (63 downto 0) := "1111111111111111111111111111111111111111111111111111111111101111";
     constant ap_const_lv64_10 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000010000";
-    constant ap_const_lv5_10 : STD_LOGIC_VECTOR (4 downto 0) := "10000";
-    constant ap_const_lv5_0 : STD_LOGIC_VECTOR (4 downto 0) := "00000";
     constant ap_const_lv32_1C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011100";
     constant ap_const_lv32_23 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000100011";
+    constant ap_const_lv32_14 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010100";
     constant ap_const_lv32_1B : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011011";
     constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv8_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
@@ -164,53 +161,45 @@ architecture behav of pynqrypt_encrypt_ctr_encrypt is
 
 attribute shreg_extract : string;
     signal ap_done_reg : STD_LOGIC := '0';
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000000001";
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (24 downto 0) := "0000000000000000000000001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
     signal plaintext_length_blk_n : STD_LOGIC;
     signal gmem_blk_n_AR : STD_LOGIC;
-    signal ap_CS_fsm_state4 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
-    signal icmp_ln23_reg_540 : STD_LOGIC_VECTOR (0 downto 0);
-    signal gmem_blk_n_AW : STD_LOGIC;
-    signal ap_CS_fsm_state19 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state19 : signal is "none";
-    signal ap_phi_mux_icmp_ln23_pr_phi_fu_198_p4 : STD_LOGIC_VECTOR (0 downto 0);
-    signal gmem_blk_n_B : STD_LOGIC;
-    signal ap_CS_fsm_state26 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state26 : signal is "none";
-    signal icmp_ln23_pr_reg_194 : STD_LOGIC_VECTOR (0 downto 0);
-    signal plaintext_blk_n : STD_LOGIC;
-    signal ciphertext_blk_n : STD_LOGIC;
-    signal ciphertext_read_reg_460 : STD_LOGIC_VECTOR (63 downto 0);
-    signal plaintext_read_reg_465 : STD_LOGIC_VECTOR (63 downto 0);
-    signal plaintext_length_read_reg_470 : STD_LOGIC_VECTOR (63 downto 0);
-    signal xor_ln21_fu_254_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal xor_ln21_reg_496 : STD_LOGIC_VECTOR (63 downto 0);
-    signal xor_ln22_fu_260_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal xor_ln22_reg_501 : STD_LOGIC_VECTOR (31 downto 0);
-    signal select_ln22_fu_310_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal select_ln22_reg_512 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_CS_fsm_state2 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal icmp_ln21_1_fu_279_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal trunc_ln200_fu_323_p1 : STD_LOGIC_VECTOR (4 downto 0);
-    signal trunc_ln200_reg_518 : STD_LOGIC_VECTOR (4 downto 0);
-    signal icmp_ln200_fu_327_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal icmp_ln200_reg_523 : STD_LOGIC_VECTOR (0 downto 0);
-    signal add_ln22_2_fu_333_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal add_ln22_2_reg_528 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal block_size_fu_337_p3 : STD_LOGIC_VECTOR (4 downto 0);
-    signal block_size_reg_534 : STD_LOGIC_VECTOR (4 downto 0);
-    signal icmp_ln23_fu_343_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal select_ln21_fu_361_p3 : STD_LOGIC_VECTOR (63 downto 0);
-    signal select_ln21_reg_545 : STD_LOGIC_VECTOR (63 downto 0);
-    signal add_ln22_1_fu_369_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal add_ln22_1_reg_550 : STD_LOGIC_VECTOR (63 downto 0);
+    signal icmp_ln25_reg_506 : STD_LOGIC_VECTOR (0 downto 0);
+    signal gmem_blk_n_AW : STD_LOGIC;
+    signal ap_CS_fsm_state18 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state18 : signal is "none";
+    signal ap_phi_mux_icmp_ln25_pr_phi_fu_194_p4 : STD_LOGIC_VECTOR (0 downto 0);
+    signal gmem_blk_n_B : STD_LOGIC;
+    signal ap_CS_fsm_state25 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state25 : signal is "none";
+    signal icmp_ln25_pr_reg_190 : STD_LOGIC_VECTOR (0 downto 0);
+    signal plaintext_blk_n : STD_LOGIC;
+    signal ciphertext_blk_n : STD_LOGIC;
+    signal ciphertext_read_reg_436 : STD_LOGIC_VECTOR (63 downto 0);
+    signal plaintext_read_reg_441 : STD_LOGIC_VECTOR (63 downto 0);
+    signal plaintext_length_read_reg_446 : STD_LOGIC_VECTOR (63 downto 0);
+    signal xor_ln23_fu_250_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal xor_ln23_reg_472 : STD_LOGIC_VECTOR (63 downto 0);
+    signal xor_ln24_fu_256_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal xor_ln24_reg_477 : STD_LOGIC_VECTOR (31 downto 0);
+    signal select_ln24_fu_306_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal select_ln24_reg_488 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_CS_fsm_state2 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
+    signal icmp_ln23_1_fu_275_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal add_ln24_1_fu_314_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal add_ln24_1_reg_494 : STD_LOGIC_VECTOR (63 downto 0);
+    signal add_ln24_2_fu_319_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal add_ln24_2_reg_500 : STD_LOGIC_VECTOR (63 downto 0);
+    signal icmp_ln25_fu_324_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal select_ln23_fu_341_p3 : STD_LOGIC_VECTOR (63 downto 0);
+    signal select_ln23_reg_511 : STD_LOGIC_VECTOR (63 downto 0);
     signal block_nonce_address0 : STD_LOGIC_VECTOR (3 downto 0);
     signal block_nonce_ce0 : STD_LOGIC;
     signal block_nonce_we0 : STD_LOGIC;
@@ -228,170 +217,169 @@ attribute shreg_extract : string;
     signal block_q0 : STD_LOGIC_VECTOR (7 downto 0);
     signal block_ce1 : STD_LOGIC;
     signal block_q1 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_ap_start : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_ap_done : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_ap_idle : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_ap_ready : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWVALID : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WVALID : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WLAST : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARVALID : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_RREADY : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_BREADY : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_block_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_block_r_ce0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_block_r_we0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_block_r_d0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_ap_start : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_ap_done : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_ap_idle : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_ap_ready : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_this_nonce_address0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_this_nonce_ce0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_address0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_ce0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_we0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_d0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_aes_encrypt_block_fu_222_ap_start : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_ap_done : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_ap_idle : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_ap_ready : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_address0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_ce0 : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_address1 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_ce1 : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_state_address0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_aes_encrypt_block_fu_222_state_ce0 : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_state_we0 : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_state_d0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_aes_encrypt_block_fu_222_state_address1 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_aes_encrypt_block_fu_222_state_ce1 : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_state_we1 : STD_LOGIC;
-    signal grp_aes_encrypt_block_fu_222_state_d1 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_idle : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_ready : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_address0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_ce0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_we0 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_d0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_address1 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce1 : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_ap_start : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_ap_done : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_ap_idle : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_ap_ready : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWVALID : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WVALID : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WLAST : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARVALID : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_RREADY : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_BREADY : STD_LOGIC;
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_block_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_block_r_ce0 : STD_LOGIC;
-    signal ap_block_state4_io : BOOLEAN;
-    signal ap_CS_fsm_state12 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
-    signal ap_block_state12_on_subcall_done : BOOLEAN;
-    signal grp_ctr_encrypt_Pipeline_1_fu_206_ap_start_reg : STD_LOGIC := '0';
-    signal ap_CS_fsm_state10 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state10 : signal is "none";
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (25 downto 0);
-    signal ap_NS_fsm_state11 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_ap_start : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_ap_done : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_ap_idle : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_ap_ready : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWVALID : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WVALID : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WLAST : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARVALID : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_RREADY : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_BREADY : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_block_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_block_r_ce0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_block_r_we0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_block_r_d0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_ap_start : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_ap_done : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_ap_idle : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_ap_ready : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_this_nonce_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_this_nonce_ce0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_ce0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_we0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_d0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_aes_encrypt_block_fu_218_ap_start : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_ap_done : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_ap_idle : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_ap_ready : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_address0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_ce0 : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_address1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_ce1 : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_state_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_aes_encrypt_block_fu_218_state_ce0 : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_state_we0 : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_state_d0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_aes_encrypt_block_fu_218_state_address1 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_aes_encrypt_block_fu_218_state_ce1 : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_state_we1 : STD_LOGIC;
+    signal grp_aes_encrypt_block_fu_218_state_d1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_idle : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_ready : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_ce0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_we0 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_d0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_address1 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce1 : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_ap_start : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_ap_done : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_ap_idle : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_ap_ready : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWVALID : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WVALID : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WLAST : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARVALID : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_RREADY : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_BREADY : STD_LOGIC;
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_block_r_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_block_r_ce0 : STD_LOGIC;
+    signal ap_block_state3_io : BOOLEAN;
     signal ap_CS_fsm_state11 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state11 : signal is "none";
-    signal grp_ctr_encrypt_Pipeline_2_fu_215_ap_start_reg : STD_LOGIC := '0';
-    signal ap_CS_fsm_state13 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state13 : signal is "none";
-    signal grp_aes_encrypt_block_fu_222_ap_start_reg : STD_LOGIC := '0';
-    signal ap_CS_fsm_state16 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state16 : signal is "none";
-    signal ap_CS_fsm_state17 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state17 : signal is "none";
-    signal grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start_reg : STD_LOGIC := '0';
-    signal ap_CS_fsm_state18 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state18 : signal is "none";
-    signal grp_ctr_encrypt_Pipeline_4_fu_238_ap_start_reg : STD_LOGIC := '0';
-    signal ap_NS_fsm_state20 : STD_LOGIC;
-    signal ap_CS_fsm_state20 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state20 : signal is "none";
-    signal ap_CS_fsm_state21 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state21 : signal is "none";
-    signal ap_block_state19_io : BOOLEAN;
-    signal ap_block_state26 : BOOLEAN;
-    signal i_1_fu_106 : STD_LOGIC_VECTOR (63 downto 0);
-    signal i_3_fu_425_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal ap_block_state1 : BOOLEAN;
-    signal indvars_iv_fu_110 : STD_LOGIC_VECTOR (63 downto 0);
-    signal add_ln21_fu_430_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal ap_CS_fsm_state14 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state14 : signal is "none";
+    signal ap_block_state11_on_subcall_done : BOOLEAN;
+    signal grp_ctr_encrypt_Pipeline_1_fu_202_ap_start_reg : STD_LOGIC := '0';
+    signal ap_CS_fsm_state9 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state9 : signal is "none";
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (24 downto 0);
+    signal ap_NS_fsm_state10 : STD_LOGIC;
+    signal ap_CS_fsm_state10 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state10 : signal is "none";
+    signal grp_ctr_encrypt_Pipeline_2_fu_211_ap_start_reg : STD_LOGIC := '0';
+    signal ap_CS_fsm_state12 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
+    signal grp_aes_encrypt_block_fu_218_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state15 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state15 : signal is "none";
-    signal trunc_ln21_fu_250_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal add_ln22_fu_288_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal trunc_ln22_fu_284_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal add_ln22_3_fu_299_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal icmp_ln22_fu_293_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal xor_ln22_1_fu_304_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal sub_ln22_fu_318_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal icmp_ln21_fu_349_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal xor_ln21_1_fu_355_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_CS_fsm_state16 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state16 : signal is "none";
+    signal grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start_reg : STD_LOGIC := '0';
+    signal ap_CS_fsm_state17 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state17 : signal is "none";
+    signal grp_ctr_encrypt_Pipeline_4_fu_234_ap_start_reg : STD_LOGIC := '0';
+    signal ap_NS_fsm_state19 : STD_LOGIC;
+    signal ap_CS_fsm_state19 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state19 : signal is "none";
+    signal ap_CS_fsm_state20 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state20 : signal is "none";
+    signal ap_block_state18_io : BOOLEAN;
+    signal ap_block_state25 : BOOLEAN;
+    signal i_fu_102 : STD_LOGIC_VECTOR (63 downto 0);
+    signal i_5_fu_401_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_block_state1 : BOOLEAN;
+    signal indvars_iv6_fu_106 : STD_LOGIC_VECTOR (63 downto 0);
+    signal add_ln23_fu_406_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_CS_fsm_state13 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state13 : signal is "none";
+    signal ap_CS_fsm_state14 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state14 : signal is "none";
+    signal trunc_ln23_fu_246_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal add_ln24_fu_284_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal trunc_ln24_fu_280_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal add_ln24_3_fu_295_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal icmp_ln24_fu_289_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal xor_ln24_1_fu_300_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal icmp_ln23_fu_329_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal xor_ln23_1_fu_335_p2 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
     signal ap_ST_fsm_state3_blk : STD_LOGIC;
@@ -417,7 +405,6 @@ attribute shreg_extract : string;
     signal ap_ST_fsm_state23_blk : STD_LOGIC;
     signal ap_ST_fsm_state24_blk : STD_LOGIC;
     signal ap_ST_fsm_state25_blk : STD_LOGIC;
-    signal ap_ST_fsm_state26_blk : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
     component pynqrypt_encrypt_ctr_encrypt_Pipeline_1 IS
@@ -474,12 +461,12 @@ attribute shreg_extract : string;
         m_axi_gmem_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
         m_axi_gmem_BID : IN STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-        add_ln22_2 : IN STD_LOGIC_VECTOR (63 downto 0);
+        add_ln24_2 : IN STD_LOGIC_VECTOR (63 downto 0);
         block_r_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         block_r_ce0 : OUT STD_LOGIC;
         block_r_we0 : OUT STD_LOGIC;
         block_r_d0 : OUT STD_LOGIC_VECTOR (7 downto 0);
-        zext_ln22 : IN STD_LOGIC_VECTOR (4 downto 0) );
+        select_ln23 : IN STD_LOGIC_VECTOR (63 downto 0) );
     end component;
 
 
@@ -528,7 +515,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component pynqrypt_encrypt_ctr_encrypt_Pipeline_VITIS_LOOP_43_1 IS
+    component pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -536,7 +523,7 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        select_ln21 : IN STD_LOGIC_VECTOR (63 downto 0);
+        select_ln23 : IN STD_LOGIC_VECTOR (63 downto 0);
         block_nonce_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         block_nonce_ce0 : OUT STD_LOGIC;
         block_nonce_q0 : IN STD_LOGIC_VECTOR (7 downto 0);
@@ -604,11 +591,11 @@ attribute shreg_extract : string;
         m_axi_gmem_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
         m_axi_gmem_BID : IN STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-        add_ln22_1 : IN STD_LOGIC_VECTOR (63 downto 0);
+        add_ln24_1 : IN STD_LOGIC_VECTOR (63 downto 0);
         block_r_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         block_r_ce0 : OUT STD_LOGIC;
         block_r_q0 : IN STD_LOGIC_VECTOR (7 downto 0);
-        zext_ln22 : IN STD_LOGIC_VECTOR (4 downto 0) );
+        select_ln23 : IN STD_LOGIC_VECTOR (63 downto 0) );
     end component;
 
 
@@ -686,53 +673,53 @@ begin
         we0 => block_we0,
         d0 => block_d0,
         q0 => block_q0,
-        address1 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_address1,
+        address1 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_address1,
         ce1 => block_ce1,
         q1 => block_q1);
 
-    grp_ctr_encrypt_Pipeline_1_fu_206 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_1
+    grp_ctr_encrypt_Pipeline_1_fu_202 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_1
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_ctr_encrypt_Pipeline_1_fu_206_ap_start,
-        ap_done => grp_ctr_encrypt_Pipeline_1_fu_206_ap_done,
-        ap_idle => grp_ctr_encrypt_Pipeline_1_fu_206_ap_idle,
-        ap_ready => grp_ctr_encrypt_Pipeline_1_fu_206_ap_ready,
-        m_axi_gmem_AWVALID => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWVALID,
+        ap_start => grp_ctr_encrypt_Pipeline_1_fu_202_ap_start,
+        ap_done => grp_ctr_encrypt_Pipeline_1_fu_202_ap_done,
+        ap_idle => grp_ctr_encrypt_Pipeline_1_fu_202_ap_idle,
+        ap_ready => grp_ctr_encrypt_Pipeline_1_fu_202_ap_ready,
+        m_axi_gmem_AWVALID => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWVALID,
         m_axi_gmem_AWREADY => ap_const_logic_0,
-        m_axi_gmem_AWADDR => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWADDR,
-        m_axi_gmem_AWID => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWID,
-        m_axi_gmem_AWLEN => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWLEN,
-        m_axi_gmem_AWSIZE => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWSIZE,
-        m_axi_gmem_AWBURST => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWBURST,
-        m_axi_gmem_AWLOCK => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWLOCK,
-        m_axi_gmem_AWCACHE => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWCACHE,
-        m_axi_gmem_AWPROT => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWPROT,
-        m_axi_gmem_AWQOS => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWQOS,
-        m_axi_gmem_AWREGION => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWREGION,
-        m_axi_gmem_AWUSER => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_AWUSER,
-        m_axi_gmem_WVALID => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WVALID,
+        m_axi_gmem_AWADDR => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWADDR,
+        m_axi_gmem_AWID => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWID,
+        m_axi_gmem_AWLEN => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWLEN,
+        m_axi_gmem_AWSIZE => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWSIZE,
+        m_axi_gmem_AWBURST => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWBURST,
+        m_axi_gmem_AWLOCK => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWLOCK,
+        m_axi_gmem_AWCACHE => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWCACHE,
+        m_axi_gmem_AWPROT => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWPROT,
+        m_axi_gmem_AWQOS => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWQOS,
+        m_axi_gmem_AWREGION => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWREGION,
+        m_axi_gmem_AWUSER => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_AWUSER,
+        m_axi_gmem_WVALID => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WVALID,
         m_axi_gmem_WREADY => ap_const_logic_0,
-        m_axi_gmem_WDATA => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WDATA,
-        m_axi_gmem_WSTRB => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WSTRB,
-        m_axi_gmem_WLAST => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WLAST,
-        m_axi_gmem_WID => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WID,
-        m_axi_gmem_WUSER => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_WUSER,
-        m_axi_gmem_ARVALID => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARVALID,
+        m_axi_gmem_WDATA => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WDATA,
+        m_axi_gmem_WSTRB => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WSTRB,
+        m_axi_gmem_WLAST => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WLAST,
+        m_axi_gmem_WID => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WID,
+        m_axi_gmem_WUSER => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_WUSER,
+        m_axi_gmem_ARVALID => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARVALID,
         m_axi_gmem_ARREADY => m_axi_gmem_ARREADY,
-        m_axi_gmem_ARADDR => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARADDR,
-        m_axi_gmem_ARID => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARID,
-        m_axi_gmem_ARLEN => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLEN,
-        m_axi_gmem_ARSIZE => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARSIZE,
-        m_axi_gmem_ARBURST => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARBURST,
-        m_axi_gmem_ARLOCK => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLOCK,
-        m_axi_gmem_ARCACHE => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARCACHE,
-        m_axi_gmem_ARPROT => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARPROT,
-        m_axi_gmem_ARQOS => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARQOS,
-        m_axi_gmem_ARREGION => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARREGION,
-        m_axi_gmem_ARUSER => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARUSER,
+        m_axi_gmem_ARADDR => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARADDR,
+        m_axi_gmem_ARID => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARID,
+        m_axi_gmem_ARLEN => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLEN,
+        m_axi_gmem_ARSIZE => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARSIZE,
+        m_axi_gmem_ARBURST => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARBURST,
+        m_axi_gmem_ARLOCK => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLOCK,
+        m_axi_gmem_ARCACHE => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARCACHE,
+        m_axi_gmem_ARPROT => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARPROT,
+        m_axi_gmem_ARQOS => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARQOS,
+        m_axi_gmem_ARREGION => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARREGION,
+        m_axi_gmem_ARUSER => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARUSER,
         m_axi_gmem_RVALID => m_axi_gmem_RVALID,
-        m_axi_gmem_RREADY => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_RREADY,
+        m_axi_gmem_RREADY => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_RREADY,
         m_axi_gmem_RDATA => m_axi_gmem_RDATA,
         m_axi_gmem_RLAST => m_axi_gmem_RLAST,
         m_axi_gmem_RID => m_axi_gmem_RID,
@@ -740,121 +727,121 @@ begin
         m_axi_gmem_RUSER => m_axi_gmem_RUSER,
         m_axi_gmem_RRESP => m_axi_gmem_RRESP,
         m_axi_gmem_BVALID => ap_const_logic_0,
-        m_axi_gmem_BREADY => grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_BREADY,
+        m_axi_gmem_BREADY => grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_BREADY,
         m_axi_gmem_BRESP => ap_const_lv2_0,
         m_axi_gmem_BID => ap_const_lv1_0,
         m_axi_gmem_BUSER => ap_const_lv1_0,
-        add_ln22_2 => add_ln22_2_reg_528,
-        block_r_address0 => grp_ctr_encrypt_Pipeline_1_fu_206_block_r_address0,
-        block_r_ce0 => grp_ctr_encrypt_Pipeline_1_fu_206_block_r_ce0,
-        block_r_we0 => grp_ctr_encrypt_Pipeline_1_fu_206_block_r_we0,
-        block_r_d0 => grp_ctr_encrypt_Pipeline_1_fu_206_block_r_d0,
-        zext_ln22 => block_size_reg_534);
+        add_ln24_2 => add_ln24_2_reg_500,
+        block_r_address0 => grp_ctr_encrypt_Pipeline_1_fu_202_block_r_address0,
+        block_r_ce0 => grp_ctr_encrypt_Pipeline_1_fu_202_block_r_ce0,
+        block_r_we0 => grp_ctr_encrypt_Pipeline_1_fu_202_block_r_we0,
+        block_r_d0 => grp_ctr_encrypt_Pipeline_1_fu_202_block_r_d0,
+        select_ln23 => select_ln23_reg_511);
 
-    grp_ctr_encrypt_Pipeline_2_fu_215 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_2
+    grp_ctr_encrypt_Pipeline_2_fu_211 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_2
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_ctr_encrypt_Pipeline_2_fu_215_ap_start,
-        ap_done => grp_ctr_encrypt_Pipeline_2_fu_215_ap_done,
-        ap_idle => grp_ctr_encrypt_Pipeline_2_fu_215_ap_idle,
-        ap_ready => grp_ctr_encrypt_Pipeline_2_fu_215_ap_ready,
-        this_nonce_address0 => grp_ctr_encrypt_Pipeline_2_fu_215_this_nonce_address0,
-        this_nonce_ce0 => grp_ctr_encrypt_Pipeline_2_fu_215_this_nonce_ce0,
+        ap_start => grp_ctr_encrypt_Pipeline_2_fu_211_ap_start,
+        ap_done => grp_ctr_encrypt_Pipeline_2_fu_211_ap_done,
+        ap_idle => grp_ctr_encrypt_Pipeline_2_fu_211_ap_idle,
+        ap_ready => grp_ctr_encrypt_Pipeline_2_fu_211_ap_ready,
+        this_nonce_address0 => grp_ctr_encrypt_Pipeline_2_fu_211_this_nonce_address0,
+        this_nonce_ce0 => grp_ctr_encrypt_Pipeline_2_fu_211_this_nonce_ce0,
         this_nonce_q0 => this_nonce_q0,
-        block_nonce_address0 => grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_address0,
-        block_nonce_ce0 => grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_ce0,
-        block_nonce_we0 => grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_we0,
-        block_nonce_d0 => grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_d0);
+        block_nonce_address0 => grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_address0,
+        block_nonce_ce0 => grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_ce0,
+        block_nonce_we0 => grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_we0,
+        block_nonce_d0 => grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_d0);
 
-    grp_aes_encrypt_block_fu_222 : component pynqrypt_encrypt_aes_encrypt_block
+    grp_aes_encrypt_block_fu_218 : component pynqrypt_encrypt_aes_encrypt_block
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_aes_encrypt_block_fu_222_ap_start,
-        ap_done => grp_aes_encrypt_block_fu_222_ap_done,
-        ap_idle => grp_aes_encrypt_block_fu_222_ap_idle,
-        ap_ready => grp_aes_encrypt_block_fu_222_ap_ready,
-        pynqrypt_round_keys_address0 => grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_address0,
-        pynqrypt_round_keys_ce0 => grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_ce0,
+        ap_start => grp_aes_encrypt_block_fu_218_ap_start,
+        ap_done => grp_aes_encrypt_block_fu_218_ap_done,
+        ap_idle => grp_aes_encrypt_block_fu_218_ap_idle,
+        ap_ready => grp_aes_encrypt_block_fu_218_ap_ready,
+        pynqrypt_round_keys_address0 => grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_address0,
+        pynqrypt_round_keys_ce0 => grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_ce0,
         pynqrypt_round_keys_q0 => pynqrypt_round_keys_q0,
-        pynqrypt_round_keys_address1 => grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_address1,
-        pynqrypt_round_keys_ce1 => grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_ce1,
+        pynqrypt_round_keys_address1 => grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_address1,
+        pynqrypt_round_keys_ce1 => grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_ce1,
         pynqrypt_round_keys_q1 => pynqrypt_round_keys_q1,
-        state_address0 => grp_aes_encrypt_block_fu_222_state_address0,
-        state_ce0 => grp_aes_encrypt_block_fu_222_state_ce0,
-        state_we0 => grp_aes_encrypt_block_fu_222_state_we0,
-        state_d0 => grp_aes_encrypt_block_fu_222_state_d0,
+        state_address0 => grp_aes_encrypt_block_fu_218_state_address0,
+        state_ce0 => grp_aes_encrypt_block_fu_218_state_ce0,
+        state_we0 => grp_aes_encrypt_block_fu_218_state_we0,
+        state_d0 => grp_aes_encrypt_block_fu_218_state_d0,
         state_q0 => block_nonce_q0,
-        state_address1 => grp_aes_encrypt_block_fu_222_state_address1,
-        state_ce1 => grp_aes_encrypt_block_fu_222_state_ce1,
-        state_we1 => grp_aes_encrypt_block_fu_222_state_we1,
-        state_d1 => grp_aes_encrypt_block_fu_222_state_d1,
+        state_address1 => grp_aes_encrypt_block_fu_218_state_address1,
+        state_ce1 => grp_aes_encrypt_block_fu_218_state_ce1,
+        state_we1 => grp_aes_encrypt_block_fu_218_state_we1,
+        state_d1 => grp_aes_encrypt_block_fu_218_state_d1,
         state_q1 => block_nonce_q1);
 
-    grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_VITIS_LOOP_43_1
+    grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start,
-        ap_done => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done,
-        ap_idle => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_idle,
-        ap_ready => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_ready,
-        select_ln21 => select_ln21_reg_545,
-        block_nonce_address0 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_address0,
-        block_nonce_ce0 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_ce0,
+        ap_start => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start,
+        ap_done => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done,
+        ap_idle => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_idle,
+        ap_ready => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_ready,
+        select_ln23 => select_ln23_reg_511,
+        block_nonce_address0 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_address0,
+        block_nonce_ce0 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_ce0,
         block_nonce_q0 => block_nonce_q0,
-        block_r_address0 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_address0,
-        block_r_ce0 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce0,
-        block_r_we0 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_we0,
-        block_r_d0 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_d0,
-        block_r_address1 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_address1,
-        block_r_ce1 => grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce1,
+        block_r_address0 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_address0,
+        block_r_ce0 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce0,
+        block_r_we0 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_we0,
+        block_r_d0 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_d0,
+        block_r_address1 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_address1,
+        block_r_ce1 => grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce1,
         block_r_q1 => block_q1);
 
-    grp_ctr_encrypt_Pipeline_4_fu_238 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_4
+    grp_ctr_encrypt_Pipeline_4_fu_234 : component pynqrypt_encrypt_ctr_encrypt_Pipeline_4
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_ctr_encrypt_Pipeline_4_fu_238_ap_start,
-        ap_done => grp_ctr_encrypt_Pipeline_4_fu_238_ap_done,
-        ap_idle => grp_ctr_encrypt_Pipeline_4_fu_238_ap_idle,
-        ap_ready => grp_ctr_encrypt_Pipeline_4_fu_238_ap_ready,
-        m_axi_gmem_AWVALID => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWVALID,
+        ap_start => grp_ctr_encrypt_Pipeline_4_fu_234_ap_start,
+        ap_done => grp_ctr_encrypt_Pipeline_4_fu_234_ap_done,
+        ap_idle => grp_ctr_encrypt_Pipeline_4_fu_234_ap_idle,
+        ap_ready => grp_ctr_encrypt_Pipeline_4_fu_234_ap_ready,
+        m_axi_gmem_AWVALID => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWVALID,
         m_axi_gmem_AWREADY => m_axi_gmem_AWREADY,
-        m_axi_gmem_AWADDR => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWADDR,
-        m_axi_gmem_AWID => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWID,
-        m_axi_gmem_AWLEN => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLEN,
-        m_axi_gmem_AWSIZE => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWSIZE,
-        m_axi_gmem_AWBURST => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWBURST,
-        m_axi_gmem_AWLOCK => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLOCK,
-        m_axi_gmem_AWCACHE => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWCACHE,
-        m_axi_gmem_AWPROT => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWPROT,
-        m_axi_gmem_AWQOS => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWQOS,
-        m_axi_gmem_AWREGION => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWREGION,
-        m_axi_gmem_AWUSER => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWUSER,
-        m_axi_gmem_WVALID => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WVALID,
+        m_axi_gmem_AWADDR => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWADDR,
+        m_axi_gmem_AWID => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWID,
+        m_axi_gmem_AWLEN => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLEN,
+        m_axi_gmem_AWSIZE => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWSIZE,
+        m_axi_gmem_AWBURST => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWBURST,
+        m_axi_gmem_AWLOCK => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLOCK,
+        m_axi_gmem_AWCACHE => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWCACHE,
+        m_axi_gmem_AWPROT => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWPROT,
+        m_axi_gmem_AWQOS => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWQOS,
+        m_axi_gmem_AWREGION => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWREGION,
+        m_axi_gmem_AWUSER => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWUSER,
+        m_axi_gmem_WVALID => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WVALID,
         m_axi_gmem_WREADY => m_axi_gmem_WREADY,
-        m_axi_gmem_WDATA => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WDATA,
-        m_axi_gmem_WSTRB => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WSTRB,
-        m_axi_gmem_WLAST => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WLAST,
-        m_axi_gmem_WID => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WID,
-        m_axi_gmem_WUSER => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WUSER,
-        m_axi_gmem_ARVALID => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARVALID,
+        m_axi_gmem_WDATA => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WDATA,
+        m_axi_gmem_WSTRB => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WSTRB,
+        m_axi_gmem_WLAST => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WLAST,
+        m_axi_gmem_WID => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WID,
+        m_axi_gmem_WUSER => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WUSER,
+        m_axi_gmem_ARVALID => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARVALID,
         m_axi_gmem_ARREADY => ap_const_logic_0,
-        m_axi_gmem_ARADDR => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARADDR,
-        m_axi_gmem_ARID => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARID,
-        m_axi_gmem_ARLEN => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARLEN,
-        m_axi_gmem_ARSIZE => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARSIZE,
-        m_axi_gmem_ARBURST => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARBURST,
-        m_axi_gmem_ARLOCK => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARLOCK,
-        m_axi_gmem_ARCACHE => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARCACHE,
-        m_axi_gmem_ARPROT => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARPROT,
-        m_axi_gmem_ARQOS => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARQOS,
-        m_axi_gmem_ARREGION => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARREGION,
-        m_axi_gmem_ARUSER => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_ARUSER,
+        m_axi_gmem_ARADDR => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARADDR,
+        m_axi_gmem_ARID => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARID,
+        m_axi_gmem_ARLEN => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARLEN,
+        m_axi_gmem_ARSIZE => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARSIZE,
+        m_axi_gmem_ARBURST => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARBURST,
+        m_axi_gmem_ARLOCK => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARLOCK,
+        m_axi_gmem_ARCACHE => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARCACHE,
+        m_axi_gmem_ARPROT => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARPROT,
+        m_axi_gmem_ARQOS => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARQOS,
+        m_axi_gmem_ARREGION => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARREGION,
+        m_axi_gmem_ARUSER => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_ARUSER,
         m_axi_gmem_RVALID => ap_const_logic_0,
-        m_axi_gmem_RREADY => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_RREADY,
+        m_axi_gmem_RREADY => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_RREADY,
         m_axi_gmem_RDATA => ap_const_lv8_0,
         m_axi_gmem_RLAST => ap_const_logic_0,
         m_axi_gmem_RID => ap_const_lv1_0,
@@ -862,15 +849,15 @@ begin
         m_axi_gmem_RUSER => ap_const_lv1_0,
         m_axi_gmem_RRESP => ap_const_lv2_0,
         m_axi_gmem_BVALID => m_axi_gmem_BVALID,
-        m_axi_gmem_BREADY => grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_BREADY,
+        m_axi_gmem_BREADY => grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_BREADY,
         m_axi_gmem_BRESP => m_axi_gmem_BRESP,
         m_axi_gmem_BID => m_axi_gmem_BID,
         m_axi_gmem_BUSER => m_axi_gmem_BUSER,
-        add_ln22_1 => add_ln22_1_reg_550,
-        block_r_address0 => grp_ctr_encrypt_Pipeline_4_fu_238_block_r_address0,
-        block_r_ce0 => grp_ctr_encrypt_Pipeline_4_fu_238_block_r_ce0,
+        add_ln24_1 => add_ln24_1_reg_494,
+        block_r_address0 => grp_ctr_encrypt_Pipeline_4_fu_234_block_r_address0,
+        block_r_ce0 => grp_ctr_encrypt_Pipeline_4_fu_234_block_r_ce0,
         block_r_q0 => block_q0,
-        zext_ln22 => block_size_reg_534);
+        select_ln23 => select_ln23_reg_511);
 
 
 
@@ -896,7 +883,7 @@ begin
             else
                 if ((ap_continue = ap_const_logic_1)) then 
                     ap_done_reg <= ap_const_logic_0;
-                elsif (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln21_1_fu_279_p2 = ap_const_lv1_0))) then 
+                elsif (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln23_1_fu_275_p2 = ap_const_lv1_0))) then 
                     ap_done_reg <= ap_const_logic_1;
                 end if; 
             end if;
@@ -904,134 +891,126 @@ begin
     end process;
 
 
-    grp_aes_encrypt_block_fu_222_ap_start_reg_assign_proc : process(ap_clk)
+    grp_aes_encrypt_block_fu_218_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_aes_encrypt_block_fu_222_ap_start_reg <= ap_const_logic_0;
+                grp_aes_encrypt_block_fu_218_ap_start_reg <= ap_const_logic_0;
             else
-                if ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
-                    grp_aes_encrypt_block_fu_222_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_aes_encrypt_block_fu_222_ap_ready = ap_const_logic_1)) then 
-                    grp_aes_encrypt_block_fu_222_ap_start_reg <= ap_const_logic_0;
+                if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+                    grp_aes_encrypt_block_fu_218_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_aes_encrypt_block_fu_218_ap_ready = ap_const_logic_1)) then 
+                    grp_aes_encrypt_block_fu_218_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_ctr_encrypt_Pipeline_1_fu_206_ap_start_reg_assign_proc : process(ap_clk)
+    grp_ctr_encrypt_Pipeline_1_fu_202_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_ctr_encrypt_Pipeline_1_fu_206_ap_start_reg <= ap_const_logic_0;
+                grp_ctr_encrypt_Pipeline_1_fu_202_ap_start_reg <= ap_const_logic_0;
             else
-                if (((ap_const_logic_1 = ap_NS_fsm_state11) and (ap_const_logic_1 = ap_CS_fsm_state10))) then 
-                    grp_ctr_encrypt_Pipeline_1_fu_206_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_ctr_encrypt_Pipeline_1_fu_206_ap_ready = ap_const_logic_1)) then 
-                    grp_ctr_encrypt_Pipeline_1_fu_206_ap_start_reg <= ap_const_logic_0;
+                if (((ap_const_logic_1 = ap_NS_fsm_state10) and (ap_const_logic_1 = ap_CS_fsm_state9))) then 
+                    grp_ctr_encrypt_Pipeline_1_fu_202_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_ctr_encrypt_Pipeline_1_fu_202_ap_ready = ap_const_logic_1)) then 
+                    grp_ctr_encrypt_Pipeline_1_fu_202_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_ctr_encrypt_Pipeline_2_fu_215_ap_start_reg_assign_proc : process(ap_clk)
+    grp_ctr_encrypt_Pipeline_2_fu_211_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_ctr_encrypt_Pipeline_2_fu_215_ap_start_reg <= ap_const_logic_0;
+                grp_ctr_encrypt_Pipeline_2_fu_211_ap_start_reg <= ap_const_logic_0;
             else
-                if (((ap_const_boolean_0 = ap_block_state12_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state12))) then 
-                    grp_ctr_encrypt_Pipeline_2_fu_215_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_ctr_encrypt_Pipeline_2_fu_215_ap_ready = ap_const_logic_1)) then 
-                    grp_ctr_encrypt_Pipeline_2_fu_215_ap_start_reg <= ap_const_logic_0;
+                if (((ap_const_boolean_0 = ap_block_state11_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state11))) then 
+                    grp_ctr_encrypt_Pipeline_2_fu_211_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_ctr_encrypt_Pipeline_2_fu_211_ap_ready = ap_const_logic_1)) then 
+                    grp_ctr_encrypt_Pipeline_2_fu_211_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_ctr_encrypt_Pipeline_4_fu_238_ap_start_reg_assign_proc : process(ap_clk)
+    grp_ctr_encrypt_Pipeline_4_fu_234_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_ctr_encrypt_Pipeline_4_fu_238_ap_start_reg <= ap_const_logic_0;
+                grp_ctr_encrypt_Pipeline_4_fu_234_ap_start_reg <= ap_const_logic_0;
             else
-                if (((ap_const_logic_1 = ap_NS_fsm_state20) and (ap_const_logic_1 = ap_CS_fsm_state19))) then 
-                    grp_ctr_encrypt_Pipeline_4_fu_238_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_ctr_encrypt_Pipeline_4_fu_238_ap_ready = ap_const_logic_1)) then 
-                    grp_ctr_encrypt_Pipeline_4_fu_238_ap_start_reg <= ap_const_logic_0;
+                if (((ap_const_logic_1 = ap_NS_fsm_state19) and (ap_const_logic_1 = ap_CS_fsm_state18))) then 
+                    grp_ctr_encrypt_Pipeline_4_fu_234_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_ctr_encrypt_Pipeline_4_fu_234_ap_ready = ap_const_logic_1)) then 
+                    grp_ctr_encrypt_Pipeline_4_fu_234_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start_reg_assign_proc : process(ap_clk)
+    grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start_reg <= ap_const_logic_0;
+                grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start_reg <= ap_const_logic_0;
             else
-                if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
-                    grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_ready = ap_const_logic_1)) then 
-                    grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start_reg <= ap_const_logic_0;
+                if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+                    grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_ready = ap_const_logic_1)) then 
+                    grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    i_1_fu_106_assign_proc : process (ap_clk)
+    i_fu_102_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((plaintext_length_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1) or (ap_start = ap_const_logic_0) or (ciphertext_empty_n = ap_const_logic_0) or (plaintext_empty_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                i_1_fu_106 <= ap_const_lv64_0;
-            elsif ((not(((icmp_ln23_pr_reg_194 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state26))) then 
-                i_1_fu_106 <= i_3_fu_425_p2;
+                i_fu_102 <= ap_const_lv64_0;
+            elsif ((not(((icmp_ln25_pr_reg_190 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state25))) then 
+                i_fu_102 <= i_5_fu_401_p2;
             end if; 
         end if;
     end process;
 
-    icmp_ln23_pr_reg_194_assign_proc : process (ap_clk)
+    icmp_ln25_pr_reg_190_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_state12_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
-                icmp_ln23_pr_reg_194 <= icmp_ln23_reg_540;
-            elsif (((ap_const_boolean_0 = ap_block_state4_io) and (ap_const_logic_1 = ap_CS_fsm_state4) and (icmp_ln23_reg_540 = ap_const_lv1_0))) then 
-                icmp_ln23_pr_reg_194 <= ap_const_lv1_0;
+            if (((ap_const_boolean_0 = ap_block_state11_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
+                icmp_ln25_pr_reg_190 <= icmp_ln25_reg_506;
+            elsif (((ap_const_boolean_0 = ap_block_state3_io) and (ap_const_logic_1 = ap_CS_fsm_state3) and (icmp_ln25_reg_506 = ap_const_lv1_0))) then 
+                icmp_ln25_pr_reg_190 <= ap_const_lv1_0;
             end if; 
         end if;
     end process;
 
-    indvars_iv_fu_110_assign_proc : process (ap_clk)
+    indvars_iv6_fu_106_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((plaintext_length_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1) or (ap_start = ap_const_logic_0) or (ciphertext_empty_n = ap_const_logic_0) or (plaintext_empty_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                indvars_iv_fu_110 <= xor_ln21_fu_254_p2;
-            elsif ((not(((icmp_ln23_pr_reg_194 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state26))) then 
-                indvars_iv_fu_110 <= add_ln21_fu_430_p2;
+                indvars_iv6_fu_106 <= xor_ln23_fu_250_p2;
+            elsif ((not(((icmp_ln25_pr_reg_190 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state25))) then 
+                indvars_iv6_fu_106 <= add_ln23_fu_406_p2;
             end if; 
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                add_ln22_1_reg_550 <= add_ln22_1_fu_369_p2;
-                select_ln21_reg_545 <= select_ln21_fu_361_p3;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state3)) then
-                add_ln22_2_reg_528 <= add_ln22_2_fu_333_p2;
-                block_size_reg_534 <= block_size_fu_337_p3;
-                icmp_ln23_reg_540 <= icmp_ln23_fu_343_p2;
+            if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln23_1_fu_275_p2 = ap_const_lv1_1))) then
+                add_ln24_1_reg_494 <= add_ln24_1_fu_314_p2;
+                add_ln24_2_reg_500 <= add_ln24_2_fu_319_p2;
+                icmp_ln25_reg_506 <= icmp_ln25_fu_324_p2;
+                select_ln24_reg_488 <= select_ln24_fu_306_p3;
             end if;
         end if;
     end process;
@@ -1039,26 +1018,24 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                ciphertext_read_reg_460 <= ciphertext_dout;
-                plaintext_length_read_reg_470 <= plaintext_length_dout;
-                plaintext_read_reg_465 <= plaintext_dout;
-                xor_ln21_reg_496 <= xor_ln21_fu_254_p2;
-                xor_ln22_reg_501 <= xor_ln22_fu_260_p2;
+                ciphertext_read_reg_436 <= ciphertext_dout;
+                plaintext_length_read_reg_446 <= plaintext_length_dout;
+                plaintext_read_reg_441 <= plaintext_dout;
+                xor_ln23_reg_472 <= xor_ln23_fu_250_p2;
+                xor_ln24_reg_477 <= xor_ln24_fu_256_p2;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln21_1_fu_279_p2 = ap_const_lv1_1))) then
-                icmp_ln200_reg_523 <= icmp_ln200_fu_327_p2;
-                select_ln22_reg_512 <= select_ln22_fu_310_p3;
-                trunc_ln200_reg_518 <= trunc_ln200_fu_323_p1;
+            if ((ap_const_logic_1 = ap_CS_fsm_state3)) then
+                select_ln23_reg_511 <= select_ln23_fu_341_p3;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, plaintext_length_empty_n, m_axi_gmem_BVALID, plaintext_empty_n, ciphertext_empty_n, ap_CS_fsm_state4, icmp_ln23_reg_540, ap_CS_fsm_state19, ap_phi_mux_icmp_ln23_pr_phi_fu_198_p4, ap_CS_fsm_state26, icmp_ln23_pr_reg_194, ap_CS_fsm_state2, icmp_ln21_1_fu_279_p2, grp_ctr_encrypt_Pipeline_2_fu_215_ap_done, grp_aes_encrypt_block_fu_222_ap_done, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done, grp_ctr_encrypt_Pipeline_4_fu_238_ap_done, ap_block_state4_io, ap_CS_fsm_state12, ap_block_state12_on_subcall_done, ap_CS_fsm_state13, ap_CS_fsm_state17, ap_CS_fsm_state21, ap_block_state19_io)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, plaintext_length_empty_n, m_axi_gmem_BVALID, plaintext_empty_n, ciphertext_empty_n, ap_CS_fsm_state3, icmp_ln25_reg_506, ap_CS_fsm_state18, ap_phi_mux_icmp_ln25_pr_phi_fu_194_p4, ap_CS_fsm_state25, icmp_ln25_pr_reg_190, ap_CS_fsm_state2, icmp_ln23_1_fu_275_p2, grp_ctr_encrypt_Pipeline_2_fu_211_ap_done, grp_aes_encrypt_block_fu_218_ap_done, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done, grp_ctr_encrypt_Pipeline_4_fu_234_ap_done, ap_block_state3_io, ap_CS_fsm_state11, ap_block_state11_on_subcall_done, ap_CS_fsm_state12, ap_CS_fsm_state16, ap_CS_fsm_state20, ap_block_state18_io)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -1068,21 +1045,21 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln21_1_fu_279_p2 = ap_const_lv1_0))) then
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln23_1_fu_275_p2 = ap_const_lv1_0))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
                 end if;
             when ap_ST_fsm_state3 => 
-                ap_NS_fsm <= ap_ST_fsm_state4;
-            when ap_ST_fsm_state4 => 
-                if (((ap_const_boolean_0 = ap_block_state4_io) and (ap_const_logic_1 = ap_CS_fsm_state4) and (icmp_ln23_reg_540 = ap_const_lv1_0))) then
-                    ap_NS_fsm <= ap_ST_fsm_state12;
-                elsif (((ap_const_boolean_0 = ap_block_state4_io) and (ap_const_logic_1 = ap_CS_fsm_state4) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then
-                    ap_NS_fsm <= ap_ST_fsm_state5;
-                else
+                if (((ap_const_boolean_0 = ap_block_state3_io) and (ap_const_logic_1 = ap_CS_fsm_state3) and (icmp_ln25_reg_506 = ap_const_lv1_0))) then
+                    ap_NS_fsm <= ap_ST_fsm_state11;
+                elsif (((ap_const_boolean_0 = ap_block_state3_io) and (ap_const_logic_1 = ap_CS_fsm_state3) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state4;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state3;
                 end if;
+            when ap_ST_fsm_state4 => 
+                ap_NS_fsm <= ap_ST_fsm_state5;
             when ap_ST_fsm_state5 => 
                 ap_NS_fsm <= ap_ST_fsm_state6;
             when ap_ST_fsm_state6 => 
@@ -1096,49 +1073,49 @@ begin
             when ap_ST_fsm_state10 => 
                 ap_NS_fsm <= ap_ST_fsm_state11;
             when ap_ST_fsm_state11 => 
-                ap_NS_fsm <= ap_ST_fsm_state12;
+                if (((ap_const_boolean_0 = ap_block_state11_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state11))) then
+                    ap_NS_fsm <= ap_ST_fsm_state12;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state11;
+                end if;
             when ap_ST_fsm_state12 => 
-                if (((ap_const_boolean_0 = ap_block_state12_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state12))) then
+                if (((grp_ctr_encrypt_Pipeline_2_fu_211_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state12))) then
                     ap_NS_fsm <= ap_ST_fsm_state13;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state12;
                 end if;
             when ap_ST_fsm_state13 => 
-                if (((grp_ctr_encrypt_Pipeline_2_fu_215_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
-                    ap_NS_fsm <= ap_ST_fsm_state14;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_state13;
-                end if;
+                ap_NS_fsm <= ap_ST_fsm_state14;
             when ap_ST_fsm_state14 => 
                 ap_NS_fsm <= ap_ST_fsm_state15;
             when ap_ST_fsm_state15 => 
                 ap_NS_fsm <= ap_ST_fsm_state16;
             when ap_ST_fsm_state16 => 
-                ap_NS_fsm <= ap_ST_fsm_state17;
-            when ap_ST_fsm_state17 => 
-                if (((grp_aes_encrypt_block_fu_222_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then
-                    ap_NS_fsm <= ap_ST_fsm_state18;
-                else
+                if (((grp_aes_encrypt_block_fu_218_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state16))) then
                     ap_NS_fsm <= ap_ST_fsm_state17;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state16;
                 end if;
+            when ap_ST_fsm_state17 => 
+                ap_NS_fsm <= ap_ST_fsm_state18;
             when ap_ST_fsm_state18 => 
-                ap_NS_fsm <= ap_ST_fsm_state19;
-            when ap_ST_fsm_state19 => 
-                if ((not(((ap_const_boolean_1 = ap_block_state19_io) or (grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state19) and (ap_phi_mux_icmp_ln23_pr_phi_fu_198_p4 = ap_const_lv1_0))) then
-                    ap_NS_fsm <= ap_ST_fsm_state26;
-                elsif ((not(((ap_const_boolean_1 = ap_block_state19_io) or (grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state19) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1))) then
-                    ap_NS_fsm <= ap_ST_fsm_state20;
-                else
+                if ((not(((ap_const_boolean_1 = ap_block_state18_io) or (grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state18) and (ap_phi_mux_icmp_ln25_pr_phi_fu_194_p4 = ap_const_lv1_0))) then
+                    ap_NS_fsm <= ap_ST_fsm_state25;
+                elsif ((not(((ap_const_boolean_1 = ap_block_state18_io) or (grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state18) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state19;
-                end if;
-            when ap_ST_fsm_state20 => 
-                ap_NS_fsm <= ap_ST_fsm_state21;
-            when ap_ST_fsm_state21 => 
-                if (((grp_ctr_encrypt_Pipeline_4_fu_238_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state21))) then
-                    ap_NS_fsm <= ap_ST_fsm_state22;
                 else
-                    ap_NS_fsm <= ap_ST_fsm_state21;
+                    ap_NS_fsm <= ap_ST_fsm_state18;
                 end if;
+            when ap_ST_fsm_state19 => 
+                ap_NS_fsm <= ap_ST_fsm_state20;
+            when ap_ST_fsm_state20 => 
+                if (((grp_ctr_encrypt_Pipeline_4_fu_234_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state20))) then
+                    ap_NS_fsm <= ap_ST_fsm_state21;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state20;
+                end if;
+            when ap_ST_fsm_state21 => 
+                ap_NS_fsm <= ap_ST_fsm_state22;
             when ap_ST_fsm_state22 => 
                 ap_NS_fsm <= ap_ST_fsm_state23;
             when ap_ST_fsm_state23 => 
@@ -1146,22 +1123,20 @@ begin
             when ap_ST_fsm_state24 => 
                 ap_NS_fsm <= ap_ST_fsm_state25;
             when ap_ST_fsm_state25 => 
-                ap_NS_fsm <= ap_ST_fsm_state26;
-            when ap_ST_fsm_state26 => 
-                if ((not(((icmp_ln23_pr_reg_194 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state26))) then
+                if ((not(((icmp_ln25_pr_reg_190 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state25))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
-                    ap_NS_fsm <= ap_ST_fsm_state26;
+                    ap_NS_fsm <= ap_ST_fsm_state25;
                 end if;
             when others =>  
-                ap_NS_fsm <= "XXXXXXXXXXXXXXXXXXXXXXXXXX";
+                ap_NS_fsm <= "XXXXXXXXXXXXXXXXXXXXXXXXX";
         end case;
     end process;
-    add_ln21_fu_430_p2 <= std_logic_vector(unsigned(indvars_iv_fu_110) + unsigned(ap_const_lv64_10));
-    add_ln22_1_fu_369_p2 <= std_logic_vector(unsigned(ciphertext_read_reg_460) + unsigned(i_1_fu_106));
-    add_ln22_2_fu_333_p2 <= std_logic_vector(unsigned(plaintext_read_reg_465) + unsigned(i_1_fu_106));
-    add_ln22_3_fu_299_p2 <= std_logic_vector(unsigned(trunc_ln22_fu_284_p1) + unsigned(xor_ln22_reg_501));
-    add_ln22_fu_288_p2 <= std_logic_vector(unsigned(i_1_fu_106) + unsigned(xor_ln21_reg_496));
+    add_ln23_fu_406_p2 <= std_logic_vector(unsigned(indvars_iv6_fu_106) + unsigned(ap_const_lv64_10));
+    add_ln24_1_fu_314_p2 <= std_logic_vector(unsigned(ciphertext_read_reg_436) + unsigned(i_fu_102));
+    add_ln24_2_fu_319_p2 <= std_logic_vector(unsigned(plaintext_read_reg_441) + unsigned(i_fu_102));
+    add_ln24_3_fu_295_p2 <= std_logic_vector(unsigned(trunc_ln24_fu_280_p1) + unsigned(xor_ln24_reg_477));
+    add_ln24_fu_284_p2 <= std_logic_vector(unsigned(i_fu_102) + unsigned(xor_ln23_reg_472));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state10 <= ap_CS_fsm(9);
     ap_CS_fsm_state11 <= ap_CS_fsm(10);
@@ -1175,58 +1150,57 @@ begin
     ap_CS_fsm_state19 <= ap_CS_fsm(18);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state20 <= ap_CS_fsm(19);
-    ap_CS_fsm_state21 <= ap_CS_fsm(20);
-    ap_CS_fsm_state26 <= ap_CS_fsm(25);
+    ap_CS_fsm_state25 <= ap_CS_fsm(24);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
-    ap_CS_fsm_state4 <= ap_CS_fsm(3);
-    ap_NS_fsm_state11 <= ap_NS_fsm(10);
-    ap_NS_fsm_state20 <= ap_NS_fsm(19);
+    ap_CS_fsm_state9 <= ap_CS_fsm(8);
+    ap_NS_fsm_state10 <= ap_NS_fsm(9);
+    ap_NS_fsm_state19 <= ap_NS_fsm(18);
     ap_ST_fsm_state10_blk <= ap_const_logic_0;
-    ap_ST_fsm_state11_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state12_blk_assign_proc : process(ap_block_state12_on_subcall_done)
+    ap_ST_fsm_state11_blk_assign_proc : process(ap_block_state11_on_subcall_done)
     begin
-        if ((ap_const_boolean_1 = ap_block_state12_on_subcall_done)) then 
+        if ((ap_const_boolean_1 = ap_block_state11_on_subcall_done)) then 
+            ap_ST_fsm_state11_blk <= ap_const_logic_1;
+        else 
+            ap_ST_fsm_state11_blk <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_ST_fsm_state12_blk_assign_proc : process(grp_ctr_encrypt_Pipeline_2_fu_211_ap_done)
+    begin
+        if ((grp_ctr_encrypt_Pipeline_2_fu_211_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state12_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state12_blk <= ap_const_logic_0;
         end if; 
     end process;
 
-
-    ap_ST_fsm_state13_blk_assign_proc : process(grp_ctr_encrypt_Pipeline_2_fu_215_ap_done)
-    begin
-        if ((grp_ctr_encrypt_Pipeline_2_fu_215_ap_done = ap_const_logic_0)) then 
-            ap_ST_fsm_state13_blk <= ap_const_logic_1;
-        else 
-            ap_ST_fsm_state13_blk <= ap_const_logic_0;
-        end if; 
-    end process;
-
+    ap_ST_fsm_state13_blk <= ap_const_logic_0;
     ap_ST_fsm_state14_blk <= ap_const_logic_0;
     ap_ST_fsm_state15_blk <= ap_const_logic_0;
-    ap_ST_fsm_state16_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state17_blk_assign_proc : process(grp_aes_encrypt_block_fu_222_ap_done)
+    ap_ST_fsm_state16_blk_assign_proc : process(grp_aes_encrypt_block_fu_218_ap_done)
     begin
-        if ((grp_aes_encrypt_block_fu_222_ap_done = ap_const_logic_0)) then 
-            ap_ST_fsm_state17_blk <= ap_const_logic_1;
+        if ((grp_aes_encrypt_block_fu_218_ap_done = ap_const_logic_0)) then 
+            ap_ST_fsm_state16_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state17_blk <= ap_const_logic_0;
+            ap_ST_fsm_state16_blk <= ap_const_logic_0;
         end if; 
     end process;
 
-    ap_ST_fsm_state18_blk <= ap_const_logic_0;
+    ap_ST_fsm_state17_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state19_blk_assign_proc : process(grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done, ap_block_state19_io)
+    ap_ST_fsm_state18_blk_assign_proc : process(grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done, ap_block_state18_io)
     begin
-        if (((ap_const_boolean_1 = ap_block_state19_io) or (grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done = ap_const_logic_0))) then 
-            ap_ST_fsm_state19_blk <= ap_const_logic_1;
+        if (((ap_const_boolean_1 = ap_block_state18_io) or (grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done = ap_const_logic_0))) then 
+            ap_ST_fsm_state18_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state19_blk <= ap_const_logic_0;
+            ap_ST_fsm_state18_blk <= ap_const_logic_0;
         end if; 
     end process;
 
+    ap_ST_fsm_state19_blk <= ap_const_logic_0;
 
     ap_ST_fsm_state1_blk_assign_proc : process(ap_start, ap_done_reg, plaintext_length_empty_n, plaintext_empty_n, ciphertext_empty_n)
     begin
@@ -1237,43 +1211,42 @@ begin
         end if; 
     end process;
 
-    ap_ST_fsm_state20_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state21_blk_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_ap_done)
+    ap_ST_fsm_state20_blk_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_ap_done)
     begin
-        if ((grp_ctr_encrypt_Pipeline_4_fu_238_ap_done = ap_const_logic_0)) then 
-            ap_ST_fsm_state21_blk <= ap_const_logic_1;
+        if ((grp_ctr_encrypt_Pipeline_4_fu_234_ap_done = ap_const_logic_0)) then 
+            ap_ST_fsm_state20_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state21_blk <= ap_const_logic_0;
+            ap_ST_fsm_state20_blk <= ap_const_logic_0;
         end if; 
     end process;
 
+    ap_ST_fsm_state21_blk <= ap_const_logic_0;
     ap_ST_fsm_state22_blk <= ap_const_logic_0;
     ap_ST_fsm_state23_blk <= ap_const_logic_0;
     ap_ST_fsm_state24_blk <= ap_const_logic_0;
-    ap_ST_fsm_state25_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state26_blk_assign_proc : process(m_axi_gmem_BVALID, icmp_ln23_pr_reg_194)
+    ap_ST_fsm_state25_blk_assign_proc : process(m_axi_gmem_BVALID, icmp_ln25_pr_reg_190)
     begin
-        if (((icmp_ln23_pr_reg_194 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) then 
-            ap_ST_fsm_state26_blk <= ap_const_logic_1;
+        if (((icmp_ln25_pr_reg_190 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) then 
+            ap_ST_fsm_state25_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state26_blk <= ap_const_logic_0;
+            ap_ST_fsm_state25_blk <= ap_const_logic_0;
         end if; 
     end process;
 
     ap_ST_fsm_state2_blk <= ap_const_logic_0;
-    ap_ST_fsm_state3_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state4_blk_assign_proc : process(ap_block_state4_io)
+    ap_ST_fsm_state3_blk_assign_proc : process(ap_block_state3_io)
     begin
-        if ((ap_const_boolean_1 = ap_block_state4_io)) then 
-            ap_ST_fsm_state4_blk <= ap_const_logic_1;
+        if ((ap_const_boolean_1 = ap_block_state3_io)) then 
+            ap_ST_fsm_state3_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state4_blk <= ap_const_logic_0;
+            ap_ST_fsm_state3_blk <= ap_const_logic_0;
         end if; 
     end process;
 
+    ap_ST_fsm_state4_blk <= ap_const_logic_0;
     ap_ST_fsm_state5_blk <= ap_const_logic_0;
     ap_ST_fsm_state6_blk <= ap_const_logic_0;
     ap_ST_fsm_state7_blk <= ap_const_logic_0;
@@ -1286,33 +1259,33 @@ begin
     end process;
 
 
-    ap_block_state12_on_subcall_done_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_ap_done)
+    ap_block_state11_on_subcall_done_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_ap_done)
     begin
-                ap_block_state12_on_subcall_done <= ((grp_ctr_encrypt_Pipeline_1_fu_206_ap_done = ap_const_logic_0) and (icmp_ln23_reg_540 = ap_const_lv1_1));
+                ap_block_state11_on_subcall_done <= ((grp_ctr_encrypt_Pipeline_1_fu_202_ap_done = ap_const_logic_0) and (icmp_ln25_reg_506 = ap_const_lv1_1));
     end process;
 
 
-    ap_block_state19_io_assign_proc : process(m_axi_gmem_AWREADY, icmp_ln23_pr_reg_194)
+    ap_block_state18_io_assign_proc : process(m_axi_gmem_AWREADY, icmp_ln25_pr_reg_190)
     begin
-                ap_block_state19_io <= ((m_axi_gmem_AWREADY = ap_const_logic_0) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1));
+                ap_block_state18_io <= ((m_axi_gmem_AWREADY = ap_const_logic_0) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1));
     end process;
 
 
-    ap_block_state26_assign_proc : process(m_axi_gmem_BVALID, icmp_ln23_pr_reg_194)
+    ap_block_state25_assign_proc : process(m_axi_gmem_BVALID, icmp_ln25_pr_reg_190)
     begin
-                ap_block_state26 <= ((icmp_ln23_pr_reg_194 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0));
+                ap_block_state25 <= ((icmp_ln25_pr_reg_190 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0));
     end process;
 
 
-    ap_block_state4_io_assign_proc : process(m_axi_gmem_ARREADY, icmp_ln23_reg_540)
+    ap_block_state3_io_assign_proc : process(m_axi_gmem_ARREADY, icmp_ln25_reg_506)
     begin
-                ap_block_state4_io <= ((m_axi_gmem_ARREADY = ap_const_logic_0) and (icmp_ln23_reg_540 = ap_const_lv1_1));
+                ap_block_state3_io <= ((m_axi_gmem_ARREADY = ap_const_logic_0) and (icmp_ln25_reg_506 = ap_const_lv1_1));
     end process;
 
 
-    ap_done_assign_proc : process(ap_done_reg, ap_CS_fsm_state2, icmp_ln21_1_fu_279_p2)
+    ap_done_assign_proc : process(ap_done_reg, ap_CS_fsm_state2, icmp_ln23_1_fu_275_p2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln21_1_fu_279_p2 = ap_const_lv1_0))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln23_1_fu_275_p2 = ap_const_lv1_0))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_done_reg;
@@ -1329,11 +1302,11 @@ begin
         end if; 
     end process;
 
-    ap_phi_mux_icmp_ln23_pr_phi_fu_198_p4 <= icmp_ln23_pr_reg_194;
+    ap_phi_mux_icmp_ln25_pr_phi_fu_194_p4 <= icmp_ln25_pr_reg_190;
 
-    ap_ready_assign_proc : process(ap_CS_fsm_state2, icmp_ln21_1_fu_279_p2)
+    ap_ready_assign_proc : process(ap_CS_fsm_state2, icmp_ln23_1_fu_275_p2)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln21_1_fu_279_p2 = ap_const_lv1_0))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state2) and (icmp_ln23_1_fu_275_p2 = ap_const_lv1_0))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -1341,181 +1314,178 @@ begin
     end process;
 
 
-    block_address0_assign_proc : process(icmp_ln23_reg_540, ap_CS_fsm_state19, grp_ctr_encrypt_Pipeline_1_fu_206_block_r_address0, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_address0, grp_ctr_encrypt_Pipeline_4_fu_238_block_r_address0, ap_CS_fsm_state12, ap_CS_fsm_state21)
+    block_address0_assign_proc : process(icmp_ln25_reg_506, ap_CS_fsm_state18, grp_ctr_encrypt_Pipeline_1_fu_202_block_r_address0, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_address0, grp_ctr_encrypt_Pipeline_4_fu_234_block_r_address0, ap_CS_fsm_state11, ap_CS_fsm_state20)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state21)) then 
-            block_address0 <= grp_ctr_encrypt_Pipeline_4_fu_238_block_r_address0;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state19)) then 
-            block_address0 <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_address0;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
-            block_address0 <= grp_ctr_encrypt_Pipeline_1_fu_206_block_r_address0;
+        if ((ap_const_logic_1 = ap_CS_fsm_state20)) then 
+            block_address0 <= grp_ctr_encrypt_Pipeline_4_fu_234_block_r_address0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
+            block_address0 <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_address0;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
+            block_address0 <= grp_ctr_encrypt_Pipeline_1_fu_202_block_r_address0;
         else 
             block_address0 <= "XXXX";
         end if; 
     end process;
 
 
-    block_ce0_assign_proc : process(icmp_ln23_reg_540, ap_CS_fsm_state19, grp_ctr_encrypt_Pipeline_1_fu_206_block_r_ce0, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce0, grp_ctr_encrypt_Pipeline_4_fu_238_block_r_ce0, ap_CS_fsm_state12, ap_CS_fsm_state21)
+    block_ce0_assign_proc : process(icmp_ln25_reg_506, ap_CS_fsm_state18, grp_ctr_encrypt_Pipeline_1_fu_202_block_r_ce0, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce0, grp_ctr_encrypt_Pipeline_4_fu_234_block_r_ce0, ap_CS_fsm_state11, ap_CS_fsm_state20)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state21)) then 
-            block_ce0 <= grp_ctr_encrypt_Pipeline_4_fu_238_block_r_ce0;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state19)) then 
-            block_ce0 <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce0;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
-            block_ce0 <= grp_ctr_encrypt_Pipeline_1_fu_206_block_r_ce0;
+        if ((ap_const_logic_1 = ap_CS_fsm_state20)) then 
+            block_ce0 <= grp_ctr_encrypt_Pipeline_4_fu_234_block_r_ce0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
+            block_ce0 <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce0;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
+            block_ce0 <= grp_ctr_encrypt_Pipeline_1_fu_202_block_r_ce0;
         else 
             block_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    block_ce1_assign_proc : process(ap_CS_fsm_state19, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce1)
+    block_ce1_assign_proc : process(ap_CS_fsm_state18, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce1)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state19)) then 
-            block_ce1 <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_ce1;
+        if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
+            block_ce1 <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_ce1;
         else 
             block_ce1 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    block_d0_assign_proc : process(icmp_ln23_reg_540, ap_CS_fsm_state19, grp_ctr_encrypt_Pipeline_1_fu_206_block_r_d0, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_d0, ap_CS_fsm_state12)
+    block_d0_assign_proc : process(icmp_ln25_reg_506, ap_CS_fsm_state18, grp_ctr_encrypt_Pipeline_1_fu_202_block_r_d0, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_d0, ap_CS_fsm_state11)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state19)) then 
-            block_d0 <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_d0;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
-            block_d0 <= grp_ctr_encrypt_Pipeline_1_fu_206_block_r_d0;
+        if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
+            block_d0 <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_d0;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
+            block_d0 <= grp_ctr_encrypt_Pipeline_1_fu_202_block_r_d0;
         else 
             block_d0 <= "XXXXXXXX";
         end if; 
     end process;
 
 
-    block_nonce_address0_assign_proc : process(ap_CS_fsm_state19, grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_address0, grp_aes_encrypt_block_fu_222_state_address0, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_address0, ap_CS_fsm_state13, ap_CS_fsm_state17, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_address0_assign_proc : process(ap_CS_fsm_state18, grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_address0, grp_aes_encrypt_block_fu_218_state_address0, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_address0, ap_CS_fsm_state12, ap_CS_fsm_state16, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
             block_nonce_address0 <= ap_const_lv64_F(4 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
-            block_nonce_address0 <= ap_const_lv64_D(4 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state19)) then 
-            block_nonce_address0 <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_address0;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_address0 <= grp_aes_encrypt_block_fu_222_state_address0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            block_nonce_address0 <= grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_address0;
+            block_nonce_address0 <= ap_const_lv64_D(4 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
+            block_nonce_address0 <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_address0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_address0 <= grp_aes_encrypt_block_fu_218_state_address0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
+            block_nonce_address0 <= grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_address0;
         else 
             block_nonce_address0 <= "XXXX";
         end if; 
     end process;
 
 
-    block_nonce_address1_assign_proc : process(grp_aes_encrypt_block_fu_222_state_address1, ap_CS_fsm_state17, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_address1_assign_proc : process(grp_aes_encrypt_block_fu_218_state_address1, ap_CS_fsm_state16, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
             block_nonce_address1 <= ap_const_lv64_E(4 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
             block_nonce_address1 <= ap_const_lv64_C(4 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_address1 <= grp_aes_encrypt_block_fu_222_state_address1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_address1 <= grp_aes_encrypt_block_fu_218_state_address1;
         else 
             block_nonce_address1 <= "XXXX";
         end if; 
     end process;
 
 
-    block_nonce_ce0_assign_proc : process(ap_CS_fsm_state19, grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_ce0, grp_aes_encrypt_block_fu_222_state_ce0, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_ce0, ap_CS_fsm_state13, ap_CS_fsm_state17, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_ce0_assign_proc : process(ap_CS_fsm_state18, grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_ce0, grp_aes_encrypt_block_fu_218_state_ce0, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_ce0, ap_CS_fsm_state12, ap_CS_fsm_state16, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state14))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state13))) then 
             block_nonce_ce0 <= ap_const_logic_1;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state19)) then 
-            block_nonce_ce0 <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_nonce_ce0;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_ce0 <= grp_aes_encrypt_block_fu_222_state_ce0;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            block_nonce_ce0 <= grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_ce0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
+            block_nonce_ce0 <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_nonce_ce0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_ce0 <= grp_aes_encrypt_block_fu_218_state_ce0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
+            block_nonce_ce0 <= grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_ce0;
         else 
             block_nonce_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    block_nonce_ce1_assign_proc : process(grp_aes_encrypt_block_fu_222_state_ce1, ap_CS_fsm_state17, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_ce1_assign_proc : process(grp_aes_encrypt_block_fu_218_state_ce1, ap_CS_fsm_state16, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state14))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state13))) then 
             block_nonce_ce1 <= ap_const_logic_1;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_ce1 <= grp_aes_encrypt_block_fu_222_state_ce1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_ce1 <= grp_aes_encrypt_block_fu_218_state_ce1;
         else 
             block_nonce_ce1 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    block_nonce_d0_assign_proc : process(grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_d0, grp_aes_encrypt_block_fu_222_state_d0, ap_CS_fsm_state13, ap_CS_fsm_state17, i_1_fu_106, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_d0_assign_proc : process(grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_d0, grp_aes_encrypt_block_fu_218_state_d0, ap_CS_fsm_state12, ap_CS_fsm_state16, i_fu_102, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
-            block_nonce_d0 <= i_1_fu_106(11 downto 4);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
-            block_nonce_d0 <= i_1_fu_106(27 downto 20);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_d0 <= grp_aes_encrypt_block_fu_222_state_d0;
+        if ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
+            block_nonce_d0 <= i_fu_102(11 downto 4);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            block_nonce_d0 <= grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_d0;
+            block_nonce_d0 <= i_fu_102(27 downto 20);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_d0 <= grp_aes_encrypt_block_fu_218_state_d0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
+            block_nonce_d0 <= grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_d0;
         else 
             block_nonce_d0 <= "XXXXXXXX";
         end if; 
     end process;
 
 
-    block_nonce_d1_assign_proc : process(grp_aes_encrypt_block_fu_222_state_d1, ap_CS_fsm_state17, i_1_fu_106, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_d1_assign_proc : process(grp_aes_encrypt_block_fu_218_state_d1, ap_CS_fsm_state16, i_fu_102, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
-            block_nonce_d1 <= i_1_fu_106(19 downto 12);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
-            block_nonce_d1 <= i_1_fu_106(35 downto 28);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_d1 <= grp_aes_encrypt_block_fu_222_state_d1;
+        if ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
+            block_nonce_d1 <= i_fu_102(19 downto 12);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
+            block_nonce_d1 <= i_fu_102(35 downto 28);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_d1 <= grp_aes_encrypt_block_fu_218_state_d1;
         else 
             block_nonce_d1 <= "XXXXXXXX";
         end if; 
     end process;
 
 
-    block_nonce_we0_assign_proc : process(grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_we0, grp_aes_encrypt_block_fu_222_state_we0, ap_CS_fsm_state13, ap_CS_fsm_state17, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_we0_assign_proc : process(grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_we0, grp_aes_encrypt_block_fu_218_state_we0, ap_CS_fsm_state12, ap_CS_fsm_state16, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state14))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state13))) then 
             block_nonce_we0 <= ap_const_logic_1;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_we0 <= grp_aes_encrypt_block_fu_222_state_we0;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            block_nonce_we0 <= grp_ctr_encrypt_Pipeline_2_fu_215_block_nonce_we0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_we0 <= grp_aes_encrypt_block_fu_218_state_we0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
+            block_nonce_we0 <= grp_ctr_encrypt_Pipeline_2_fu_211_block_nonce_we0;
         else 
             block_nonce_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    block_nonce_we1_assign_proc : process(grp_aes_encrypt_block_fu_222_state_we1, ap_CS_fsm_state17, ap_CS_fsm_state14, ap_CS_fsm_state15)
+    block_nonce_we1_assign_proc : process(grp_aes_encrypt_block_fu_218_state_we1, ap_CS_fsm_state16, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state14))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state13))) then 
             block_nonce_we1 <= ap_const_logic_1;
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-            block_nonce_we1 <= grp_aes_encrypt_block_fu_222_state_we1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state16)) then 
+            block_nonce_we1 <= grp_aes_encrypt_block_fu_218_state_we1;
         else 
             block_nonce_we1 <= ap_const_logic_0;
         end if; 
     end process;
 
-    block_size_fu_337_p3 <= 
-        ap_const_lv5_10 when (icmp_ln200_reg_523(0) = '1') else 
-        trunc_ln200_reg_518;
 
-    block_we0_assign_proc : process(icmp_ln23_reg_540, ap_CS_fsm_state19, grp_ctr_encrypt_Pipeline_1_fu_206_block_r_we0, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_we0, ap_CS_fsm_state12)
+    block_we0_assign_proc : process(icmp_ln25_reg_506, ap_CS_fsm_state18, grp_ctr_encrypt_Pipeline_1_fu_202_block_r_we0, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_we0, ap_CS_fsm_state11)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state19)) then 
-            block_we0 <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_block_r_we0;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
-            block_we0 <= grp_ctr_encrypt_Pipeline_1_fu_206_block_r_we0;
+        if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
+            block_we0 <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_block_r_we0;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
+            block_we0 <= grp_ctr_encrypt_Pipeline_1_fu_202_block_r_we0;
         else 
             block_we0 <= ap_const_logic_0;
         end if; 
@@ -1542,9 +1512,9 @@ begin
     end process;
 
 
-    gmem_blk_n_AR_assign_proc : process(m_axi_gmem_ARREADY, ap_CS_fsm_state4, icmp_ln23_reg_540)
+    gmem_blk_n_AR_assign_proc : process(m_axi_gmem_ARREADY, ap_CS_fsm_state3, icmp_ln25_reg_506)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state4) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state3) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
             gmem_blk_n_AR <= m_axi_gmem_ARREADY;
         else 
             gmem_blk_n_AR <= ap_const_logic_1;
@@ -1552,9 +1522,9 @@ begin
     end process;
 
 
-    gmem_blk_n_AW_assign_proc : process(m_axi_gmem_AWREADY, ap_CS_fsm_state19, icmp_ln23_pr_reg_194)
+    gmem_blk_n_AW_assign_proc : process(m_axi_gmem_AWREADY, ap_CS_fsm_state18, icmp_ln25_pr_reg_190)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state19) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1))) then 
             gmem_blk_n_AW <= m_axi_gmem_AWREADY;
         else 
             gmem_blk_n_AW <= ap_const_logic_1;
@@ -1562,310 +1532,309 @@ begin
     end process;
 
 
-    gmem_blk_n_B_assign_proc : process(m_axi_gmem_BVALID, ap_CS_fsm_state26, icmp_ln23_pr_reg_194)
+    gmem_blk_n_B_assign_proc : process(m_axi_gmem_BVALID, ap_CS_fsm_state25, icmp_ln25_pr_reg_190)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state26) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state25) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1))) then 
             gmem_blk_n_B <= m_axi_gmem_BVALID;
         else 
             gmem_blk_n_B <= ap_const_logic_1;
         end if; 
     end process;
 
-    grp_aes_encrypt_block_fu_222_ap_start <= grp_aes_encrypt_block_fu_222_ap_start_reg;
-    grp_ctr_encrypt_Pipeline_1_fu_206_ap_start <= grp_ctr_encrypt_Pipeline_1_fu_206_ap_start_reg;
-    grp_ctr_encrypt_Pipeline_2_fu_215_ap_start <= grp_ctr_encrypt_Pipeline_2_fu_215_ap_start_reg;
-    grp_ctr_encrypt_Pipeline_4_fu_238_ap_start <= grp_ctr_encrypt_Pipeline_4_fu_238_ap_start_reg;
-    grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start <= grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start_reg;
-    i_3_fu_425_p2 <= std_logic_vector(unsigned(i_1_fu_106) + unsigned(ap_const_lv64_10));
-    icmp_ln200_fu_327_p2 <= "1" when (unsigned(sub_ln22_fu_318_p2) > unsigned(ap_const_lv64_10)) else "0";
-    icmp_ln21_1_fu_279_p2 <= "1" when (unsigned(i_1_fu_106) < unsigned(plaintext_length_read_reg_470)) else "0";
-    icmp_ln21_fu_349_p2 <= "1" when (unsigned(indvars_iv_fu_110) > unsigned(ap_const_lv64_FFFFFFFFFFFFFFEF)) else "0";
-    icmp_ln22_fu_293_p2 <= "1" when (unsigned(add_ln22_fu_288_p2) > unsigned(ap_const_lv64_FFFFFFFFFFFFFFEF)) else "0";
-    icmp_ln23_fu_343_p2 <= "0" when (block_size_fu_337_p3 = ap_const_lv5_0) else "1";
+    grp_aes_encrypt_block_fu_218_ap_start <= grp_aes_encrypt_block_fu_218_ap_start_reg;
+    grp_ctr_encrypt_Pipeline_1_fu_202_ap_start <= grp_ctr_encrypt_Pipeline_1_fu_202_ap_start_reg;
+    grp_ctr_encrypt_Pipeline_2_fu_211_ap_start <= grp_ctr_encrypt_Pipeline_2_fu_211_ap_start_reg;
+    grp_ctr_encrypt_Pipeline_4_fu_234_ap_start <= grp_ctr_encrypt_Pipeline_4_fu_234_ap_start_reg;
+    grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start <= grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start_reg;
+    i_5_fu_401_p2 <= std_logic_vector(unsigned(i_fu_102) + unsigned(ap_const_lv64_10));
+    icmp_ln23_1_fu_275_p2 <= "1" when (unsigned(i_fu_102) < unsigned(plaintext_length_read_reg_446)) else "0";
+    icmp_ln23_fu_329_p2 <= "1" when (unsigned(indvars_iv6_fu_106) > unsigned(ap_const_lv64_FFFFFFFFFFFFFFEF)) else "0";
+    icmp_ln24_fu_289_p2 <= "1" when (unsigned(add_ln24_fu_284_p2) > unsigned(ap_const_lv64_FFFFFFFFFFFFFFEF)) else "0";
+    icmp_ln25_fu_324_p2 <= "0" when (i_fu_102 = plaintext_length_read_reg_446) else "1";
 
-    m_axi_gmem_ARADDR_assign_proc : process(ap_CS_fsm_state4, icmp_ln23_reg_540, add_ln22_2_reg_528, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARADDR, ap_block_state4_io, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARADDR_assign_proc : process(ap_CS_fsm_state3, icmp_ln25_reg_506, add_ln24_2_reg_500, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARADDR, ap_block_state3_io, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_boolean_0 = ap_block_state4_io) and (ap_const_logic_1 = ap_CS_fsm_state4) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
-            m_axi_gmem_ARADDR <= add_ln22_2_reg_528;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARADDR <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARADDR;
+        if (((ap_const_boolean_0 = ap_block_state3_io) and (ap_const_logic_1 = ap_CS_fsm_state3) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
+            m_axi_gmem_ARADDR <= add_ln24_2_reg_500;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARADDR <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARADDR;
         else 
             m_axi_gmem_ARADDR <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    m_axi_gmem_ARBURST_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARBURST, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARBURST_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARBURST, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARBURST <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARBURST;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARBURST <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARBURST;
         else 
             m_axi_gmem_ARBURST <= ap_const_lv2_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARCACHE_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARCACHE, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARCACHE_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARCACHE, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARCACHE <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARCACHE;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARCACHE <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARCACHE;
         else 
             m_axi_gmem_ARCACHE <= ap_const_lv4_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARID_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARID, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARID_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARID, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARID <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARID;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARID <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARID;
         else 
             m_axi_gmem_ARID <= ap_const_lv1_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARLEN_assign_proc : process(ap_CS_fsm_state4, icmp_ln23_reg_540, select_ln22_reg_512, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLEN, ap_block_state4_io, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARLEN_assign_proc : process(ap_CS_fsm_state3, icmp_ln25_reg_506, select_ln24_reg_488, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLEN, ap_block_state3_io, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_boolean_0 = ap_block_state4_io) and (ap_const_logic_1 = ap_CS_fsm_state4) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
-            m_axi_gmem_ARLEN <= select_ln22_reg_512;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARLEN <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLEN;
+        if (((ap_const_boolean_0 = ap_block_state3_io) and (ap_const_logic_1 = ap_CS_fsm_state3) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
+            m_axi_gmem_ARLEN <= select_ln24_reg_488;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARLEN <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLEN;
         else 
             m_axi_gmem_ARLEN <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    m_axi_gmem_ARLOCK_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLOCK, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARLOCK_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLOCK, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARLOCK <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARLOCK;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARLOCK <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARLOCK;
         else 
             m_axi_gmem_ARLOCK <= ap_const_lv2_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARPROT_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARPROT, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARPROT_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARPROT, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARPROT <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARPROT;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARPROT <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARPROT;
         else 
             m_axi_gmem_ARPROT <= ap_const_lv3_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARQOS_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARQOS, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARQOS_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARQOS, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARQOS <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARQOS;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARQOS <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARQOS;
         else 
             m_axi_gmem_ARQOS <= ap_const_lv4_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARREGION_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARREGION, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARREGION_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARREGION, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARREGION <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARREGION;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARREGION <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARREGION;
         else 
             m_axi_gmem_ARREGION <= ap_const_lv4_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARSIZE_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARSIZE, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARSIZE_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARSIZE, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARSIZE <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARSIZE;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARSIZE <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARSIZE;
         else 
             m_axi_gmem_ARSIZE <= ap_const_lv3_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARUSER_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARUSER, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARUSER_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARUSER, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARUSER <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARUSER;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARUSER <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARUSER;
         else 
             m_axi_gmem_ARUSER <= ap_const_lv1_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_ARVALID_assign_proc : process(ap_CS_fsm_state4, icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARVALID, ap_block_state4_io, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_ARVALID_assign_proc : process(ap_CS_fsm_state3, icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARVALID, ap_block_state3_io, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_boolean_0 = ap_block_state4_io) and (ap_const_logic_1 = ap_CS_fsm_state4) and (icmp_ln23_reg_540 = ap_const_lv1_1))) then 
+        if (((ap_const_boolean_0 = ap_block_state3_io) and (ap_const_logic_1 = ap_CS_fsm_state3) and (icmp_ln25_reg_506 = ap_const_lv1_1))) then 
             m_axi_gmem_ARVALID <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_ARVALID <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_ARVALID;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_ARVALID <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_ARVALID;
         else 
             m_axi_gmem_ARVALID <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWADDR_assign_proc : process(ap_CS_fsm_state19, icmp_ln23_pr_reg_194, add_ln22_1_reg_550, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done, grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWADDR, ap_CS_fsm_state20, ap_CS_fsm_state21, ap_block_state19_io)
+    m_axi_gmem_AWADDR_assign_proc : process(ap_CS_fsm_state18, icmp_ln25_pr_reg_190, add_ln24_1_reg_494, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done, grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWADDR, ap_CS_fsm_state19, ap_CS_fsm_state20, ap_block_state18_io)
     begin
-        if ((not(((ap_const_boolean_1 = ap_block_state19_io) or (grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state19) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1))) then 
-            m_axi_gmem_AWADDR <= add_ln22_1_reg_550;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWADDR <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWADDR;
+        if ((not(((ap_const_boolean_1 = ap_block_state18_io) or (grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state18) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1))) then 
+            m_axi_gmem_AWADDR <= add_ln24_1_reg_494;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWADDR <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWADDR;
         else 
             m_axi_gmem_AWADDR <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    m_axi_gmem_AWBURST_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWBURST, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWBURST_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWBURST, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWBURST <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWBURST;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWBURST <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWBURST;
         else 
             m_axi_gmem_AWBURST <= ap_const_lv2_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWCACHE_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWCACHE, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWCACHE_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWCACHE, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWCACHE <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWCACHE;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWCACHE <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWCACHE;
         else 
             m_axi_gmem_AWCACHE <= ap_const_lv4_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWID_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWID, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWID_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWID, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWID <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWID;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWID <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWID;
         else 
             m_axi_gmem_AWID <= ap_const_lv1_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWLEN_assign_proc : process(ap_CS_fsm_state19, icmp_ln23_pr_reg_194, select_ln22_reg_512, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done, grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLEN, ap_CS_fsm_state20, ap_CS_fsm_state21, ap_block_state19_io)
+    m_axi_gmem_AWLEN_assign_proc : process(ap_CS_fsm_state18, icmp_ln25_pr_reg_190, select_ln24_reg_488, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done, grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLEN, ap_CS_fsm_state19, ap_CS_fsm_state20, ap_block_state18_io)
     begin
-        if ((not(((ap_const_boolean_1 = ap_block_state19_io) or (grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state19) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1))) then 
-            m_axi_gmem_AWLEN <= select_ln22_reg_512;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWLEN <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLEN;
+        if ((not(((ap_const_boolean_1 = ap_block_state18_io) or (grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state18) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1))) then 
+            m_axi_gmem_AWLEN <= select_ln24_reg_488;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWLEN <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLEN;
         else 
             m_axi_gmem_AWLEN <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    m_axi_gmem_AWLOCK_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLOCK, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWLOCK_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLOCK, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWLOCK <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWLOCK;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWLOCK <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWLOCK;
         else 
             m_axi_gmem_AWLOCK <= ap_const_lv2_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWPROT_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWPROT, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWPROT_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWPROT, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWPROT <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWPROT;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWPROT <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWPROT;
         else 
             m_axi_gmem_AWPROT <= ap_const_lv3_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWQOS_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWQOS, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWQOS_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWQOS, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWQOS <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWQOS;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWQOS <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWQOS;
         else 
             m_axi_gmem_AWQOS <= ap_const_lv4_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWREGION_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWREGION, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWREGION_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWREGION, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWREGION <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWREGION;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWREGION <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWREGION;
         else 
             m_axi_gmem_AWREGION <= ap_const_lv4_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWSIZE_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWSIZE, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWSIZE_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWSIZE, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWSIZE <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWSIZE;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWSIZE <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWSIZE;
         else 
             m_axi_gmem_AWSIZE <= ap_const_lv3_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWUSER_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWUSER, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_AWUSER_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWUSER, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWUSER <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWUSER;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWUSER <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWUSER;
         else 
             m_axi_gmem_AWUSER <= ap_const_lv1_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_AWVALID_assign_proc : process(ap_CS_fsm_state19, icmp_ln23_pr_reg_194, grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done, grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWVALID, ap_CS_fsm_state20, ap_CS_fsm_state21, ap_block_state19_io)
+    m_axi_gmem_AWVALID_assign_proc : process(ap_CS_fsm_state18, icmp_ln25_pr_reg_190, grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done, grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWVALID, ap_CS_fsm_state19, ap_CS_fsm_state20, ap_block_state18_io)
     begin
-        if ((not(((ap_const_boolean_1 = ap_block_state19_io) or (grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state19) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1))) then 
+        if ((not(((ap_const_boolean_1 = ap_block_state18_io) or (grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state18) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1))) then 
             m_axi_gmem_AWVALID <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_AWVALID <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_AWVALID;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_AWVALID <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_AWVALID;
         else 
             m_axi_gmem_AWVALID <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_BREADY_assign_proc : process(m_axi_gmem_BVALID, ap_CS_fsm_state26, icmp_ln23_pr_reg_194, grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_BREADY, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_BREADY_assign_proc : process(m_axi_gmem_BVALID, ap_CS_fsm_state25, icmp_ln25_pr_reg_190, grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_BREADY, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if ((not(((icmp_ln23_pr_reg_194 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state26) and (icmp_ln23_pr_reg_194 = ap_const_lv1_1))) then 
+        if ((not(((icmp_ln25_pr_reg_190 = ap_const_lv1_1) and (m_axi_gmem_BVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state25) and (icmp_ln25_pr_reg_190 = ap_const_lv1_1))) then 
             m_axi_gmem_BREADY <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_BREADY <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_BREADY;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_BREADY <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_BREADY;
         else 
             m_axi_gmem_BREADY <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    m_axi_gmem_RREADY_assign_proc : process(icmp_ln23_reg_540, grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_RREADY, ap_CS_fsm_state12, ap_CS_fsm_state11)
+    m_axi_gmem_RREADY_assign_proc : process(icmp_ln25_reg_506, grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_RREADY, ap_CS_fsm_state11, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state11) or ((ap_const_logic_1 = ap_CS_fsm_state12) and (icmp_ln23_reg_540 = ap_const_lv1_1)))) then 
-            m_axi_gmem_RREADY <= grp_ctr_encrypt_Pipeline_1_fu_206_m_axi_gmem_RREADY;
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) or ((ap_const_logic_1 = ap_CS_fsm_state11) and (icmp_ln25_reg_506 = ap_const_lv1_1)))) then 
+            m_axi_gmem_RREADY <= grp_ctr_encrypt_Pipeline_1_fu_202_m_axi_gmem_RREADY;
         else 
             m_axi_gmem_RREADY <= ap_const_logic_0;
         end if; 
     end process;
 
-    m_axi_gmem_WDATA <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WDATA;
-    m_axi_gmem_WID <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WID;
-    m_axi_gmem_WLAST <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WLAST;
-    m_axi_gmem_WSTRB <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WSTRB;
-    m_axi_gmem_WUSER <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WUSER;
+    m_axi_gmem_WDATA <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WDATA;
+    m_axi_gmem_WID <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WID;
+    m_axi_gmem_WLAST <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WLAST;
+    m_axi_gmem_WSTRB <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WSTRB;
+    m_axi_gmem_WUSER <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WUSER;
 
-    m_axi_gmem_WVALID_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WVALID, ap_CS_fsm_state20, ap_CS_fsm_state21)
+    m_axi_gmem_WVALID_assign_proc : process(grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WVALID, ap_CS_fsm_state19, ap_CS_fsm_state20)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state21) or (ap_const_logic_1 = ap_CS_fsm_state20))) then 
-            m_axi_gmem_WVALID <= grp_ctr_encrypt_Pipeline_4_fu_238_m_axi_gmem_WVALID;
+        if (((ap_const_logic_1 = ap_CS_fsm_state20) or (ap_const_logic_1 = ap_CS_fsm_state19))) then 
+            m_axi_gmem_WVALID <= grp_ctr_encrypt_Pipeline_4_fu_234_m_axi_gmem_WVALID;
         else 
             m_axi_gmem_WVALID <= ap_const_logic_0;
         end if; 
@@ -1911,24 +1880,22 @@ begin
         end if; 
     end process;
 
-    pynqrypt_round_keys_address0 <= grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_address0;
-    pynqrypt_round_keys_address1 <= grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_address1;
-    pynqrypt_round_keys_ce0 <= grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_ce0;
-    pynqrypt_round_keys_ce1 <= grp_aes_encrypt_block_fu_222_pynqrypt_round_keys_ce1;
-    select_ln21_fu_361_p3 <= 
-        xor_ln21_1_fu_355_p2 when (icmp_ln21_fu_349_p2(0) = '1') else 
+    pynqrypt_round_keys_address0 <= grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_address0;
+    pynqrypt_round_keys_address1 <= grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_address1;
+    pynqrypt_round_keys_ce0 <= grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_ce0;
+    pynqrypt_round_keys_ce1 <= grp_aes_encrypt_block_fu_218_pynqrypt_round_keys_ce1;
+    select_ln23_fu_341_p3 <= 
+        xor_ln23_1_fu_335_p2 when (icmp_ln23_fu_329_p2(0) = '1') else 
         ap_const_lv64_10;
-    select_ln22_fu_310_p3 <= 
-        xor_ln22_1_fu_304_p2 when (icmp_ln22_fu_293_p2(0) = '1') else 
+    select_ln24_fu_306_p3 <= 
+        xor_ln24_1_fu_300_p2 when (icmp_ln24_fu_289_p2(0) = '1') else 
         ap_const_lv32_10;
-    sub_ln22_fu_318_p2 <= std_logic_vector(unsigned(plaintext_length_read_reg_470) - unsigned(i_1_fu_106));
-    this_nonce_address0 <= grp_ctr_encrypt_Pipeline_2_fu_215_this_nonce_address0;
-    this_nonce_ce0 <= grp_ctr_encrypt_Pipeline_2_fu_215_this_nonce_ce0;
-    trunc_ln200_fu_323_p1 <= sub_ln22_fu_318_p2(5 - 1 downto 0);
-    trunc_ln21_fu_250_p1 <= plaintext_length_dout(32 - 1 downto 0);
-    trunc_ln22_fu_284_p1 <= i_1_fu_106(32 - 1 downto 0);
-    xor_ln21_1_fu_355_p2 <= (indvars_iv_fu_110 xor ap_const_lv64_FFFFFFFFFFFFFFFF);
-    xor_ln21_fu_254_p2 <= (plaintext_length_dout xor ap_const_lv64_FFFFFFFFFFFFFFFF);
-    xor_ln22_1_fu_304_p2 <= (ap_const_lv32_FFFFFFFF xor add_ln22_3_fu_299_p2);
-    xor_ln22_fu_260_p2 <= (trunc_ln21_fu_250_p1 xor ap_const_lv32_FFFFFFFF);
+    this_nonce_address0 <= grp_ctr_encrypt_Pipeline_2_fu_211_this_nonce_address0;
+    this_nonce_ce0 <= grp_ctr_encrypt_Pipeline_2_fu_211_this_nonce_ce0;
+    trunc_ln23_fu_246_p1 <= plaintext_length_dout(32 - 1 downto 0);
+    trunc_ln24_fu_280_p1 <= i_fu_102(32 - 1 downto 0);
+    xor_ln23_1_fu_335_p2 <= (indvars_iv6_fu_106 xor ap_const_lv64_FFFFFFFFFFFFFFFF);
+    xor_ln23_fu_250_p2 <= (plaintext_length_dout xor ap_const_lv64_FFFFFFFFFFFFFFFF);
+    xor_ln24_1_fu_300_p2 <= (ap_const_lv32_FFFFFFFF xor add_ln24_3_fu_295_p2);
+    xor_ln24_fu_256_p2 <= (trunc_ln23_fu_246_p1 xor ap_const_lv32_FFFFFFFF);
 end behav;
