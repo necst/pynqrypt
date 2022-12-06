@@ -1,0 +1,147 @@
+
+
+================================================================
+== Vitis HLS Report for 'Loop_3_proc_Pipeline_1'
+================================================================
+* Date:           Tue Dec  6 01:26:16 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        pynqrypt-vitis-hls
+* Solution:       pynqrypt (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020i-clg400-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.904 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       16|       16|         2|          1|          1|    16|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     27|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     45|    -|
+|Register         |        -|    -|      13|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      13|     72|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |empty_67_fu_74_p2          |         +|   0|  0|  13|           5|           1|
+    |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
+    |exitcond910_fu_68_p2       |      icmp|   0|  0|  10|           5|           6|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  27|          12|          10|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_loop_index_i_i_load  |   9|          2|    5|         10|
+    |loop_index_i_i_fu_36                  |   9|          2|    5|         10|
+    |pynqrypt_key_blk_n                    |   9|          2|    1|          2|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  45|         10|   13|         26|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+---+----+-----+-----------+
+    |            Name            | FF| LUT| Bits| Const Bits|
+    +----------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                   |  1|   0|    1|          0|
+    |ap_done_reg                 |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1     |  1|   0|    1|          0|
+    |loop_index_i_i_fu_36        |  5|   0|    5|          0|
+    |loop_index_i_i_load_reg_96  |  5|   0|    5|          0|
+    +----------------------------+---+----+-----+-----------+
+    |Total                       | 13|   0|   13|          0|
+    +----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  Loop_3_proc_Pipeline_1|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  Loop_3_proc_Pipeline_1|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  Loop_3_proc_Pipeline_1|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  Loop_3_proc_Pipeline_1|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  Loop_3_proc_Pipeline_1|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  Loop_3_proc_Pipeline_1|  return value|
+|pynqrypt_key_dout             |   in|    8|     ap_fifo|            pynqrypt_key|       pointer|
+|pynqrypt_key_num_data_valid   |   in|    5|     ap_fifo|            pynqrypt_key|       pointer|
+|pynqrypt_key_fifo_cap         |   in|    5|     ap_fifo|            pynqrypt_key|       pointer|
+|pynqrypt_key_empty_n          |   in|    1|     ap_fifo|            pynqrypt_key|       pointer|
+|pynqrypt_key_read             |  out|    1|     ap_fifo|            pynqrypt_key|       pointer|
+|pynqrypt_round_keys_address0  |  out|    8|   ap_memory|     pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_ce0       |  out|    1|   ap_memory|     pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_we0       |  out|    1|   ap_memory|     pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_d0        |  out|    8|   ap_memory|     pynqrypt_round_keys|         array|
++------------------------------+-----+-----+------------+------------------------+--------------+
+
