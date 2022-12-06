@@ -24463,6 +24463,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 6 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp"
 using namespace crypto;
 
+
+
 Pynqrypt::Pynqrypt(aes_atom key[16], aes_atom nonce[12])
 {
     memcpy(this->key, key, 16);
@@ -24476,8 +24478,8 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_atom *plaintext, aes_ato
     aes_atom block_nonce[16];
     aes_atom block[16];
 
-    for (size_t i = 0; i < plaintext_length; i += 16) {
-        size_t block_size = std::min(plaintext_length - i, (size_t)16);
+    loop_ctr_encrypt: for (size_t i = 0; i < plaintext_length; i += 16) {
+        size_t block_size = ((plaintext_length - i > (size_t)16) ? ((size_t)16) : (plaintext_length - i));
         memcpy(block, &plaintext[i], block_size);
         ctr_compute_nonce(block_nonce, offset + i / 16);
         aes_encrypt_block(block_nonce);
@@ -24498,7 +24500,7 @@ void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
 
 void Pynqrypt::ctr_xor_block(aes_atom *block, size_t block_size, aes_atom block_nonce[16])
 {
-    for (size_t i = 0; i < block_size; i++)
+    loop_ctr_xor_block: for (size_t i = 0; i < block_size; i++)
         block[i] ^= block_nonce[i];
 }
 
@@ -24507,7 +24509,7 @@ void Pynqrypt::aes_encrypt_block(aes_atom state[BLOCK_SIZE])
 {
     aes_add_round_key(state, 0);
 
-    for (int i = 1; i < NUM_ROUNDS; i++) {
+    loop_aes_encrypt_block: for (int i = 1; i < NUM_ROUNDS; i++) {
         aes_sub_bytes(state);
         aes_shift_rows(state);
         aes_mix_columns(state);
@@ -24521,14 +24523,19 @@ void Pynqrypt::aes_encrypt_block(aes_atom state[BLOCK_SIZE])
 
 void Pynqrypt::aes_sub_bytes(aes_atom state[BLOCK_SIZE])
 {
+#pragma HLS INLINE
+
     for (int i = 0; i < BLOCK_SIZE; i++)
+#pragma HLS UNROLL
         state[i] = aes_sbox[state[i]];
 }
 
 void Pynqrypt::aes_shift_rows(aes_atom state[BLOCK_SIZE])
 {
+#pragma HLS INLINE
+
     aes_atom temp[BLOCK_SIZE];
-    memcpy(temp, state, BLOCK_SIZE);
+    memcpy_aes_shift_rows: memcpy(temp, state, BLOCK_SIZE);
 
     state[0] = temp[0];
     state[1] = temp[5];
@@ -24550,9 +24557,12 @@ void Pynqrypt::aes_shift_rows(aes_atom state[BLOCK_SIZE])
 
 void Pynqrypt::aes_mix_columns(aes_atom state[BLOCK_SIZE])
 {
+#pragma HLS INLINE
+
     aes_atom tmp1, tmp2, tmp3;
 
     for (int i = 0; i < 4; i++) {
+#pragma HLS UNROLL
         tmp3 = state[(i * 4)];
         tmp1 = state[(i * 4)] ^ state[(i * 4) + 1] ^ state[(i * 4) + 2] ^ state[(i * 4) + 3] ;
         tmp2 = state[(i * 4)] ^ state[(i * 4) + 1] ;
@@ -24643,7 +24653,7 @@ void Pynqrypt::aes_inv_mix_columns(aes_atom state[BLOCK_SIZE])
 
 void Pynqrypt::aes_generate_round_keys()
 {
-    https:
+
     aes_word temp;
 
     auto _round_key = static_cast<aes_word*>(static_cast<void*>(&round_keys));
@@ -24652,25 +24662,32 @@ void Pynqrypt::aes_generate_round_keys()
     memcpy(_round_key, _key, 4 * sizeof(aes_word));
 
 
-    int i = 4;
-    while (i < 44) {
+    loop_generate_round_keys: for (int i = 4; i < 44; i += 4) {
         temp = _round_key[i - 1];
 
-        if (i % 4 == 0) {
-            aes_rotate_word(temp);
-            aes_sub_word(temp);
-            aes_xor_round_constant(temp, (i / 4) - 1);
-        }
+  aes_rotate_word(temp);
+  aes_sub_word(temp);
+  aes_xor_round_constant(temp, (i / 4) - 1);
 
-        aes_xor_words(temp, _round_key[i - 4], _round_key[i]);
+        aes_xor_words(temp, _round_key[i - 4], _round_key[i + 0]);
 
-        i++;
+        temp = _round_key[i + 0];
+        aes_xor_words(temp, _round_key[i - 3], _round_key[i + 1]);
+
+        temp = _round_key[i + 1];
+  aes_xor_words(temp, _round_key[i - 2], _round_key[i + 2]);
+
+  temp = _round_key[i + 2];
+  aes_xor_words(temp, _round_key[i - 1], _round_key[i + 3]);
     }
 }
 
 void Pynqrypt::aes_add_round_key(aes_atom state[BLOCK_SIZE], off_t round_key_index)
 {
+#pragma HLS INLINE
+
     for (int i = 0; i < BLOCK_SIZE; i++)
+#pragma HLS UNROLL
         state[i] ^= round_keys[round_key_index][i];
 }
 

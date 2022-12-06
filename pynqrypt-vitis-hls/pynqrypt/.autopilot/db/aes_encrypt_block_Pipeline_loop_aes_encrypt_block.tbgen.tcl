@@ -32,7 +32,6 @@ set C_modelArgList {
 	{ conv6_i36_13_phi_out int 8 regular {pointer 1}  }
 	{ conv6_i36_14_phi_out int 8 regular {pointer 1}  }
 	{ conv6_i36_15_phi_out int 8 regular {pointer 1}  }
-	{ aes_sbox2 int 8 regular {array 256 { 1 1 } 1 1 } {global 0}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "xor_ln233", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
@@ -53,10 +52,9 @@ set C_modelArgMapList {[
  	{ "Name" : "conv6_i36_12_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
  	{ "Name" : "conv6_i36_13_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
  	{ "Name" : "conv6_i36_14_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "conv6_i36_15_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "aes_sbox2", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY", "extern" : 0} ]}
+ 	{ "Name" : "conv6_i36_15_phi_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
-set portNum 61
+set portNum 55
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -113,12 +111,6 @@ set portList {
 	{ conv6_i36_14_phi_out_ap_vld sc_out sc_logic 1 outvld 17 } 
 	{ conv6_i36_15_phi_out sc_out sc_lv 8 signal 18 } 
 	{ conv6_i36_15_phi_out_ap_vld sc_out sc_logic 1 outvld 18 } 
-	{ aes_sbox2_address0 sc_out sc_lv 8 signal 19 } 
-	{ aes_sbox2_ce0 sc_out sc_logic 1 signal 19 } 
-	{ aes_sbox2_q0 sc_in sc_lv 8 signal 19 } 
-	{ aes_sbox2_address1 sc_out sc_lv 8 signal 19 } 
-	{ aes_sbox2_ce1 sc_out sc_logic 1 signal 19 } 
-	{ aes_sbox2_q1 sc_in sc_lv 8 signal 19 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -175,16 +167,10 @@ set NewPortList {[
  	{ "name": "conv6_i36_14_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_14_phi_out", "role": "default" }} , 
  	{ "name": "conv6_i36_14_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_14_phi_out", "role": "ap_vld" }} , 
  	{ "name": "conv6_i36_15_phi_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv6_i36_15_phi_out", "role": "default" }} , 
- 	{ "name": "conv6_i36_15_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_15_phi_out", "role": "ap_vld" }} , 
- 	{ "name": "aes_sbox2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "address0" }} , 
- 	{ "name": "aes_sbox2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "ce0" }} , 
- 	{ "name": "aes_sbox2_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "q0" }} , 
- 	{ "name": "aes_sbox2_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "address1" }} , 
- 	{ "name": "aes_sbox2_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "ce1" }} , 
- 	{ "name": "aes_sbox2_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "aes_sbox2", "role": "q1" }}  ]}
+ 	{ "name": "conv6_i36_15_phi_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "conv6_i36_15_phi_out", "role": "ap_vld" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
 		"CDFG" : "aes_encrypt_block_Pipeline_loop_aes_encrypt_block",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -218,10 +204,11 @@ set RtlHierarchyInfo {[
 			{"Name" : "conv6_i36_13_phi_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "conv6_i36_14_phi_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "conv6_i36_15_phi_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "aes_sbox2", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "crypto_aes_sbox", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "loop_aes_encrypt_block", "PipelineType" : "NotSupport"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.crypto_aes_sbox_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -245,7 +232,7 @@ set ArgLastReadFirstWriteLatency {
 		conv6_i36_13_phi_out {Type O LastRead -1 FirstWrite 0}
 		conv6_i36_14_phi_out {Type O LastRead -1 FirstWrite 0}
 		conv6_i36_15_phi_out {Type O LastRead -1 FirstWrite 0}
-		aes_sbox2 {Type I LastRead 9 FirstWrite -1}}}
+		crypto_aes_sbox {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -277,5 +264,4 @@ set Spec2ImplPortList {
 	conv6_i36_13_phi_out { ap_vld {  { conv6_i36_13_phi_out out_data 1 8 }  { conv6_i36_13_phi_out_ap_vld out_vld 1 1 } } }
 	conv6_i36_14_phi_out { ap_vld {  { conv6_i36_14_phi_out out_data 1 8 }  { conv6_i36_14_phi_out_ap_vld out_vld 1 1 } } }
 	conv6_i36_15_phi_out { ap_vld {  { conv6_i36_15_phi_out out_data 1 8 }  { conv6_i36_15_phi_out_ap_vld out_vld 1 1 } } }
-	aes_sbox2 { ap_memory {  { aes_sbox2_address0 mem_address 1 8 }  { aes_sbox2_ce0 mem_ce 1 1 }  { aes_sbox2_q0 in_data 0 8 }  { aes_sbox2_address1 MemPortADDR2 1 8 }  { aes_sbox2_ce1 MemPortCE2 1 1 }  { aes_sbox2_q1 MemPortDOUT2 0 8 } } }
 }

@@ -12,7 +12,7 @@
         <FlowTarget>vivado</FlowTarget>
     </UserAssignments>
     <PerformanceEstimates>
-        <PipelineType>dataflow</PipelineType>
+        <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
             <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
@@ -25,16 +25,25 @@
             <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
             <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
             <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-            <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
             <Interval-min>undef</Interval-min>
             <Interval-max>undef</Interval-max>
         </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <loop_ctr_encrypt>
+                <Slack>7.30</Slack>
+                <TripCount>undef</TripCount>
+                <Latency>undef</Latency>
+                <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                <IterationLatency>undef</IterationLatency>
+                <InstanceList/>
+            </loop_ctr_encrypt>
+        </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>4</BRAM_18K>
-            <FF>3489</FF>
-            <LUT>8201</LUT>
+            <FF>3190</FF>
+            <LUT>7848</LUT>
             <URAM>0</URAM>
             <DSP>0</DSP>
         </Resources>
@@ -809,35 +818,35 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="5">
+        <TopModule MAX_DEPTH="4">
             <ModuleName>pynqrypt_encrypt</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>Loop_1_proc_U0</InstName>
-                    <ModuleName>Loop_1_proc</ModuleName>
+                    <InstName>grp_pynqrypt_encrypt_Pipeline_1_fu_242</InstName>
+                    <ModuleName>pynqrypt_encrypt_Pipeline_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>144</ID>
-                    <BindInstances>empty_48_fu_85_p2</BindInstances>
+                    <ID>242</ID>
+                    <BindInstances>empty_29_fu_85_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>Loop_2_proc_U0</InstName>
-                    <ModuleName>Loop_2_proc</ModuleName>
+                    <InstName>grp_pynqrypt_encrypt_Pipeline_2_fu_250</InstName>
+                    <ModuleName>pynqrypt_encrypt_Pipeline_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>152</ID>
-                    <BindInstances>empty_47_fu_85_p2</BindInstances>
+                    <ID>250</ID>
+                    <BindInstances>empty_28_fu_85_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>aes_generate_round_keys_U0</InstName>
+                    <InstName>grp_aes_generate_round_keys_fu_258</InstName>
                     <ModuleName>aes_generate_round_keys</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>160</ID>
+                    <ID>258</ID>
                     <InstancesList>
                         <Instance>
                             <InstName>grp_aes_generate_round_keys_Pipeline_1_fu_12</InstName>
                             <ModuleName>aes_generate_round_keys_Pipeline_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>12</ID>
-                            <BindInstances>empty_33_fu_71_p2</BindInstances>
+                            <BindInstances>empty_32_fu_71_p2</BindInstances>
                         </Instance>
                         <Instance>
                             <InstName>grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20</InstName>
@@ -849,117 +858,63 @@
                     </InstancesList>
                 </Instance>
                 <Instance>
-                    <InstName>entry_proc_U0</InstName>
-                    <ModuleName>entry_proc</ModuleName>
+                    <InstName>grp_pynqrypt_encrypt_Pipeline_3_fu_268</InstName>
+                    <ModuleName>pynqrypt_encrypt_Pipeline_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>170</ID>
+                    <ID>268</ID>
+                    <BindInstances>empty_fu_94_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>ctr_encrypt_U0</InstName>
-                    <ModuleName>ctr_encrypt</ModuleName>
+                    <InstName>grp_pynqrypt_encrypt_Pipeline_4_fu_277</InstName>
+                    <ModuleName>pynqrypt_encrypt_Pipeline_4</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>183</ID>
+                    <ID>277</ID>
+                    <BindInstances>empty_26_fu_71_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_aes_encrypt_block_fu_283</InstName>
+                    <ModuleName>aes_encrypt_block</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>283</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_ctr_encrypt_Pipeline_1_fu_202</InstName>
-                            <ModuleName>ctr_encrypt_Pipeline_1</ModuleName>
+                            <InstName>grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868</InstName>
+                            <ModuleName>aes_encrypt_block_Pipeline_loop_aes_encrypt_block</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>202</ID>
-                            <BindInstances>empty_fu_92_p2</BindInstances>
+                            <ID>868</ID>
+                            <BindInstances>add_ln54_fu_799_p2 crypto_aes_sbox_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_ctr_encrypt_Pipeline_2_fu_211</InstName>
-                            <ModuleName>ctr_encrypt_Pipeline_2</ModuleName>
+                            <InstName>grp_aes_encrypt_block_Pipeline_2_fu_895</InstName>
+                            <ModuleName>aes_encrypt_block_Pipeline_2</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>211</ID>
-                            <BindInstances>empty_29_fu_71_p2</BindInstances>
-                        </Instance>
-                        <Instance>
-                            <InstName>grp_aes_encrypt_block_fu_218</InstName>
-                            <ModuleName>aes_encrypt_block</ModuleName>
-                            <IsCompInst>true</IsCompInst>
-                            <ID>218</ID>
-                            <InstancesList>
-                                <Instance>
-                                    <InstName>grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868</InstName>
-                                    <ModuleName>aes_encrypt_block_Pipeline_loop_aes_encrypt_block</ModuleName>
-                                    <IsCompInst>true</IsCompInst>
-                                    <ID>868</ID>
-                                    <BindInstances>add_ln54_fu_799_p2</BindInstances>
-                                </Instance>
-                                <Instance>
-                                    <InstName>grp_aes_encrypt_block_Pipeline_2_fu_895</InstName>
-                                    <ModuleName>aes_encrypt_block_Pipeline_2</ModuleName>
-                                    <IsCompInst>true</IsCompInst>
-                                    <ID>895</ID>
-                                    <BindInstances>empty_35_fu_71_p2</BindInstances>
-                                </Instance>
-                            </InstancesList>
-                            <BindInstances>temp_U aes_sbox2_U</BindInstances>
-                        </Instance>
-                        <Instance>
-                            <InstName>grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227</InstName>
-                            <ModuleName>ctr_encrypt_Pipeline_loop_ctr_xor_block</ModuleName>
-                            <IsCompInst>true</IsCompInst>
-                            <ID>227</ID>
-                            <BindInstances>i_2_fu_88_p2</BindInstances>
-                        </Instance>
-                        <Instance>
-                            <InstName>grp_ctr_encrypt_Pipeline_4_fu_234</InstName>
-                            <ModuleName>ctr_encrypt_Pipeline_4</ModuleName>
-                            <IsCompInst>true</IsCompInst>
-                            <ID>234</ID>
-                            <BindInstances>empty_fu_97_p2</BindInstances>
+                            <ID>895</ID>
+                            <BindInstances>empty_34_fu_71_p2</BindInstances>
                         </Instance>
                     </InstancesList>
-                    <BindInstances>block_nonce_U block_U add_ln24_fu_284_p2 add_ln24_3_fu_295_p2 add_ln24_1_fu_314_p2 add_ln24_2_fu_319_p2 i_5_fu_401_p2 add_ln23_fu_406_p2</BindInstances>
+                    <BindInstances>temp_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291</InstName>
+                    <ModuleName>pynqrypt_encrypt_Pipeline_loop_ctr_xor_block</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>291</ID>
+                    <BindInstances>i_2_fu_88_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_pynqrypt_encrypt_Pipeline_6_fu_298</InstName>
+                    <ModuleName>pynqrypt_encrypt_Pipeline_6</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>298</ID>
+                    <BindInstances>empty_fu_99_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>ciphertext_c_U plaintext_c_U plaintext_length_c_U pynqrypt_round_keys_U pynqrypt_key_U pynqrypt_nonce_U</BindInstances>
+            <BindInstances>pynqrypt_round_keys_U block_nonce_U block_U pynqrypt_key_U pynqrypt_nonce_U add_ln24_fu_348_p2 add_ln24_3_fu_359_p2 add_ln24_1_fu_408_p2 add_ln24_2_fu_378_p2 i_5_fu_464_p2 add_ln23_fu_469_p2 crypto_aes_sbox_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>entry_proc</Name>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>3.634</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>0</Best-caseLatency>
-                    <Average-caseLatency>0</Average-caseLatency>
-                    <Worst-caseLatency>0</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
-                </SummaryOfOverallLatency>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <FF>2</FF>
-                    <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>38</LUT>
-                    <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-        </Module>
-        <Module>
-            <Name>Loop_1_proc</Name>
+            <Name>pynqrypt_encrypt_Pipeline_1</Name>
             <Loops>
                 <Loop1/>
             </Loops>
@@ -998,7 +953,7 @@
                     <FF>13</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>65</LUT>
+                    <LUT>61</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1013,11 +968,11 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_48_fu_85_p2" SOURCE="" URAM="0" VARIABLE="empty_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_29_fu_85_p2" SOURCE="" URAM="0" VARIABLE="empty_29"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>Loop_2_proc</Name>
+            <Name>pynqrypt_encrypt_Pipeline_2</Name>
             <Loops>
                 <Loop1/>
             </Loops>
@@ -1056,7 +1011,7 @@
                     <FF>11</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>64</LUT>
+                    <LUT>60</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1071,7 +1026,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_47_fu_85_p2" SOURCE="" URAM="0" VARIABLE="empty_47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_28_fu_85_p2" SOURCE="" URAM="0" VARIABLE="empty_28"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1129,7 +1084,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_33_fu_71_p2" SOURCE="" URAM="0" VARIABLE="empty_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_32_fu_71_p2" SOURCE="" URAM="0" VARIABLE="empty_32"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1233,10 +1188,10 @@
                     <BRAM_18K>1</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>287</FF>
+                    <FF>286</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1106</LUT>
+                    <LUT>1095</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>2</UTIL_LUT>
                     <DSP>0</DSP>
@@ -1249,7 +1204,7 @@
             </AreaEstimates>
         </Module>
         <Module>
-            <Name>ctr_encrypt_Pipeline_1</Name>
+            <Name>pynqrypt_encrypt_Pipeline_3</Name>
             <Loops>
                 <Loop1/>
             </Loops>
@@ -1303,11 +1258,11 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_92_p2" SOURCE="" URAM="0" VARIABLE="empty"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_94_p2" SOURCE="" URAM="0" VARIABLE="empty"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>ctr_encrypt_Pipeline_2</Name>
+            <Name>pynqrypt_encrypt_Pipeline_4</Name>
             <Loops>
                 <Loop1/>
             </Loops>
@@ -1361,7 +1316,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_29_fu_71_p2" SOURCE="" URAM="0" VARIABLE="empty_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_26_fu_71_p2" SOURCE="" URAM="0" VARIABLE="empty_26"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1401,15 +1356,15 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
                     <FF>440</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>1442</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>2</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
@@ -1420,6 +1375,7 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_encrypt_block" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_fu_799_p2" SOURCE="hw-impl/src/pynqrypt.cpp:54" URAM="0" VARIABLE="add_ln54"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1477,7 +1433,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_35_fu_71_p2" SOURCE="" URAM="0" VARIABLE="empty_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_34_fu_71_p2" SOURCE="" URAM="0" VARIABLE="empty_34"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1507,7 +1463,7 @@
                     <FF>621</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>2648</LUT>
+                    <LUT>2620</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>4</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1520,11 +1476,10 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="temp_U" SOURCE="hw-impl/src/pynqrypt.cpp:79" URAM="0" VARIABLE="temp"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="aes_sbox2_U" SOURCE="" URAM="0" VARIABLE="aes_sbox2"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>ctr_encrypt_Pipeline_loop_ctr_xor_block</Name>
+            <Name>pynqrypt_encrypt_Pipeline_loop_ctr_xor_block</Name>
             <Loops>
                 <loop_ctr_xor_block/>
             </Loops>
@@ -1582,7 +1537,7 @@
             </BindNodes>
         </Module>
         <Module>
-            <Name>ctr_encrypt_Pipeline_4</Name>
+            <Name>pynqrypt_encrypt_Pipeline_6</Name>
             <Loops>
                 <Loop1/>
             </Loops>
@@ -1636,11 +1591,11 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_97_p2" SOURCE="" URAM="0" VARIABLE="empty"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_99_p2" SOURCE="" URAM="0" VARIABLE="empty"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>ctr_encrypt</Name>
+            <Name>pynqrypt_encrypt</Name>
             <Loops>
                 <loop_ctr_encrypt/>
             </Loops>
@@ -1671,76 +1626,26 @@
                         <PipelineDepth>undef</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_ctr_encrypt_Pipeline_1_fu_202</Instance>
-                            <Instance>grp_ctr_encrypt_Pipeline_2_fu_211</Instance>
-                            <Instance>grp_aes_encrypt_block_fu_218</Instance>
-                            <Instance>grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227</Instance>
-                            <Instance>grp_ctr_encrypt_Pipeline_4_fu_234</Instance>
+                            <Instance>grp_pynqrypt_encrypt_Pipeline_3_fu_268</Instance>
+                            <Instance>grp_pynqrypt_encrypt_Pipeline_4_fu_277</Instance>
+                            <Instance>grp_aes_encrypt_block_fu_283</Instance>
+                            <Instance>grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291</Instance>
+                            <Instance>grp_pynqrypt_encrypt_Pipeline_6_fu_298</Instance>
                         </InstanceList>
                     </loop_ctr_encrypt>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>1</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>1699</FF>
-                    <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>4655</LUT>
-                    <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>8</UTIL_LUT>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                </Resources>
-            </AreaEstimates>
-            <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="block_nonce_U" SOURCE="hw-impl/src/pynqrypt.cpp:20" URAM="0" VARIABLE="block_nonce"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="block_U" SOURCE="hw-impl/src/pynqrypt.cpp:21" URAM="0" VARIABLE="block"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_fu_284_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_3_fu_295_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_1_fu_314_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_2_fu_319_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="i_5_fu_401_p2" SOURCE="hw-impl/src/pynqrypt.cpp:23" URAM="0" VARIABLE="i_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_406_p2" SOURCE="hw-impl/src/pynqrypt.cpp:23" URAM="0" VARIABLE="add_ln23"/>
-            </BindNodes>
-        </Module>
-        <Module>
-            <Name>pynqrypt_encrypt</Name>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>undef</Best-caseLatency>
-                    <Average-caseLatency>undef</Average-caseLatency>
-                    <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
-                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
-                    <PipelineType>dataflow</PipelineType>
-                </SummaryOfOverallLatency>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
                     <BRAM_18K>4</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>1</UTIL_BRAM>
-                    <FF>3489</FF>
+                    <FF>3190</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>3</UTIL_FF>
-                    <LUT>8201</LUT>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>7848</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>15</UTIL_LUT>
+                    <UTIL_LUT>14</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
@@ -1750,12 +1655,18 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ciphertext_c_U" SOURCE="hw-impl/src/pynqrypt_hls.cpp:22" URAM="0" VARIABLE="ciphertext_c"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="plaintext_c_U" SOURCE="hw-impl/src/pynqrypt_hls.cpp:22" URAM="0" VARIABLE="plaintext_c"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="plaintext_length_c_U" SOURCE="hw-impl/src/pynqrypt_hls.cpp:22" URAM="0" VARIABLE="plaintext_length_c"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="pynqrypt_round_keys_U" SOURCE="" URAM="0" VARIABLE="pynqrypt_round_keys"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="block_nonce_U" SOURCE="hw-impl/src/pynqrypt.cpp:20" URAM="0" VARIABLE="block_nonce"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="block_U" SOURCE="hw-impl/src/pynqrypt.cpp:21" URAM="0" VARIABLE="block"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="pynqrypt_key_U" SOURCE="hw-impl/src/pynqrypt_hls.cpp:20" URAM="0" VARIABLE="pynqrypt_key"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="pynqrypt_nonce_U" SOURCE="hw-impl/src/pynqrypt_hls.cpp:20" URAM="0" VARIABLE="pynqrypt_nonce"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_fu_348_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_3_fu_359_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_1_fu_408_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_2_fu_378_p2" SOURCE="hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="add_ln24_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="i_5_fu_464_p2" SOURCE="hw-impl/src/pynqrypt.cpp:23" URAM="0" VARIABLE="i_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_ctr_encrypt" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_469_p2" SOURCE="hw-impl/src/pynqrypt.cpp:23" URAM="0" VARIABLE="add_ln23"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -2080,7 +1991,6 @@
         <Pragma type="interface" location="hw-impl/src/pynqrypt_hls.cpp:16" status="valid" parentFunction="pynqrypt_encrypt" variable="plaintext" isDirective="0" options="mode=s_axilite port=plaintext bundle=control"/>
         <Pragma type="interface" location="hw-impl/src/pynqrypt_hls.cpp:17" status="valid" parentFunction="pynqrypt_encrypt" variable="ciphertext" isDirective="0" options="mode=s_axilite port=ciphertext bundle=control"/>
         <Pragma type="interface" location="hw-impl/src/pynqrypt_hls.cpp:18" status="valid" parentFunction="pynqrypt_encrypt" variable="return" isDirective="0" options="mode=s_axilite port=return bundle=control"/>
-        <Pragma type="dataflow" location="hw-impl/src/pynqrypt_hls.cpp:22" status="valid" parentFunction="pynqrypt_encrypt" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>
 

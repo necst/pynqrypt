@@ -65,13 +65,7 @@ port (
     conv6_i36_14_phi_out : OUT STD_LOGIC_VECTOR (7 downto 0);
     conv6_i36_14_phi_out_ap_vld : OUT STD_LOGIC;
     conv6_i36_15_phi_out : OUT STD_LOGIC_VECTOR (7 downto 0);
-    conv6_i36_15_phi_out_ap_vld : OUT STD_LOGIC;
-    aes_sbox2_address0 : OUT STD_LOGIC_VECTOR (7 downto 0);
-    aes_sbox2_ce0 : OUT STD_LOGIC;
-    aes_sbox2_q0 : IN STD_LOGIC_VECTOR (7 downto 0);
-    aes_sbox2_address1 : OUT STD_LOGIC_VECTOR (7 downto 0);
-    aes_sbox2_ce1 : OUT STD_LOGIC;
-    aes_sbox2_q1 : IN STD_LOGIC_VECTOR (7 downto 0) );
+    conv6_i36_15_phi_out_ap_vld : OUT STD_LOGIC );
 end;
 
 
@@ -161,6 +155,12 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state15 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state15 : signal is "none";
     signal ap_block_state15_pp0_stage14_iter0 : BOOLEAN;
+    signal crypto_aes_sbox_address0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_ce0 : STD_LOGIC;
+    signal crypto_aes_sbox_q0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_address1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_ce1 : STD_LOGIC;
+    signal crypto_aes_sbox_q1 : STD_LOGIC_VECTOR (7 downto 0);
     signal reg_729 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
@@ -189,11 +189,11 @@ attribute shreg_extract : string;
     signal pynqrypt_round_keys_load_reg_2226 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_16_reg_2251 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_17_reg_2256 : STD_LOGIC_VECTOR (7 downto 0);
-    signal aes_sbox2_load_11_reg_2281 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_load_14_reg_2281 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_18_reg_2289 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_19_reg_2294 : STD_LOGIC_VECTOR (7 downto 0);
-    signal aes_sbox2_load_2_reg_2309 : STD_LOGIC_VECTOR (7 downto 0);
-    signal aes_sbox2_load_3_reg_2316 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_load_5_reg_2309 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_load_6_reg_2316 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp2_12_fu_910_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp2_12_reg_2334 : STD_LOGIC_VECTOR (7 downto 0);
     signal xor_ln109_7_fu_916_p2 : STD_LOGIC_VECTOR (7 downto 0);
@@ -203,17 +203,17 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state6 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state6 : signal is "none";
     signal ap_block_state6_pp0_stage5_iter0 : BOOLEAN;
-    signal aes_sbox2_load_5_reg_2368 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_load_8_reg_2368 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_22_reg_2385 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_23_reg_2390 : STD_LOGIC_VECTOR (7 downto 0);
-    signal aes_sbox2_load_7_reg_2405 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_load_10_reg_2405 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_CS_fsm_state7 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
     signal ap_block_state7_pp0_stage6_iter0 : BOOLEAN;
-    signal aes_sbox2_load_15_reg_2423 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_load_18_reg_2423 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_24_reg_2431 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_25_reg_2436 : STD_LOGIC_VECTOR (7 downto 0);
-    signal aes_sbox2_load_9_reg_2451 : STD_LOGIC_VECTOR (7 downto 0);
+    signal crypto_aes_sbox_load_12_reg_2451 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp1_3_fu_1063_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp1_3_reg_2468 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_load_26_reg_2473 : STD_LOGIC_VECTOR (7 downto 0);
@@ -460,6 +460,23 @@ attribute shreg_extract : string;
     signal ap_start_int : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
+    component pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R IS
+    generic (
+        DataWidth : INTEGER;
+        AddressRange : INTEGER;
+        AddressWidth : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        address0 : IN STD_LOGIC_VECTOR (7 downto 0);
+        ce0 : IN STD_LOGIC;
+        q0 : OUT STD_LOGIC_VECTOR (7 downto 0);
+        address1 : IN STD_LOGIC_VECTOR (7 downto 0);
+        ce1 : IN STD_LOGIC;
+        q1 : OUT STD_LOGIC_VECTOR (7 downto 0) );
+    end component;
+
+
     component pynqrypt_encrypt_flow_control_loop_pipe_sequential_init IS
     port (
         ap_clk : IN STD_LOGIC;
@@ -479,6 +496,21 @@ attribute shreg_extract : string;
 
 
 begin
+    crypto_aes_sbox_U : component pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R
+    generic map (
+        DataWidth => 8,
+        AddressRange => 256,
+        AddressWidth => 8)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => crypto_aes_sbox_address0,
+        ce0 => crypto_aes_sbox_ce0,
+        q0 => crypto_aes_sbox_q0,
+        address1 => crypto_aes_sbox_address1,
+        ce1 => crypto_aes_sbox_ce1,
+        q1 => crypto_aes_sbox_q1);
+
     flow_control_loop_pipe_sequential_init_U : component pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
     port map (
         ap_clk => ap_clk,
@@ -565,9 +597,9 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
-                reg_738 <= aes_sbox2_q1;
+                reg_738 <= crypto_aes_sbox_q1;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-                reg_738 <= aes_sbox2_q0;
+                reg_738 <= crypto_aes_sbox_q0;
             end if; 
         end if;
     end process;
@@ -576,66 +608,10 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-                reg_743 <= aes_sbox2_q0;
+                reg_743 <= crypto_aes_sbox_q0;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
-                reg_743 <= aes_sbox2_q1;
+                reg_743 <= crypto_aes_sbox_q1;
             end if; 
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                aes_sbox2_load_11_reg_2281 <= aes_sbox2_q0;
-                pynqrypt_round_keys_load_18_reg_2289 <= pynqrypt_round_keys_q1;
-                pynqrypt_round_keys_load_19_reg_2294 <= pynqrypt_round_keys_q0;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state7)) then
-                aes_sbox2_load_15_reg_2423 <= aes_sbox2_q0;
-                aes_sbox2_load_7_reg_2405 <= aes_sbox2_q1;
-                pynqrypt_round_keys_load_24_reg_2431 <= pynqrypt_round_keys_q1;
-                pynqrypt_round_keys_load_25_reg_2436 <= pynqrypt_round_keys_q0;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state5)) then
-                aes_sbox2_load_2_reg_2309 <= aes_sbox2_q1;
-                aes_sbox2_load_3_reg_2316 <= aes_sbox2_q0;
-                conv6_i36_15_phi_fu_138 <= xor_ln233_47_fu_981_p2;
-                pynqrypt_round_keys_load_21_reg_2346 <= pynqrypt_round_keys_q0;
-                tmp2_12_reg_2334 <= tmp2_12_fu_910_p2;
-                xor_ln109_7_reg_2341 <= xor_ln109_7_fu_916_p2;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state6)) then
-                aes_sbox2_load_5_reg_2368 <= aes_sbox2_q0;
-                pynqrypt_round_keys_load_22_reg_2385 <= pynqrypt_round_keys_q1;
-                pynqrypt_round_keys_load_23_reg_2390 <= pynqrypt_round_keys_q0;
-                tmp3_1_reg_2361 <= aes_sbox2_q1;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state8)) then
-                aes_sbox2_load_9_reg_2451 <= aes_sbox2_q0;
-                conv6_i36_12_phi_fu_150 <= xor_ln233_44_fu_1105_p2;
-                pynqrypt_round_keys_load_26_reg_2473 <= pynqrypt_round_keys_q1;
-                tmp1_3_reg_2468 <= tmp1_3_fu_1063_p2;
-            end if;
         end if;
     end process;
     process (ap_clk)
@@ -668,9 +644,65 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state8)) then
+                conv6_i36_12_phi_fu_150 <= xor_ln233_44_fu_1105_p2;
+                crypto_aes_sbox_load_12_reg_2451 <= crypto_aes_sbox_q0;
+                pynqrypt_round_keys_load_26_reg_2473 <= pynqrypt_round_keys_q1;
+                tmp1_3_reg_2468 <= tmp1_3_fu_1063_p2;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state9)) then
                 conv6_i36_13_phi_fu_146 <= xor_ln233_45_fu_1214_p2;
                 conv6_i36_14_phi_fu_142 <= xor_ln233_46_fu_1237_p2;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state5)) then
+                conv6_i36_15_phi_fu_138 <= xor_ln233_47_fu_981_p2;
+                crypto_aes_sbox_load_5_reg_2309 <= crypto_aes_sbox_q1;
+                crypto_aes_sbox_load_6_reg_2316 <= crypto_aes_sbox_q0;
+                pynqrypt_round_keys_load_21_reg_2346 <= pynqrypt_round_keys_q0;
+                tmp2_12_reg_2334 <= tmp2_12_fu_910_p2;
+                xor_ln109_7_reg_2341 <= xor_ln109_7_fu_916_p2;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state7)) then
+                crypto_aes_sbox_load_10_reg_2405 <= crypto_aes_sbox_q1;
+                crypto_aes_sbox_load_18_reg_2423 <= crypto_aes_sbox_q0;
+                pynqrypt_round_keys_load_24_reg_2431 <= pynqrypt_round_keys_q1;
+                pynqrypt_round_keys_load_25_reg_2436 <= pynqrypt_round_keys_q0;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
+                crypto_aes_sbox_load_14_reg_2281 <= crypto_aes_sbox_q0;
+                pynqrypt_round_keys_load_18_reg_2289 <= pynqrypt_round_keys_q1;
+                pynqrypt_round_keys_load_19_reg_2294 <= pynqrypt_round_keys_q0;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state6)) then
+                crypto_aes_sbox_load_8_reg_2368 <= crypto_aes_sbox_q0;
+                pynqrypt_round_keys_load_22_reg_2385 <= pynqrypt_round_keys_q1;
+                pynqrypt_round_keys_load_23_reg_2390 <= pynqrypt_round_keys_q0;
+                tmp3_1_reg_2361 <= crypto_aes_sbox_q1;
             end if;
         end if;
     end process;
@@ -688,7 +720,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state2)) then
                 pynqrypt_round_keys_load_reg_2226 <= pynqrypt_round_keys_q1;
-                tmp3_reg_2209 <= aes_sbox2_q0;
+                tmp3_reg_2209 <= crypto_aes_sbox_q0;
             end if;
         end if;
     end process;
@@ -696,7 +728,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state9) or (ap_const_logic_1 = ap_CS_fsm_state3))) then
-                reg_734 <= aes_sbox2_q1;
+                reg_734 <= crypto_aes_sbox_q1;
             end if;
         end if;
     end process;
@@ -754,74 +786,6 @@ begin
         end case;
     end process;
     add_ln54_fu_799_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i_7) + unsigned(ap_const_lv4_1));
-
-    aes_sbox2_address0_assign_proc : process(ap_CS_fsm_state1, icmp_ln54_fu_761_p2, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state9, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln72_fu_770_p1, zext_ln72_12_fu_815_p1, zext_ln72_11_fu_845_p1, zext_ln72_3_fu_875_p1, zext_ln72_5_fu_905_p1, zext_ln72_15_fu_998_p1, zext_ln72_9_fu_1028_p1, zext_ln72_13_fu_1058_p1, zext_ln72_14_fu_1137_p1)
-    begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-            aes_sbox2_address0 <= zext_ln72_14_fu_1137_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
-            aes_sbox2_address0 <= zext_ln72_13_fu_1058_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
-            aes_sbox2_address0 <= zext_ln72_9_fu_1028_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
-            aes_sbox2_address0 <= zext_ln72_15_fu_998_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state5)) then 
-            aes_sbox2_address0 <= zext_ln72_5_fu_905_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
-            aes_sbox2_address0 <= zext_ln72_3_fu_875_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            aes_sbox2_address0 <= zext_ln72_11_fu_845_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            aes_sbox2_address0 <= zext_ln72_12_fu_815_p1(8 - 1 downto 0);
-        elsif (((icmp_ln54_fu_761_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            aes_sbox2_address0 <= zext_ln72_fu_770_p1(8 - 1 downto 0);
-        else 
-            aes_sbox2_address0 <= "XXXXXXXX";
-        end if; 
-    end process;
-
-
-    aes_sbox2_address1_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln72_1_fu_810_p1, zext_ln72_6_fu_840_p1, zext_ln72_2_fu_870_p1, zext_ln72_4_fu_900_p1, zext_ln72_7_fu_993_p1, zext_ln72_8_fu_1023_p1, zext_ln72_10_fu_1053_p1)
-    begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
-            aes_sbox2_address1 <= zext_ln72_10_fu_1053_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
-            aes_sbox2_address1 <= zext_ln72_8_fu_1023_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
-            aes_sbox2_address1 <= zext_ln72_7_fu_993_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state5)) then 
-            aes_sbox2_address1 <= zext_ln72_4_fu_900_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
-            aes_sbox2_address1 <= zext_ln72_2_fu_870_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            aes_sbox2_address1 <= zext_ln72_6_fu_840_p1(8 - 1 downto 0);
-        elsif ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            aes_sbox2_address1 <= zext_ln72_1_fu_810_p1(8 - 1 downto 0);
-        else 
-            aes_sbox2_address1 <= "XXXXXXXX";
-        end if; 
-    end process;
-
-
-    aes_sbox2_ce0_assign_proc : process(ap_CS_fsm_state1, icmp_ln54_fu_761_p2, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state9, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_start_int)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state9) or (ap_const_logic_1 = ap_CS_fsm_state3) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state2) or ((icmp_ln54_fu_761_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1)))) then 
-            aes_sbox2_ce0 <= ap_const_logic_1;
-        else 
-            aes_sbox2_ce0 <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    aes_sbox2_ce1_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state3) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-            aes_sbox2_ce1 <= ap_const_logic_1;
-        else 
-            aes_sbox2_ce1 <= ap_const_logic_0;
-        end if; 
-    end process;
-
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state10 <= ap_CS_fsm(9);
     ap_CS_fsm_state11 <= ap_CS_fsm(10);
@@ -1107,6 +1071,74 @@ begin
         end if; 
     end process;
 
+
+    crypto_aes_sbox_address0_assign_proc : process(ap_CS_fsm_state1, icmp_ln54_fu_761_p2, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state9, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln72_fu_770_p1, zext_ln72_12_fu_815_p1, zext_ln72_11_fu_845_p1, zext_ln72_3_fu_875_p1, zext_ln72_5_fu_905_p1, zext_ln72_15_fu_998_p1, zext_ln72_9_fu_1028_p1, zext_ln72_13_fu_1058_p1, zext_ln72_14_fu_1137_p1)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_14_fu_1137_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_13_fu_1058_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_9_fu_1028_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_15_fu_998_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state5)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_5_fu_905_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_3_fu_875_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_11_fu_845_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+            crypto_aes_sbox_address0 <= zext_ln72_12_fu_815_p1(8 - 1 downto 0);
+        elsif (((icmp_ln54_fu_761_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            crypto_aes_sbox_address0 <= zext_ln72_fu_770_p1(8 - 1 downto 0);
+        else 
+            crypto_aes_sbox_address0 <= "XXXXXXXX";
+        end if; 
+    end process;
+
+
+    crypto_aes_sbox_address1_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln72_1_fu_810_p1, zext_ln72_6_fu_840_p1, zext_ln72_2_fu_870_p1, zext_ln72_4_fu_900_p1, zext_ln72_7_fu_993_p1, zext_ln72_8_fu_1023_p1, zext_ln72_10_fu_1053_p1)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
+            crypto_aes_sbox_address1 <= zext_ln72_10_fu_1053_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
+            crypto_aes_sbox_address1 <= zext_ln72_8_fu_1023_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
+            crypto_aes_sbox_address1 <= zext_ln72_7_fu_993_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state5)) then 
+            crypto_aes_sbox_address1 <= zext_ln72_4_fu_900_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
+            crypto_aes_sbox_address1 <= zext_ln72_2_fu_870_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
+            crypto_aes_sbox_address1 <= zext_ln72_6_fu_840_p1(8 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+            crypto_aes_sbox_address1 <= zext_ln72_1_fu_810_p1(8 - 1 downto 0);
+        else 
+            crypto_aes_sbox_address1 <= "XXXXXXXX";
+        end if; 
+    end process;
+
+
+    crypto_aes_sbox_ce0_assign_proc : process(ap_CS_fsm_state1, icmp_ln54_fu_761_p2, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state9, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_start_int)
+    begin
+        if (((ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state9) or (ap_const_logic_1 = ap_CS_fsm_state3) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state2) or ((icmp_ln54_fu_761_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1)))) then 
+            crypto_aes_sbox_ce0 <= ap_const_logic_1;
+        else 
+            crypto_aes_sbox_ce0 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    crypto_aes_sbox_ce1_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7)
+    begin
+        if (((ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state3) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+            crypto_aes_sbox_ce1 <= ap_const_logic_1;
+        else 
+            crypto_aes_sbox_ce1 <= ap_const_logic_0;
+        end if; 
+    end process;
+
     icmp_ln54_fu_761_p2 <= "1" when (ap_sig_allocacmp_i_7 = ap_const_lv4_A) else "0";
     or_ln233_10_fu_1033_p2 <= (shl_ln1_reg_2181 or ap_const_lv8_B);
     or_ln233_11_fu_1043_p2 <= (shl_ln1_reg_2181 or ap_const_lv8_C);
@@ -1344,7 +1376,7 @@ begin
 
     state_ce1_assign_proc : process(ap_CS_fsm_state1, icmp_ln54_fu_761_p2, ap_CS_fsm_state15, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state3, ap_CS_fsm_state9, ap_CS_fsm_state8, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14, ap_start_int)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state11) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state9) or (ap_const_logic_1 = ap_CS_fsm_state3) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state2) or ((icmp_ln54_fu_761_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state11) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state9) or (ap_const_logic_1 = ap_CS_fsm_state3) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state2) or ((icmp_ln54_fu_761_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1)))) then 
             state_ce1 <= ap_const_logic_1;
         else 
             state_ce1 <= ap_const_logic_0;
@@ -1410,33 +1442,33 @@ begin
 
     state_we1_assign_proc : process(ap_CS_fsm_state15, ap_CS_fsm_state9, ap_CS_fsm_state8, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state11) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state9))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state14) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state15) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state11) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state9))) then 
             state_we1 <= ap_const_logic_1;
         else 
             state_we1 <= ap_const_logic_0;
         end if; 
     end process;
 
-    tmp1_1_fu_1381_p2 <= (xor_ln109_3_fu_1375_p2 xor aes_sbox2_load_3_reg_2316);
-    tmp1_2_fu_1499_p2 <= (xor_ln109_5_fu_1494_p2 xor aes_sbox2_load_7_reg_2405);
-    tmp1_3_fu_1063_p2 <= (xor_ln109_7_reg_2341 xor aes_sbox2_load_11_reg_2281);
-    tmp1_fu_1264_p2 <= (xor_ln109_1_fu_1258_p2 xor aes_sbox2_load_15_reg_2423);
-    tmp2_10_fu_1553_p2 <= (aes_sbox2_load_7_reg_2405 xor aes_sbox2_load_2_reg_2309);
-    tmp2_11_fu_1579_p2 <= (reg_738 xor aes_sbox2_load_7_reg_2405);
+    tmp1_1_fu_1381_p2 <= (xor_ln109_3_fu_1375_p2 xor crypto_aes_sbox_load_6_reg_2316);
+    tmp1_2_fu_1499_p2 <= (xor_ln109_5_fu_1494_p2 xor crypto_aes_sbox_load_10_reg_2405);
+    tmp1_3_fu_1063_p2 <= (xor_ln109_7_reg_2341 xor crypto_aes_sbox_load_14_reg_2281);
+    tmp1_fu_1264_p2 <= (xor_ln109_1_fu_1258_p2 xor crypto_aes_sbox_load_18_reg_2423);
+    tmp2_10_fu_1553_p2 <= (crypto_aes_sbox_load_5_reg_2309 xor crypto_aes_sbox_load_10_reg_2405);
+    tmp2_11_fu_1579_p2 <= (reg_738 xor crypto_aes_sbox_load_10_reg_2405);
     tmp2_12_fu_910_p2 <= (reg_738 xor reg_734);
     tmp2_13_fu_1142_p2 <= (reg_743 xor reg_734);
-    tmp2_14_fu_1170_p2 <= (reg_743 xor aes_sbox2_load_11_reg_2281);
-    tmp2_15_fu_922_p2 <= (reg_738 xor aes_sbox2_load_11_reg_2281);
-    tmp2_1_fu_1291_p2 <= (reg_734 xor aes_sbox2_load_5_reg_2368);
-    tmp2_2_fu_1318_p2 <= (reg_734 xor aes_sbox2_load_15_reg_2423);
-    tmp2_3_fu_1345_p2 <= (tmp3_reg_2209 xor aes_sbox2_load_15_reg_2423);
-    tmp2_4_fu_1371_p2 <= (tmp3_1_reg_2361 xor aes_sbox2_load_9_reg_2451);
-    tmp2_5_fu_1408_p2 <= (aes_sbox2_q0 xor aes_sbox2_load_9_reg_2451);
-    tmp2_6_fu_1435_p2 <= (aes_sbox2_q0 xor aes_sbox2_load_3_reg_2316);
-    tmp2_7_fu_1462_p2 <= (tmp3_1_reg_2361 xor aes_sbox2_load_3_reg_2316);
+    tmp2_14_fu_1170_p2 <= (reg_743 xor crypto_aes_sbox_load_14_reg_2281);
+    tmp2_15_fu_922_p2 <= (reg_738 xor crypto_aes_sbox_load_14_reg_2281);
+    tmp2_1_fu_1291_p2 <= (reg_734 xor crypto_aes_sbox_load_8_reg_2368);
+    tmp2_2_fu_1318_p2 <= (reg_734 xor crypto_aes_sbox_load_18_reg_2423);
+    tmp2_3_fu_1345_p2 <= (tmp3_reg_2209 xor crypto_aes_sbox_load_18_reg_2423);
+    tmp2_4_fu_1371_p2 <= (tmp3_1_reg_2361 xor crypto_aes_sbox_load_12_reg_2451);
+    tmp2_5_fu_1408_p2 <= (crypto_aes_sbox_q0 xor crypto_aes_sbox_load_12_reg_2451);
+    tmp2_6_fu_1435_p2 <= (crypto_aes_sbox_q0 xor crypto_aes_sbox_load_6_reg_2316);
+    tmp2_7_fu_1462_p2 <= (tmp3_1_reg_2361 xor crypto_aes_sbox_load_6_reg_2316);
     tmp2_8_fu_1488_p2 <= (reg_743 xor reg_738);
-    tmp2_9_fu_1526_p2 <= (reg_743 xor aes_sbox2_load_2_reg_2309);
-    tmp2_fu_1254_p2 <= (tmp3_reg_2209 xor aes_sbox2_load_5_reg_2368);
+    tmp2_9_fu_1526_p2 <= (reg_743 xor crypto_aes_sbox_load_5_reg_2309);
+    tmp2_fu_1254_p2 <= (tmp3_reg_2209 xor crypto_aes_sbox_load_8_reg_2368);
     tmp_10_fu_1563_p3 <= tmp2_10_fu_1553_p2(7 downto 7);
     tmp_11_fu_1590_p3 <= tmp2_11_fu_1579_p2(7 downto 7);
     tmp_12_fu_1072_p3 <= tmp2_12_reg_2334(7 downto 7);
@@ -1454,8 +1486,8 @@ begin
     tmp_9_fu_1537_p3 <= tmp2_9_fu_1526_p2(7 downto 7);
     tmp_fu_1275_p3 <= tmp2_fu_1254_p2(7 downto 7);
     xor_ln109_1_fu_1258_p2 <= (tmp2_fu_1254_p2 xor reg_734);
-    xor_ln109_3_fu_1375_p2 <= (tmp2_4_fu_1371_p2 xor aes_sbox2_q0);
-    xor_ln109_5_fu_1494_p2 <= (tmp2_8_fu_1488_p2 xor aes_sbox2_load_2_reg_2309);
+    xor_ln109_3_fu_1375_p2 <= (tmp2_4_fu_1371_p2 xor crypto_aes_sbox_q0);
+    xor_ln109_5_fu_1494_p2 <= (tmp2_8_fu_1488_p2 xor crypto_aes_sbox_load_5_reg_2309);
     xor_ln109_7_fu_916_p2 <= (tmp2_12_fu_910_p2 xor reg_743);
     xor_ln233_10_fu_1655_p2 <= (tmp2_fu_1254_p2 xor select_ln122_fu_1337_p3);
     xor_ln233_11_fu_1661_p2 <= (xor_ln233_10_fu_1655_p2 xor shl_ln239_2_fu_1323_p2);
@@ -1468,11 +1500,11 @@ begin
     xor_ln233_18_fu_1701_p2 <= (xor_ln233_17_fu_1695_p2 xor select_ln114_1_fu_1400_p3);
     xor_ln233_19_fu_1707_p2 <= (xor_ln233_18_fu_1701_p2 xor xor_ln233_16_fu_1691_p2);
     xor_ln233_1_fu_1606_p2 <= (tmp3_reg_2209 xor pynqrypt_round_keys_load_reg_2226);
-    xor_ln233_20_fu_1713_p2 <= (reg_729 xor aes_sbox2_load_9_reg_2451);
+    xor_ln233_20_fu_1713_p2 <= (reg_729 xor crypto_aes_sbox_load_12_reg_2451);
     xor_ln233_21_fu_1718_p2 <= (tmp1_1_fu_1381_p2 xor shl_ln239_5_fu_1413_p2);
     xor_ln233_22_fu_1724_p2 <= (xor_ln233_21_fu_1718_p2 xor select_ln118_1_fu_1427_p3);
     xor_ln233_23_fu_1730_p2 <= (xor_ln233_22_fu_1724_p2 xor xor_ln233_20_fu_1713_p2);
-    xor_ln233_24_fu_1736_p2 <= (pynqrypt_round_keys_load_21_reg_2346 xor aes_sbox2_load_3_reg_2316);
+    xor_ln233_24_fu_1736_p2 <= (pynqrypt_round_keys_load_21_reg_2346 xor crypto_aes_sbox_load_6_reg_2316);
     xor_ln233_25_fu_1740_p2 <= (tmp2_4_fu_1371_p2 xor select_ln122_1_fu_1454_p3);
     xor_ln233_26_fu_1746_p2 <= (xor_ln233_25_fu_1740_p2 xor shl_ln239_6_fu_1440_p2);
     xor_ln233_27_fu_1752_p2 <= (xor_ln233_26_fu_1746_p2 xor xor_ln233_24_fu_1736_p2);
@@ -1488,7 +1520,7 @@ begin
     xor_ln233_36_fu_1803_p2 <= (tmp1_2_fu_1499_p2 xor shl_ln239_9_fu_1531_p2);
     xor_ln233_37_fu_1809_p2 <= (xor_ln233_36_fu_1803_p2 xor select_ln118_2_fu_1545_p3);
     xor_ln233_38_fu_1815_p2 <= (xor_ln233_37_fu_1809_p2 xor xor_ln233_35_fu_1798_p2);
-    xor_ln233_39_fu_1821_p2 <= (pynqrypt_round_keys_load_25_reg_2436 xor aes_sbox2_load_7_reg_2405);
+    xor_ln233_39_fu_1821_p2 <= (pynqrypt_round_keys_load_25_reg_2436 xor crypto_aes_sbox_load_10_reg_2405);
     xor_ln233_3_fu_1616_p2 <= (xor_ln233_2_fu_1610_p2 xor shl_ln239_fu_1269_p2);
     xor_ln233_40_fu_1825_p2 <= (tmp2_8_fu_1488_p2 xor select_ln122_2_fu_1571_p3);
     xor_ln233_41_fu_1831_p2 <= (xor_ln233_40_fu_1825_p2 xor shl_ln239_10_fu_1557_p2);
@@ -1507,16 +1539,16 @@ begin
     xor_ln233_53_fu_1197_p2 <= (reg_734 xor pynqrypt_round_keys_q1);
     xor_ln233_54_fu_1203_p2 <= (tmp1_3_reg_2468 xor shl_ln239_13_fu_1148_p2);
     xor_ln233_55_fu_1208_p2 <= (xor_ln233_54_fu_1203_p2 xor select_ln118_3_fu_1162_p3);
-    xor_ln233_56_fu_1221_p2 <= (pynqrypt_round_keys_q0 xor aes_sbox2_load_11_reg_2281);
+    xor_ln233_56_fu_1221_p2 <= (pynqrypt_round_keys_q0 xor crypto_aes_sbox_load_14_reg_2281);
     xor_ln233_57_fu_1226_p2 <= (tmp2_12_reg_2334 xor select_ln122_3_fu_1189_p3);
     xor_ln233_58_fu_1231_p2 <= (xor_ln233_57_fu_1226_p2 xor shl_ln239_14_fu_1175_p2);
     xor_ln233_59_fu_969_p2 <= (xor_ln109_7_fu_916_p2 xor reg_729);
-    xor_ln233_5_fu_1628_p2 <= (pynqrypt_round_keys_load_16_reg_2251 xor aes_sbox2_load_5_reg_2368);
+    xor_ln233_5_fu_1628_p2 <= (pynqrypt_round_keys_load_16_reg_2251 xor crypto_aes_sbox_load_8_reg_2368);
     xor_ln233_60_fu_975_p2 <= (shl_ln239_15_fu_927_p2 xor select_ln227_fu_941_p3);
     xor_ln233_6_fu_1632_p2 <= (tmp1_fu_1264_p2 xor shl_ln239_1_fu_1296_p2);
     xor_ln233_7_fu_1638_p2 <= (xor_ln233_6_fu_1632_p2 xor select_ln118_fu_1310_p3);
     xor_ln233_8_fu_1644_p2 <= (xor_ln233_7_fu_1638_p2 xor xor_ln233_5_fu_1628_p2);
-    xor_ln233_9_fu_1651_p2 <= (pynqrypt_round_keys_load_17_reg_2256 xor aes_sbox2_load_15_reg_2423);
+    xor_ln233_9_fu_1651_p2 <= (pynqrypt_round_keys_load_17_reg_2256 xor crypto_aes_sbox_load_18_reg_2423);
     zext_ln233_10_fu_1018_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(or_ln233_9_fu_1013_p2),64));
     zext_ln233_11_fu_1038_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(or_ln233_10_fu_1033_p2),64));
     zext_ln233_12_fu_1048_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(or_ln233_11_fu_1043_p2),64));

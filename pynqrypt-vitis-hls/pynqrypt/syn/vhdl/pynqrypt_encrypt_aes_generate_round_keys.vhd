@@ -15,7 +15,6 @@ port (
     ap_rst : IN STD_LOGIC;
     ap_start : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
-    ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     this_key_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
@@ -41,14 +40,13 @@ architecture behav of pynqrypt_encrypt_aes_generate_round_keys is
     constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (3 downto 0) := "0010";
     constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (3 downto 0) := "0100";
     constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (3 downto 0) := "1000";
-    constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
+    constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
 
 attribute shreg_extract : string;
-    signal ap_done_reg : STD_LOGIC := '0';
     signal ap_CS_fsm : STD_LOGIC_VECTOR (3 downto 0) := "0001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
@@ -77,7 +75,6 @@ attribute shreg_extract : string;
     signal grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_pynqrypt_round_keys_we1 : STD_LOGIC;
     signal grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_pynqrypt_round_keys_d1 : STD_LOGIC_VECTOR (7 downto 0);
     signal grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg : STD_LOGIC := '0';
-    signal ap_block_state1_ignore_call0 : BOOLEAN;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_start_reg : STD_LOGIC := '0';
@@ -86,7 +83,6 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (3 downto 0);
-    signal ap_block_state1 : BOOLEAN;
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
     signal ap_ST_fsm_state3_blk : STD_LOGIC;
@@ -185,29 +181,13 @@ begin
     end process;
 
 
-    ap_done_reg_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst = '1') then
-                ap_done_reg <= ap_const_logic_0;
-            else
-                if ((ap_continue = ap_const_logic_1)) then 
-                    ap_done_reg <= ap_const_logic_0;
-                elsif (((grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-                    ap_done_reg <= ap_const_logic_1;
-                end if; 
-            end if;
-        end if;
-    end process;
-
-
     grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
                 grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg <= ap_const_logic_0;
             else
-                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                     grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg <= ap_const_logic_1;
                 elsif ((grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_ready = ap_const_logic_1)) then 
                     grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg <= ap_const_logic_0;
@@ -233,11 +213,11 @@ begin
     end process;
 
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_done, grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done, ap_CS_fsm_state2, ap_CS_fsm_state4)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_done, grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done, ap_CS_fsm_state2, ap_CS_fsm_state4)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
-                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
+                if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state1;
@@ -265,9 +245,9 @@ begin
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
     ap_CS_fsm_state4 <= ap_CS_fsm(3);
 
-    ap_ST_fsm_state1_blk_assign_proc : process(ap_start, ap_done_reg)
+    ap_ST_fsm_state1_blk_assign_proc : process(ap_start)
     begin
-        if (((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) then 
+        if ((ap_start = ap_const_logic_0)) then 
             ap_ST_fsm_state1_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state1_blk <= ap_const_logic_0;
@@ -296,24 +276,12 @@ begin
     end process;
 
 
-    ap_block_state1_assign_proc : process(ap_start, ap_done_reg)
+    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done, ap_CS_fsm_state4)
     begin
-                ap_block_state1 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
-    end process;
-
-
-    ap_block_state1_ignore_call0_assign_proc : process(ap_start, ap_done_reg)
-    begin
-                ap_block_state1_ignore_call0 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
-    end process;
-
-
-    ap_done_assign_proc : process(ap_done_reg, grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done, ap_CS_fsm_state4)
-    begin
-        if (((grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+        if ((((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)) or ((grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             ap_done <= ap_const_logic_1;
         else 
-            ap_done <= ap_done_reg;
+            ap_done <= ap_const_logic_0;
         end if; 
     end process;
 

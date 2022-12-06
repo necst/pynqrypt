@@ -688,10 +688,10 @@ for.body.i65:17 %icmp_ln54 = icmp_eq  i4 %i_7, i4 10
 
 <Node id="61" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.body.i65:18 %empty_34 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9
+for.body.i65:18 %empty_33 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </operation>
 
 <operation id="58" st_id="1" stage="1" lat="1">
@@ -751,10 +751,10 @@ for.body.i65.split:2 %zext_ln72 = zext i8 %p_load18
 
 <Node id="67" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:3 %aes_sbox2_addr = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72
+for.body.i65.split:3 %crypto_aes_sbox_addr = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr"/></StgValue>
 </operation>
 
 <operation id="62" st_id="1" stage="2" lat="2">
@@ -767,7 +767,7 @@ for.body.i65.split:3 %aes_sbox2_addr = getelementptr i8 %aes_sbox2, i64 0, i64 %
 
 <Node id="68" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:4 %tmp3 = load i8 %aes_sbox2_addr
+for.body.i65.split:4 %tmp3 = load i8 %crypto_aes_sbox_addr
 
 ]]></Node>
 <StgValue><ssdm name="tmp3"/></StgValue>
@@ -1505,7 +1505,7 @@ for.body.i24.exitStub:32 %ret_ln0 = ret
 
 <Node id="68" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:4 %tmp3 = load i8 %aes_sbox2_addr
+for.body.i65.split:4 %tmp3 = load i8 %crypto_aes_sbox_addr
 
 ]]></Node>
 <StgValue><ssdm name="tmp3"/></StgValue>
@@ -1550,10 +1550,10 @@ for.body.i65.split:6 %zext_ln72_1 = zext i8 %state_load
 
 <Node id="71" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:7 %aes_sbox2_addr_1 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_1
+for.body.i65.split:7 %crypto_aes_sbox_addr_4 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_1
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_1"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_4"/></StgValue>
 </operation>
 
 <operation id="79" st_id="2" stage="2" lat="2">
@@ -1565,10 +1565,10 @@ for.body.i65.split:7 %aes_sbox2_addr_1 = getelementptr i8 %aes_sbox2, i64 0, i64
 
 <Node id="72" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:8 %aes_sbox2_load_1 = load i8 %aes_sbox2_addr_1
+for.body.i65.split:8 %crypto_aes_sbox_load_4 = load i8 %crypto_aes_sbox_addr_4
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_1"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_4"/></StgValue>
 </operation>
 
 <operation id="80" st_id="2" stage="2" lat="2">
@@ -1640,10 +1640,10 @@ for.body.i65.split:50 %zext_ln72_12 = zext i8 %state_load_11
 
 <Node id="115" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:51 %aes_sbox2_addr_12 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_12
+for.body.i65.split:51 %crypto_aes_sbox_addr_15 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_12
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_12"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_15"/></StgValue>
 </operation>
 
 <operation id="85" st_id="2" stage="2" lat="2">
@@ -1655,7 +1655,7 @@ for.body.i65.split:51 %aes_sbox2_addr_12 = getelementptr i8 %aes_sbox2, i64 0, i
 
 <Node id="116" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:52 %tmp3_3 = load i8 %aes_sbox2_addr_12
+for.body.i65.split:52 %tmp3_3 = load i8 %crypto_aes_sbox_addr_15
 
 ]]></Node>
 <StgValue><ssdm name="tmp3_3"/></StgValue>
@@ -1823,10 +1823,10 @@ for.body.i65.split:271 %pynqrypt_round_keys_load_30 = load i8 %pynqrypt_round_ke
 
 <Node id="72" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:8 %aes_sbox2_load_1 = load i8 %aes_sbox2_addr_1
+for.body.i65.split:8 %crypto_aes_sbox_load_4 = load i8 %crypto_aes_sbox_addr_4
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_1"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_4"/></StgValue>
 </operation>
 
 <operation id="97" st_id="3" stage="2" lat="2">
@@ -1898,10 +1898,10 @@ for.body.i65.split:26 %zext_ln72_6 = zext i8 %state_load_5
 
 <Node id="91" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:27 %aes_sbox2_addr_6 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_6
+for.body.i65.split:27 %crypto_aes_sbox_addr_9 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_6
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_6"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_9"/></StgValue>
 </operation>
 
 <operation id="102" st_id="3" stage="2" lat="2">
@@ -1913,10 +1913,10 @@ for.body.i65.split:27 %aes_sbox2_addr_6 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="92" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:28 %aes_sbox2_load_6 = load i8 %aes_sbox2_addr_6
+for.body.i65.split:28 %crypto_aes_sbox_load_9 = load i8 %crypto_aes_sbox_addr_9
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_6"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_9"/></StgValue>
 </operation>
 
 <operation id="103" st_id="3" stage="1" lat="2">
@@ -1958,10 +1958,10 @@ for.body.i65.split:46 %zext_ln72_11 = zext i8 %state_load_10
 
 <Node id="111" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:47 %aes_sbox2_addr_11 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_11
+for.body.i65.split:47 %crypto_aes_sbox_addr_14 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_11
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_11"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_14"/></StgValue>
 </operation>
 
 <operation id="106" st_id="3" stage="2" lat="2">
@@ -1973,10 +1973,10 @@ for.body.i65.split:47 %aes_sbox2_addr_11 = getelementptr i8 %aes_sbox2, i64 0, i
 
 <Node id="112" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:48 %aes_sbox2_load_11 = load i8 %aes_sbox2_addr_11
+for.body.i65.split:48 %crypto_aes_sbox_load_14 = load i8 %crypto_aes_sbox_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_11"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_14"/></StgValue>
 </operation>
 
 <operation id="107" st_id="3" stage="1" lat="2">
@@ -1988,7 +1988,7 @@ for.body.i65.split:48 %aes_sbox2_load_11 = load i8 %aes_sbox2_addr_11
 
 <Node id="116" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:52 %tmp3_3 = load i8 %aes_sbox2_addr_12
+for.body.i65.split:52 %tmp3_3 = load i8 %crypto_aes_sbox_addr_15
 
 ]]></Node>
 <StgValue><ssdm name="tmp3_3"/></StgValue>
@@ -2186,10 +2186,10 @@ for.body.i65.split:10 %zext_ln72_2 = zext i8 %state_load_1
 
 <Node id="75" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:11 %aes_sbox2_addr_2 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_2
+for.body.i65.split:11 %crypto_aes_sbox_addr_5 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_2
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_2"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_5"/></StgValue>
 </operation>
 
 <operation id="121" st_id="4" stage="2" lat="2">
@@ -2201,10 +2201,10 @@ for.body.i65.split:11 %aes_sbox2_addr_2 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="76" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:12 %aes_sbox2_load_2 = load i8 %aes_sbox2_addr_2
+for.body.i65.split:12 %crypto_aes_sbox_load_5 = load i8 %crypto_aes_sbox_addr_5
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_2"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_5"/></StgValue>
 </operation>
 
 <operation id="122" st_id="4" stage="1" lat="2">
@@ -2246,10 +2246,10 @@ for.body.i65.split:14 %zext_ln72_3 = zext i8 %state_load_2
 
 <Node id="79" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:15 %aes_sbox2_addr_3 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_3
+for.body.i65.split:15 %crypto_aes_sbox_addr_6 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_3
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_3"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_6"/></StgValue>
 </operation>
 
 <operation id="125" st_id="4" stage="2" lat="2">
@@ -2261,10 +2261,10 @@ for.body.i65.split:15 %aes_sbox2_addr_3 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="80" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:16 %aes_sbox2_load_3 = load i8 %aes_sbox2_addr_3
+for.body.i65.split:16 %crypto_aes_sbox_load_6 = load i8 %crypto_aes_sbox_addr_6
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_3"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_6"/></StgValue>
 </operation>
 
 <operation id="126" st_id="4" stage="2" lat="2">
@@ -2306,10 +2306,10 @@ for.body.i65.split:21 %state_load_4 = load i4 %state_addr_10
 
 <Node id="92" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:28 %aes_sbox2_load_6 = load i8 %aes_sbox2_addr_6
+for.body.i65.split:28 %crypto_aes_sbox_load_9 = load i8 %crypto_aes_sbox_addr_9
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_6"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_9"/></StgValue>
 </operation>
 
 <operation id="129" st_id="4" stage="1" lat="2">
@@ -2321,10 +2321,10 @@ for.body.i65.split:28 %aes_sbox2_load_6 = load i8 %aes_sbox2_addr_6
 
 <Node id="112" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:48 %aes_sbox2_load_11 = load i8 %aes_sbox2_addr_11
+for.body.i65.split:48 %crypto_aes_sbox_load_14 = load i8 %crypto_aes_sbox_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_11"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_14"/></StgValue>
 </operation>
 
 <operation id="130" st_id="4" stage="1" lat="2">
@@ -2489,10 +2489,10 @@ for.body.i65.split:192 %pynqrypt_round_keys_load_21 = load i8 %pynqrypt_round_ke
 
 <Node id="76" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:12 %aes_sbox2_load_2 = load i8 %aes_sbox2_addr_2
+for.body.i65.split:12 %crypto_aes_sbox_load_5 = load i8 %crypto_aes_sbox_addr_5
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_2"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_5"/></StgValue>
 </operation>
 
 <operation id="141" st_id="5" stage="1" lat="2">
@@ -2504,10 +2504,10 @@ for.body.i65.split:12 %aes_sbox2_load_2 = load i8 %aes_sbox2_addr_2
 
 <Node id="80" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:16 %aes_sbox2_load_3 = load i8 %aes_sbox2_addr_3
+for.body.i65.split:16 %crypto_aes_sbox_load_6 = load i8 %crypto_aes_sbox_addr_6
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_3"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_6"/></StgValue>
 </operation>
 
 <operation id="142" st_id="5" stage="1" lat="2">
@@ -2549,10 +2549,10 @@ for.body.i65.split:18 %zext_ln72_4 = zext i8 %state_load_3
 
 <Node id="83" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:19 %aes_sbox2_addr_4 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_4
+for.body.i65.split:19 %crypto_aes_sbox_addr_7 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_4
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_4"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_7"/></StgValue>
 </operation>
 
 <operation id="145" st_id="5" stage="2" lat="2">
@@ -2564,7 +2564,7 @@ for.body.i65.split:19 %aes_sbox2_addr_4 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="84" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:20 %tmp3_1 = load i8 %aes_sbox2_addr_4
+for.body.i65.split:20 %tmp3_1 = load i8 %crypto_aes_sbox_addr_7
 
 ]]></Node>
 <StgValue><ssdm name="tmp3_1"/></StgValue>
@@ -2609,10 +2609,10 @@ for.body.i65.split:22 %zext_ln72_5 = zext i8 %state_load_4
 
 <Node id="87" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:23 %aes_sbox2_addr_5 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_5
+for.body.i65.split:23 %crypto_aes_sbox_addr_8 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_5
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_5"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_8"/></StgValue>
 </operation>
 
 <operation id="149" st_id="5" stage="2" lat="2">
@@ -2624,10 +2624,10 @@ for.body.i65.split:23 %aes_sbox2_addr_5 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="88" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:24 %aes_sbox2_load_5 = load i8 %aes_sbox2_addr_5
+for.body.i65.split:24 %crypto_aes_sbox_load_8 = load i8 %crypto_aes_sbox_addr_8
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_5"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_8"/></StgValue>
 </operation>
 
 <operation id="150" st_id="5" stage="2" lat="2">
@@ -2669,7 +2669,7 @@ for.body.i65.split:61 %state_load_14 = load i4 %state_addr
 
 <Node id="183" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:119 %tmp2_12 = xor i8 %aes_sbox2_load_1, i8 %tmp3_3
+for.body.i65.split:119 %tmp2_12 = xor i8 %crypto_aes_sbox_load_4, i8 %tmp3_3
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_12"/></StgValue>
@@ -2684,7 +2684,7 @@ for.body.i65.split:119 %tmp2_12 = xor i8 %aes_sbox2_load_1, i8 %tmp3_3
 
 <Node id="184" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:120 %xor_ln109_7 = xor i8 %aes_sbox2_load_6, i8 %tmp2_12
+for.body.i65.split:120 %xor_ln109_7 = xor i8 %crypto_aes_sbox_load_9, i8 %tmp2_12
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln109_7"/></StgValue>
@@ -2699,7 +2699,7 @@ for.body.i65.split:120 %xor_ln109_7 = xor i8 %aes_sbox2_load_6, i8 %tmp2_12
 
 <Node id="197" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:133 %tmp2_15 = xor i8 %aes_sbox2_load_11, i8 %tmp3_3
+for.body.i65.split:133 %tmp2_15 = xor i8 %crypto_aes_sbox_load_14, i8 %tmp3_3
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_15"/></StgValue>
@@ -2987,7 +2987,7 @@ for.body.i65.split:293 %store_ln54 = store i8 %xor_ln233_47, i8 %conv6_i36_15_ph
 
 <Node id="84" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:20 %tmp3_1 = load i8 %aes_sbox2_addr_4
+for.body.i65.split:20 %tmp3_1 = load i8 %crypto_aes_sbox_addr_7
 
 ]]></Node>
 <StgValue><ssdm name="tmp3_1"/></StgValue>
@@ -3002,10 +3002,10 @@ for.body.i65.split:20 %tmp3_1 = load i8 %aes_sbox2_addr_4
 
 <Node id="88" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:24 %aes_sbox2_load_5 = load i8 %aes_sbox2_addr_5
+for.body.i65.split:24 %crypto_aes_sbox_load_8 = load i8 %crypto_aes_sbox_addr_8
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_5"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_8"/></StgValue>
 </operation>
 
 <operation id="175" st_id="6" stage="1" lat="2">
@@ -3047,10 +3047,10 @@ for.body.i65.split:30 %zext_ln72_7 = zext i8 %state_load_6
 
 <Node id="95" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:31 %aes_sbox2_addr_7 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_7
+for.body.i65.split:31 %crypto_aes_sbox_addr_10 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_7
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_7"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_10"/></StgValue>
 </operation>
 
 <operation id="178" st_id="6" stage="2" lat="2">
@@ -3062,10 +3062,10 @@ for.body.i65.split:31 %aes_sbox2_addr_7 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="96" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:32 %aes_sbox2_load_7 = load i8 %aes_sbox2_addr_7
+for.body.i65.split:32 %crypto_aes_sbox_load_10 = load i8 %crypto_aes_sbox_addr_10
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_7"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_10"/></StgValue>
 </operation>
 
 <operation id="179" st_id="6" stage="2" lat="2">
@@ -3137,10 +3137,10 @@ for.body.i65.split:62 %zext_ln72_15 = zext i8 %state_load_14
 
 <Node id="127" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:63 %aes_sbox2_addr_15 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_15
+for.body.i65.split:63 %crypto_aes_sbox_addr_18 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_15
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_15"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_18"/></StgValue>
 </operation>
 
 <operation id="184" st_id="6" stage="2" lat="2">
@@ -3152,10 +3152,10 @@ for.body.i65.split:63 %aes_sbox2_addr_15 = getelementptr i8 %aes_sbox2, i64 0, i
 
 <Node id="128" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:64 %aes_sbox2_load_15 = load i8 %aes_sbox2_addr_15
+for.body.i65.split:64 %crypto_aes_sbox_load_18 = load i8 %crypto_aes_sbox_addr_18
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_15"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_18"/></StgValue>
 </operation>
 
 <operation id="185" st_id="6" stage="1" lat="2">
@@ -3320,10 +3320,10 @@ for.body.i65.split:227 %pynqrypt_round_keys_load_25 = load i8 %pynqrypt_round_ke
 
 <Node id="96" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:32 %aes_sbox2_load_7 = load i8 %aes_sbox2_addr_7
+for.body.i65.split:32 %crypto_aes_sbox_load_10 = load i8 %crypto_aes_sbox_addr_10
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_7"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_10"/></StgValue>
 </operation>
 
 <operation id="196" st_id="7" stage="1" lat="2">
@@ -3365,10 +3365,10 @@ for.body.i65.split:34 %zext_ln72_8 = zext i8 %state_load_7
 
 <Node id="99" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:35 %aes_sbox2_addr_8 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_8
+for.body.i65.split:35 %crypto_aes_sbox_addr_11 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_8
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_8"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_11"/></StgValue>
 </operation>
 
 <operation id="199" st_id="7" stage="2" lat="2">
@@ -3380,7 +3380,7 @@ for.body.i65.split:35 %aes_sbox2_addr_8 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="100" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:36 %tmp3_2 = load i8 %aes_sbox2_addr_8
+for.body.i65.split:36 %tmp3_2 = load i8 %crypto_aes_sbox_addr_11
 
 ]]></Node>
 <StgValue><ssdm name="tmp3_2"/></StgValue>
@@ -3425,10 +3425,10 @@ for.body.i65.split:38 %zext_ln72_9 = zext i8 %state_load_8
 
 <Node id="103" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:39 %aes_sbox2_addr_9 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_9
+for.body.i65.split:39 %crypto_aes_sbox_addr_12 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_9
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_9"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_12"/></StgValue>
 </operation>
 
 <operation id="203" st_id="7" stage="2" lat="2">
@@ -3440,10 +3440,10 @@ for.body.i65.split:39 %aes_sbox2_addr_9 = getelementptr i8 %aes_sbox2, i64 0, i6
 
 <Node id="104" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:40 %aes_sbox2_load_9 = load i8 %aes_sbox2_addr_9
+for.body.i65.split:40 %crypto_aes_sbox_load_12 = load i8 %crypto_aes_sbox_addr_12
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_9"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_12"/></StgValue>
 </operation>
 
 <operation id="204" st_id="7" stage="2" lat="2">
@@ -3485,10 +3485,10 @@ for.body.i65.split:53 %state_load_12 = load i4 %state_addr_2
 
 <Node id="128" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:64 %aes_sbox2_load_15 = load i8 %aes_sbox2_addr_15
+for.body.i65.split:64 %crypto_aes_sbox_load_18 = load i8 %crypto_aes_sbox_addr_18
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_15"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_18"/></StgValue>
 </operation>
 
 <operation id="207" st_id="7" stage="1" lat="2">
@@ -3653,7 +3653,7 @@ for.body.i65.split:244 %pynqrypt_round_keys_load_27 = load i8 %pynqrypt_round_ke
 
 <Node id="100" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:36 %tmp3_2 = load i8 %aes_sbox2_addr_8
+for.body.i65.split:36 %tmp3_2 = load i8 %crypto_aes_sbox_addr_11
 
 ]]></Node>
 <StgValue><ssdm name="tmp3_2"/></StgValue>
@@ -3668,10 +3668,10 @@ for.body.i65.split:36 %tmp3_2 = load i8 %aes_sbox2_addr_8
 
 <Node id="104" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:40 %aes_sbox2_load_9 = load i8 %aes_sbox2_addr_9
+for.body.i65.split:40 %crypto_aes_sbox_load_12 = load i8 %crypto_aes_sbox_addr_12
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_9"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_12"/></StgValue>
 </operation>
 
 <operation id="219" st_id="8" stage="1" lat="2">
@@ -3713,10 +3713,10 @@ for.body.i65.split:42 %zext_ln72_10 = zext i8 %state_load_9
 
 <Node id="107" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:43 %aes_sbox2_addr_10 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_10
+for.body.i65.split:43 %crypto_aes_sbox_addr_13 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_10
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_10"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_13"/></StgValue>
 </operation>
 
 <operation id="222" st_id="8" stage="2" lat="2">
@@ -3728,10 +3728,10 @@ for.body.i65.split:43 %aes_sbox2_addr_10 = getelementptr i8 %aes_sbox2, i64 0, i
 
 <Node id="108" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:44 %aes_sbox2_load_10 = load i8 %aes_sbox2_addr_10
+for.body.i65.split:44 %crypto_aes_sbox_load_13 = load i8 %crypto_aes_sbox_addr_13
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_10"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_13"/></StgValue>
 </operation>
 
 <operation id="223" st_id="8" stage="1" lat="2">
@@ -3773,10 +3773,10 @@ for.body.i65.split:54 %zext_ln72_13 = zext i8 %state_load_12
 
 <Node id="119" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:55 %aes_sbox2_addr_13 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_13
+for.body.i65.split:55 %crypto_aes_sbox_addr_16 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_13
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_13"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_16"/></StgValue>
 </operation>
 
 <operation id="226" st_id="8" stage="2" lat="2">
@@ -3788,10 +3788,10 @@ for.body.i65.split:55 %aes_sbox2_addr_13 = getelementptr i8 %aes_sbox2, i64 0, i
 
 <Node id="120" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:56 %aes_sbox2_load_13 = load i8 %aes_sbox2_addr_13
+for.body.i65.split:56 %crypto_aes_sbox_load_16 = load i8 %crypto_aes_sbox_addr_16
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_13"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_16"/></StgValue>
 </operation>
 
 <operation id="227" st_id="8" stage="2" lat="2">
@@ -3818,7 +3818,7 @@ for.body.i65.split:57 %state_load_13 = load i4 %state_addr_1
 
 <Node id="185" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:121 %tmp1_3 = xor i8 %aes_sbox2_load_11, i8 %xor_ln109_7
+for.body.i65.split:121 %tmp1_3 = xor i8 %crypto_aes_sbox_load_14, i8 %xor_ln109_7
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_3"/></StgValue>
@@ -4121,10 +4121,10 @@ for.body.i65.split:290 %store_ln54 = store i8 %xor_ln233_44, i8 %conv6_i36_12_ph
 
 <Node id="108" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:44 %aes_sbox2_load_10 = load i8 %aes_sbox2_addr_10
+for.body.i65.split:44 %crypto_aes_sbox_load_13 = load i8 %crypto_aes_sbox_addr_13
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_10"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_13"/></StgValue>
 </operation>
 
 <operation id="249" st_id="9" stage="1" lat="2">
@@ -4136,10 +4136,10 @@ for.body.i65.split:44 %aes_sbox2_load_10 = load i8 %aes_sbox2_addr_10
 
 <Node id="120" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:56 %aes_sbox2_load_13 = load i8 %aes_sbox2_addr_13
+for.body.i65.split:56 %crypto_aes_sbox_load_16 = load i8 %crypto_aes_sbox_addr_16
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_13"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_16"/></StgValue>
 </operation>
 
 <operation id="250" st_id="9" stage="1" lat="2">
@@ -4181,10 +4181,10 @@ for.body.i65.split:58 %zext_ln72_14 = zext i8 %state_load_13
 
 <Node id="123" bw="8" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body.i65.split:59 %aes_sbox2_addr_14 = getelementptr i8 %aes_sbox2, i64 0, i64 %zext_ln72_14
+for.body.i65.split:59 %crypto_aes_sbox_addr_17 = getelementptr i8 %crypto_aes_sbox, i64 0, i64 %zext_ln72_14
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_addr_14"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_addr_17"/></StgValue>
 </operation>
 
 <operation id="253" st_id="9" stage="2" lat="2">
@@ -4196,10 +4196,10 @@ for.body.i65.split:59 %aes_sbox2_addr_14 = getelementptr i8 %aes_sbox2, i64 0, i
 
 <Node id="124" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:60 %aes_sbox2_load_14 = load i8 %aes_sbox2_addr_14
+for.body.i65.split:60 %crypto_aes_sbox_load_17 = load i8 %crypto_aes_sbox_addr_17
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_14"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_17"/></StgValue>
 </operation>
 
 <operation id="254" st_id="9" stage="1" lat="1">
@@ -4211,7 +4211,7 @@ for.body.i65.split:60 %aes_sbox2_load_14 = load i8 %aes_sbox2_addr_14
 
 <Node id="189" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:125 %tmp2_13 = xor i8 %aes_sbox2_load_6, i8 %aes_sbox2_load_1
+for.body.i65.split:125 %tmp2_13 = xor i8 %crypto_aes_sbox_load_9, i8 %crypto_aes_sbox_load_4
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_13"/></StgValue>
@@ -4271,7 +4271,7 @@ for.body.i65.split:128 %select_ln118_3 = select i1 %tmp_13, i8 27, i8 0
 
 <Node id="193" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:129 %tmp2_14 = xor i8 %aes_sbox2_load_11, i8 %aes_sbox2_load_6
+for.body.i65.split:129 %tmp2_14 = xor i8 %crypto_aes_sbox_load_14, i8 %crypto_aes_sbox_load_9
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_14"/></StgValue>
@@ -4346,7 +4346,7 @@ for.body.i65.split:253 %pynqrypt_round_keys_load_28 = load i8 %pynqrypt_round_ke
 
 <Node id="318" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:254 %xor_ln233_53 = xor i8 %aes_sbox2_load_1, i8 %pynqrypt_round_keys_load_28
+for.body.i65.split:254 %xor_ln233_53 = xor i8 %crypto_aes_sbox_load_4, i8 %pynqrypt_round_keys_load_28
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_53"/></StgValue>
@@ -4436,7 +4436,7 @@ for.body.i65.split:262 %pynqrypt_round_keys_load_29 = load i8 %pynqrypt_round_ke
 
 <Node id="327" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:263 %xor_ln233_56 = xor i8 %aes_sbox2_load_11, i8 %pynqrypt_round_keys_load_29
+for.body.i65.split:263 %xor_ln233_56 = xor i8 %crypto_aes_sbox_load_14, i8 %pynqrypt_round_keys_load_29
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_56"/></StgValue>
@@ -4544,10 +4544,10 @@ for.body.i65.split:292 %store_ln54 = store i8 %xor_ln233_46, i8 %conv6_i36_14_ph
 
 <Node id="124" bw="8" op_0_bw="8">
 <![CDATA[
-for.body.i65.split:60 %aes_sbox2_load_14 = load i8 %aes_sbox2_addr_14
+for.body.i65.split:60 %crypto_aes_sbox_load_17 = load i8 %crypto_aes_sbox_addr_17
 
 ]]></Node>
-<StgValue><ssdm name="aes_sbox2_load_14"/></StgValue>
+<StgValue><ssdm name="crypto_aes_sbox_load_17"/></StgValue>
 </operation>
 
 <operation id="277" st_id="10" stage="1" lat="1">
@@ -4559,7 +4559,7 @@ for.body.i65.split:60 %aes_sbox2_load_14 = load i8 %aes_sbox2_addr_14
 
 <Node id="129" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:65 %tmp2 = xor i8 %aes_sbox2_load_5, i8 %tmp3
+for.body.i65.split:65 %tmp2 = xor i8 %crypto_aes_sbox_load_8, i8 %tmp3
 
 ]]></Node>
 <StgValue><ssdm name="tmp2"/></StgValue>
@@ -4574,7 +4574,7 @@ for.body.i65.split:65 %tmp2 = xor i8 %aes_sbox2_load_5, i8 %tmp3
 
 <Node id="130" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:66 %xor_ln109_1 = xor i8 %aes_sbox2_load_10, i8 %tmp2
+for.body.i65.split:66 %xor_ln109_1 = xor i8 %crypto_aes_sbox_load_13, i8 %tmp2
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln109_1"/></StgValue>
@@ -4589,7 +4589,7 @@ for.body.i65.split:66 %xor_ln109_1 = xor i8 %aes_sbox2_load_10, i8 %tmp2
 
 <Node id="131" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:67 %tmp1 = xor i8 %aes_sbox2_load_15, i8 %xor_ln109_1
+for.body.i65.split:67 %tmp1 = xor i8 %crypto_aes_sbox_load_18, i8 %xor_ln109_1
 
 ]]></Node>
 <StgValue><ssdm name="tmp1"/></StgValue>
@@ -4649,7 +4649,7 @@ for.body.i65.split:70 %select_ln114 = select i1 %tmp, i8 27, i8 0
 
 <Node id="135" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:71 %tmp2_1 = xor i8 %aes_sbox2_load_10, i8 %aes_sbox2_load_5
+for.body.i65.split:71 %tmp2_1 = xor i8 %crypto_aes_sbox_load_13, i8 %crypto_aes_sbox_load_8
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_1"/></StgValue>
@@ -4709,7 +4709,7 @@ for.body.i65.split:74 %select_ln118 = select i1 %tmp_1, i8 27, i8 0
 
 <Node id="139" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:75 %tmp2_2 = xor i8 %aes_sbox2_load_15, i8 %aes_sbox2_load_10
+for.body.i65.split:75 %tmp2_2 = xor i8 %crypto_aes_sbox_load_18, i8 %crypto_aes_sbox_load_13
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_2"/></StgValue>
@@ -4769,7 +4769,7 @@ for.body.i65.split:78 %select_ln122 = select i1 %tmp_2, i8 27, i8 0
 
 <Node id="143" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:79 %tmp2_3 = xor i8 %aes_sbox2_load_15, i8 %tmp3
+for.body.i65.split:79 %tmp2_3 = xor i8 %crypto_aes_sbox_load_18, i8 %tmp3
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_3"/></StgValue>
@@ -4829,7 +4829,7 @@ for.body.i65.split:82 %select_ln104 = select i1 %tmp_3, i8 27, i8 0
 
 <Node id="147" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:83 %tmp2_4 = xor i8 %aes_sbox2_load_9, i8 %tmp3_1
+for.body.i65.split:83 %tmp2_4 = xor i8 %crypto_aes_sbox_load_12, i8 %tmp3_1
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_4"/></StgValue>
@@ -4844,7 +4844,7 @@ for.body.i65.split:83 %tmp2_4 = xor i8 %aes_sbox2_load_9, i8 %tmp3_1
 
 <Node id="148" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:84 %xor_ln109_3 = xor i8 %aes_sbox2_load_14, i8 %tmp2_4
+for.body.i65.split:84 %xor_ln109_3 = xor i8 %crypto_aes_sbox_load_17, i8 %tmp2_4
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln109_3"/></StgValue>
@@ -4859,7 +4859,7 @@ for.body.i65.split:84 %xor_ln109_3 = xor i8 %aes_sbox2_load_14, i8 %tmp2_4
 
 <Node id="149" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:85 %tmp1_1 = xor i8 %aes_sbox2_load_3, i8 %xor_ln109_3
+for.body.i65.split:85 %tmp1_1 = xor i8 %crypto_aes_sbox_load_6, i8 %xor_ln109_3
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_1"/></StgValue>
@@ -4919,7 +4919,7 @@ for.body.i65.split:88 %select_ln114_1 = select i1 %tmp_4, i8 27, i8 0
 
 <Node id="153" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:89 %tmp2_5 = xor i8 %aes_sbox2_load_14, i8 %aes_sbox2_load_9
+for.body.i65.split:89 %tmp2_5 = xor i8 %crypto_aes_sbox_load_17, i8 %crypto_aes_sbox_load_12
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_5"/></StgValue>
@@ -4979,7 +4979,7 @@ for.body.i65.split:92 %select_ln118_1 = select i1 %tmp_5, i8 27, i8 0
 
 <Node id="157" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:93 %tmp2_6 = xor i8 %aes_sbox2_load_3, i8 %aes_sbox2_load_14
+for.body.i65.split:93 %tmp2_6 = xor i8 %crypto_aes_sbox_load_6, i8 %crypto_aes_sbox_load_17
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_6"/></StgValue>
@@ -5039,7 +5039,7 @@ for.body.i65.split:96 %select_ln122_1 = select i1 %tmp_6, i8 27, i8 0
 
 <Node id="161" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:97 %tmp2_7 = xor i8 %aes_sbox2_load_3, i8 %tmp3_1
+for.body.i65.split:97 %tmp2_7 = xor i8 %crypto_aes_sbox_load_6, i8 %tmp3_1
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_7"/></StgValue>
@@ -5099,7 +5099,7 @@ for.body.i65.split:100 %select_ln104_1 = select i1 %tmp_7, i8 27, i8 0
 
 <Node id="165" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:101 %tmp2_8 = xor i8 %aes_sbox2_load_13, i8 %tmp3_2
+for.body.i65.split:101 %tmp2_8 = xor i8 %crypto_aes_sbox_load_16, i8 %tmp3_2
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_8"/></StgValue>
@@ -5114,7 +5114,7 @@ for.body.i65.split:101 %tmp2_8 = xor i8 %aes_sbox2_load_13, i8 %tmp3_2
 
 <Node id="166" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:102 %xor_ln109_5 = xor i8 %aes_sbox2_load_2, i8 %tmp2_8
+for.body.i65.split:102 %xor_ln109_5 = xor i8 %crypto_aes_sbox_load_5, i8 %tmp2_8
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln109_5"/></StgValue>
@@ -5129,7 +5129,7 @@ for.body.i65.split:102 %xor_ln109_5 = xor i8 %aes_sbox2_load_2, i8 %tmp2_8
 
 <Node id="167" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:103 %tmp1_2 = xor i8 %aes_sbox2_load_7, i8 %xor_ln109_5
+for.body.i65.split:103 %tmp1_2 = xor i8 %crypto_aes_sbox_load_10, i8 %xor_ln109_5
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_2"/></StgValue>
@@ -5189,7 +5189,7 @@ for.body.i65.split:106 %select_ln114_2 = select i1 %tmp_8, i8 27, i8 0
 
 <Node id="171" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:107 %tmp2_9 = xor i8 %aes_sbox2_load_2, i8 %aes_sbox2_load_13
+for.body.i65.split:107 %tmp2_9 = xor i8 %crypto_aes_sbox_load_5, i8 %crypto_aes_sbox_load_16
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_9"/></StgValue>
@@ -5249,7 +5249,7 @@ for.body.i65.split:110 %select_ln118_2 = select i1 %tmp_9, i8 27, i8 0
 
 <Node id="175" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:111 %tmp2_10 = xor i8 %aes_sbox2_load_7, i8 %aes_sbox2_load_2
+for.body.i65.split:111 %tmp2_10 = xor i8 %crypto_aes_sbox_load_10, i8 %crypto_aes_sbox_load_5
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_10"/></StgValue>
@@ -5309,7 +5309,7 @@ for.body.i65.split:114 %select_ln122_2 = select i1 %tmp_10, i8 27, i8 0
 
 <Node id="179" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:115 %tmp2_11 = xor i8 %aes_sbox2_load_7, i8 %tmp3_2
+for.body.i65.split:115 %tmp2_11 = xor i8 %crypto_aes_sbox_load_10, i8 %tmp3_2
 
 ]]></Node>
 <StgValue><ssdm name="tmp2_11"/></StgValue>
@@ -5429,7 +5429,7 @@ for.body.i65.split:144 %xor_ln233_4 = xor i8 %xor_ln233_3, i8 %xor_ln233_1
 
 <Node id="213" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:149 %xor_ln233_5 = xor i8 %aes_sbox2_load_5, i8 %pynqrypt_round_keys_load_16
+for.body.i65.split:149 %xor_ln233_5 = xor i8 %crypto_aes_sbox_load_8, i8 %pynqrypt_round_keys_load_16
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_5"/></StgValue>
@@ -5504,7 +5504,7 @@ for.body.i65.split:153 %store_ln233 = store i8 %xor_ln233_8, i4 %state_addr_14
 
 <Node id="222" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:158 %xor_ln233_9 = xor i8 %aes_sbox2_load_15, i8 %pynqrypt_round_keys_load_17
+for.body.i65.split:158 %xor_ln233_9 = xor i8 %crypto_aes_sbox_load_18, i8 %pynqrypt_round_keys_load_17
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_9"/></StgValue>
@@ -5684,7 +5684,7 @@ for.body.i65.split:178 %xor_ln233_19 = xor i8 %xor_ln233_18, i8 %xor_ln233_16
 
 <Node id="248" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:184 %xor_ln233_20 = xor i8 %aes_sbox2_load_9, i8 %pynqrypt_round_keys_load_20
+for.body.i65.split:184 %xor_ln233_20 = xor i8 %crypto_aes_sbox_load_12, i8 %pynqrypt_round_keys_load_20
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_20"/></StgValue>
@@ -5744,7 +5744,7 @@ for.body.i65.split:187 %xor_ln233_23 = xor i8 %xor_ln233_22, i8 %xor_ln233_20
 
 <Node id="257" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:193 %xor_ln233_24 = xor i8 %aes_sbox2_load_3, i8 %pynqrypt_round_keys_load_21
+for.body.i65.split:193 %xor_ln233_24 = xor i8 %crypto_aes_sbox_load_6, i8 %pynqrypt_round_keys_load_21
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_24"/></StgValue>
@@ -5909,7 +5909,7 @@ for.body.i65.split:213 %xor_ln233_34 = xor i8 %xor_ln233_33, i8 %xor_ln233_31
 
 <Node id="283" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:219 %xor_ln233_35 = xor i8 %aes_sbox2_load_13, i8 %pynqrypt_round_keys_load_24
+for.body.i65.split:219 %xor_ln233_35 = xor i8 %crypto_aes_sbox_load_16, i8 %pynqrypt_round_keys_load_24
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_35"/></StgValue>
@@ -5969,7 +5969,7 @@ for.body.i65.split:222 %xor_ln233_38 = xor i8 %xor_ln233_37, i8 %xor_ln233_35
 
 <Node id="292" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body.i65.split:228 %xor_ln233_39 = xor i8 %aes_sbox2_load_7, i8 %pynqrypt_round_keys_load_25
+for.body.i65.split:228 %xor_ln233_39 = xor i8 %crypto_aes_sbox_load_10, i8 %pynqrypt_round_keys_load_25
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln233_39"/></StgValue>
@@ -6389,7 +6389,7 @@ for.body.i65.split:232 %store_ln233 = store i8 %xor_ln233_42, i4 %state_addr_5
 
 <Node id="65" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body.i65.split:1 %specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
+for.body.i65.split:1 %specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln0"/></StgValue>

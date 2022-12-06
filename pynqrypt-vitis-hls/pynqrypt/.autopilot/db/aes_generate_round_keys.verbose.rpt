@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_generate_round_keys'
 ================================================================
-* Date:           Tue Dec  6 11:35:06 2022
+* Date:           Tue Dec  6 12:01:16 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -55,14 +55,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|      2|    -|
+|Expression       |        -|    -|       -|      -|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        1|    -|     280|    996|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       -|    108|    -|
-|Register         |        -|    -|       7|      -|    -|
+|Multiplexer      |        -|    -|       -|     99|    -|
+|Register         |        -|    -|       6|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        1|    0|     287|   1106|    0|
+|Total            |        1|    0|     286|   1095|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -90,20 +90,13 @@
     N/A
 
     * Expression: 
-    +-----------------+----------+----+---+----+------------+------------+
-    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------+----------+----+---+----+------------+------------+
-    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
-    +-----------------+----------+----+---+----+------------+------------+
-    |Total            |          |   0|  0|   2|           1|           1|
-    +-----------------+----------+----+---+----+------------+------------+
+    N/A
 
     * Multiplexer: 
     +------------------------------+----+-----------+-----+-----------+
     |             Name             | LUT| Input Size| Bits| Total Bits|
     +------------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm                     |  25|          5|    1|          5|
-    |ap_done                       |   9|          2|    1|          2|
     |pynqrypt_round_keys_address0  |  14|          3|    8|         24|
     |pynqrypt_round_keys_ce0       |  14|          3|    1|          3|
     |pynqrypt_round_keys_ce1       |   9|          2|    1|          2|
@@ -111,7 +104,7 @@
     |pynqrypt_round_keys_we0       |  14|          3|    1|          3|
     |pynqrypt_round_keys_we1       |   9|          2|    1|          2|
     +------------------------------+----+-----------+-----+-----------+
-    |Total                         | 108|         23|   22|         65|
+    |Total                         |  99|         21|   21|         63|
     +------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -119,11 +112,10 @@
     |                                       Name                                       | FF| LUT| Bits| Const Bits|
     +----------------------------------------------------------------------------------+---+----+-----+-----------+
     |ap_CS_fsm                                                                         |  4|   0|    4|          0|
-    |ap_done_reg                                                                       |  1|   0|    1|          0|
     |grp_aes_generate_round_keys_Pipeline_1_fu_12_ap_start_reg                         |  1|   0|    1|          0|
     |grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_ap_start_reg  |  1|   0|    1|          0|
     +----------------------------------------------------------------------------------+---+----+-----+-----------+
-    |Total                                                                             |  7|   0|    7|          0|
+    |Total                                                                             |  6|   0|    6|          0|
     +----------------------------------------------------------------------------------+---+----+-----+-----------+
 
 
@@ -139,7 +131,6 @@
 |ap_rst                        |   in|    1|  ap_ctrl_hs|  aes_generate_round_keys|  return value|
 |ap_start                      |   in|    1|  ap_ctrl_hs|  aes_generate_round_keys|  return value|
 |ap_done                       |  out|    1|  ap_ctrl_hs|  aes_generate_round_keys|  return value|
-|ap_continue                   |   in|    1|  ap_ctrl_hs|  aes_generate_round_keys|  return value|
 |ap_idle                       |  out|    1|  ap_ctrl_hs|  aes_generate_round_keys|  return value|
 |ap_ready                      |  out|    1|  ap_ctrl_hs|  aes_generate_round_keys|  return value|
 |this_key_address0             |  out|    4|   ap_memory|                 this_key|         array|
@@ -168,7 +159,7 @@ ExposeGlobal: 0
 IsTopModel: 0
 ResetActiveHigh: 1
 IsCombinational: 2
-IsDatapathOnly: 0
+IsDatapathOnly: 2
 HasWiredReturn: 1
 HasMFsm: 0
 HasVarLatency: 1
@@ -220,8 +211,8 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ this_key]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ pynqrypt_round_keys]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=1; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ this_key]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ pynqrypt_round_keys]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
 Port [ crypto_aes_sbox]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
 Port [ crypto_aes_rcon]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------

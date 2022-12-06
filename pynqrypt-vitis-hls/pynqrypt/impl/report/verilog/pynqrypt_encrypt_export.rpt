@@ -1,0 +1,23 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.2
+Project:             pynqrypt-vitis-hls
+Solution:            pynqrypt
+Device target:       xc7z020i-clg400-1L
+Report date:         Tue Dec 06 12:04:54 CET 2022
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           4128
+FF:            4394
+DSP:              0
+BRAM:             7
+URAM:             0
+LATCH:            0
+SRL:            340
+CLB:              0
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      7.243
+Timing met

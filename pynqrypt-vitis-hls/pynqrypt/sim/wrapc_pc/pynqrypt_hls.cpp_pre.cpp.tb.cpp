@@ -23864,8 +23864,6 @@ void pynqrypt_encrypt(
 
  crypto::Pynqrypt pynqrypt(key, nonce);
 
-#pragma HLS dataflow
-
  pynqrypt.ctr_encrypt(plaintext_length, plaintext, ciphertext, 0);
 }
 #ifndef HLS_FASTSIM
@@ -23888,5 +23886,5 @@ apatb_pynqrypt_encrypt_ir(key, nonce, plaintext_length, plaintext, ciphertext);
 return ;
 }
 #endif
-# 25 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.cpp"
+# 23 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.cpp"
 
