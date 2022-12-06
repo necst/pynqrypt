@@ -57,9 +57,39 @@
 			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.hpp</location>
 		</link>
 		<link>
+			<name>source/pynqrypt_hls.cpp</name>
+			<type>1</type>
+			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.cpp</location>
+		</link>
+		<link>
+			<name>source/pynqrypt_hls.hpp</name>
+			<type>1</type>
+			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.hpp</location>
+		</link>
+		<link>
+			<name>testbench/data.bin</name>
+			<type>1</type>
+			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/data.bin</location>
+		</link>
+		<link>
+			<name>testbench/data_enc_openssl.bin</name>
+			<type>1</type>
+			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/data_enc_openssl.bin</location>
+		</link>
+		<link>
+			<name>testbench/key.bin</name>
+			<type>1</type>
+			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/key.bin</location>
+		</link>
+		<link>
+			<name>testbench/nonce.bin</name>
+			<type>1</type>
+			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/nonce.bin</location>
+		</link>
+		<link>
 			<name>testbench/test.cpp</name>
 			<type>1</type>
-			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/test-src/test.cpp</location>
+			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp</location>
 		</link>
 		<link>
 			<name>pynqrypt/constraints/.xml.directive</name>

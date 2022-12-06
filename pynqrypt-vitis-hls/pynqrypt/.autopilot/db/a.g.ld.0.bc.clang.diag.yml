@@ -1,0 +1,515 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_rotate_word(unsigned int&)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 236, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_sub_word(unsigned int&)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 246, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 253, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 260, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
+Function:        _ZN6crypto8PynqryptC2EPhS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_generate_round_keys()'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 94, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt15aes_mix_columnsEPh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_xtime(unsigned char)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 221, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 94, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 214, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 65, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)'
+    DebugLoc:        { File: '/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/stl_algobase.h', 
+                       Line: 196, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 32, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 42, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 199, Column: 16 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 29 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 18 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 207, Column: 29 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 27 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 39 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 25 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion2.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 21, Column: 22 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          ' '
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:21:22'
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 199, Column: 16 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 29 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 18 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 207, Column: 29 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 27 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 39 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 25 }
+Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

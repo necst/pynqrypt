@@ -1,0 +1,191 @@
+
+
+================================================================
+== Vitis HLS Report for 'aes_encrypt_block'
+================================================================
+* Date:           Tue Dec  6 01:26:18 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        pynqrypt-vitis-hls
+* Solution:       pynqrypt (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020i-clg400-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.764 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      266|      266|  2.660 us|  2.660 us|  266|  266|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                        |                                             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                        Instance                        |                    Module                   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198   |aes_encrypt_block_Pipeline_VITIS_LOOP_52_1   |      182|      182|  1.820 us|  1.820 us|  182|  182|       no|
+        |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208   |aes_encrypt_block_Pipeline_VITIS_LOOP_66_1   |       19|       19|  0.190 us|  0.190 us|   19|   19|       no|
+        |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216  |aes_encrypt_block_Pipeline_VITIS_LOOP_215_1  |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_215_1  |       32|       32|         2|          -|          -|    16|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     31|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     363|   1564|    -|
+|Memory           |        1|    -|       0|      0|    -|
+|Multiplexer      |        -|    -|       -|    489|    -|
+|Register         |        -|    -|      61|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        1|    0|     424|   2084|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      3|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+------+-----+
+    |                        Instance                        |                    Module                   | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+------+-----+
+    |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216  |aes_encrypt_block_Pipeline_VITIS_LOOP_215_1  |        0|   0|   12|    69|    0|
+    |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198   |aes_encrypt_block_Pipeline_VITIS_LOOP_52_1   |        0|   0|  333|  1434|    0|
+    |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208   |aes_encrypt_block_Pipeline_VITIS_LOOP_66_1   |        0|   0|   18|    61|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+------+-----+
+    |Total                                                   |                                             |        0|   0|  363|  1564|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory      |                            Module                           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |crypto_aes_sbox_U  |Loop_3_proc_Pipeline_VITIS_LOOP_198_1_aes_sbox3_ROM_AUTO_1R  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total              |                                                             |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln215_fu_268_p2   |         +|   0|  0|  13|           5|           1|
+    |icmp_ln215_fu_262_p2  |      icmp|   0|  0|  10|           5|           6|
+    |xor_ln216_fu_279_p2   |       xor|   0|  0|   8|           8|           8|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  31|          18|          15|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  87|         18|    1|         18|
+    |crypto_aes_sbox_address0      |  14|          3|    8|         24|
+    |crypto_aes_sbox_ce0           |  14|          3|    1|          3|
+    |i_fu_54                       |   9|          2|    5|         10|
+    |pynqrypt_round_keys_address0  |  20|          4|    8|         32|
+    |pynqrypt_round_keys_ce0       |  20|          4|    1|          4|
+    |pynqrypt_round_keys_ce1       |   9|          2|    1|          2|
+    |reg_224                       |   9|          2|    8|         16|
+    |reg_241                       |   9|          2|    8|         16|
+    |state_address0                |  65|         15|    4|         60|
+    |state_address1                |  65|         13|    4|         52|
+    |state_ce0                     |  25|          5|    1|          5|
+    |state_ce1                     |  25|          5|    1|          5|
+    |state_d0                      |  48|          9|    8|         72|
+    |state_d1                      |  31|          6|    8|         48|
+    |state_we0                     |  25|          5|    1|          5|
+    |state_we1                     |  14|          3|    1|          3|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         | 489|        101|   69|        375|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |                                 Name                                | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                            |  17|   0|   17|          0|
+    |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216_ap_start_reg  |   1|   0|    1|          0|
+    |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198_ap_start_reg   |   1|   0|    1|          0|
+    |grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208_ap_start_reg   |   1|   0|    1|          0|
+    |i_fu_54                                                              |   5|   0|    5|          0|
+    |reg_224                                                              |   8|   0|    8|          0|
+    |reg_230                                                              |   8|   0|    8|          0|
+    |reg_236                                                              |   8|   0|    8|          0|
+    |reg_241                                                              |   8|   0|    8|          0|
+    |state_addr_reg_301                                                   |   4|   0|    4|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                |  61|   0|   61|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+---------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|    aes_encrypt_block|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|    aes_encrypt_block|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|    aes_encrypt_block|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|    aes_encrypt_block|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|    aes_encrypt_block|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|    aes_encrypt_block|  return value|
+|pynqrypt_round_keys_address0  |  out|    8|   ap_memory|  pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_ce0       |  out|    1|   ap_memory|  pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_q0        |   in|    8|   ap_memory|  pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_address1  |  out|    8|   ap_memory|  pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_ce1       |  out|    1|   ap_memory|  pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_q1        |   in|    8|   ap_memory|  pynqrypt_round_keys|         array|
+|state_address0                |  out|    4|   ap_memory|                state|         array|
+|state_ce0                     |  out|    1|   ap_memory|                state|         array|
+|state_we0                     |  out|    1|   ap_memory|                state|         array|
+|state_d0                      |  out|    8|   ap_memory|                state|         array|
+|state_q0                      |   in|    8|   ap_memory|                state|         array|
+|state_address1                |  out|    4|   ap_memory|                state|         array|
+|state_ce1                     |  out|    1|   ap_memory|                state|         array|
+|state_we1                     |  out|    1|   ap_memory|                state|         array|
+|state_d1                      |  out|    8|   ap_memory|                state|         array|
+|state_q1                      |   in|    8|   ap_memory|                state|         array|
++------------------------------+-----+-----+------------+---------------------+--------------+
+

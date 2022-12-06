@@ -1,0 +1,36 @@
+remark: hw-impl/src/pynqrypt.cpp:187:0: Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:187:0: Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:187:0: Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:187:0: Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:9:0: Inlining function 'crypto::Pynqrypt::aes_generate_round_keys()' into 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:94:0: Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:49:0: Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:49:0: Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:49:0: Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
+remark: hw-impl/src/pynqrypt.cpp:17:0: Inlining function 'unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+remark: hw-impl/src/pynqrypt.cpp:17:0: Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+remark: hw-impl/src/pynqrypt.cpp:17:0: Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+remark: hw-impl/src/pynqrypt_hls.cpp:9:0: Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
+warning: hw-impl/src/pynqrypt.cpp:199:16: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:249:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:249:18: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:207:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:25: The program may have out of bound array access
+remark: <unknown>:0:0: Sequential read of variable length has been inferred _XLX_SEP_ OldID=loop-memcpy-expansion2.load.4,  _XLX_SEP_ scevgepseq plaintext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
+remark: <unknown>:0:0: Sequential write of variable length has been inferred _XLX_SEP_ OldID=loop-memcpy-expansion.store.6,  _XLX_SEP_ scevgep2seq ciphertext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
+remark: hw-impl/src/pynqrypt.cpp:21:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_21_1 hw-impl/src/pynqrypt.cpp:21:22 crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
+remark: <unknown>:0:0: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgep2seq ciphertext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
+remark: <unknown>:0:0: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgepseq plaintext gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) 
+warning: hw-impl/src/pynqrypt.cpp:199:16: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:249:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:249:18: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:207:29: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:27: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:39: The program may have out of bound array access
+warning: hw-impl/src/pynqrypt.cpp:266:25: The program may have out of bound array access
+remark: <unknown>:0:0: Multiple burst reads of variable length and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq  gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1) 
+remark: <unknown>:0:0: Multiple burst reads of variable length and bit width 8 in loop 'anonymous'() has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: <unknown>:0:0: Multiple burst writes of variable length and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq1  gmem anonymous  crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1) 
+remark: <unknown>:0:0: Multiple burst writes of variable length and bit width 8 in loop 'anonymous'() has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.

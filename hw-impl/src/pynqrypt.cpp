@@ -1,48 +1,36 @@
 #include "pynqrypt.hpp"
 #include "constants.hpp"
 
+#include <cstring>
+
 using namespace crypto;
 
-Pynqrypt::Pynqrypt(std::vector<aes_atom> key, std::vector<aes_atom> nonce)
+Pynqrypt::Pynqrypt(aes_atom key[16], aes_atom nonce[12])
 {
-    if (key.size() != 16)
-        throw std::invalid_argument("Key must be 16 bytes");
-    if (nonce.size() != 12)
-        throw std::invalid_argument("Nonce must be 12 bytes");
-
-    std::copy(key.begin(), key.end(), this->key);
-    std::copy(nonce.begin(), nonce.end(), this->nonce);
+    memcpy(this->key, key, 16);
+    memcpy(this->nonce, nonce, 12);
 
     aes_generate_round_keys();
 }
 
-std::vector<aes_atom> Pynqrypt::ctr_encrypt(std::vector<aes_atom> plaintext, off64_t offset)
-{
-    std::vector<aes_atom> ciphertext;
-    
+void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_atom *plaintext, aes_atom *ciphertext, off64_t offset) 
+{  
     aes_atom block_nonce[16];
     aes_atom block[16];
 
-    for (size_t i = 0; i < plaintext.size(); i += 16) {
-        size_t block_size = std::min(plaintext.size() - i, (size_t)16);
-        std::copy(&plaintext[i], &plaintext[i + block_size], block);
+    for (size_t i = 0; i < plaintext_length; i += 16) {
+        size_t block_size = std::min(plaintext_length - i, (size_t)16);
+        memcpy(block, &plaintext[i], block_size);
         ctr_compute_nonce(block_nonce, offset + i / 16);
         aes_encrypt_block(block_nonce);
         ctr_xor_block(block, block_size, block_nonce);
-        ciphertext.insert(ciphertext.end(), block, block + block_size);
+        memcpy(&ciphertext[i], block, block_size);
     }
-
-    return ciphertext;
-}
-
-std::vector<aes_atom> Pynqrypt::ctr_decrypt(std::vector<aes_atom> ciphertext, off64_t offset)
-{
-    return ctr_encrypt(ciphertext, offset);
 }
 
 void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
 {
-    std::copy(nonce, nonce + NONCE_SIZE, block_nonce);
+    memcpy(block_nonce, nonce, NONCE_SIZE);
 
     block_nonce[12] = (offset >> 24) & 0xFF;
     block_nonce[13] = (offset >> 16) & 0xFF;
@@ -82,7 +70,7 @@ void Pynqrypt::aes_sub_bytes(aes_atom state[BLOCK_SIZE])
 void Pynqrypt::aes_shift_rows(aes_atom state[BLOCK_SIZE])
 {
     aes_atom temp[BLOCK_SIZE];
-    std::copy(state, state + BLOCK_SIZE, temp);
+    memcpy(temp, state, BLOCK_SIZE);
 
     state[0] = temp[0];
     state[1] = temp[5];
@@ -153,7 +141,7 @@ void Pynqrypt::aes_inv_sub_bytes(aes_atom state[BLOCK_SIZE])
 void Pynqrypt::aes_inv_shift_rows(aes_atom state[BLOCK_SIZE])
 {
     aes_atom temp[BLOCK_SIZE];
-    std::copy(state, state + BLOCK_SIZE, temp);
+    memcpy(temp, state, BLOCK_SIZE);
 
     state[0] = temp[0];
     state[1] = temp[13];
@@ -197,13 +185,13 @@ void Pynqrypt::aes_inv_mix_columns(aes_atom state[BLOCK_SIZE])
 // common functions
 void Pynqrypt::aes_generate_round_keys() 
 {
-    // https://en.wikipedia.org/wiki/AES_key_schedule
+    https://en.wikipedia.org/wiki/AES_key_schedule
     aes_word temp;
 
     auto _round_key = static_cast<aes_word*>(static_cast<void*>(&round_keys));
     auto _key = static_cast<aes_word*>(static_cast<void*>(&key));
 
-    std::copy(_key, &_key[4], _round_key);
+    memcpy(_round_key, _key, 4 * sizeof(aes_word));
 
     // All other round keys are found from the previous round keys.
     int i = 4;
