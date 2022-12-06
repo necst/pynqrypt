@@ -57,7 +57,7 @@
 
 <AreaEstimates>
 <Resources>
-<FF>211</FF>
+<FF>206</FF>
 <LUT>158</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
@@ -646,8 +646,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add_ln22_2</name>
-<Object>add_ln22_2</Object>
+<name>add_ln24_2</name>
+<Object>add_ln24_2</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -701,14 +701,14 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln22</name>
-<Object>zext_ln22</Object>
+<name>select_ln23</name>
+<Object>select_ln23</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>5</Bits>
+<Bits>64</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

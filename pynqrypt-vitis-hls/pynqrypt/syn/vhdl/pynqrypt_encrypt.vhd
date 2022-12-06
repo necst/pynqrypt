@@ -96,7 +96,7 @@ end;
 architecture behav of pynqrypt_encrypt is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=3297,HLS_SYN_LUT=7359,HLS_VERSION=2022_2}";
+    "pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=3292,HLS_SYN_LUT=7637,HLS_VERSION=2022_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant C_M_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
@@ -111,6 +111,8 @@ architecture behav of pynqrypt_encrypt is
     signal pynqrypt_round_keys_i_q1 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_t_q0 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_round_keys_t_q1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal pynqrypt_key_i_q0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal pynqrypt_key_t_q0 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_nonce_i_q0 : STD_LOGIC_VECTOR (7 downto 0);
     signal pynqrypt_nonce_t_q0 : STD_LOGIC_VECTOR (7 downto 0);
     signal key_q0 : STD_LOGIC_VECTOR (7 downto 0);
@@ -152,12 +154,12 @@ architecture behav of pynqrypt_encrypt is
     signal Loop_1_proc_U0_ap_continue : STD_LOGIC;
     signal Loop_1_proc_U0_ap_idle : STD_LOGIC;
     signal Loop_1_proc_U0_ap_ready : STD_LOGIC;
-    signal Loop_1_proc_U0_pynqrypt_key_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal Loop_1_proc_U0_pynqrypt_key_write : STD_LOGIC;
-    signal Loop_1_proc_U0_start_out : STD_LOGIC;
-    signal Loop_1_proc_U0_start_write : STD_LOGIC;
     signal Loop_1_proc_U0_key_address0 : STD_LOGIC_VECTOR (3 downto 0);
     signal Loop_1_proc_U0_key_ce0 : STD_LOGIC;
+    signal Loop_1_proc_U0_pynqrypt_key_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal Loop_1_proc_U0_pynqrypt_key_ce0 : STD_LOGIC;
+    signal Loop_1_proc_U0_pynqrypt_key_we0 : STD_LOGIC;
+    signal Loop_1_proc_U0_pynqrypt_key_d0 : STD_LOGIC_VECTOR (7 downto 0);
     signal Loop_2_proc_U0_ap_start : STD_LOGIC;
     signal Loop_2_proc_U0_ap_done : STD_LOGIC;
     signal Loop_2_proc_U0_ap_continue : STD_LOGIC;
@@ -169,20 +171,21 @@ architecture behav of pynqrypt_encrypt is
     signal Loop_2_proc_U0_pynqrypt_nonce_ce0 : STD_LOGIC;
     signal Loop_2_proc_U0_pynqrypt_nonce_we0 : STD_LOGIC;
     signal Loop_2_proc_U0_pynqrypt_nonce_d0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal Loop_3_proc_U0_ap_start : STD_LOGIC;
-    signal Loop_3_proc_U0_ap_done : STD_LOGIC;
-    signal Loop_3_proc_U0_ap_continue : STD_LOGIC;
-    signal Loop_3_proc_U0_ap_idle : STD_LOGIC;
-    signal Loop_3_proc_U0_ap_ready : STD_LOGIC;
-    signal Loop_3_proc_U0_pynqrypt_key_read : STD_LOGIC;
-    signal Loop_3_proc_U0_pynqrypt_round_keys_address0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal Loop_3_proc_U0_pynqrypt_round_keys_ce0 : STD_LOGIC;
-    signal Loop_3_proc_U0_pynqrypt_round_keys_we0 : STD_LOGIC;
-    signal Loop_3_proc_U0_pynqrypt_round_keys_d0 : STD_LOGIC_VECTOR (7 downto 0);
-    signal Loop_3_proc_U0_pynqrypt_round_keys_address1 : STD_LOGIC_VECTOR (7 downto 0);
-    signal Loop_3_proc_U0_pynqrypt_round_keys_ce1 : STD_LOGIC;
-    signal Loop_3_proc_U0_pynqrypt_round_keys_we1 : STD_LOGIC;
-    signal Loop_3_proc_U0_pynqrypt_round_keys_d1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal aes_generate_round_keys_U0_ap_start : STD_LOGIC;
+    signal aes_generate_round_keys_U0_ap_done : STD_LOGIC;
+    signal aes_generate_round_keys_U0_ap_continue : STD_LOGIC;
+    signal aes_generate_round_keys_U0_ap_idle : STD_LOGIC;
+    signal aes_generate_round_keys_U0_ap_ready : STD_LOGIC;
+    signal aes_generate_round_keys_U0_this_key_address0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal aes_generate_round_keys_U0_this_key_ce0 : STD_LOGIC;
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_address0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_ce0 : STD_LOGIC;
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_we0 : STD_LOGIC;
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_d0 : STD_LOGIC_VECTOR (7 downto 0);
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_address1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_ce1 : STD_LOGIC;
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_we1 : STD_LOGIC;
+    signal aes_generate_round_keys_U0_pynqrypt_round_keys_d1 : STD_LOGIC_VECTOR (7 downto 0);
     signal ctr_encrypt_U0_ap_start : STD_LOGIC;
     signal ctr_encrypt_U0_ap_done : STD_LOGIC;
     signal ctr_encrypt_U0_ap_continue : STD_LOGIC;
@@ -229,6 +232,8 @@ architecture behav of pynqrypt_encrypt is
     signal ctr_encrypt_U0_m_axi_gmem_BREADY : STD_LOGIC;
     signal ctr_encrypt_U0_plaintext_read : STD_LOGIC;
     signal ctr_encrypt_U0_ciphertext_read : STD_LOGIC;
+    signal pynqrypt_key_i_full_n : STD_LOGIC;
+    signal pynqrypt_key_t_empty_n : STD_LOGIC;
     signal pynqrypt_nonce_i_full_n : STD_LOGIC;
     signal pynqrypt_nonce_t_empty_n : STD_LOGIC;
     signal pynqrypt_round_keys_i_full_n : STD_LOGIC;
@@ -248,11 +253,6 @@ architecture behav of pynqrypt_encrypt is
     signal ciphertext_c_num_data_valid : STD_LOGIC_VECTOR (2 downto 0);
     signal ciphertext_c_fifo_cap : STD_LOGIC_VECTOR (2 downto 0);
     signal ciphertext_c_empty_n : STD_LOGIC;
-    signal pynqrypt_key_full_n : STD_LOGIC;
-    signal pynqrypt_key_dout : STD_LOGIC_VECTOR (7 downto 0);
-    signal pynqrypt_key_num_data_valid : STD_LOGIC_VECTOR (4 downto 0);
-    signal pynqrypt_key_fifo_cap : STD_LOGIC_VECTOR (4 downto 0);
-    signal pynqrypt_key_empty_n : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
     signal ap_sync_reg_entry_proc_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_entry_proc_U0_ap_ready : STD_LOGIC;
@@ -262,10 +262,6 @@ architecture behav of pynqrypt_encrypt is
     signal ap_sync_Loop_2_proc_U0_ap_ready : STD_LOGIC;
     signal ap_sync_reg_ctr_encrypt_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_ctr_encrypt_U0_ap_ready : STD_LOGIC;
-    signal start_for_Loop_3_proc_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_Loop_3_proc_U0_full_n : STD_LOGIC;
-    signal start_for_Loop_3_proc_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_Loop_3_proc_U0_empty_n : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
     component pynqrypt_encrypt_entry_proc IS
@@ -303,21 +299,17 @@ architecture behav of pynqrypt_encrypt is
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
         ap_start : IN STD_LOGIC;
-        start_full_n : IN STD_LOGIC;
         ap_done : OUT STD_LOGIC;
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        pynqrypt_key_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        pynqrypt_key_num_data_valid : IN STD_LOGIC_VECTOR (4 downto 0);
-        pynqrypt_key_fifo_cap : IN STD_LOGIC_VECTOR (4 downto 0);
-        pynqrypt_key_full_n : IN STD_LOGIC;
-        pynqrypt_key_write : OUT STD_LOGIC;
-        start_out : OUT STD_LOGIC;
-        start_write : OUT STD_LOGIC;
         key_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         key_ce0 : OUT STD_LOGIC;
-        key_q0 : IN STD_LOGIC_VECTOR (7 downto 0) );
+        key_q0 : IN STD_LOGIC_VECTOR (7 downto 0);
+        pynqrypt_key_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
+        pynqrypt_key_ce0 : OUT STD_LOGIC;
+        pynqrypt_key_we0 : OUT STD_LOGIC;
+        pynqrypt_key_d0 : OUT STD_LOGIC_VECTOR (7 downto 0) );
     end component;
 
 
@@ -340,7 +332,7 @@ architecture behav of pynqrypt_encrypt is
     end component;
 
 
-    component pynqrypt_encrypt_Loop_3_proc IS
+    component pynqrypt_encrypt_aes_generate_round_keys IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -349,11 +341,9 @@ architecture behav of pynqrypt_encrypt is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        pynqrypt_key_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-        pynqrypt_key_num_data_valid : IN STD_LOGIC_VECTOR (4 downto 0);
-        pynqrypt_key_fifo_cap : IN STD_LOGIC_VECTOR (4 downto 0);
-        pynqrypt_key_empty_n : IN STD_LOGIC;
-        pynqrypt_key_read : OUT STD_LOGIC;
+        this_key_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
+        this_key_ce0 : OUT STD_LOGIC;
+        this_key_q0 : IN STD_LOGIC_VECTOR (7 downto 0);
         pynqrypt_round_keys_address0 : OUT STD_LOGIC_VECTOR (7 downto 0);
         pynqrypt_round_keys_ce0 : OUT STD_LOGIC;
         pynqrypt_round_keys_we0 : OUT STD_LOGIC;
@@ -486,6 +476,33 @@ architecture behav of pynqrypt_encrypt is
     end component;
 
 
+    component pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W IS
+    generic (
+        DataWidth : INTEGER;
+        AddressRange : INTEGER;
+        AddressWidth : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        i_address0 : IN STD_LOGIC_VECTOR (3 downto 0);
+        i_ce0 : IN STD_LOGIC;
+        i_we0 : IN STD_LOGIC;
+        i_d0 : IN STD_LOGIC_VECTOR (7 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (7 downto 0);
+        t_address0 : IN STD_LOGIC_VECTOR (3 downto 0);
+        t_ce0 : IN STD_LOGIC;
+        t_we0 : IN STD_LOGIC;
+        t_d0 : IN STD_LOGIC_VECTOR (7 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (7 downto 0);
+        i_ce : IN STD_LOGIC;
+        t_ce : IN STD_LOGIC;
+        i_full_n : OUT STD_LOGIC;
+        i_write : IN STD_LOGIC;
+        t_empty_n : OUT STD_LOGIC;
+        t_read : IN STD_LOGIC );
+    end component;
+
+
     component pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W IS
     generic (
         DataWidth : INTEGER;
@@ -525,38 +542,6 @@ architecture behav of pynqrypt_encrypt is
         if_dout : OUT STD_LOGIC_VECTOR (63 downto 0);
         if_num_data_valid : OUT STD_LOGIC_VECTOR (2 downto 0);
         if_fifo_cap : OUT STD_LOGIC_VECTOR (2 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
-    component pynqrypt_encrypt_fifo_w8_d16_S IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (7 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (7 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (4 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (4 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
-    component pynqrypt_encrypt_start_for_Loop_3_proc_U0 IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
@@ -706,15 +691,15 @@ begin
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
-        i_address0 => Loop_3_proc_U0_pynqrypt_round_keys_address0,
-        i_ce0 => Loop_3_proc_U0_pynqrypt_round_keys_ce0,
-        i_we0 => Loop_3_proc_U0_pynqrypt_round_keys_we0,
-        i_d0 => Loop_3_proc_U0_pynqrypt_round_keys_d0,
+        i_address0 => aes_generate_round_keys_U0_pynqrypt_round_keys_address0,
+        i_ce0 => aes_generate_round_keys_U0_pynqrypt_round_keys_ce0,
+        i_we0 => aes_generate_round_keys_U0_pynqrypt_round_keys_we0,
+        i_d0 => aes_generate_round_keys_U0_pynqrypt_round_keys_d0,
         i_q0 => pynqrypt_round_keys_i_q0,
-        i_address1 => Loop_3_proc_U0_pynqrypt_round_keys_address1,
-        i_ce1 => Loop_3_proc_U0_pynqrypt_round_keys_ce1,
-        i_we1 => Loop_3_proc_U0_pynqrypt_round_keys_we1,
-        i_d1 => Loop_3_proc_U0_pynqrypt_round_keys_d1,
+        i_address1 => aes_generate_round_keys_U0_pynqrypt_round_keys_address1,
+        i_ce1 => aes_generate_round_keys_U0_pynqrypt_round_keys_ce1,
+        i_we1 => aes_generate_round_keys_U0_pynqrypt_round_keys_we1,
+        i_d1 => aes_generate_round_keys_U0_pynqrypt_round_keys_d1,
         i_q1 => pynqrypt_round_keys_i_q1,
         t_address0 => ctr_encrypt_U0_pynqrypt_round_keys_address0,
         t_ce0 => ctr_encrypt_U0_pynqrypt_round_keys_ce0,
@@ -729,9 +714,34 @@ begin
         i_ce => ap_const_logic_1,
         t_ce => ap_const_logic_1,
         i_full_n => pynqrypt_round_keys_i_full_n,
-        i_write => Loop_3_proc_U0_ap_done,
+        i_write => aes_generate_round_keys_U0_ap_done,
         t_empty_n => pynqrypt_round_keys_t_empty_n,
         t_read => ctr_encrypt_U0_ap_ready);
+
+    pynqrypt_key_U : component pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W
+    generic map (
+        DataWidth => 8,
+        AddressRange => 16,
+        AddressWidth => 4)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        i_address0 => Loop_1_proc_U0_pynqrypt_key_address0,
+        i_ce0 => Loop_1_proc_U0_pynqrypt_key_ce0,
+        i_we0 => Loop_1_proc_U0_pynqrypt_key_we0,
+        i_d0 => Loop_1_proc_U0_pynqrypt_key_d0,
+        i_q0 => pynqrypt_key_i_q0,
+        t_address0 => aes_generate_round_keys_U0_this_key_address0,
+        t_ce0 => aes_generate_round_keys_U0_this_key_ce0,
+        t_we0 => ap_const_logic_0,
+        t_d0 => ap_const_lv8_0,
+        t_q0 => pynqrypt_key_t_q0,
+        i_ce => ap_const_logic_1,
+        t_ce => ap_const_logic_1,
+        i_full_n => pynqrypt_key_i_full_n,
+        i_write => Loop_1_proc_U0_ap_done,
+        t_empty_n => pynqrypt_key_t_empty_n,
+        t_read => aes_generate_round_keys_U0_ap_ready);
 
     pynqrypt_nonce_U : component pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W
     generic map (
@@ -921,21 +931,17 @@ begin
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
         ap_start => Loop_1_proc_U0_ap_start,
-        start_full_n => start_for_Loop_3_proc_U0_full_n,
         ap_done => Loop_1_proc_U0_ap_done,
         ap_continue => Loop_1_proc_U0_ap_continue,
         ap_idle => Loop_1_proc_U0_ap_idle,
         ap_ready => Loop_1_proc_U0_ap_ready,
-        pynqrypt_key_din => Loop_1_proc_U0_pynqrypt_key_din,
-        pynqrypt_key_num_data_valid => pynqrypt_key_num_data_valid,
-        pynqrypt_key_fifo_cap => pynqrypt_key_fifo_cap,
-        pynqrypt_key_full_n => pynqrypt_key_full_n,
-        pynqrypt_key_write => Loop_1_proc_U0_pynqrypt_key_write,
-        start_out => Loop_1_proc_U0_start_out,
-        start_write => Loop_1_proc_U0_start_write,
         key_address0 => Loop_1_proc_U0_key_address0,
         key_ce0 => Loop_1_proc_U0_key_ce0,
-        key_q0 => key_q0);
+        key_q0 => key_q0,
+        pynqrypt_key_address0 => Loop_1_proc_U0_pynqrypt_key_address0,
+        pynqrypt_key_ce0 => Loop_1_proc_U0_pynqrypt_key_ce0,
+        pynqrypt_key_we0 => Loop_1_proc_U0_pynqrypt_key_we0,
+        pynqrypt_key_d0 => Loop_1_proc_U0_pynqrypt_key_d0);
 
     Loop_2_proc_U0 : component pynqrypt_encrypt_Loop_2_proc
     port map (
@@ -954,29 +960,27 @@ begin
         pynqrypt_nonce_we0 => Loop_2_proc_U0_pynqrypt_nonce_we0,
         pynqrypt_nonce_d0 => Loop_2_proc_U0_pynqrypt_nonce_d0);
 
-    Loop_3_proc_U0 : component pynqrypt_encrypt_Loop_3_proc
+    aes_generate_round_keys_U0 : component pynqrypt_encrypt_aes_generate_round_keys
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Loop_3_proc_U0_ap_start,
-        ap_done => Loop_3_proc_U0_ap_done,
-        ap_continue => Loop_3_proc_U0_ap_continue,
-        ap_idle => Loop_3_proc_U0_ap_idle,
-        ap_ready => Loop_3_proc_U0_ap_ready,
-        pynqrypt_key_dout => pynqrypt_key_dout,
-        pynqrypt_key_num_data_valid => pynqrypt_key_num_data_valid,
-        pynqrypt_key_fifo_cap => pynqrypt_key_fifo_cap,
-        pynqrypt_key_empty_n => pynqrypt_key_empty_n,
-        pynqrypt_key_read => Loop_3_proc_U0_pynqrypt_key_read,
-        pynqrypt_round_keys_address0 => Loop_3_proc_U0_pynqrypt_round_keys_address0,
-        pynqrypt_round_keys_ce0 => Loop_3_proc_U0_pynqrypt_round_keys_ce0,
-        pynqrypt_round_keys_we0 => Loop_3_proc_U0_pynqrypt_round_keys_we0,
-        pynqrypt_round_keys_d0 => Loop_3_proc_U0_pynqrypt_round_keys_d0,
+        ap_start => aes_generate_round_keys_U0_ap_start,
+        ap_done => aes_generate_round_keys_U0_ap_done,
+        ap_continue => aes_generate_round_keys_U0_ap_continue,
+        ap_idle => aes_generate_round_keys_U0_ap_idle,
+        ap_ready => aes_generate_round_keys_U0_ap_ready,
+        this_key_address0 => aes_generate_round_keys_U0_this_key_address0,
+        this_key_ce0 => aes_generate_round_keys_U0_this_key_ce0,
+        this_key_q0 => pynqrypt_key_t_q0,
+        pynqrypt_round_keys_address0 => aes_generate_round_keys_U0_pynqrypt_round_keys_address0,
+        pynqrypt_round_keys_ce0 => aes_generate_round_keys_U0_pynqrypt_round_keys_ce0,
+        pynqrypt_round_keys_we0 => aes_generate_round_keys_U0_pynqrypt_round_keys_we0,
+        pynqrypt_round_keys_d0 => aes_generate_round_keys_U0_pynqrypt_round_keys_d0,
         pynqrypt_round_keys_q0 => pynqrypt_round_keys_i_q0,
-        pynqrypt_round_keys_address1 => Loop_3_proc_U0_pynqrypt_round_keys_address1,
-        pynqrypt_round_keys_ce1 => Loop_3_proc_U0_pynqrypt_round_keys_ce1,
-        pynqrypt_round_keys_we1 => Loop_3_proc_U0_pynqrypt_round_keys_we1,
-        pynqrypt_round_keys_d1 => Loop_3_proc_U0_pynqrypt_round_keys_d1,
+        pynqrypt_round_keys_address1 => aes_generate_round_keys_U0_pynqrypt_round_keys_address1,
+        pynqrypt_round_keys_ce1 => aes_generate_round_keys_U0_pynqrypt_round_keys_ce1,
+        pynqrypt_round_keys_we1 => aes_generate_round_keys_U0_pynqrypt_round_keys_we1,
+        pynqrypt_round_keys_d1 => aes_generate_round_keys_U0_pynqrypt_round_keys_d1,
         pynqrypt_round_keys_q1 => pynqrypt_round_keys_i_q1);
 
     ctr_encrypt_U0 : component pynqrypt_encrypt_ctr_encrypt
@@ -1104,34 +1108,6 @@ begin
         if_empty_n => ciphertext_c_empty_n,
         if_read => ctr_encrypt_U0_ciphertext_read);
 
-    pynqrypt_key_U : component pynqrypt_encrypt_fifo_w8_d16_S
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => Loop_1_proc_U0_pynqrypt_key_din,
-        if_full_n => pynqrypt_key_full_n,
-        if_write => Loop_1_proc_U0_pynqrypt_key_write,
-        if_dout => pynqrypt_key_dout,
-        if_num_data_valid => pynqrypt_key_num_data_valid,
-        if_fifo_cap => pynqrypt_key_fifo_cap,
-        if_empty_n => pynqrypt_key_empty_n,
-        if_read => Loop_3_proc_U0_pynqrypt_key_read);
-
-    start_for_Loop_3_proc_U0_U : component pynqrypt_encrypt_start_for_Loop_3_proc_U0
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => start_for_Loop_3_proc_U0_din,
-        if_full_n => start_for_Loop_3_proc_U0_full_n,
-        if_write => Loop_1_proc_U0_start_write,
-        if_dout => start_for_Loop_3_proc_U0_dout,
-        if_empty_n => start_for_Loop_3_proc_U0_empty_n,
-        if_read => Loop_3_proc_U0_ap_ready);
-
 
 
 
@@ -1199,14 +1175,14 @@ begin
         end if;
     end process;
 
-    Loop_1_proc_U0_ap_continue <= ap_const_logic_1;
+    Loop_1_proc_U0_ap_continue <= pynqrypt_key_i_full_n;
     Loop_1_proc_U0_ap_start <= ((ap_sync_reg_Loop_1_proc_U0_ap_ready xor ap_const_logic_1) and ap_start);
     Loop_2_proc_U0_ap_continue <= pynqrypt_nonce_i_full_n;
     Loop_2_proc_U0_ap_start <= ((ap_sync_reg_Loop_2_proc_U0_ap_ready xor ap_const_logic_1) and ap_start);
-    Loop_3_proc_U0_ap_continue <= pynqrypt_round_keys_i_full_n;
-    Loop_3_proc_U0_ap_start <= start_for_Loop_3_proc_U0_empty_n;
+    aes_generate_round_keys_U0_ap_continue <= pynqrypt_round_keys_i_full_n;
+    aes_generate_round_keys_U0_ap_start <= pynqrypt_key_t_empty_n;
     ap_done <= ctr_encrypt_U0_ap_done;
-    ap_idle <= ((pynqrypt_round_keys_t_empty_n xor ap_const_logic_1) and (pynqrypt_nonce_t_empty_n xor ap_const_logic_1) and entry_proc_U0_ap_idle and ctr_encrypt_U0_ap_idle and Loop_3_proc_U0_ap_idle and Loop_2_proc_U0_ap_idle and Loop_1_proc_U0_ap_idle);
+    ap_idle <= ((pynqrypt_round_keys_t_empty_n xor ap_const_logic_1) and (pynqrypt_nonce_t_empty_n xor ap_const_logic_1) and (pynqrypt_key_t_empty_n xor ap_const_logic_1) and entry_proc_U0_ap_idle and ctr_encrypt_U0_ap_idle and aes_generate_round_keys_U0_ap_idle and Loop_2_proc_U0_ap_idle and Loop_1_proc_U0_ap_idle);
     ap_ready <= ap_sync_ready;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
@@ -1230,5 +1206,4 @@ begin
     gmem_RLAST <= ap_const_logic_0;
     gmem_RRESP <= ap_const_lv2_0;
     gmem_RUSER <= ap_const_lv1_0;
-    start_for_Loop_3_proc_U0_din <= (0=>ap_const_logic_1, others=>'-');
 end behav;

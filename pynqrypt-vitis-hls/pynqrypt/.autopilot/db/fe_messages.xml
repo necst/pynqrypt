@@ -32,51 +32,53 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:22:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:187:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:189:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
         <args Callee="crypto::Pynqrypt::aes_rotate_word(unsigned int&amp;)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:187:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:189:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
         <args Callee="crypto::Pynqrypt::aes_sub_word(unsigned int&amp;)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:187:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&amp;, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:189:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&amp;, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
         <args Callee="crypto::Pynqrypt::aes_xor_round_constant(unsigned int&amp;, int)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:187:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:189:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
         <args Callee="crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&amp;)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:9:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_generate_round_keys()' into 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)'">
-        <args Callee="crypto::Pynqrypt::aes_generate_round_keys()" Caller="crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:94:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:96:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'">
         <args Callee="crypto::Pynqrypt::aes_xtime(unsigned char)" Caller="crypto::Pynqrypt::aes_mix_columns(unsigned char*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:49:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:51:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'">
         <args Callee="crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)" Caller="crypto::Pynqrypt::aes_encrypt_block(unsigned char*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:49:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:51:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'">
         <args Callee="crypto::Pynqrypt::aes_sub_bytes(unsigned char*)" Caller="crypto::Pynqrypt::aes_encrypt_block(unsigned char*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:49:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:51:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'">
         <args Callee="crypto::Pynqrypt::aes_mix_columns(unsigned char*)" Caller="crypto::Pynqrypt::aes_encrypt_block(unsigned char*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:17:0" msg_body="Inlining function 'unsigned long const&amp; std::min&lt;unsigned long&gt;(unsigned long const&amp;, unsigned long const&amp;)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'">
-        <args Callee="unsigned long const&amp; std::min&lt;unsigned long&gt;(unsigned long const&amp;, unsigned long const&amp;)" Caller="crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:17:0" msg_body="Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:19:0" msg_body="Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'">
         <args Callee="crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)" Caller="crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:17:0" msg_body="Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:19:0" msg_body="Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'">
         <args Callee="crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)" Caller="crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt_hls.cpp:9:0" msg_body="Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'">
         <args Callee="crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)" Caller="pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:199:16" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:249:29" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:249:18" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:207:29" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:266:27" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:266:39" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:266:25" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:200:16" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:246:14" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:247:14" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:248:14" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:255:29" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:255:18" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:206:29" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:272:27" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:272:39" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:272:25" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:208:16" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:209:29" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:211:16" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:212:23" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:214:10" msg_body="The program may have out of bound array access"/>
 </xilinx:hls_fe_msgs>
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'ctr_encrypt'" level="0">
-<item name = "Date">Tue Dec  6 01:26:18 2022
+<item name = "Date">Tue Dec  6 11:20:33 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -31,16 +31,16 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_ctr_encrypt_Pipeline_1_fu_206">ctr_encrypt_Pipeline_1, 4, ?, 40.000 ns, ?, 4, ?, no</column>
-<column name="grp_ctr_encrypt_Pipeline_2_fu_215">ctr_encrypt_Pipeline_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_aes_encrypt_block_fu_222">aes_encrypt_block, 266, 266, 2.660 us, 2.660 us, 266, 266, no</column>
-<column name="grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231">ctr_encrypt_Pipeline_VITIS_LOOP_43_1, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_ctr_encrypt_Pipeline_4_fu_238">ctr_encrypt_Pipeline_4, 5, ?, 50.000 ns, ?, 5, ?, no</column>
+<column name="grp_ctr_encrypt_Pipeline_1_fu_202">ctr_encrypt_Pipeline_1, 4, ?, 40.000 ns, ?, 4, ?, no</column>
+<column name="grp_ctr_encrypt_Pipeline_2_fu_211">ctr_encrypt_Pipeline_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_aes_encrypt_block_fu_218">aes_encrypt_block, 266, 266, 2.660 us, 2.660 us, 266, 266, no</column>
+<column name="grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227">ctr_encrypt_Pipeline_loop_ctr_xor_block, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ctr_encrypt_Pipeline_4_fu_234">ctr_encrypt_Pipeline_4, 5, ?, 50.000 ns, ?, 5, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_21_1">?, ?, ?, -, -, ?, no</column>
+<column name="- loop_ctr_encrypt">?, ?, ?, -, -, ?, no</column>
 </table>
 </item>
 </section>
@@ -53,12 +53,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 894, -</column>
+<column name="Expression">-, -, 0, 808, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1, -, 807, 2548, -</column>
+<column name="Instance">1, -, 797, 2548, -</column>
 <column name="Memory">0, -, 32, 4, 0</column>
-<column name="Multiplexer">-, -, -, 735, -</column>
-<column name="Register">-, -, 685, -, -</column>
+<column name="Multiplexer">-, -, -, 731, -</column>
+<column name="Register">-, -, 673, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">~0, 0, 1, 7, 0</specialColumn>
 </table>
@@ -67,11 +67,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_aes_encrypt_block_fu_222">aes_encrypt_block, 1, 0, 424, 2084, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_1_fu_206">ctr_encrypt_Pipeline_1, 0, 0, 211, 158, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_2_fu_215">ctr_encrypt_Pipeline_2, 0, 0, 11, 60, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_4_fu_238">ctr_encrypt_Pipeline_4, 0, 0, 149, 158, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231">ctr_encrypt_Pipeline_VITIS_LOOP_43_1, 0, 0, 12, 88, 0</column>
+<column name="grp_aes_encrypt_block_fu_218">aes_encrypt_block, 1, 0, 424, 2084, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_1_fu_202">ctr_encrypt_Pipeline_1, 0, 0, 206, 158, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_2_fu_211">ctr_encrypt_Pipeline_2, 0, 0, 11, 60, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_4_fu_234">ctr_encrypt_Pipeline_4, 0, 0, 144, 158, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227">ctr_encrypt_Pipeline_loop_ctr_xor_block, 0, 0, 12, 88, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -90,35 +90,32 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln21_fu_430_p2">+, 0, 0, 71, 64, 5</column>
-<column name="add_ln22_1_fu_369_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln22_2_fu_333_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln22_3_fu_299_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln22_fu_288_p2">+, 0, 0, 71, 64, 64</column>
-<column name="i_3_fu_425_p2">+, 0, 0, 71, 64, 5</column>
-<column name="sub_ln22_fu_318_p2">-, 0, 0, 71, 64, 64</column>
-<column name="ap_block_state12_on_subcall_done">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state19_io">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state26">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state4_io">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln200_fu_327_p2">icmp, 0, 0, 29, 64, 5</column>
-<column name="icmp_ln21_1_fu_279_p2">icmp, 0, 0, 29, 64, 64</column>
-<column name="icmp_ln21_fu_349_p2">icmp, 0, 0, 29, 64, 6</column>
-<column name="icmp_ln22_fu_293_p2">icmp, 0, 0, 29, 64, 6</column>
-<column name="icmp_ln23_fu_343_p2">icmp, 0, 0, 9, 5, 1</column>
+<column name="add_ln23_fu_406_p2">+, 0, 0, 71, 64, 5</column>
+<column name="add_ln24_1_fu_314_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln24_2_fu_319_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln24_3_fu_295_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln24_fu_284_p2">+, 0, 0, 71, 64, 64</column>
+<column name="i_5_fu_401_p2">+, 0, 0, 71, 64, 5</column>
+<column name="ap_block_state11_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state18_io">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state25">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_io">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln23_1_fu_275_p2">icmp, 0, 0, 29, 64, 64</column>
+<column name="icmp_ln23_fu_329_p2">icmp, 0, 0, 29, 64, 6</column>
+<column name="icmp_ln24_fu_289_p2">icmp, 0, 0, 29, 64, 6</column>
+<column name="icmp_ln25_fu_324_p2">icmp, 0, 0, 29, 64, 64</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="block_size_fu_337_p3">select, 0, 0, 6, 1, 6</column>
-<column name="select_ln21_fu_361_p3">select, 0, 0, 64, 1, 64</column>
-<column name="select_ln22_fu_310_p3">select, 0, 0, 32, 1, 32</column>
-<column name="xor_ln21_1_fu_355_p2">xor, 0, 0, 64, 64, 2</column>
-<column name="xor_ln21_fu_254_p2">xor, 0, 0, 64, 64, 2</column>
-<column name="xor_ln22_1_fu_304_p2">xor, 0, 0, 32, 2, 32</column>
-<column name="xor_ln22_fu_260_p2">xor, 0, 0, 32, 32, 2</column>
+<column name="select_ln23_fu_341_p3">select, 0, 0, 64, 1, 64</column>
+<column name="select_ln24_fu_306_p3">select, 0, 0, 32, 1, 32</column>
+<column name="xor_ln23_1_fu_335_p2">xor, 0, 0, 64, 64, 2</column>
+<column name="xor_ln23_fu_250_p2">xor, 0, 0, 64, 64, 2</column>
+<column name="xor_ln24_1_fu_300_p2">xor, 0, 0, 32, 2, 32</column>
+<column name="xor_ln24_fu_256_p2">xor, 0, 0, 32, 32, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">121, 27, 1, 27</column>
+<column name="ap_NS_fsm">117, 26, 1, 26</column>
 <column name="ap_done">9, 2, 1, 2</column>
 <column name="block_address0">20, 4, 4, 16</column>
 <column name="block_ce0">20, 4, 1, 4</column>
@@ -137,9 +134,9 @@
 <column name="gmem_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem_blk_n_AW">9, 2, 1, 2</column>
 <column name="gmem_blk_n_B">9, 2, 1, 2</column>
-<column name="i_1_fu_106">9, 2, 64, 128</column>
-<column name="icmp_ln23_pr_reg_194">9, 2, 1, 2</column>
-<column name="indvars_iv_fu_110">9, 2, 64, 128</column>
+<column name="i_fu_102">9, 2, 64, 128</column>
+<column name="icmp_ln25_pr_reg_190">9, 2, 1, 2</column>
+<column name="indvars_iv6_fu_106">9, 2, 64, 128</column>
 <column name="m_axi_gmem_ARADDR">14, 3, 64, 192</column>
 <column name="m_axi_gmem_ARBURST">9, 2, 2, 4</column>
 <column name="m_axi_gmem_ARCACHE">9, 2, 4, 8</column>
@@ -173,29 +170,26 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln22_1_reg_550">64, 0, 64, 0</column>
-<column name="add_ln22_2_reg_528">64, 0, 64, 0</column>
-<column name="ap_CS_fsm">26, 0, 26, 0</column>
+<column name="add_ln24_1_reg_494">64, 0, 64, 0</column>
+<column name="add_ln24_2_reg_500">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">25, 0, 25, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="block_size_reg_534">5, 0, 5, 0</column>
-<column name="ciphertext_read_reg_460">64, 0, 64, 0</column>
-<column name="grp_aes_encrypt_block_fu_222_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_1_fu_206_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_2_fu_215_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_4_fu_238_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_1_fu_106">64, 0, 64, 0</column>
-<column name="icmp_ln200_reg_523">1, 0, 1, 0</column>
-<column name="icmp_ln23_pr_reg_194">1, 0, 1, 0</column>
-<column name="icmp_ln23_reg_540">1, 0, 1, 0</column>
-<column name="indvars_iv_fu_110">64, 0, 64, 0</column>
-<column name="plaintext_length_read_reg_470">64, 0, 64, 0</column>
-<column name="plaintext_read_reg_465">64, 0, 64, 0</column>
-<column name="select_ln21_reg_545">64, 0, 64, 0</column>
-<column name="select_ln22_reg_512">32, 0, 32, 0</column>
-<column name="trunc_ln200_reg_518">5, 0, 5, 0</column>
-<column name="xor_ln21_reg_496">64, 0, 64, 0</column>
-<column name="xor_ln22_reg_501">32, 0, 32, 0</column>
+<column name="ciphertext_read_reg_436">64, 0, 64, 0</column>
+<column name="grp_aes_encrypt_block_fu_218_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_1_fu_202_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_2_fu_211_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_4_fu_234_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_fu_102">64, 0, 64, 0</column>
+<column name="icmp_ln25_pr_reg_190">1, 0, 1, 0</column>
+<column name="icmp_ln25_reg_506">1, 0, 1, 0</column>
+<column name="indvars_iv6_fu_106">64, 0, 64, 0</column>
+<column name="plaintext_length_read_reg_446">64, 0, 64, 0</column>
+<column name="plaintext_read_reg_441">64, 0, 64, 0</column>
+<column name="select_ln23_reg_511">64, 0, 64, 0</column>
+<column name="select_ln24_reg_488">32, 0, 32, 0</column>
+<column name="xor_ln23_reg_472">64, 0, 64, 0</column>
+<column name="xor_ln24_reg_477">32, 0, 32, 0</column>
 </table>
 </item>
 </section>

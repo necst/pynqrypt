@@ -1,170 +1,141 @@
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_rotate_word(unsigned int&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 236, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 242, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_word(unsigned int&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 246, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 252, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 253, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 259, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 260, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 189, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
-Function:        _ZN6crypto8PynqryptC2EPhS1_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 187, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 94, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 96, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt15aes_mix_columnsEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xtime(unsigned char)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 221, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 227, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 94, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 96, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 214, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 220, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 65, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 67, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 94, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 96, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
-Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)'
-    DebugLoc:        { File: '/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/stl_algobase.h', 
-                       Line: 196, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 32, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 34, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 42, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 44, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -175,7 +146,7 @@ Function:        _Z16pynqrypt_encryptPhS_mS_S_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 11, Column: 0 }
   - String:          ''' into '''
   - Caller:          'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -184,56 +155,192 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 199, Column: 16 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 200, Column: 16 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 29 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 246, Column: 14 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 18 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 247, Column: 14 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 207, Column: 29 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 248, Column: 14 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 27 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 255, Column: 29 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 39 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 255, Column: 18 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 25 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 206, Column: 29 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 208, Column: 16 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 209, Column: 29 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 211, Column: 16 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 212, Column: 23 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 214, Column: 10 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
@@ -263,7 +370,7 @@ Args:
   - LoopLoc:         ''
   - String:          ' '
   - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
@@ -292,23 +399,23 @@ Args:
   - LoopLoc:         ''
   - String:          ' '
   - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 21, Column: 22 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 23, Column: 23 }
 Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
-  - LoopName:        VITIS_LOOP_21_1
+  - LoopName:        loop_ctr_encrypt
   - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:21:22'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:23:23'
   - String:          ' '
   - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -332,7 +439,7 @@ Args:
   - LoopLoc:         ''
   - String:          ' '
   - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -356,62 +463,198 @@ Args:
   - LoopLoc:         ''
   - String:          ' '
   - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 199, Column: 16 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 200, Column: 16 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 29 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 246, Column: 14 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 249, Column: 18 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 247, Column: 14 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 207, Column: 29 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 248, Column: 14 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 27 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 255, Column: 29 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 39 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 255, Column: 18 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 25 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 206, Column: 29 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 208, Column: 16 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 209, Column: 29 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 211, Column: 16 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 212, Column: 23 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 214, Column: 10 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 27 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 39 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 272, Column: 25 }
+Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
 ...
@@ -440,7 +683,7 @@ Args:
   - LoopLoc:         ''
   - String:          ' '
   - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
@@ -489,7 +732,7 @@ Args:
   - LoopLoc:         ''
   - String:          ' '
   - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Passed

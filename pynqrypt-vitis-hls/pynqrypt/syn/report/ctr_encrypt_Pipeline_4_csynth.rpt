@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'ctr_encrypt_Pipeline_4'
 ================================================================
-* Date:           Tue Dec  6 01:26:18 2022
+* Date:           Tue Dec  6 11:20:33 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -59,9 +59,9 @@
 |Instance         |        -|    -|       -|      -|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|     54|    -|
-|Register         |        -|    -|     149|      -|    -|
+|Register         |        -|    -|     144|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     149|    158|    0|
+|Total            |        0|    0|     144|    158|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -85,9 +85,9 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_fu_103_p2            |         +|   0|  0|  71|          64|           1|
+    |empty_fu_97_p2             |         +|   0|  0|  71|          64|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
-    |exitcond17_fu_109_p2       |      icmp|   0|  0|  29|          64|          64|
+    |exitcond_fu_103_p2         |      icmp|   0|  0|  29|          64|          64|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0| 104|         130|          68|
@@ -102,7 +102,7 @@
     |ap_loop_exit_ready_pp0_iter3_reg  |   9|          2|    1|          2|
     |ap_sig_allocacmp_loop_index_load  |   9|          2|   64|        128|
     |gmem_blk_n_W                      |   9|          2|    1|          2|
-    |loop_index_fu_48                  |   9|          2|   64|        128|
+    |loop_index_fu_46                  |   9|          2|   64|        128|
     +----------------------------------+----+-----------+-----+-----------+
     |Total                             |  54|         12|  132|        264|
     +----------------------------------+----+-----------+-----+-----------+
@@ -118,13 +118,12 @@
     |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
-    |block_load_reg_154                |   8|   0|    8|          0|
-    |empty_reg_145                     |  64|   0|   64|          0|
-    |exitcond17_reg_150                |   1|   0|    1|          0|
-    |loop_index_fu_48                  |  64|   0|   64|          0|
-    |zext_ln22_cast_reg_130            |   5|   0|   64|         59|
+    |block_load_reg_148                |   8|   0|    8|          0|
+    |empty_reg_139                     |  64|   0|   64|          0|
+    |exitcond_reg_144                  |   1|   0|    1|          0|
+    |loop_index_fu_46                  |  64|   0|   64|          0|
     +----------------------------------+----+----+-----+-----------+
-    |Total                             | 149|   0|  208|         59|
+    |Total                             | 144|   0|  144|          0|
     +----------------------------------+----+----+-----+-----------+
 
 
@@ -188,10 +187,10 @@
 |m_axi_gmem_BRESP     |   in|    2|       m_axi|                    gmem|       pointer|
 |m_axi_gmem_BID       |   in|    1|       m_axi|                    gmem|       pointer|
 |m_axi_gmem_BUSER     |   in|    1|       m_axi|                    gmem|       pointer|
-|add_ln22_1           |   in|   64|     ap_none|              add_ln22_1|        scalar|
+|add_ln24_1           |   in|   64|     ap_none|              add_ln24_1|        scalar|
 |block_r_address0     |  out|    4|   ap_memory|                 block_r|         array|
 |block_r_ce0          |  out|    1|   ap_memory|                 block_r|         array|
 |block_r_q0           |   in|    8|   ap_memory|                 block_r|         array|
-|zext_ln22            |   in|    5|     ap_none|               zext_ln22|        scalar|
+|select_ln23          |   in|   64|     ap_none|             select_ln23|        scalar|
 +---------------------+-----+-----+------------+------------------------+--------------+
 

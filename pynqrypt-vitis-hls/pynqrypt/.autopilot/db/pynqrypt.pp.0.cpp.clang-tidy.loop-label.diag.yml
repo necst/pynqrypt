@@ -2,111 +2,75 @@
 MainSourceFile:  /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_21_1:  '
-    FileOffset:      21
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          662339
+        Offset:          663735
         Length:          0
-        ReplacementText: 'VITIS_LOOP_21_1: '
+        ReplacementText: 'VITIS_LOOP_68_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_43_1:  '
-    FileOffset:      43
+    Message:         'Added loop label VITIS_LOOP_99_1:  '
+    FileOffset:      99
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          663118
+        Offset:          664439
         Length:          0
-        ReplacementText: 'VITIS_LOOP_43_1: '
+        ReplacementText: 'VITIS_LOOP_99_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_52_1:  '
-    FileOffset:      52
+    Message:         'Added loop label VITIS_LOOP_125_1:  '
+    FileOffset:      125
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          663299
+        Offset:          665228
         Length:          0
-        ReplacementText: 'VITIS_LOOP_52_1: '
+        ReplacementText: 'VITIS_LOOP_125_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_66_1:  '
-    FileOffset:      66
+    Message:         'Added loop label VITIS_LOOP_139_1:  '
+    FileOffset:      139
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          663636
+        Offset:          665584
         Length:          0
-        ReplacementText: 'VITIS_LOOP_66_1: '
+        ReplacementText: 'VITIS_LOOP_139_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_97_1:  '
-    FileOffset:      97
+    Message:         'Added loop label VITIS_LOOP_170_1:  '
+    FileOffset:      170
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          664340
+        Offset:          666306
         Length:          0
-        ReplacementText: 'VITIS_LOOP_97_1: '
+        ReplacementText: 'VITIS_LOOP_170_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_123_1:  '
-    FileOffset:      123
+    Message:         'Added loop label VITIS_LOOP_221_1:  '
+    FileOffset:      221
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          665129
+        Offset:          667965
         Length:          0
-        ReplacementText: 'VITIS_LOOP_123_1: '
+        ReplacementText: 'VITIS_LOOP_221_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_137_1:  '
-    FileOffset:      137
+    Message:         'Added loop label VITIS_LOOP_254_1:  '
+    FileOffset:      254
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          665485
+        Offset:          668847
         Length:          0
-        ReplacementText: 'VITIS_LOOP_137_1: '
+        ReplacementText: 'VITIS_LOOP_254_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_168_1:  '
-    FileOffset:      168
+    Message:         'Added loop label VITIS_LOOP_271_1:  '
+    FileOffset:      271
     FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          666207
+        Offset:          669428
         Length:          0
-        ReplacementText: 'VITIS_LOOP_168_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_198_1:  '
-    FileOffset:      198
-    FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
-    Replacements:    
-      - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          667249
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_198_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_215_1:  '
-    FileOffset:      215
-    FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
-    Replacements:    
-      - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          667636
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_215_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_248_1:  '
-    FileOffset:      248
-    FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
-    Replacements:    
-      - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          668518
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_248_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_265_1:  '
-    FileOffset:      265
-    FilePath:        /home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.cpp
-    Replacements:    
-      - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp
-        Offset:          669099
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_265_1: '
+        ReplacementText: 'VITIS_LOOP_271_1: '
 ...

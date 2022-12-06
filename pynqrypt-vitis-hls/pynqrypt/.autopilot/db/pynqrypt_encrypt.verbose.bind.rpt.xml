@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pynqrypt_encrypt'" level="0">
-<item name = "Date">Tue Dec  6 01:26:16 2022
+<item name = "Date">Tue Dec  6 11:20:30 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -31,11 +31,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Loop_1_proc_fu_148">Loop_1_proc, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
-<column name="grp_Loop_2_proc_fu_155">Loop_2_proc, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_Loop_3_proc_fu_163">Loop_3_proc, 343, 343, 3.430 us, 3.430 us, 343, 343, no</column>
-<column name="call_ln22_entry_proc_fu_173">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_ctr_encrypt_fu_186">ctr_encrypt, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Loop_1_proc_fu_144">Loop_1_proc, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
+<column name="grp_Loop_2_proc_fu_152">Loop_2_proc, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_aes_generate_round_keys_fu_160">aes_generate_round_keys, 183, 183, 1.830 us, 1.830 us, 183, 183, no</column>
+<column name="call_ln22_entry_proc_fu_170">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_ctr_encrypt_fu_183">ctr_encrypt, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

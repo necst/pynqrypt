@@ -26,20 +26,24 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# Direct connection:
+# XIL_BRAM:
 if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 8 \
     name pynqrypt_key \
-    type fifo \
-    dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_pynqrypt_key \
+    dir O \
+    corename pynqrypt_key \
     op interface \
-    ports { pynqrypt_key_din { O 8 vector } pynqrypt_key_num_data_valid { I 5 vector } pynqrypt_key_fifo_cap { I 5 vector } pynqrypt_key_full_n { I 1 bit } pynqrypt_key_write { O 1 bit } } \
+    ports { pynqrypt_key_address0 { O 4 vector } pynqrypt_key_ce0 { O 1 bit } pynqrypt_key_we0 { O 1 bit } pynqrypt_key_d0 { O 8 vector } } \
 } "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'pynqrypt_key'"
 }
+}
+
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

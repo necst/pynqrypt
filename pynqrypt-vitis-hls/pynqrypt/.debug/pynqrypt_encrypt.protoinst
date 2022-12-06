@@ -35,7 +35,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"Loop_3_proc_U0/Loop_3_proc_U0_activity": {
+				"aes_generate_round_keys_U0/aes_generate_round_keys_U0_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -46,7 +46,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"Loop_3_proc_U0/grp_Loop_3_proc_Pipeline_1_fu_26/grp_Loop_3_proc_Pipeline_1_fu_26_activity": {
+				"aes_generate_round_keys_U0/grp_aes_generate_round_keys_Pipeline_1_fu_12/grp_aes_generate_round_keys_Pipeline_1_fu_12_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -56,7 +56,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"Loop_3_proc_U0/grp_Loop_3_proc_Pipeline_VITIS_LOOP_198_1_fu_34/grp_Loop_3_proc_Pipeline_VITIS_LOOP_198_1_fu_34_activity": {
+				"aes_generate_round_keys_U0/grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20/grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -77,7 +77,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_222/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_215_1_fu_216_activity": {
+				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_221_1_fu_216_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -87,7 +87,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_222/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_52_1_fu_198_activity": {
+				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_68_1_fu_208_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -97,7 +97,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_222/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208/grp_aes_encrypt_block_Pipeline_VITIS_LOOP_66_1_fu_208_activity": {
+				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_198_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -107,7 +107,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_222/grp_aes_encrypt_block_fu_222_activity": {
+				"ctr_encrypt_U0/grp_aes_encrypt_block_fu_218/grp_aes_encrypt_block_fu_218_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -117,7 +117,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_1_fu_206/grp_ctr_encrypt_Pipeline_1_fu_206_activity": {
+				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_1_fu_202/grp_ctr_encrypt_Pipeline_1_fu_202_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -127,7 +127,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_2_fu_215/grp_ctr_encrypt_Pipeline_2_fu_215_activity": {
+				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_2_fu_211/grp_ctr_encrypt_Pipeline_2_fu_211_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -137,7 +137,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_4_fu_238/grp_ctr_encrypt_Pipeline_4_fu_238_activity": {
+				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_4_fu_234/grp_ctr_encrypt_Pipeline_4_fu_234_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -147,7 +147,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231/grp_ctr_encrypt_Pipeline_VITIS_LOOP_43_1_fu_231_activity": {
+				"ctr_encrypt_U0/grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227/grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_227_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

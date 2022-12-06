@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670286376697">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670322031242">
   <ports id="1" name="plaintext_length" type="PortType" coreId="0" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="2" name="plaintext_length_c" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="3" name="plaintext" type="PortType" coreId="543517801" bitwidth="64">
+  <ports id="3" name="plaintext" type="PortType" coreId="2408701072" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="plaintext_c" type="PortType" coreName="FIFO_SRL" coreId="4153695568" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="4" name="plaintext_c" type="PortType" coreName="FIFO_SRL" coreId="2408684112" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="ciphertext" type="PortType" coreId="0" bitwidth="64">
+  <ports id="5" name="ciphertext" type="PortType" coreId="1599294536" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="ciphertext_c" type="PortType" coreName="FIFO_SRL" coreId="4153513552" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="6" name="ciphertext_c" type="PortType" coreName="FIFO_SRL" coreId="2408763712" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="20" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -28,15 +28,15 @@
   <edges id="33" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.1"/>
   <edges id="34" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.5"/>
   <blocks id="17" name="entry_proc" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="ciphertext_read" coreId="4237434080" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="ciphertext_read" coreId="2498205520" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataInputObjs>ciphertext</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="plaintext_read" coreId="4234964539" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="plaintext_read" coreId="2493711736" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>plaintext</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="plaintext_length_read" coreId="627231456" bitwidth="64" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="plaintext_length_read" coreId="2497729915" bitwidth="64" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>plaintext_length</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
@@ -52,7 +52,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>plaintext_length_c</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln0" coreId="4153695696" opcode="ret" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln0" coreId="1684811367" opcode="ret" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
   </blocks>
   <ScheduleInfo time="0"/>
   <ioNodes realName="write_ln0_write_fu_66">

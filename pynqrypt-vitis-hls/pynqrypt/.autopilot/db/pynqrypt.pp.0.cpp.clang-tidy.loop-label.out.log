@@ -1,60 +1,40 @@
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24405:5: warning: Added loop label VITIS_LOOP_21_1:   [xilinx-label-all-loops]
-    for (size_t i = 0; i < plaintext_length; i += 16) {
-    ^~~
-    VITIS_LOOP_21_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24405:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24427:5: warning: Added loop label VITIS_LOOP_43_1:   [xilinx-label-all-loops]
-    for (size_t i = 0; i < block_size; i++)
-    ^~~
-    VITIS_LOOP_43_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24427:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24436:5: warning: Added loop label VITIS_LOOP_52_1:   [xilinx-label-all-loops]
-    for (int i = 1; i < NUM_ROUNDS; i++) {
-    ^~~
-    VITIS_LOOP_52_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24436:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24450:5: warning: Added loop label VITIS_LOOP_66_1:   [xilinx-label-all-loops]
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24452:5: warning: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
     for (int i = 0; i < BLOCK_SIZE; i++)
     ^~~
-    VITIS_LOOP_66_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24450:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24481:5: warning: Added loop label VITIS_LOOP_97_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_68_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24452:5: note: FIX-IT applied suggested code changes
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24483:5: warning: Added loop label VITIS_LOOP_99_1:   [xilinx-label-all-loops]
     for (int i = 0; i < 4; i++) {
     ^~~
-    VITIS_LOOP_97_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24481:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24507:5: warning: Added loop label VITIS_LOOP_123_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_99_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24483:5: note: FIX-IT applied suggested code changes
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24509:5: warning: Added loop label VITIS_LOOP_125_1:   [xilinx-label-all-loops]
     for (int i = NUM_ROUNDS - 1; i > 0; i--) {
     ^~~
-    VITIS_LOOP_123_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24507:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24521:5: warning: Added loop label VITIS_LOOP_137_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_125_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24509:5: note: FIX-IT applied suggested code changes
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24523:5: warning: Added loop label VITIS_LOOP_139_1:   [xilinx-label-all-loops]
     for (int i = 0; i < BLOCK_SIZE; i++)
     ^~~
-    VITIS_LOOP_137_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24521:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24552:5: warning: Added loop label VITIS_LOOP_168_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_139_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24523:5: note: FIX-IT applied suggested code changes
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24554:5: warning: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
     for (int i = 0; i < 4; i++) {
     ^~~
-    VITIS_LOOP_168_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24552:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24582:5: warning: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
-    while (i < 44) {
-    ^~~~~
-    VITIS_LOOP_198_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24582:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24599:5: warning: Added loop label VITIS_LOOP_215_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_170_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24554:5: note: FIX-IT applied suggested code changes
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24605:5: warning: Added loop label VITIS_LOOP_221_1:   [xilinx-label-all-loops]
     for (int i = 0; i < BLOCK_SIZE; i++)
     ^~~
-    VITIS_LOOP_215_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24599:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24632:5: warning: Added loop label VITIS_LOOP_248_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_221_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24605:5: note: FIX-IT applied suggested code changes
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24638:5: warning: Added loop label VITIS_LOOP_254_1:   [xilinx-label-all-loops]
     for (int i = 0; i < 4; i++)
     ^~~
-    VITIS_LOOP_248_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24632:5: note: FIX-IT applied suggested code changes
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24649:5: warning: Added loop label VITIS_LOOP_265_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_254_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24638:5: note: FIX-IT applied suggested code changes
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24655:5: warning: Added loop label VITIS_LOOP_271_1:   [xilinx-label-all-loops]
     for (int i = 0; i < 4; i++)
     ^~~
-    VITIS_LOOP_265_1: 
-/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24649:5: note: FIX-IT applied suggested code changes
+    VITIS_LOOP_271_1: 
+/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp:24655:5: note: FIX-IT applied suggested code changes
