@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAB10C41C82B0C071",
+      "boundary_crc": "0x566F36026B8EE0BC",
       "device": "xc7z020iclg400-1L",
       "gen_directory": "../../../../project.gen/sources_1/bd/bd_0",
       "name": "bd_0",
@@ -469,7 +469,7 @@
           "AWADDR": {
             "physical_name": "s_axi_control_awaddr",
             "direction": "I",
-            "left": "6",
+            "left": "5",
             "right": "0"
           },
           "AWVALID": {
@@ -517,7 +517,7 @@
           "ARADDR": {
             "physical_name": "s_axi_control_araddr",
             "direction": "I",
-            "left": "6",
+            "left": "5",
             "right": "0"
           },
           "ARVALID": {

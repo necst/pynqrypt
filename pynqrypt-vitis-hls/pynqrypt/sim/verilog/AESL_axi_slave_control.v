@@ -39,22 +39,10 @@ module AESL_axi_slave_control (
     );
 
 //------------------------Parameter----------------------
-`define TV_IN_key "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_key.dat"
-`define TV_IN_nonce "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_nonce.dat"
-`define TV_IN_plaintext_length "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_plaintext_length.dat"
 `define TV_IN_plaintext "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_plaintext.dat"
 `define TV_IN_ciphertext "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_ciphertext.dat"
-parameter ADDR_WIDTH = 7;
+parameter ADDR_WIDTH = 6;
 parameter DATA_WIDTH = 32;
-parameter key_DEPTH = 16;
-reg [31 : 0] key_OPERATE_DEPTH = 0;
-parameter key_c_bitwidth = 8;
-parameter nonce_DEPTH = 12;
-reg [31 : 0] nonce_OPERATE_DEPTH = 0;
-parameter nonce_c_bitwidth = 8;
-parameter plaintext_length_DEPTH = 1;
-reg [31 : 0] plaintext_length_OPERATE_DEPTH = 0;
-parameter plaintext_length_c_bitwidth = 64;
 parameter plaintext_DEPTH = 1;
 reg [31 : 0] plaintext_OPERATE_DEPTH = 0;
 parameter plaintext_c_bitwidth = 64;
@@ -64,11 +52,8 @@ parameter ciphertext_c_bitwidth = 64;
 parameter START_ADDR = 0;
 parameter pynqrypt_encrypt_continue_addr = 0;
 parameter pynqrypt_encrypt_auto_start_addr = 0;
-parameter key_data_in_addr = 16;
-parameter nonce_data_in_addr = 32;
-parameter plaintext_length_data_in_addr = 48;
-parameter plaintext_data_in_addr = 60;
-parameter ciphertext_data_in_addr = 72;
+parameter plaintext_data_in_addr = 16;
+parameter ciphertext_data_in_addr = 28;
 parameter STATUS_ADDR = 0;
 
 output [ADDR_WIDTH - 1 : 0] TRAN_s_axi_control_AWADDR;
@@ -111,15 +96,6 @@ reg  ARVALID_reg = 0;
 reg  RREADY_reg = 0;
 reg [DATA_WIDTH - 1 : 0] RDATA_reg = 0;
 reg  BREADY_reg = 0;
-reg [DATA_WIDTH - 1 : 0] mem_key [key_DEPTH - 1 : 0] = '{default : 'h0};
-reg [DATA_WIDTH-1 : 0] image_mem_key [ (key_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * key_DEPTH -1 : 0] = '{default : 'hz};
-reg key_write_data_finish;
-reg [DATA_WIDTH - 1 : 0] mem_nonce [nonce_DEPTH - 1 : 0] = '{default : 'h0};
-reg [DATA_WIDTH-1 : 0] image_mem_nonce [ (nonce_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * nonce_DEPTH -1 : 0] = '{default : 'hz};
-reg nonce_write_data_finish;
-reg [plaintext_length_c_bitwidth - 1 : 0] mem_plaintext_length [plaintext_length_DEPTH - 1 : 0] = '{default : 'h0};
-reg [DATA_WIDTH-1 : 0] image_mem_plaintext_length [ (plaintext_length_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * plaintext_length_DEPTH -1 : 0] = '{default : 'hz};
-reg plaintext_length_write_data_finish;
 reg [plaintext_c_bitwidth - 1 : 0] mem_plaintext [plaintext_DEPTH - 1 : 0] = '{default : 'h0};
 reg [DATA_WIDTH-1 : 0] image_mem_plaintext [ (plaintext_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * plaintext_DEPTH -1 : 0] = '{default : 'hz};
 reg plaintext_write_data_finish;
@@ -137,21 +113,6 @@ reg process_0_finish = 0;
 reg process_1_finish = 0;
 reg process_2_finish = 0;
 reg process_3_finish = 0;
-reg process_4_finish = 0;
-reg process_5_finish = 0;
-reg process_6_finish = 0;
-//write key reg
-reg [31 : 0] write_key_count = 0;
-reg write_key_run_flag = 0;
-reg write_one_key_data_done = 0;
-//write nonce reg
-reg [31 : 0] write_nonce_count = 0;
-reg write_nonce_run_flag = 0;
-reg write_one_nonce_data_done = 0;
-//write plaintext_length reg
-reg [31 : 0] write_plaintext_length_count = 0;
-reg write_plaintext_length_run_flag = 0;
-reg write_one_plaintext_length_data_done = 0;
 //write plaintext reg
 reg [31 : 0] write_plaintext_count = 0;
 reg write_plaintext_run_flag = 0;
@@ -182,13 +143,13 @@ assign TRAN_control_write_start_finish = AESL_write_start_finish;
 assign TRAN_control_done_out = AESL_done_index_reg;
 assign TRAN_control_ready_out = AESL_ready_out_index_reg;
 assign TRAN_control_idle_out = AESL_idle_index_reg;
-assign TRAN_control_write_data_finish = 1 & key_write_data_finish & nonce_write_data_finish & plaintext_length_write_data_finish & plaintext_write_data_finish & ciphertext_write_data_finish;
+assign TRAN_control_write_data_finish = 1 & plaintext_write_data_finish & ciphertext_write_data_finish;
 always @(TRAN_control_ready_in or ready_initial) 
 begin
     AESL_ready_reg <= TRAN_control_ready_in | ready_initial;
 end
 
-always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish or process_6_finish ) begin
+always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish ) begin
     if (reset == 0) begin
         ongoing_process_number <= 0;
     end
@@ -202,15 +163,6 @@ always @(reset or process_0_finish or process_1_finish or process_2_finish or pr
             ongoing_process_number <= ongoing_process_number + 1;
     end
     else if (ongoing_process_number == 3 && process_3_finish == 1) begin
-            ongoing_process_number <= ongoing_process_number + 1;
-    end
-    else if (ongoing_process_number == 4 && process_4_finish == 1) begin
-            ongoing_process_number <= ongoing_process_number + 1;
-    end
-    else if (ongoing_process_number == 5 && process_5_finish == 1) begin
-            ongoing_process_number <= ongoing_process_number + 1;
-    end
-    else if (ongoing_process_number == 6 && process_6_finish == 1) begin
             ongoing_process_number <= 0;
     end
 end
@@ -381,234 +333,6 @@ end
 
 always @(reset or posedge clk) begin
     if (reset == 0) begin
-        key_write_data_finish <= 0;
-        write_key_run_flag <= 0; 
-        write_key_count = 0;
-        count_operate_depth_by_bitwidth_and_depth (key_c_bitwidth, key_DEPTH, key_OPERATE_DEPTH);
-    end
-    else begin
-        if (TRAN_control_start_in === 1) begin
-            key_write_data_finish <= 0;
-        end
-        if (AESL_ready_reg === 1) begin
-            write_key_run_flag <= 1; 
-            write_key_count = 0;
-        end
-        if (write_one_key_data_done === 1) begin
-            write_key_count = write_key_count + 1;
-            if (write_key_count == key_OPERATE_DEPTH) begin
-                write_key_run_flag <= 0; 
-                key_write_data_finish <= 1;
-            end
-        end
-    end
-end
-
-initial begin : write_key
-    integer write_key_resp;
-    integer process_num ;
-    integer get_ack;
-    integer four_byte_num;
-    integer c_bitwidth;
-    integer i;
-    integer j;
-    reg [31 : 0] key_data_tmp_reg;
-    wait(reset === 1);
-    @(posedge clk);
-    c_bitwidth = key_c_bitwidth;
-    process_num = 1;
-    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
-    while (1) begin
-        process_1_finish <= 0;
-
-        if (ongoing_process_number === process_num && process_busy === 0 ) begin
-            get_ack = 1;
-            if (write_key_run_flag === 1 && get_ack === 1) begin
-                process_busy = 1;
-                //write key data 
-                for (i = 0 ; i < four_byte_num ; i = i+1) begin
-                    if (key_c_bitwidth < 32) begin
-                        key_data_tmp_reg = mem_key[write_key_count];
-                    end
-                    else begin
-                        for (j=0 ; j<32 ; j = j + 1) begin
-                            if (i*32 + j < key_c_bitwidth) begin
-                                key_data_tmp_reg[j] = mem_key[write_key_count][i*32 + j];
-                            end
-                            else begin
-                                key_data_tmp_reg[j] = 0;
-                            end
-                        end
-                    end
-                    if(image_mem_key[write_key_count * four_byte_num  + i]!==key_data_tmp_reg) begin
-                    write (key_data_in_addr + write_key_count * four_byte_num * 4 + i * 4, key_data_tmp_reg, write_key_resp);
-                    image_mem_key[write_key_count * four_byte_num + i]=key_data_tmp_reg;
-                    end
-                end
-                process_busy = 0;
-                write_one_key_data_done <= 1;
-                @(posedge clk);
-                write_one_key_data_done <= 0;
-            end   
-            process_1_finish <= 1;
-        end
-        @(posedge clk);
-    end    
-end
-always @(reset or posedge clk) begin
-    if (reset == 0) begin
-        nonce_write_data_finish <= 0;
-        write_nonce_run_flag <= 0; 
-        write_nonce_count = 0;
-        count_operate_depth_by_bitwidth_and_depth (nonce_c_bitwidth, nonce_DEPTH, nonce_OPERATE_DEPTH);
-    end
-    else begin
-        if (TRAN_control_start_in === 1) begin
-            nonce_write_data_finish <= 0;
-        end
-        if (AESL_ready_reg === 1) begin
-            write_nonce_run_flag <= 1; 
-            write_nonce_count = 0;
-        end
-        if (write_one_nonce_data_done === 1) begin
-            write_nonce_count = write_nonce_count + 1;
-            if (write_nonce_count == nonce_OPERATE_DEPTH) begin
-                write_nonce_run_flag <= 0; 
-                nonce_write_data_finish <= 1;
-            end
-        end
-    end
-end
-
-initial begin : write_nonce
-    integer write_nonce_resp;
-    integer process_num ;
-    integer get_ack;
-    integer four_byte_num;
-    integer c_bitwidth;
-    integer i;
-    integer j;
-    reg [31 : 0] nonce_data_tmp_reg;
-    wait(reset === 1);
-    @(posedge clk);
-    c_bitwidth = nonce_c_bitwidth;
-    process_num = 2;
-    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
-    while (1) begin
-        process_2_finish <= 0;
-
-        if (ongoing_process_number === process_num && process_busy === 0 ) begin
-            get_ack = 1;
-            if (write_nonce_run_flag === 1 && get_ack === 1) begin
-                process_busy = 1;
-                //write nonce data 
-                for (i = 0 ; i < four_byte_num ; i = i+1) begin
-                    if (nonce_c_bitwidth < 32) begin
-                        nonce_data_tmp_reg = mem_nonce[write_nonce_count];
-                    end
-                    else begin
-                        for (j=0 ; j<32 ; j = j + 1) begin
-                            if (i*32 + j < nonce_c_bitwidth) begin
-                                nonce_data_tmp_reg[j] = mem_nonce[write_nonce_count][i*32 + j];
-                            end
-                            else begin
-                                nonce_data_tmp_reg[j] = 0;
-                            end
-                        end
-                    end
-                    if(image_mem_nonce[write_nonce_count * four_byte_num  + i]!==nonce_data_tmp_reg) begin
-                    write (nonce_data_in_addr + write_nonce_count * four_byte_num * 4 + i * 4, nonce_data_tmp_reg, write_nonce_resp);
-                    image_mem_nonce[write_nonce_count * four_byte_num + i]=nonce_data_tmp_reg;
-                    end
-                end
-                process_busy = 0;
-                write_one_nonce_data_done <= 1;
-                @(posedge clk);
-                write_one_nonce_data_done <= 0;
-            end   
-            process_2_finish <= 1;
-        end
-        @(posedge clk);
-    end    
-end
-always @(reset or posedge clk) begin
-    if (reset == 0) begin
-        plaintext_length_write_data_finish <= 0;
-        write_plaintext_length_run_flag <= 0; 
-        write_plaintext_length_count = 0;
-        count_operate_depth_by_bitwidth_and_depth (plaintext_length_c_bitwidth, plaintext_length_DEPTH, plaintext_length_OPERATE_DEPTH);
-    end
-    else begin
-        if (TRAN_control_start_in === 1) begin
-            plaintext_length_write_data_finish <= 0;
-        end
-        if (AESL_ready_reg === 1) begin
-            write_plaintext_length_run_flag <= 1; 
-            write_plaintext_length_count = 0;
-        end
-        if (write_one_plaintext_length_data_done === 1) begin
-            write_plaintext_length_count = write_plaintext_length_count + 1;
-            if (write_plaintext_length_count == plaintext_length_OPERATE_DEPTH) begin
-                write_plaintext_length_run_flag <= 0; 
-                plaintext_length_write_data_finish <= 1;
-            end
-        end
-    end
-end
-
-initial begin : write_plaintext_length
-    integer write_plaintext_length_resp;
-    integer process_num ;
-    integer get_ack;
-    integer four_byte_num;
-    integer c_bitwidth;
-    integer i;
-    integer j;
-    reg [31 : 0] plaintext_length_data_tmp_reg;
-    wait(reset === 1);
-    @(posedge clk);
-    c_bitwidth = plaintext_length_c_bitwidth;
-    process_num = 3;
-    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
-    while (1) begin
-        process_3_finish <= 0;
-
-        if (ongoing_process_number === process_num && process_busy === 0 ) begin
-            get_ack = 1;
-            if (write_plaintext_length_run_flag === 1 && get_ack === 1) begin
-                process_busy = 1;
-                //write plaintext_length data 
-                for (i = 0 ; i < four_byte_num ; i = i+1) begin
-                    if (plaintext_length_c_bitwidth < 32) begin
-                        plaintext_length_data_tmp_reg = mem_plaintext_length[write_plaintext_length_count];
-                    end
-                    else begin
-                        for (j=0 ; j<32 ; j = j + 1) begin
-                            if (i*32 + j < plaintext_length_c_bitwidth) begin
-                                plaintext_length_data_tmp_reg[j] = mem_plaintext_length[write_plaintext_length_count][i*32 + j];
-                            end
-                            else begin
-                                plaintext_length_data_tmp_reg[j] = 0;
-                            end
-                        end
-                    end
-                    if(image_mem_plaintext_length[write_plaintext_length_count * four_byte_num  + i]!==plaintext_length_data_tmp_reg) begin
-                    write (plaintext_length_data_in_addr + write_plaintext_length_count * four_byte_num * 4 + i * 4, plaintext_length_data_tmp_reg, write_plaintext_length_resp);
-                    image_mem_plaintext_length[write_plaintext_length_count * four_byte_num + i]=plaintext_length_data_tmp_reg;
-                    end
-                end
-                process_busy = 0;
-                write_one_plaintext_length_data_done <= 1;
-                @(posedge clk);
-                write_one_plaintext_length_data_done <= 0;
-            end   
-            process_3_finish <= 1;
-        end
-        @(posedge clk);
-    end    
-end
-always @(reset or posedge clk) begin
-    if (reset == 0) begin
         plaintext_write_data_finish <= 0;
         write_plaintext_run_flag <= 0; 
         write_plaintext_count = 0;
@@ -644,10 +368,10 @@ initial begin : write_plaintext
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = plaintext_c_bitwidth;
-    process_num = 4;
+    process_num = 1;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_4_finish <= 0;
+        process_1_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -678,7 +402,7 @@ initial begin : write_plaintext
                 @(posedge clk);
                 write_one_plaintext_data_done <= 0;
             end   
-            process_4_finish <= 1;
+            process_1_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -720,10 +444,10 @@ initial begin : write_ciphertext
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = ciphertext_c_bitwidth;
-    process_num = 5;
+    process_num = 2;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_5_finish <= 0;
+        process_2_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -754,7 +478,7 @@ initial begin : write_ciphertext
                 @(posedge clk);
                 write_one_ciphertext_data_done <= 0;
             end   
-            process_5_finish <= 1;
+            process_2_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -785,9 +509,9 @@ initial begin : write_start
     integer write_start_resp;
     wait(reset === 1);
     @(posedge clk);
-    process_num = 6;
+    process_num = 3;
     while (1) begin
-        process_6_finish = 0;
+        process_3_finish = 0;
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             if (write_start_run_flag === 1) begin
                 process_busy = 1;
@@ -799,7 +523,7 @@ initial begin : write_start
                 @(posedge clk);
                 AESL_write_start_finish <= 0;
             end
-            process_6_finish <= 1;
+            process_3_finish <= 1;
         end 
         @(posedge clk);
     end
@@ -817,373 +541,6 @@ task read_token;
     end 
 endtask 
  
-//------------------------Read file------------------------ 
- 
-// Read data from file 
-initial begin : read_key_file_process 
-  integer fp; 
-  integer ret; 
-  integer factor; 
-  reg [127 : 0] token; 
-  reg [8 - 1 : 0] token_tmp; 
-  //reg [key_c_bitwidth - 1 : 0] token_tmp; 
-  reg [DATA_WIDTH - 1 : 0] tmp_cache_mem; 
-  reg [ 8*5 : 1] str;
-    reg [63:0] trans_depth;
-  integer transaction_idx; 
-  integer i; 
-  transaction_idx = 0; 
-  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-  count_seperate_factor_by_bitwidth (key_c_bitwidth , factor);
-  fp = $fopen(`TV_IN_key ,"rb"); 
-  if(fp == 0) begin                               // Failed to open file 
-      $display("Failed to open file \"%s\"!", `TV_IN_key); 
-      $finish; 
-  end 
-  $fread(trans_depth,fp);
-  while (trans_depth != 64'h5a5aa5a50f0ff0f0)  begin
-      @(posedge clk);
-      # 0.2;
-      while(AESL_ready_reg !== 1) begin
-          @(posedge clk); 
-          # 0.2;
-      end
-      for(i = 0; i < key_DEPTH; i = i + 1) begin 
-         $fread(token_tmp,fp);
-          if (factor == 4) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [7 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [15 : 8] = token_tmp;
-              end
-              if (i%factor == 2) begin
-                  tmp_cache_mem [23 : 16] = token_tmp;
-              end
-              if (i%factor == 3) begin
-                  tmp_cache_mem [31 : 24] = token_tmp;
-                  mem_key [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-              end
-          end
-          if (factor == 2) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [15 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [31 : 16] = token_tmp;
-                  mem_key [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1: 0] = 0;
-              end
-          end
-          if (factor == 1) begin
-              mem_key [i] = token_tmp;
-          end
-      end 
-      if (factor == 4) begin
-          if (i%factor != 0) begin
-              mem_key [i/factor] = tmp_cache_mem;
-          end
-      end
-      if (factor == 2) begin
-          if (i%factor != 0) begin
-              mem_key [i/factor] = tmp_cache_mem;
-          end
-      end 
-      $fread(trans_depth,fp);
-      transaction_idx = transaction_idx + 1; 
-  end 
-  $fclose(fp); 
-end 
- 
-task write_binary_key;
-    input integer fp;
-    input reg[64-1:0] in;
-    input integer in_bw;
-    reg [63:0] tmp_long;
-    reg[64-1:0] local_in;
-    integer char_num;
-    integer long_num;
-    integer i;
-    integer j;
-    begin
-        long_num = (in_bw + 63) / 64;
-        char_num = ((in_bw - 1) % 64 + 7) / 8;
-        for(i=long_num;i>0;i=i-1) begin
-             local_in = in;
-             tmp_long = local_in >> ((i-1)*64);
-             for(j=0;j<64;j=j+1)
-                 if (tmp_long[j] === 1'bx)
-                     tmp_long[j] = 1'b0;
-             if (i == long_num) begin
-                 case(char_num)
-                     1: $fwrite(fp,"%c",tmp_long[7:0]);
-                     2: $fwrite(fp,"%c%c",tmp_long[15:8],tmp_long[7:0]);
-                     3: $fwrite(fp,"%c%c%c",tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     4: $fwrite(fp,"%c%c%c%c",tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     5: $fwrite(fp,"%c%c%c%c%c",tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     6: $fwrite(fp,"%c%c%c%c%c%c",tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     7: $fwrite(fp,"%c%c%c%c%c%c%c",tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     8: $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     default: ;
-                 endcase
-             end
-             else begin
-                 $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-             end
-        end
-    end
-endtask;
-//------------------------Read file------------------------ 
- 
-// Read data from file 
-initial begin : read_nonce_file_process 
-  integer fp; 
-  integer ret; 
-  integer factor; 
-  reg [127 : 0] token; 
-  reg [8 - 1 : 0] token_tmp; 
-  //reg [nonce_c_bitwidth - 1 : 0] token_tmp; 
-  reg [DATA_WIDTH - 1 : 0] tmp_cache_mem; 
-  reg [ 8*5 : 1] str;
-    reg [63:0] trans_depth;
-  integer transaction_idx; 
-  integer i; 
-  transaction_idx = 0; 
-  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-  count_seperate_factor_by_bitwidth (nonce_c_bitwidth , factor);
-  fp = $fopen(`TV_IN_nonce ,"rb"); 
-  if(fp == 0) begin                               // Failed to open file 
-      $display("Failed to open file \"%s\"!", `TV_IN_nonce); 
-      $finish; 
-  end 
-  $fread(trans_depth,fp);
-  while (trans_depth != 64'h5a5aa5a50f0ff0f0)  begin
-      @(posedge clk);
-      # 0.2;
-      while(AESL_ready_reg !== 1) begin
-          @(posedge clk); 
-          # 0.2;
-      end
-      for(i = 0; i < nonce_DEPTH; i = i + 1) begin 
-         $fread(token_tmp,fp);
-          if (factor == 4) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [7 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [15 : 8] = token_tmp;
-              end
-              if (i%factor == 2) begin
-                  tmp_cache_mem [23 : 16] = token_tmp;
-              end
-              if (i%factor == 3) begin
-                  tmp_cache_mem [31 : 24] = token_tmp;
-                  mem_nonce [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-              end
-          end
-          if (factor == 2) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [15 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [31 : 16] = token_tmp;
-                  mem_nonce [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1: 0] = 0;
-              end
-          end
-          if (factor == 1) begin
-              mem_nonce [i] = token_tmp;
-          end
-      end 
-      if (factor == 4) begin
-          if (i%factor != 0) begin
-              mem_nonce [i/factor] = tmp_cache_mem;
-          end
-      end
-      if (factor == 2) begin
-          if (i%factor != 0) begin
-              mem_nonce [i/factor] = tmp_cache_mem;
-          end
-      end 
-      $fread(trans_depth,fp);
-      transaction_idx = transaction_idx + 1; 
-  end 
-  $fclose(fp); 
-end 
- 
-task write_binary_nonce;
-    input integer fp;
-    input reg[64-1:0] in;
-    input integer in_bw;
-    reg [63:0] tmp_long;
-    reg[64-1:0] local_in;
-    integer char_num;
-    integer long_num;
-    integer i;
-    integer j;
-    begin
-        long_num = (in_bw + 63) / 64;
-        char_num = ((in_bw - 1) % 64 + 7) / 8;
-        for(i=long_num;i>0;i=i-1) begin
-             local_in = in;
-             tmp_long = local_in >> ((i-1)*64);
-             for(j=0;j<64;j=j+1)
-                 if (tmp_long[j] === 1'bx)
-                     tmp_long[j] = 1'b0;
-             if (i == long_num) begin
-                 case(char_num)
-                     1: $fwrite(fp,"%c",tmp_long[7:0]);
-                     2: $fwrite(fp,"%c%c",tmp_long[15:8],tmp_long[7:0]);
-                     3: $fwrite(fp,"%c%c%c",tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     4: $fwrite(fp,"%c%c%c%c",tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     5: $fwrite(fp,"%c%c%c%c%c",tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     6: $fwrite(fp,"%c%c%c%c%c%c",tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     7: $fwrite(fp,"%c%c%c%c%c%c%c",tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     8: $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     default: ;
-                 endcase
-             end
-             else begin
-                 $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-             end
-        end
-    end
-endtask;
-//------------------------Read file------------------------ 
- 
-// Read data from file 
-initial begin : read_plaintext_length_file_process 
-  integer fp; 
-  integer ret; 
-  integer factor; 
-  reg [151 : 0] token; 
-  reg [151 : 0] token_tmp; 
-  //reg [plaintext_length_c_bitwidth - 1 : 0] token_tmp; 
-  reg [DATA_WIDTH - 1 : 0] tmp_cache_mem; 
-  reg [ 8*5 : 1] str;
-    reg [63:0] trans_depth;
-  integer transaction_idx; 
-  integer i; 
-  transaction_idx = 0; 
-  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-  count_seperate_factor_by_bitwidth (plaintext_length_c_bitwidth , factor);
-  fp = $fopen(`TV_IN_plaintext_length ,"r"); 
-  if(fp == 0) begin                               // Failed to open file 
-      $display("Failed to open file \"%s\"!", `TV_IN_plaintext_length); 
-      $finish; 
-  end 
-  read_token(fp, token); 
-  if (token != "[[[runtime]]]") begin             // Illegal format 
-      $display("ERROR: Simulation using HLS TB failed.");
-      $finish; 
-  end 
-  read_token(fp, token); 
-  while (token != "[[[/runtime]]]") begin 
-      if (token != "[[transaction]]") begin 
-          $display("ERROR: Simulation using HLS TB failed.");
-          $finish; 
-      end 
-      read_token(fp, token);                        // skip transaction number 
-      @(posedge clk);
-      # 0.2;
-      while(AESL_ready_reg !== 1) begin
-          @(posedge clk); 
-          # 0.2;
-      end
-      for(i = 0; i < plaintext_length_DEPTH; i = i + 1) begin 
-          read_token(fp, token); 
-          ret = $sscanf(token, "0x%x", token_tmp); 
-          if (factor == 4) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [7 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [15 : 8] = token_tmp;
-              end
-              if (i%factor == 2) begin
-                  tmp_cache_mem [23 : 16] = token_tmp;
-              end
-              if (i%factor == 3) begin
-                  tmp_cache_mem [31 : 24] = token_tmp;
-                  mem_plaintext_length [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-              end
-          end
-          if (factor == 2) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [15 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [31 : 16] = token_tmp;
-                  mem_plaintext_length [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1: 0] = 0;
-              end
-          end
-          if (factor == 1) begin
-              mem_plaintext_length [i] = token_tmp;
-          end
-      end 
-      if (factor == 4) begin
-          if (i%factor != 0) begin
-              mem_plaintext_length [i/factor] = tmp_cache_mem;
-          end
-      end
-      if (factor == 2) begin
-          if (i%factor != 0) begin
-              mem_plaintext_length [i/factor] = tmp_cache_mem;
-          end
-      end 
-      read_token(fp, token); 
-      if(token != "[[/transaction]]") begin 
-          $display("ERROR: Simulation using HLS TB failed.");
-          $finish; 
-      end 
-      read_token(fp, token); 
-      transaction_idx = transaction_idx + 1; 
-  end 
-  $fclose(fp); 
-end 
- 
-task write_binary_plaintext_length;
-    input integer fp;
-    input reg[64-1:0] in;
-    input integer in_bw;
-    reg [63:0] tmp_long;
-    reg[64-1:0] local_in;
-    integer char_num;
-    integer long_num;
-    integer i;
-    integer j;
-    begin
-        long_num = (in_bw + 63) / 64;
-        char_num = ((in_bw - 1) % 64 + 7) / 8;
-        for(i=long_num;i>0;i=i-1) begin
-             local_in = in;
-             tmp_long = local_in >> ((i-1)*64);
-             for(j=0;j<64;j=j+1)
-                 if (tmp_long[j] === 1'bx)
-                     tmp_long[j] = 1'b0;
-             if (i == long_num) begin
-                 case(char_num)
-                     1: $fwrite(fp,"%c",tmp_long[7:0]);
-                     2: $fwrite(fp,"%c%c",tmp_long[15:8],tmp_long[7:0]);
-                     3: $fwrite(fp,"%c%c%c",tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     4: $fwrite(fp,"%c%c%c%c",tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     5: $fwrite(fp,"%c%c%c%c%c",tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     6: $fwrite(fp,"%c%c%c%c%c%c",tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     7: $fwrite(fp,"%c%c%c%c%c%c%c",tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     8: $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     default: ;
-                 endcase
-             end
-             else begin
-                 $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-             end
-        end
-    end
-endtask;
 //------------------------Read file------------------------ 
  
 // Read data from file 

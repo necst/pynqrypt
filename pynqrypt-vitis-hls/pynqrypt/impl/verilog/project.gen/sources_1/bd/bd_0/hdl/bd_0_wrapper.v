@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Dec  6 12:02:54 2022
+//Date        : Wed Dec  7 00:13:11 2022
 //Host        : SSD-UBUNTU running 64-bit Ubuntu 22.04.1 LTS
 //Command     : generate_target bd_0_wrapper.bd
 //Design      : bd_0_wrapper
@@ -113,10 +113,10 @@ module bd_0_wrapper
   input m_axi_gmem_wready;
   output [3:0]m_axi_gmem_wstrb;
   output m_axi_gmem_wvalid;
-  input [6:0]s_axi_control_araddr;
+  input [5:0]s_axi_control_araddr;
   output s_axi_control_arready;
   input s_axi_control_arvalid;
-  input [6:0]s_axi_control_awaddr;
+  input [5:0]s_axi_control_awaddr;
   output s_axi_control_awready;
   input s_axi_control_awvalid;
   input s_axi_control_bready;
@@ -174,10 +174,10 @@ module bd_0_wrapper
   wire m_axi_gmem_wready;
   wire [3:0]m_axi_gmem_wstrb;
   wire m_axi_gmem_wvalid;
-  wire [6:0]s_axi_control_araddr;
+  wire [5:0]s_axi_control_araddr;
   wire s_axi_control_arready;
   wire s_axi_control_arvalid;
-  wire [6:0]s_axi_control_awaddr;
+  wire [5:0]s_axi_control_awaddr;
   wire s_axi_control_awready;
   wire s_axi_control_awvalid;
   wire s_axi_control_bready;

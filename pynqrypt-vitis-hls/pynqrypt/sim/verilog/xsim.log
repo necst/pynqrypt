@@ -2,13 +2,13 @@
 # xsim v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Dec  6 12:01:46 2022
-# Process ID: 17509
+# Start of session at: Wed Dec  7 00:12:22 2022
+# Process ID: 59869
 # Current directory: /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/pynqrypt_encrypt/xsim_script.tcl}
 # Log file: /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/xsim.log
 # Journal file: /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/xsim.jou
-# Running On: SSD-UBUNTU, OS: Linux, CPU Frequency: 3176.582 MHz, CPU Physical cores: 16, Host memory: 16694 MB
+# Running On: SSD-UBUNTU, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 16, Host memory: 16694 MB
 #-----------------------------------------------------------
 source xsim.dir/pynqrypt_encrypt/xsim_script.tcl
 # xsim {pynqrypt_encrypt} -autoloadwcfg -tclbatch {pynqrypt_encrypt.tcl}
@@ -21,10 +21,10 @@ source pynqrypt_encrypt.tcl
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 1 [n/a] @ "125000"
-// RTL Simulation : 1 / 1 [n/a] @ "2952385000"
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "3380185000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 2952445 ns : File "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt.autotb.v" Line 443
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.273 ; gain = 0.000 ; free physical = 2695 ; free virtual = 23269
+$finish called at time : 3380245 ns : File "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt.autotb.v" Line 428
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1255.273 ; gain = 0.000 ; free physical = 2090 ; free virtual = 25222
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Dec  6 12:01:57 2022...
+INFO: [Common 17-206] Exiting xsim at Wed Dec  7 00:12:30 2022...

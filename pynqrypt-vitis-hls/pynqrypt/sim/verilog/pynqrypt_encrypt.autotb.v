@@ -16,21 +16,12 @@
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
 
 `define AESL_DEPTH_gmem 1
-`define AESL_DEPTH_key 1
-`define AESL_DEPTH_nonce 1
-`define AESL_DEPTH_plaintext_length 1
 `define AESL_DEPTH_plaintext 1
 `define AESL_DEPTH_ciphertext 1
 `define AUTOTB_TVIN_gmem  "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_gmem.dat"
-`define AUTOTB_TVIN_key  "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_key.dat"
-`define AUTOTB_TVIN_nonce  "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_nonce.dat"
-`define AUTOTB_TVIN_plaintext_length  "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_plaintext_length.dat"
 `define AUTOTB_TVIN_plaintext  "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_plaintext.dat"
 `define AUTOTB_TVIN_ciphertext  "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_ciphertext.dat"
 `define AUTOTB_TVIN_gmem_out_wrapc  "../tv/rtldatafile/rtl.pynqrypt_encrypt.autotvin_gmem.dat"
-`define AUTOTB_TVIN_key_out_wrapc  "../tv/rtldatafile/rtl.pynqrypt_encrypt.autotvin_key.dat"
-`define AUTOTB_TVIN_nonce_out_wrapc  "../tv/rtldatafile/rtl.pynqrypt_encrypt.autotvin_nonce.dat"
-`define AUTOTB_TVIN_plaintext_length_out_wrapc  "../tv/rtldatafile/rtl.pynqrypt_encrypt.autotvin_plaintext_length.dat"
 `define AUTOTB_TVIN_plaintext_out_wrapc  "../tv/rtldatafile/rtl.pynqrypt_encrypt.autotvin_plaintext.dat"
 `define AUTOTB_TVIN_ciphertext_out_wrapc  "../tv/rtldatafile/rtl.pynqrypt_encrypt.autotvin_ciphertext.dat"
 `define AUTOTB_TVOUT_gmem  "../tv/cdatafile/c.pynqrypt_encrypt.autotvout_gmem.dat"
@@ -39,13 +30,10 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = -1;
+parameter LATENCY_ESTIMATION = 342028;
 parameter LENGTH_ciphertext = 1;
 parameter LENGTH_gmem = 32768;
-parameter LENGTH_key = 16;
-parameter LENGTH_nonce = 12;
 parameter LENGTH_plaintext = 1;
-parameter LENGTH_plaintext_length = 1;
 
 task read_token;
     input integer fp;
@@ -76,14 +64,14 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire [6 : 0] control_AWADDR;
+wire [5 : 0] control_AWADDR;
 wire  control_AWVALID;
 wire  control_AWREADY;
 wire  control_WVALID;
 wire  control_WREADY;
 wire [31 : 0] control_WDATA;
 wire [3 : 0] control_WSTRB;
-wire [6 : 0] control_ARADDR;
+wire [5 : 0] control_ARADDR;
 wire  control_ARVALID;
 wire  control_ARREADY;
 wire  control_RVALID;
@@ -299,9 +287,6 @@ end
 
 
 
-
-
-
 wire    AESL_axi_master_gmem_ready;
 wire    AESL_axi_master_gmem_done;
 AESL_axi_master_gmem AESL_AXI_MASTER_gmem(
@@ -452,15 +437,6 @@ end
 reg end_gmem;
 reg [31:0] size_gmem;
 reg [31:0] size_gmem_backup;
-reg end_key;
-reg [31:0] size_key;
-reg [31:0] size_key_backup;
-reg end_nonce;
-reg [31:0] size_nonce;
-reg [31:0] size_nonce_backup;
-reg end_plaintext_length;
-reg [31:0] size_plaintext_length;
-reg [31:0] size_plaintext_length_backup;
 reg end_plaintext;
 reg [31:0] size_plaintext;
 reg [31:0] size_plaintext_backup;

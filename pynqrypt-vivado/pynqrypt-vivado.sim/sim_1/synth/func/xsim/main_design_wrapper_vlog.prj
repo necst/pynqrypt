@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ec67/hdl" --include "../../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ee60/hdl" --include "/xilinx/Vivado/2022.2/data/xilinx_vip/include" \
+"main_design_wrapper_func_synth.v" \
+
+# Do not sort compile order
+nosort

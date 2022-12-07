@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pynqrypt_encrypt'" level="0">
-<item name = "Date">Tue Dec  6 12:01:18 2022
+<item name = "Date">Wed Dec  7 00:11:53 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -24,26 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, no</column>
+<column name="">342028, 342028, 3.420 ms, 3.420 ms, 342029, 342029, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_pynqrypt_encrypt_Pipeline_1_fu_242">pynqrypt_encrypt_Pipeline_1, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_2_fu_250">pynqrypt_encrypt_Pipeline_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_aes_generate_round_keys_fu_258">aes_generate_round_keys, 183, 183, 1.830 us, 1.830 us, 183, 183, no</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_3_fu_268">pynqrypt_encrypt_Pipeline_3, 4, ?, 40.000 ns, ?, 4, ?, no</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_4_fu_277">pynqrypt_encrypt_Pipeline_4, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_aes_encrypt_block_fu_283">aes_encrypt_block, 192, 192, 1.920 us, 1.920 us, 192, 192, no</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291">pynqrypt_encrypt_Pipeline_loop_ctr_xor_block, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_6_fu_298">pynqrypt_encrypt_Pipeline_6, 5, ?, 50.000 ns, ?, 5, ?, no</column>
+<column name="grp_aes_encrypt_block_fu_315">aes_encrypt_block, 192, 192, 1.920 us, 1.920 us, 192, 192, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_ctr_encrypt">?, ?, ?, -, -, ?, no</column>
+<column name="- loop_ctr_encrypt">342016, 342016, 334, -, -, 1024, no</column>
+<column name=" + loop_ctr_encrypt.1">31, 31, 2, -, -, 16, no</column>
+<column name=" + loop_ctr_encrypt.2">24, 24, 2, -, -, 12, no</column>
+<column name=" + loop_ctr_xor_block">32, 32, 2, -, -, 16, no</column>
+<column name=" + loop_ctr_encrypt.4">47, 47, 3, -, -, 16, no</column>
 </table>
 </item>
 </section>
@@ -56,30 +53,23 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 808, -</column>
+<column name="Expression">-, -, 0, 119, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">2, -, 2464, 6306, 0</column>
-<column name="Memory">2, -, 48, 8, 0</column>
-<column name="Multiplexer">-, -, -, 726, -</column>
-<column name="Register">-, -, 678, -, -</column>
+<column name="Instance">2, -, 1559, 4343, 0</column>
+<column name="Memory">0, -, 32, 6, 0</column>
+<column name="Multiplexer">-, -, -, 397, -</column>
+<column name="Register">-, -, 224, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, 0, 2, 14, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 1, 9, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_aes_encrypt_block_fu_283">aes_encrypt_block, 1, 0, 621, 2620, 0</column>
-<column name="grp_aes_generate_round_keys_fu_258">aes_generate_round_keys, 1, 0, 286, 1095, 0</column>
-<column name="control_s_axi_U">control_s_axi, 0, 0, 406, 568, 0</column>
+<column name="grp_aes_encrypt_block_fu_315">aes_encrypt_block, 2, 0, 629, 2609, 0</column>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 176, 296, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 754, 1438, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_1_fu_242">pynqrypt_encrypt_Pipeline_1, 0, 0, 13, 61, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_2_fu_250">pynqrypt_encrypt_Pipeline_2, 0, 0, 11, 60, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_3_fu_268">pynqrypt_encrypt_Pipeline_3, 0, 0, 206, 158, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_4_fu_277">pynqrypt_encrypt_Pipeline_4, 0, 0, 11, 60, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_6_fu_298">pynqrypt_encrypt_Pipeline_6, 0, 0, 144, 158, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291">pynqrypt_encrypt_Pipeline_loop_ctr_xor_block, 0, 0, 12, 88, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -88,12 +78,9 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="crypto_aes_sbox_U">aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
-<column name="block_U">aes_encrypt_block_temp_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
+<column name="block_U">block_RAM_AUTO_1R1W, 0, 8, 2, 0, 16, 8, 1, 128</column>
 <column name="block_nonce_U">block_nonce_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
-<column name="pynqrypt_key_U">pynqrypt_key_RAM_AUTO_1R1W, 0, 8, 2, 0, 16, 8, 1, 128</column>
-<column name="pynqrypt_nonce_U">pynqrypt_nonce_RAM_AUTO_1R1W, 0, 8, 2, 0, 12, 8, 1, 96</column>
-<column name="pynqrypt_round_keys_U">pynqrypt_round_keys_RAM_AUTO_1R1W, 1, 0, 0, 0, 176, 8, 1, 1408</column>
+<column name="pynqrypt_nonce_U">pynqrypt_nonce_ROM_AUTO_1R, 0, 8, 2, 0, 12, 8, 1, 96</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -102,101 +89,63 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln23_fu_469_p2">+, 0, 0, 71, 64, 5</column>
-<column name="add_ln24_1_fu_408_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln24_2_fu_378_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln24_3_fu_359_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln24_fu_348_p2">+, 0, 0, 71, 64, 64</column>
-<column name="i_5_fu_464_p2">+, 0, 0, 71, 64, 5</column>
-<column name="ap_block_state14_on_subcall_done">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state21_io">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state28">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state6_io">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln23_1_fu_339_p2">icmp, 0, 0, 29, 64, 64</column>
-<column name="icmp_ln23_fu_388_p2">icmp, 0, 0, 29, 64, 6</column>
-<column name="icmp_ln24_fu_353_p2">icmp, 0, 0, 29, 64, 6</column>
-<column name="icmp_ln25_fu_383_p2">icmp, 0, 0, 29, 64, 64</column>
-<column name="ap_block_state2_on_subcall_done">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln23_fu_400_p3">select, 0, 0, 64, 1, 64</column>
-<column name="select_ln24_fu_370_p3">select, 0, 0, 32, 1, 32</column>
-<column name="xor_ln23_1_fu_394_p2">xor, 0, 0, 64, 64, 2</column>
-<column name="xor_ln23_fu_319_p2">xor, 0, 0, 64, 64, 2</column>
-<column name="xor_ln24_1_fu_364_p2">xor, 0, 0, 32, 2, 32</column>
-<column name="xor_ln24_fu_325_p2">xor, 0, 0, 32, 32, 2</column>
+<column name="empty_22_fu_380_p2">+, 0, 0, 13, 4, 1</column>
+<column name="i_5_fu_422_p2">+, 0, 0, 13, 5, 1</column>
+<column name="i_6_fu_452_p2">+, 0, 0, 20, 15, 5</column>
+<column name="p_cast2_fu_440_p2">+, 0, 0, 13, 4, 1</column>
+<column name="p_cast_fu_357_p2">+, 0, 0, 13, 4, 1</column>
+<column name="exitcond123_fu_374_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="exitcond14_fu_446_p2">icmp, 0, 0, 9, 4, 2</column>
+<column name="exitcond_fu_363_p2">icmp, 0, 0, 9, 4, 2</column>
+<column name="icmp_ln45_fu_416_p2">icmp, 0, 0, 10, 5, 6</column>
+<column name="ap_block_state2_io">or, 0, 0, 2, 1, 1</column>
+<column name="xor_ln46_fu_428_p2">xor, 0, 0, 8, 8, 8</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">130, 29, 1, 29</column>
-<column name="block_address0">20, 4, 4, 16</column>
-<column name="block_ce0">20, 4, 1, 4</column>
-<column name="block_ce1">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">117, 26, 1, 26</column>
+<column name="block_address0">25, 5, 4, 20</column>
 <column name="block_d0">14, 3, 8, 24</column>
-<column name="block_nonce_address0">31, 6, 4, 24</column>
-<column name="block_nonce_address1">20, 4, 4, 16</column>
-<column name="block_nonce_ce0">25, 5, 1, 5</column>
+<column name="block_nonce_address0">25, 5, 4, 20</column>
+<column name="block_nonce_address1">25, 5, 4, 20</column>
+<column name="block_nonce_ce0">14, 3, 1, 3</column>
 <column name="block_nonce_ce1">14, 3, 1, 3</column>
 <column name="block_nonce_d0">25, 5, 8, 40</column>
 <column name="block_nonce_d1">20, 4, 8, 32</column>
-<column name="block_nonce_we0">20, 4, 1, 4</column>
+<column name="block_nonce_we0">14, 3, 1, 3</column>
 <column name="block_nonce_we1">14, 3, 1, 3</column>
-<column name="block_we0">14, 3, 1, 3</column>
-<column name="crypto_aes_sbox_address0">14, 3, 8, 24</column>
-<column name="crypto_aes_sbox_ce0">9, 2, 1, 2</column>
-<column name="crypto_aes_sbox_ce1">9, 2, 1, 2</column>
-<column name="gmem_ARADDR">14, 3, 64, 192</column>
-<column name="gmem_ARLEN">14, 3, 32, 96</column>
-<column name="gmem_ARVALID">14, 3, 1, 3</column>
-<column name="gmem_AWADDR">14, 3, 64, 192</column>
-<column name="gmem_AWLEN">14, 3, 32, 96</column>
-<column name="gmem_AWVALID">14, 3, 1, 3</column>
-<column name="gmem_BREADY">14, 3, 1, 3</column>
-<column name="gmem_RREADY">9, 2, 1, 2</column>
-<column name="gmem_WVALID">9, 2, 1, 2</column>
 <column name="gmem_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem_blk_n_AW">9, 2, 1, 2</column>
 <column name="gmem_blk_n_B">9, 2, 1, 2</column>
-<column name="i_fu_134">9, 2, 64, 128</column>
-<column name="icmp_ln25_pr_reg_230">9, 2, 1, 2</column>
-<column name="indvars_iv6_fu_138">9, 2, 64, 128</column>
-<column name="pynqrypt_key_address0">14, 3, 4, 12</column>
-<column name="pynqrypt_key_ce0">14, 3, 1, 3</column>
-<column name="pynqrypt_key_we0">9, 2, 1, 2</column>
-<column name="pynqrypt_nonce_address0">14, 3, 4, 12</column>
-<column name="pynqrypt_nonce_ce0">14, 3, 1, 3</column>
-<column name="pynqrypt_nonce_we0">9, 2, 1, 2</column>
-<column name="pynqrypt_round_keys_address0">14, 3, 8, 24</column>
-<column name="pynqrypt_round_keys_address1">14, 3, 8, 24</column>
-<column name="pynqrypt_round_keys_ce0">14, 3, 1, 3</column>
-<column name="pynqrypt_round_keys_ce1">14, 3, 1, 3</column>
-<column name="pynqrypt_round_keys_we0">9, 2, 1, 2</column>
-<column name="pynqrypt_round_keys_we1">9, 2, 1, 2</column>
+<column name="gmem_blk_n_R">9, 2, 1, 2</column>
+<column name="gmem_blk_n_W">9, 2, 1, 2</column>
+<column name="i_1_reg_293">9, 2, 5, 10</column>
+<column name="i_fu_126">9, 2, 15, 30</column>
+<column name="loop_index3_i_reg_271">9, 2, 4, 8</column>
+<column name="loop_index_i5_reg_304">9, 2, 4, 8</column>
+<column name="loop_index_i_i_reg_282">9, 2, 4, 8</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln24_1_reg_575">64, 0, 64, 0</column>
-<column name="add_ln24_2_reg_557">64, 0, 64, 0</column>
-<column name="ap_CS_fsm">28, 0, 28, 0</column>
-<column name="ciphertext_read_reg_499">64, 0, 64, 0</column>
-<column name="grp_aes_encrypt_block_fu_283_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_aes_generate_round_keys_fu_258_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_fu_134">64, 0, 64, 0</column>
-<column name="icmp_ln25_pr_reg_230">1, 0, 1, 0</column>
-<column name="icmp_ln25_reg_563">1, 0, 1, 0</column>
-<column name="indvars_iv6_fu_138">64, 0, 64, 0</column>
-<column name="plaintext_length_read_reg_509">64, 0, 64, 0</column>
-<column name="plaintext_read_reg_504">64, 0, 64, 0</column>
-<column name="select_ln23_reg_568">64, 0, 64, 0</column>
-<column name="select_ln24_reg_551">32, 0, 32, 0</column>
-<column name="xor_ln23_reg_535">64, 0, 64, 0</column>
-<column name="xor_ln24_reg_540">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">25, 0, 25, 0</column>
+<column name="block_addr_1_reg_551">4, 0, 4, 0</column>
+<column name="block_load_1_reg_570">8, 0, 8, 0</column>
+<column name="empty_22_reg_528">4, 0, 4, 0</column>
+<column name="exitcond14_reg_566">1, 0, 1, 0</column>
+<column name="gmem_addr_1_reg_475">64, 0, 64, 0</column>
+<column name="gmem_addr_read_reg_507">8, 0, 8, 0</column>
+<column name="gmem_addr_reg_469">64, 0, 64, 0</column>
+<column name="grp_aes_encrypt_block_fu_315_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_293">5, 0, 5, 0</column>
+<column name="i_5_reg_541">5, 0, 5, 0</column>
+<column name="i_fu_126">15, 0, 15, 0</column>
+<column name="loop_index3_i_reg_271">4, 0, 4, 0</column>
+<column name="loop_index_i5_reg_304">4, 0, 4, 0</column>
+<column name="loop_index_i_i_cast_reg_520">4, 0, 64, 60</column>
+<column name="loop_index_i_i_reg_282">4, 0, 4, 0</column>
+<column name="p_cast2_reg_561">4, 0, 4, 0</column>
 </table>
 </item>
 </section>
@@ -208,14 +157,14 @@
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
 <column name="s_axi_control_AWVALID">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_AWREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_AWADDR">in, 7, s_axi, control, scalar</column>
+<column name="s_axi_control_AWADDR">in, 6, s_axi, control, scalar</column>
 <column name="s_axi_control_WVALID">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_WREADY">out, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_WDATA">in, 32, s_axi, control, scalar</column>
 <column name="s_axi_control_WSTRB">in, 4, s_axi, control, scalar</column>
 <column name="s_axi_control_ARVALID">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_ARREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_ARADDR">in, 7, s_axi, control, scalar</column>
+<column name="s_axi_control_ARADDR">in, 6, s_axi, control, scalar</column>
 <column name="s_axi_control_RVALID">out, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_RREADY">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_RDATA">out, 32, s_axi, control, scalar</column>

@@ -75,7 +75,7 @@ all: $(TARGET)
 
 $(ObjDir)/test.o: ../../../../hw-impl/src/test.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../hw-impl/src/test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/test.d
 

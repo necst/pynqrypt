@@ -1,0 +1,24 @@
+verilog xil_defaultlib --include "/xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_2/drivers/pynqrypt_encrypt_v1_0/src" --include "../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ec67/hdl" --include "../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ee60/hdl" \
+"../../../bd/main_design/sim/main_design.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_nonce_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_control_s_axi.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt.v" \
+"../../../bd/main_design/ip/main_design_pynqrypt_encrypt_0_2/sim/main_design_pynqrypt_encrypt_0_2.v" \
+"../../../bd/main_design/ip/main_design_processing_system7_0_3/sim/main_design_processing_system7_0_3.v" \
+"../../../bd/main_design/ip/main_design_auto_pc_0/sim/main_design_auto_pc_0.v" \
+"../../../bd/main_design/ip/main_design_auto_pc_1/sim/main_design_auto_pc_1.v" \
+"../../../bd/main_design/ip/main_design_auto_us_0/sim/main_design_auto_us_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -6,32 +6,32 @@
   </RunData>
   <TimingReport>
     <TargetClockPeriod>10.000</TargetClockPeriod>
-    <AchievedClockPeriod>7.243</AchievedClockPeriod>
+    <AchievedClockPeriod>6.964</AchievedClockPeriod>
     <CLOCK_NAME>ap_clk</CLOCK_NAME>
-    <CP_FINAL>7.243</CP_FINAL>
+    <CP_FINAL>6.964</CP_FINAL>
     <CP_ROUTE>NA</CP_ROUTE>
-    <CP_SYNTH>7.243</CP_SYNTH>
+    <CP_SYNTH>6.964</CP_SYNTH>
     <CP_TARGET>10.000</CP_TARGET>
-    <SLACK_FINAL>2.757</SLACK_FINAL>
+    <SLACK_FINAL>3.036</SLACK_FINAL>
     <SLACK_ROUTE/>
-    <SLACK_SYNTH>2.757</SLACK_SYNTH>
+    <SLACK_SYNTH>3.036</SLACK_SYNTH>
     <TIMING_MET>TRUE</TIMING_MET>
     <TNS_FINAL>0.000</TNS_FINAL>
     <TNS_ROUTE>NA</TNS_ROUTE>
     <TNS_SYNTH>0.000</TNS_SYNTH>
-    <WNS_FINAL>2.757</WNS_FINAL>
+    <WNS_FINAL>3.036</WNS_FINAL>
     <WNS_ROUTE>NA</WNS_ROUTE>
-    <WNS_SYNTH>2.757</WNS_SYNTH>
+    <WNS_SYNTH>3.036</WNS_SYNTH>
   </TimingReport>
   <AreaReport>
     <Resources>
-      <BRAM>7</BRAM>
+      <BRAM>5</BRAM>
       <CLB>0</CLB>
       <DSP>0</DSP>
-      <FF>4394</FF>
+      <FF>2898</FF>
       <LATCH>0</LATCH>
-      <LUT>4128</LUT>
-      <SRL>340</SRL>
+      <LUT>2208</LUT>
+      <SRL>278</SRL>
       <URAM>0</URAM>
     </Resources>
     <AvailableResources>
@@ -45,269 +45,109 @@
   </AreaReport>
   <RtlModules>
     <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="pynqrypt_encrypt" DISPNAME="inst" RTLNAME="pynqrypt_encrypt">
-      <SubModules count="16">block_U block_nonce_U control_s_axi_U crypto_aes_sbox_U gmem_m_axi_U grp_aes_encrypt_block_fu_283 grp_aes_generate_round_keys_fu_258 grp_pynqrypt_encrypt_Pipeline_1_fu_242 grp_pynqrypt_encrypt_Pipeline_2_fu_250 grp_pynqrypt_encrypt_Pipeline_3_fu_268 grp_pynqrypt_encrypt_Pipeline_4_fu_277 grp_pynqrypt_encrypt_Pipeline_6_fu_298 grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291 pynqrypt_key_U pynqrypt_nonce_U pynqrypt_round_keys_U</SubModules>
-      <Resources BRAM="7" FF="4394" LUT="4128"/>
-      <LocalResources FF="642" LUT="381"/>
+      <SubModules count="6">block_U block_nonce_U control_s_axi_U gmem_m_axi_U grp_aes_encrypt_block_fu_315 pynqrypt_nonce_U</SubModules>
+      <Resources BRAM="5" FF="2898" LUT="2208"/>
+      <LocalResources FF="220" LUT="23"/>
     </RtlModule>
-    <RtlModule CELL="inst/block_U" BINDMODULE="pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="aes_encrypt_block_temp_RAM_AUTO_1R1W" DISPNAME="block_U" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W">
-      <Resources FF="16" LUT="17"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="block_U" SOURCE="hw-impl/src/pynqrypt.cpp:21" URAM="0" VARIABLE="block"/>
+    <RtlModule CELL="inst/block_U" BINDMODULE="pynqrypt_encrypt_block_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="block_RAM_AUTO_1R1W" DISPNAME="block_U" RTLNAME="pynqrypt_encrypt_block_RAM_AUTO_1R1W">
+      <Resources FF="8" LUT="18"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="block_U" SOURCE="hw-impl/src/pynqrypt.cpp:21" URAM="0" VARIABLE="block"/>
     </RtlModule>
     <RtlModule CELL="inst/block_nonce_U" BINDMODULE="pynqrypt_encrypt_block_nonce_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="block_nonce_RAM_AUTO_1R1W" DISPNAME="block_nonce_U" RTLNAME="pynqrypt_encrypt_block_nonce_RAM_AUTO_1R1W">
-      <Resources BRAM="1" LUT="25"/>
+      <Resources BRAM="1" LUT="14"/>
       <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="block_nonce_U" SOURCE="hw-impl/src/pynqrypt.cpp:20" URAM="0" VARIABLE="block_nonce"/>
     </RtlModule>
     <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="pynqrypt_encrypt_control_s_axi" DEPTH="1" TYPE="rtl" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="pynqrypt_encrypt_control_s_axi">
-      <Resources FF="383" LUT="506"/>
-      <LocalResources FF="255" LUT="315"/>
-    </RtlModule>
-    <RtlModule CELL="inst/crypto_aes_sbox_U" BINDMODULE="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R" DEPTH="1" TYPE="resource" MODULENAME="aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R" DISPNAME="crypto_aes_sbox_U" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R">
-      <Resources BRAM="1"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
+      <Resources FF="183" LUT="164"/>
     </RtlModule>
     <RtlModule CELL="inst/gmem_m_axi_U" BINDMODULE="pynqrypt_encrypt_gmem_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem_m_axi" DISPNAME="gmem_m_axi_U" RTLNAME="pynqrypt_encrypt_gmem_m_axi">
-      <Resources BRAM="2" FF="2164" LUT="1625"/>
+      <Resources BRAM="2" FF="1922" LUT="1323"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_283" DEPTH="1" TYPE="function" MODULENAME="aes_encrypt_block" DISPNAME="grp_aes_encrypt_block_fu_283" RTLNAME="pynqrypt_encrypt_aes_encrypt_block">
-      <SubModules count="3">grp_aes_encrypt_block_Pipeline_2_fu_895 grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868 temp_U</SubModules>
-      <Resources BRAM="1" FF="549" LUT="651"/>
-      <LocalResources FF="152" LUT="134"/>
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315" DEPTH="1" TYPE="function" MODULENAME="aes_encrypt_block" DISPNAME="grp_aes_encrypt_block_fu_315" RTLNAME="pynqrypt_encrypt_aes_encrypt_block">
+      <SubModules count="4">crypto_aes_sbox_U grp_aes_encrypt_block_Pipeline_2_fu_628 grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_601 temp_U</SubModules>
+      <Resources BRAM="2" FF="557" LUT="659"/>
+      <LocalResources FF="160" LUT="97"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_283/grp_aes_encrypt_block_Pipeline_2_fu_895" DEPTH="2" TYPE="function" MODULENAME="aes_encrypt_block_Pipeline_2" DISPNAME="grp_aes_encrypt_block_Pipeline_2_fu_895" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_Pipeline_2">
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315/crypto_aes_sbox_U" BINDMODULE="pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R" DEPTH="2" TYPE="resource" MODULENAME="aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R" DISPNAME="crypto_aes_sbox_U" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R">
+      <Resources BRAM="1" LUT="30"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315/grp_aes_encrypt_block_Pipeline_2_fu_628" DEPTH="2" TYPE="function" MODULENAME="aes_encrypt_block_Pipeline_2" DISPNAME="grp_aes_encrypt_block_Pipeline_2_fu_628" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_Pipeline_2">
       <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="12" LUT="20"/>
+      <Resources FF="12" LUT="22"/>
       <LocalResources FF="10" LUT="8"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_283/grp_aes_encrypt_block_Pipeline_2_fu_895/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="12"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_283/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868" DEPTH="2" TYPE="function" MODULENAME="aes_encrypt_block_Pipeline_loop_aes_encrypt_block" DISPNAME="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block">
-      <SubModules count="2">crypto_aes_sbox_U flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources BRAM="1" FF="369" LUT="455"/>
-      <LocalResources FF="367" LUT="324"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_283/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/crypto_aes_sbox_U" BINDMODULE="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R" DEPTH="3" TYPE="resource" MODULENAME="aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R" DISPNAME="crypto_aes_sbox_U" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R">
-      <Resources BRAM="1" LUT="89"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_283/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_868/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="42"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_283/temp_U" BINDMODULE="pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="aes_encrypt_block_temp_RAM_AUTO_1R1W" DISPNAME="temp_U" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W">
-      <Resources FF="16" LUT="42"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="temp_U" SOURCE="hw-impl/src/pynqrypt.cpp:79" URAM="0" VARIABLE="temp"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_generate_round_keys_fu_258" DEPTH="1" TYPE="function" MODULENAME="aes_generate_round_keys" DISPNAME="grp_aes_generate_round_keys_fu_258" RTLNAME="pynqrypt_encrypt_aes_generate_round_keys">
-      <SubModules count="2">grp_aes_generate_round_keys_Pipeline_1_fu_12 grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20</SubModules>
-      <Resources BRAM="1" FF="287" LUT="367"/>
-      <LocalResources FF="6" LUT="1"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_generate_round_keys_fu_258/grp_aes_generate_round_keys_Pipeline_1_fu_12" DEPTH="2" TYPE="function" MODULENAME="aes_generate_round_keys_Pipeline_1" DISPNAME="grp_aes_generate_round_keys_Pipeline_1_fu_12" RTLNAME="pynqrypt_encrypt_aes_generate_round_keys_Pipeline_1">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="13" LUT="17"/>
-      <LocalResources FF="11" LUT="1"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_generate_round_keys_fu_258/grp_aes_generate_round_keys_Pipeline_1_fu_12/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="16"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_generate_round_keys_fu_258/grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20" DEPTH="2" TYPE="function" MODULENAME="aes_generate_round_keys_Pipeline_loop_generate_round_keys" DISPNAME="grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20" RTLNAME="pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys">
-      <SubModules count="3">crypto_aes_rcon_U crypto_aes_sbox_U flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources BRAM="1" FF="268" LUT="349"/>
-      <LocalResources FF="258" LUT="211"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_generate_round_keys_fu_258/grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20/crypto_aes_rcon_U" BINDMODULE="pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud" DEPTH="3" TYPE="resource" MODULENAME="aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud" DISPNAME="crypto_aes_rcon_U" RTLNAME="pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud">
-      <Resources FF="8" LUT="1"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="crypto_aes_rcon_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_rcon"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_generate_round_keys_fu_258/grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20/crypto_aes_sbox_U" BINDMODULE="pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb" DEPTH="3" TYPE="resource" MODULENAME="aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb" DISPNAME="crypto_aes_sbox_U" RTLNAME="pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb">
-      <Resources BRAM="1" LUT="29"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="crypto_aes_sbox_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_sbox"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_aes_generate_round_keys_fu_258/grp_aes_generate_round_keys_Pipeline_loop_generate_round_keys_fu_20/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="108"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_1_fu_242" DEPTH="1" TYPE="function" MODULENAME="pynqrypt_encrypt_Pipeline_1" DISPNAME="grp_pynqrypt_encrypt_Pipeline_1_fu_242" RTLNAME="pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_1">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="12" LUT="13"/>
-      <LocalResources FF="10" LUT="1"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_1_fu_242/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="12"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_2_fu_250" DEPTH="1" TYPE="function" MODULENAME="pynqrypt_encrypt_Pipeline_2" DISPNAME="grp_pynqrypt_encrypt_Pipeline_2_fu_250" RTLNAME="pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_2">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="11" LUT="15"/>
-      <LocalResources FF="9" LUT="2"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_2_fu_250/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="13"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_3_fu_268" DEPTH="1" TYPE="function" MODULENAME="pynqrypt_encrypt_Pipeline_3" DISPNAME="grp_pynqrypt_encrypt_Pipeline_3_fu_268" RTLNAME="pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_3">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="146" LUT="230"/>
-      <LocalResources FF="144" LUT="163"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_3_fu_268/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="67"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_4_fu_277" DEPTH="1" TYPE="function" MODULENAME="pynqrypt_encrypt_Pipeline_4" DISPNAME="grp_pynqrypt_encrypt_Pipeline_4_fu_277" RTLNAME="pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_4">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="11" LUT="17"/>
-      <LocalResources FF="9" LUT="3"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_4_fu_277/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315/grp_aes_encrypt_block_Pipeline_2_fu_628/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
       <Resources FF="2" LUT="14"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_6_fu_298" DEPTH="1" TYPE="function" MODULENAME="pynqrypt_encrypt_Pipeline_6" DISPNAME="grp_pynqrypt_encrypt_Pipeline_6_fu_298" RTLNAME="pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_6">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="145" LUT="226"/>
-      <LocalResources FF="143" LUT="163"/>
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_601" DEPTH="2" TYPE="function" MODULENAME="aes_encrypt_block_Pipeline_loop_aes_encrypt_block" DISPNAME="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_601" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U pynqrypt_round_keys_U</SubModules>
+      <Resources BRAM="1" FF="369" LUT="458"/>
+      <LocalResources FF="367" LUT="311"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_6_fu_298/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="63"/>
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_601/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="62"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291" DEPTH="1" TYPE="function" MODULENAME="pynqrypt_encrypt_Pipeline_loop_ctr_xor_block" DISPNAME="grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291" RTLNAME="pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="12" LUT="20"/>
-      <LocalResources FF="10" LUT="3"/>
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_601/pynqrypt_round_keys_U" BINDMODULE="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb" DEPTH="3" TYPE="resource" MODULENAME="aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb" DISPNAME="pynqrypt_round_keys_U" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb">
+      <Resources BRAM="1" LUT="85"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="pynqrypt_round_keys_U" SOURCE="" URAM="0" VARIABLE="pynqrypt_round_keys"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291/flow_control_loop_pipe_sequential_init_U" BINDMODULE="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="pynqrypt_encrypt_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="17"/>
+    <RtlModule CELL="inst/grp_aes_encrypt_block_fu_315/temp_U" BINDMODULE="pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="aes_encrypt_block_temp_RAM_AUTO_1R1W" DISPNAME="temp_U" RTLNAME="pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W">
+      <Resources FF="16" LUT="52"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="temp_U" SOURCE="hw-impl/src/pynqrypt.cpp:79" URAM="0" VARIABLE="temp"/>
     </RtlModule>
-    <RtlModule CELL="inst/pynqrypt_key_U" BINDMODULE="pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="pynqrypt_key_RAM_AUTO_1R1W" DISPNAME="pynqrypt_key_U" RTLNAME="pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W">
-      <Resources FF="8" LUT="8"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="pynqrypt_key_U" SOURCE="hw-impl/src/pynqrypt_hls.cpp:20" URAM="0" VARIABLE="pynqrypt_key"/>
-    </RtlModule>
-    <RtlModule CELL="inst/pynqrypt_nonce_U" BINDMODULE="pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="pynqrypt_nonce_RAM_AUTO_1R1W" DISPNAME="pynqrypt_nonce_U" RTLNAME="pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W">
-      <Resources FF="8" LUT="11"/>
-      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="pynqrypt_nonce_U" SOURCE="hw-impl/src/pynqrypt_hls.cpp:20" URAM="0" VARIABLE="pynqrypt_nonce"/>
-    </RtlModule>
-    <RtlModule CELL="inst/pynqrypt_round_keys_U" BINDMODULE="pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="pynqrypt_round_keys_RAM_AUTO_1R1W" DISPNAME="pynqrypt_round_keys_U" RTLNAME="pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W">
-      <Resources BRAM="1" LUT="16"/>
-      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="pynqrypt_round_keys_U" SOURCE="" URAM="0" VARIABLE="pynqrypt_round_keys"/>
+    <RtlModule CELL="inst/pynqrypt_nonce_U" BINDMODULE="pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R" DEPTH="1" TYPE="resource" MODULENAME="pynqrypt_nonce_ROM_AUTO_1R" DISPNAME="pynqrypt_nonce_U" RTLNAME="pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R">
+      <Resources FF="8" LUT="7"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="pynqrypt_nonce_U" SOURCE="" URAM="0" VARIABLE="pynqrypt_nonce"/>
     </RtlModule>
   </RtlModules>
   <TimingPaths>
-    <TPATH DATAPATH_DELAY="6.635" DATAPATH_LOGIC_DELAY="4.329" DATAPATH_NET_DELAY="2.306" ENDPOINT_PIN="select_ln24_reg_551_reg[0]/R" LOGIC_LEVELS="19" MAX_FANOUT="32" SLACK="2.757" STARTPOINT_PIN="i_fu_134_reg[5]/C">
-      <CELL NAME="i_fu_134_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1103"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_116" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_104" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_105" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_95" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_94" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_80" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_79" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_65" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_64" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_50" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_49" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_35" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_34" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_24" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_23" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_17" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_6" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1136"/>
+    <TPATH DATAPATH_DELAY="6.437" DATAPATH_LOGIC_DELAY="2.942" DATAPATH_NET_DELAY="3.495" ENDPOINT_PIN="gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/ENARDEN" LOGIC_LEVELS="4" MAX_FANOUT="12" SLACK="3.036" STARTPOINT_PIN="gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK">
+      <CELL NAME="gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg" PRIMITIVE_TYPE="BMEM.bram.RAMB18E1" LINE_NUMBER="2807"/>
+      <CELL NAME="gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/dout[3]_i_5" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/dout[3]_i_2__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg_i_4" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="10"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="6.635" DATAPATH_LOGIC_DELAY="4.329" DATAPATH_NET_DELAY="2.306" ENDPOINT_PIN="select_ln24_reg_551_reg[10]/R" LOGIC_LEVELS="19" MAX_FANOUT="32" SLACK="2.757" STARTPOINT_PIN="i_fu_134_reg[5]/C">
-      <CELL NAME="i_fu_134_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1103"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_116" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_104" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_105" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_95" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_94" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_80" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_79" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_65" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_64" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_50" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_49" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_35" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_34" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_24" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_23" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_17" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_6" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[10]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1136"/>
+    <TPATH DATAPATH_DELAY="6.284" DATAPATH_LOGIC_DELAY="1.425" DATAPATH_NET_DELAY="4.859" ENDPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[0]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="3.108" STARTPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/bus_wide_gen.pad_oh_reg[3]_i_3" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="10"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="6.635" DATAPATH_LOGIC_DELAY="4.329" DATAPATH_NET_DELAY="2.306" ENDPOINT_PIN="select_ln24_reg_551_reg[11]/R" LOGIC_LEVELS="19" MAX_FANOUT="32" SLACK="2.757" STARTPOINT_PIN="i_fu_134_reg[5]/C">
-      <CELL NAME="i_fu_134_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1103"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_116" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_104" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_105" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_95" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_94" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_80" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_79" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_65" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_64" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_50" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_49" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_35" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_34" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_24" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_23" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_17" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_6" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1136"/>
+    <TPATH DATAPATH_DELAY="6.284" DATAPATH_LOGIC_DELAY="1.425" DATAPATH_NET_DELAY="4.859" ENDPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[10]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="3.108" STARTPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/bus_wide_gen.pad_oh_reg[3]_i_3" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="10"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[10]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="6.635" DATAPATH_LOGIC_DELAY="4.329" DATAPATH_NET_DELAY="2.306" ENDPOINT_PIN="select_ln24_reg_551_reg[12]/R" LOGIC_LEVELS="19" MAX_FANOUT="32" SLACK="2.757" STARTPOINT_PIN="i_fu_134_reg[5]/C">
-      <CELL NAME="i_fu_134_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1103"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_116" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_104" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_105" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_95" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_94" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_80" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_79" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_65" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_64" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_50" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_49" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_35" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_34" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_24" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_23" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_17" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_6" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[12]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1136"/>
+    <TPATH DATAPATH_DELAY="6.284" DATAPATH_LOGIC_DELAY="1.425" DATAPATH_NET_DELAY="4.859" ENDPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[11]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="3.108" STARTPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/bus_wide_gen.pad_oh_reg[3]_i_3" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="10"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="6.635" DATAPATH_LOGIC_DELAY="4.329" DATAPATH_NET_DELAY="2.306" ENDPOINT_PIN="select_ln24_reg_551_reg[13]/R" LOGIC_LEVELS="19" MAX_FANOUT="32" SLACK="2.757" STARTPOINT_PIN="i_fu_134_reg[5]/C">
-      <CELL NAME="i_fu_134_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1103"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_116" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_104" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_105" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_95" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_94" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_80" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_79" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_65" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_64" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_50" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_49" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_35" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_34" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_24" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_23" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_17" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_6" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[31]_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="274"/>
-      <CELL NAME="select_ln24_reg_551_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1136"/>
+    <TPATH DATAPATH_DELAY="6.284" DATAPATH_LOGIC_DELAY="1.425" DATAPATH_NET_DELAY="4.859" ENDPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[12]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="3.108" STARTPOINT_PIN="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/bus_wide_gen.pad_oh_reg[3]_i_3" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_8" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="446"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="10"/>
+      <CELL NAME="gmem_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[12]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1066"/>
     </TPATH>
   </TimingPaths>
   <VivadoReportFiles>
@@ -319,7 +159,7 @@
     <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/pynqrypt_encrypt_utilization_hierarchical_synth.rpt"/>
   </VivadoReportFiles>
   <GeneralInfo NAME="General Information">
-    <item NAME="Date" VALUE="Tue Dec 06 12:05:04 CET 2022"/>
+    <item NAME="Date" VALUE="Wed Dec 07 00:14:54 CET 2022"/>
     <item NAME="Version" VALUE="2022.2 (Build 3670227 on Oct 13 2022)"/>
     <item NAME="Project" VALUE="pynqrypt-vitis-hls"/>
     <item NAME="Solution" VALUE="pynqrypt (Vivado IP Flow Target)"/>
