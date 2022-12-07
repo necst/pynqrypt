@@ -14384,3 +14384,444 @@ Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
 Tool Version Limit: 2019.12
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020i-clg400-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/mrindeciso/Documents/pynqrypt/hw-impl
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020i-clg400-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -flow syn -format ip_catalog -output /home/mrindeciso/Documents/pynqrypt/hw-impl -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./pynqrypt-vitis-hls/pynqrypt/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name pynqrypt_encrypt pynqrypt_encrypt 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 10.01 seconds; current allocated memory: 201.820 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.63 seconds. CPU system time: 0.4 seconds. Elapsed time: 2.44 seconds; current allocated memory: 202.043 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:52:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:63:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:62:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:61:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:58:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:57:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:55:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:56:9)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_231_1' (hw-impl/src/pynqrypt.cpp:231:20) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_1' (hw-impl/src/pynqrypt.cpp:70:19) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_106_1' (hw-impl/src/pynqrypt.cpp:106:23) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 4 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)' (hw-impl/src/pynqrypt_hls.cpp:6:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)' (hw-impl/src/pynqrypt_hls.cpp:6:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:208:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:257:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:258:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:259:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:18)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:214:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:27)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:39)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:25)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:216:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:217:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:219:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:220:23)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:222:10)
+INFO: [HLS 214-115] Multiple burst reads of length 1024 and bit width 8 in loop 'loop_ctr_encrypt'(hw-impl/src/pynqrypt.cpp:23:23) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (hw-impl/src/pynqrypt.cpp:23:23)
+INFO: [HLS 214-115] Multiple burst writes of length 1024 and bit width 8 in loop 'loop_ctr_encrypt'(hw-impl/src/pynqrypt.cpp:23:23) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (hw-impl/src/pynqrypt.cpp:23:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.71 seconds. CPU system time: 0.3 seconds. Elapsed time: 3.32 seconds; current allocated memory: 203.879 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 203.879 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 206.090 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 206.883 MB.
+INFO: [XFORM 203-510] Pipelining loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'pynqrypt_encrypt' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'pynqrypt_encrypt' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'temp' (hw-impl/src/pynqrypt.cpp:79) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'crypto::Pynqrypt::aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0:1)...93 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.46 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 231.281 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'block' 
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' 
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:37:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:38:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:39:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:40:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block' (hw-impl/src/pynqrypt.cpp:46:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:233:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:72:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 251.996 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pynqrypt_encrypt' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_aes_encrypt_block'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'xor' operation ('tmp2', hw-impl/src/pynqrypt.cpp:109) and 'load' operation ('tmp3', hw-impl/src/pynqrypt.cpp:72) on array 'crypto_aes_sbox'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'load' operation ('state_load_1', hw-impl/src/pynqrypt.cpp:72) on array 'state' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_5_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_42', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_2_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_45', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 13). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_47', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 14). Please consider using a memory core with more ports or partitioning the array 'state'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 15, Depth = 15, loop 'loop_aes_encrypt_block'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 256.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 256.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 256.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 256.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020i-clg400-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/mrindeciso/Documents/pynqrypt/hw-impl
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020i-clg400-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -flow syn -format ip_catalog -output /home/mrindeciso/Documents/pynqrypt/hw-impl -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./pynqrypt-vitis-hls/pynqrypt/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name pynqrypt_encrypt pynqrypt_encrypt 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 10.01 seconds; current allocated memory: 201.566 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.68 seconds. CPU system time: 0.35 seconds. Elapsed time: 2.05 seconds; current allocated memory: 202.164 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:52:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:63:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:62:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:61:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:58:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:57:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:55:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:56:9)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_231_1' (hw-impl/src/pynqrypt.cpp:231:20) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_1' (hw-impl/src/pynqrypt.cpp:70:19) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_106_1' (hw-impl/src/pynqrypt.cpp:106:23) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 4 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)' (hw-impl/src/pynqrypt_hls.cpp:6:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)' (hw-impl/src/pynqrypt_hls.cpp:6:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:208:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:257:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:258:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:259:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:18)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:214:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:27)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:39)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:25)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:216:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:217:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:219:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:220:23)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:222:10)
+INFO: [HLS 214-115] Multiple burst reads of length 16384 and bit width 8 in loop 'loop_ctr_encrypt'(hw-impl/src/pynqrypt.cpp:23:23) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (hw-impl/src/pynqrypt.cpp:23:23)
+INFO: [HLS 214-115] Multiple burst writes of length 16384 and bit width 8 in loop 'loop_ctr_encrypt'(hw-impl/src/pynqrypt.cpp:23:23) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (hw-impl/src/pynqrypt.cpp:23:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.77 seconds. CPU system time: 0.29 seconds. Elapsed time: 3.05 seconds; current allocated memory: 204.000 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 204.000 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.22 seconds; current allocated memory: 207.367 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.28 seconds. CPU system time: 0 seconds. Elapsed time: 1.27 seconds; current allocated memory: 207.879 MB.
+INFO: [XFORM 203-510] Pipelining loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'pynqrypt_encrypt' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'pynqrypt_encrypt' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'temp' (hw-impl/src/pynqrypt.cpp:79) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'crypto::Pynqrypt::aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0:1)...93 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.42 seconds; current allocated memory: 231.469 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'block' 
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' 
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:37:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:38:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:39:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:40:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block' (hw-impl/src/pynqrypt.cpp:46:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:233:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:72:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 252.266 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pynqrypt_encrypt' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_aes_encrypt_block'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'xor' operation ('tmp2', hw-impl/src/pynqrypt.cpp:109) and 'load' operation ('tmp3', hw-impl/src/pynqrypt.cpp:72) on array 'crypto_aes_sbox'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'load' operation ('state_load_1', hw-impl/src/pynqrypt.cpp:72) on array 'state' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_5_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_42', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_2_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_45', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 13). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_47', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 14). Please consider using a memory core with more ports or partitioning the array 'state'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 15, Depth = 15, loop 'loop_aes_encrypt_block'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.49 seconds; current allocated memory: 256.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 256.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 256.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 256.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020i-clg400-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/mrindeciso/Documents/pynqrypt/hw-impl
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020i-clg400-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -flow syn -format ip_catalog -output /home/mrindeciso/Documents/pynqrypt/hw-impl -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./pynqrypt-vitis-hls/pynqrypt/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name pynqrypt_encrypt pynqrypt_encrypt 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.01 seconds; current allocated memory: 201.566 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'hw-impl/src/pynqrypt.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.65 seconds. CPU system time: 0.43 seconds. Elapsed time: 2.08 seconds; current allocated memory: 202.164 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:52:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:63:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:62:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:61:5)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:58:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_mix_columns(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:57:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:55:9)
+INFO: [HLS 214-131] Inlining function 'crypto::Pynqrypt::aes_shift_rows(unsigned char*)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:56:9)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_231_1' (hw-impl/src/pynqrypt.cpp:231:20) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_1' (hw-impl/src/pynqrypt.cpp:70:19) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_106_1' (hw-impl/src/pynqrypt.cpp:106:23) in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 4 (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_rotate_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_sub_word(unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)' into 'crypto::Pynqrypt::aes_generate_round_keys()' (hw-impl/src/pynqrypt.cpp:197:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::aes_xtime(unsigned char)' into 'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)' (hw-impl/src/pynqrypt.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' (hw-impl/src/pynqrypt.cpp:19:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)' (hw-impl/src/pynqrypt_hls.cpp:6:0)
+INFO: [HLS 214-178] Inlining function 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)' (hw-impl/src/pynqrypt_hls.cpp:6:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:208:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:257:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:258:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:259:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:266:18)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:214:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:27)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:39)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:283:25)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:216:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:217:29)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:219:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:220:23)
+WARNING: [HLS 214-167] The program may have out of bound array access (hw-impl/src/pynqrypt.cpp:222:10)
+INFO: [HLS 214-115] Multiple burst reads of length 16384 and bit width 8 in loop 'loop_ctr_encrypt'(hw-impl/src/pynqrypt.cpp:23:23) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (hw-impl/src/pynqrypt.cpp:23:23)
+INFO: [HLS 214-115] Multiple burst writes of length 16384 and bit width 8 in loop 'loop_ctr_encrypt'(hw-impl/src/pynqrypt.cpp:23:23) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (hw-impl/src/pynqrypt.cpp:23:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.74 seconds. CPU system time: 0.26 seconds. Elapsed time: 3.01 seconds; current allocated memory: 204.000 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 204.000 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.28 seconds; current allocated memory: 207.363 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.31 seconds. CPU system time: 0 seconds. Elapsed time: 1.31 seconds; current allocated memory: 207.879 MB.
+INFO: [XFORM 203-510] Pipelining loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'crypto::Pynqrypt::aes_encrypt_block' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'pynqrypt_encrypt' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'pynqrypt_encrypt' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0) in function 'crypto::Pynqrypt::aes_encrypt_block' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' in function 'crypto::Pynqrypt::aes_encrypt_block' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'temp' (hw-impl/src/pynqrypt.cpp:79) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'crypto::Pynqrypt::aes_encrypt_block' (hw-impl/src/pynqrypt.cpp:0:1)...93 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.44 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.45 seconds; current allocated memory: 231.461 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'block' 
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' 
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:37:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:38:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:39:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block_nonce' (hw-impl/src/pynqrypt.cpp:40:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'block' (hw-impl/src/pynqrypt.cpp:46:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:233:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'state' (hw-impl/src/pynqrypt.cpp:72:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 252.258 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pynqrypt_encrypt' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_aes_encrypt_block'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'xor' operation ('tmp2', hw-impl/src/pynqrypt.cpp:109) and 'load' operation ('tmp3', hw-impl/src/pynqrypt.cpp:72) on array 'crypto_aes_sbox'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('state_addr_3_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_44', hw-impl/src/pynqrypt.cpp:233 on array 'state' and 'load' operation ('state_load_11', hw-impl/src/pynqrypt.cpp:72) on array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'load' operation ('state_load_1', hw-impl/src/pynqrypt.cpp:72) on array 'state' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_5_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_42', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_2_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_45', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 13). Please consider using a memory core with more ports or partitioning the array 'state'.
+WARNING: [HLS 200-885] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to schedule 'store' operation ('state_addr_write_ln233', hw-impl/src/pynqrypt.cpp:233) of variable 'xor_ln233_47', hw-impl/src/pynqrypt.cpp:233 on array 'state' due to limited memory ports (II = 14). Please consider using a memory core with more ports or partitioning the array 'state'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 15, Depth = 15, loop 'loop_aes_encrypt_block'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.5 seconds; current allocated memory: 256.379 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 256.379 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 256.379 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 256.379 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

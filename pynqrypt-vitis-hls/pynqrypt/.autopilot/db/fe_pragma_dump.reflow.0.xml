@@ -1,16 +1,13 @@
 <pragmas>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="10" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="m_axi" port="plaintext" bundle="gmem" offset="slave" name="" depth="16384" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="11" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="m_axi" port="ciphertext" bundle="gmem" offset="slave" name="" depth="16384" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="13" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="key" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="14" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="nonce" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="15" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="plaintext_length" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="16" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="plaintext" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="17" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="ciphertext" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="18" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="hw-impl/src/pynqrypt.cpp" line="229" pragmaType="inline" parentfunction="aes_add_round_key" off="0" region="0" recursive="0"/>
-<pragma file="hw-impl/src/pynqrypt.cpp" line="232" pragmaType="unroll" parentfunction="aes_add_round_key" factor="-1" skip_exit_check="0"/>
+<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="7" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="m_axi" port="plaintext" bundle="gmem" offset="slave" name="" depth="16384" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="8" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="m_axi" port="ciphertext" bundle="gmem" offset="slave" name="" depth="16384" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="10" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="plaintext" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="11" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="ciphertext" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="hw-impl/src/pynqrypt_hls.cpp" line="12" pragmaType="interface" parentfunction="pynqrypt_encrypt" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
 <pragma file="hw-impl/src/pynqrypt.cpp" line="0" pragmaType="inline" parentfunction="aes_sub_bytes" off="0" region="0" recursive="0"/>
 <pragma file="hw-impl/src/pynqrypt.cpp" line="71" pragmaType="unroll" parentfunction="aes_sub_bytes" factor="-1" skip_exit_check="0"/>
+<pragma file="hw-impl/src/pynqrypt.cpp" line="229" pragmaType="inline" parentfunction="aes_add_round_key" off="0" region="0" recursive="0"/>
+<pragma file="hw-impl/src/pynqrypt.cpp" line="232" pragmaType="unroll" parentfunction="aes_add_round_key" factor="-1" skip_exit_check="0"/>
 <pragma file="hw-impl/src/pynqrypt.cpp" line="0" pragmaType="inline" parentfunction="aes_shift_rows" off="0" region="0" recursive="0"/>
 <pragma file="hw-impl/src/pynqrypt.cpp" line="0" pragmaType="inline" parentfunction="aes_mix_columns" off="0" region="0" recursive="0"/>
 <pragma file="hw-impl/src/pynqrypt.cpp" line="107" pragmaType="unroll" parentfunction="aes_mix_columns" factor="-1" skip_exit_check="0"/>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec  6 12:02:54 2022" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec  7 00:13:11 2022" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020i" NAME="bd_0" PACKAGE="clg400" SPEEDGRADE="-1L"/>
 
@@ -219,7 +219,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem_RREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="6" NAME="s_axi_control_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_AWADDR">
+    <PORT DIR="I" LEFT="5" NAME="s_axi_control_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_AWADDR">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="s_axi_control_AWADDR"/>
       </CONNECTIONS>
@@ -269,7 +269,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="s_axi_control_BREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="6" NAME="s_axi_control_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_ARADDR">
+    <PORT DIR="I" LEFT="5" NAME="s_axi_control_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_ARADDR">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="s_axi_control_ARADDR"/>
       </CONNECTIONS>
@@ -443,10 +443,10 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2112801242" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pynqrypt_encrypt" VLNV="xilinx.com:hls:pynqrypt_encrypt:1.0">
+    <MODULE COREREVISION="2112801972" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pynqrypt_encrypt" VLNV="xilinx.com:hls:pynqrypt_encrypt:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="C_S_AXI_CONTROL_ADDR_WIDTH" VALUE="7"/>
+        <PARAMETER NAME="C_S_AXI_CONTROL_ADDR_WIDTH" VALUE="6"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ADDR_WIDTH" VALUE="64"/>
@@ -465,14 +465,14 @@
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="undef"/>
+        <PARAMETER NAME="latency" VALUE="342028"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_BASEADDR" VALUE="0x00000000"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_HIGHADDR" VALUE="0x0000FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="6" NAME="s_axi_control_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_AWADDR">
+        <PORT DIR="I" LEFT="5" NAME="s_axi_control_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_control_awaddr"/>
           </CONNECTIONS>
@@ -522,7 +522,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_control_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="6" NAME="s_axi_control_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_ARADDR">
+        <PORT DIR="I" LEFT="5" NAME="s_axi_control_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_control_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_control_araddr"/>
           </CONNECTIONS>
@@ -775,7 +775,7 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="External_Interface_s_axi_control" DATAWIDTH="32" NAME="s_axi_control" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="7"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="6"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>

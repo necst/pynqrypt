@@ -237,8 +237,8 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void pynqrypt_encrypt(Byte<1>*, Byte<1>*, Byte<1>*, long long, int, int);
-extern "C" void apatb_pynqrypt_encrypt_hw(volatile void * __xlx_apatb_param_key, volatile void * __xlx_apatb_param_nonce, long long __xlx_apatb_param_plaintext_length, volatile void * __xlx_apatb_param_plaintext, volatile void * __xlx_apatb_param_ciphertext) {
+extern "C" void pynqrypt_encrypt(Byte<1>*, int, int);
+extern "C" void apatb_pynqrypt_encrypt_hw(volatile void * __xlx_apatb_param_plaintext, volatile void * __xlx_apatb_param_ciphertext) {
 using hls::sim::createStream;
   // Collect __xlx_plaintext_ciphertext__tmp_vec
 std::vector<Byte<1>> __xlx_plaintext_ciphertext__tmp_vec;
@@ -254,24 +254,8 @@ __xlx_plaintext_ciphertext__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_ciphe
   int __xlx_size_param_ciphertext = 16384;
   int __xlx_offset_param_ciphertext = 16384;
   int __xlx_offset_byte_param_ciphertext = 16384*1;
-  // Collect __xlx_key__tmp_vec
-std::vector<Byte<1>> __xlx_key__tmp_vec;
-for (size_t i = 0; i < 16; ++i){
-__xlx_key__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_key)[i]);
-}
-  int __xlx_size_param_key = 16;
-  int __xlx_offset_param_key = 0;
-  int __xlx_offset_byte_param_key = 0*1;
-  // Collect __xlx_nonce__tmp_vec
-std::vector<Byte<1>> __xlx_nonce__tmp_vec;
-for (size_t i = 0; i < 12; ++i){
-__xlx_nonce__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_nonce)[i]);
-}
-  int __xlx_size_param_nonce = 12;
-  int __xlx_offset_param_nonce = 0;
-  int __xlx_offset_byte_param_nonce = 0*1;
   // DUT call
-  pynqrypt_encrypt(__xlx_plaintext_ciphertext__tmp_vec.data(), __xlx_key__tmp_vec.data(), __xlx_nonce__tmp_vec.data(), __xlx_apatb_param_plaintext_length, __xlx_offset_byte_param_plaintext, __xlx_offset_byte_param_ciphertext);
+  pynqrypt_encrypt(__xlx_plaintext_ciphertext__tmp_vec.data(), __xlx_offset_byte_param_plaintext, __xlx_offset_byte_param_ciphertext);
 // print __xlx_apatb_param_plaintext
 for (size_t i = 0; i < __xlx_size_param_plaintext; ++i) {
 ((Byte<1>*)__xlx_apatb_param_plaintext)[i] = __xlx_plaintext_ciphertext__tmp_vec[__xlx_offset_param_plaintext+i];
@@ -279,13 +263,5 @@ for (size_t i = 0; i < __xlx_size_param_plaintext; ++i) {
 // print __xlx_apatb_param_ciphertext
 for (size_t i = 0; i < __xlx_size_param_ciphertext; ++i) {
 ((Byte<1>*)__xlx_apatb_param_ciphertext)[i] = __xlx_plaintext_ciphertext__tmp_vec[__xlx_offset_param_ciphertext+i];
-}
-// print __xlx_apatb_param_key
-for (size_t i = 0; i < __xlx_size_param_key; ++i) {
-((Byte<1>*)__xlx_apatb_param_key)[i] = __xlx_key__tmp_vec[__xlx_offset_param_key+i];
-}
-// print __xlx_apatb_param_nonce
-for (size_t i = 0; i < __xlx_size_param_nonce; ++i) {
-((Byte<1>*)__xlx_apatb_param_nonce)[i] = __xlx_nonce__tmp_vec[__xlx_offset_param_nonce+i];
 }
 }

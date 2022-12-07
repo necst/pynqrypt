@@ -2,7 +2,7 @@
 set TopModule "pynqrypt_encrypt"
 set ClockPeriod 10
 set ClockList ap_clk
-set HasVivadoClockPeriod 0
+set HasVivadoClockPeriod 1
 set CombLogicFlag 0
 set PipelineFlag 0
 set DataflowTaskPipelineFlag 1

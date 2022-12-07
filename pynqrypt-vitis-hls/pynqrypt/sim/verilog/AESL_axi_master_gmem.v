@@ -69,7 +69,7 @@ module AESL_axi_master_gmem (
  parameter gmem_RUSER_BITWIDTH = 32'd 1;
  parameter gmem_BUSER_BITWIDTH = 32'd 1;
  parameter   FIFO_DEPTH            =   1 + 1;
- parameter   mem_page_num            =   32'd 4;
+ parameter   mem_page_num            =   32'd 3;
  parameter   FIFO_DEPTH_ADDR_WIDTH   =    32'd 32;
 parameter gmem_C_DATA_BITWIDTH = 32'd 8;
 parameter gmem_mem_depth = 32'd 32768;
@@ -201,7 +201,6 @@ reg [gmem_ID_BITWIDTH - 1 : 0] RID_tmp = 0;
 reg [gmem_DATA_BITWIDTH - 1 : 0] gmem_mem_0 [0: gmem_mem_depth - 1] = '{default : 'h0}; 
 reg [gmem_DATA_BITWIDTH - 1 : 0] gmem_mem_1 [0: gmem_mem_depth - 1] = '{default : 'h0}; 
 reg [gmem_DATA_BITWIDTH - 1 : 0] gmem_mem_2 [0: gmem_mem_depth - 1] = '{default : 'h0}; 
-reg [gmem_DATA_BITWIDTH - 1 : 0] gmem_mem_3 [0: gmem_mem_depth - 1] = '{default : 'h0}; 
 reg [31 : 0] clk_counter ;
 reg [31 : 0] current_AW_req_transaction = 0 ;
 reg [31 : 0] current_AR_req_transaction = -1 ;
@@ -528,7 +527,6 @@ initial begin : AW_request_proc
                                         0 : WDATA_tmp[j] = gmem_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
                                         1 : WDATA_tmp[j] = gmem_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
                                         2 : WDATA_tmp[j] = gmem_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
-                                        3 : WDATA_tmp[j] = gmem_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
                                         default: $display("The page_num of AXI write is not valid!");
                                     endcase
                                 end
@@ -542,7 +540,6 @@ initial begin : AW_request_proc
                             0 : gmem_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
                             1 : gmem_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
                             2 : gmem_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
-                            3 : gmem_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
                             default: $display("The page_num of AXI write is not valid!");
                         endcase
                         if (counter === output_length && FIFO_WDATA_size_empty != 1 ) begin
@@ -590,7 +587,6 @@ initial begin : AW_request_proc
                                         0 : WDATA_tmp[j] = gmem_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
                                         1 : WDATA_tmp[j] = gmem_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
                                         2 : WDATA_tmp[j] = gmem_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
-                                        3 : WDATA_tmp[j] = gmem_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
                                         default: $display("The page_num of AXI write is not valid!");
                                     endcase
                                 end
@@ -604,7 +600,6 @@ initial begin : AW_request_proc
                             0 : gmem_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
                             1 : gmem_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
                             2 : gmem_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
-                            3 : gmem_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
                             default: $display("The page_num of AXI write is not valid!");
                         endcase
                         if (FIFO_WDATA_size_empty != 1 ) begin
@@ -706,7 +701,6 @@ initial begin : AR_request_proc
                             0 : RDATA_tmp <= gmem_mem_0[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
                             1 : RDATA_tmp <= gmem_mem_1[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
                             2 : RDATA_tmp <= gmem_mem_2[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
-                            3 : RDATA_tmp <= gmem_mem_3[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
                             default: $display("The page_num of AXI read is not valid!");
                         endcase
                     RVALID_tmp <= 1;
@@ -739,7 +733,6 @@ initial begin : AR_request_proc
                             0 : RDATA_tmp <= gmem_mem_0[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
                             1 : RDATA_tmp <= gmem_mem_1[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
                             2 : RDATA_tmp <= gmem_mem_2[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
-                            3 : RDATA_tmp <= gmem_mem_3[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
                             default: $display("The page_num of AXI read is not valid!");
                         endcase
                     RVALID_tmp <= 1;
@@ -920,7 +913,6 @@ initial begin : read_file_process
                       0 : gmem_mem_0[i/factor] = mem_tmp;
                       1 : gmem_mem_1[i/factor] = mem_tmp;
                       2 : gmem_mem_2[i/factor] = mem_tmp;
-                      3 : gmem_mem_3[i/factor] = mem_tmp;
                       default: $display("The page_num of read file is not valid!");
                   endcase
                   mem_tmp [gmem_DATA_BITWIDTH - 1 : 0] = 0;
@@ -936,7 +928,6 @@ initial begin : read_file_process
                       0 : gmem_mem_0[i/factor] = mem_tmp;
                       1 : gmem_mem_1[i/factor] = mem_tmp;
                       2 : gmem_mem_2[i/factor] = mem_tmp;
-                      3 : gmem_mem_3[i/factor] = mem_tmp;
                       default: $display("The page_num of read file is not valid!");
                   endcase
                   mem_tmp [gmem_DATA_BITWIDTH - 1: 0] = 0;
@@ -948,7 +939,6 @@ initial begin : read_file_process
                   0 : gmem_mem_0[i] = mem_tmp;
                   1 : gmem_mem_1[i] = mem_tmp;
                   2 : gmem_mem_2[i] = mem_tmp;
-                  3 : gmem_mem_3[i] = mem_tmp;
                   default: $display("The page_num of read file is not valid!");
               endcase
               mem_tmp [gmem_DATA_BITWIDTH - 1: 0] = 0;
@@ -960,7 +950,6 @@ initial begin : read_file_process
                   0 : gmem_mem_0[i/factor] = mem_tmp;
                   1 : gmem_mem_1[i/factor] = mem_tmp;
                   2 : gmem_mem_2[i/factor] = mem_tmp;
-                  3 : gmem_mem_3[i/factor] = mem_tmp;
                   default: $display("The page_num of read file is not valid!");
               endcase
           end
@@ -971,7 +960,6 @@ initial begin : read_file_process
                   0 : gmem_mem_0[i/factor] = mem_tmp;
                   1 : gmem_mem_1[i/factor] = mem_tmp;
                   2 : gmem_mem_2[i/factor] = mem_tmp;
-                  3 : gmem_mem_3[i/factor] = mem_tmp;
                   default: $display("The page_num of read file is not valid!");
               endcase
           end
@@ -1020,7 +1008,6 @@ initial begin : write_file_proc
                   0 : tmp_data = gmem_mem_0[i/factor];
                   1 : tmp_data = gmem_mem_1[i/factor];
                   2 : tmp_data = gmem_mem_2[i/factor];
-                  3 : tmp_data = gmem_mem_3[i/factor];
                   default: $display("The page_num of write file is not valid!");
               endcase
               if (i%factor == 0) begin
@@ -1043,7 +1030,6 @@ initial begin : write_file_proc
                   0 : tmp_data = gmem_mem_0[i/factor];
                   1 : tmp_data = gmem_mem_1[i/factor];
                   2 : tmp_data = gmem_mem_2[i/factor];
-                  3 : tmp_data = gmem_mem_3[i/factor];
                   default: $display("The page_num of write file is not valid!");
               endcase
               if (i%factor == 0) begin
@@ -1060,7 +1046,6 @@ initial begin : write_file_proc
                   0 : mem_tmp = gmem_mem_0[i];
                   1 : mem_tmp = gmem_mem_1[i];
                   2 : mem_tmp = gmem_mem_2[i];
-                  3 : mem_tmp = gmem_mem_3[i];
                   default: $display("The page_num of write file is not valid!");
               endcase
           bin_data = mem_tmp;
@@ -1072,7 +1057,6 @@ initial begin : write_file_proc
               0 : tmp_data = gmem_mem_0[gmem_mem_depth/factor];
               1 : tmp_data = gmem_mem_1[gmem_mem_depth/factor];
               2 : tmp_data = gmem_mem_2[gmem_mem_depth/factor];
-              3 : tmp_data = gmem_mem_3[gmem_mem_depth/factor];
               default: $display("The page_num of write file is not valid!");
           endcase
           if ((gmem_mem_depth - 1) % factor == 2) begin
@@ -1100,7 +1084,6 @@ initial begin : write_file_proc
                   0 : tmp_data = gmem_mem_0[gmem_mem_depth/factor][15:0];
                   1 : tmp_data = gmem_mem_1[gmem_mem_depth/factor][15:0];
                   2 : tmp_data = gmem_mem_2[gmem_mem_depth/factor][15:0];
-                  3 : tmp_data = gmem_mem_3[gmem_mem_depth/factor][15:0];
                   default: $display("The page_num of write file is not valid!");
               endcase
               bin_data = tmp_data;

@@ -1,32 +1,23 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/csynth.tcl:22:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/csynth.tcl:23:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pynqrypt_encrypt" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/directives.tcl:6:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pynqrypt_encrypt" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:10:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=plaintext offset=slave bundle=gmem depth=16384" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:11:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:8:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=ciphertext offset=slave bundle=gmem depth=16384" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:13:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=key bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:14:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=nonce bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:15:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=plaintext_length bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:16:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:10:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=plaintext bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:17:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:11:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=ciphertext bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:18:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt_hls.cpp:12:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:68:9" msg_body="HLS pragma dump">
@@ -104,11 +95,11 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:19:0" msg_body="Inlining function 'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)' into 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'">
         <args Callee="crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)" Caller="crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt_hls.cpp:9:0" msg_body="Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'">
-        <args Callee="crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)" Caller="pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt_hls.cpp:6:0" msg_body="Inlining function 'crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)'">
+        <args Callee="crypto::Pynqrypt::Pynqrypt(unsigned char*, unsigned char*)" Caller="pynqrypt_encrypt(unsigned char*, unsigned char*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt_hls.cpp:9:0" msg_body="Inlining function 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'">
-        <args Callee="crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)" Caller="pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt_hls.cpp:6:0" msg_body="Inlining function 'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)' into 'pynqrypt_encrypt(unsigned char*, unsigned char*)'">
+        <args Callee="crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)" Caller="pynqrypt_encrypt(unsigned char*, unsigned char*)"/>
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:208:16" msg_body="The program may have out of bound array access"/>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:257:14" msg_body="The program may have out of bound array access"/>

@@ -25,12 +25,6 @@ module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block (
         state_we1,
         state_d1,
         state_q1,
-        pynqrypt_round_keys_address0,
-        pynqrypt_round_keys_ce0,
-        pynqrypt_round_keys_q0,
-        pynqrypt_round_keys_address1,
-        pynqrypt_round_keys_ce1,
-        pynqrypt_round_keys_q1,
         p_out,
         p_out_ap_vld,
         conv6_i36_1_phi_out,
@@ -62,7 +56,13 @@ module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block (
         conv6_i36_14_phi_out,
         conv6_i36_14_phi_out_ap_vld,
         conv6_i36_15_phi_out,
-        conv6_i36_15_phi_out_ap_vld
+        conv6_i36_15_phi_out_ap_vld,
+        crypto_aes_sbox_address0,
+        crypto_aes_sbox_ce0,
+        crypto_aes_sbox_q0,
+        crypto_aes_sbox_address1,
+        crypto_aes_sbox_ce1,
+        crypto_aes_sbox_q1
 );
 
 parameter    ap_ST_fsm_state1 = 15'd1;
@@ -98,12 +98,6 @@ output   state_ce1;
 output   state_we1;
 output  [7:0] state_d1;
 input  [7:0] state_q1;
-output  [7:0] pynqrypt_round_keys_address0;
-output   pynqrypt_round_keys_ce0;
-input  [7:0] pynqrypt_round_keys_q0;
-output  [7:0] pynqrypt_round_keys_address1;
-output   pynqrypt_round_keys_ce1;
-input  [7:0] pynqrypt_round_keys_q1;
 output  [7:0] p_out;
 output   p_out_ap_vld;
 output  [7:0] conv6_i36_1_phi_out;
@@ -136,6 +130,12 @@ output  [7:0] conv6_i36_14_phi_out;
 output   conv6_i36_14_phi_out_ap_vld;
 output  [7:0] conv6_i36_15_phi_out;
 output   conv6_i36_15_phi_out_ap_vld;
+output  [7:0] crypto_aes_sbox_address0;
+output   crypto_aes_sbox_ce0;
+input  [7:0] crypto_aes_sbox_q0;
+output  [7:0] crypto_aes_sbox_address1;
+output   crypto_aes_sbox_ce1;
+input  [7:0] crypto_aes_sbox_q1;
 
 reg ap_idle;
 reg[3:0] state_address0;
@@ -146,10 +146,6 @@ reg[3:0] state_address1;
 reg state_ce1;
 reg state_we1;
 reg[7:0] state_d1;
-reg[7:0] pynqrypt_round_keys_address0;
-reg pynqrypt_round_keys_ce0;
-reg[7:0] pynqrypt_round_keys_address1;
-reg pynqrypt_round_keys_ce1;
 reg p_out_ap_vld;
 reg conv6_i36_1_phi_out_ap_vld;
 reg conv6_i36_2_phi_out_ap_vld;
@@ -166,6 +162,10 @@ reg conv6_i36_12_phi_out_ap_vld;
 reg conv6_i36_13_phi_out_ap_vld;
 reg conv6_i36_14_phi_out_ap_vld;
 reg conv6_i36_15_phi_out_ap_vld;
+reg[7:0] crypto_aes_sbox_address0;
+reg crypto_aes_sbox_ce0;
+reg[7:0] crypto_aes_sbox_address1;
+reg crypto_aes_sbox_ce1;
 
 (* fsm_encoding = "none" *) reg   [14:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
@@ -176,12 +176,12 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_CS_fsm_state15;
 wire    ap_block_state15_pp0_stage14_iter0;
-reg   [7:0] crypto_aes_sbox_address0;
-reg    crypto_aes_sbox_ce0;
-wire   [7:0] crypto_aes_sbox_q0;
-reg   [7:0] crypto_aes_sbox_address1;
-reg    crypto_aes_sbox_ce1;
-wire   [7:0] crypto_aes_sbox_q1;
+reg   [7:0] pynqrypt_round_keys_address0;
+reg    pynqrypt_round_keys_ce0;
+wire   [7:0] pynqrypt_round_keys_q0;
+reg   [7:0] pynqrypt_round_keys_address1;
+reg    pynqrypt_round_keys_ce1;
+wire   [7:0] pynqrypt_round_keys_q1;
 reg   [7:0] reg_729;
 wire    ap_CS_fsm_state2;
 wire    ap_block_state2_pp0_stage1_iter0;
@@ -202,34 +202,34 @@ wire   [7:0] shl_ln1_fu_775_p3;
 reg   [7:0] shl_ln1_reg_2181;
 reg   [7:0] tmp3_reg_2209;
 reg   [7:0] pynqrypt_round_keys_load_reg_2226;
-reg   [7:0] pynqrypt_round_keys_load_16_reg_2251;
-reg   [7:0] pynqrypt_round_keys_load_17_reg_2256;
-reg   [7:0] crypto_aes_sbox_load_14_reg_2281;
-reg   [7:0] pynqrypt_round_keys_load_18_reg_2289;
-reg   [7:0] pynqrypt_round_keys_load_19_reg_2294;
-reg   [7:0] crypto_aes_sbox_load_5_reg_2309;
-reg   [7:0] crypto_aes_sbox_load_6_reg_2316;
+reg   [7:0] pynqrypt_round_keys_load_1_reg_2251;
+reg   [7:0] pynqrypt_round_keys_load_2_reg_2256;
+reg   [7:0] crypto_aes_sbox_load_11_reg_2281;
+reg   [7:0] pynqrypt_round_keys_load_3_reg_2289;
+reg   [7:0] pynqrypt_round_keys_load_4_reg_2294;
+reg   [7:0] crypto_aes_sbox_load_2_reg_2309;
+reg   [7:0] crypto_aes_sbox_load_3_reg_2316;
 wire   [7:0] tmp2_12_fu_910_p2;
 reg   [7:0] tmp2_12_reg_2334;
 wire   [7:0] xor_ln109_7_fu_916_p2;
 reg   [7:0] xor_ln109_7_reg_2341;
-reg   [7:0] pynqrypt_round_keys_load_21_reg_2346;
+reg   [7:0] pynqrypt_round_keys_load_6_reg_2346;
 reg   [7:0] tmp3_1_reg_2361;
 wire    ap_CS_fsm_state6;
 wire    ap_block_state6_pp0_stage5_iter0;
-reg   [7:0] crypto_aes_sbox_load_8_reg_2368;
-reg   [7:0] pynqrypt_round_keys_load_22_reg_2385;
-reg   [7:0] pynqrypt_round_keys_load_23_reg_2390;
-reg   [7:0] crypto_aes_sbox_load_10_reg_2405;
+reg   [7:0] crypto_aes_sbox_load_5_reg_2368;
+reg   [7:0] pynqrypt_round_keys_load_7_reg_2385;
+reg   [7:0] pynqrypt_round_keys_load_8_reg_2390;
+reg   [7:0] crypto_aes_sbox_load_7_reg_2405;
 wire    ap_CS_fsm_state7;
 wire    ap_block_state7_pp0_stage6_iter0;
-reg   [7:0] crypto_aes_sbox_load_18_reg_2423;
-reg   [7:0] pynqrypt_round_keys_load_24_reg_2431;
-reg   [7:0] pynqrypt_round_keys_load_25_reg_2436;
-reg   [7:0] crypto_aes_sbox_load_12_reg_2451;
+reg   [7:0] crypto_aes_sbox_load_15_reg_2423;
+reg   [7:0] pynqrypt_round_keys_load_9_reg_2431;
+reg   [7:0] pynqrypt_round_keys_load_10_reg_2436;
+reg   [7:0] crypto_aes_sbox_load_9_reg_2451;
 wire   [7:0] tmp1_3_fu_1063_p2;
 reg   [7:0] tmp1_3_reg_2468;
-reg   [7:0] pynqrypt_round_keys_load_26_reg_2473;
+reg   [7:0] pynqrypt_round_keys_load_11_reg_2473;
 wire   [7:0] xor_ln233_15_fu_1685_p2;
 reg   [7:0] xor_ln233_15_reg_2493;
 wire    ap_CS_fsm_state10;
@@ -326,7 +326,7 @@ wire   [7:0] or_ln233_3_fu_860_p2;
 wire   [7:0] or_ln233_4_fu_880_p2;
 wire   [7:0] or_ln233_5_fu_890_p2;
 wire   [7:0] tmp2_15_fu_922_p2;
-wire   [0:0] tmp_15_fu_933_p3;
+wire   [0:0] tmp_16_fu_933_p3;
 wire   [7:0] or_ln233_6_fu_949_p2;
 wire   [7:0] or_ln233_7_fu_959_p2;
 wire   [7:0] select_ln227_fu_941_p3;
@@ -337,7 +337,7 @@ wire   [7:0] or_ln233_8_fu_1003_p2;
 wire   [7:0] or_ln233_9_fu_1013_p2;
 wire   [7:0] or_ln233_10_fu_1033_p2;
 wire   [7:0] or_ln233_11_fu_1043_p2;
-wire   [0:0] tmp_12_fu_1072_p3;
+wire   [0:0] tmp_13_fu_1072_p3;
 wire   [7:0] shl_ln239_12_fu_1067_p2;
 wire   [7:0] xor_ln233_51_fu_1093_p2;
 wire   [7:0] select_ln114_3_fu_1079_p3;
@@ -346,9 +346,9 @@ wire   [7:0] xor_ln233_50_fu_1087_p2;
 wire   [7:0] or_ln233_12_fu_1112_p2;
 wire   [7:0] or_ln233_13_fu_1122_p2;
 wire   [7:0] tmp2_13_fu_1142_p2;
-wire   [0:0] tmp_13_fu_1154_p3;
+wire   [0:0] tmp_14_fu_1154_p3;
 wire   [7:0] tmp2_14_fu_1170_p2;
-wire   [0:0] tmp_14_fu_1181_p3;
+wire   [0:0] tmp_15_fu_1181_p3;
 wire   [7:0] shl_ln239_13_fu_1148_p2;
 wire   [7:0] xor_ln233_54_fu_1203_p2;
 wire   [7:0] select_ln118_3_fu_1162_p3;
@@ -363,29 +363,29 @@ wire   [7:0] tmp2_fu_1254_p2;
 wire   [7:0] xor_ln109_1_fu_1258_p2;
 wire   [0:0] tmp_fu_1275_p3;
 wire   [7:0] tmp2_1_fu_1291_p2;
-wire   [0:0] tmp_1_fu_1302_p3;
+wire   [0:0] tmp_2_fu_1302_p3;
 wire   [7:0] tmp2_2_fu_1318_p2;
-wire   [0:0] tmp_2_fu_1329_p3;
+wire   [0:0] tmp_3_fu_1329_p3;
 wire   [7:0] tmp2_3_fu_1345_p2;
-wire   [0:0] tmp_3_fu_1355_p3;
+wire   [0:0] tmp_4_fu_1355_p3;
 wire   [7:0] tmp2_4_fu_1371_p2;
 wire   [7:0] xor_ln109_3_fu_1375_p2;
-wire   [0:0] tmp_4_fu_1392_p3;
+wire   [0:0] tmp_5_fu_1392_p3;
 wire   [7:0] tmp2_5_fu_1408_p2;
-wire   [0:0] tmp_5_fu_1419_p3;
+wire   [0:0] tmp_6_fu_1419_p3;
 wire   [7:0] tmp2_6_fu_1435_p2;
-wire   [0:0] tmp_6_fu_1446_p3;
+wire   [0:0] tmp_7_fu_1446_p3;
 wire   [7:0] tmp2_7_fu_1462_p2;
-wire   [0:0] tmp_7_fu_1472_p3;
+wire   [0:0] tmp_8_fu_1472_p3;
 wire   [7:0] tmp2_8_fu_1488_p2;
 wire   [7:0] xor_ln109_5_fu_1494_p2;
-wire   [0:0] tmp_8_fu_1510_p3;
+wire   [0:0] tmp_9_fu_1510_p3;
 wire   [7:0] tmp2_9_fu_1526_p2;
-wire   [0:0] tmp_9_fu_1537_p3;
+wire   [0:0] tmp_10_fu_1537_p3;
 wire   [7:0] tmp2_10_fu_1553_p2;
-wire   [0:0] tmp_10_fu_1563_p3;
+wire   [0:0] tmp_11_fu_1563_p3;
 wire   [7:0] tmp2_11_fu_1579_p2;
-wire   [0:0] tmp_11_fu_1590_p3;
+wire   [0:0] tmp_12_fu_1590_p3;
 wire   [7:0] select_ln114_fu_1283_p3;
 wire   [7:0] tmp1_fu_1264_p2;
 wire   [7:0] xor_ln233_2_fu_1610_p2;
@@ -474,19 +474,19 @@ initial begin
 #0 ap_done_reg = 1'b0;
 end
 
-pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R #(
+pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb #(
     .DataWidth( 8 ),
-    .AddressRange( 256 ),
+    .AddressRange( 176 ),
     .AddressWidth( 8 ))
-crypto_aes_sbox_U(
+pynqrypt_round_keys_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(crypto_aes_sbox_address0),
-    .ce0(crypto_aes_sbox_ce0),
-    .q0(crypto_aes_sbox_q0),
-    .address1(crypto_aes_sbox_address1),
-    .ce1(crypto_aes_sbox_ce1),
-    .q1(crypto_aes_sbox_q1)
+    .address0(pynqrypt_round_keys_address0),
+    .ce0(pynqrypt_round_keys_ce0),
+    .q0(pynqrypt_round_keys_q0),
+    .address1(pynqrypt_round_keys_address1),
+    .ce1(pynqrypt_round_keys_ce1),
+    .q1(pynqrypt_round_keys_q1)
 );
 
 pynqrypt_encrypt_flow_control_loop_pipe_sequential_init flow_control_loop_pipe_sequential_init_U(
@@ -594,8 +594,8 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state8)) begin
         conv6_i36_12_phi_fu_150 <= xor_ln233_44_fu_1105_p2;
-        crypto_aes_sbox_load_12_reg_2451 <= crypto_aes_sbox_q0;
-        pynqrypt_round_keys_load_26_reg_2473 <= pynqrypt_round_keys_q1;
+        crypto_aes_sbox_load_9_reg_2451 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_11_reg_2473 <= pynqrypt_round_keys_q1;
         tmp1_3_reg_2468 <= tmp1_3_fu_1063_p2;
     end
 end
@@ -610,44 +610,44 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
         conv6_i36_15_phi_fu_138 <= xor_ln233_47_fu_981_p2;
-        crypto_aes_sbox_load_5_reg_2309 <= crypto_aes_sbox_q1;
-        crypto_aes_sbox_load_6_reg_2316 <= crypto_aes_sbox_q0;
-        pynqrypt_round_keys_load_21_reg_2346 <= pynqrypt_round_keys_q0;
+        crypto_aes_sbox_load_2_reg_2309 <= crypto_aes_sbox_q1;
+        crypto_aes_sbox_load_3_reg_2316 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_6_reg_2346 <= pynqrypt_round_keys_q0;
         tmp2_12_reg_2334 <= tmp2_12_fu_910_p2;
         xor_ln109_7_reg_2341 <= xor_ln109_7_fu_916_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
-        crypto_aes_sbox_load_10_reg_2405 <= crypto_aes_sbox_q1;
-        crypto_aes_sbox_load_18_reg_2423 <= crypto_aes_sbox_q0;
-        pynqrypt_round_keys_load_24_reg_2431 <= pynqrypt_round_keys_q1;
-        pynqrypt_round_keys_load_25_reg_2436 <= pynqrypt_round_keys_q0;
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        crypto_aes_sbox_load_11_reg_2281 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_3_reg_2289 <= pynqrypt_round_keys_q1;
+        pynqrypt_round_keys_load_4_reg_2294 <= pynqrypt_round_keys_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        crypto_aes_sbox_load_14_reg_2281 <= crypto_aes_sbox_q0;
-        pynqrypt_round_keys_load_18_reg_2289 <= pynqrypt_round_keys_q1;
-        pynqrypt_round_keys_load_19_reg_2294 <= pynqrypt_round_keys_q0;
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        crypto_aes_sbox_load_15_reg_2423 <= crypto_aes_sbox_q0;
+        crypto_aes_sbox_load_7_reg_2405 <= crypto_aes_sbox_q1;
+        pynqrypt_round_keys_load_10_reg_2436 <= pynqrypt_round_keys_q0;
+        pynqrypt_round_keys_load_9_reg_2431 <= pynqrypt_round_keys_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
-        crypto_aes_sbox_load_8_reg_2368 <= crypto_aes_sbox_q0;
-        pynqrypt_round_keys_load_22_reg_2385 <= pynqrypt_round_keys_q1;
-        pynqrypt_round_keys_load_23_reg_2390 <= pynqrypt_round_keys_q0;
+        crypto_aes_sbox_load_5_reg_2368 <= crypto_aes_sbox_q0;
+        pynqrypt_round_keys_load_7_reg_2385 <= pynqrypt_round_keys_q1;
+        pynqrypt_round_keys_load_8_reg_2390 <= pynqrypt_round_keys_q0;
         tmp3_1_reg_2361 <= crypto_aes_sbox_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        pynqrypt_round_keys_load_16_reg_2251 <= pynqrypt_round_keys_q1;
-        pynqrypt_round_keys_load_17_reg_2256 <= pynqrypt_round_keys_q0;
+        pynqrypt_round_keys_load_1_reg_2251 <= pynqrypt_round_keys_q1;
+        pynqrypt_round_keys_load_2_reg_2256 <= pynqrypt_round_keys_q0;
     end
 end
 
@@ -1325,37 +1325,37 @@ assign or_ln233_fu_820_p2 = (shl_ln1_reg_2181 | 8'd1);
 
 assign p_out = empty_fu_198;
 
-assign select_ln104_1_fu_1480_p3 = ((tmp_7_fu_1472_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln104_1_fu_1480_p3 = ((tmp_8_fu_1472_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln104_2_fu_1598_p3 = ((tmp_11_fu_1590_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln104_2_fu_1598_p3 = ((tmp_12_fu_1590_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln104_fu_1363_p3 = ((tmp_3_fu_1355_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln104_fu_1363_p3 = ((tmp_4_fu_1355_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln114_1_fu_1400_p3 = ((tmp_4_fu_1392_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln114_1_fu_1400_p3 = ((tmp_5_fu_1392_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln114_2_fu_1518_p3 = ((tmp_8_fu_1510_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln114_2_fu_1518_p3 = ((tmp_9_fu_1510_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln114_3_fu_1079_p3 = ((tmp_12_fu_1072_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln114_3_fu_1079_p3 = ((tmp_13_fu_1072_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
 assign select_ln114_fu_1283_p3 = ((tmp_fu_1275_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln118_1_fu_1427_p3 = ((tmp_5_fu_1419_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln118_1_fu_1427_p3 = ((tmp_6_fu_1419_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln118_2_fu_1545_p3 = ((tmp_9_fu_1537_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln118_2_fu_1545_p3 = ((tmp_10_fu_1537_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln118_3_fu_1162_p3 = ((tmp_13_fu_1154_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln118_3_fu_1162_p3 = ((tmp_14_fu_1154_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln118_fu_1310_p3 = ((tmp_1_fu_1302_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln118_fu_1310_p3 = ((tmp_2_fu_1302_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln122_1_fu_1454_p3 = ((tmp_6_fu_1446_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln122_1_fu_1454_p3 = ((tmp_7_fu_1446_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln122_2_fu_1571_p3 = ((tmp_10_fu_1563_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln122_2_fu_1571_p3 = ((tmp_11_fu_1563_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln122_3_fu_1189_p3 = ((tmp_14_fu_1181_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln122_3_fu_1189_p3 = ((tmp_15_fu_1181_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln122_fu_1337_p3 = ((tmp_2_fu_1329_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln122_fu_1337_p3 = ((tmp_3_fu_1329_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
-assign select_ln227_fu_941_p3 = ((tmp_15_fu_933_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
+assign select_ln227_fu_941_p3 = ((tmp_16_fu_933_p3[0:0] == 1'b1) ? 8'd27 : 8'd0);
 
 assign shl_ln1_fu_775_p3 = {{ap_sig_allocacmp_i_7}, {4'd0}};
 
@@ -1391,75 +1391,75 @@ assign shl_ln239_9_fu_1531_p2 = tmp2_9_fu_1526_p2 << 8'd1;
 
 assign shl_ln239_fu_1269_p2 = tmp2_fu_1254_p2 << 8'd1;
 
-assign tmp1_1_fu_1381_p2 = (xor_ln109_3_fu_1375_p2 ^ crypto_aes_sbox_load_6_reg_2316);
+assign tmp1_1_fu_1381_p2 = (xor_ln109_3_fu_1375_p2 ^ crypto_aes_sbox_load_3_reg_2316);
 
-assign tmp1_2_fu_1499_p2 = (xor_ln109_5_fu_1494_p2 ^ crypto_aes_sbox_load_10_reg_2405);
+assign tmp1_2_fu_1499_p2 = (xor_ln109_5_fu_1494_p2 ^ crypto_aes_sbox_load_7_reg_2405);
 
-assign tmp1_3_fu_1063_p2 = (xor_ln109_7_reg_2341 ^ crypto_aes_sbox_load_14_reg_2281);
+assign tmp1_3_fu_1063_p2 = (xor_ln109_7_reg_2341 ^ crypto_aes_sbox_load_11_reg_2281);
 
-assign tmp1_fu_1264_p2 = (xor_ln109_1_fu_1258_p2 ^ crypto_aes_sbox_load_18_reg_2423);
+assign tmp1_fu_1264_p2 = (xor_ln109_1_fu_1258_p2 ^ crypto_aes_sbox_load_15_reg_2423);
 
-assign tmp2_10_fu_1553_p2 = (crypto_aes_sbox_load_5_reg_2309 ^ crypto_aes_sbox_load_10_reg_2405);
+assign tmp2_10_fu_1553_p2 = (crypto_aes_sbox_load_7_reg_2405 ^ crypto_aes_sbox_load_2_reg_2309);
 
-assign tmp2_11_fu_1579_p2 = (reg_738 ^ crypto_aes_sbox_load_10_reg_2405);
+assign tmp2_11_fu_1579_p2 = (reg_738 ^ crypto_aes_sbox_load_7_reg_2405);
 
 assign tmp2_12_fu_910_p2 = (reg_738 ^ reg_734);
 
 assign tmp2_13_fu_1142_p2 = (reg_743 ^ reg_734);
 
-assign tmp2_14_fu_1170_p2 = (reg_743 ^ crypto_aes_sbox_load_14_reg_2281);
+assign tmp2_14_fu_1170_p2 = (reg_743 ^ crypto_aes_sbox_load_11_reg_2281);
 
-assign tmp2_15_fu_922_p2 = (reg_738 ^ crypto_aes_sbox_load_14_reg_2281);
+assign tmp2_15_fu_922_p2 = (reg_738 ^ crypto_aes_sbox_load_11_reg_2281);
 
-assign tmp2_1_fu_1291_p2 = (reg_734 ^ crypto_aes_sbox_load_8_reg_2368);
+assign tmp2_1_fu_1291_p2 = (reg_734 ^ crypto_aes_sbox_load_5_reg_2368);
 
-assign tmp2_2_fu_1318_p2 = (reg_734 ^ crypto_aes_sbox_load_18_reg_2423);
+assign tmp2_2_fu_1318_p2 = (reg_734 ^ crypto_aes_sbox_load_15_reg_2423);
 
-assign tmp2_3_fu_1345_p2 = (tmp3_reg_2209 ^ crypto_aes_sbox_load_18_reg_2423);
+assign tmp2_3_fu_1345_p2 = (tmp3_reg_2209 ^ crypto_aes_sbox_load_15_reg_2423);
 
-assign tmp2_4_fu_1371_p2 = (tmp3_1_reg_2361 ^ crypto_aes_sbox_load_12_reg_2451);
+assign tmp2_4_fu_1371_p2 = (tmp3_1_reg_2361 ^ crypto_aes_sbox_load_9_reg_2451);
 
-assign tmp2_5_fu_1408_p2 = (crypto_aes_sbox_q0 ^ crypto_aes_sbox_load_12_reg_2451);
+assign tmp2_5_fu_1408_p2 = (crypto_aes_sbox_q0 ^ crypto_aes_sbox_load_9_reg_2451);
 
-assign tmp2_6_fu_1435_p2 = (crypto_aes_sbox_q0 ^ crypto_aes_sbox_load_6_reg_2316);
+assign tmp2_6_fu_1435_p2 = (crypto_aes_sbox_q0 ^ crypto_aes_sbox_load_3_reg_2316);
 
-assign tmp2_7_fu_1462_p2 = (tmp3_1_reg_2361 ^ crypto_aes_sbox_load_6_reg_2316);
+assign tmp2_7_fu_1462_p2 = (tmp3_1_reg_2361 ^ crypto_aes_sbox_load_3_reg_2316);
 
 assign tmp2_8_fu_1488_p2 = (reg_743 ^ reg_738);
 
-assign tmp2_9_fu_1526_p2 = (reg_743 ^ crypto_aes_sbox_load_5_reg_2309);
+assign tmp2_9_fu_1526_p2 = (reg_743 ^ crypto_aes_sbox_load_2_reg_2309);
 
-assign tmp2_fu_1254_p2 = (tmp3_reg_2209 ^ crypto_aes_sbox_load_8_reg_2368);
+assign tmp2_fu_1254_p2 = (tmp3_reg_2209 ^ crypto_aes_sbox_load_5_reg_2368);
 
-assign tmp_10_fu_1563_p3 = tmp2_10_fu_1553_p2[32'd7];
+assign tmp_10_fu_1537_p3 = tmp2_9_fu_1526_p2[32'd7];
 
-assign tmp_11_fu_1590_p3 = tmp2_11_fu_1579_p2[32'd7];
+assign tmp_11_fu_1563_p3 = tmp2_10_fu_1553_p2[32'd7];
 
-assign tmp_12_fu_1072_p3 = tmp2_12_reg_2334[32'd7];
+assign tmp_12_fu_1590_p3 = tmp2_11_fu_1579_p2[32'd7];
 
-assign tmp_13_fu_1154_p3 = tmp2_13_fu_1142_p2[32'd7];
+assign tmp_13_fu_1072_p3 = tmp2_12_reg_2334[32'd7];
 
-assign tmp_14_fu_1181_p3 = tmp2_14_fu_1170_p2[32'd7];
+assign tmp_14_fu_1154_p3 = tmp2_13_fu_1142_p2[32'd7];
 
-assign tmp_15_fu_933_p3 = tmp2_15_fu_922_p2[32'd7];
+assign tmp_15_fu_1181_p3 = tmp2_14_fu_1170_p2[32'd7];
 
-assign tmp_1_fu_1302_p3 = tmp2_1_fu_1291_p2[32'd7];
+assign tmp_16_fu_933_p3 = tmp2_15_fu_922_p2[32'd7];
 
-assign tmp_2_fu_1329_p3 = tmp2_2_fu_1318_p2[32'd7];
+assign tmp_2_fu_1302_p3 = tmp2_1_fu_1291_p2[32'd7];
 
-assign tmp_3_fu_1355_p3 = tmp2_3_fu_1345_p2[32'd7];
+assign tmp_3_fu_1329_p3 = tmp2_2_fu_1318_p2[32'd7];
 
-assign tmp_4_fu_1392_p3 = tmp2_4_fu_1371_p2[32'd7];
+assign tmp_4_fu_1355_p3 = tmp2_3_fu_1345_p2[32'd7];
 
-assign tmp_5_fu_1419_p3 = tmp2_5_fu_1408_p2[32'd7];
+assign tmp_5_fu_1392_p3 = tmp2_4_fu_1371_p2[32'd7];
 
-assign tmp_6_fu_1446_p3 = tmp2_6_fu_1435_p2[32'd7];
+assign tmp_6_fu_1419_p3 = tmp2_5_fu_1408_p2[32'd7];
 
-assign tmp_7_fu_1472_p3 = tmp2_7_fu_1462_p2[32'd7];
+assign tmp_7_fu_1446_p3 = tmp2_6_fu_1435_p2[32'd7];
 
-assign tmp_8_fu_1510_p3 = tmp2_8_fu_1488_p2[32'd7];
+assign tmp_8_fu_1472_p3 = tmp2_7_fu_1462_p2[32'd7];
 
-assign tmp_9_fu_1537_p3 = tmp2_9_fu_1526_p2[32'd7];
+assign tmp_9_fu_1510_p3 = tmp2_8_fu_1488_p2[32'd7];
 
 assign tmp_fu_1275_p3 = tmp2_fu_1254_p2[32'd7];
 
@@ -1467,7 +1467,7 @@ assign xor_ln109_1_fu_1258_p2 = (tmp2_fu_1254_p2 ^ reg_734);
 
 assign xor_ln109_3_fu_1375_p2 = (tmp2_4_fu_1371_p2 ^ crypto_aes_sbox_q0);
 
-assign xor_ln109_5_fu_1494_p2 = (tmp2_8_fu_1488_p2 ^ crypto_aes_sbox_load_5_reg_2309);
+assign xor_ln109_5_fu_1494_p2 = (tmp2_8_fu_1488_p2 ^ crypto_aes_sbox_load_2_reg_2309);
 
 assign xor_ln109_7_fu_916_p2 = (tmp2_12_fu_910_p2 ^ reg_743);
 
@@ -1477,13 +1477,13 @@ assign xor_ln233_11_fu_1661_p2 = (xor_ln233_10_fu_1655_p2 ^ shl_ln239_2_fu_1323_
 
 assign xor_ln233_12_fu_1667_p2 = (xor_ln233_9_fu_1651_p2 ^ xor_ln233_11_fu_1661_p2);
 
-assign xor_ln233_13_fu_1674_p2 = (xor_ln109_1_fu_1258_p2 ^ pynqrypt_round_keys_load_18_reg_2289);
+assign xor_ln233_13_fu_1674_p2 = (xor_ln109_1_fu_1258_p2 ^ pynqrypt_round_keys_load_3_reg_2289);
 
 assign xor_ln233_14_fu_1679_p2 = (shl_ln239_3_fu_1349_p2 ^ select_ln104_fu_1363_p3);
 
 assign xor_ln233_15_fu_1685_p2 = (xor_ln233_14_fu_1679_p2 ^ xor_ln233_13_fu_1674_p2);
 
-assign xor_ln233_16_fu_1691_p2 = (tmp3_1_reg_2361 ^ pynqrypt_round_keys_load_19_reg_2294);
+assign xor_ln233_16_fu_1691_p2 = (tmp3_1_reg_2361 ^ pynqrypt_round_keys_load_4_reg_2294);
 
 assign xor_ln233_17_fu_1695_p2 = (tmp1_1_fu_1381_p2 ^ shl_ln239_4_fu_1386_p2);
 
@@ -1493,7 +1493,7 @@ assign xor_ln233_19_fu_1707_p2 = (xor_ln233_18_fu_1701_p2 ^ xor_ln233_16_fu_1691
 
 assign xor_ln233_1_fu_1606_p2 = (tmp3_reg_2209 ^ pynqrypt_round_keys_load_reg_2226);
 
-assign xor_ln233_20_fu_1713_p2 = (reg_729 ^ crypto_aes_sbox_load_12_reg_2451);
+assign xor_ln233_20_fu_1713_p2 = (reg_729 ^ crypto_aes_sbox_load_9_reg_2451);
 
 assign xor_ln233_21_fu_1718_p2 = (tmp1_1_fu_1381_p2 ^ shl_ln239_5_fu_1413_p2);
 
@@ -1501,7 +1501,7 @@ assign xor_ln233_22_fu_1724_p2 = (xor_ln233_21_fu_1718_p2 ^ select_ln118_1_fu_14
 
 assign xor_ln233_23_fu_1730_p2 = (xor_ln233_22_fu_1724_p2 ^ xor_ln233_20_fu_1713_p2);
 
-assign xor_ln233_24_fu_1736_p2 = (pynqrypt_round_keys_load_21_reg_2346 ^ crypto_aes_sbox_load_6_reg_2316);
+assign xor_ln233_24_fu_1736_p2 = (pynqrypt_round_keys_load_6_reg_2346 ^ crypto_aes_sbox_load_3_reg_2316);
 
 assign xor_ln233_25_fu_1740_p2 = (tmp2_4_fu_1371_p2 ^ select_ln122_1_fu_1454_p3);
 
@@ -1509,7 +1509,7 @@ assign xor_ln233_26_fu_1746_p2 = (xor_ln233_25_fu_1740_p2 ^ shl_ln239_6_fu_1440_
 
 assign xor_ln233_27_fu_1752_p2 = (xor_ln233_26_fu_1746_p2 ^ xor_ln233_24_fu_1736_p2);
 
-assign xor_ln233_28_fu_1758_p2 = (xor_ln109_3_fu_1375_p2 ^ pynqrypt_round_keys_load_22_reg_2385);
+assign xor_ln233_28_fu_1758_p2 = (xor_ln109_3_fu_1375_p2 ^ pynqrypt_round_keys_load_7_reg_2385);
 
 assign xor_ln233_29_fu_1763_p2 = (shl_ln239_7_fu_1466_p2 ^ select_ln104_1_fu_1480_p3);
 
@@ -1517,7 +1517,7 @@ assign xor_ln233_2_fu_1610_p2 = (tmp1_fu_1264_p2 ^ select_ln114_fu_1283_p3);
 
 assign xor_ln233_30_fu_1769_p2 = (xor_ln233_29_fu_1763_p2 ^ xor_ln233_28_fu_1758_p2);
 
-assign xor_ln233_31_fu_1775_p2 = (reg_738 ^ pynqrypt_round_keys_load_23_reg_2390);
+assign xor_ln233_31_fu_1775_p2 = (reg_738 ^ pynqrypt_round_keys_load_8_reg_2390);
 
 assign xor_ln233_32_fu_1780_p2 = (tmp1_2_fu_1499_p2 ^ shl_ln239_8_fu_1504_p2);
 
@@ -1525,7 +1525,7 @@ assign xor_ln233_33_fu_1786_p2 = (xor_ln233_32_fu_1780_p2 ^ select_ln114_2_fu_15
 
 assign xor_ln233_34_fu_1792_p2 = (xor_ln233_33_fu_1786_p2 ^ xor_ln233_31_fu_1775_p2);
 
-assign xor_ln233_35_fu_1798_p2 = (reg_743 ^ pynqrypt_round_keys_load_24_reg_2431);
+assign xor_ln233_35_fu_1798_p2 = (reg_743 ^ pynqrypt_round_keys_load_9_reg_2431);
 
 assign xor_ln233_36_fu_1803_p2 = (tmp1_2_fu_1499_p2 ^ shl_ln239_9_fu_1531_p2);
 
@@ -1533,7 +1533,7 @@ assign xor_ln233_37_fu_1809_p2 = (xor_ln233_36_fu_1803_p2 ^ select_ln118_2_fu_15
 
 assign xor_ln233_38_fu_1815_p2 = (xor_ln233_37_fu_1809_p2 ^ xor_ln233_35_fu_1798_p2);
 
-assign xor_ln233_39_fu_1821_p2 = (pynqrypt_round_keys_load_25_reg_2436 ^ crypto_aes_sbox_load_10_reg_2405);
+assign xor_ln233_39_fu_1821_p2 = (pynqrypt_round_keys_load_10_reg_2436 ^ crypto_aes_sbox_load_7_reg_2405);
 
 assign xor_ln233_3_fu_1616_p2 = (xor_ln233_2_fu_1610_p2 ^ shl_ln239_fu_1269_p2);
 
@@ -1553,7 +1553,7 @@ assign xor_ln233_46_fu_1237_p2 = (xor_ln233_58_fu_1231_p2 ^ xor_ln233_56_fu_1221
 
 assign xor_ln233_47_fu_981_p2 = (xor_ln233_60_fu_975_p2 ^ xor_ln233_59_fu_969_p2);
 
-assign xor_ln233_48_fu_1843_p2 = (xor_ln109_5_fu_1494_p2 ^ pynqrypt_round_keys_load_26_reg_2473);
+assign xor_ln233_48_fu_1843_p2 = (xor_ln109_5_fu_1494_p2 ^ pynqrypt_round_keys_load_11_reg_2473);
 
 assign xor_ln233_49_fu_1848_p2 = (shl_ln239_11_fu_1584_p2 ^ select_ln104_2_fu_1598_p3);
 
@@ -1571,7 +1571,7 @@ assign xor_ln233_54_fu_1203_p2 = (tmp1_3_reg_2468 ^ shl_ln239_13_fu_1148_p2);
 
 assign xor_ln233_55_fu_1208_p2 = (xor_ln233_54_fu_1203_p2 ^ select_ln118_3_fu_1162_p3);
 
-assign xor_ln233_56_fu_1221_p2 = (pynqrypt_round_keys_q0 ^ crypto_aes_sbox_load_14_reg_2281);
+assign xor_ln233_56_fu_1221_p2 = (pynqrypt_round_keys_q0 ^ crypto_aes_sbox_load_11_reg_2281);
 
 assign xor_ln233_57_fu_1226_p2 = (tmp2_12_reg_2334 ^ select_ln122_3_fu_1189_p3);
 
@@ -1579,7 +1579,7 @@ assign xor_ln233_58_fu_1231_p2 = (xor_ln233_57_fu_1226_p2 ^ shl_ln239_14_fu_1175
 
 assign xor_ln233_59_fu_969_p2 = (xor_ln109_7_fu_916_p2 ^ reg_729);
 
-assign xor_ln233_5_fu_1628_p2 = (pynqrypt_round_keys_load_16_reg_2251 ^ crypto_aes_sbox_load_8_reg_2368);
+assign xor_ln233_5_fu_1628_p2 = (pynqrypt_round_keys_load_1_reg_2251 ^ crypto_aes_sbox_load_5_reg_2368);
 
 assign xor_ln233_60_fu_975_p2 = (shl_ln239_15_fu_927_p2 ^ select_ln227_fu_941_p3);
 
@@ -1589,7 +1589,7 @@ assign xor_ln233_7_fu_1638_p2 = (xor_ln233_6_fu_1632_p2 ^ select_ln118_fu_1310_p
 
 assign xor_ln233_8_fu_1644_p2 = (xor_ln233_7_fu_1638_p2 ^ xor_ln233_5_fu_1628_p2);
 
-assign xor_ln233_9_fu_1651_p2 = (pynqrypt_round_keys_load_17_reg_2256 ^ crypto_aes_sbox_load_18_reg_2423);
+assign xor_ln233_9_fu_1651_p2 = (pynqrypt_round_keys_load_2_reg_2256 ^ crypto_aes_sbox_load_15_reg_2423);
 
 assign zext_ln233_10_fu_1018_p1 = or_ln233_9_fu_1013_p2;
 

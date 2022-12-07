@@ -23846,21 +23846,19 @@ class Pynqrypt {
 # 2 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.cpp" 2
 
 void pynqrypt_encrypt(
- crypto::aes_atom key[16],
- crypto::aes_atom nonce[12],
- size_t plaintext_length,
  crypto::aes_atom *plaintext,
  crypto::aes_atom *ciphertext
 ) {
 #pragma HLS INTERFACE mode=m_axi port=plaintext offset=slave bundle=gmem depth=16384
 #pragma HLS INTERFACE mode=m_axi port=ciphertext offset=slave bundle=gmem depth=16384
 
-#pragma HLS INTERFACE mode=s_axilite port=key bundle=control
-#pragma HLS INTERFACE mode=s_axilite port=nonce bundle=control
-#pragma HLS INTERFACE mode=s_axilite port=plaintext_length bundle=control
 #pragma HLS INTERFACE mode=s_axilite port=plaintext bundle=control
 #pragma HLS INTERFACE mode=s_axilite port=ciphertext bundle=control
 #pragma HLS INTERFACE mode=s_axilite port=return bundle=control
+
+ crypto::aes_atom key[16] = { 0x69, 0x72, 0x36, 0x7c, 0x46, 0x4d, 0x8a, 0xa1, 0x7e, 0xa4, 0xb1, 0x44, 0x4b, 0x82, 0x02, 0x96 };
+ crypto::aes_atom nonce[12] = { 0xc7, 0x07, 0x6e, 0xb6, 0x85, 0xeb, 0x79, 0xad, 0x4c, 0x18, 0x7b, 0x5a };
+ size_t plaintext_length = 16384;
 
  crypto::Pynqrypt pynqrypt(key, nonce);
 
@@ -23870,21 +23868,21 @@ void pynqrypt_encrypt(
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_pynqrypt_encrypt_ir(unsigned char *, unsigned char *, unsigned long, unsigned char *, unsigned char *);
+void apatb_pynqrypt_encrypt_ir(unsigned char *, unsigned char *);
 #ifdef __cplusplus
 extern "C"
 #endif
-void pynqrypt_encrypt_hw_stub(unsigned char *key, unsigned char *nonce, unsigned long plaintext_length, unsigned char *plaintext, unsigned char *ciphertext){
-pynqrypt_encrypt(key, nonce, plaintext_length, plaintext, ciphertext);
+void pynqrypt_encrypt_hw_stub(unsigned char *plaintext, unsigned char *ciphertext){
+pynqrypt_encrypt(plaintext, ciphertext);
 return ;
 }
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_pynqrypt_encrypt_sw(unsigned char *key, unsigned char *nonce, unsigned long plaintext_length, unsigned char *plaintext, unsigned char *ciphertext){
-apatb_pynqrypt_encrypt_ir(key, nonce, plaintext_length, plaintext, ciphertext);
+void apatb_pynqrypt_encrypt_sw(unsigned char *plaintext, unsigned char *ciphertext){
+apatb_pynqrypt_encrypt_ir(plaintext, ciphertext);
 return ;
 }
 #endif
-# 23 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.cpp"
+# 21 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.cpp"
 

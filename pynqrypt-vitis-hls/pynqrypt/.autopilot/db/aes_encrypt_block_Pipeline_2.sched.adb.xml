@@ -130,10 +130,10 @@ load-store-loop102:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount,
 
 <Node id="11" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-load-store-loop102:4 %empty_34 = add i5 %loop_index103_load, i5 1
+load-store-loop102:4 %empty_27 = add i5 %loop_index103_load, i5 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_27"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -209,7 +209,7 @@ load-store-loop102.split:2 %state_load = load i4 %state_addr
 
 <Node id="19" bw="0" op_0_bw="5" op_1_bw="5" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-load-store-loop102.split:5 %store_ln0 = store i5 %empty_34, i5 %loop_index103
+load-store-loop102.split:5 %store_ln0 = store i5 %empty_27, i5 %loop_index103
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
