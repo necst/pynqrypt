@@ -6,7 +6,7 @@
 `timescale 1ns/1ps
 module pynqrypt_encrypt_control_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 6,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -30,6 +30,13 @@ module pynqrypt_encrypt_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
+    input  wire [3:0]                    key_address0,
+    input  wire                          key_ce0,
+    output wire [7:0]                    key_q0,
+    input  wire [3:0]                    nonce_address0,
+    input  wire                          nonce_ce0,
+    output wire [7:0]                    nonce_q0,
+    output wire [63:0]                   plaintext_length,
     output wire [63:0]                   plaintext,
     output wire [63:0]                   ciphertext,
     output wire                          ap_start,
@@ -57,38 +64,62 @@ module pynqrypt_encrypt_control_s_axi
 //        bit 0 - ap_done (Read/TOW)
 //        bit 1 - ap_ready (Read/TOW)
 //        others - reserved
-// 0x10 : Data signal of plaintext
+// 0x30 : Data signal of plaintext_length
+//        bit 31~0 - plaintext_length[31:0] (Read/Write)
+// 0x34 : Data signal of plaintext_length
+//        bit 31~0 - plaintext_length[63:32] (Read/Write)
+// 0x38 : reserved
+// 0x3c : Data signal of plaintext
 //        bit 31~0 - plaintext[31:0] (Read/Write)
-// 0x14 : Data signal of plaintext
+// 0x40 : Data signal of plaintext
 //        bit 31~0 - plaintext[63:32] (Read/Write)
-// 0x18 : reserved
-// 0x1c : Data signal of ciphertext
+// 0x44 : reserved
+// 0x48 : Data signal of ciphertext
 //        bit 31~0 - ciphertext[31:0] (Read/Write)
-// 0x20 : Data signal of ciphertext
+// 0x4c : Data signal of ciphertext
 //        bit 31~0 - ciphertext[63:32] (Read/Write)
-// 0x24 : reserved
+// 0x50 : reserved
+// 0x10 ~
+// 0x1f : Memory 'key' (16 * 8b)
+//        Word n : bit [ 7: 0] - key[4n]
+//                 bit [15: 8] - key[4n+1]
+//                 bit [23:16] - key[4n+2]
+//                 bit [31:24] - key[4n+3]
+// 0x20 ~
+// 0x2f : Memory 'nonce' (12 * 8b)
+//        Word n : bit [ 7: 0] - nonce[4n]
+//                 bit [15: 8] - nonce[4n+1]
+//                 bit [23:16] - nonce[4n+2]
+//                 bit [31:24] - nonce[4n+3]
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL           = 6'h00,
-    ADDR_GIE               = 6'h04,
-    ADDR_IER               = 6'h08,
-    ADDR_ISR               = 6'h0c,
-    ADDR_PLAINTEXT_DATA_0  = 6'h10,
-    ADDR_PLAINTEXT_DATA_1  = 6'h14,
-    ADDR_PLAINTEXT_CTRL    = 6'h18,
-    ADDR_CIPHERTEXT_DATA_0 = 6'h1c,
-    ADDR_CIPHERTEXT_DATA_1 = 6'h20,
-    ADDR_CIPHERTEXT_CTRL   = 6'h24,
-    WRIDLE                 = 2'd0,
-    WRDATA                 = 2'd1,
-    WRRESP                 = 2'd2,
-    WRRESET                = 2'd3,
-    RDIDLE                 = 2'd0,
-    RDDATA                 = 2'd1,
-    RDRESET                = 2'd2,
-    ADDR_BITS                = 6;
+    ADDR_AP_CTRL                 = 7'h00,
+    ADDR_GIE                     = 7'h04,
+    ADDR_IER                     = 7'h08,
+    ADDR_ISR                     = 7'h0c,
+    ADDR_PLAINTEXT_LENGTH_DATA_0 = 7'h30,
+    ADDR_PLAINTEXT_LENGTH_DATA_1 = 7'h34,
+    ADDR_PLAINTEXT_LENGTH_CTRL   = 7'h38,
+    ADDR_PLAINTEXT_DATA_0        = 7'h3c,
+    ADDR_PLAINTEXT_DATA_1        = 7'h40,
+    ADDR_PLAINTEXT_CTRL          = 7'h44,
+    ADDR_CIPHERTEXT_DATA_0       = 7'h48,
+    ADDR_CIPHERTEXT_DATA_1       = 7'h4c,
+    ADDR_CIPHERTEXT_CTRL         = 7'h50,
+    ADDR_KEY_BASE                = 7'h10,
+    ADDR_KEY_HIGH                = 7'h1f,
+    ADDR_NONCE_BASE              = 7'h20,
+    ADDR_NONCE_HIGH              = 7'h2f,
+    WRIDLE                       = 2'd0,
+    WRDATA                       = 2'd1,
+    WRRESP                       = 2'd2,
+    WRRESET                      = 2'd3,
+    RDIDLE                       = 2'd0,
+    RDDATA                       = 2'd1,
+    RDRESET                      = 2'd2,
+    ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -117,15 +148,81 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
+    reg  [63:0]                   int_plaintext_length = 'b0;
     reg  [63:0]                   int_plaintext = 'b0;
     reg  [63:0]                   int_ciphertext = 'b0;
+    // memory signals
+    wire [1:0]                    int_key_address0;
+    wire                          int_key_ce0;
+    wire [31:0]                   int_key_q0;
+    wire [1:0]                    int_key_address1;
+    wire                          int_key_ce1;
+    wire                          int_key_we1;
+    wire [3:0]                    int_key_be1;
+    wire [31:0]                   int_key_d1;
+    wire [31:0]                   int_key_q1;
+    reg                           int_key_read;
+    reg                           int_key_write;
+    reg  [1:0]                    int_key_shift0;
+    wire [1:0]                    int_nonce_address0;
+    wire                          int_nonce_ce0;
+    wire [31:0]                   int_nonce_q0;
+    wire [1:0]                    int_nonce_address1;
+    wire                          int_nonce_ce1;
+    wire                          int_nonce_we1;
+    wire [3:0]                    int_nonce_be1;
+    wire [31:0]                   int_nonce_d1;
+    wire [31:0]                   int_nonce_q1;
+    reg                           int_nonce_read;
+    reg                           int_nonce_write;
+    reg  [1:0]                    int_nonce_shift0;
 
 //------------------------Instantiation------------------
+// int_key
+pynqrypt_encrypt_control_s_axi_ram #(
+    .MEM_STYLE ( "auto" ),
+    .MEM_TYPE  ( "2P" ),
+    .BYTES     ( 4 ),
+    .DEPTH     ( 4 )
+) int_key (
+    .clk0      ( ACLK ),
+    .address0  ( int_key_address0 ),
+    .ce0       ( int_key_ce0 ),
+    .we0       ( {4{1'b0}} ),
+    .d0        ( {8{1'b0}} ),
+    .q0        ( int_key_q0 ),
+    .clk1      ( ACLK ),
+    .address1  ( int_key_address1 ),
+    .ce1       ( int_key_ce1 ),
+    .we1       ( int_key_be1 ),
+    .d1        ( int_key_d1 ),
+    .q1        ( int_key_q1 )
+);
+// int_nonce
+pynqrypt_encrypt_control_s_axi_ram #(
+    .MEM_STYLE ( "auto" ),
+    .MEM_TYPE  ( "2P" ),
+    .BYTES     ( 4 ),
+    .DEPTH     ( 3 )
+) int_nonce (
+    .clk0      ( ACLK ),
+    .address0  ( int_nonce_address0 ),
+    .ce0       ( int_nonce_ce0 ),
+    .we0       ( {4{1'b0}} ),
+    .d0        ( {8{1'b0}} ),
+    .q0        ( int_nonce_q0 ),
+    .clk1      ( ACLK ),
+    .address1  ( int_nonce_address1 ),
+    .ce1       ( int_nonce_ce1 ),
+    .we1       ( int_nonce_be1 ),
+    .d1        ( int_nonce_d1 ),
+    .q1        ( int_nonce_q1 )
+);
 
 
 //------------------------AXI write fsm------------------
 assign AWREADY = (wstate == WRIDLE);
-assign WREADY  = (wstate == WRDATA);
+assign WREADY  = (wstate == WRDATA) && (!ar_hs);
 assign BRESP   = 2'b00;  // OKAY
 assign BVALID  = (wstate == WRRESP);
 assign wmask   = { {8{WSTRB[3]}}, {8{WSTRB[2]}}, {8{WSTRB[1]}}, {8{WSTRB[0]}} };
@@ -149,7 +246,7 @@ always @(*) begin
             else
                 wnext = WRIDLE;
         WRDATA:
-            if (WVALID)
+            if (w_hs)
                 wnext = WRRESP;
             else
                 wnext = WRDATA;
@@ -175,7 +272,7 @@ end
 assign ARREADY = (rstate == RDIDLE);
 assign RDATA   = rdata;
 assign RRESP   = 2'b00;  // OKAY
-assign RVALID  = (rstate == RDDATA);
+assign RVALID  = (rstate == RDDATA) & !int_key_read & !int_nonce_read;
 assign ar_hs   = ARVALID & ARREADY;
 assign raddr   = ARADDR[ADDR_BITS-1:0];
 
@@ -228,6 +325,12 @@ always @(posedge ACLK) begin
                 ADDR_ISR: begin
                     rdata <= int_isr;
                 end
+                ADDR_PLAINTEXT_LENGTH_DATA_0: begin
+                    rdata <= int_plaintext_length[31:0];
+                end
+                ADDR_PLAINTEXT_LENGTH_DATA_1: begin
+                    rdata <= int_plaintext_length[63:32];
+                end
                 ADDR_PLAINTEXT_DATA_0: begin
                     rdata <= int_plaintext[31:0];
                 end
@@ -242,6 +345,12 @@ always @(posedge ACLK) begin
                 end
             endcase
         end
+        else if (int_key_read) begin
+            rdata <= int_key_q1;
+        end
+        else if (int_nonce_read) begin
+            rdata <= int_nonce_q1;
+        end
     end
 end
 
@@ -252,6 +361,7 @@ assign ap_start          = int_ap_start;
 assign task_ap_done      = (ap_done && !auto_restart_status) || auto_restart_done;
 assign task_ap_ready     = ap_ready && !int_auto_restart;
 assign auto_restart_done = auto_restart_status && (ap_idle && !int_ap_idle);
+assign plaintext_length  = int_plaintext_length;
 assign plaintext         = int_plaintext;
 assign ciphertext        = int_ciphertext;
 // int_interrupt
@@ -386,6 +496,26 @@ always @(posedge ACLK) begin
     end
 end
 
+// int_plaintext_length[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_plaintext_length[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_PLAINTEXT_LENGTH_DATA_0)
+            int_plaintext_length[31:0] <= (WDATA[31:0] & wmask) | (int_plaintext_length[31:0] & ~wmask);
+    end
+end
+
+// int_plaintext_length[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_plaintext_length[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_PLAINTEXT_LENGTH_DATA_1)
+            int_plaintext_length[63:32] <= (WDATA[31:0] & wmask) | (int_plaintext_length[63:32] & ~wmask);
+    end
+end
+
 // int_plaintext[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -438,5 +568,197 @@ end
 //synthesis translate_on
 
 //------------------------Memory logic-------------------
+// key
+assign int_key_address0   = key_address0 >> 2;
+assign int_key_ce0        = key_ce0;
+assign key_q0             = int_key_q0 >> (int_key_shift0 * 8);
+assign int_key_address1   = ar_hs? raddr[3:2] : waddr[3:2];
+assign int_key_ce1        = ar_hs | (int_key_write & WVALID);
+assign int_key_we1        = int_key_write & w_hs;
+assign int_key_be1        = int_key_we1 ? WSTRB : 'b0;
+assign int_key_d1         = WDATA;
+// nonce
+assign int_nonce_address0 = nonce_address0 >> 2;
+assign int_nonce_ce0      = nonce_ce0;
+assign nonce_q0           = int_nonce_q0 >> (int_nonce_shift0 * 8);
+assign int_nonce_address1 = ar_hs? raddr[3:2] : waddr[3:2];
+assign int_nonce_ce1      = ar_hs | (int_nonce_write & WVALID);
+assign int_nonce_we1      = int_nonce_write & w_hs;
+assign int_nonce_be1      = int_nonce_we1 ? WSTRB : 'b0;
+assign int_nonce_d1       = WDATA;
+// int_key_read
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_key_read <= 1'b0;
+    else if (ACLK_EN) begin
+        if (ar_hs && raddr >= ADDR_KEY_BASE && raddr <= ADDR_KEY_HIGH)
+            int_key_read <= 1'b1;
+        else
+            int_key_read <= 1'b0;
+    end
+end
+
+// int_key_write
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_key_write <= 1'b0;
+    else if (ACLK_EN) begin
+        if (aw_hs && AWADDR[ADDR_BITS-1:0] >= ADDR_KEY_BASE && AWADDR[ADDR_BITS-1:0] <= ADDR_KEY_HIGH)
+            int_key_write <= 1'b1;
+        else if (w_hs)
+            int_key_write <= 1'b0;
+    end
+end
+
+// int_key_shift0
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_key_shift0 <= 1'b0;
+    else if (ACLK_EN) begin
+        if (key_ce0)
+            int_key_shift0 <= key_address0[1:0];
+    end
+end
+
+// int_nonce_read
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_nonce_read <= 1'b0;
+    else if (ACLK_EN) begin
+        if (ar_hs && raddr >= ADDR_NONCE_BASE && raddr <= ADDR_NONCE_HIGH)
+            int_nonce_read <= 1'b1;
+        else
+            int_nonce_read <= 1'b0;
+    end
+end
+
+// int_nonce_write
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_nonce_write <= 1'b0;
+    else if (ACLK_EN) begin
+        if (aw_hs && AWADDR[ADDR_BITS-1:0] >= ADDR_NONCE_BASE && AWADDR[ADDR_BITS-1:0] <= ADDR_NONCE_HIGH)
+            int_nonce_write <= 1'b1;
+        else if (w_hs)
+            int_nonce_write <= 1'b0;
+    end
+end
+
+// int_nonce_shift0
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_nonce_shift0 <= 1'b0;
+    else if (ACLK_EN) begin
+        if (nonce_ce0)
+            int_nonce_shift0 <= nonce_address0[1:0];
+    end
+end
+
 
 endmodule
+
+
+`timescale 1ns/1ps
+
+module pynqrypt_encrypt_control_s_axi_ram
+#(parameter
+    MEM_STYLE = "auto",
+    MEM_TYPE  = "S2P",
+    BYTES  = 4,
+    DEPTH  = 256,
+    AWIDTH = log2(DEPTH)
+) (
+    input  wire               clk0,
+    input  wire [AWIDTH-1:0]  address0,
+    input  wire               ce0,
+    input  wire [BYTES-1:0]   we0,
+    input  wire [BYTES*8-1:0] d0,
+    output reg  [BYTES*8-1:0] q0,
+    input  wire               clk1,
+    input  wire [AWIDTH-1:0]  address1,
+    input  wire               ce1,
+    input  wire [BYTES-1:0]   we1,
+    input  wire [BYTES*8-1:0] d1,
+    output reg  [BYTES*8-1:0] q1
+);
+//------------------------ Parameters -------------------
+localparam
+    BYTE_WIDTH = 8,
+    PORT0 = (MEM_TYPE == "S2P") ? "WO" : ((MEM_TYPE == "2P") ? "RO" : "RW"),
+    PORT1 = (MEM_TYPE == "S2P") ? "RO" : "RW";
+//------------------------Local signal-------------------
+(* ram_style = MEM_STYLE*)
+reg  [BYTES*8-1:0] mem[0:DEPTH-1];
+wire re0, re1;
+//------------------------Task and function--------------
+function integer log2;
+    input integer x;
+    integer n, m;
+begin
+    n = 1;
+    m = 2;
+    while (m < x) begin
+        n = n + 1;
+        m = m * 2;
+    end
+    log2 = n;
+end
+endfunction
+//------------------------Body---------------------------
+generate
+    if (MEM_STYLE == "hls_ultra" && PORT0 == "RW") begin
+        assign re0 = ce0 & ~|we0;
+    end else begin
+        assign re0 = ce0;
+    end
+endgenerate
+
+generate
+    if (MEM_STYLE == "hls_ultra" && PORT1 == "RW") begin
+        assign re1 = ce1 & ~|we1;
+    end else begin
+        assign re1 = ce1;
+    end
+endgenerate
+
+// read port 0
+generate if (PORT0 != "WO") begin
+    always @(posedge clk0) begin
+        if (re0) q0 <= mem[address0];
+    end
+end
+endgenerate
+
+// read port 1
+generate if (PORT1 != "WO") begin
+    always @(posedge clk1) begin
+        if (re1) q1 <= mem[address1];
+    end
+end
+endgenerate
+
+integer i;
+// write port 0
+generate if (PORT0 != "RO") begin
+    always @(posedge clk0) begin
+        if (ce0)
+        for (i = 0; i < BYTES; i = i + 1)
+            if (we0[i])
+                mem[address0][i*BYTE_WIDTH +: BYTE_WIDTH] <= d0[i*BYTE_WIDTH +: BYTE_WIDTH];
+    end
+end
+endgenerate
+
+// write port 1
+generate if (PORT1 != "RO") begin
+    always @(posedge clk1) begin
+        if (ce1)
+        for (i = 0; i < BYTES; i = i + 1)
+            if (we1[i])
+                mem[address1][i*BYTE_WIDTH +: BYTE_WIDTH] <= d1[i*BYTE_WIDTH +: BYTE_WIDTH];
+    end
+end
+endgenerate
+
+endmodule
+

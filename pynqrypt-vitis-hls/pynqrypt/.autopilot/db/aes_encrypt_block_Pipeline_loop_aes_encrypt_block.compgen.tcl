@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -16,7 +16,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 3 \
+    id 20 \
     name state \
     reset_level 1 \
     sync_rst true \
@@ -35,17 +35,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 20 \
-    name crypto_aes_sbox \
+    id 21 \
+    name pynqrypt_round_keys \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename crypto_aes_sbox \
+    corename pynqrypt_round_keys \
     op interface \
-    ports { crypto_aes_sbox_address0 { O 8 vector } crypto_aes_sbox_ce0 { O 1 bit } crypto_aes_sbox_q0 { I 8 vector } crypto_aes_sbox_address1 { O 8 vector } crypto_aes_sbox_ce1 { O 1 bit } crypto_aes_sbox_q1 { I 8 vector } } \
+    ports { pynqrypt_round_keys_address0 { O 8 vector } pynqrypt_round_keys_ce0 { O 1 bit } pynqrypt_round_keys_q0 { I 8 vector } pynqrypt_round_keys_address1 { O 8 vector } pynqrypt_round_keys_ce1 { O 1 bit } pynqrypt_round_keys_q1 { I 8 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'crypto_aes_sbox'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'pynqrypt_round_keys'"
 }
 }
 
@@ -53,7 +53,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2 \
+    id 19 \
     name xor_ln233 \
     type other \
     dir I \
@@ -68,7 +68,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 4 \
+    id 22 \
     name p_out \
     type other \
     dir O \
@@ -83,7 +83,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5 \
+    id 23 \
     name conv6_i36_1_phi_out \
     type other \
     dir O \
@@ -98,7 +98,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 6 \
+    id 24 \
     name conv6_i36_2_phi_out \
     type other \
     dir O \
@@ -113,7 +113,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 7 \
+    id 25 \
     name conv6_i36_3_phi_out \
     type other \
     dir O \
@@ -128,7 +128,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 8 \
+    id 26 \
     name conv6_i36_4_phi_out \
     type other \
     dir O \
@@ -143,7 +143,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 27 \
     name conv6_i36_5_phi_out \
     type other \
     dir O \
@@ -158,7 +158,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 28 \
     name conv6_i36_6_phi_out \
     type other \
     dir O \
@@ -173,7 +173,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 11 \
+    id 29 \
     name conv6_i36_7_phi_out \
     type other \
     dir O \
@@ -188,7 +188,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 12 \
+    id 30 \
     name conv6_i36_8_phi_out \
     type other \
     dir O \
@@ -203,7 +203,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 13 \
+    id 31 \
     name conv6_i36_9_phi_out \
     type other \
     dir O \
@@ -218,7 +218,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 14 \
+    id 32 \
     name conv6_i36_10_phi_out \
     type other \
     dir O \
@@ -233,7 +233,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 15 \
+    id 33 \
     name conv6_i36_11_phi_out \
     type other \
     dir O \
@@ -248,7 +248,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 16 \
+    id 34 \
     name conv6_i36_12_phi_out \
     type other \
     dir O \
@@ -263,7 +263,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 35 \
     name conv6_i36_13_phi_out \
     type other \
     dir O \
@@ -278,7 +278,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 18 \
+    id 36 \
     name conv6_i36_14_phi_out \
     type other \
     dir O \
@@ -293,7 +293,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
+    id 37 \
     name conv6_i36_15_phi_out \
     type other \
     dir O \

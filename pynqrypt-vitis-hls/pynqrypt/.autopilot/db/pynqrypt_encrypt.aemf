@@ -1,676 +1,685 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670368313799">
-  <ports id="1" name="gmem" type="PortType" coreId="62" bitwidth="8" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670540842146">
+  <ports id="1" name="gmem" type="PortType" coreId="2036689759" bitwidth="8" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="plaintext" type="PortType" originalName="plaintext" coreId="0" bitwidth="64">
+  <ports id="2" name="key" type="PortType" coreName="RAM_1P" coreId="2036689759" bitwidth="8" iftype="IfTypeRegister" arraysize="16">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="nonce" type="PortType" coreName="RAM_1P" coreId="4294967276" bitwidth="8" iftype="IfTypeRegister" arraysize="12">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="plaintext_length" type="PortType" originalName="plaintext_length" coreId="3191682432" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="ciphertext" type="PortType" originalName="ciphertext" coreId="4294967293" bitwidth="64">
+  <ports id="5" name="plaintext" type="PortType" originalName="plaintext" coreId="1129502003" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <edges id="113" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
-  <edges id="115" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
-  <edges id="119" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.5"/>
-  <edges id="124" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="128" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="132" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.8"/>
-  <edges id="136" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.9"/>
-  <edges id="137" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.9"/>
-  <edges id="140" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="143" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="144" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="147" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
-  <edges id="151" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.13"/>
-  <edges id="152" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.14"/>
-  <edges id="153" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="156" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="159" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="160" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="161" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="162" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.0"/>
-  <edges id="163" source_obj="//@blocks.3/@node_objs.5" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
-  <edges id="164" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
-  <edges id="167" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
-  <edges id="168" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
-  <edges id="171" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.3/@node_objs.2"/>
-  <edges id="172" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.3/@node_objs.3"/>
-  <edges id="174" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
-  <edges id="175" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.4"/>
-  <edges id="176" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.3/@node_objs.4"/>
-  <edges id="177" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.5"/>
-  <edges id="180" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.6"/>
-  <edges id="183" source_obj="//@blocks.3/@node_objs.6" sink_obj="//@blocks.3/@node_objs.7"/>
-  <edges id="184" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.3/@node_objs.7"/>
-  <edges id="185" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.7"/>
-  <edges id="186" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.0"/>
-  <edges id="187" source_obj="//@blocks.5/@node_objs.3" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
-  <edges id="188" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
-  <edges id="190" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.0"/>
-  <edges id="191" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.1"/>
-  <edges id="192" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.2"/>
-  <edges id="195" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.3"/>
-  <edges id="197" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.4"/>
-  <edges id="198" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.4"/>
-  <edges id="199" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.5/@node_objs.4"/>
-  <edges id="200" sink_obj="//@blocks.6/@node_objs.0"/>
-  <edges id="202" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.6/@node_objs.0"/>
-  <edges id="203" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
-  <edges id="204" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.6/@node_objs.2"/>
-  <edges id="206" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
-  <edges id="207" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.3"/>
-  <edges id="208" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.3"/>
-  <edges id="209" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.4"/>
-  <edges id="212" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.7/@node_objs.0"/>
-  <edges id="214" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.7/@node_objs.1"/>
-  <edges id="217" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.7/@node_objs.2"/>
-  <edges id="222" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.7/@node_objs.3"/>
-  <edges id="223" source_obj="//@blocks.7/@node_objs.3" sink_obj="//@blocks.7/@node_objs.4"/>
-  <edges id="224" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.7/@node_objs.4"/>
-  <edges id="227" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.7/@node_objs.5"/>
-  <edges id="232" source_obj="//@blocks.7/@node_objs.5" sink_obj="//@blocks.7/@node_objs.6"/>
-  <edges id="233" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.7/@node_objs.6"/>
-  <edges id="236" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.7/@node_objs.7"/>
-  <edges id="237" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.8"/>
-  <edges id="240" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8/@node_objs.0"/>
-  <edges id="241" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@blocks.8/@node_objs.0" is_back_edge="1"/>
-  <edges id="242" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.0" is_back_edge="1"/>
-  <edges id="243" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
-  <edges id="244" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.2"/>
-  <edges id="247" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.3"/>
-  <edges id="250" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.4"/>
-  <edges id="251" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.4"/>
-  <edges id="252" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.8/@node_objs.4"/>
-  <edges id="253" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.10/@node_objs.0"/>
-  <edges id="254" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.9/@node_objs.0"/>
-  <edges id="256" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.9/@node_objs.0"/>
-  <edges id="257" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.9/@node_objs.1"/>
-  <edges id="258" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.9/@node_objs.2"/>
-  <edges id="260" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.9/@node_objs.2"/>
-  <edges id="261" source_obj="//@blocks.9/@node_objs.2" sink_obj="//@blocks.9/@node_objs.3"/>
-  <edges id="262" source_obj="//@blocks.9/@node_objs.3" sink_obj="//@blocks.9/@node_objs.4"/>
-  <edges id="263" source_obj="//@blocks.9/@node_objs.1" sink_obj="//@blocks.9/@node_objs.4"/>
-  <edges id="264" source_obj="//@blocks.9/@node_objs.4" sink_obj="//@blocks.9/@node_objs.5"/>
-  <edges id="265" source_obj="//@blocks.9/@node_objs.2" sink_obj="//@blocks.9/@node_objs.5"/>
-  <edges id="266" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.6"/>
-  <edges id="267" source_obj="//@blocks.11/@node_objs.5" sink_obj="//@blocks.11/@node_objs.0" is_back_edge="1"/>
-  <edges id="268" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.11/@node_objs.0" is_back_edge="1"/>
-  <edges id="270" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11/@node_objs.0"/>
-  <edges id="271" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.11/@node_objs.1"/>
-  <edges id="272" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.11/@node_objs.2"/>
-  <edges id="274" source_obj="//@blocks.11/@node_objs.1" sink_obj="//@blocks.11/@node_objs.2"/>
-  <edges id="275" source_obj="//@blocks.11/@node_objs.2" sink_obj="//@blocks.11/@node_objs.3"/>
-  <edges id="278" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.11/@node_objs.4"/>
-  <edges id="279" source_obj="//@blocks.11/@node_objs.3" sink_obj="//@blocks.11/@node_objs.4"/>
-  <edges id="282" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.11/@node_objs.5"/>
-  <edges id="284" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.11/@node_objs.6"/>
-  <edges id="286" source_obj="//@blocks.11/@node_objs.6" sink_obj="//@blocks.11/@node_objs.7"/>
-  <edges id="287" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.11/@node_objs.7"/>
-  <edges id="288" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.11/@node_objs.7"/>
-  <edges id="289" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.12/@node_objs.0"/>
-  <edges id="292" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
-  <edges id="293" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
-  <edges id="294" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.12/@node_objs.2"/>
-  <edges id="297" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.13/@node_objs.0"/>
-  <edges id="298" sink_obj="//@blocks.7/@node_objs.7"/>
-  <edges id="299" sink_obj="//@blocks.7/@node_objs.7"/>
-  <edges id="465" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
-  <edges id="466" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.13"/>
-  <edges id="467" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
-  <edges id="468" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
-  <edges id="469" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
-  <edges id="470" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.3" is_back_edge="1"/>
-  <edges id="471" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
-  <edges id="472" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.7"/>
-  <edges id="473" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
-  <edges id="474" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5" is_back_edge="1"/>
-  <edges id="475" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
-  <edges id="476" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.10"/>
-  <edges id="477" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
-  <edges id="478" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8" is_back_edge="1"/>
-  <edges id="479" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11"/>
-  <edges id="480" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.12"/>
-  <edges id="481" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.11" is_back_edge="1"/>
-  <edges id="482" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.1" is_back_edge="1"/>
-  <edges id="483" edge_type="VirtEdge" source_obj="//@blocks.7/@node_objs.6" sink_obj="//@blocks.7/@node_objs.7"/>
-  <edges id="484" edge_type="VirtEdge" source_obj="//@blocks.7/@node_objs.4" sink_obj="//@blocks.7/@node_objs.7"/>
-  <edges id="485" edge_type="VirtEdge" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.7"/>
-  <edges id="486" edge_type="VirtEdge" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.7"/>
-  <edges id="487" edge_type="VirtEdge" source_obj="//@blocks.9/@node_objs.3" sink_obj="//@blocks.9/@node_objs.5"/>
-  <edges id="488" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="489" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.3/@node_objs.2"/>
-  <edges id="490" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.11/@node_objs.4"/>
-  <edges id="491" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.11/@node_objs.4"/>
-  <edges id="492" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.12/@node_objs.1"/>
-  <edges id="493" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
-  <edges id="-136" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.0"/>
-  <edges id="-143" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.0"/>
-  <blocks id="30" name="entry" type="BlockType">
-    <controlOutputObjs>loop-memcpy-expansion2.preheader.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" originalName="i" coreId="1674422656" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+  <ports id="6" name="ciphertext" type="PortType" originalName="ciphertext" coreId="32" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="111" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="113" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="115" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="124" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="125" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="128" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="129" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="139" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="147" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="151" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="152" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="155" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="158" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="159" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="161" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="163" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="164" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="165" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="166" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="167" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="168" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="169" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="170" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="173" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="175" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="176" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="179" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="180" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="181" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="182" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="184" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="185" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="186" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="188" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="189" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="192" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="193" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="194" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="195" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="196" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="197" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="198" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="199" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="200" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="201" source_obj="//@ports.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="202" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="205" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="206" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="209" source_obj="//@ports.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="210" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="211" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="212" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="216" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="217" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="218" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="222" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="225" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="230" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="231" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="233" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="238" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="239" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="241" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="246" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="247" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="249" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="254" source_obj="//@blocks.4/@node_objs.8" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="255" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="258" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="259" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="262" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="263" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="264" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="265" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.12"/>
+  <edges id="266" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.4/@node_objs.12"/>
+  <edges id="267" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.12"/>
+  <edges id="268" source_obj="//@ports.0" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="269" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="272" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="273" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="276" source_obj="//@ports.0" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="277" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="278" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="279" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="282" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="283" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="284" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="285" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="287" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="289" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="290" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="291" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="292" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="293" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.6/@node_objs.5"/>
+  <edges id="294" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="295" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="296" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="572" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="573" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="574" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.7"/>
+  <edges id="575" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="576" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4"/>
+  <edges id="577" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="578" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="579" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6"/>
+  <edges id="580" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="581" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="582" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="583" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.10" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="584" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.9" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="585" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.7" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="586" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.5" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="587" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="588" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="589" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="590" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="591" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="592" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="593" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="594" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.11" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="595" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="596" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="597" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="598" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="599" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="600" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="601" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="602" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="603" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="604" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="605" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="606" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="607" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="608" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="609" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="610" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="611" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="612" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.10" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="613" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="614" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="615" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="616" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="617" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.11" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="-201" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="-209" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="-268" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="-276" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@ports.0"/>
+  <blocks id="51" name="entry" type="BlockType">
+    <controlOutputObjs>for.body.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i" originalName="i" coreId="3192610032" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="ciphertext_read" originalName="ciphertext" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="indvars_iv6" coreId="1129480550" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="ciphertext_read" originalName="ciphertext" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="64" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>ciphertext</dataInputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="plaintext_read" originalName="plaintext" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="plaintext_read" originalName="plaintext" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="64" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <dataInputObjs>plaintext</dataInputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="block_nonce" lineNumber="20" originalName="block_nonce" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="82" contextFuncName="ctr_encrypt" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="plaintext_length_read" originalName="plaintext_length" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="64" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <dataInputObjs>plaintext_length</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="pynqrypt_round_keys" rtlName="pynqrypt_round_keys_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="82" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="block_nonce" lineNumber="20" originalName="block_nonce" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="82" contextFuncName="ctr_encrypt" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="20" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="block" lineNumber="21" originalName="block" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="ctr_encrypt" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="block" lineNumber="21" originalName="block" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="ctr_encrypt" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="21" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="block_nonce_addr" coreId="1674591968" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="pynqrypt_key" lineNumber="20" originalName="pynqrypt.key" fileName="hw-impl/src/pynqrypt_hls.cpp" fileDirectory=".." rtlName="pynqrypt_key_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="pynqrypt_encrypt" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt_hls.cpp" linenumber="20" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="pynqrypt_encrypt"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="pynqrypt_nonce" lineNumber="20" originalName="pynqrypt.nonce" fileName="hw-impl/src/pynqrypt_hls.cpp" fileDirectory=".." rtlName="pynqrypt_nonce_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="pynqrypt_encrypt" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt_hls.cpp" linenumber="20" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="pynqrypt_encrypt"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="_ln0" rtlName="grp_pynqrypt_encrypt_Pipeline_1_fu_242" coreId="3193276480" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>key</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>pynqrypt_encrypt_Pipeline_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="_ln0" rtlName="grp_pynqrypt_encrypt_Pipeline_2_fu_250" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataInputObjs>nonce</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>pynqrypt_encrypt_Pipeline_2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln15" lineNumber="15" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_aes_generate_round_keys_fu_258" coreId="3193289248" contextFuncName="Pynqrypt" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="15" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="Pynqrypt"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>aes_generate_round_keys</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="block_nonce_addr" coreId="3193424576" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="block_nonce_addr_1" coreId="1673170752" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="block_nonce_addr_1" coreId="0" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="block_nonce_addr_2" coreId="2601077751" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="block_nonce_addr_2" coreId="0" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="block_nonce_addr_3" coreId="1674896208" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="block_nonce_addr_3" coreId="3193427360" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="gmem_addr" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="trunc_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="trunc_ln23_fu_315_p1" coreId="1129055150" contextFuncName="ctr_encrypt" bitwidth="32" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>readreq</dataOutputObjs>
-      <dataOutputObjs>read</dataOutputObjs>
-      <dataOutputObjs>gmem</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="empty" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="readreq" nodeLabel="1.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="xor_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="xor_ln23_fu_319_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ctr_encrypt" bitwidth="64" opcode="xor" nodeLabel="3.0" m_display="0" m_delay="0.99" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="gmem_addr_1" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>writereq</dataOutputObjs>
-      <dataOutputObjs>write</dataOutputObjs>
-      <dataOutputObjs>writeresp</dataOutputObjs>
-      <dataOutputObjs>gmem</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="empty_18" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writereq" nodeLabel="1.0" m_display="0" m_delay="7.3" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="xor_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="xor_ln24_fu_325_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ctr_encrypt" bitwidth="32" opcode="xor" nodeLabel="3.0" m_display="0" m_delay="0.99" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="indvars_iv6_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1279795773" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.58" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="i_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3187840976" contextFuncName="ctr_encrypt" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3193521392" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <controlInputObjs>loop-memcpy-expansion2.preheader.i</controlInputObjs>
+      <controlInputObjs>for.body.i</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
       <validLinenumbers>20</validLinenumbers>
       <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>15</validLinenumbers>
       <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="hw-impl/src/pynqrypt_hls.cpp">
+      <validLinenumbers>20</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="35" name="loop-memcpy-expansion2.preheader.i" type="BlockType">
+  <blocks id="55" name="for.body.i" type="BlockType">
     <controlInputObjs>entry</controlInputObjs>
     <controlInputObjs>for.inc.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>_ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.exit</controlOutputObjs>
-    <controlOutputObjs>loop-memcpy-expansion2.preheader.i.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="i_4" lineNumber="23" originalName="i" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1674786016" contextFuncName="ctr_encrypt" bitwidth="15" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+    <controlOutputObjs>for.body.i.split</controlOutputObjs>
+    <controlOutputObjs>_ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.exit.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="i_4" lineNumber="24" originalName="i" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3193538056" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>alloca</dataInputObjs>
-      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="tmp_1" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="tmp_1_fu_344_p3" coreId="0" contextFuncName="ctr_encrypt" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="icmp_ln23_1" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="icmp_ln23_1_fu_339_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ctr_encrypt" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.77" m_topoIndex="25" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
-      <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1674854432" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3193521392" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>bitselect</dataInputObjs>
-      <controlInputObjs>loop-memcpy-expansion2.preheader.i.split</controlInputObjs>
-      <controlInputObjs>_ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.exit</controlInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>_ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.exit.loopexit</controlInputObjs>
+      <controlInputObjs>for.body.i.split</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
+      <validLinenumbers>24</validLinenumbers>
       <validLinenumbers>23</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="38" name="loop-memcpy-expansion2.preheader.i.split" type="BlockType">
+  <blocks id="71" name="for.body.i.split" type="BlockType">
+    <controlInputObjs>for.body.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>loop-memcpy-expansion2.preheader.i</controlOutputObjs>
+    <controlOutputObjs>post-loop-memcpy-expansion1.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="indvars_iv6_load_1" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="icmp_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="icmp_ln23_fu_388_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ctr_encrypt" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="2.77" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="xor_ln23_1" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="xor_ln23_1_fu_394_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ctr_encrypt" bitwidth="64" opcode="xor" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="select_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="select_ln23_fu_400_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="ctr_encrypt" bitwidth="64" opcode="select" nodeLabel="5.0" m_display="0" m_delay="1.48" m_topoIndex="39" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="trunc_ln24_fu_344_p1" coreId="3193444224" contextFuncName="ctr_encrypt" bitwidth="32" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="add_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="add_ln24_fu_348_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_encrypt" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="3.52" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="icmp_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="icmp_ln24_fu_353_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ctr_encrypt" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.77" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="add_ln24_3" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="add_ln24_3_fu_359_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_encrypt" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_delay="2.55" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="xor_ln24_1" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="xor_ln24_1_fu_364_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ctr_encrypt" bitwidth="32" opcode="xor" nodeLabel="4.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="select_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="select_ln24_fu_370_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="ctr_encrypt" bitwidth="32" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="32" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>readreq</dataOutputObjs>
+      <dataOutputObjs>writereq</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="add_ln24_1" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="add_ln24_1_fu_408_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_encrypt" bitwidth="64" opcode="add" nodeLabel="5.0" m_display="0" m_delay="3.52" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="add_ln24_2" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="add_ln24_2_fu_378_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_encrypt" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="3.52" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="icmp_ln25" lineNumber="25" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="icmp_ln25_fu_383_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ctr_encrypt" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.77" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="25" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="br_ln25" lineNumber="25" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3192421680" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="5.0" m_display="0" m_delay="1.58" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="25" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>post-loop-memcpy-expansion1.i</controlInputObjs>
+      <controlInputObjs>loop-memcpy-expansion2.preheader.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="76" name="loop-memcpy-expansion2.preheader.i" type="BlockType">
+    <controlInputObjs>for.body.i.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>post-loop-memcpy-expansion1.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="gmem_addr" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="32" contextFuncName="ctr_encrypt" bitwidth="8" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>gmem</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>readreq</dataOutputObjs>
+      <dataOutputObjs>gmem</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="empty" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_pynqrypt_encrypt_Pipeline_3_fu_268" coreId="3192777728" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>gmem</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>gmem</dataOutputObjs>
+      <constName>pynqrypt_encrypt_Pipeline_3</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="br_ln0" coreId="3192739264" opcode="br" nodeLabel="13.0" m_display="0" m_delay="1.58" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <controlInputObjs>post-loop-memcpy-expansion1.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="90" name="post-loop-memcpy-expansion1.i" type="BlockType">
+    <controlInputObjs>for.body.i.split</controlInputObjs>
     <controlInputObjs>loop-memcpy-expansion2.preheader.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>loop-memcpy-expansion2.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln0" coreId="0" opcode="br" nodeLabel="8.0" m_display="0" m_delay="1.58" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <controlInputObjs>loop-memcpy-expansion2.i</controlInputObjs>
-    </node_objs>
-  </blocks>
-  <blocks id="48" name="loop-memcpy-expansion2.i" type="BlockType">
-    <controlInputObjs>loop-memcpy-expansion2.preheader.i.split</controlInputObjs>
-    <controlInputObjs>loop-memcpy-expansion2.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>load-store-loop.i.i.preheader</controlOutputObjs>
-    <controlOutputObjs>loop-memcpy-expansion2.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="loop_index3_i" coreId="1674875200" bitwidth="4" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <dataInputObjs>add</dataInputObjs>
-      <dataOutputObjs>zext</dataOutputObjs>
-      <dataOutputObjs>add</dataOutputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-      <controlInputObjs>loop-memcpy-expansion2.i</controlInputObjs>
-      <controlInputObjs>loop-memcpy-expansion2.preheader.i.split</controlInputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="loop_index3_i_cast3" rtlName="loop_index3_i_cast3_fu_352_p1" coreId="0" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="gmem_addr_read" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="8" opcode="read" nodeLabel="9.0" m_display="0" m_delay="7.3" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="block_addr" coreId="542329928" bitwidth="4" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
-      <dataInputObjs>alloca</dataInputObjs>
-      <dataInputObjs>zext</dataInputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="block_addr_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="10.0" m_display="0" m_delay="2.32" m_topoIndex="25" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>read</dataInputObjs>
-      <dataInputObjs>getelementptr</dataInputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="p_cast" rtlName="p_cast_fu_357_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="4" opcode="add" nodeLabel="10.0" m_display="0" m_delay="1.73" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>phi</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="exitcond" rtlName="exitcond_fu_363_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" nodeLabel="10.0" m_display="0" m_delay="1.3" m_topoIndex="27" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>br</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="br_ln0" coreId="1674796656" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <controlOutputObjs>loop-memcpy-expansion.preheader.i</controlOutputObjs>
+    <controlOutputObjs>for.inc.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="icmp_ln25_pr" lineNumber="25" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" bitwidth="1" opcode="phi" nodeLabel="20.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="25" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>loop-memcpy-expansion2.i</controlInputObjs>
-      <controlInputObjs>load-store-loop.i.i.preheader</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
-      <validLinenumbers>23</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="50" name="load-store-loop.i.i.preheader" type="BlockType">
-    <controlInputObjs>loop-memcpy-expansion2.i</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>load-store-loop.i.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln0" coreId="1674783440" opcode="br" nodeLabel="10.0" m_display="0" m_delay="1.58" m_topoIndex="29" m_clusterGroupNumber="-1">
-      <controlInputObjs>load-store-loop.i.i</controlInputObjs>
-    </node_objs>
-  </blocks>
-  <blocks id="57" name="load-store-loop.i.i" type="BlockType">
-    <controlInputObjs>load-store-loop.i.i.preheader</controlInputObjs>
-    <controlInputObjs>load-store-loop.i.i.split</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>for.body.lr.ph.i.i</controlOutputObjs>
-    <controlOutputObjs>load-store-loop.i.i.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="loop_index_i_i" coreId="0" bitwidth="4" opcode="phi" nodeLabel="11.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
-      <dataInputObjs>add</dataInputObjs>
-      <dataOutputObjs>zext</dataOutputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-      <dataOutputObjs>add</dataOutputObjs>
-      <controlInputObjs>load-store-loop.i.i.split</controlInputObjs>
-      <controlInputObjs>load-store-loop.i.i.preheader</controlInputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="loop_index_i_i_cast" rtlName="loop_index_i_i_cast_fu_369_p1" coreId="1674783440" bitwidth="64" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="exitcond123" rtlName="exitcond123_fu_374_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="1.3" m_topoIndex="32" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
+      <controlInputObjs>for.body.i.split</controlInputObjs>
+      <controlInputObjs>loop-memcpy-expansion2.preheader.i</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="empty_22" rtlName="empty_22_fu_380_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="4" opcode="add" nodeLabel="11.0" m_display="0" m_delay="1.73" m_topoIndex="33" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>phi</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="br_ln0" coreId="1674725472" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
-      <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>load-store-loop.i.i.split</controlInputObjs>
-      <controlInputObjs>for.body.lr.ph.i.i</controlInputObjs>
-    </node_objs>
-  </blocks>
-  <blocks id="63" name="load-store-loop.i.i.split" type="BlockType">
-    <controlInputObjs>load-store-loop.i.i</controlInputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>load-store-loop.i.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="pynqrypt_nonce_addr" coreId="1674758144" bitwidth="4" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <dataInputObjs>zext</dataInputObjs>
-      <dataOutputObjs>load</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="pynqrypt_nonce_load" coreName="ROM" implIndex="auto" control="no" opType="rom" coreId="95" bitwidth="8" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="36" m_clusterGroupNumber="-1">
-      <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="block_nonce_addr_4" coreId="1674725472" bitwidth="4" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="_ln0" rtlName="grp_pynqrypt_encrypt_Pipeline_4_fu_277" coreId="3192774368" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
-      <dataInputObjs>zext</dataInputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-      <constName>empty</constName>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>pynqrypt_encrypt_Pipeline_4</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="block_nonce_addr_4_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" opcode="store" nodeLabel="12.0" m_display="0" m_delay="2.32" m_topoIndex="40" m_clusterGroupNumber="-1">
-      <dataInputObjs>load</dataInputObjs>
-      <dataInputObjs>getelementptr</dataInputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="0" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
-      <controlInputObjs>load-store-loop.i.i</controlInputObjs>
-    </node_objs>
-  </blocks>
-  <blocks id="73" name="for.body.lr.ph.i.i" type="BlockType">
-    <controlInputObjs>load-store-loop.i.i</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>for.inc.i.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="block_nonce_addr_write_ln37" lineNumber="37" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="11.0" m_display="0" m_delay="2.32" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="trunc_ln2" lineNumber="37" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d1" coreId="0" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="15.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="37" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="block_nonce_addr_1_write_ln38" lineNumber="38" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="11.0" m_display="0" m_delay="2.32" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="block_nonce_addr_write_ln37" lineNumber="37" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="15.0" m_display="0" m_delay="2.32" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="37" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="trunc_ln3" lineNumber="38" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d0" coreId="0" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="15.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="38" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp" lineNumber="39" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="tmp_fu_386_p4" coreId="1674725472" contextFuncName="ctr_compute_nonce" bitwidth="2" opcode="partselect" nodeLabel="13.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="block_nonce_addr_1_write_ln38" lineNumber="38" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="15.0" m_display="0" m_delay="2.32" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="38" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="trunc_ln4" lineNumber="39" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d1" coreId="3191139376" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="16.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="39" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
       <dataInputObjs>load</dataInputObjs>
-      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="zext_ln39" lineNumber="39" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="zext_ln39_fu_395_p1" coreId="542329928" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="zext" nodeLabel="13.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="block_nonce_addr_2_write_ln39" lineNumber="39" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="16.0" m_display="0" m_delay="2.32" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="39" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
       <dataInputObjs>partselect</dataInputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="block_nonce_addr_2_write_ln39" lineNumber="39" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="13.0" m_display="0" m_delay="2.32" m_topoIndex="44" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="39" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
-      <dataInputObjs>zext</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="trunc_ln" lineNumber="40" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d1" coreId="1674748032" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="13.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="trunc_ln5" lineNumber="40" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="block_nonce_d0" coreId="3192546440" contextFuncName="ctr_compute_nonce" bitwidth="8" opcode="partselect" nodeLabel="16.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="40" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="block_nonce_addr_3_write_ln40" lineNumber="40" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="13.0" m_display="0" m_delay="2.32" m_topoIndex="46" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="block_nonce_addr_3_write_ln40" lineNumber="40" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_compute_nonce" opcode="store" nodeLabel="16.0" m_display="0" m_delay="2.32" m_topoIndex="54" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="40" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_compute_nonce"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="_ln27" lineNumber="27" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_aes_encrypt_block_fu_315" coreId="1674745168" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="_ln27" lineNumber="27" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_aes_encrypt_block_fu_283" coreId="1885414944" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="17.0" nodeLatency="1" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="27" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>aes_encrypt_block</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln45" lineNumber="45" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1673170752" contextFuncName="ctr_xor_block" opcode="br" nodeLabel="15.0" m_display="0" m_delay="1.58" m_topoIndex="48" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="45" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <controlInputObjs>for.inc.i.i</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291" coreId="1634956133" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="19.0" nodeLatency="1" m_display="0" m_delay="4.36" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>pynqrypt_encrypt_Pipeline_loop_ctr_xor_block</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="br_ln29" lineNumber="29" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1936942413" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="29" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <controlInputObjs>for.inc.i</controlInputObjs>
+      <controlInputObjs>loop-memcpy-expansion.preheader.i</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
+      <validLinenumbers>25</validLinenumbers>
       <validLinenumbers>37</validLinenumbers>
       <validLinenumbers>38</validLinenumbers>
       <validLinenumbers>39</validLinenumbers>
       <validLinenumbers>40</validLinenumbers>
       <validLinenumbers>27</validLinenumbers>
-      <validLinenumbers>45</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>29</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="80" name="for.inc.i.i" type="BlockType">
-    <controlInputObjs>for.body.lr.ph.i.i</controlInputObjs>
-    <controlInputObjs>for.inc.i.i.split</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>loop-memcpy-expansion.i.preheader</controlOutputObjs>
-    <controlOutputObjs>for.inc.i.i.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="i_1" originalName="i" coreId="0" bitwidth="5" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
-      <dataInputObjs>add</dataInputObjs>
-      <dataOutputObjs>zext</dataOutputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-      <dataOutputObjs>add</dataOutputObjs>
-      <controlInputObjs>for.body.lr.ph.i.i</controlInputObjs>
-      <controlInputObjs>for.inc.i.i.split</controlInputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="zext_ln45" lineNumber="45" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="zext_ln45_fu_410_p1" coreId="1673170752" contextFuncName="ctr_xor_block" bitwidth="64" opcode="zext" nodeLabel="16.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="45" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="icmp_ln45" lineNumber="45" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="icmp_ln45_fu_416_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ctr_xor_block" bitwidth="1" opcode="icmp" nodeLabel="16.0" m_display="0" m_delay="1.36" m_topoIndex="51" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="45" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>br</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="i_5" lineNumber="45" originalName="i" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="i_5_fu_422_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_xor_block" bitwidth="5" opcode="add" nodeLabel="16.0" m_display="0" m_delay="1.78" m_topoIndex="52" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="45" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>phi</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln45" lineNumber="45" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_xor_block" opcode="br" nodeLabel="16.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="45" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>for.inc.i.i.split</controlInputObjs>
-      <controlInputObjs>loop-memcpy-expansion.i.preheader</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
-      <validLinenumbers>45</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="89" name="for.inc.i.i.split" type="BlockType">
-    <controlInputObjs>for.inc.i.i</controlInputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>for.inc.i.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="block_nonce_addr_5" lineNumber="46" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1673170752" contextFuncName="ctr_xor_block" bitwidth="4" opcode="getelementptr" nodeLabel="16.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="46" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>alloca</dataInputObjs>
-      <dataInputObjs>zext</dataInputObjs>
-      <dataOutputObjs>load</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="block_nonce_load" lineNumber="46" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_xor_block" bitwidth="8" opcode="load" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="55" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="46" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>xor</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="block_addr_1" lineNumber="46" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="176" contextFuncName="ctr_xor_block" bitwidth="4" opcode="getelementptr" nodeLabel="16.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="46" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>alloca</dataInputObjs>
-      <dataInputObjs>zext</dataInputObjs>
-      <dataOutputObjs>load</dataOutputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="block_load" lineNumber="46" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_xor_block" bitwidth="8" opcode="load" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="57" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="46" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>xor</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="xor_ln46" lineNumber="46" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="xor_ln46_fu_428_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ctr_xor_block" bitwidth="8" opcode="xor" nodeLabel="17.0" m_display="0" m_delay="0.99" m_topoIndex="59" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="46" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>load</dataInputObjs>
-      <dataInputObjs>load</dataInputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="block_addr_1_write_ln46" lineNumber="46" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ctr_xor_block" opcode="store" nodeLabel="17.0" m_display="0" m_delay="2.32" m_topoIndex="60" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="46" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <dataInputObjs>xor</dataInputObjs>
-      <dataInputObjs>getelementptr</dataInputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln45" lineNumber="45" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1674854432" contextFuncName="ctr_xor_block" opcode="br" nodeLabel="17.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="45" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_xor_block"/>
-      <controlInputObjs>for.inc.i.i</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
-      <validLinenumbers>46</validLinenumbers>
-      <validLinenumbers>45</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="91" name="loop-memcpy-expansion.i.preheader" type="BlockType">
-    <controlInputObjs>for.inc.i.i</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>loop-memcpy-expansion.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="br_ln0" coreId="0" opcode="br" nodeLabel="16.0" m_display="0" m_delay="1.58" m_topoIndex="58" m_clusterGroupNumber="-1">
-      <controlInputObjs>loop-memcpy-expansion.i</controlInputObjs>
-    </node_objs>
-  </blocks>
-  <blocks id="101" name="loop-memcpy-expansion.i" type="BlockType">
-    <controlInputObjs>loop-memcpy-expansion.i.preheader</controlInputObjs>
-    <controlInputObjs>loop-memcpy-expansion.i</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
+  <blocks id="96" name="loop-memcpy-expansion.preheader.i" type="BlockType">
+    <controlInputObjs>post-loop-memcpy-expansion1.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.inc.i</controlOutputObjs>
-    <controlOutputObjs>loop-memcpy-expansion.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="loop_index_i5" coreId="0" bitwidth="4" opcode="phi" nodeLabel="18.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="gmem_addr_1" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3192858848" contextFuncName="ctr_encrypt" bitwidth="8" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
-      <dataOutputObjs>zext</dataOutputObjs>
-      <dataOutputObjs>add</dataOutputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-      <controlInputObjs>loop-memcpy-expansion.i</controlInputObjs>
-      <controlInputObjs>loop-memcpy-expansion.i.preheader</controlInputObjs>
-      <constName>empty</constName>
+      <dataOutputObjs>writereq</dataOutputObjs>
+      <dataOutputObjs>writeresp</dataOutputObjs>
+      <dataOutputObjs>gmem</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="loop_index_i5_cast4" rtlName="loop_index_i5_cast4_fu_435_p1" coreId="0" bitwidth="64" opcode="zext" nodeLabel="18.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="block_addr_2" coreId="0" bitwidth="4" opcode="getelementptr" nodeLabel="18.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
-      <dataInputObjs>alloca</dataInputObjs>
-      <dataInputObjs>zext</dataInputObjs>
-      <dataOutputObjs>load</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="block_load_1" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="8" opcode="load" nodeLabel="18.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="65" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="empty_30" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writereq" nodeLabel="20.0" m_display="0" m_delay="7.3" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>write</dataOutputObjs>
+      <dataInputObjs>select</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="gmem_addr_1_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" opcode="write" nodeLabel="20.0" m_display="0" m_delay="7.3" m_topoIndex="68" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="_ln24" lineNumber="24" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="grp_pynqrypt_encrypt_Pipeline_6_fu_298" coreId="0" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="21.0" nodeLatency="1" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="24" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>gmem</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>gmem</dataOutputObjs>
+      <constName>pynqrypt_encrypt_Pipeline_6</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="empty_31" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writeresp" nodeLabel="23.0" nodeLatency="4" m_display="0" m_delay="7.3" m_topoIndex="62" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>getelementptr</dataInputObjs>
-      <dataInputObjs>load</dataInputObjs>
-      <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="p_cast2" rtlName="p_cast2_fu_440_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="4" opcode="add" nodeLabel="18.0" m_display="0" m_delay="1.73" m_topoIndex="66" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>phi</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="exitcond14" rtlName="exitcond14_fu_446_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" nodeLabel="18.0" m_display="0" m_delay="1.3" m_topoIndex="67" m_clusterGroupNumber="-1">
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>br</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="br_ln0" coreId="1673170752" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
-      <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>loop-memcpy-expansion.i</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3192268112" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="27.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <controlInputObjs>for.inc.i</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
+      <validLinenumbers>24</validLinenumbers>
       <validLinenumbers>23</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="105" name="for.inc.i" type="BlockType">
-    <controlInputObjs>loop-memcpy-expansion.i</controlInputObjs>
+  <blocks id="103" name="for.inc.i" type="BlockType">
+    <controlInputObjs>post-loop-memcpy-expansion1.i</controlInputObjs>
+    <controlInputObjs>loop-memcpy-expansion.preheader.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>loop-memcpy-expansion2.preheader.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="i_6" lineNumber="23" originalName="i" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="i_6_fu_452_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_encrypt" bitwidth="15" opcode="add" nodeLabel="20.0" m_display="0" m_delay="1.94" m_topoIndex="70" m_clusterGroupNumber="-1">
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>for.body.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="indvars_iv6_load" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="0" contextFuncName="ctr_encrypt" bitwidth="64" opcode="load" nodeLabel="27.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="i_5" lineNumber="23" originalName="i" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="i_5_fu_464_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_encrypt" bitwidth="64" opcode="add" nodeLabel="27.0" m_display="0" m_delay="3.52" m_topoIndex="65" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="i_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2601103368" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="20.0" m_display="0" m_delay="1.58" m_topoIndex="71" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="add_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="add_ln23_fu_469_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ctr_encrypt" bitwidth="64" opcode="add" nodeLabel="27.0" m_display="0" m_delay="3.52" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="indvars_iv6_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3192494736" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="27.0" m_display="0" m_delay="1.58" m_topoIndex="67" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="i_write_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="3192496128" contextFuncName="ctr_encrypt" opcode="store" nodeLabel="27.0" m_display="0" m_delay="1.58" m_topoIndex="68" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <controlInputObjs>loop-memcpy-expansion2.preheader.i</controlInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="br_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="1130232385" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="27.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
+      <controlInputObjs>for.body.i</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
       <validLinenumbers>23</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="108" name="_ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.exit" type="BlockType">
-    <controlInputObjs>loop-memcpy-expansion2.preheader.i</controlInputObjs>
+  <blocks id="105" name="_ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.exit.loopexit" type="BlockType">
+    <controlInputObjs>for.body.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="empty_25" lineNumber="31" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="ctr_encrypt" bitwidth="1" opcode="writeresp" nodeLabel="8.0" nodeLatency="4" m_display="0" m_delay="7.3" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="31" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="_ln23" lineNumber="23" fileName="hw-impl/src/pynqrypt_hls.cpp" fileDirectory=".." coreId="1747460135" contextFuncName="pynqrypt_encrypt" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hw-impl/src/pynqrypt_hls.cpp" linenumber="23" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="pynqrypt_encrypt"/>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln21" lineNumber="21" fileName="hw-impl/src/pynqrypt_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="pynqrypt_encrypt" opcode="ret" nodeLabel="24.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="hw-impl/src/pynqrypt_hls.cpp" linenumber="21" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="pynqrypt_encrypt"/>
-    </node_objs>
-    <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
-      <validLinenumbers>31</validLinenumbers>
-    </fileValidLineNumbers>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt_hls.cpp">
-      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -698,425 +707,446 @@
   <ScheduleInfo time="22"/>
   <ScheduleInfo time="23"/>
   <ScheduleInfo time="24"/>
-  <regnodes realName="loop_index_i_i_cast_reg_520">
-    <nodeIds>52</nodeIds>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <regnodes realName="block_nonce_addr_1_reg_520">
+    <nodeIds>42</nodeIds>
   </regnodes>
-  <regnodes realName="block_nonce_addr_1_reg_486">
-    <nodeIds>21</nodeIds>
+  <regnodes realName="block_nonce_addr_2_reg_525">
+    <nodeIds>43</nodeIds>
   </regnodes>
-  <regnodes realName="exitcond14_reg_566">
-    <nodeIds>98</nodeIds>
+  <regnodes realName="icmp_ln25_reg_563">
+    <nodeIds>69</nodeIds>
   </regnodes>
-  <regnodes realName="p_cast2_reg_561">
-    <nodeIds>97</nodeIds>
+  <regnodes realName="i_reg_485">
+    <nodeIds>9</nodeIds>
   </regnodes>
-  <regnodes realName="gmem_addr_reg_469">
-    <nodeIds>24</nodeIds>
+  <regnodes realName="xor_ln23_reg_535">
+    <nodeIds>46</nodeIds>
   </regnodes>
-  <regnodes realName="loop_index3_i_reg_271">
-    <nodeIds>39</nodeIds>
+  <regnodes realName="ciphertext_read_reg_499">
+    <nodeIds>30</nodeIds>
   </regnodes>
-  <regnodes realName="block_addr_2_reg_556">
-    <nodeIds>94</nodeIds>
+  <regnodes realName="indvars_iv6_reg_492">
+    <nodeIds>10</nodeIds>
   </regnodes>
-  <regnodes realName="i_5_reg_541">
-    <nodeIds>78</nodeIds>
+  <regnodes realName="select_ln23_reg_568">
+    <nodeIds>59</nodeIds>
   </regnodes>
-  <regnodes realName="loop_index_i_i_reg_282">
-    <nodeIds>51</nodeIds>
+  <regnodes realName="select_ln24_reg_551">
+    <nodeIds>66</nodeIds>
   </regnodes>
-  <regnodes realName="block_nonce_addr_reg_481">
-    <nodeIds>20</nodeIds>
+  <regnodes realName="xor_ln24_reg_540">
+    <nodeIds>47</nodeIds>
   </regnodes>
-  <regnodes realName="pynqrypt_nonce_addr_reg_533">
-    <nodeIds>58</nodeIds>
+  <regnodes realName="gmem_addr_reg_581">
+    <nodeIds>72</nodeIds>
   </regnodes>
-  <regnodes realName="gmem_addr_1_reg_475">
-    <nodeIds>26</nodeIds>
+  <regnodes realName="icmp_ln25_pr_reg_230">
+    <nodeIds>77</nodeIds>
   </regnodes>
-  <regnodes realName="empty_22_reg_528">
-    <nodeIds>55</nodeIds>
+  <regnodes realName="add_ln24_2_reg_557">
+    <nodeIds>68</nodeIds>
   </regnodes>
-  <regnodes realName="i_1_reg_293">
-    <nodeIds>74</nodeIds>
+  <regnodes realName="gmem_addr_1_reg_586">
+    <nodeIds>91</nodeIds>
   </regnodes>
-  <regnodes realName="p_cast_reg_512">
+  <regnodes realName="add_ln24_1_reg_575">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="block_nonce_addr_3_reg_530">
     <nodeIds>44</nodeIds>
   </regnodes>
-  <regnodes realName="loop_index_i5_reg_304">
-    <nodeIds>92</nodeIds>
-  </regnodes>
-  <regnodes realName="block_nonce_addr_5_reg_546">
-    <nodeIds>82</nodeIds>
-  </regnodes>
-  <regnodes realName="gmem_addr_read_reg_507">
+  <regnodes realName="block_nonce_addr_reg_515">
     <nodeIds>41</nodeIds>
   </regnodes>
-  <regnodes realName="i_reg_462">
-    <nodeIds>7</nodeIds>
+  <regnodes realName="plaintext_length_read_reg_509">
+    <nodeIds>32</nodeIds>
   </regnodes>
-  <regnodes realName="block_nonce_addr_3_reg_496">
-    <nodeIds>23</nodeIds>
+  <regnodes realName="plaintext_read_reg_504">
+    <nodeIds>31</nodeIds>
   </regnodes>
-  <regnodes realName="block_nonce_addr_2_reg_491">
-    <nodeIds>22</nodeIds>
-  </regnodes>
-  <regnodes realName="block_addr_1_reg_551">
-    <nodeIds>84</nodeIds>
-  </regnodes>
-  <regnodes realName="block_load_1_reg_570">
-    <nodeIds>95</nodeIds>
-  </regnodes>
-  <expressionNodes realName="block_addr_2_gep_fu_264">
-    <nodeIds>94</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="loop_index_i5_phi_fu_308">
-    <nodeIds>92</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="p_cast2_fu_440">
-    <nodeIds>97</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_nonce_addr_4_gep_fu_242">
-    <nodeIds>60</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln45_fu_410">
-    <nodeIds>75</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_nonce_addr_3_gep_fu_199">
-    <nodeIds>23</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_nonce_alloca_fu_130">
-    <nodeIds>18</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_1_phi_fu_297">
-    <nodeIds>74</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="loop_index3_i_cast3_fu_352">
-    <nodeIds>40</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_nonce_addr_1_gep_fu_185">
-    <nodeIds>21</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xor_ln46_fu_428">
-    <nodeIds>86</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_nonce_addr_gep_fu_178">
-    <nodeIds>20</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="exitcond14_fu_446">
-    <nodeIds>98</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_5_fu_422">
-    <nodeIds>78</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="exitcond_fu_363">
-    <nodeIds>45</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln_fu_400">
-    <nodeIds>69</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="exitcond123_fu_374">
+  <expressionNodes realName="icmp_ln23_1_fu_339">
     <nodeIds>53</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="pynqrypt_nonce_addr_gep_fu_218">
-    <nodeIds>58</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_fu_386">
-    <nodeIds>66</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_1_fu_344">
-    <nodeIds>32</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_alloca_fu_134">
-    <nodeIds>19</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="gmem_addr_fu_324">
-    <nodeIds>24</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln45_fu_416">
-    <nodeIds>76</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="loop_index3_i_phi_fu_275">
-    <nodeIds>39</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_addr_gep_fu_206">
+  <expressionNodes realName="block_nonce_addr_1_gep_fu_200">
     <nodeIds>42</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="i_fu_126">
-    <nodeIds>7</nodeIds>
+  <expressionNodes realName="select_ln24_fu_370">
+    <nodeIds>66</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="loop_index_i_i_phi_fu_286">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="block_nonce_addr_5_gep_fu_250">
-    <nodeIds>82</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="gmem_addr_1_fu_330">
-    <nodeIds>26</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="loop_index_i_i_cast_fu_369">
-    <nodeIds>52</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="p_cast_fu_357">
+  <expressionNodes realName="block_nonce_addr_3_gep_fu_214">
     <nodeIds>44</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="empty_22_fu_380">
-    <nodeIds>55</nodeIds>
+  <expressionNodes realName="gmem_addr_fu_412">
+    <nodeIds>72</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="block_addr_1_gep_fu_257">
-    <nodeIds>84</nodeIds>
+  <expressionNodes realName="pynqrypt_round_keys_alloca_fu_142">
+    <nodeIds>33</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="loop_index_i5_cast4_fu_435">
-    <nodeIds>93</nodeIds>
+  <expressionNodes realName="icmp_ln23_fu_388">
+    <nodeIds>57</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="block_nonce_addr_2_gep_fu_192">
-    <nodeIds>22</nodeIds>
+  <expressionNodes realName="add_ln24_2_fu_378">
+    <nodeIds>68</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln39_fu_395">
+  <expressionNodes realName="icmp_ln25_fu_383">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln4_fu_438">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_134">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln2_fu_418">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln24_fu_344">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_nonce_addr_2_gep_fu_207">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_nonce_addr_gep_fu_193">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln24_3_fu_359">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_fu_469">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_alloca_fu_150">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_5_fu_464">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln23_1_fu_394">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln24_fu_353">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln5_fu_448">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln24_fu_348">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem_addr_1_fu_458">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln23_fu_315">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln3_fu_428">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln23_fu_400">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln23_fu_319">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln24_1_fu_364">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln24_1_fu_408">
     <nodeIds>67</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="i_6_fu_452">
-    <nodeIds>102</nodeIds>
+  <expressionNodes realName="block_nonce_alloca_fu_146">
+    <nodeIds>34</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_aes_encrypt_block_fu_315">
-    <nodeIds>71</nodeIds>
+  <expressionNodes realName="indvars_iv6_fu_138">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln24_fu_325">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pynqrypt_nonce_alloca_fu_158">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln25_pr_phi_fu_234">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pynqrypt_key_alloca_fu_154">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_pynqrypt_encrypt_Pipeline_1_fu_242">
+    <nodeIds>38</nodeIds>
   </moduleNodes>
-  <ioNodes realName="i_4_load_fu_341">
+  <moduleNodes realName="grp_aes_encrypt_block_fu_283">
+    <nodeIds>87</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_pynqrypt_encrypt_Pipeline_3_fu_268">
+    <nodeIds>74</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_pynqrypt_encrypt_Pipeline_4_fu_277">
+    <nodeIds>78</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291">
+    <nodeIds>88</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_pynqrypt_encrypt_Pipeline_6_fu_298">
+    <nodeIds>93</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_aes_generate_round_keys_fu_258">
+    <nodeIds>40</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_pynqrypt_encrypt_Pipeline_2_fu_250">
+    <nodeIds>39</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="grp_load_fu_307">
+    <nodeIds>56</nodeIds>
+    <nodeIds>97</nodeIds>
+  </ioNodes>
+  <ioNodes realName="plaintext_read_read_fu_168">
     <nodeIds>31</nodeIds>
   </ioNodes>
-  <ioNodes realName="write_ln23_write_fu_170">
-    <nodeIds>96</nodeIds>
+  <ioNodes realName="i_4_load_fu_336">
+    <nodeIds>52</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln23_store_fu_336">
-    <nodeIds>28</nodeIds>
+  <ioNodes realName="ciphertext_read_read_fu_162">
+    <nodeIds>30</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln23_store_fu_457">
-    <nodeIds>103</nodeIds>
+  <ioNodes realName="grp_readreq_fu_180">
+    <nodeIds>73</nodeIds>
   </ioNodes>
-  <ioNodes realName="plaintext_read_read_fu_144">
-    <nodeIds>17</nodeIds>
+  <ioNodes realName="store_ln23_store_fu_480">
+    <nodeIds>101</nodeIds>
   </ioNodes>
-  <ioNodes realName="grp_writeresp_fu_157">
-    <nodeIds>27</nodeIds>
-    <nodeIds>106</nodeIds>
+  <ioNodes realName="store_ln23_store_fu_331">
+    <nodeIds>48</nodeIds>
   </ioNodes>
-  <ioNodes realName="gmem_addr_read_read_fu_165">
-    <nodeIds>41</nodeIds>
+  <ioNodes realName="grp_writeresp_fu_186">
+    <nodeIds>92</nodeIds>
+    <nodeIds>94</nodeIds>
   </ioNodes>
-  <ioNodes realName="ciphertext_read_read_fu_138">
-    <nodeIds>16</nodeIds>
+  <ioNodes realName="plaintext_length_read_read_fu_174">
+    <nodeIds>32</nodeIds>
   </ioNodes>
-  <ioNodes realName="grp_readreq_fu_150">
-    <nodeIds>25</nodeIds>
+  <ioNodes realName="store_ln23_store_fu_310">
+    <nodeIds>49</nodeIds>
   </ioNodes>
-  <memoryPorts dataString="block">
-    <nodeIds>43</nodeIds>
-    <nodeIds>85</nodeIds>
-    <nodeIds>87</nodeIds>
-    <nodeIds>95</nodeIds>
-  </memoryPorts>
+  <ioNodes realName="store_ln23_store_fu_475">
+    <nodeIds>100</nodeIds>
+  </ioNodes>
   <memoryPorts dataString="block_nonce">
-    <nodeIds>65</nodeIds>
-    <nodeIds>61</nodeIds>
-    <nodeIds>68</nodeIds>
+    <nodeIds>82</nodeIds>
+    <nodeIds>86</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="block_nonce" portID="1">
-    <nodeIds>64</nodeIds>
-    <nodeIds>70</nodeIds>
-    <nodeIds>83</nodeIds>
+    <nodeIds>80</nodeIds>
+    <nodeIds>84</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="block_nonce" portID="100">
-    <nodeIds>71</nodeIds>
+    <nodeIds>78</nodeIds>
+    <nodeIds>87</nodeIds>
+    <nodeIds>88</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="crypto_aes_rcon" portID="100">
+    <nodeIds>40</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="crypto_aes_sbox" portID="100">
-    <nodeIds>71</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="pynqrypt_nonce">
-    <nodeIds>59</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="pynqrypt_round_keys" portID="100">
-    <nodeIds>71</nodeIds>
+    <nodeIds>40</nodeIds>
+    <nodeIds>87</nodeIds>
   </memoryPorts>
   <ioPorts name="ciphertext">
     <contents name="read">
-      <nodeIds>16</nodeIds>
+      <nodeIds>30</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="gmem">
-    <contents name="read">
-      <nodeIds>41</nodeIds>
+    <contents name="call">
+      <nodeIds>74</nodeIds>
+      <nodeIds>93</nodeIds>
     </contents>
     <contents name="readreq">
-      <nodeIds>25</nodeIds>
-    </contents>
-    <contents name="write">
-      <nodeIds>96</nodeIds>
+      <nodeIds>73</nodeIds>
     </contents>
     <contents name="writereq">
-      <nodeIds>27</nodeIds>
+      <nodeIds>92</nodeIds>
     </contents>
     <contents name="writeresp">
-      <nodeIds>106</nodeIds>
+      <nodeIds>94</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="plaintext">
     <contents name="read">
-      <nodeIds>17</nodeIds>
+      <nodeIds>31</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="plaintext_length">
+    <contents name="read">
+      <nodeIds>32</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
     <states id="1">
-      <operations id="7" stage="1" latency="1"/>
-      <operations id="16" stage="1" latency="1"/>
-      <operations id="17" stage="1" latency="1"/>
-      <operations id="18" stage="1" latency="1"/>
-      <operations id="19" stage="1" latency="1"/>
-      <operations id="24" stage="1" latency="1"/>
-      <operations id="26" stage="1" latency="1"/>
-      <operations id="28" stage="1" latency="1"/>
-    </states>
-    <states id="2">
-      <operations id="25" stage="7" latency="7"/>
-      <operations id="27" stage="1" latency="1"/>
-    </states>
-    <states id="3">
-      <operations id="25" stage="6" latency="7"/>
-    </states>
-    <states id="4">
-      <operations id="25" stage="5" latency="7"/>
-    </states>
-    <states id="5">
-      <operations id="25" stage="4" latency="7"/>
-    </states>
-    <states id="6">
-      <operations id="25" stage="3" latency="7"/>
-    </states>
-    <states id="7">
-      <operations id="25" stage="2" latency="7"/>
-    </states>
-    <states id="8">
-      <operations id="8" stage="1" latency="1"/>
       <operations id="9" stage="1" latency="1"/>
       <operations id="10" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="2" latency="2"/>
+      <operations id="39" stage="2" latency="2"/>
+      <operations id="49" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="38" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="40" stage="2" latency="2"/>
+    </states>
+    <states id="4">
       <operations id="11" stage="1" latency="1"/>
       <operations id="12" stage="1" latency="1"/>
       <operations id="13" stage="1" latency="1"/>
       <operations id="14" stage="1" latency="1"/>
       <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
       <operations id="20" stage="1" latency="1"/>
       <operations id="21" stage="1" latency="1"/>
       <operations id="22" stage="1" latency="1"/>
       <operations id="23" stage="1" latency="1"/>
-      <operations id="25" stage="1" latency="7"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
       <operations id="29" stage="1" latency="1"/>
-    </states>
-    <states id="9">
+      <operations id="30" stage="1" latency="1"/>
       <operations id="31" stage="1" latency="1"/>
       <operations id="32" stage="1" latency="1"/>
-      <operations id="33" stage="1" latency="1"/>
-      <operations id="34" stage="1" latency="1"/>
-      <operations id="36" stage="1" latency="1"/>
-      <operations id="37" stage="1" latency="1"/>
-      <operations id="106" stage="5" latency="5"/>
-    </states>
-    <states id="10">
+      <operations id="40" stage="1" latency="2"/>
       <operations id="41" stage="1" latency="1"/>
-    </states>
-    <states id="11">
-      <operations id="39" stage="1" latency="1"/>
-      <operations id="40" stage="1" latency="1"/>
       <operations id="42" stage="1" latency="1"/>
       <operations id="43" stage="1" latency="1"/>
       <operations id="44" stage="1" latency="1"/>
       <operations id="45" stage="1" latency="1"/>
       <operations id="46" stage="1" latency="1"/>
       <operations id="47" stage="1" latency="1"/>
-      <operations id="49" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
     </states>
-    <states id="12">
-      <operations id="51" stage="1" latency="1"/>
+    <states id="5">
       <operations id="52" stage="1" latency="1"/>
       <operations id="53" stage="1" latency="1"/>
       <operations id="54" stage="1" latency="1"/>
-      <operations id="55" stage="1" latency="1"/>
-      <operations id="56" stage="1" latency="1"/>
-      <operations id="58" stage="1" latency="1"/>
-      <operations id="59" stage="2" latency="2"/>
-      <operations id="64" stage="1" latency="1"/>
-      <operations id="65" stage="1" latency="1"/>
-    </states>
-    <states id="13">
-      <operations id="59" stage="1" latency="2"/>
-      <operations id="60" stage="1" latency="1"/>
       <operations id="61" stage="1" latency="1"/>
       <operations id="62" stage="1" latency="1"/>
-    </states>
-    <states id="14">
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
       <operations id="66" stage="1" latency="1"/>
-      <operations id="67" stage="1" latency="1"/>
       <operations id="68" stage="1" latency="1"/>
       <operations id="69" stage="1" latency="1"/>
-      <operations id="70" stage="1" latency="1"/>
-    </states>
-    <states id="15">
-      <operations id="71" stage="2" latency="2"/>
-    </states>
-    <states id="16">
-      <operations id="71" stage="1" latency="2"/>
-      <operations id="72" stage="1" latency="1"/>
-    </states>
-    <states id="17">
-      <operations id="74" stage="1" latency="1"/>
-      <operations id="75" stage="1" latency="1"/>
-      <operations id="76" stage="1" latency="1"/>
-      <operations id="77" stage="1" latency="1"/>
-      <operations id="78" stage="1" latency="1"/>
-      <operations id="79" stage="1" latency="1"/>
-      <operations id="82" stage="1" latency="1"/>
-      <operations id="83" stage="2" latency="2"/>
-      <operations id="84" stage="1" latency="1"/>
-      <operations id="85" stage="2" latency="2"/>
-      <operations id="90" stage="1" latency="1"/>
-    </states>
-    <states id="18">
-      <operations id="81" stage="1" latency="1"/>
-      <operations id="83" stage="1" latency="2"/>
-      <operations id="85" stage="1" latency="2"/>
-      <operations id="86" stage="1" latency="1"/>
-      <operations id="87" stage="1" latency="1"/>
-      <operations id="88" stage="1" latency="1"/>
-    </states>
-    <states id="19">
-      <operations id="92" stage="1" latency="1"/>
-      <operations id="93" stage="1" latency="1"/>
-      <operations id="94" stage="1" latency="1"/>
-      <operations id="95" stage="2" latency="2"/>
-      <operations id="97" stage="1" latency="1"/>
-      <operations id="98" stage="1" latency="1"/>
-    </states>
-    <states id="20">
-      <operations id="95" stage="1" latency="2"/>
-    </states>
-    <states id="21">
-      <operations id="96" stage="1" latency="1"/>
-      <operations id="99" stage="1" latency="1"/>
-      <operations id="100" stage="1" latency="1"/>
-      <operations id="102" stage="1" latency="1"/>
-      <operations id="103" stage="1" latency="1"/>
       <operations id="104" stage="1" latency="1"/>
     </states>
+    <states id="6">
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="7" latency="7"/>
+    </states>
+    <states id="7">
+      <operations id="73" stage="6" latency="7"/>
+    </states>
+    <states id="8">
+      <operations id="73" stage="5" latency="7"/>
+    </states>
+    <states id="9">
+      <operations id="73" stage="4" latency="7"/>
+    </states>
+    <states id="10">
+      <operations id="73" stage="3" latency="7"/>
+    </states>
+    <states id="11">
+      <operations id="73" stage="2" latency="7"/>
+    </states>
+    <states id="12">
+      <operations id="73" stage="1" latency="7"/>
+    </states>
+    <states id="13">
+      <operations id="74" stage="2" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="74" stage="1" latency="2"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="78" stage="2" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="78" stage="1" latency="2"/>
+    </states>
+    <states id="16">
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+    </states>
+    <states id="17">
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <states id="18">
+      <operations id="87" stage="2" latency="2"/>
+    </states>
+    <states id="19">
+      <operations id="87" stage="1" latency="2"/>
+    </states>
+    <states id="20">
+      <operations id="88" stage="2" latency="2"/>
+    </states>
+    <states id="21">
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="2"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+    </states>
     <states id="22">
-      <operations id="106" stage="4" latency="5"/>
+      <operations id="93" stage="2" latency="2"/>
     </states>
     <states id="23">
-      <operations id="106" stage="3" latency="5"/>
+      <operations id="93" stage="1" latency="2"/>
     </states>
     <states id="24">
-      <operations id="106" stage="2" latency="5"/>
+      <operations id="94" stage="5" latency="5"/>
     </states>
     <states id="25">
-      <operations id="106" stage="1" latency="5"/>
-      <operations id="107" stage="1" latency="1"/>
+      <operations id="94" stage="4" latency="5"/>
+    </states>
+    <states id="26">
+      <operations id="94" stage="3" latency="5"/>
+    </states>
+    <states id="27">
+      <operations id="94" stage="2" latency="5"/>
+    </states>
+    <states id="28">
+      <operations id="94" stage="1" latency="5"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
@@ -1136,13 +1166,13 @@
     <transitions inState="6" outState="7">
       <condition id="-1"/>
     </transitions>
+    <transitions inState="6" outState="14">
+      <condition id="-1"/>
+    </transitions>
     <transitions inState="7" outState="8">
       <condition id="-1"/>
     </transitions>
     <transitions inState="8" outState="9">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="9" outState="22">
       <condition id="-1"/>
     </transitions>
     <transitions inState="9" outState="10">
@@ -1151,19 +1181,13 @@
     <transitions inState="10" outState="11">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="11" outState="10">
-      <condition id="-1"/>
-    </transitions>
     <transitions inState="11" outState="12">
       <condition id="-1"/>
     </transitions>
     <transitions inState="12" outState="13">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="12" outState="14">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="13" outState="12">
+    <transitions inState="13" outState="14">
       <condition id="-1"/>
     </transitions>
     <transitions inState="14" outState="15">
@@ -1178,10 +1202,7 @@
     <transitions inState="17" outState="18">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="18" outState="17">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="17" outState="19">
+    <transitions inState="18" outState="19">
       <condition id="-1"/>
     </transitions>
     <transitions inState="19" outState="20">
@@ -1190,10 +1211,10 @@
     <transitions inState="20" outState="21">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="21" outState="19">
+    <transitions inState="21" outState="22">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="21" outState="9">
+    <transitions inState="21" outState="28">
       <condition id="-1"/>
     </transitions>
     <transitions inState="22" outState="23">
@@ -1205,71 +1226,41 @@
     <transitions inState="24" outState="25">
       <condition id="-1"/>
     </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="5">
+      <condition id="-1"/>
+    </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="pynqrypt_encrypt" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="342028" mMaxLatency="342028">
+    <cfgRegions mId="1" mTag="pynqrypt_encrypt" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
       <subRegions>2</subRegions>
       <subRegions>3</subRegions>
-      <subRegions>13</subRegions>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="7" mMaxLatency="7">
-      <basicBlocks>30</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="3" mTag="loop_ctr_encrypt" mII="-1" mDepth="-1" mMinTripCount="1024" mMaxTripCount="1024" mMinLatency="342016" mMaxLatency="342016" mType="1">
       <subRegions>4</subRegions>
-      <subRegions>5</subRegions>
-      <subRegions>6</subRegions>
-      <subRegions>7</subRegions>
-      <subRegions>8</subRegions>
-      <subRegions>9</subRegions>
-      <subRegions>10</subRegions>
-      <subRegions>11</subRegions>
-      <subRegions>12</subRegions>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>35</basicBlocks>
-      <basicBlocks>38</basicBlocks>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="204" mMaxLatency="204">
+      <basicBlocks>51</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="5" mTag="loop_ctr_encrypt_1" mII="-1" mDepth="-1" mMinTripCount="16" mMaxTripCount="16" mMinLatency="31" mMaxLatency="31" mType="1">
-      <basicBlocks>48</basicBlocks>
+    <cfgRegions mId="3" mTag="loop_ctr_encrypt" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>55</basicBlocks>
+      <basicBlocks>71</basicBlocks>
+      <basicBlocks>76</basicBlocks>
+      <basicBlocks>90</basicBlocks>
+      <basicBlocks>96</basicBlocks>
+      <basicBlocks>103</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>50</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="7" mTag="loop_ctr_encrypt_2" mII="-1" mDepth="-1" mMinTripCount="12" mMaxTripCount="12" mMinLatency="24" mMaxLatency="24" mType="1">
-      <basicBlocks>57</basicBlocks>
-      <basicBlocks>63</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="8" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="195" mMaxLatency="195">
-      <basicBlocks>73</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="9" mTag="loop_ctr_xor_block" mII="-1" mDepth="-1" mMinTripCount="16" mMaxTripCount="16" mMinLatency="32" mMaxLatency="32" mType="1">
-      <basicBlocks>80</basicBlocks>
-      <basicBlocks>89</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="10" mTag="Region 4" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>91</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="11" mTag="loop_ctr_encrypt_4" mII="-1" mDepth="-1" mMinTripCount="16" mMaxTripCount="16" mMinLatency="47" mMaxLatency="47" mType="1">
-      <basicBlocks>101</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="12" mTag="Region 5" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
       <basicBlocks>105</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="13" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4" mMaxLatency="4">
-      <basicBlocks>108</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

@@ -18,6 +18,12 @@
 using namespace std;
 
 // wrapc file define:
+#define AUTOTB_TVIN_key "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_key.dat"
+#define AUTOTB_TVOUT_key "../tv/cdatafile/c.pynqrypt_encrypt.autotvout_key.dat"
+#define AUTOTB_TVIN_nonce "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_nonce.dat"
+#define AUTOTB_TVOUT_nonce "../tv/cdatafile/c.pynqrypt_encrypt.autotvout_nonce.dat"
+#define AUTOTB_TVIN_plaintext_length "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_plaintext_length.dat"
+#define AUTOTB_TVOUT_plaintext_length "../tv/cdatafile/c.pynqrypt_encrypt.autotvout_plaintext_length.dat"
 #define AUTOTB_TVIN_plaintext "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_plaintext.dat"
 #define AUTOTB_TVOUT_plaintext "../tv/cdatafile/c.pynqrypt_encrypt.autotvout_plaintext.dat"
 #define AUTOTB_TVIN_ciphertext "../tv/cdatafile/c.pynqrypt_encrypt.autotvin_ciphertext.dat"
@@ -952,13 +958,24 @@ namespace hls::sim
 
 
 extern "C"
-void pynqrypt_encrypt_hw_stub_wrapper(void*, void*);
+void pynqrypt_encrypt_hw_stub_wrapper(void*, void*, hls::sim::Byte<8>, void*, void*);
 
 extern "C"
-void apatb_pynqrypt_encrypt_hw(void* __xlx_apatb_param_plaintext, void* __xlx_apatb_param_ciphertext)
+void apatb_pynqrypt_encrypt_hw(void* __xlx_apatb_param_key, void* __xlx_apatb_param_nonce, hls::sim::Byte<8> __xlx_apatb_param_plaintext_length, void* __xlx_apatb_param_plaintext, void* __xlx_apatb_param_ciphertext)
 {
-  hls::sim::Byte<4> __xlx_offset_byte_param_plaintext;
   static hls::sim::Register port0 {
+    .name = "plaintext_length",
+    .width = 64,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_plaintext_length),
+#endif
+  };
+  port0.param = &__xlx_apatb_param_plaintext_length;
+
+  hls::sim::Byte<4> __xlx_offset_byte_param_plaintext;
+  static hls::sim::Register port1 {
     .name = "plaintext",
     .width = 32,
 #ifdef POST_CHECK
@@ -967,10 +984,10 @@ void apatb_pynqrypt_encrypt_hw(void* __xlx_apatb_param_plaintext, void* __xlx_ap
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_plaintext),
 #endif
   };
-  port0.param = &__xlx_offset_byte_param_plaintext;
+  port1.param = &__xlx_offset_byte_param_plaintext;
 
   hls::sim::Byte<4> __xlx_offset_byte_param_ciphertext;
-  static hls::sim::Register port1 {
+  static hls::sim::Register port2 {
     .name = "ciphertext",
     .width = 32,
 #ifdef POST_CHECK
@@ -979,12 +996,12 @@ void apatb_pynqrypt_encrypt_hw(void* __xlx_apatb_param_plaintext, void* __xlx_ap
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_ciphertext),
 #endif
   };
-  port1.param = &__xlx_offset_byte_param_ciphertext;
+  port2.param = &__xlx_offset_byte_param_ciphertext;
 
 #ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port2 {
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port3 {
 #else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port2 {
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port3 {
 #endif
     .width = 8,
     .asize = 1,
@@ -1011,29 +1028,83 @@ void apatb_pynqrypt_encrypt_hw(void* __xlx_apatb_param_plaintext, void* __xlx_ap
   };
   __xlx_offset_byte_param_plaintext = 0*1;
   __xlx_offset_byte_param_ciphertext = 16384*1;
-  port2.param = { __xlx_apatb_param_plaintext, __xlx_apatb_param_ciphertext };
-  port2.depth = { 16384, 16384 };
-  port2.offset = { 0, 16384 };
-  port2.hasWrite = { true, true };
+  port3.param = { __xlx_apatb_param_plaintext, __xlx_apatb_param_ciphertext };
+  port3.depth = { 16384, 16384 };
+  port3.offset = { 0, 16384 };
+  port3.hasWrite = { true, true };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port4 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port4 {
+#endif
+    .width = 8,
+    .asize = 1,
+    .hbm = false,
+    .name = { "key" },
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_key),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_key),
+#endif
+#endif
+  };
+  port4.param = { __xlx_apatb_param_key };
+  port4.depth = { 16 };
+  port4.offset = {  };
+  port4.hasWrite = { false };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port5 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port5 {
+#endif
+    .width = 8,
+    .asize = 1,
+    .hbm = false,
+    .name = { "nonce" },
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_nonce),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_nonce),
+#endif
+#endif
+  };
+  port5.param = { __xlx_apatb_param_nonce };
+  port5.depth = { 12 };
+  port5.offset = {  };
+  port5.hasWrite = { false };
 
   refine_signal_handler();
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port2);
+    check(port3);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
     dump(port0, port0.iwriter, tcl.AESL_transaction);
     dump(port1, port1.iwriter, tcl.AESL_transaction);
     dump(port2, port2.iwriter, tcl.AESL_transaction);
+    dump(port3, port3.iwriter, tcl.AESL_transaction);
+    dump(port4, port4.iwriter, tcl.AESL_transaction);
+    dump(port5, port5.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
+    port3.doTCL(tcl);
+    port4.doTCL(tcl);
+    port5.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    pynqrypt_encrypt_hw_stub_wrapper(__xlx_apatb_param_plaintext, __xlx_apatb_param_ciphertext);
+    pynqrypt_encrypt_hw_stub_wrapper(__xlx_apatb_param_key, __xlx_apatb_param_nonce, __xlx_apatb_param_plaintext_length, __xlx_apatb_param_plaintext, __xlx_apatb_param_ciphertext);
     CodeState = DUMP_OUTPUTS;
-    dump(port2, port2.owriter, tcl.AESL_transaction);
+    dump(port3, port3.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {
