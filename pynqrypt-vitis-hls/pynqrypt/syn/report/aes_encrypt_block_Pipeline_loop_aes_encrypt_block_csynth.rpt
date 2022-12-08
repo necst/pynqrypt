@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block'
 ================================================================
-* Date:           Wed Dec  7 00:11:51 2022
+* Date:           Fri Dec  9 00:07:20 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -76,13 +76,13 @@
     N/A
 
     * Memory: 
-    +-----------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |         Memory        |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
-    +-----------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |pynqrypt_round_keys_U  |aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb  |        1|  0|   0|    0|   176|    8|     1|         1408|
-    +-----------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |Total                  |                                                                                  |        1|  0|   0|    0|   176|    8|     1|         1408|
-    +-----------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory      |                                     Module                                    | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |crypto_aes_sbox_U  |aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total              |                                                                               |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------------+-------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
 
     * FIFO: 
     N/A
@@ -258,25 +258,25 @@
     |conv6_i36_7_phi_fu_170                |   8|   0|    8|          0|
     |conv6_i36_8_phi_fu_166                |   8|   0|    8|          0|
     |conv6_i36_9_phi_fu_162                |   8|   0|    8|          0|
-    |crypto_aes_sbox_load_11_reg_2281      |   8|   0|    8|          0|
-    |crypto_aes_sbox_load_15_reg_2423      |   8|   0|    8|          0|
-    |crypto_aes_sbox_load_2_reg_2309       |   8|   0|    8|          0|
-    |crypto_aes_sbox_load_3_reg_2316       |   8|   0|    8|          0|
-    |crypto_aes_sbox_load_5_reg_2368       |   8|   0|    8|          0|
-    |crypto_aes_sbox_load_7_reg_2405       |   8|   0|    8|          0|
-    |crypto_aes_sbox_load_9_reg_2451       |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_10_reg_2405      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_12_reg_2451      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_14_reg_2281      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_18_reg_2423      |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_5_reg_2309       |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_6_reg_2316       |   8|   0|    8|          0|
+    |crypto_aes_sbox_load_8_reg_2368       |   8|   0|    8|          0|
     |empty_fu_198                          |   8|   0|    8|          0|
     |i_fu_202                              |   4|   0|    4|          0|
-    |pynqrypt_round_keys_load_10_reg_2436  |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_11_reg_2473  |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_1_reg_2251   |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_2_reg_2256   |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_3_reg_2289   |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_4_reg_2294   |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_6_reg_2346   |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_7_reg_2385   |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_8_reg_2390   |   8|   0|    8|          0|
-    |pynqrypt_round_keys_load_9_reg_2431   |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_16_reg_2251  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_17_reg_2256  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_18_reg_2289  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_19_reg_2294  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_21_reg_2346  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_22_reg_2385  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_23_reg_2390  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_24_reg_2431  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_25_reg_2436  |   8|   0|    8|          0|
+    |pynqrypt_round_keys_load_26_reg_2473  |   8|   0|    8|          0|
     |pynqrypt_round_keys_load_reg_2226     |   8|   0|    8|          0|
     |reg_729                               |   8|   0|    8|          0|
     |reg_734                               |   8|   0|    8|          0|
@@ -307,63 +307,63 @@
 == Interface
 ================================================================
 * Summary: 
-+-----------------------------+-----+-----+------------+---------------------------------------------------+--------------+
-|          RTL Ports          | Dir | Bits|  Protocol  |                   Source Object                   |    C Type    |
-+-----------------------------+-----+-----+------------+---------------------------------------------------+--------------+
-|ap_clk                       |   in|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
-|ap_rst                       |   in|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
-|ap_start                     |   in|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
-|ap_done                      |  out|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
-|ap_idle                      |  out|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
-|ap_ready                     |  out|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
-|xor_ln233                    |   in|    8|     ap_none|                                          xor_ln233|        scalar|
-|state_address0               |  out|    4|   ap_memory|                                              state|         array|
-|state_ce0                    |  out|    1|   ap_memory|                                              state|         array|
-|state_we0                    |  out|    1|   ap_memory|                                              state|         array|
-|state_d0                     |  out|    8|   ap_memory|                                              state|         array|
-|state_q0                     |   in|    8|   ap_memory|                                              state|         array|
-|state_address1               |  out|    4|   ap_memory|                                              state|         array|
-|state_ce1                    |  out|    1|   ap_memory|                                              state|         array|
-|state_we1                    |  out|    1|   ap_memory|                                              state|         array|
-|state_d1                     |  out|    8|   ap_memory|                                              state|         array|
-|state_q1                     |   in|    8|   ap_memory|                                              state|         array|
-|p_out                        |  out|    8|      ap_vld|                                              p_out|       pointer|
-|p_out_ap_vld                 |  out|    1|      ap_vld|                                              p_out|       pointer|
-|conv6_i36_1_phi_out          |  out|    8|      ap_vld|                                conv6_i36_1_phi_out|       pointer|
-|conv6_i36_1_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_1_phi_out|       pointer|
-|conv6_i36_2_phi_out          |  out|    8|      ap_vld|                                conv6_i36_2_phi_out|       pointer|
-|conv6_i36_2_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_2_phi_out|       pointer|
-|conv6_i36_3_phi_out          |  out|    8|      ap_vld|                                conv6_i36_3_phi_out|       pointer|
-|conv6_i36_3_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_3_phi_out|       pointer|
-|conv6_i36_4_phi_out          |  out|    8|      ap_vld|                                conv6_i36_4_phi_out|       pointer|
-|conv6_i36_4_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_4_phi_out|       pointer|
-|conv6_i36_5_phi_out          |  out|    8|      ap_vld|                                conv6_i36_5_phi_out|       pointer|
-|conv6_i36_5_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_5_phi_out|       pointer|
-|conv6_i36_6_phi_out          |  out|    8|      ap_vld|                                conv6_i36_6_phi_out|       pointer|
-|conv6_i36_6_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_6_phi_out|       pointer|
-|conv6_i36_7_phi_out          |  out|    8|      ap_vld|                                conv6_i36_7_phi_out|       pointer|
-|conv6_i36_7_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_7_phi_out|       pointer|
-|conv6_i36_8_phi_out          |  out|    8|      ap_vld|                                conv6_i36_8_phi_out|       pointer|
-|conv6_i36_8_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_8_phi_out|       pointer|
-|conv6_i36_9_phi_out          |  out|    8|      ap_vld|                                conv6_i36_9_phi_out|       pointer|
-|conv6_i36_9_phi_out_ap_vld   |  out|    1|      ap_vld|                                conv6_i36_9_phi_out|       pointer|
-|conv6_i36_10_phi_out         |  out|    8|      ap_vld|                               conv6_i36_10_phi_out|       pointer|
-|conv6_i36_10_phi_out_ap_vld  |  out|    1|      ap_vld|                               conv6_i36_10_phi_out|       pointer|
-|conv6_i36_11_phi_out         |  out|    8|      ap_vld|                               conv6_i36_11_phi_out|       pointer|
-|conv6_i36_11_phi_out_ap_vld  |  out|    1|      ap_vld|                               conv6_i36_11_phi_out|       pointer|
-|conv6_i36_12_phi_out         |  out|    8|      ap_vld|                               conv6_i36_12_phi_out|       pointer|
-|conv6_i36_12_phi_out_ap_vld  |  out|    1|      ap_vld|                               conv6_i36_12_phi_out|       pointer|
-|conv6_i36_13_phi_out         |  out|    8|      ap_vld|                               conv6_i36_13_phi_out|       pointer|
-|conv6_i36_13_phi_out_ap_vld  |  out|    1|      ap_vld|                               conv6_i36_13_phi_out|       pointer|
-|conv6_i36_14_phi_out         |  out|    8|      ap_vld|                               conv6_i36_14_phi_out|       pointer|
-|conv6_i36_14_phi_out_ap_vld  |  out|    1|      ap_vld|                               conv6_i36_14_phi_out|       pointer|
-|conv6_i36_15_phi_out         |  out|    8|      ap_vld|                               conv6_i36_15_phi_out|       pointer|
-|conv6_i36_15_phi_out_ap_vld  |  out|    1|      ap_vld|                               conv6_i36_15_phi_out|       pointer|
-|crypto_aes_sbox_address0     |  out|    8|   ap_memory|                                    crypto_aes_sbox|         array|
-|crypto_aes_sbox_ce0          |  out|    1|   ap_memory|                                    crypto_aes_sbox|         array|
-|crypto_aes_sbox_q0           |   in|    8|   ap_memory|                                    crypto_aes_sbox|         array|
-|crypto_aes_sbox_address1     |  out|    8|   ap_memory|                                    crypto_aes_sbox|         array|
-|crypto_aes_sbox_ce1          |  out|    1|   ap_memory|                                    crypto_aes_sbox|         array|
-|crypto_aes_sbox_q1           |   in|    8|   ap_memory|                                    crypto_aes_sbox|         array|
-+-----------------------------+-----+-----+------------+---------------------------------------------------+--------------+
++------------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |                   Source Object                   |    C Type    |
++------------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  aes_encrypt_block_Pipeline_loop_aes_encrypt_block|  return value|
+|xor_ln233                     |   in|    8|     ap_none|                                          xor_ln233|        scalar|
+|state_address0                |  out|    4|   ap_memory|                                              state|         array|
+|state_ce0                     |  out|    1|   ap_memory|                                              state|         array|
+|state_we0                     |  out|    1|   ap_memory|                                              state|         array|
+|state_d0                      |  out|    8|   ap_memory|                                              state|         array|
+|state_q0                      |   in|    8|   ap_memory|                                              state|         array|
+|state_address1                |  out|    4|   ap_memory|                                              state|         array|
+|state_ce1                     |  out|    1|   ap_memory|                                              state|         array|
+|state_we1                     |  out|    1|   ap_memory|                                              state|         array|
+|state_d1                      |  out|    8|   ap_memory|                                              state|         array|
+|state_q1                      |   in|    8|   ap_memory|                                              state|         array|
+|pynqrypt_round_keys_address0  |  out|    8|   ap_memory|                                pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_ce0       |  out|    1|   ap_memory|                                pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_q0        |   in|    8|   ap_memory|                                pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_address1  |  out|    8|   ap_memory|                                pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_ce1       |  out|    1|   ap_memory|                                pynqrypt_round_keys|         array|
+|pynqrypt_round_keys_q1        |   in|    8|   ap_memory|                                pynqrypt_round_keys|         array|
+|p_out                         |  out|    8|      ap_vld|                                              p_out|       pointer|
+|p_out_ap_vld                  |  out|    1|      ap_vld|                                              p_out|       pointer|
+|conv6_i36_1_phi_out           |  out|    8|      ap_vld|                                conv6_i36_1_phi_out|       pointer|
+|conv6_i36_1_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_1_phi_out|       pointer|
+|conv6_i36_2_phi_out           |  out|    8|      ap_vld|                                conv6_i36_2_phi_out|       pointer|
+|conv6_i36_2_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_2_phi_out|       pointer|
+|conv6_i36_3_phi_out           |  out|    8|      ap_vld|                                conv6_i36_3_phi_out|       pointer|
+|conv6_i36_3_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_3_phi_out|       pointer|
+|conv6_i36_4_phi_out           |  out|    8|      ap_vld|                                conv6_i36_4_phi_out|       pointer|
+|conv6_i36_4_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_4_phi_out|       pointer|
+|conv6_i36_5_phi_out           |  out|    8|      ap_vld|                                conv6_i36_5_phi_out|       pointer|
+|conv6_i36_5_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_5_phi_out|       pointer|
+|conv6_i36_6_phi_out           |  out|    8|      ap_vld|                                conv6_i36_6_phi_out|       pointer|
+|conv6_i36_6_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_6_phi_out|       pointer|
+|conv6_i36_7_phi_out           |  out|    8|      ap_vld|                                conv6_i36_7_phi_out|       pointer|
+|conv6_i36_7_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_7_phi_out|       pointer|
+|conv6_i36_8_phi_out           |  out|    8|      ap_vld|                                conv6_i36_8_phi_out|       pointer|
+|conv6_i36_8_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_8_phi_out|       pointer|
+|conv6_i36_9_phi_out           |  out|    8|      ap_vld|                                conv6_i36_9_phi_out|       pointer|
+|conv6_i36_9_phi_out_ap_vld    |  out|    1|      ap_vld|                                conv6_i36_9_phi_out|       pointer|
+|conv6_i36_10_phi_out          |  out|    8|      ap_vld|                               conv6_i36_10_phi_out|       pointer|
+|conv6_i36_10_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_10_phi_out|       pointer|
+|conv6_i36_11_phi_out          |  out|    8|      ap_vld|                               conv6_i36_11_phi_out|       pointer|
+|conv6_i36_11_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_11_phi_out|       pointer|
+|conv6_i36_12_phi_out          |  out|    8|      ap_vld|                               conv6_i36_12_phi_out|       pointer|
+|conv6_i36_12_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_12_phi_out|       pointer|
+|conv6_i36_13_phi_out          |  out|    8|      ap_vld|                               conv6_i36_13_phi_out|       pointer|
+|conv6_i36_13_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_13_phi_out|       pointer|
+|conv6_i36_14_phi_out          |  out|    8|      ap_vld|                               conv6_i36_14_phi_out|       pointer|
+|conv6_i36_14_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_14_phi_out|       pointer|
+|conv6_i36_15_phi_out          |  out|    8|      ap_vld|                               conv6_i36_15_phi_out|       pointer|
+|conv6_i36_15_phi_out_ap_vld   |  out|    1|      ap_vld|                               conv6_i36_15_phi_out|       pointer|
++------------------------------+-----+-----+------------+---------------------------------------------------+--------------+
 

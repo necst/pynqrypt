@@ -74,6 +74,25 @@ void XPynqrypt_encrypt_DisableAutoRestart(XPynqrypt_encrypt *InstancePtr) {
     XPynqrypt_encrypt_WriteReg(InstancePtr->Control_BaseAddress, XPYNQRYPT_ENCRYPT_CONTROL_ADDR_AP_CTRL, 0);
 }
 
+void XPynqrypt_encrypt_Set_plaintext_length(XPynqrypt_encrypt *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XPynqrypt_encrypt_WriteReg(InstancePtr->Control_BaseAddress, XPYNQRYPT_ENCRYPT_CONTROL_ADDR_PLAINTEXT_LENGTH_DATA, (u32)(Data));
+    XPynqrypt_encrypt_WriteReg(InstancePtr->Control_BaseAddress, XPYNQRYPT_ENCRYPT_CONTROL_ADDR_PLAINTEXT_LENGTH_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XPynqrypt_encrypt_Get_plaintext_length(XPynqrypt_encrypt *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XPynqrypt_encrypt_ReadReg(InstancePtr->Control_BaseAddress, XPYNQRYPT_ENCRYPT_CONTROL_ADDR_PLAINTEXT_LENGTH_DATA);
+    Data += (u64)XPynqrypt_encrypt_ReadReg(InstancePtr->Control_BaseAddress, XPYNQRYPT_ENCRYPT_CONTROL_ADDR_PLAINTEXT_LENGTH_DATA + 4) << 32;
+    return Data;
+}
+
 void XPynqrypt_encrypt_Set_plaintext(XPynqrypt_encrypt *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -110,6 +129,196 @@ u64 XPynqrypt_encrypt_Get_ciphertext(XPynqrypt_encrypt *InstancePtr) {
     Data = XPynqrypt_encrypt_ReadReg(InstancePtr->Control_BaseAddress, XPYNQRYPT_ENCRYPT_CONTROL_ADDR_CIPHERTEXT_DATA);
     Data += (u64)XPynqrypt_encrypt_ReadReg(InstancePtr->Control_BaseAddress, XPYNQRYPT_ENCRYPT_CONTROL_ADDR_CIPHERTEXT_DATA + 4) << 32;
     return Data;
+}
+
+u32 XPynqrypt_encrypt_Get_key_BaseAddress(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE);
+}
+
+u32 XPynqrypt_encrypt_Get_key_HighAddress(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_HIGH);
+}
+
+u32 XPynqrypt_encrypt_Get_key_TotalBytes(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + 1);
+}
+
+u32 XPynqrypt_encrypt_Get_key_BitWidth(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XPYNQRYPT_ENCRYPT_CONTROL_WIDTH_KEY;
+}
+
+u32 XPynqrypt_encrypt_Get_key_Depth(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XPYNQRYPT_ENCRYPT_CONTROL_DEPTH_KEY;
+}
+
+u32 XPynqrypt_encrypt_Write_key_Words(XPynqrypt_encrypt *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XPynqrypt_encrypt_Read_key_Words(XPynqrypt_encrypt *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XPynqrypt_encrypt_Write_key_Bytes(XPynqrypt_encrypt *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XPynqrypt_encrypt_Read_key_Bytes(XPynqrypt_encrypt *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_KEY_BASE + offset + i);
+    }
+    return length;
+}
+
+u32 XPynqrypt_encrypt_Get_nonce_BaseAddress(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE);
+}
+
+u32 XPynqrypt_encrypt_Get_nonce_HighAddress(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_HIGH);
+}
+
+u32 XPynqrypt_encrypt_Get_nonce_TotalBytes(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + 1);
+}
+
+u32 XPynqrypt_encrypt_Get_nonce_BitWidth(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XPYNQRYPT_ENCRYPT_CONTROL_WIDTH_NONCE;
+}
+
+u32 XPynqrypt_encrypt_Get_nonce_Depth(XPynqrypt_encrypt *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XPYNQRYPT_ENCRYPT_CONTROL_DEPTH_NONCE;
+}
+
+u32 XPynqrypt_encrypt_Write_nonce_Words(XPynqrypt_encrypt *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XPynqrypt_encrypt_Read_nonce_Words(XPynqrypt_encrypt *InstancePtr, int offset, word_type *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XPynqrypt_encrypt_Write_nonce_Bytes(XPynqrypt_encrypt *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XPynqrypt_encrypt_Read_nonce_Bytes(XPynqrypt_encrypt *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_HIGH - XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Control_BaseAddress + XPYNQRYPT_ENCRYPT_CONTROL_ADDR_NONCE_BASE + offset + i);
+    }
+    return length;
 }
 
 void XPynqrypt_encrypt_InterruptGlobalEnable(XPynqrypt_encrypt *InstancePtr) {

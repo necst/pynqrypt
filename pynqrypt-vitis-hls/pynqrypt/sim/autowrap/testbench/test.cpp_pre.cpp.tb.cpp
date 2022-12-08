@@ -34839,16 +34839,19 @@ class Pynqrypt {
 
 }
 # 6 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.hpp" 2
-# 15 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.hpp"
+
 
 #ifndef HLS_FASTSIM
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_pynqrypt_encrypt_sw(unsigned char *, unsigned char *);
+void apatb_pynqrypt_encrypt_sw(unsigned char *, unsigned char *, unsigned long, unsigned char *, unsigned char *);
 #endif
-# 15 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.hpp"
+# 7 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt_hls.hpp"
 void pynqrypt_encrypt(
+ crypto::aes_atom key[16],
+ crypto::aes_atom nonce[12],
+ size_t plaintext_length,
  crypto::aes_atom *plaintext,
  crypto::aes_atom *ciphertext
 );
@@ -34880,15 +34883,14 @@ int main(int argc, char *argv[])
 
     crypto::aes_atom *output = new crypto::aes_atom[input_vec.size()];
 
-
     
 #ifndef HLS_FASTSIM
 #define pynqrypt_encrypt apatb_pynqrypt_encrypt_sw
 #endif
-# 30 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp"
-pynqrypt_encrypt(input_vec.data(), output);
+# 29 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp"
+pynqrypt_encrypt(key_vec.data(), nonce_vec.data(), input_vec.size(), input_vec.data(), output);
 #undef pynqrypt_encrypt
-# 30 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp"
+# 29 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp"
 
 
     std::vector<crypto::aes_atom> output_vec(output, output + input_vec.size());
@@ -34915,5 +34917,5 @@ pynqrypt_encrypt(input_vec.data(), output);
     return iseq ? 0 : -1;
 }
 #endif
-# 54 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp"
+# 53 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp"
 

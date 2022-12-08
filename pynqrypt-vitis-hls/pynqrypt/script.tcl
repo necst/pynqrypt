@@ -10,17 +10,16 @@ add_files hw-impl/src/pynqrypt.cpp
 add_files hw-impl/src/pynqrypt.hpp
 add_files hw-impl/src/pynqrypt_hls.cpp
 add_files hw-impl/src/pynqrypt_hls.hpp
-add_files -tb hw-impl/src/data.bin -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb hw-impl/src/data_enc_openssl.bin -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb hw-impl/src/key.bin -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb hw-impl/src/nonce.bin -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb hw-impl/src/test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb hw-impl/src/data.bin
+add_files -tb hw-impl/src/data_enc_openssl.bin
+add_files -tb hw-impl/src/key.bin
+add_files -tb hw-impl/src/nonce.bin
+add_files -tb hw-impl/src/test.cpp
 open_solution "pynqrypt" -flow_target vivado
-set_part {xc7z020i-clg400-1L}
+set_part {xc7z020iclg400-1L}
 create_clock -period 10 -name default
-config_export -flow syn -format ip_catalog -output /home/mrindeciso/Documents/pynqrypt/hw-impl -rtl verilog -vivado_clock 10
-source "./pynqrypt-vitis-hls/pynqrypt/directives.tcl"
+#source "./pynqrypt-vitis-hls/pynqrypt/directives.tcl"
 csim_design -clean
 csynth_design
 cosim_design
-export_design -rtl verilog -format ip_catalog -output /home/mrindeciso/Documents/pynqrypt/hw-impl
+export_design -format ip_catalog

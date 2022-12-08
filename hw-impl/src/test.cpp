@@ -26,8 +26,7 @@ int main(int argc, char *argv[])
 
     crypto::aes_atom *output = new crypto::aes_atom[input_vec.size()];
 
-    // pynqrypt_encrypt(key_vec.data(), nonce_vec.data(), input_vec.size(), input_vec.data(), output);
-    pynqrypt_encrypt(input_vec.data(), output);
+    pynqrypt_encrypt(key_vec.data(), nonce_vec.data(), input_vec.size(), input_vec.data(), output);
     
     std::vector<crypto::aes_atom> output_vec(output, output + input_vec.size());
 

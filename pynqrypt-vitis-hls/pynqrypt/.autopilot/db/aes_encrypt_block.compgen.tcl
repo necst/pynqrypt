@@ -1,11 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
@@ -21,7 +16,26 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 25 \
+    id 41 \
+    name pynqrypt_round_keys \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename pynqrypt_round_keys \
+    op interface \
+    ports { pynqrypt_round_keys_address0 { O 8 vector } pynqrypt_round_keys_ce0 { O 1 bit } pynqrypt_round_keys_q0 { I 8 vector } pynqrypt_round_keys_address1 { O 8 vector } pynqrypt_round_keys_ce1 { O 1 bit } pynqrypt_round_keys_q1 { I 8 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'pynqrypt_round_keys'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 42 \
     name state \
     reset_level 1 \
     sync_rst true \
@@ -32,6 +46,25 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'state'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 43 \
+    name crypto_aes_sbox \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename crypto_aes_sbox \
+    op interface \
+    ports { crypto_aes_sbox_address0 { O 8 vector } crypto_aes_sbox_ce0 { O 1 bit } crypto_aes_sbox_q0 { I 8 vector } crypto_aes_sbox_address1 { O 8 vector } crypto_aes_sbox_ce1 { O 1 bit } crypto_aes_sbox_q1 { I 8 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'crypto_aes_sbox'"
 }
 }
 

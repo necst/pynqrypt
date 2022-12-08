@@ -82,6 +82,9 @@ proc check_tvin_file {} {
 	}
     set rtlfilelist {
          "c.pynqrypt_encrypt.autotvin_gmem.dat"
+         "c.pynqrypt_encrypt.autotvin_key.dat"
+         "c.pynqrypt_encrypt.autotvin_nonce.dat"
+         "c.pynqrypt_encrypt.autotvin_plaintext_length.dat"
          "c.pynqrypt_encrypt.autotvin_plaintext.dat"
          "c.pynqrypt_encrypt.autotvin_ciphertext.dat"
     }
