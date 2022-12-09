@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../hw-impl/src/test.cpp ../../../../hw-impl/src/pynqrypt_hls.cpp ../../../../hw-impl/src/pynqrypt.cpp
+HLS_SOURCES = ../../../../hw-impl/src/test.cpp ../../../../hw-impl/src/pynqrypt.cpp ../../../../hw-impl/src/pynqrypt_hls.cpp
 
 override TARGET := csim.exe
 
@@ -59,7 +59,7 @@ IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E1__
 IFLAG += -Wno-unknown-pragmas 
-IFLAG += -g
+AP_ENABLE_OPTIMIZED := 1
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += -Werror=return-type
 CCFLAG += -Wno-abi
@@ -75,18 +75,18 @@ all: $(TARGET)
 
 $(ObjDir)/test.o: ../../../../hw-impl/src/test.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../hw-impl/src/test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/test.d
 
-$(ObjDir)/pynqrypt_hls.o: ../../../../hw-impl/src/pynqrypt_hls.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../hw-impl/src/pynqrypt_hls.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/pynqrypt_hls.d
-
 $(ObjDir)/pynqrypt.o: ../../../../hw-impl/src/pynqrypt.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../hw-impl/src/pynqrypt.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/pynqrypt.d
+
+$(ObjDir)/pynqrypt_hls.o: ../../../../hw-impl/src/pynqrypt_hls.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../hw-impl/src/pynqrypt_hls.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
+
+-include $(ObjDir)/pynqrypt_hls.d

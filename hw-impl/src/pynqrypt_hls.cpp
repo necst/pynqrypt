@@ -1,11 +1,11 @@
 #include "pynqrypt.hpp"
 
 void pynqrypt_encrypt(
-	crypto::aes_atom key[16],
-	crypto::aes_atom nonce[12],
+	crypto::aes_block key,
+	crypto::aes_nonce nonce,
 	size_t plaintext_length,
-	crypto::aes_atom *plaintext,
-	crypto::aes_atom *ciphertext
+	crypto::aes_block *plaintext,
+	crypto::aes_block *ciphertext
 ) {
 	#pragma HLS INTERFACE mode=m_axi port=plaintext offset=slave bundle=gmem depth=16384
 	#pragma HLS INTERFACE mode=m_axi port=ciphertext offset=slave bundle=gmem depth=16384
@@ -19,5 +19,5 @@ void pynqrypt_encrypt(
 
 	crypto::Pynqrypt pynqrypt(key, nonce);
 
-	pynqrypt.ctr_encrypt(plaintext_length, plaintext, ciphertext, 0);
+	pynqrypt.ctr_encrypt(plaintext_length, plaintext, ciphertext);
 }

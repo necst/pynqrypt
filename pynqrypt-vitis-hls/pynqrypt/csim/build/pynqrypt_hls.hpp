@@ -5,9 +5,9 @@
 #include "pynqrypt.hpp"
 
 void pynqrypt_encrypt(
-	crypto::aes_atom key[16],
-	crypto::aes_atom nonce[12],
+	crypto::aes_block key,
+	crypto::aes_nonce nonce,
 	size_t plaintext_length,
-	crypto::aes_atom *plaintext,
-	crypto::aes_atom *ciphertext
+	crypto::aes_block *plaintext,
+	crypto::aes_block *ciphertext
 );
