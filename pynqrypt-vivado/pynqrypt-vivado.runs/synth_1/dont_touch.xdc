@@ -16,16 +16,25 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design
 # IP: bd/main_design/ip/main_design_rst_ps7_0_100M_3/main_design_rst_ps7_0_100M_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_rst_ps7_0_100M_3 || ORIG_REF_NAME==main_design_rst_ps7_0_100M_3} -quiet] -quiet
 
+# IP: bd/main_design/ip/main_design_axi_mem_intercon_0/main_design_axi_mem_intercon_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_axi_mem_intercon_0 || ORIG_REF_NAME==main_design_axi_mem_intercon_0} -quiet] -quiet
+
+# IP: bd/main_design/ip/main_design_xbar_0/main_design_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_xbar_0 || ORIG_REF_NAME==main_design_xbar_0} -quiet] -quiet
+
 # IP: bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_auto_pc_0 || ORIG_REF_NAME==main_design_auto_pc_0} -quiet] -quiet
-
-# IP: bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_auto_pc_1 || ORIG_REF_NAME==main_design_auto_pc_1} -quiet] -quiet
 
 # IP: bd/main_design/ip/main_design_auto_us_0/main_design_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_auto_us_0 || ORIG_REF_NAME==main_design_auto_us_0} -quiet] -quiet
 
-# IP: bd/main_design/ip/main_design_axi_mem_intercon_0/main_design_axi_mem_intercon_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_axi_mem_intercon_0 || ORIG_REF_NAME==main_design_axi_mem_intercon_0} -quiet] -quiet
+# IP: bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_auto_pc_1 || ORIG_REF_NAME==main_design_auto_pc_1} -quiet] -quiet
+
+# IP: bd/main_design/ip/main_design_auto_ds_0/main_design_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_auto_ds_0 || ORIG_REF_NAME==main_design_auto_ds_0} -quiet] -quiet
+
+# IP: bd/main_design/ip/main_design_auto_pc_2/main_design_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_design_auto_pc_2 || ORIG_REF_NAME==main_design_auto_pc_2} -quiet] -quiet
 
 # XDC: /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/main_design_ooc.xdc

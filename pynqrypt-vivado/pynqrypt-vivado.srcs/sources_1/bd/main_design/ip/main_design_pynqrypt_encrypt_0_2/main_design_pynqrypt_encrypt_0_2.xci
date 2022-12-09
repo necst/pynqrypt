@@ -4,7 +4,7 @@
     "xci_name": "main_design_pynqrypt_encrypt_0_2",
     "cell_name": "pynqrypt_encrypt_0",
     "component_reference": "xilinx.com:hls:pynqrypt_encrypt:1.0",
-    "ip_revision": "2112801972",
+    "ip_revision": "2112804887",
     "gen_directory": "../../../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_2",
     "parameters": {
       "component_parameters": {
@@ -24,11 +24,11 @@
         "clk_period": [ { "value": "10", "enabled": false, "usage": "all" } ],
         "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
         "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
-        "latency": [ { "value": "342028", "enabled": false, "usage": "all" } ],
+        "latency": [ { "value": "undef", "enabled": false, "usage": "all" } ],
         "II": [ { "value": "x", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
-        "C_S_AXI_CONTROL_ADDR_WIDTH": [ { "value": "6", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI_CONTROL_ADDR_WIDTH": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_AXI_CONTROL_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ],
         "C_M_AXI_GMEM_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_M_AXI_GMEM_ADDR_WIDTH": [ { "value": "64", "format": "long", "usage": "all" } ],
@@ -59,7 +59,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2112801972" } ],
+        "IPREVISION": [ { "value": "2112804887" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_2" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -70,7 +70,7 @@
     },
     "boundary": {
       "ports": {
-        "s_axi_control_AWADDR": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
+        "s_axi_control_AWADDR": [ { "direction": "in", "size_left": "6", "size_right": "0" } ],
         "s_axi_control_AWVALID": [ { "direction": "in" } ],
         "s_axi_control_AWREADY": [ { "direction": "out" } ],
         "s_axi_control_WDATA": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
@@ -80,7 +80,7 @@
         "s_axi_control_BRESP": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "s_axi_control_BVALID": [ { "direction": "out" } ],
         "s_axi_control_BREADY": [ { "direction": "in" } ],
-        "s_axi_control_ARADDR": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
+        "s_axi_control_ARADDR": [ { "direction": "in", "size_left": "6", "size_right": "0" } ],
         "s_axi_control_ARVALID": [ { "direction": "in" } ],
         "s_axi_control_ARREADY": [ { "direction": "out" } ],
         "s_axi_control_RDATA": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
@@ -138,7 +138,7 @@
           "mode": "slave",
           "memory_map_ref": "s_axi_control",
           "parameters": {
-            "ADDR_WIDTH": [ { "value": "6", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ADDR_WIDTH": [ { "value": "7", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "DATA_WIDTH": [ { "value": "32", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
@@ -477,8 +477,40 @@
                     }
                   }
                 },
+                "plaintext_length_1": {
+                  "address_offset": "48",
+                  "size": 32,
+                  "display_name": "plaintext_length_1",
+                  "description": "Data signal of plaintext_length",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "plaintext_length": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of plaintext_length",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "plaintext_length_2": {
+                  "address_offset": "52",
+                  "size": 32,
+                  "display_name": "plaintext_length_2",
+                  "description": "Data signal of plaintext_length",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "plaintext_length": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 63 to 32 of plaintext_length",
+                      "access": "write-only"
+                    }
+                  }
+                },
                 "plaintext_1": {
-                  "address_offset": "16",
+                  "address_offset": "60",
                   "size": 32,
                   "display_name": "plaintext_1",
                   "description": "Data signal of plaintext",
@@ -494,7 +526,7 @@
                   }
                 },
                 "plaintext_2": {
-                  "address_offset": "20",
+                  "address_offset": "64",
                   "size": 32,
                   "display_name": "plaintext_2",
                   "description": "Data signal of plaintext",
@@ -510,7 +542,7 @@
                   }
                 },
                 "ciphertext_1": {
-                  "address_offset": "28",
+                  "address_offset": "72",
                   "size": 32,
                   "display_name": "ciphertext_1",
                   "description": "Data signal of ciphertext",
@@ -526,7 +558,7 @@
                   }
                 },
                 "ciphertext_2": {
-                  "address_offset": "32",
+                  "address_offset": "76",
                   "size": 32,
                   "display_name": "ciphertext_2",
                   "description": "Data signal of ciphertext",
@@ -540,6 +572,22 @@
                       "access": "write-only"
                     }
                   }
+                },
+                "Memory_key": {
+                  "address_offset": "16",
+                  "size": 16,
+                  "display_name": "Memory_key",
+                  "description": "Memory key",
+                  "access": "read-write",
+                  "reset_value": "0"
+                },
+                "Memory_nonce": {
+                  "address_offset": "32",
+                  "size": 16,
+                  "display_name": "Memory_nonce",
+                  "description": "Memory nonce",
+                  "access": "read-write",
+                  "reset_value": "0"
                 }
               }
             }

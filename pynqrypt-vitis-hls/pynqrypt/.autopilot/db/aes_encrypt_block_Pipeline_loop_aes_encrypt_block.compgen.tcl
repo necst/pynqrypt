@@ -54,14 +54,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 19 \
-    name xor_ln233 \
+    name xor_ln238 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_xor_ln233 \
+    corename dc_xor_ln238 \
     op interface \
-    ports { xor_ln233 { I 8 vector } } \
+    ports { xor_ln238 { I 8 vector } } \
 } "
 }
 

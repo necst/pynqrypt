@@ -18,8 +18,9 @@ add_files -tb hw-impl/src/test.cpp
 open_solution "pynqrypt" -flow_target vivado
 set_part {xc7z020iclg400-1L}
 create_clock -period 10 -name default
+config_export -output /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls
 #source "./pynqrypt-vitis-hls/pynqrypt/directives.tcl"
 csim_design -clean
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog -output /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls

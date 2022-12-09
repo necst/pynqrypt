@@ -130,8 +130,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>xor_ln233</name>
-<Object>xor_ln233</Object>
+<name>xor_ln238</name>
+<Object>xor_ln238</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

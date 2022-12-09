@@ -1,125 +1,171 @@
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 52, Column: 5 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 57, Column: 5 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 228, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 233, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 63, Column: 5 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 68, Column: 5 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 228, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 233, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 62, Column: 5 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 67, Column: 5 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_shift_rows(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 76, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 81, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 61, Column: 5 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 66, Column: 5 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 67, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 72, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 58, Column: 9 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 63, Column: 9 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_add_round_key(unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 228, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 233, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 57, Column: 9 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 62, Column: 9 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_mix_columns(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 101, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 106, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 55, Column: 9 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 60, Column: 9 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_bytes(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 67, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 72, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 9 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 61, Column: 9 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_shift_rows(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 76, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 81, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 29, Column: 9 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 37, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 31, Column: 9 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_ctr_encrypt
+  - String:          ''' ('
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:23:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'crypto::Pynqrypt::ctr_encrypt'
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_231_1
+  - LoopName:        VITIS_LOOP_236_1
   - String:          ''' ('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:231:20'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:236:20'
   - String:          ') '
   - String:          'in function '''
   - String:          'crypto::Pynqrypt::aes_encrypt_block'
@@ -129,13 +175,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_70_1
+  - LoopName:        VITIS_LOOP_75_1
   - String:          ''' ('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:70:19'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:75:19'
   - String:          ') '
   - String:          'in function '''
   - String:          'crypto::Pynqrypt::aes_encrypt_block'
@@ -145,13 +191,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_70_1
+  - LoopName:        VITIS_LOOP_75_1
   - String:          ''' ('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:70:19'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:75:19'
   - String:          ') '
   - String:          'in function '''
   - String:          'crypto::Pynqrypt::aes_encrypt_block'
@@ -161,13 +207,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_106_1
+  - LoopName:        VITIS_LOOP_111_1
   - String:          ''' ('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:106:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:111:23'
   - String:          ') '
   - String:          'in function '''
   - String:          'crypto::Pynqrypt::aes_encrypt_block'
@@ -177,13 +223,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_231_1
+  - LoopName:        VITIS_LOOP_236_1
   - String:          ''' ('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:231:20'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:236:20'
   - String:          ') '
   - String:          'in function '''
   - String:          'crypto::Pynqrypt::aes_encrypt_block'
@@ -193,13 +239,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_231_1
+  - LoopName:        VITIS_LOOP_236_1
   - String:          ''' ('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:231:20'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:236:20'
   - String:          ') '
   - String:          'in function '''
   - String:          'crypto::Pynqrypt::aes_encrypt_block'
@@ -209,99 +255,71 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_rotate_word(unsigned int&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 253, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 258, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_word(unsigned int&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 263, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 268, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xor_round_constant(unsigned int&, int)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 270, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 275, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xor_words(unsigned int, unsigned int, unsigned int&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 277, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 282, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockEPh
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xtime(unsigned char)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 238, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 243, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 51, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
-Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::ctr_compute_nonce(unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 34, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
-Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::ctr_xor_block(unsigned char*, unsigned long, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 44, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 56, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -318,24 +336,10 @@ Args:
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
   - String:          ''''
 ...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
-  - String:          ''''
-...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 208, Column: 16 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 213, Column: 16 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -343,7 +347,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 257, Column: 14 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 262, Column: 14 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -351,7 +355,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 258, Column: 14 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 263, Column: 14 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -359,7 +363,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 259, Column: 14 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 264, Column: 14 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -367,7 +371,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 29 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 271, Column: 29 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -375,7 +379,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 18 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 271, Column: 18 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -383,7 +387,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 214, Column: 29 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 219, Column: 29 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -391,7 +395,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -399,7 +403,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -407,7 +411,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -415,7 +419,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 216, Column: 16 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 221, Column: 16 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -423,7 +427,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 217, Column: 29 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 222, Column: 29 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -431,7 +435,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -439,7 +443,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -447,7 +451,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -455,7 +459,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 219, Column: 16 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 224, Column: 16 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -463,7 +467,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 220, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 225, Column: 23 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -471,7 +475,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -479,7 +483,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -487,7 +491,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -495,7 +499,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 222, Column: 10 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 227, Column: 10 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -503,7 +507,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -511,7 +515,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -519,7 +523,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -527,7 +531,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -536,7 +540,7 @@ Args:
   - String:          ' length'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
-  - String:          loop-memcpy-expansion2.i.load.4
+  - String:          loop-memcpy-expansion6.0.load.4
   - String:          ', '
   - String:          ' _XLX_SEP_ '
   - AccessID:        scevgepseq
@@ -549,14 +553,14 @@ Args:
   - String:          ' '
   - LoopLoc:         ''
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -565,10 +569,10 @@ Args:
   - String:          ' length'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
-  - String:          loop-memcpy-expansion.i.store.6
+  - String:          loop-memcpy-expansion.0.store.6
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep11seq
+  - AccessID:        scevgep2seq
   - String:          ' '
   - ArrayName:       ciphertext
   - String:          ' '
@@ -578,15 +582,885 @@ Args:
   - String:          ' '
   - LoopLoc:         ''
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.1.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep4seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.1.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep6seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.2.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep8seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.2.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep10seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.3.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep12seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.3.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep14seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.4.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep16seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.4.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep18seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.5.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep20seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.5.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep22seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.6.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep24seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.6.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep26seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.7.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep28seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.7.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep30seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.8.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep32seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.8.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep34seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.9.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep36seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.9.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep38seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.10.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep40seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.10.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep42seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.11.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep44seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.11.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep46seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.12.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep48seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.12.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep50seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.13.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep52seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.13.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep54seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.14.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep56seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.14.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep58seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion6.15.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep60seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.15.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep62seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 23, Column: 23 }
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
@@ -594,21 +1468,21 @@ Args:
   - String:          ' '
   - LoopLoc:         'hw-impl/src/pynqrypt.cpp:23:23'
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          'Could not widen since type '
   - Type:            i8
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep11seq
+  - AccessID:        scevgep62seq
   - String:          ' '
   - ArrayName:       ciphertext
   - String:          ' '
@@ -618,14 +1492,734 @@ Args:
   - String:          ' '
   - LoopLoc:         ''
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep60seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep58seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep56seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep54seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep52seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep50seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep48seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep46seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep44seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep42seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep40seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep38seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep36seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep34seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep32seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep30seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep28seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep26seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep24seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep22seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep20seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep18seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep16seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep14seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep12seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep10seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep8seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep6seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep4seq
+  - String:          ' '
+  - ArrayName:       plaintext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2seq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l
 Args:            
   - String:          'Could not widen since type '
   - Type:            i8
@@ -642,14 +2236,14 @@ Args:
   - String:          ' '
   - LoopLoc:         ''
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 208, Column: 16 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 213, Column: 16 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -657,7 +2251,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 257, Column: 14 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 262, Column: 14 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -665,7 +2259,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 258, Column: 14 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 263, Column: 14 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -673,7 +2267,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 259, Column: 14 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 264, Column: 14 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -681,7 +2275,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 29 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 271, Column: 29 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -689,7 +2283,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 266, Column: 18 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 271, Column: 18 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -697,7 +2291,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 214, Column: 29 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 219, Column: 29 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -705,7 +2299,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -713,7 +2307,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -721,7 +2315,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -729,7 +2323,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 216, Column: 16 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 221, Column: 16 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -737,7 +2331,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 217, Column: 29 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 222, Column: 29 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -745,7 +2339,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -753,7 +2347,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -761,7 +2355,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -769,7 +2363,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 219, Column: 16 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 224, Column: 16 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -777,7 +2371,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 220, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 225, Column: 23 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -785,7 +2379,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -793,7 +2387,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -801,7 +2395,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -809,7 +2403,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 222, Column: 10 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 227, Column: 10 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -817,7 +2411,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 27 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 27 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -825,7 +2419,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 39 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 39 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -833,7 +2427,7 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 283, Column: 25 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 288, Column: 25 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          The program may have out of bound array access
@@ -841,7 +2435,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -862,14 +2456,14 @@ Args:
   - String:          ' '
   - LoopLoc:         ''
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -890,7 +2484,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -911,14 +2505,1484 @@ Args:
   - String:          ' '
   - LoopLoc:         ''
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(unsigned char*, unsigned char*, unsigned long, unsigned char*, unsigned char*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-Function:        _Z16pynqrypt_encryptPhS_mS_S_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq10
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq11
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq12
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq13
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq14
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq15
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq16
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq17
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq18
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq19
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq20
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq21
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq22
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq23
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq24
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq25
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq26
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq27
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq28
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq29
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq30
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq31
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, unsigned char*, unsigned char*, long) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmPhS1_l.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
