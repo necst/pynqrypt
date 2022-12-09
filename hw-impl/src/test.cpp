@@ -3,6 +3,8 @@
 
 #include "pynqrypt_hls.hpp"
 
+#define SIZE 16384
+
 int main(int argc, char *argv[])
 {
     std::fstream key_f, nonce_f, input, golden_sample;
@@ -27,21 +29,21 @@ int main(int argc, char *argv[])
     for (int i = 11; i >= 0; i--)
         nonce.range((i + 1) * 8 - 1, i * 8) = (uint8_t) nonce_f.get();
 
-    std::vector<crypto::aes_block> input_vec(16384 / 16);
+    std::vector<crypto::aes_block> input_vec(SIZE / 16);
 
-    for (int i = 0; i < 16384 / 16; i++)
+    for (int i = 0; i < SIZE / 16; i++)
         for (int j = 15; j >= 0; j--)
             input_vec[i].range((j + 1) * 8 - 1, j * 8) = (uint8_t) input.get();
 
-    std::vector<crypto::aes_block> golden_sample_vec(16384 / 16);
+    std::vector<crypto::aes_block> golden_sample_vec(SIZE / 16);
 
-    for (int i = 0; i < 16384 / 16; i++)
+    for (int i = 0; i < SIZE / 16; i++)
         for (int j = 15; j >= 0; j--)
             golden_sample_vec[i].range((j + 1) * 8 - 1, j * 8) = (uint8_t) golden_sample.get();
 
     crypto::aes_block *output = new crypto::aes_block[input_vec.size()];
 
-    pynqrypt_encrypt(key, nonce, input_vec.size(), input_vec.data(), output);
+    pynqrypt_encrypt(key, nonce, SIZE, input_vec.data(), output);
     
     size_t size = golden_sample_vec.size();
 
