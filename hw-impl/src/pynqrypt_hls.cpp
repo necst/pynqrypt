@@ -7,8 +7,8 @@ void pynqrypt_encrypt(
 	crypto::aes_block *plaintext,
 	crypto::aes_block *ciphertext
 ) {
-	#pragma HLS INTERFACE mode=m_axi port=plaintext offset=slave bundle=gmem depth=16384
-	#pragma HLS INTERFACE mode=m_axi port=ciphertext offset=slave bundle=gmem depth=16384
+	#pragma HLS INTERFACE mode=m_axi port=plaintext offset=slave bundle=gmem depth=1024
+	#pragma HLS INTERFACE mode=m_axi port=ciphertext offset=slave bundle=gmem depth=1024
 
 	#pragma HLS INTERFACE mode=s_axilite port=key bundle=control
 	#pragma HLS INTERFACE mode=s_axilite port=nonce bundle=control

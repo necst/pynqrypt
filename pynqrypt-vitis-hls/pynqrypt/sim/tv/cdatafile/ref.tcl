@@ -1,8 +1,8 @@
 set depth_list {
   {ciphertext 1}
-  {gmem 32768}
-  {key 16}
-  {nonce 12}
+  {gmem 2048}
+  {key 1}
+  {nonce 1}
   {plaintext 1}
   {plaintext_length 1}
 }

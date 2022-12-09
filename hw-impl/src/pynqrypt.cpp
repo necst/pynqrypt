@@ -7,16 +7,6 @@ using namespace crypto;
 
 #define min(a, b) ((a > b) ? (b) : (a))
 
-aes_block swap_endianness(aes_block block)
-{
-    aes_block swapped;
-
-    loop_swap_endianness: for (int i = 0; i < BLOCK_SIZE; i++)
-        swapped.range(i * 8 + 7, i * 8) = block.range((BLOCK_SIZE - i - 1) * 8 + 7, (BLOCK_SIZE - i - 1) * 8);
-
-    return swapped;
-}
-
 Pynqrypt::Pynqrypt(aes_block key, aes_nonce nonce)
 {
     this->key = key;

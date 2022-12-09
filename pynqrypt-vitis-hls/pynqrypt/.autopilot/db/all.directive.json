@@ -30,6 +30,21 @@
                 "value": "pynqrypt_encrypt"
               }]
           }
+        },
+        {
+          "functionName": "pynqrypt_encrypt",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "\/home\/mrindeciso\/Documents\/pynqrypt\/pynqrypt-vitis-hls\/pynqrypt\/csynth.tcl",
+          "sourceLine": "23",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "pynqrypt_encrypt"
+              }]
+          }
         }
       ]
     }]}

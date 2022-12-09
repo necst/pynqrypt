@@ -82,11 +82,6 @@
 			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/key.bin</location>
 		</link>
 		<link>
-			<name>testbench/key_test.bin</name>
-			<type>1</type>
-			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/key_test.bin</location>
-		</link>
-		<link>
 			<name>testbench/nonce.bin</name>
 			<type>1</type>
 			<location>/home/mrindeciso/Documents/pynqrypt/hw-impl/src/nonce.bin</location>
