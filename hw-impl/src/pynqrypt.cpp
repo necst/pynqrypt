@@ -7,23 +7,22 @@ using namespace crypto;
 
 #define min(a, b) ((a > b) ? (b) : (a))
 
+aes_block swap_endianness(aes_block block)
+{
+    aes_block swapped;
+
+    loop_swap_endianness: for (int i = 0; i < BLOCK_SIZE; i++)
+        swapped.range(i * 8 + 7, i * 8) = block.range((BLOCK_SIZE - i - 1) * 8 + 7, (BLOCK_SIZE - i - 1) * 8);
+
+    return swapped;
+}
+
 Pynqrypt::Pynqrypt(aes_block key, aes_nonce nonce)
 {
     this->key = key;
     this->nonce = nonce;
 
     aes_generate_round_keys();
-
-    // print round keys
-    for (int i = 0; i < AES_ROUNDS + 1; i++) {
-        std::cout << "round key " << i << ": " << std::hex << round_keys[i] << std::endl;
-    }
-
-    // print nonce
-    std::cout << "nonce: " << std::hex << nonce << std::endl;
-
-    // print key
-    std::cout << "key: " << std::hex << key << std::endl;
 }
 
 void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_block *plaintext, aes_block *ciphertext) 
@@ -43,8 +42,9 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_block *plaintext, aes_bl
 
 void Pynqrypt::ctr_compute_nonce(aes_block &block_nonce, off64_t offset)
 {
-    block_nonce.range(127, 32) = nonce;
-    block_nonce.range(0, 31) = (uint32_t) offset;
+    aes_word offword = (uint32_t) offset;
+
+    block_nonce = nonce.concat(offword);
 }
 
 void Pynqrypt::ctr_xor_block(aes_block &block, aes_block block_nonce)
@@ -55,26 +55,18 @@ void Pynqrypt::ctr_xor_block(aes_block &block, aes_block block_nonce)
 // encryption functions
 void Pynqrypt::aes_encrypt_block(aes_block &state)
 {
-    std::cout << "round 0: " << std::hex << state << std::endl;
-
-	aes_add_round_key(state, 0);
-
-    std::cout << "round 0 add round key: " << std::hex << state << std::endl;
+    state ^= round_keys[0];
 
     loop_aes_encrypt_block: for (int i = 1; i < NUM_ROUNDS; i++) {
         aes_sub_bytes(state);
-        std::cout << "round " << i << " sub bytes: " << std::hex << state << std::endl;
         aes_shift_rows(state);
-        std::cout << "round " << i << " shift rows: " << std::hex << state << std::endl;
         aes_mix_columns(state);
-        std::cout << "round " << i << " mix columns: " << std::hex << state << std::endl;
-        aes_add_round_key(state, i);
-        std::cout << "round " << i << " add round key: " << std::hex << state << std::endl;
+        state ^= round_keys[i];
     }
 
     aes_sub_bytes(state);
     aes_shift_rows(state);
-    aes_add_round_key(state, NUM_ROUNDS);
+    state ^= round_keys[NUM_ROUNDS];
 }
 
 void Pynqrypt::aes_sub_bytes(aes_block &state)
@@ -85,39 +77,63 @@ void Pynqrypt::aes_sub_bytes(aes_block &state)
 
 void Pynqrypt::aes_shift_rows(aes_block &block)
 {
-    aes_block temp = block;
+    aes_block temp;
+    temp.range(127, 0) = block;
 
-    block.range(0, 7) = temp.range(0, 7);
-    block.range(8, 15) = temp.range(40, 47);
-    block.range(16, 23) = temp.range(80, 87);
-    block.range(24, 31) = temp.range(120, 127);
-    block.range(32, 39) = temp.range(32, 39);
-    block.range(40, 47) = temp.range(72, 79);
-    block.range(48, 55) = temp.range(112, 119);
-    block.range(56, 63) = temp.range(24, 31);
-    block.range(64, 71) = temp.range(64, 71);
-    block.range(72, 79) = temp.range(104, 111);
-    block.range(80, 87) = temp.range(16, 23);
-    block.range(88, 95) = temp.range(56, 63);
-    block.range(96, 103) = temp.range(96, 103);
-    block.range(104, 111) = temp.range(8, 15);
-    block.range(112, 119) = temp.range(48, 55);
-    block.range(120, 127) = temp.range(88, 95);
+    // aes shift rows
+    block.range(127, 120) = temp.range(127, 120);
+    block.range(119, 112) = temp.range(87, 80);
+    block.range(111, 104) = temp.range(47, 40);
+    block.range(103, 96) = temp.range(7, 0);
+
+    block.range(95, 88) = temp.range(95, 88);
+    block.range(87, 80) = temp.range(55, 48);
+    block.range(79, 72) = temp.range(15, 8);
+    block.range(71, 64) = temp.range(103, 96);
+
+    block.range(63, 56) = temp.range(63, 56);
+    block.range(55, 48) = temp.range(23, 16);
+    block.range(47, 40) = temp.range(111, 104);
+    block.range(39, 32) = temp.range(71, 64);
+
+    block.range(31, 24) = temp.range(31, 24);
+    block.range(23, 16) = temp.range(119, 112);
+    block.range(15, 8) = temp.range(79, 72);
+    block.range(7, 0) = temp.range(39, 32);
 }
 
 void Pynqrypt::aes_mix_columns(aes_block &block)
 {
-    aes_atom tmp1, tmp2, tmp3;
+    aes_atom s0, s1, a, b;
+    aes_block temp;
 
     loop_aes_mix_columns: for (int i = 0; i < 4; i++) {
-        tmp1 = block.range(i * 32 + 7, i * 32);
-        tmp2 = block.range(i * 32 + 15, i * 32 + 8);
-        tmp3 = block.range(i * 32 + 23, i * 32 + 16);
-        block.range(i * 32 + 7, i * 32) = aes_xtime(tmp1) ^ tmp2 ^ tmp3 ^ aes_xtime(tmp2 ^ tmp3);
-        block.range(i * 32 + 15, i * 32 + 8) = tmp1 ^ aes_xtime(tmp2) ^ tmp3 ^ aes_xtime(tmp1 ^ tmp3);
-        block.range(i * 32 + 23, i * 32 + 16) = tmp1 ^ tmp2 ^ aes_xtime(tmp3) ^ aes_xtime(tmp1 ^ tmp2);
-        block.range(i * 32 + 31, i * 32 + 24) = aes_xtime(tmp1) ^ tmp1 ^ tmp2 ^ tmp3;
+    	s0 = aes_mul2[block.range(i * 32 + 31, i * 32 + 24)];
+        s1 = aes_mul3[block.range(i * 32 + 23, i * 32 + 16)];
+        a = s0 ^ s1;
+        b = block.range(i * 32 + 15, i * 32 + 8) ^ block.range(i * 32 + 7, i * 32);
+        temp.range(i * 32 + 31, i * 32 + 24) = a ^ b;
+
+        s0 = aes_mul2[block.range(i * 32 + 23, i * 32 + 16)];
+        s1 = aes_mul3[block.range(i * 32 + 15, i * 32 + 8)];
+        a = block.range(i * 32 + 31, i * 32 + 24) ^ s0;
+        b = s1 ^ block.range(i * 32 + 7, i * 32);
+        temp.range(i * 32 + 23, i * 32 + 16) = a ^ b;
+
+        s0 = aes_mul2[block.range(i * 32 + 15, i * 32 + 8)];
+        s1 = aes_mul3[block.range(i * 32 + 7, i * 32)];
+        a = block.range(i * 32 + 31, i * 32 + 24) ^ block.range(i * 32 + 23, i * 32 + 16);
+        b = s0 ^ s1;
+        temp.range(i * 32 + 15, i * 32 + 8) = a ^ b;
+
+        s0 = aes_mul3[block.range(i * 32 + 31, i * 32 + 24)];
+        s1 = aes_mul2[block.range(i * 32 + 7, i * 32)];
+        a = s0 ^ block.range(i * 32 + 23, i * 32 + 16);
+        b = s1 ^ block.range(i * 32 + 15, i * 32 + 8);
+        temp.range(i * 32 + 7, i * 32) = a ^ b;
     }
+
+    block.range(127, 0) = temp;
 }
 
 // common functions
@@ -126,58 +142,32 @@ void Pynqrypt::aes_generate_round_keys()
     // https://en.wikipedia.org/wiki/AES_key_schedule
     aes_word temp;
     
-    auto _round_key = new aes_word[44];
+    aes_word _round_key[44] = {0};
 
-    // Copy the key into the round key array.
-    loop_copy_key: for (int i = 0; i < 4; i++)
-        _round_key[i] = key.range(i * 32 + 31, i * 32);
+    _round_key[0] = key.range(127, 96);
+    _round_key[1] = key.range(95, 64);
+    _round_key[2] = key.range(63, 32);
+    _round_key[3] = key.range(31, 0);
 
-    // All other round keys are found from the previous round keys.
-    loop_generate_round_keys: for (int i = 4; i < 44; i += 4) {
-        temp = _round_key[i - 1];
+    loop_aes_generate_round_keys: for (int i = 4; i < 44; i += 4) {
+    	temp = _round_key[i - 1];
 
-		aes_rotate_word(temp);
-		aes_sub_word(temp);
-		aes_xor_round_constant(temp, (i / 4) - 1);
+        aes_rotate_word(temp);
+    	aes_sub_word(temp);
+        aes_xor_round_constant(temp, (i / 4) - 1);
 
-        aes_xor_words(temp, _round_key[i - 4], _round_key[i + 0]);
-
-        temp = _round_key[i + 0];
-        aes_xor_words(temp, _round_key[i - 3], _round_key[i + 1]);
-
-        temp = _round_key[i + 1];
-		aes_xor_words(temp, _round_key[i - 2], _round_key[i + 2]);
-
-		temp = _round_key[i + 2];
-		aes_xor_words(temp, _round_key[i - 1], _round_key[i + 3]);
+        _round_key[i + 0] = _round_key[i - 4] ^ temp;
+        _round_key[i + 1] = _round_key[i - 3] ^ _round_key[i + 0];
+        _round_key[i + 2] = _round_key[i - 2] ^ _round_key[i + 1];
+        _round_key[i + 3] = _round_key[i - 1] ^ _round_key[i + 2];
     }
 
-    for (int i = 0; i < 11; i++) {
-        for (int j = 0; j < 4; j++) {
-            round_keys[i].range(127 - 32 * j, 96 - 32 * j) = _round_key[i * 4 + j];
-        }
+    for (int i = 0; i < 44; i += 4) {
+        round_keys[i / 4].range(127, 96) = _round_key[i + 0];
+        round_keys[i / 4].range(95, 64) = _round_key[i + 1];
+        round_keys[i / 4].range(63, 32) = _round_key[i + 2];
+        round_keys[i / 4].range(31, 0) = _round_key[i + 3];
     }
-}
-
-void Pynqrypt::aes_add_round_key(aes_block &state, off_t round_key_index)
-{
-    state ^= round_keys[round_key_index];
-}
-
-// TODO: consider inlining
-aes_atom Pynqrypt::aes_xtime(aes_atom x)
-{
-    return (x << 1) ^ (((x >> 7) & 1) * 0x1b);
-}
-
-// TODO: consider inlining
-aes_atom Pynqrypt::aes_multiply(aes_atom x, aes_atom y)
-{
-    return (((y & 1) * x) ^
-            ((y >> 1 & 1) * aes_xtime(x)) ^
-            ((y >> 2 & 1) * aes_xtime(aes_xtime(x))) ^
-            ((y >> 3 & 1) * aes_xtime(aes_xtime(aes_xtime(x)))) ^
-            ((y >> 4 & 1) * aes_xtime(aes_xtime(aes_xtime(aes_xtime(x))))));
 }
 
 void Pynqrypt::aes_rotate_word(aes_word &word)
@@ -195,9 +185,4 @@ void Pynqrypt::aes_sub_word(aes_word &word)
 void Pynqrypt::aes_xor_round_constant(aes_word &word, int round)
 {
     word.range(31, 24) = word.range(31, 24) ^ aes_rcon[round];
-}
-
-void Pynqrypt::aes_xor_words(const aes_word word1, const aes_word word2, aes_word &result)
-{
-    result = word1 ^ word2;
 }

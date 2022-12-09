@@ -161,6 +161,8 @@
                         					
                     </folderInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1690297865.1879642939" name="key_test.bin" rcbsApplicability="disable" resourcePath="testbench/key_test.bin" toolsToInvoke=""/>
+                    					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1690297865.250623634" name="data.bin" rcbsApplicability="disable" resourcePath="testbench/data.bin" toolsToInvoke=""/>
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1690297865.1988702302" name="data_enc_openssl.bin" rcbsApplicability="disable" resourcePath="testbench/data_enc_openssl.bin" toolsToInvoke=""/>
@@ -350,6 +352,8 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1673896263.573085248" name="key_test.bin" rcbsApplicability="disable" resourcePath="testbench/key_test.bin" toolsToInvoke=""/>
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1673896263.180864417" name="data.bin" rcbsApplicability="disable" resourcePath="testbench/data.bin" toolsToInvoke=""/>
                     					

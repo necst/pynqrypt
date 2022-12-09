@@ -2,60 +2,41 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog>
-        <logs message="ERROR: [HLS 207-2972] no member named 'endl' in namespace 'std' (hw-impl/src/pynqrypt.cpp:19:85)" projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T13:56:56.457+0100"/>
-        <logs message="ERROR: [HLS 207-2972] no member named 'hex' in namespace 'std' (hw-impl/src/pynqrypt.cpp:19:56)" projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T13:56:56.450+0100"/>
-        <logs message="ERROR: [HLS 207-2972] no member named 'cout' in namespace 'std' (hw-impl/src/pynqrypt.cpp:19:14)" projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T13:56:56.446+0100"/>
-      </synLog>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
       <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:54:59.929+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:54:18.420+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:53:02.659+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:51:47.169+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:50:23.224+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:48:52.761+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:46:21.464+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:45:41.745+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:44:25.064+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:41:33.766+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:40:31.725+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:39:40.107+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:33:48.843+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:31:12.180+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:30:02.038+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:26:40.137+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:25:35.966+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:24:55.435+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:24:17.754+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:22:51.138+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:22:24.972+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:21:41.317+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:19:35.125+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:18:03.749+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:17:35.509+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:15:47.316+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:14:41.401+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:12:49.411+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:11:51.432+0100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:10:36.340+0100"/>
-        <logs message="ERROR: Hi(159)out of bound(128) in range()&#xA;@E Simulation failed." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:10:36.337+0100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:09:41.771+0100"/>
-        <logs message="ERROR: Hi(159)out of bound(128) in range()&#xA;@E Simulation failed." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T14:09:41.768+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T13:58:49.579+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T13:57:28.787+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:18:08.214+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:15:46.416+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:14:38.981+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:12:35.914+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:07:46.661+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:06:23.157+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:03:58.972+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:03:00.593+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:01:14.038+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:59:42.804+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:58:34.768+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:58:01.224+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:57:27.790+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:56:13.144+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:55:41.747+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:48:59.569+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:46:41.690+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:45:31.183+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:44:32.342+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:44:01.486+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:43:16.134+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:40:39.477+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:37:59.398+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T22:37:36.995+0100"/>
       </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'hw-impl/src/key_test.bin'" projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:20:40.774+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'hw-impl/src/key_test.bin'" projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:19:40.216+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'hw-impl/src/key_test.bin'" projectName="pynqrypt-vitis-hls" solutionName="pynqrypt" date="2022-12-09T23:19:04.612+0100" type="Warning"/>
+      </csimLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

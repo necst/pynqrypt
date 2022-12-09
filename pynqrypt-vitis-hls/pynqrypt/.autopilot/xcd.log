@@ -848,3 +848,1436 @@ Fri Dec  9 14:54:59 2022: SERVER: destructor for server bound to port 33453
 Fri Dec  9 14:54:59 2022: XCD main fifo: Good unlink of /tmp/xcdmainf05084ac-010e-41bb-8797-e7fccbb35c0e
 Fri Dec  9 14:54:59 2022: Server exiting with status 0.
 Fri Dec  9 14:54:59 2022: Closing log file.
+Fri Dec  9 20:44:08 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:44:08 2022: Server was asked to start on port: '41405'
+Fri Dec  9 20:44:08 2022: Server is using token UUID: 'fe27cd5e-1541-4b68-829a-6a3bead3151d'
+Fri Dec  9 20:44:08 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:44:08 2022: Attempting to start server on port '41405'
+Fri Dec  9 20:44:08 2022: XCD main fifo: created main fifo '/tmp/xcdmainfe27cd5e-1541-4b68-829a-6a3bead3151d', fd read = 13
+Fri Dec  9 20:44:08 2022: Running Dispatch Server
+Fri Dec  9 20:44:08 2022: Version 2.2.0
+Fri Dec  9 20:44:16 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:44:16 2022: Starting Socket connection
+Fri Dec  9 20:44:16 2022: EXCHANGE_TOKEN received, server token: fe27cd5e-1541-4b68-829a-6a3bead3151d, passed token: fe27cd5e-1541-4b68-829a-6a3bead3151d
+Fri Dec  9 20:44:16 2022: SESSION_MGR: creating session with session uuid: '5c7a70e5-7576-45cf-a4e4-ada4fd53a5c4' and name 'vitis_hls'
+Fri Dec  9 20:44:16 2022: KERNEL_SVC: creating session with uuid: '5c7a70e5-7576-45cf-a4e4-ada4fd53a5c4' and name 'vitis_hls'
+Fri Dec  9 20:44:16 2022: GUIDANCE_SMGR: creating guidance session with uuid: '5c7a70e5-7576-45cf-a4e4-ada4fd53a5c4' and name 'vitis_hls'
+Fri Dec  9 20:44:21 2022: STOP_SERVER received, server token: fe27cd5e-1541-4b68-829a-6a3bead3151d, passed token: fe27cd5e-1541-4b68-829a-6a3bead3151d
+Fri Dec  9 20:44:21 2022: Socket received request to stop server.
+Fri Dec  9 20:44:21 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:44:21 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:44:21 2022: XCD main fifo: Stopping
+Fri Dec  9 20:44:21 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:44:21 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:44:21 2022: SERVER: destructor for server bound to port 41405
+Fri Dec  9 20:44:21 2022: XCD main fifo: Good unlink of /tmp/xcdmainfe27cd5e-1541-4b68-829a-6a3bead3151d
+Fri Dec  9 20:44:21 2022: Server exiting with status 0.
+Fri Dec  9 20:44:21 2022: Closing log file.
+Fri Dec  9 20:49:35 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:49:35 2022: Server was asked to start on port: '43513'
+Fri Dec  9 20:49:35 2022: Server is using token UUID: '77200d07-d4dd-4ff2-8b5d-903fa43a8b00'
+Fri Dec  9 20:49:35 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:49:35 2022: Attempting to start server on port '43513'
+Fri Dec  9 20:49:35 2022: XCD main fifo: created main fifo '/tmp/xcdmain77200d07-d4dd-4ff2-8b5d-903fa43a8b00', fd read = 13
+Fri Dec  9 20:49:35 2022: Running Dispatch Server
+Fri Dec  9 20:49:35 2022: Version 2.2.0
+Fri Dec  9 20:49:44 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:49:44 2022: Starting Socket connection
+Fri Dec  9 20:49:44 2022: EXCHANGE_TOKEN received, server token: 77200d07-d4dd-4ff2-8b5d-903fa43a8b00, passed token: 77200d07-d4dd-4ff2-8b5d-903fa43a8b00
+Fri Dec  9 20:49:44 2022: SESSION_MGR: creating session with session uuid: '89d2f919-8ac1-4115-8333-1fe4e648da81' and name 'vitis_hls'
+Fri Dec  9 20:49:44 2022: KERNEL_SVC: creating session with uuid: '89d2f919-8ac1-4115-8333-1fe4e648da81' and name 'vitis_hls'
+Fri Dec  9 20:49:44 2022: GUIDANCE_SMGR: creating guidance session with uuid: '89d2f919-8ac1-4115-8333-1fe4e648da81' and name 'vitis_hls'
+Fri Dec  9 20:49:48 2022: STOP_SERVER received, server token: 77200d07-d4dd-4ff2-8b5d-903fa43a8b00, passed token: 77200d07-d4dd-4ff2-8b5d-903fa43a8b00
+Fri Dec  9 20:49:48 2022: Socket received request to stop server.
+Fri Dec  9 20:49:48 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:49:48 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:49:48 2022: XCD main fifo: Stopping
+Fri Dec  9 20:49:48 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:49:48 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:49:48 2022: SERVER: destructor for server bound to port 43513
+Fri Dec  9 20:49:48 2022: XCD main fifo: Good unlink of /tmp/xcdmain77200d07-d4dd-4ff2-8b5d-903fa43a8b00
+Fri Dec  9 20:49:48 2022: Server exiting with status 0.
+Fri Dec  9 20:49:48 2022: Closing log file.
+Fri Dec  9 20:50:44 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:50:44 2022: Server was asked to start on port: '34687'
+Fri Dec  9 20:50:44 2022: Server is using token UUID: '2bcfde4e-41ad-4b9f-ad44-09b2b29b3d6b'
+Fri Dec  9 20:50:44 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:50:44 2022: Attempting to start server on port '34687'
+Fri Dec  9 20:50:44 2022: XCD main fifo: created main fifo '/tmp/xcdmain2bcfde4e-41ad-4b9f-ad44-09b2b29b3d6b', fd read = 13
+Fri Dec  9 20:50:44 2022: Running Dispatch Server
+Fri Dec  9 20:50:44 2022: Version 2.2.0
+Fri Dec  9 20:50:53 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:50:53 2022: Starting Socket connection
+Fri Dec  9 20:50:53 2022: EXCHANGE_TOKEN received, server token: 2bcfde4e-41ad-4b9f-ad44-09b2b29b3d6b, passed token: 2bcfde4e-41ad-4b9f-ad44-09b2b29b3d6b
+Fri Dec  9 20:50:53 2022: SESSION_MGR: creating session with session uuid: '89cb6c1a-c536-4aca-8ec4-0f44070eeff9' and name 'vitis_hls'
+Fri Dec  9 20:50:53 2022: KERNEL_SVC: creating session with uuid: '89cb6c1a-c536-4aca-8ec4-0f44070eeff9' and name 'vitis_hls'
+Fri Dec  9 20:50:53 2022: GUIDANCE_SMGR: creating guidance session with uuid: '89cb6c1a-c536-4aca-8ec4-0f44070eeff9' and name 'vitis_hls'
+Fri Dec  9 20:50:57 2022: STOP_SERVER received, server token: 2bcfde4e-41ad-4b9f-ad44-09b2b29b3d6b, passed token: 2bcfde4e-41ad-4b9f-ad44-09b2b29b3d6b
+Fri Dec  9 20:50:57 2022: Socket received request to stop server.
+Fri Dec  9 20:50:57 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:50:57 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:50:57 2022: XCD main fifo: Stopping
+Fri Dec  9 20:50:57 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:50:57 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:50:57 2022: SERVER: destructor for server bound to port 34687
+Fri Dec  9 20:50:57 2022: XCD main fifo: Good unlink of /tmp/xcdmain2bcfde4e-41ad-4b9f-ad44-09b2b29b3d6b
+Fri Dec  9 20:50:57 2022: Server exiting with status 0.
+Fri Dec  9 20:50:57 2022: Closing log file.
+Fri Dec  9 20:52:33 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:52:33 2022: Server was asked to start on port: '37621'
+Fri Dec  9 20:52:33 2022: Server is using token UUID: '44201989-ee4e-4500-a0cf-cc2b349c255c'
+Fri Dec  9 20:52:33 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:52:33 2022: Attempting to start server on port '37621'
+Fri Dec  9 20:52:33 2022: XCD main fifo: created main fifo '/tmp/xcdmain44201989-ee4e-4500-a0cf-cc2b349c255c', fd read = 13
+Fri Dec  9 20:52:33 2022: Running Dispatch Server
+Fri Dec  9 20:52:33 2022: Version 2.2.0
+Fri Dec  9 20:52:42 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:52:42 2022: Starting Socket connection
+Fri Dec  9 20:52:42 2022: EXCHANGE_TOKEN received, server token: 44201989-ee4e-4500-a0cf-cc2b349c255c, passed token: 44201989-ee4e-4500-a0cf-cc2b349c255c
+Fri Dec  9 20:52:42 2022: SESSION_MGR: creating session with session uuid: '100b69ee-a2e9-4b7c-b039-e10d0d7978a7' and name 'vitis_hls'
+Fri Dec  9 20:52:42 2022: KERNEL_SVC: creating session with uuid: '100b69ee-a2e9-4b7c-b039-e10d0d7978a7' and name 'vitis_hls'
+Fri Dec  9 20:52:42 2022: GUIDANCE_SMGR: creating guidance session with uuid: '100b69ee-a2e9-4b7c-b039-e10d0d7978a7' and name 'vitis_hls'
+Fri Dec  9 20:52:46 2022: STOP_SERVER received, server token: 44201989-ee4e-4500-a0cf-cc2b349c255c, passed token: 44201989-ee4e-4500-a0cf-cc2b349c255c
+Fri Dec  9 20:52:46 2022: Socket received request to stop server.
+Fri Dec  9 20:52:46 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:52:46 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:52:46 2022: XCD main fifo: Stopping
+Fri Dec  9 20:52:46 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:52:46 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:52:46 2022: SERVER: destructor for server bound to port 37621
+Fri Dec  9 20:52:46 2022: XCD main fifo: Good unlink of /tmp/xcdmain44201989-ee4e-4500-a0cf-cc2b349c255c
+Fri Dec  9 20:52:46 2022: Server exiting with status 0.
+Fri Dec  9 20:52:46 2022: Closing log file.
+Fri Dec  9 20:54:30 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:54:30 2022: Server was asked to start on port: '35617'
+Fri Dec  9 20:54:30 2022: Server is using token UUID: 'fa3525a0-13eb-4403-ae7a-684fef5d5fad'
+Fri Dec  9 20:54:30 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:54:30 2022: Attempting to start server on port '35617'
+Fri Dec  9 20:54:30 2022: XCD main fifo: created main fifo '/tmp/xcdmainfa3525a0-13eb-4403-ae7a-684fef5d5fad', fd read = 13
+Fri Dec  9 20:54:30 2022: Running Dispatch Server
+Fri Dec  9 20:54:30 2022: Version 2.2.0
+Fri Dec  9 20:54:39 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:54:39 2022: Starting Socket connection
+Fri Dec  9 20:54:39 2022: EXCHANGE_TOKEN received, server token: fa3525a0-13eb-4403-ae7a-684fef5d5fad, passed token: fa3525a0-13eb-4403-ae7a-684fef5d5fad
+Fri Dec  9 20:54:39 2022: SESSION_MGR: creating session with session uuid: '7ca2b87f-ba54-46bb-9271-cd2326ddb154' and name 'vitis_hls'
+Fri Dec  9 20:54:39 2022: KERNEL_SVC: creating session with uuid: '7ca2b87f-ba54-46bb-9271-cd2326ddb154' and name 'vitis_hls'
+Fri Dec  9 20:54:39 2022: GUIDANCE_SMGR: creating guidance session with uuid: '7ca2b87f-ba54-46bb-9271-cd2326ddb154' and name 'vitis_hls'
+Fri Dec  9 20:54:43 2022: STOP_SERVER received, server token: fa3525a0-13eb-4403-ae7a-684fef5d5fad, passed token: fa3525a0-13eb-4403-ae7a-684fef5d5fad
+Fri Dec  9 20:54:43 2022: Socket received request to stop server.
+Fri Dec  9 20:54:43 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:54:43 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:54:43 2022: XCD main fifo: Stopping
+Fri Dec  9 20:54:43 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:54:43 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:54:43 2022: SERVER: destructor for server bound to port 35617
+Fri Dec  9 20:54:43 2022: XCD main fifo: Good unlink of /tmp/xcdmainfa3525a0-13eb-4403-ae7a-684fef5d5fad
+Fri Dec  9 20:54:43 2022: Server exiting with status 0.
+Fri Dec  9 20:54:43 2022: Closing log file.
+Fri Dec  9 20:55:12 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:55:12 2022: Server was asked to start on port: '33849'
+Fri Dec  9 20:55:12 2022: Server is using token UUID: 'ec5e9b2d-aa15-4228-a84d-8e5d5c9a8ae0'
+Fri Dec  9 20:55:12 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:55:12 2022: Attempting to start server on port '33849'
+Fri Dec  9 20:55:12 2022: XCD main fifo: created main fifo '/tmp/xcdmainec5e9b2d-aa15-4228-a84d-8e5d5c9a8ae0', fd read = 13
+Fri Dec  9 20:55:12 2022: Running Dispatch Server
+Fri Dec  9 20:55:12 2022: Version 2.2.0
+Fri Dec  9 20:55:20 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:55:20 2022: Starting Socket connection
+Fri Dec  9 20:55:20 2022: EXCHANGE_TOKEN received, server token: ec5e9b2d-aa15-4228-a84d-8e5d5c9a8ae0, passed token: ec5e9b2d-aa15-4228-a84d-8e5d5c9a8ae0
+Fri Dec  9 20:55:20 2022: SESSION_MGR: creating session with session uuid: '7c9afd79-b43a-468a-bbfc-bf8233fd7d8a' and name 'vitis_hls'
+Fri Dec  9 20:55:20 2022: KERNEL_SVC: creating session with uuid: '7c9afd79-b43a-468a-bbfc-bf8233fd7d8a' and name 'vitis_hls'
+Fri Dec  9 20:55:20 2022: GUIDANCE_SMGR: creating guidance session with uuid: '7c9afd79-b43a-468a-bbfc-bf8233fd7d8a' and name 'vitis_hls'
+Fri Dec  9 20:55:24 2022: STOP_SERVER received, server token: ec5e9b2d-aa15-4228-a84d-8e5d5c9a8ae0, passed token: ec5e9b2d-aa15-4228-a84d-8e5d5c9a8ae0
+Fri Dec  9 20:55:24 2022: Socket received request to stop server.
+Fri Dec  9 20:55:24 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:55:24 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:55:24 2022: XCD main fifo: Stopping
+Fri Dec  9 20:55:24 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:55:24 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:55:24 2022: SERVER: destructor for server bound to port 33849
+Fri Dec  9 20:55:24 2022: XCD main fifo: Good unlink of /tmp/xcdmainec5e9b2d-aa15-4228-a84d-8e5d5c9a8ae0
+Fri Dec  9 20:55:24 2022: Server exiting with status 0.
+Fri Dec  9 20:55:24 2022: Closing log file.
+Fri Dec  9 20:56:02 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:56:02 2022: Server was asked to start on port: '36271'
+Fri Dec  9 20:56:02 2022: Server is using token UUID: '169c9976-610a-466e-9d41-29c5cf0e2dde'
+Fri Dec  9 20:56:02 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:56:02 2022: Attempting to start server on port '36271'
+Fri Dec  9 20:56:02 2022: XCD main fifo: created main fifo '/tmp/xcdmain169c9976-610a-466e-9d41-29c5cf0e2dde', fd read = 13
+Fri Dec  9 20:56:02 2022: Running Dispatch Server
+Fri Dec  9 20:56:02 2022: Version 2.2.0
+Fri Dec  9 20:56:10 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:56:10 2022: Starting Socket connection
+Fri Dec  9 20:56:10 2022: EXCHANGE_TOKEN received, server token: 169c9976-610a-466e-9d41-29c5cf0e2dde, passed token: 169c9976-610a-466e-9d41-29c5cf0e2dde
+Fri Dec  9 20:56:10 2022: SESSION_MGR: creating session with session uuid: 'd342a2b6-6f87-4ff6-b7a2-2ae24fe517f2' and name 'vitis_hls'
+Fri Dec  9 20:56:10 2022: KERNEL_SVC: creating session with uuid: 'd342a2b6-6f87-4ff6-b7a2-2ae24fe517f2' and name 'vitis_hls'
+Fri Dec  9 20:56:10 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'd342a2b6-6f87-4ff6-b7a2-2ae24fe517f2' and name 'vitis_hls'
+Fri Dec  9 20:56:14 2022: STOP_SERVER received, server token: 169c9976-610a-466e-9d41-29c5cf0e2dde, passed token: 169c9976-610a-466e-9d41-29c5cf0e2dde
+Fri Dec  9 20:56:14 2022: Socket received request to stop server.
+Fri Dec  9 20:56:14 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:56:14 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:56:14 2022: XCD main fifo: Stopping
+Fri Dec  9 20:56:14 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:56:14 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:56:14 2022: SERVER: destructor for server bound to port 36271
+Fri Dec  9 20:56:14 2022: XCD main fifo: Good unlink of /tmp/xcdmain169c9976-610a-466e-9d41-29c5cf0e2dde
+Fri Dec  9 20:56:14 2022: Server exiting with status 0.
+Fri Dec  9 20:56:14 2022: Closing log file.
+Fri Dec  9 20:56:57 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:56:57 2022: Server was asked to start on port: '36717'
+Fri Dec  9 20:56:57 2022: Server is using token UUID: '81a09765-4368-46d7-9ca2-ed00dde6f5c9'
+Fri Dec  9 20:56:57 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:56:57 2022: Attempting to start server on port '36717'
+Fri Dec  9 20:56:57 2022: XCD main fifo: created main fifo '/tmp/xcdmain81a09765-4368-46d7-9ca2-ed00dde6f5c9', fd read = 13
+Fri Dec  9 20:56:57 2022: Running Dispatch Server
+Fri Dec  9 20:56:57 2022: Version 2.2.0
+Fri Dec  9 20:57:06 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:57:06 2022: Starting Socket connection
+Fri Dec  9 20:57:06 2022: EXCHANGE_TOKEN received, server token: 81a09765-4368-46d7-9ca2-ed00dde6f5c9, passed token: 81a09765-4368-46d7-9ca2-ed00dde6f5c9
+Fri Dec  9 20:57:06 2022: SESSION_MGR: creating session with session uuid: '1426f860-4db8-4e97-a578-6c6901730a7b' and name 'vitis_hls'
+Fri Dec  9 20:57:06 2022: KERNEL_SVC: creating session with uuid: '1426f860-4db8-4e97-a578-6c6901730a7b' and name 'vitis_hls'
+Fri Dec  9 20:57:06 2022: GUIDANCE_SMGR: creating guidance session with uuid: '1426f860-4db8-4e97-a578-6c6901730a7b' and name 'vitis_hls'
+Fri Dec  9 20:57:10 2022: STOP_SERVER received, server token: 81a09765-4368-46d7-9ca2-ed00dde6f5c9, passed token: 81a09765-4368-46d7-9ca2-ed00dde6f5c9
+Fri Dec  9 20:57:10 2022: Socket received request to stop server.
+Fri Dec  9 20:57:10 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:57:10 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:57:10 2022: XCD main fifo: Stopping
+Fri Dec  9 20:57:10 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:57:10 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:57:10 2022: SERVER: destructor for server bound to port 36717
+Fri Dec  9 20:57:10 2022: XCD main fifo: Good unlink of /tmp/xcdmain81a09765-4368-46d7-9ca2-ed00dde6f5c9
+Fri Dec  9 20:57:10 2022: Server exiting with status 0.
+Fri Dec  9 20:57:10 2022: Closing log file.
+Fri Dec  9 20:57:27 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:57:27 2022: Server was asked to start on port: '40861'
+Fri Dec  9 20:57:27 2022: Server is using token UUID: '34e4de44-a82f-403e-bfc9-f7932f603525'
+Fri Dec  9 20:57:27 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:57:27 2022: Attempting to start server on port '40861'
+Fri Dec  9 20:57:27 2022: XCD main fifo: created main fifo '/tmp/xcdmain34e4de44-a82f-403e-bfc9-f7932f603525', fd read = 13
+Fri Dec  9 20:57:27 2022: Running Dispatch Server
+Fri Dec  9 20:57:27 2022: Version 2.2.0
+Fri Dec  9 20:57:36 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:57:36 2022: Starting Socket connection
+Fri Dec  9 20:57:36 2022: EXCHANGE_TOKEN received, server token: 34e4de44-a82f-403e-bfc9-f7932f603525, passed token: 34e4de44-a82f-403e-bfc9-f7932f603525
+Fri Dec  9 20:57:36 2022: SESSION_MGR: creating session with session uuid: '88dc5a1f-9a94-4d05-90dd-e549a74fa461' and name 'vitis_hls'
+Fri Dec  9 20:57:36 2022: KERNEL_SVC: creating session with uuid: '88dc5a1f-9a94-4d05-90dd-e549a74fa461' and name 'vitis_hls'
+Fri Dec  9 20:57:36 2022: GUIDANCE_SMGR: creating guidance session with uuid: '88dc5a1f-9a94-4d05-90dd-e549a74fa461' and name 'vitis_hls'
+Fri Dec  9 20:57:40 2022: STOP_SERVER received, server token: 34e4de44-a82f-403e-bfc9-f7932f603525, passed token: 34e4de44-a82f-403e-bfc9-f7932f603525
+Fri Dec  9 20:57:40 2022: Socket received request to stop server.
+Fri Dec  9 20:57:40 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:57:40 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:57:40 2022: XCD main fifo: Stopping
+Fri Dec  9 20:57:40 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:57:40 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:57:40 2022: SERVER: destructor for server bound to port 40861
+Fri Dec  9 20:57:40 2022: XCD main fifo: Good unlink of /tmp/xcdmain34e4de44-a82f-403e-bfc9-f7932f603525
+Fri Dec  9 20:57:40 2022: Server exiting with status 0.
+Fri Dec  9 20:57:40 2022: Closing log file.
+Fri Dec  9 20:58:21 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:58:21 2022: Server was asked to start on port: '33137'
+Fri Dec  9 20:58:21 2022: Server is using token UUID: '381e35b0-8106-4735-b77b-42c52eb403a1'
+Fri Dec  9 20:58:21 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:58:21 2022: Attempting to start server on port '33137'
+Fri Dec  9 20:58:21 2022: XCD main fifo: created main fifo '/tmp/xcdmain381e35b0-8106-4735-b77b-42c52eb403a1', fd read = 13
+Fri Dec  9 20:58:21 2022: Running Dispatch Server
+Fri Dec  9 20:58:21 2022: Version 2.2.0
+Fri Dec  9 20:58:30 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:58:30 2022: Starting Socket connection
+Fri Dec  9 20:58:30 2022: EXCHANGE_TOKEN received, server token: 381e35b0-8106-4735-b77b-42c52eb403a1, passed token: 381e35b0-8106-4735-b77b-42c52eb403a1
+Fri Dec  9 20:58:30 2022: SESSION_MGR: creating session with session uuid: 'e251bba0-2194-4d49-b5d2-2769a78540cb' and name 'vitis_hls'
+Fri Dec  9 20:58:30 2022: KERNEL_SVC: creating session with uuid: 'e251bba0-2194-4d49-b5d2-2769a78540cb' and name 'vitis_hls'
+Fri Dec  9 20:58:30 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'e251bba0-2194-4d49-b5d2-2769a78540cb' and name 'vitis_hls'
+Fri Dec  9 20:58:35 2022: STOP_SERVER received, server token: 381e35b0-8106-4735-b77b-42c52eb403a1, passed token: 381e35b0-8106-4735-b77b-42c52eb403a1
+Fri Dec  9 20:58:35 2022: Socket received request to stop server.
+Fri Dec  9 20:58:35 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:58:35 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:58:35 2022: XCD main fifo: Stopping
+Fri Dec  9 20:58:35 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:58:35 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:58:35 2022: SERVER: destructor for server bound to port 33137
+Fri Dec  9 20:58:35 2022: XCD main fifo: Good unlink of /tmp/xcdmain381e35b0-8106-4735-b77b-42c52eb403a1
+Fri Dec  9 20:58:35 2022: Server exiting with status 0.
+Fri Dec  9 20:58:35 2022: Closing log file.
+Fri Dec  9 20:59:03 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 20:59:03 2022: Server was asked to start on port: '39451'
+Fri Dec  9 20:59:03 2022: Server is using token UUID: 'a76955ee-0608-43a2-96a9-63b87d1739c5'
+Fri Dec  9 20:59:03 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 20:59:03 2022: Attempting to start server on port '39451'
+Fri Dec  9 20:59:03 2022: XCD main fifo: created main fifo '/tmp/xcdmaina76955ee-0608-43a2-96a9-63b87d1739c5', fd read = 13
+Fri Dec  9 20:59:03 2022: Running Dispatch Server
+Fri Dec  9 20:59:03 2022: Version 2.2.0
+Fri Dec  9 20:59:11 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 20:59:11 2022: Starting Socket connection
+Fri Dec  9 20:59:11 2022: EXCHANGE_TOKEN received, server token: a76955ee-0608-43a2-96a9-63b87d1739c5, passed token: a76955ee-0608-43a2-96a9-63b87d1739c5
+Fri Dec  9 20:59:11 2022: SESSION_MGR: creating session with session uuid: 'c8dabfdf-39eb-4b52-8f76-4b8dc64cf109' and name 'vitis_hls'
+Fri Dec  9 20:59:11 2022: KERNEL_SVC: creating session with uuid: 'c8dabfdf-39eb-4b52-8f76-4b8dc64cf109' and name 'vitis_hls'
+Fri Dec  9 20:59:11 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'c8dabfdf-39eb-4b52-8f76-4b8dc64cf109' and name 'vitis_hls'
+Fri Dec  9 20:59:16 2022: STOP_SERVER received, server token: a76955ee-0608-43a2-96a9-63b87d1739c5, passed token: a76955ee-0608-43a2-96a9-63b87d1739c5
+Fri Dec  9 20:59:16 2022: Socket received request to stop server.
+Fri Dec  9 20:59:16 2022: Dispatch Server: do_await_stop
+Fri Dec  9 20:59:16 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 20:59:16 2022: XCD main fifo: Stopping
+Fri Dec  9 20:59:16 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 20:59:16 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 20:59:16 2022: SERVER: destructor for server bound to port 39451
+Fri Dec  9 20:59:16 2022: XCD main fifo: Good unlink of /tmp/xcdmaina76955ee-0608-43a2-96a9-63b87d1739c5
+Fri Dec  9 20:59:16 2022: Server exiting with status 0.
+Fri Dec  9 20:59:16 2022: Closing log file.
+Fri Dec  9 21:01:19 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:01:19 2022: Server was asked to start on port: '40237'
+Fri Dec  9 21:01:19 2022: Server is using token UUID: '80168639-e9d7-4e0a-97b2-161fec5668d2'
+Fri Dec  9 21:01:19 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:01:19 2022: Attempting to start server on port '40237'
+Fri Dec  9 21:01:19 2022: XCD main fifo: created main fifo '/tmp/xcdmain80168639-e9d7-4e0a-97b2-161fec5668d2', fd read = 13
+Fri Dec  9 21:01:19 2022: Running Dispatch Server
+Fri Dec  9 21:01:19 2022: Version 2.2.0
+Fri Dec  9 21:01:28 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:01:28 2022: Starting Socket connection
+Fri Dec  9 21:01:28 2022: EXCHANGE_TOKEN received, server token: 80168639-e9d7-4e0a-97b2-161fec5668d2, passed token: 80168639-e9d7-4e0a-97b2-161fec5668d2
+Fri Dec  9 21:01:28 2022: SESSION_MGR: creating session with session uuid: 'a86cceb1-f4cd-4ad8-bb4b-88c011090748' and name 'vitis_hls'
+Fri Dec  9 21:01:28 2022: KERNEL_SVC: creating session with uuid: 'a86cceb1-f4cd-4ad8-bb4b-88c011090748' and name 'vitis_hls'
+Fri Dec  9 21:01:28 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'a86cceb1-f4cd-4ad8-bb4b-88c011090748' and name 'vitis_hls'
+Fri Dec  9 21:01:32 2022: STOP_SERVER received, server token: 80168639-e9d7-4e0a-97b2-161fec5668d2, passed token: 80168639-e9d7-4e0a-97b2-161fec5668d2
+Fri Dec  9 21:01:32 2022: Socket received request to stop server.
+Fri Dec  9 21:01:32 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:01:32 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:01:32 2022: XCD main fifo: Stopping
+Fri Dec  9 21:01:32 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:01:32 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:01:32 2022: SERVER: destructor for server bound to port 40237
+Fri Dec  9 21:01:32 2022: XCD main fifo: Good unlink of /tmp/xcdmain80168639-e9d7-4e0a-97b2-161fec5668d2
+Fri Dec  9 21:01:32 2022: Server exiting with status 0.
+Fri Dec  9 21:01:32 2022: Closing log file.
+Fri Dec  9 21:04:58 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:04:58 2022: Server was asked to start on port: '38865'
+Fri Dec  9 21:04:58 2022: Server is using token UUID: '6f17700d-00a6-47d4-961a-2d9c02eaa2f1'
+Fri Dec  9 21:04:58 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:04:58 2022: Attempting to start server on port '38865'
+Fri Dec  9 21:04:58 2022: XCD main fifo: created main fifo '/tmp/xcdmain6f17700d-00a6-47d4-961a-2d9c02eaa2f1', fd read = 13
+Fri Dec  9 21:04:58 2022: Running Dispatch Server
+Fri Dec  9 21:04:58 2022: Version 2.2.0
+Fri Dec  9 21:05:07 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:05:07 2022: Starting Socket connection
+Fri Dec  9 21:05:07 2022: EXCHANGE_TOKEN received, server token: 6f17700d-00a6-47d4-961a-2d9c02eaa2f1, passed token: 6f17700d-00a6-47d4-961a-2d9c02eaa2f1
+Fri Dec  9 21:05:07 2022: SESSION_MGR: creating session with session uuid: '2498e7af-ddd5-41d5-bf36-9434dbaa44e2' and name 'vitis_hls'
+Fri Dec  9 21:05:07 2022: KERNEL_SVC: creating session with uuid: '2498e7af-ddd5-41d5-bf36-9434dbaa44e2' and name 'vitis_hls'
+Fri Dec  9 21:05:07 2022: GUIDANCE_SMGR: creating guidance session with uuid: '2498e7af-ddd5-41d5-bf36-9434dbaa44e2' and name 'vitis_hls'
+Fri Dec  9 21:05:11 2022: STOP_SERVER received, server token: 6f17700d-00a6-47d4-961a-2d9c02eaa2f1, passed token: 6f17700d-00a6-47d4-961a-2d9c02eaa2f1
+Fri Dec  9 21:05:11 2022: Socket received request to stop server.
+Fri Dec  9 21:05:11 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:05:11 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:05:11 2022: XCD main fifo: Stopping
+Fri Dec  9 21:05:11 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:05:11 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:05:11 2022: SERVER: destructor for server bound to port 38865
+Fri Dec  9 21:05:11 2022: XCD main fifo: Good unlink of /tmp/xcdmain6f17700d-00a6-47d4-961a-2d9c02eaa2f1
+Fri Dec  9 21:05:11 2022: Server exiting with status 0.
+Fri Dec  9 21:05:11 2022: Closing log file.
+Fri Dec  9 21:05:54 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:05:54 2022: Server was asked to start on port: '44799'
+Fri Dec  9 21:05:54 2022: Server is using token UUID: '09c9b489-a007-473e-98b1-63909c065428'
+Fri Dec  9 21:05:54 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:05:54 2022: Attempting to start server on port '44799'
+Fri Dec  9 21:05:54 2022: XCD main fifo: created main fifo '/tmp/xcdmain09c9b489-a007-473e-98b1-63909c065428', fd read = 13
+Fri Dec  9 21:05:54 2022: Running Dispatch Server
+Fri Dec  9 21:05:54 2022: Version 2.2.0
+Fri Dec  9 21:06:03 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:06:03 2022: Starting Socket connection
+Fri Dec  9 21:06:03 2022: EXCHANGE_TOKEN received, server token: 09c9b489-a007-473e-98b1-63909c065428, passed token: 09c9b489-a007-473e-98b1-63909c065428
+Fri Dec  9 21:06:03 2022: SESSION_MGR: creating session with session uuid: 'd2707c6d-4c40-481c-a746-b964244e345e' and name 'vitis_hls'
+Fri Dec  9 21:06:03 2022: KERNEL_SVC: creating session with uuid: 'd2707c6d-4c40-481c-a746-b964244e345e' and name 'vitis_hls'
+Fri Dec  9 21:06:03 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'd2707c6d-4c40-481c-a746-b964244e345e' and name 'vitis_hls'
+Fri Dec  9 21:06:07 2022: STOP_SERVER received, server token: 09c9b489-a007-473e-98b1-63909c065428, passed token: 09c9b489-a007-473e-98b1-63909c065428
+Fri Dec  9 21:06:07 2022: Socket received request to stop server.
+Fri Dec  9 21:06:07 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:06:07 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:06:07 2022: XCD main fifo: Stopping
+Fri Dec  9 21:06:07 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:06:07 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:06:07 2022: SERVER: destructor for server bound to port 44799
+Fri Dec  9 21:06:07 2022: XCD main fifo: Good unlink of /tmp/xcdmain09c9b489-a007-473e-98b1-63909c065428
+Fri Dec  9 21:06:07 2022: Server exiting with status 0.
+Fri Dec  9 21:06:07 2022: Closing log file.
+Fri Dec  9 21:06:35 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:06:35 2022: Server was asked to start on port: '34879'
+Fri Dec  9 21:06:35 2022: Server is using token UUID: '43c0e8b6-6640-4d44-a74d-ac1a2df2ef56'
+Fri Dec  9 21:06:35 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:06:35 2022: Attempting to start server on port '34879'
+Fri Dec  9 21:06:35 2022: XCD main fifo: created main fifo '/tmp/xcdmain43c0e8b6-6640-4d44-a74d-ac1a2df2ef56', fd read = 13
+Fri Dec  9 21:06:35 2022: Running Dispatch Server
+Fri Dec  9 21:06:35 2022: Version 2.2.0
+Fri Dec  9 21:06:44 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:06:44 2022: Starting Socket connection
+Fri Dec  9 21:06:44 2022: EXCHANGE_TOKEN received, server token: 43c0e8b6-6640-4d44-a74d-ac1a2df2ef56, passed token: 43c0e8b6-6640-4d44-a74d-ac1a2df2ef56
+Fri Dec  9 21:06:44 2022: SESSION_MGR: creating session with session uuid: '3d9d7935-beb9-479d-9206-fae8d38c6d52' and name 'vitis_hls'
+Fri Dec  9 21:06:44 2022: KERNEL_SVC: creating session with uuid: '3d9d7935-beb9-479d-9206-fae8d38c6d52' and name 'vitis_hls'
+Fri Dec  9 21:06:44 2022: GUIDANCE_SMGR: creating guidance session with uuid: '3d9d7935-beb9-479d-9206-fae8d38c6d52' and name 'vitis_hls'
+Fri Dec  9 21:06:48 2022: STOP_SERVER received, server token: 43c0e8b6-6640-4d44-a74d-ac1a2df2ef56, passed token: 43c0e8b6-6640-4d44-a74d-ac1a2df2ef56
+Fri Dec  9 21:06:48 2022: Socket received request to stop server.
+Fri Dec  9 21:06:48 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:06:48 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:06:48 2022: XCD main fifo: Stopping
+Fri Dec  9 21:06:48 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:06:48 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:06:48 2022: SERVER: destructor for server bound to port 34879
+Fri Dec  9 21:06:48 2022: XCD main fifo: Good unlink of /tmp/xcdmain43c0e8b6-6640-4d44-a74d-ac1a2df2ef56
+Fri Dec  9 21:06:48 2022: Server exiting with status 0.
+Fri Dec  9 21:06:48 2022: Closing log file.
+Fri Dec  9 21:13:53 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:13:53 2022: Server was asked to start on port: '36777'
+Fri Dec  9 21:13:53 2022: Server is using token UUID: '24d53637-5422-4698-af79-d6a085672d5d'
+Fri Dec  9 21:13:53 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:13:53 2022: Attempting to start server on port '36777'
+Fri Dec  9 21:13:53 2022: XCD main fifo: created main fifo '/tmp/xcdmain24d53637-5422-4698-af79-d6a085672d5d', fd read = 13
+Fri Dec  9 21:13:53 2022: Running Dispatch Server
+Fri Dec  9 21:13:53 2022: Version 2.2.0
+Fri Dec  9 21:14:02 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:14:02 2022: Starting Socket connection
+Fri Dec  9 21:14:02 2022: EXCHANGE_TOKEN received, server token: 24d53637-5422-4698-af79-d6a085672d5d, passed token: 24d53637-5422-4698-af79-d6a085672d5d
+Fri Dec  9 21:14:02 2022: SESSION_MGR: creating session with session uuid: '4e68510c-4bd6-4fea-9a18-d0ad95a01025' and name 'vitis_hls'
+Fri Dec  9 21:14:02 2022: KERNEL_SVC: creating session with uuid: '4e68510c-4bd6-4fea-9a18-d0ad95a01025' and name 'vitis_hls'
+Fri Dec  9 21:14:02 2022: GUIDANCE_SMGR: creating guidance session with uuid: '4e68510c-4bd6-4fea-9a18-d0ad95a01025' and name 'vitis_hls'
+Fri Dec  9 21:14:05 2022: STOP_SERVER received, server token: 24d53637-5422-4698-af79-d6a085672d5d, passed token: 24d53637-5422-4698-af79-d6a085672d5d
+Fri Dec  9 21:14:05 2022: Socket received request to stop server.
+Fri Dec  9 21:14:05 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:14:05 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:14:05 2022: XCD main fifo: Stopping
+Fri Dec  9 21:14:05 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:14:05 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:14:05 2022: SERVER: destructor for server bound to port 36777
+Fri Dec  9 21:14:05 2022: XCD main fifo: Good unlink of /tmp/xcdmain24d53637-5422-4698-af79-d6a085672d5d
+Fri Dec  9 21:14:05 2022: Server exiting with status 0.
+Fri Dec  9 21:14:05 2022: Closing log file.
+Fri Dec  9 21:14:28 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:14:28 2022: Server was asked to start on port: '38627'
+Fri Dec  9 21:14:28 2022: Server is using token UUID: '80b64784-f548-452c-b6aa-d87ff58b43a9'
+Fri Dec  9 21:14:28 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:14:28 2022: Attempting to start server on port '38627'
+Fri Dec  9 21:14:28 2022: XCD main fifo: created main fifo '/tmp/xcdmain80b64784-f548-452c-b6aa-d87ff58b43a9', fd read = 13
+Fri Dec  9 21:14:28 2022: Running Dispatch Server
+Fri Dec  9 21:14:28 2022: Version 2.2.0
+Fri Dec  9 21:14:37 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:14:37 2022: Starting Socket connection
+Fri Dec  9 21:14:37 2022: EXCHANGE_TOKEN received, server token: 80b64784-f548-452c-b6aa-d87ff58b43a9, passed token: 80b64784-f548-452c-b6aa-d87ff58b43a9
+Fri Dec  9 21:14:37 2022: SESSION_MGR: creating session with session uuid: 'c74e1790-2708-4657-ae9f-af82e6b14ec9' and name 'vitis_hls'
+Fri Dec  9 21:14:37 2022: KERNEL_SVC: creating session with uuid: 'c74e1790-2708-4657-ae9f-af82e6b14ec9' and name 'vitis_hls'
+Fri Dec  9 21:14:37 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'c74e1790-2708-4657-ae9f-af82e6b14ec9' and name 'vitis_hls'
+Fri Dec  9 21:14:41 2022: STOP_SERVER received, server token: 80b64784-f548-452c-b6aa-d87ff58b43a9, passed token: 80b64784-f548-452c-b6aa-d87ff58b43a9
+Fri Dec  9 21:14:41 2022: Socket received request to stop server.
+Fri Dec  9 21:14:41 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:14:41 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:14:41 2022: XCD main fifo: Stopping
+Fri Dec  9 21:14:41 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:14:41 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:14:41 2022: SERVER: destructor for server bound to port 38627
+Fri Dec  9 21:14:41 2022: XCD main fifo: Good unlink of /tmp/xcdmain80b64784-f548-452c-b6aa-d87ff58b43a9
+Fri Dec  9 21:14:41 2022: Server exiting with status 0.
+Fri Dec  9 21:14:41 2022: Closing log file.
+Fri Dec  9 21:16:39 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:16:39 2022: Server was asked to start on port: '40821'
+Fri Dec  9 21:16:39 2022: Server is using token UUID: '3ca11d57-512e-457c-8c20-8990dd3adfb2'
+Fri Dec  9 21:16:39 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:16:39 2022: Attempting to start server on port '40821'
+Fri Dec  9 21:16:39 2022: XCD main fifo: created main fifo '/tmp/xcdmain3ca11d57-512e-457c-8c20-8990dd3adfb2', fd read = 13
+Fri Dec  9 21:16:39 2022: Running Dispatch Server
+Fri Dec  9 21:16:39 2022: Version 2.2.0
+Fri Dec  9 21:17:03 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:17:03 2022: Server was asked to start on port: '34319'
+Fri Dec  9 21:17:03 2022: Server is using token UUID: '7650b4af-87be-4eab-ba7d-e98ae1218867'
+Fri Dec  9 21:17:03 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:17:03 2022: Attempting to start server on port '34319'
+Fri Dec  9 21:17:03 2022: XCD main fifo: created main fifo '/tmp/xcdmain7650b4af-87be-4eab-ba7d-e98ae1218867', fd read = 13
+Fri Dec  9 21:17:03 2022: Running Dispatch Server
+Fri Dec  9 21:17:03 2022: Version 2.2.0
+Fri Dec  9 21:17:12 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:17:12 2022: Starting Socket connection
+Fri Dec  9 21:17:12 2022: EXCHANGE_TOKEN received, server token: 7650b4af-87be-4eab-ba7d-e98ae1218867, passed token: 7650b4af-87be-4eab-ba7d-e98ae1218867
+Fri Dec  9 21:17:12 2022: SESSION_MGR: creating session with session uuid: 'b2b38af0-a88c-44ba-a38f-bc8a20e558a7' and name 'vitis_hls'
+Fri Dec  9 21:17:12 2022: KERNEL_SVC: creating session with uuid: 'b2b38af0-a88c-44ba-a38f-bc8a20e558a7' and name 'vitis_hls'
+Fri Dec  9 21:17:12 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'b2b38af0-a88c-44ba-a38f-bc8a20e558a7' and name 'vitis_hls'
+Fri Dec  9 21:17:16 2022: STOP_SERVER received, server token: 7650b4af-87be-4eab-ba7d-e98ae1218867, passed token: 7650b4af-87be-4eab-ba7d-e98ae1218867
+Fri Dec  9 21:17:16 2022: Socket received request to stop server.
+Fri Dec  9 21:17:16 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:17:16 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:17:16 2022: XCD main fifo: Stopping
+Fri Dec  9 21:17:16 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:17:16 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:17:16 2022: SERVER: destructor for server bound to port 34319
+Fri Dec  9 21:17:16 2022: XCD main fifo: Good unlink of /tmp/xcdmain7650b4af-87be-4eab-ba7d-e98ae1218867
+Fri Dec  9 21:17:16 2022: Server exiting with status 0.
+Fri Dec  9 21:17:16 2022: Closing log file.
+Fri Dec  9 21:18:28 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:18:28 2022: Server was asked to start on port: '40403'
+Fri Dec  9 21:18:28 2022: Server is using token UUID: '98ffe81b-00dd-45ee-b556-0f29b17c416f'
+Fri Dec  9 21:18:28 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:18:28 2022: Attempting to start server on port '40403'
+Fri Dec  9 21:18:28 2022: XCD main fifo: created main fifo '/tmp/xcdmain98ffe81b-00dd-45ee-b556-0f29b17c416f', fd read = 13
+Fri Dec  9 21:18:28 2022: Running Dispatch Server
+Fri Dec  9 21:18:28 2022: Version 2.2.0
+Fri Dec  9 21:18:37 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:18:37 2022: Starting Socket connection
+Fri Dec  9 21:18:37 2022: EXCHANGE_TOKEN received, server token: 98ffe81b-00dd-45ee-b556-0f29b17c416f, passed token: 98ffe81b-00dd-45ee-b556-0f29b17c416f
+Fri Dec  9 21:18:37 2022: SESSION_MGR: creating session with session uuid: '1afbaf5d-95be-4611-b7af-61167282df1f' and name 'vitis_hls'
+Fri Dec  9 21:18:37 2022: KERNEL_SVC: creating session with uuid: '1afbaf5d-95be-4611-b7af-61167282df1f' and name 'vitis_hls'
+Fri Dec  9 21:18:37 2022: GUIDANCE_SMGR: creating guidance session with uuid: '1afbaf5d-95be-4611-b7af-61167282df1f' and name 'vitis_hls'
+Fri Dec  9 21:18:41 2022: STOP_SERVER received, server token: 98ffe81b-00dd-45ee-b556-0f29b17c416f, passed token: 98ffe81b-00dd-45ee-b556-0f29b17c416f
+Fri Dec  9 21:18:41 2022: Socket received request to stop server.
+Fri Dec  9 21:18:41 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:18:41 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:18:41 2022: XCD main fifo: Stopping
+Fri Dec  9 21:18:41 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:18:41 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:18:41 2022: SERVER: destructor for server bound to port 40403
+Fri Dec  9 21:18:41 2022: XCD main fifo: Good unlink of /tmp/xcdmain98ffe81b-00dd-45ee-b556-0f29b17c416f
+Fri Dec  9 21:18:41 2022: Server exiting with status 0.
+Fri Dec  9 21:18:41 2022: Closing log file.
+Fri Dec  9 21:19:20 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:19:20 2022: Server was asked to start on port: '34375'
+Fri Dec  9 21:19:20 2022: Server is using token UUID: '1421ad4a-7a31-40c5-971b-770b44646d20'
+Fri Dec  9 21:19:20 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:19:20 2022: Attempting to start server on port '34375'
+Fri Dec  9 21:19:20 2022: XCD main fifo: created main fifo '/tmp/xcdmain1421ad4a-7a31-40c5-971b-770b44646d20', fd read = 13
+Fri Dec  9 21:19:20 2022: Running Dispatch Server
+Fri Dec  9 21:19:20 2022: Version 2.2.0
+Fri Dec  9 21:19:29 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:19:29 2022: Starting Socket connection
+Fri Dec  9 21:19:29 2022: EXCHANGE_TOKEN received, server token: 1421ad4a-7a31-40c5-971b-770b44646d20, passed token: 1421ad4a-7a31-40c5-971b-770b44646d20
+Fri Dec  9 21:19:29 2022: SESSION_MGR: creating session with session uuid: '9944172f-531b-4605-a36a-22fdea95621b' and name 'vitis_hls'
+Fri Dec  9 21:19:29 2022: KERNEL_SVC: creating session with uuid: '9944172f-531b-4605-a36a-22fdea95621b' and name 'vitis_hls'
+Fri Dec  9 21:19:29 2022: GUIDANCE_SMGR: creating guidance session with uuid: '9944172f-531b-4605-a36a-22fdea95621b' and name 'vitis_hls'
+Fri Dec  9 21:19:33 2022: STOP_SERVER received, server token: 1421ad4a-7a31-40c5-971b-770b44646d20, passed token: 1421ad4a-7a31-40c5-971b-770b44646d20
+Fri Dec  9 21:19:33 2022: Socket received request to stop server.
+Fri Dec  9 21:19:33 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:19:33 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:19:33 2022: XCD main fifo: Stopping
+Fri Dec  9 21:19:33 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:19:33 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:19:33 2022: SERVER: destructor for server bound to port 34375
+Fri Dec  9 21:19:33 2022: XCD main fifo: Good unlink of /tmp/xcdmain1421ad4a-7a31-40c5-971b-770b44646d20
+Fri Dec  9 21:19:33 2022: Server exiting with status 0.
+Fri Dec  9 21:19:33 2022: Closing log file.
+Fri Dec  9 21:20:29 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:20:29 2022: Server was asked to start on port: '38885'
+Fri Dec  9 21:20:29 2022: Server is using token UUID: 'b1d06bb5-47b5-46dd-8582-9f021f716472'
+Fri Dec  9 21:20:29 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:20:29 2022: Attempting to start server on port '38885'
+Fri Dec  9 21:20:29 2022: XCD main fifo: created main fifo '/tmp/xcdmainb1d06bb5-47b5-46dd-8582-9f021f716472', fd read = 13
+Fri Dec  9 21:20:29 2022: Running Dispatch Server
+Fri Dec  9 21:20:29 2022: Version 2.2.0
+Fri Dec  9 21:20:37 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:20:37 2022: Starting Socket connection
+Fri Dec  9 21:20:37 2022: EXCHANGE_TOKEN received, server token: b1d06bb5-47b5-46dd-8582-9f021f716472, passed token: b1d06bb5-47b5-46dd-8582-9f021f716472
+Fri Dec  9 21:20:37 2022: SESSION_MGR: creating session with session uuid: 'a276d254-31a1-4818-9f63-aba41318ab90' and name 'vitis_hls'
+Fri Dec  9 21:20:37 2022: KERNEL_SVC: creating session with uuid: 'a276d254-31a1-4818-9f63-aba41318ab90' and name 'vitis_hls'
+Fri Dec  9 21:20:37 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'a276d254-31a1-4818-9f63-aba41318ab90' and name 'vitis_hls'
+Fri Dec  9 21:20:41 2022: STOP_SERVER received, server token: b1d06bb5-47b5-46dd-8582-9f021f716472, passed token: b1d06bb5-47b5-46dd-8582-9f021f716472
+Fri Dec  9 21:20:41 2022: Socket received request to stop server.
+Fri Dec  9 21:20:41 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:20:41 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:20:41 2022: XCD main fifo: Stopping
+Fri Dec  9 21:20:41 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:20:41 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:20:41 2022: SERVER: destructor for server bound to port 38885
+Fri Dec  9 21:20:41 2022: XCD main fifo: Good unlink of /tmp/xcdmainb1d06bb5-47b5-46dd-8582-9f021f716472
+Fri Dec  9 21:20:41 2022: Server exiting with status 0.
+Fri Dec  9 21:20:41 2022: Closing log file.
+Fri Dec  9 21:23:03 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:23:03 2022: Server was asked to start on port: '36551'
+Fri Dec  9 21:23:03 2022: Server is using token UUID: 'bbe1d494-c601-4c00-b101-a6c58b171b15'
+Fri Dec  9 21:23:03 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:23:03 2022: Attempting to start server on port '36551'
+Fri Dec  9 21:23:03 2022: XCD main fifo: created main fifo '/tmp/xcdmainbbe1d494-c601-4c00-b101-a6c58b171b15', fd read = 13
+Fri Dec  9 21:23:03 2022: Running Dispatch Server
+Fri Dec  9 21:23:03 2022: Version 2.2.0
+Fri Dec  9 21:23:12 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:23:12 2022: Starting Socket connection
+Fri Dec  9 21:23:12 2022: EXCHANGE_TOKEN received, server token: bbe1d494-c601-4c00-b101-a6c58b171b15, passed token: bbe1d494-c601-4c00-b101-a6c58b171b15
+Fri Dec  9 21:23:12 2022: SESSION_MGR: creating session with session uuid: '87710100-8a7a-4fcc-ba35-5370a29e176d' and name 'vitis_hls'
+Fri Dec  9 21:23:12 2022: KERNEL_SVC: creating session with uuid: '87710100-8a7a-4fcc-ba35-5370a29e176d' and name 'vitis_hls'
+Fri Dec  9 21:23:12 2022: GUIDANCE_SMGR: creating guidance session with uuid: '87710100-8a7a-4fcc-ba35-5370a29e176d' and name 'vitis_hls'
+Fri Dec  9 21:23:16 2022: STOP_SERVER received, server token: bbe1d494-c601-4c00-b101-a6c58b171b15, passed token: bbe1d494-c601-4c00-b101-a6c58b171b15
+Fri Dec  9 21:23:16 2022: Socket received request to stop server.
+Fri Dec  9 21:23:16 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:23:16 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:23:16 2022: XCD main fifo: Stopping
+Fri Dec  9 21:23:16 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:23:16 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:23:16 2022: SERVER: destructor for server bound to port 36551
+Fri Dec  9 21:23:16 2022: XCD main fifo: Good unlink of /tmp/xcdmainbbe1d494-c601-4c00-b101-a6c58b171b15
+Fri Dec  9 21:23:16 2022: Server exiting with status 0.
+Fri Dec  9 21:23:16 2022: Closing log file.
+Fri Dec  9 21:26:12 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:26:12 2022: Server was asked to start on port: '37113'
+Fri Dec  9 21:26:12 2022: Server is using token UUID: 'e6ecfa17-5834-4e36-8715-7937a913f434'
+Fri Dec  9 21:26:12 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:26:12 2022: Attempting to start server on port '37113'
+Fri Dec  9 21:26:12 2022: XCD main fifo: created main fifo '/tmp/xcdmaine6ecfa17-5834-4e36-8715-7937a913f434', fd read = 13
+Fri Dec  9 21:26:12 2022: Running Dispatch Server
+Fri Dec  9 21:26:12 2022: Version 2.2.0
+Fri Dec  9 21:26:21 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:26:21 2022: Starting Socket connection
+Fri Dec  9 21:26:21 2022: EXCHANGE_TOKEN received, server token: e6ecfa17-5834-4e36-8715-7937a913f434, passed token: e6ecfa17-5834-4e36-8715-7937a913f434
+Fri Dec  9 21:26:21 2022: SESSION_MGR: creating session with session uuid: '405540ca-2778-4b69-81e4-f11098819cbc' and name 'vitis_hls'
+Fri Dec  9 21:26:21 2022: KERNEL_SVC: creating session with uuid: '405540ca-2778-4b69-81e4-f11098819cbc' and name 'vitis_hls'
+Fri Dec  9 21:26:21 2022: GUIDANCE_SMGR: creating guidance session with uuid: '405540ca-2778-4b69-81e4-f11098819cbc' and name 'vitis_hls'
+Fri Dec  9 21:26:25 2022: STOP_SERVER received, server token: e6ecfa17-5834-4e36-8715-7937a913f434, passed token: e6ecfa17-5834-4e36-8715-7937a913f434
+Fri Dec  9 21:26:25 2022: Socket received request to stop server.
+Fri Dec  9 21:26:25 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:26:25 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:26:25 2022: XCD main fifo: Stopping
+Fri Dec  9 21:26:25 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:26:25 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:26:25 2022: SERVER: destructor for server bound to port 37113
+Fri Dec  9 21:26:25 2022: XCD main fifo: Good unlink of /tmp/xcdmaine6ecfa17-5834-4e36-8715-7937a913f434
+Fri Dec  9 21:26:25 2022: Server exiting with status 0.
+Fri Dec  9 21:26:25 2022: Closing log file.
+Fri Dec  9 21:35:16 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:35:16 2022: Server was asked to start on port: '36113'
+Fri Dec  9 21:35:16 2022: Server is using token UUID: 'cd807717-0e9d-469f-8163-5caa39e9cbc3'
+Fri Dec  9 21:35:16 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:35:16 2022: Attempting to start server on port '36113'
+Fri Dec  9 21:35:16 2022: XCD main fifo: created main fifo '/tmp/xcdmaincd807717-0e9d-469f-8163-5caa39e9cbc3', fd read = 13
+Fri Dec  9 21:35:16 2022: Running Dispatch Server
+Fri Dec  9 21:35:16 2022: Version 2.2.0
+Fri Dec  9 21:35:24 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:35:24 2022: Starting Socket connection
+Fri Dec  9 21:35:24 2022: EXCHANGE_TOKEN received, server token: cd807717-0e9d-469f-8163-5caa39e9cbc3, passed token: cd807717-0e9d-469f-8163-5caa39e9cbc3
+Fri Dec  9 21:35:24 2022: SESSION_MGR: creating session with session uuid: 'e522ebd4-3240-4264-b1ea-24994c2e7ada' and name 'vitis_hls'
+Fri Dec  9 21:35:24 2022: KERNEL_SVC: creating session with uuid: 'e522ebd4-3240-4264-b1ea-24994c2e7ada' and name 'vitis_hls'
+Fri Dec  9 21:35:24 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'e522ebd4-3240-4264-b1ea-24994c2e7ada' and name 'vitis_hls'
+Fri Dec  9 21:35:28 2022: STOP_SERVER received, server token: cd807717-0e9d-469f-8163-5caa39e9cbc3, passed token: cd807717-0e9d-469f-8163-5caa39e9cbc3
+Fri Dec  9 21:35:28 2022: Socket received request to stop server.
+Fri Dec  9 21:35:28 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:35:28 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:35:28 2022: XCD main fifo: Stopping
+Fri Dec  9 21:35:28 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:35:28 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:35:28 2022: SERVER: destructor for server bound to port 36113
+Fri Dec  9 21:35:28 2022: XCD main fifo: Good unlink of /tmp/xcdmaincd807717-0e9d-469f-8163-5caa39e9cbc3
+Fri Dec  9 21:35:28 2022: Server exiting with status 0.
+Fri Dec  9 21:35:28 2022: Closing log file.
+Fri Dec  9 21:37:31 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:37:31 2022: Server was asked to start on port: '44835'
+Fri Dec  9 21:37:31 2022: Server is using token UUID: 'a1501f6a-4174-4e05-b536-f6751f882e40'
+Fri Dec  9 21:37:31 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:37:31 2022: Attempting to start server on port '44835'
+Fri Dec  9 21:37:31 2022: XCD main fifo: created main fifo '/tmp/xcdmaina1501f6a-4174-4e05-b536-f6751f882e40', fd read = 13
+Fri Dec  9 21:37:31 2022: Running Dispatch Server
+Fri Dec  9 21:37:31 2022: Version 2.2.0
+Fri Dec  9 21:37:39 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:37:39 2022: Starting Socket connection
+Fri Dec  9 21:37:39 2022: EXCHANGE_TOKEN received, server token: a1501f6a-4174-4e05-b536-f6751f882e40, passed token: a1501f6a-4174-4e05-b536-f6751f882e40
+Fri Dec  9 21:37:39 2022: SESSION_MGR: creating session with session uuid: '71def2dc-8995-4346-a3eb-64ae4b8bbe1a' and name 'vitis_hls'
+Fri Dec  9 21:37:39 2022: KERNEL_SVC: creating session with uuid: '71def2dc-8995-4346-a3eb-64ae4b8bbe1a' and name 'vitis_hls'
+Fri Dec  9 21:37:39 2022: GUIDANCE_SMGR: creating guidance session with uuid: '71def2dc-8995-4346-a3eb-64ae4b8bbe1a' and name 'vitis_hls'
+Fri Dec  9 21:37:43 2022: STOP_SERVER received, server token: a1501f6a-4174-4e05-b536-f6751f882e40, passed token: a1501f6a-4174-4e05-b536-f6751f882e40
+Fri Dec  9 21:37:43 2022: Socket received request to stop server.
+Fri Dec  9 21:37:43 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:37:43 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:37:43 2022: XCD main fifo: Stopping
+Fri Dec  9 21:37:43 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:37:43 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:37:43 2022: SERVER: destructor for server bound to port 44835
+Fri Dec  9 21:37:43 2022: XCD main fifo: Good unlink of /tmp/xcdmaina1501f6a-4174-4e05-b536-f6751f882e40
+Fri Dec  9 21:37:43 2022: Server exiting with status 0.
+Fri Dec  9 21:37:43 2022: Closing log file.
+Fri Dec  9 21:38:13 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:38:13 2022: Server was asked to start on port: '46505'
+Fri Dec  9 21:38:13 2022: Server is using token UUID: '51196da2-72ee-433b-95d1-9c7123746dc5'
+Fri Dec  9 21:38:13 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:38:13 2022: Attempting to start server on port '46505'
+Fri Dec  9 21:38:13 2022: XCD main fifo: created main fifo '/tmp/xcdmain51196da2-72ee-433b-95d1-9c7123746dc5', fd read = 13
+Fri Dec  9 21:38:13 2022: Running Dispatch Server
+Fri Dec  9 21:38:13 2022: Version 2.2.0
+Fri Dec  9 21:38:22 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:38:22 2022: Starting Socket connection
+Fri Dec  9 21:38:22 2022: EXCHANGE_TOKEN received, server token: 51196da2-72ee-433b-95d1-9c7123746dc5, passed token: 51196da2-72ee-433b-95d1-9c7123746dc5
+Fri Dec  9 21:38:22 2022: SESSION_MGR: creating session with session uuid: '90776a9e-3365-4cdf-ac26-e59dce137073' and name 'vitis_hls'
+Fri Dec  9 21:38:22 2022: KERNEL_SVC: creating session with uuid: '90776a9e-3365-4cdf-ac26-e59dce137073' and name 'vitis_hls'
+Fri Dec  9 21:38:22 2022: GUIDANCE_SMGR: creating guidance session with uuid: '90776a9e-3365-4cdf-ac26-e59dce137073' and name 'vitis_hls'
+Fri Dec  9 21:38:26 2022: STOP_SERVER received, server token: 51196da2-72ee-433b-95d1-9c7123746dc5, passed token: 51196da2-72ee-433b-95d1-9c7123746dc5
+Fri Dec  9 21:38:26 2022: Socket received request to stop server.
+Fri Dec  9 21:38:26 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:38:26 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:38:26 2022: XCD main fifo: Stopping
+Fri Dec  9 21:38:26 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:38:26 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:38:26 2022: SERVER: destructor for server bound to port 46505
+Fri Dec  9 21:38:26 2022: XCD main fifo: Good unlink of /tmp/xcdmain51196da2-72ee-433b-95d1-9c7123746dc5
+Fri Dec  9 21:38:26 2022: Server exiting with status 0.
+Fri Dec  9 21:38:26 2022: Closing log file.
+Fri Dec  9 21:41:21 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 21:41:21 2022: Server was asked to start on port: '33931'
+Fri Dec  9 21:41:21 2022: Server is using token UUID: '1ae5c19f-93c6-4351-841d-58d9ef4242c4'
+Fri Dec  9 21:41:21 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 21:41:21 2022: Attempting to start server on port '33931'
+Fri Dec  9 21:41:21 2022: XCD main fifo: created main fifo '/tmp/xcdmain1ae5c19f-93c6-4351-841d-58d9ef4242c4', fd read = 13
+Fri Dec  9 21:41:21 2022: Running Dispatch Server
+Fri Dec  9 21:41:21 2022: Version 2.2.0
+Fri Dec  9 21:41:29 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 21:41:29 2022: Starting Socket connection
+Fri Dec  9 21:41:29 2022: EXCHANGE_TOKEN received, server token: 1ae5c19f-93c6-4351-841d-58d9ef4242c4, passed token: 1ae5c19f-93c6-4351-841d-58d9ef4242c4
+Fri Dec  9 21:41:29 2022: SESSION_MGR: creating session with session uuid: '75a7a509-c96e-4e59-899b-c4d01ae1bcec' and name 'vitis_hls'
+Fri Dec  9 21:41:29 2022: KERNEL_SVC: creating session with uuid: '75a7a509-c96e-4e59-899b-c4d01ae1bcec' and name 'vitis_hls'
+Fri Dec  9 21:41:29 2022: GUIDANCE_SMGR: creating guidance session with uuid: '75a7a509-c96e-4e59-899b-c4d01ae1bcec' and name 'vitis_hls'
+Fri Dec  9 21:41:35 2022: STOP_SERVER received, server token: 1ae5c19f-93c6-4351-841d-58d9ef4242c4, passed token: 1ae5c19f-93c6-4351-841d-58d9ef4242c4
+Fri Dec  9 21:41:35 2022: Socket received request to stop server.
+Fri Dec  9 21:41:35 2022: Dispatch Server: do_await_stop
+Fri Dec  9 21:41:35 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 21:41:35 2022: XCD main fifo: Stopping
+Fri Dec  9 21:41:35 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 21:41:35 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 21:41:35 2022: SERVER: destructor for server bound to port 33931
+Fri Dec  9 21:41:35 2022: XCD main fifo: Good unlink of /tmp/xcdmain1ae5c19f-93c6-4351-841d-58d9ef4242c4
+Fri Dec  9 21:41:35 2022: Server exiting with status 0.
+Fri Dec  9 21:41:35 2022: Closing log file.
+Fri Dec  9 22:11:53 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:11:53 2022: Server was asked to start on port: '42677'
+Fri Dec  9 22:11:53 2022: Server is using token UUID: 'ea77990b-79e7-4c8a-8d22-412877a74292'
+Fri Dec  9 22:11:53 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:11:53 2022: Attempting to start server on port '42677'
+Fri Dec  9 22:11:53 2022: XCD main fifo: created main fifo '/tmp/xcdmainea77990b-79e7-4c8a-8d22-412877a74292', fd read = 13
+Fri Dec  9 22:11:53 2022: Running Dispatch Server
+Fri Dec  9 22:11:53 2022: Version 2.2.0
+Fri Dec  9 22:12:02 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:12:02 2022: Starting Socket connection
+Fri Dec  9 22:12:02 2022: EXCHANGE_TOKEN received, server token: ea77990b-79e7-4c8a-8d22-412877a74292, passed token: ea77990b-79e7-4c8a-8d22-412877a74292
+Fri Dec  9 22:12:02 2022: SESSION_MGR: creating session with session uuid: 'cd04ee7c-eac1-47dc-a367-554df35048cf' and name 'vitis_hls'
+Fri Dec  9 22:12:02 2022: KERNEL_SVC: creating session with uuid: 'cd04ee7c-eac1-47dc-a367-554df35048cf' and name 'vitis_hls'
+Fri Dec  9 22:12:02 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'cd04ee7c-eac1-47dc-a367-554df35048cf' and name 'vitis_hls'
+Fri Dec  9 22:12:06 2022: STOP_SERVER received, server token: ea77990b-79e7-4c8a-8d22-412877a74292, passed token: ea77990b-79e7-4c8a-8d22-412877a74292
+Fri Dec  9 22:12:06 2022: Socket received request to stop server.
+Fri Dec  9 22:12:06 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:12:06 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:12:06 2022: XCD main fifo: Stopping
+Fri Dec  9 22:12:06 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:12:06 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:12:06 2022: SERVER: destructor for server bound to port 42677
+Fri Dec  9 22:12:06 2022: XCD main fifo: Good unlink of /tmp/xcdmainea77990b-79e7-4c8a-8d22-412877a74292
+Fri Dec  9 22:12:06 2022: Server exiting with status 0.
+Fri Dec  9 22:12:06 2022: Closing log file.
+Fri Dec  9 22:14:06 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:14:06 2022: Server was asked to start on port: '38467'
+Fri Dec  9 22:14:06 2022: Server is using token UUID: '2a3d09b6-51cd-49e7-8725-2709c2eeb3ca'
+Fri Dec  9 22:14:06 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:14:06 2022: Attempting to start server on port '38467'
+Fri Dec  9 22:14:06 2022: XCD main fifo: created main fifo '/tmp/xcdmain2a3d09b6-51cd-49e7-8725-2709c2eeb3ca', fd read = 13
+Fri Dec  9 22:14:06 2022: Running Dispatch Server
+Fri Dec  9 22:14:06 2022: Version 2.2.0
+Fri Dec  9 22:14:15 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:14:15 2022: Starting Socket connection
+Fri Dec  9 22:14:15 2022: EXCHANGE_TOKEN received, server token: 2a3d09b6-51cd-49e7-8725-2709c2eeb3ca, passed token: 2a3d09b6-51cd-49e7-8725-2709c2eeb3ca
+Fri Dec  9 22:14:15 2022: SESSION_MGR: creating session with session uuid: 'd08f20f5-0d9b-438d-8adc-54b989fdc103' and name 'vitis_hls'
+Fri Dec  9 22:14:15 2022: KERNEL_SVC: creating session with uuid: 'd08f20f5-0d9b-438d-8adc-54b989fdc103' and name 'vitis_hls'
+Fri Dec  9 22:14:15 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'd08f20f5-0d9b-438d-8adc-54b989fdc103' and name 'vitis_hls'
+Fri Dec  9 22:14:19 2022: STOP_SERVER received, server token: 2a3d09b6-51cd-49e7-8725-2709c2eeb3ca, passed token: 2a3d09b6-51cd-49e7-8725-2709c2eeb3ca
+Fri Dec  9 22:14:19 2022: Socket received request to stop server.
+Fri Dec  9 22:14:19 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:14:19 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:14:19 2022: XCD main fifo: Stopping
+Fri Dec  9 22:14:19 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:14:19 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:14:19 2022: SERVER: destructor for server bound to port 38467
+Fri Dec  9 22:14:19 2022: XCD main fifo: Good unlink of /tmp/xcdmain2a3d09b6-51cd-49e7-8725-2709c2eeb3ca
+Fri Dec  9 22:14:19 2022: Server exiting with status 0.
+Fri Dec  9 22:14:19 2022: Closing log file.
+Fri Dec  9 22:24:15 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:24:15 2022: Server was asked to start on port: '43447'
+Fri Dec  9 22:24:15 2022: Server is using token UUID: '5902783f-d0e6-406e-987e-4e4c000e7181'
+Fri Dec  9 22:24:15 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:24:15 2022: Attempting to start server on port '43447'
+Fri Dec  9 22:24:15 2022: XCD main fifo: created main fifo '/tmp/xcdmain5902783f-d0e6-406e-987e-4e4c000e7181', fd read = 13
+Fri Dec  9 22:24:15 2022: Running Dispatch Server
+Fri Dec  9 22:24:15 2022: Version 2.2.0
+Fri Dec  9 22:24:24 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:24:24 2022: Starting Socket connection
+Fri Dec  9 22:24:24 2022: EXCHANGE_TOKEN received, server token: 5902783f-d0e6-406e-987e-4e4c000e7181, passed token: 5902783f-d0e6-406e-987e-4e4c000e7181
+Fri Dec  9 22:24:24 2022: SESSION_MGR: creating session with session uuid: '2f8d0b82-c407-4169-a56f-57761bd587d1' and name 'vitis_hls'
+Fri Dec  9 22:24:24 2022: KERNEL_SVC: creating session with uuid: '2f8d0b82-c407-4169-a56f-57761bd587d1' and name 'vitis_hls'
+Fri Dec  9 22:24:24 2022: GUIDANCE_SMGR: creating guidance session with uuid: '2f8d0b82-c407-4169-a56f-57761bd587d1' and name 'vitis_hls'
+Fri Dec  9 22:24:28 2022: STOP_SERVER received, server token: 5902783f-d0e6-406e-987e-4e4c000e7181, passed token: 5902783f-d0e6-406e-987e-4e4c000e7181
+Fri Dec  9 22:24:28 2022: Socket received request to stop server.
+Fri Dec  9 22:24:28 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:24:28 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:24:28 2022: XCD main fifo: Stopping
+Fri Dec  9 22:24:28 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:24:28 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:24:28 2022: SERVER: destructor for server bound to port 43447
+Fri Dec  9 22:24:28 2022: XCD main fifo: Good unlink of /tmp/xcdmain5902783f-d0e6-406e-987e-4e4c000e7181
+Fri Dec  9 22:24:28 2022: Server exiting with status 0.
+Fri Dec  9 22:24:28 2022: Closing log file.
+Fri Dec  9 22:37:23 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:37:23 2022: Server was asked to start on port: '45281'
+Fri Dec  9 22:37:23 2022: Server is using token UUID: 'aea4a7ae-ad17-4d50-89ca-54f7c7f7c3fc'
+Fri Dec  9 22:37:23 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:37:23 2022: Attempting to start server on port '45281'
+Fri Dec  9 22:37:23 2022: XCD main fifo: created main fifo '/tmp/xcdmainaea4a7ae-ad17-4d50-89ca-54f7c7f7c3fc', fd read = 13
+Fri Dec  9 22:37:23 2022: Running Dispatch Server
+Fri Dec  9 22:37:23 2022: Version 2.2.0
+Fri Dec  9 22:37:32 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:37:32 2022: Starting Socket connection
+Fri Dec  9 22:37:32 2022: EXCHANGE_TOKEN received, server token: aea4a7ae-ad17-4d50-89ca-54f7c7f7c3fc, passed token: aea4a7ae-ad17-4d50-89ca-54f7c7f7c3fc
+Fri Dec  9 22:37:32 2022: SESSION_MGR: creating session with session uuid: '70ee62cb-ee33-4bd2-8b66-360e6223ce94' and name 'vitis_hls'
+Fri Dec  9 22:37:32 2022: KERNEL_SVC: creating session with uuid: '70ee62cb-ee33-4bd2-8b66-360e6223ce94' and name 'vitis_hls'
+Fri Dec  9 22:37:32 2022: GUIDANCE_SMGR: creating guidance session with uuid: '70ee62cb-ee33-4bd2-8b66-360e6223ce94' and name 'vitis_hls'
+Fri Dec  9 22:37:37 2022: STOP_SERVER received, server token: aea4a7ae-ad17-4d50-89ca-54f7c7f7c3fc, passed token: aea4a7ae-ad17-4d50-89ca-54f7c7f7c3fc
+Fri Dec  9 22:37:37 2022: Socket received request to stop server.
+Fri Dec  9 22:37:37 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:37:37 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:37:37 2022: XCD main fifo: Stopping
+Fri Dec  9 22:37:37 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:37:37 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:37:37 2022: SERVER: destructor for server bound to port 45281
+Fri Dec  9 22:37:37 2022: XCD main fifo: Good unlink of /tmp/xcdmainaea4a7ae-ad17-4d50-89ca-54f7c7f7c3fc
+Fri Dec  9 22:37:37 2022: Server exiting with status 0.
+Fri Dec  9 22:37:37 2022: Closing log file.
+Fri Dec  9 22:37:46 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:37:46 2022: Server was asked to start on port: '44763'
+Fri Dec  9 22:37:46 2022: Server is using token UUID: '0f868342-302b-4e99-9984-10f1f095fe2e'
+Fri Dec  9 22:37:46 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:37:46 2022: Attempting to start server on port '44763'
+Fri Dec  9 22:37:46 2022: XCD main fifo: created main fifo '/tmp/xcdmain0f868342-302b-4e99-9984-10f1f095fe2e', fd read = 13
+Fri Dec  9 22:37:46 2022: Running Dispatch Server
+Fri Dec  9 22:37:46 2022: Version 2.2.0
+Fri Dec  9 22:37:55 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:37:55 2022: Starting Socket connection
+Fri Dec  9 22:37:55 2022: EXCHANGE_TOKEN received, server token: 0f868342-302b-4e99-9984-10f1f095fe2e, passed token: 0f868342-302b-4e99-9984-10f1f095fe2e
+Fri Dec  9 22:37:55 2022: SESSION_MGR: creating session with session uuid: '94019acf-2ad3-4bf4-97ea-e9de55a5242c' and name 'vitis_hls'
+Fri Dec  9 22:37:55 2022: KERNEL_SVC: creating session with uuid: '94019acf-2ad3-4bf4-97ea-e9de55a5242c' and name 'vitis_hls'
+Fri Dec  9 22:37:55 2022: GUIDANCE_SMGR: creating guidance session with uuid: '94019acf-2ad3-4bf4-97ea-e9de55a5242c' and name 'vitis_hls'
+Fri Dec  9 22:37:59 2022: STOP_SERVER received, server token: 0f868342-302b-4e99-9984-10f1f095fe2e, passed token: 0f868342-302b-4e99-9984-10f1f095fe2e
+Fri Dec  9 22:37:59 2022: Socket received request to stop server.
+Fri Dec  9 22:37:59 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:37:59 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:37:59 2022: XCD main fifo: Stopping
+Fri Dec  9 22:37:59 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:37:59 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:37:59 2022: SERVER: destructor for server bound to port 44763
+Fri Dec  9 22:37:59 2022: XCD main fifo: Good unlink of /tmp/xcdmain0f868342-302b-4e99-9984-10f1f095fe2e
+Fri Dec  9 22:37:59 2022: Server exiting with status 0.
+Fri Dec  9 22:37:59 2022: Closing log file.
+Fri Dec  9 22:40:26 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:40:26 2022: Server was asked to start on port: '41553'
+Fri Dec  9 22:40:26 2022: Server is using token UUID: '015e5585-d8b7-483e-ae9f-26a9786026b4'
+Fri Dec  9 22:40:26 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:40:26 2022: Attempting to start server on port '41553'
+Fri Dec  9 22:40:26 2022: XCD main fifo: created main fifo '/tmp/xcdmain015e5585-d8b7-483e-ae9f-26a9786026b4', fd read = 13
+Fri Dec  9 22:40:26 2022: Running Dispatch Server
+Fri Dec  9 22:40:26 2022: Version 2.2.0
+Fri Dec  9 22:40:35 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:40:35 2022: Starting Socket connection
+Fri Dec  9 22:40:35 2022: EXCHANGE_TOKEN received, server token: 015e5585-d8b7-483e-ae9f-26a9786026b4, passed token: 015e5585-d8b7-483e-ae9f-26a9786026b4
+Fri Dec  9 22:40:35 2022: SESSION_MGR: creating session with session uuid: '8a758be6-bddc-4700-b97e-32eb9dbaa03e' and name 'vitis_hls'
+Fri Dec  9 22:40:35 2022: KERNEL_SVC: creating session with uuid: '8a758be6-bddc-4700-b97e-32eb9dbaa03e' and name 'vitis_hls'
+Fri Dec  9 22:40:35 2022: GUIDANCE_SMGR: creating guidance session with uuid: '8a758be6-bddc-4700-b97e-32eb9dbaa03e' and name 'vitis_hls'
+Fri Dec  9 22:40:39 2022: STOP_SERVER received, server token: 015e5585-d8b7-483e-ae9f-26a9786026b4, passed token: 015e5585-d8b7-483e-ae9f-26a9786026b4
+Fri Dec  9 22:40:39 2022: Socket received request to stop server.
+Fri Dec  9 22:40:39 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:40:39 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:40:39 2022: XCD main fifo: Stopping
+Fri Dec  9 22:40:39 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:40:39 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:40:39 2022: SERVER: destructor for server bound to port 41553
+Fri Dec  9 22:40:39 2022: XCD main fifo: Good unlink of /tmp/xcdmain015e5585-d8b7-483e-ae9f-26a9786026b4
+Fri Dec  9 22:40:39 2022: Server exiting with status 0.
+Fri Dec  9 22:40:39 2022: Closing log file.
+Fri Dec  9 22:43:05 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:43:05 2022: Server was asked to start on port: '44655'
+Fri Dec  9 22:43:05 2022: Server is using token UUID: '915438e5-0151-47ce-9474-49412cb5b945'
+Fri Dec  9 22:43:05 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:43:05 2022: Attempting to start server on port '44655'
+Fri Dec  9 22:43:05 2022: XCD main fifo: created main fifo '/tmp/xcdmain915438e5-0151-47ce-9474-49412cb5b945', fd read = 13
+Fri Dec  9 22:43:05 2022: Running Dispatch Server
+Fri Dec  9 22:43:05 2022: Version 2.2.0
+Fri Dec  9 22:43:13 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:43:13 2022: Starting Socket connection
+Fri Dec  9 22:43:13 2022: EXCHANGE_TOKEN received, server token: 915438e5-0151-47ce-9474-49412cb5b945, passed token: 915438e5-0151-47ce-9474-49412cb5b945
+Fri Dec  9 22:43:13 2022: SESSION_MGR: creating session with session uuid: '9f62f11f-c230-411c-9eea-001524fd5e5c' and name 'vitis_hls'
+Fri Dec  9 22:43:13 2022: KERNEL_SVC: creating session with uuid: '9f62f11f-c230-411c-9eea-001524fd5e5c' and name 'vitis_hls'
+Fri Dec  9 22:43:13 2022: GUIDANCE_SMGR: creating guidance session with uuid: '9f62f11f-c230-411c-9eea-001524fd5e5c' and name 'vitis_hls'
+Fri Dec  9 22:43:16 2022: STOP_SERVER received, server token: 915438e5-0151-47ce-9474-49412cb5b945, passed token: 915438e5-0151-47ce-9474-49412cb5b945
+Fri Dec  9 22:43:16 2022: Socket received request to stop server.
+Fri Dec  9 22:43:16 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:43:16 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:43:16 2022: XCD main fifo: Stopping
+Fri Dec  9 22:43:16 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:43:16 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:43:16 2022: SERVER: destructor for server bound to port 44655
+Fri Dec  9 22:43:16 2022: XCD main fifo: Good unlink of /tmp/xcdmain915438e5-0151-47ce-9474-49412cb5b945
+Fri Dec  9 22:43:16 2022: Server exiting with status 0.
+Fri Dec  9 22:43:16 2022: Closing log file.
+Fri Dec  9 22:43:50 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:43:50 2022: Server was asked to start on port: '46005'
+Fri Dec  9 22:43:50 2022: Server is using token UUID: 'b1a12cd7-62fc-416b-ae22-a1c3bb41a09e'
+Fri Dec  9 22:43:50 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:43:50 2022: Attempting to start server on port '46005'
+Fri Dec  9 22:43:50 2022: XCD main fifo: created main fifo '/tmp/xcdmainb1a12cd7-62fc-416b-ae22-a1c3bb41a09e', fd read = 13
+Fri Dec  9 22:43:50 2022: Running Dispatch Server
+Fri Dec  9 22:43:50 2022: Version 2.2.0
+Fri Dec  9 22:43:59 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:43:59 2022: Starting Socket connection
+Fri Dec  9 22:43:59 2022: EXCHANGE_TOKEN received, server token: b1a12cd7-62fc-416b-ae22-a1c3bb41a09e, passed token: b1a12cd7-62fc-416b-ae22-a1c3bb41a09e
+Fri Dec  9 22:43:59 2022: SESSION_MGR: creating session with session uuid: '2a97d2de-0512-494b-83ae-663f112df7a0' and name 'vitis_hls'
+Fri Dec  9 22:43:59 2022: KERNEL_SVC: creating session with uuid: '2a97d2de-0512-494b-83ae-663f112df7a0' and name 'vitis_hls'
+Fri Dec  9 22:43:59 2022: GUIDANCE_SMGR: creating guidance session with uuid: '2a97d2de-0512-494b-83ae-663f112df7a0' and name 'vitis_hls'
+Fri Dec  9 22:44:01 2022: STOP_SERVER received, server token: b1a12cd7-62fc-416b-ae22-a1c3bb41a09e, passed token: b1a12cd7-62fc-416b-ae22-a1c3bb41a09e
+Fri Dec  9 22:44:01 2022: Socket received request to stop server.
+Fri Dec  9 22:44:01 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:44:01 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:44:01 2022: XCD main fifo: Stopping
+Fri Dec  9 22:44:01 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:44:01 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:44:01 2022: SERVER: destructor for server bound to port 46005
+Fri Dec  9 22:44:01 2022: XCD main fifo: Good unlink of /tmp/xcdmainb1a12cd7-62fc-416b-ae22-a1c3bb41a09e
+Fri Dec  9 22:44:01 2022: Server exiting with status 0.
+Fri Dec  9 22:44:01 2022: Closing log file.
+Fri Dec  9 22:44:19 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:44:19 2022: Server was asked to start on port: '41699'
+Fri Dec  9 22:44:19 2022: Server is using token UUID: 'a9ef5847-ddf1-45f0-b668-7d834542b9d1'
+Fri Dec  9 22:44:19 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:44:19 2022: Attempting to start server on port '41699'
+Fri Dec  9 22:44:19 2022: XCD main fifo: created main fifo '/tmp/xcdmaina9ef5847-ddf1-45f0-b668-7d834542b9d1', fd read = 13
+Fri Dec  9 22:44:19 2022: Running Dispatch Server
+Fri Dec  9 22:44:19 2022: Version 2.2.0
+Fri Dec  9 22:44:28 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:44:28 2022: Starting Socket connection
+Fri Dec  9 22:44:28 2022: EXCHANGE_TOKEN received, server token: a9ef5847-ddf1-45f0-b668-7d834542b9d1, passed token: a9ef5847-ddf1-45f0-b668-7d834542b9d1
+Fri Dec  9 22:44:28 2022: SESSION_MGR: creating session with session uuid: '8dec6b7e-278c-486e-a029-81b7a465f0c0' and name 'vitis_hls'
+Fri Dec  9 22:44:28 2022: KERNEL_SVC: creating session with uuid: '8dec6b7e-278c-486e-a029-81b7a465f0c0' and name 'vitis_hls'
+Fri Dec  9 22:44:28 2022: GUIDANCE_SMGR: creating guidance session with uuid: '8dec6b7e-278c-486e-a029-81b7a465f0c0' and name 'vitis_hls'
+Fri Dec  9 22:44:32 2022: STOP_SERVER received, server token: a9ef5847-ddf1-45f0-b668-7d834542b9d1, passed token: a9ef5847-ddf1-45f0-b668-7d834542b9d1
+Fri Dec  9 22:44:32 2022: Socket received request to stop server.
+Fri Dec  9 22:44:32 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:44:32 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:44:32 2022: XCD main fifo: Stopping
+Fri Dec  9 22:44:32 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:44:32 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:44:32 2022: SERVER: destructor for server bound to port 41699
+Fri Dec  9 22:44:32 2022: XCD main fifo: Good unlink of /tmp/xcdmaina9ef5847-ddf1-45f0-b668-7d834542b9d1
+Fri Dec  9 22:44:32 2022: Server exiting with status 0.
+Fri Dec  9 22:44:32 2022: Closing log file.
+Fri Dec  9 22:45:18 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:45:18 2022: Server was asked to start on port: '37589'
+Fri Dec  9 22:45:18 2022: Server is using token UUID: '09c9952e-970a-4a1d-834b-8e5ea4150330'
+Fri Dec  9 22:45:18 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:45:18 2022: Attempting to start server on port '37589'
+Fri Dec  9 22:45:18 2022: XCD main fifo: created main fifo '/tmp/xcdmain09c9952e-970a-4a1d-834b-8e5ea4150330', fd read = 13
+Fri Dec  9 22:45:18 2022: Running Dispatch Server
+Fri Dec  9 22:45:18 2022: Version 2.2.0
+Fri Dec  9 22:45:27 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:45:27 2022: Starting Socket connection
+Fri Dec  9 22:45:27 2022: EXCHANGE_TOKEN received, server token: 09c9952e-970a-4a1d-834b-8e5ea4150330, passed token: 09c9952e-970a-4a1d-834b-8e5ea4150330
+Fri Dec  9 22:45:27 2022: SESSION_MGR: creating session with session uuid: 'ea217601-80b7-4e81-9c01-49844c2dcd33' and name 'vitis_hls'
+Fri Dec  9 22:45:27 2022: KERNEL_SVC: creating session with uuid: 'ea217601-80b7-4e81-9c01-49844c2dcd33' and name 'vitis_hls'
+Fri Dec  9 22:45:27 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'ea217601-80b7-4e81-9c01-49844c2dcd33' and name 'vitis_hls'
+Fri Dec  9 22:45:31 2022: STOP_SERVER received, server token: 09c9952e-970a-4a1d-834b-8e5ea4150330, passed token: 09c9952e-970a-4a1d-834b-8e5ea4150330
+Fri Dec  9 22:45:31 2022: Socket received request to stop server.
+Fri Dec  9 22:45:31 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:45:31 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:45:31 2022: XCD main fifo: Stopping
+Fri Dec  9 22:45:31 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:45:31 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:45:31 2022: SERVER: destructor for server bound to port 37589
+Fri Dec  9 22:45:31 2022: XCD main fifo: Good unlink of /tmp/xcdmain09c9952e-970a-4a1d-834b-8e5ea4150330
+Fri Dec  9 22:45:31 2022: Server exiting with status 0.
+Fri Dec  9 22:45:31 2022: Closing log file.
+Fri Dec  9 22:46:29 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:46:29 2022: Server was asked to start on port: '43807'
+Fri Dec  9 22:46:29 2022: Server is using token UUID: 'e3f80647-0b02-4a92-b242-013c3fbb3bf3'
+Fri Dec  9 22:46:29 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:46:29 2022: Attempting to start server on port '43807'
+Fri Dec  9 22:46:29 2022: XCD main fifo: created main fifo '/tmp/xcdmaine3f80647-0b02-4a92-b242-013c3fbb3bf3', fd read = 13
+Fri Dec  9 22:46:29 2022: Running Dispatch Server
+Fri Dec  9 22:46:29 2022: Version 2.2.0
+Fri Dec  9 22:46:37 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:46:37 2022: Starting Socket connection
+Fri Dec  9 22:46:37 2022: EXCHANGE_TOKEN received, server token: e3f80647-0b02-4a92-b242-013c3fbb3bf3, passed token: e3f80647-0b02-4a92-b242-013c3fbb3bf3
+Fri Dec  9 22:46:37 2022: SESSION_MGR: creating session with session uuid: 'c1c6de0e-8bcd-4400-bf59-cee2e4c34d9f' and name 'vitis_hls'
+Fri Dec  9 22:46:37 2022: KERNEL_SVC: creating session with uuid: 'c1c6de0e-8bcd-4400-bf59-cee2e4c34d9f' and name 'vitis_hls'
+Fri Dec  9 22:46:37 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'c1c6de0e-8bcd-4400-bf59-cee2e4c34d9f' and name 'vitis_hls'
+Fri Dec  9 22:46:41 2022: STOP_SERVER received, server token: e3f80647-0b02-4a92-b242-013c3fbb3bf3, passed token: e3f80647-0b02-4a92-b242-013c3fbb3bf3
+Fri Dec  9 22:46:41 2022: Socket received request to stop server.
+Fri Dec  9 22:46:41 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:46:41 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:46:41 2022: XCD main fifo: Stopping
+Fri Dec  9 22:46:41 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:46:41 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:46:41 2022: SERVER: destructor for server bound to port 43807
+Fri Dec  9 22:46:41 2022: XCD main fifo: Good unlink of /tmp/xcdmaine3f80647-0b02-4a92-b242-013c3fbb3bf3
+Fri Dec  9 22:46:41 2022: Server exiting with status 0.
+Fri Dec  9 22:46:41 2022: Closing log file.
+Fri Dec  9 22:48:47 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:48:47 2022: Server was asked to start on port: '39765'
+Fri Dec  9 22:48:47 2022: Server is using token UUID: '93c1d837-c332-4785-8c0a-87cf49c440b6'
+Fri Dec  9 22:48:47 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:48:47 2022: Attempting to start server on port '39765'
+Fri Dec  9 22:48:47 2022: XCD main fifo: created main fifo '/tmp/xcdmain93c1d837-c332-4785-8c0a-87cf49c440b6', fd read = 13
+Fri Dec  9 22:48:47 2022: Running Dispatch Server
+Fri Dec  9 22:48:47 2022: Version 2.2.0
+Fri Dec  9 22:48:55 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:48:55 2022: Starting Socket connection
+Fri Dec  9 22:48:55 2022: EXCHANGE_TOKEN received, server token: 93c1d837-c332-4785-8c0a-87cf49c440b6, passed token: 93c1d837-c332-4785-8c0a-87cf49c440b6
+Fri Dec  9 22:48:55 2022: SESSION_MGR: creating session with session uuid: '5c6defaa-134c-49e2-b2e0-591dc12a9362' and name 'vitis_hls'
+Fri Dec  9 22:48:55 2022: KERNEL_SVC: creating session with uuid: '5c6defaa-134c-49e2-b2e0-591dc12a9362' and name 'vitis_hls'
+Fri Dec  9 22:48:55 2022: GUIDANCE_SMGR: creating guidance session with uuid: '5c6defaa-134c-49e2-b2e0-591dc12a9362' and name 'vitis_hls'
+Fri Dec  9 22:48:59 2022: STOP_SERVER received, server token: 93c1d837-c332-4785-8c0a-87cf49c440b6, passed token: 93c1d837-c332-4785-8c0a-87cf49c440b6
+Fri Dec  9 22:48:59 2022: Socket received request to stop server.
+Fri Dec  9 22:48:59 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:48:59 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:48:59 2022: XCD main fifo: Stopping
+Fri Dec  9 22:48:59 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:48:59 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:48:59 2022: SERVER: destructor for server bound to port 39765
+Fri Dec  9 22:48:59 2022: XCD main fifo: Good unlink of /tmp/xcdmain93c1d837-c332-4785-8c0a-87cf49c440b6
+Fri Dec  9 22:48:59 2022: Server exiting with status 0.
+Fri Dec  9 22:48:59 2022: Closing log file.
+Fri Dec  9 22:55:30 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:55:30 2022: Server was asked to start on port: '44981'
+Fri Dec  9 22:55:30 2022: Server is using token UUID: '6a81827a-badf-4542-aec3-fb8c45819a88'
+Fri Dec  9 22:55:30 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:55:30 2022: Attempting to start server on port '44981'
+Fri Dec  9 22:55:30 2022: XCD main fifo: created main fifo '/tmp/xcdmain6a81827a-badf-4542-aec3-fb8c45819a88', fd read = 13
+Fri Dec  9 22:55:30 2022: Running Dispatch Server
+Fri Dec  9 22:55:30 2022: Version 2.2.0
+Fri Dec  9 22:55:39 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:55:39 2022: Starting Socket connection
+Fri Dec  9 22:55:39 2022: EXCHANGE_TOKEN received, server token: 6a81827a-badf-4542-aec3-fb8c45819a88, passed token: 6a81827a-badf-4542-aec3-fb8c45819a88
+Fri Dec  9 22:55:39 2022: SESSION_MGR: creating session with session uuid: 'd23e4594-f861-41aa-bf52-464c3e49ef68' and name 'vitis_hls'
+Fri Dec  9 22:55:39 2022: KERNEL_SVC: creating session with uuid: 'd23e4594-f861-41aa-bf52-464c3e49ef68' and name 'vitis_hls'
+Fri Dec  9 22:55:39 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'd23e4594-f861-41aa-bf52-464c3e49ef68' and name 'vitis_hls'
+Fri Dec  9 22:55:41 2022: STOP_SERVER received, server token: 6a81827a-badf-4542-aec3-fb8c45819a88, passed token: 6a81827a-badf-4542-aec3-fb8c45819a88
+Fri Dec  9 22:55:41 2022: Socket received request to stop server.
+Fri Dec  9 22:55:41 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:55:41 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:55:41 2022: XCD main fifo: Stopping
+Fri Dec  9 22:55:41 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:55:41 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:55:41 2022: SERVER: destructor for server bound to port 44981
+Fri Dec  9 22:55:41 2022: XCD main fifo: Good unlink of /tmp/xcdmain6a81827a-badf-4542-aec3-fb8c45819a88
+Fri Dec  9 22:55:41 2022: Server exiting with status 0.
+Fri Dec  9 22:55:41 2022: Closing log file.
+Fri Dec  9 22:56:00 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:56:00 2022: Server was asked to start on port: '46503'
+Fri Dec  9 22:56:00 2022: Server is using token UUID: '4e61b823-7a4f-43a4-be06-4d41d3b6f0d2'
+Fri Dec  9 22:56:00 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:56:00 2022: Attempting to start server on port '46503'
+Fri Dec  9 22:56:00 2022: XCD main fifo: created main fifo '/tmp/xcdmain4e61b823-7a4f-43a4-be06-4d41d3b6f0d2', fd read = 13
+Fri Dec  9 22:56:00 2022: Running Dispatch Server
+Fri Dec  9 22:56:00 2022: Version 2.2.0
+Fri Dec  9 22:56:09 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:56:09 2022: Starting Socket connection
+Fri Dec  9 22:56:09 2022: EXCHANGE_TOKEN received, server token: 4e61b823-7a4f-43a4-be06-4d41d3b6f0d2, passed token: 4e61b823-7a4f-43a4-be06-4d41d3b6f0d2
+Fri Dec  9 22:56:09 2022: SESSION_MGR: creating session with session uuid: '6d6ab738-52e8-4d6f-9a7a-fdad28151291' and name 'vitis_hls'
+Fri Dec  9 22:56:09 2022: KERNEL_SVC: creating session with uuid: '6d6ab738-52e8-4d6f-9a7a-fdad28151291' and name 'vitis_hls'
+Fri Dec  9 22:56:09 2022: GUIDANCE_SMGR: creating guidance session with uuid: '6d6ab738-52e8-4d6f-9a7a-fdad28151291' and name 'vitis_hls'
+Fri Dec  9 22:56:13 2022: STOP_SERVER received, server token: 4e61b823-7a4f-43a4-be06-4d41d3b6f0d2, passed token: 4e61b823-7a4f-43a4-be06-4d41d3b6f0d2
+Fri Dec  9 22:56:13 2022: Socket received request to stop server.
+Fri Dec  9 22:56:13 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:56:13 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:56:13 2022: XCD main fifo: Stopping
+Fri Dec  9 22:56:13 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:56:13 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:56:13 2022: SERVER: destructor for server bound to port 46503
+Fri Dec  9 22:56:13 2022: XCD main fifo: Good unlink of /tmp/xcdmain4e61b823-7a4f-43a4-be06-4d41d3b6f0d2
+Fri Dec  9 22:56:13 2022: Server exiting with status 0.
+Fri Dec  9 22:56:13 2022: Closing log file.
+Fri Dec  9 22:57:15 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:57:15 2022: Server was asked to start on port: '41511'
+Fri Dec  9 22:57:15 2022: Server is using token UUID: '80ff0ea2-7d38-4527-83aa-192a385080a0'
+Fri Dec  9 22:57:15 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:57:15 2022: Attempting to start server on port '41511'
+Fri Dec  9 22:57:15 2022: XCD main fifo: created main fifo '/tmp/xcdmain80ff0ea2-7d38-4527-83aa-192a385080a0', fd read = 13
+Fri Dec  9 22:57:15 2022: Running Dispatch Server
+Fri Dec  9 22:57:15 2022: Version 2.2.0
+Fri Dec  9 22:57:23 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:57:23 2022: Starting Socket connection
+Fri Dec  9 22:57:23 2022: EXCHANGE_TOKEN received, server token: 80ff0ea2-7d38-4527-83aa-192a385080a0, passed token: 80ff0ea2-7d38-4527-83aa-192a385080a0
+Fri Dec  9 22:57:23 2022: SESSION_MGR: creating session with session uuid: '81c5f961-c027-4eeb-a150-a3f1e29829db' and name 'vitis_hls'
+Fri Dec  9 22:57:23 2022: KERNEL_SVC: creating session with uuid: '81c5f961-c027-4eeb-a150-a3f1e29829db' and name 'vitis_hls'
+Fri Dec  9 22:57:23 2022: GUIDANCE_SMGR: creating guidance session with uuid: '81c5f961-c027-4eeb-a150-a3f1e29829db' and name 'vitis_hls'
+Fri Dec  9 22:57:27 2022: STOP_SERVER received, server token: 80ff0ea2-7d38-4527-83aa-192a385080a0, passed token: 80ff0ea2-7d38-4527-83aa-192a385080a0
+Fri Dec  9 22:57:27 2022: Socket received request to stop server.
+Fri Dec  9 22:57:27 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:57:27 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:57:27 2022: XCD main fifo: Stopping
+Fri Dec  9 22:57:27 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:57:27 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:57:27 2022: SERVER: destructor for server bound to port 41511
+Fri Dec  9 22:57:27 2022: XCD main fifo: Good unlink of /tmp/xcdmain80ff0ea2-7d38-4527-83aa-192a385080a0
+Fri Dec  9 22:57:27 2022: Server exiting with status 0.
+Fri Dec  9 22:57:27 2022: Closing log file.
+Fri Dec  9 22:57:48 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:57:48 2022: Server was asked to start on port: '40679'
+Fri Dec  9 22:57:48 2022: Server is using token UUID: 'a104fb13-dd68-4eda-9ce4-c572f5171cfb'
+Fri Dec  9 22:57:48 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:57:48 2022: Attempting to start server on port '40679'
+Fri Dec  9 22:57:48 2022: XCD main fifo: created main fifo '/tmp/xcdmaina104fb13-dd68-4eda-9ce4-c572f5171cfb', fd read = 13
+Fri Dec  9 22:57:48 2022: Running Dispatch Server
+Fri Dec  9 22:57:48 2022: Version 2.2.0
+Fri Dec  9 22:57:57 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:57:57 2022: Starting Socket connection
+Fri Dec  9 22:57:57 2022: EXCHANGE_TOKEN received, server token: a104fb13-dd68-4eda-9ce4-c572f5171cfb, passed token: a104fb13-dd68-4eda-9ce4-c572f5171cfb
+Fri Dec  9 22:57:57 2022: SESSION_MGR: creating session with session uuid: 'a9828786-9eb9-4006-b998-4c9aa2a91624' and name 'vitis_hls'
+Fri Dec  9 22:57:57 2022: KERNEL_SVC: creating session with uuid: 'a9828786-9eb9-4006-b998-4c9aa2a91624' and name 'vitis_hls'
+Fri Dec  9 22:57:57 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'a9828786-9eb9-4006-b998-4c9aa2a91624' and name 'vitis_hls'
+Fri Dec  9 22:58:01 2022: STOP_SERVER received, server token: a104fb13-dd68-4eda-9ce4-c572f5171cfb, passed token: a104fb13-dd68-4eda-9ce4-c572f5171cfb
+Fri Dec  9 22:58:01 2022: Socket received request to stop server.
+Fri Dec  9 22:58:01 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:58:01 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:58:01 2022: XCD main fifo: Stopping
+Fri Dec  9 22:58:01 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:58:01 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:58:01 2022: SERVER: destructor for server bound to port 40679
+Fri Dec  9 22:58:01 2022: XCD main fifo: Good unlink of /tmp/xcdmaina104fb13-dd68-4eda-9ce4-c572f5171cfb
+Fri Dec  9 22:58:01 2022: Server exiting with status 0.
+Fri Dec  9 22:58:01 2022: Closing log file.
+Fri Dec  9 22:58:22 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:58:22 2022: Server was asked to start on port: '41123'
+Fri Dec  9 22:58:22 2022: Server is using token UUID: '7830ade1-2501-402d-880b-aea11397f12a'
+Fri Dec  9 22:58:22 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:58:22 2022: Attempting to start server on port '41123'
+Fri Dec  9 22:58:22 2022: XCD main fifo: created main fifo '/tmp/xcdmain7830ade1-2501-402d-880b-aea11397f12a', fd read = 13
+Fri Dec  9 22:58:22 2022: Running Dispatch Server
+Fri Dec  9 22:58:22 2022: Version 2.2.0
+Fri Dec  9 22:58:30 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:58:30 2022: Starting Socket connection
+Fri Dec  9 22:58:30 2022: EXCHANGE_TOKEN received, server token: 7830ade1-2501-402d-880b-aea11397f12a, passed token: 7830ade1-2501-402d-880b-aea11397f12a
+Fri Dec  9 22:58:30 2022: SESSION_MGR: creating session with session uuid: '262d01f0-f665-40fb-914a-6a4c4a3d28c5' and name 'vitis_hls'
+Fri Dec  9 22:58:30 2022: KERNEL_SVC: creating session with uuid: '262d01f0-f665-40fb-914a-6a4c4a3d28c5' and name 'vitis_hls'
+Fri Dec  9 22:58:30 2022: GUIDANCE_SMGR: creating guidance session with uuid: '262d01f0-f665-40fb-914a-6a4c4a3d28c5' and name 'vitis_hls'
+Fri Dec  9 22:58:34 2022: STOP_SERVER received, server token: 7830ade1-2501-402d-880b-aea11397f12a, passed token: 7830ade1-2501-402d-880b-aea11397f12a
+Fri Dec  9 22:58:34 2022: Socket received request to stop server.
+Fri Dec  9 22:58:34 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:58:34 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:58:34 2022: XCD main fifo: Stopping
+Fri Dec  9 22:58:34 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:58:34 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:58:34 2022: SERVER: destructor for server bound to port 41123
+Fri Dec  9 22:58:34 2022: XCD main fifo: Good unlink of /tmp/xcdmain7830ade1-2501-402d-880b-aea11397f12a
+Fri Dec  9 22:58:34 2022: Server exiting with status 0.
+Fri Dec  9 22:58:34 2022: Closing log file.
+Fri Dec  9 22:59:30 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 22:59:30 2022: Server was asked to start on port: '45711'
+Fri Dec  9 22:59:30 2022: Server is using token UUID: '8ad56cbd-c24f-4913-8204-b9bc5c30f04e'
+Fri Dec  9 22:59:30 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 22:59:30 2022: Attempting to start server on port '45711'
+Fri Dec  9 22:59:30 2022: XCD main fifo: created main fifo '/tmp/xcdmain8ad56cbd-c24f-4913-8204-b9bc5c30f04e', fd read = 13
+Fri Dec  9 22:59:30 2022: Running Dispatch Server
+Fri Dec  9 22:59:30 2022: Version 2.2.0
+Fri Dec  9 22:59:38 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 22:59:38 2022: Starting Socket connection
+Fri Dec  9 22:59:38 2022: EXCHANGE_TOKEN received, server token: 8ad56cbd-c24f-4913-8204-b9bc5c30f04e, passed token: 8ad56cbd-c24f-4913-8204-b9bc5c30f04e
+Fri Dec  9 22:59:38 2022: SESSION_MGR: creating session with session uuid: '2f171a42-45cf-4390-80bf-0b7796709a62' and name 'vitis_hls'
+Fri Dec  9 22:59:38 2022: KERNEL_SVC: creating session with uuid: '2f171a42-45cf-4390-80bf-0b7796709a62' and name 'vitis_hls'
+Fri Dec  9 22:59:38 2022: GUIDANCE_SMGR: creating guidance session with uuid: '2f171a42-45cf-4390-80bf-0b7796709a62' and name 'vitis_hls'
+Fri Dec  9 22:59:42 2022: STOP_SERVER received, server token: 8ad56cbd-c24f-4913-8204-b9bc5c30f04e, passed token: 8ad56cbd-c24f-4913-8204-b9bc5c30f04e
+Fri Dec  9 22:59:42 2022: Socket received request to stop server.
+Fri Dec  9 22:59:42 2022: Dispatch Server: do_await_stop
+Fri Dec  9 22:59:42 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 22:59:42 2022: XCD main fifo: Stopping
+Fri Dec  9 22:59:42 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 22:59:42 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 22:59:42 2022: SERVER: destructor for server bound to port 45711
+Fri Dec  9 22:59:42 2022: XCD main fifo: Good unlink of /tmp/xcdmain8ad56cbd-c24f-4913-8204-b9bc5c30f04e
+Fri Dec  9 22:59:42 2022: Server exiting with status 0.
+Fri Dec  9 22:59:42 2022: Closing log file.
+Fri Dec  9 23:01:01 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:01:01 2022: Server was asked to start on port: '38505'
+Fri Dec  9 23:01:01 2022: Server is using token UUID: '73f4a8d5-043e-43f8-bd0d-d8ffaf17ec40'
+Fri Dec  9 23:01:01 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:01:01 2022: Attempting to start server on port '38505'
+Fri Dec  9 23:01:01 2022: XCD main fifo: created main fifo '/tmp/xcdmain73f4a8d5-043e-43f8-bd0d-d8ffaf17ec40', fd read = 13
+Fri Dec  9 23:01:01 2022: Running Dispatch Server
+Fri Dec  9 23:01:01 2022: Version 2.2.0
+Fri Dec  9 23:01:10 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:01:10 2022: Starting Socket connection
+Fri Dec  9 23:01:10 2022: EXCHANGE_TOKEN received, server token: 73f4a8d5-043e-43f8-bd0d-d8ffaf17ec40, passed token: 73f4a8d5-043e-43f8-bd0d-d8ffaf17ec40
+Fri Dec  9 23:01:10 2022: SESSION_MGR: creating session with session uuid: '48c7b0e4-cc56-4ab0-bbfc-37d233a6bcf7' and name 'vitis_hls'
+Fri Dec  9 23:01:10 2022: KERNEL_SVC: creating session with uuid: '48c7b0e4-cc56-4ab0-bbfc-37d233a6bcf7' and name 'vitis_hls'
+Fri Dec  9 23:01:10 2022: GUIDANCE_SMGR: creating guidance session with uuid: '48c7b0e4-cc56-4ab0-bbfc-37d233a6bcf7' and name 'vitis_hls'
+Fri Dec  9 23:01:14 2022: STOP_SERVER received, server token: 73f4a8d5-043e-43f8-bd0d-d8ffaf17ec40, passed token: 73f4a8d5-043e-43f8-bd0d-d8ffaf17ec40
+Fri Dec  9 23:01:14 2022: Socket received request to stop server.
+Fri Dec  9 23:01:14 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:01:14 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:01:14 2022: XCD main fifo: Stopping
+Fri Dec  9 23:01:14 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:01:14 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:01:14 2022: SERVER: destructor for server bound to port 38505
+Fri Dec  9 23:01:14 2022: XCD main fifo: Good unlink of /tmp/xcdmain73f4a8d5-043e-43f8-bd0d-d8ffaf17ec40
+Fri Dec  9 23:01:14 2022: Server exiting with status 0.
+Fri Dec  9 23:01:14 2022: Closing log file.
+Fri Dec  9 23:02:47 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:02:47 2022: Server was asked to start on port: '34087'
+Fri Dec  9 23:02:47 2022: Server is using token UUID: '87c1aa85-15ce-4f8d-8d89-d2ec10e44cfb'
+Fri Dec  9 23:02:47 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:02:47 2022: Attempting to start server on port '34087'
+Fri Dec  9 23:02:47 2022: XCD main fifo: created main fifo '/tmp/xcdmain87c1aa85-15ce-4f8d-8d89-d2ec10e44cfb', fd read = 13
+Fri Dec  9 23:02:47 2022: Running Dispatch Server
+Fri Dec  9 23:02:47 2022: Version 2.2.0
+Fri Dec  9 23:02:56 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:02:56 2022: Starting Socket connection
+Fri Dec  9 23:02:56 2022: EXCHANGE_TOKEN received, server token: 87c1aa85-15ce-4f8d-8d89-d2ec10e44cfb, passed token: 87c1aa85-15ce-4f8d-8d89-d2ec10e44cfb
+Fri Dec  9 23:02:56 2022: SESSION_MGR: creating session with session uuid: '97e84014-92ad-4e2f-b812-cdb548efc928' and name 'vitis_hls'
+Fri Dec  9 23:02:56 2022: KERNEL_SVC: creating session with uuid: '97e84014-92ad-4e2f-b812-cdb548efc928' and name 'vitis_hls'
+Fri Dec  9 23:02:56 2022: GUIDANCE_SMGR: creating guidance session with uuid: '97e84014-92ad-4e2f-b812-cdb548efc928' and name 'vitis_hls'
+Fri Dec  9 23:03:00 2022: STOP_SERVER received, server token: 87c1aa85-15ce-4f8d-8d89-d2ec10e44cfb, passed token: 87c1aa85-15ce-4f8d-8d89-d2ec10e44cfb
+Fri Dec  9 23:03:00 2022: Socket received request to stop server.
+Fri Dec  9 23:03:00 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:03:00 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:03:00 2022: XCD main fifo: Stopping
+Fri Dec  9 23:03:00 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:03:00 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:03:00 2022: SERVER: destructor for server bound to port 34087
+Fri Dec  9 23:03:00 2022: XCD main fifo: Good unlink of /tmp/xcdmain87c1aa85-15ce-4f8d-8d89-d2ec10e44cfb
+Fri Dec  9 23:03:00 2022: Server exiting with status 0.
+Fri Dec  9 23:03:00 2022: Closing log file.
+Fri Dec  9 23:03:46 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:03:46 2022: Server was asked to start on port: '40751'
+Fri Dec  9 23:03:46 2022: Server is using token UUID: 'c9b556a9-ad02-411b-bbbc-73f0fee04e27'
+Fri Dec  9 23:03:46 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:03:46 2022: Attempting to start server on port '40751'
+Fri Dec  9 23:03:46 2022: XCD main fifo: created main fifo '/tmp/xcdmainc9b556a9-ad02-411b-bbbc-73f0fee04e27', fd read = 13
+Fri Dec  9 23:03:46 2022: Running Dispatch Server
+Fri Dec  9 23:03:46 2022: Version 2.2.0
+Fri Dec  9 23:03:55 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:03:55 2022: Starting Socket connection
+Fri Dec  9 23:03:55 2022: EXCHANGE_TOKEN received, server token: c9b556a9-ad02-411b-bbbc-73f0fee04e27, passed token: c9b556a9-ad02-411b-bbbc-73f0fee04e27
+Fri Dec  9 23:03:55 2022: SESSION_MGR: creating session with session uuid: '650e638f-750a-4261-975a-3b4f0eb3ebd4' and name 'vitis_hls'
+Fri Dec  9 23:03:55 2022: KERNEL_SVC: creating session with uuid: '650e638f-750a-4261-975a-3b4f0eb3ebd4' and name 'vitis_hls'
+Fri Dec  9 23:03:55 2022: GUIDANCE_SMGR: creating guidance session with uuid: '650e638f-750a-4261-975a-3b4f0eb3ebd4' and name 'vitis_hls'
+Fri Dec  9 23:03:59 2022: STOP_SERVER received, server token: c9b556a9-ad02-411b-bbbc-73f0fee04e27, passed token: c9b556a9-ad02-411b-bbbc-73f0fee04e27
+Fri Dec  9 23:03:59 2022: Socket received request to stop server.
+Fri Dec  9 23:03:59 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:03:59 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:03:59 2022: XCD main fifo: Stopping
+Fri Dec  9 23:03:59 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:03:59 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:03:59 2022: SERVER: destructor for server bound to port 40751
+Fri Dec  9 23:03:59 2022: XCD main fifo: Good unlink of /tmp/xcdmainc9b556a9-ad02-411b-bbbc-73f0fee04e27
+Fri Dec  9 23:03:59 2022: Server exiting with status 0.
+Fri Dec  9 23:03:59 2022: Closing log file.
+Fri Dec  9 23:06:10 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:06:10 2022: Server was asked to start on port: '37735'
+Fri Dec  9 23:06:10 2022: Server is using token UUID: 'da2effef-1e22-40f7-93cf-1cab74b19f05'
+Fri Dec  9 23:06:10 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:06:10 2022: Attempting to start server on port '37735'
+Fri Dec  9 23:06:10 2022: XCD main fifo: created main fifo '/tmp/xcdmainda2effef-1e22-40f7-93cf-1cab74b19f05', fd read = 13
+Fri Dec  9 23:06:10 2022: Running Dispatch Server
+Fri Dec  9 23:06:10 2022: Version 2.2.0
+Fri Dec  9 23:06:19 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:06:19 2022: Starting Socket connection
+Fri Dec  9 23:06:19 2022: EXCHANGE_TOKEN received, server token: da2effef-1e22-40f7-93cf-1cab74b19f05, passed token: da2effef-1e22-40f7-93cf-1cab74b19f05
+Fri Dec  9 23:06:19 2022: SESSION_MGR: creating session with session uuid: 'd2dc70e4-30b5-46ce-b505-3e554f0f28ce' and name 'vitis_hls'
+Fri Dec  9 23:06:19 2022: KERNEL_SVC: creating session with uuid: 'd2dc70e4-30b5-46ce-b505-3e554f0f28ce' and name 'vitis_hls'
+Fri Dec  9 23:06:19 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'd2dc70e4-30b5-46ce-b505-3e554f0f28ce' and name 'vitis_hls'
+Fri Dec  9 23:06:23 2022: STOP_SERVER received, server token: da2effef-1e22-40f7-93cf-1cab74b19f05, passed token: da2effef-1e22-40f7-93cf-1cab74b19f05
+Fri Dec  9 23:06:23 2022: Socket received request to stop server.
+Fri Dec  9 23:06:23 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:06:23 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:06:23 2022: XCD main fifo: Stopping
+Fri Dec  9 23:06:23 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:06:23 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:06:23 2022: SERVER: destructor for server bound to port 37735
+Fri Dec  9 23:06:23 2022: XCD main fifo: Good unlink of /tmp/xcdmainda2effef-1e22-40f7-93cf-1cab74b19f05
+Fri Dec  9 23:06:23 2022: Server exiting with status 0.
+Fri Dec  9 23:06:23 2022: Closing log file.
+Fri Dec  9 23:07:34 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:07:34 2022: Server was asked to start on port: '43487'
+Fri Dec  9 23:07:34 2022: Server is using token UUID: '056deb9b-f656-4437-aacd-920e250a7891'
+Fri Dec  9 23:07:34 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:07:34 2022: Attempting to start server on port '43487'
+Fri Dec  9 23:07:34 2022: XCD main fifo: created main fifo '/tmp/xcdmain056deb9b-f656-4437-aacd-920e250a7891', fd read = 13
+Fri Dec  9 23:07:34 2022: Running Dispatch Server
+Fri Dec  9 23:07:34 2022: Version 2.2.0
+Fri Dec  9 23:07:42 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:07:42 2022: Starting Socket connection
+Fri Dec  9 23:07:42 2022: EXCHANGE_TOKEN received, server token: 056deb9b-f656-4437-aacd-920e250a7891, passed token: 056deb9b-f656-4437-aacd-920e250a7891
+Fri Dec  9 23:07:42 2022: SESSION_MGR: creating session with session uuid: '66925d71-0197-48af-9820-54f3e0dd2314' and name 'vitis_hls'
+Fri Dec  9 23:07:42 2022: KERNEL_SVC: creating session with uuid: '66925d71-0197-48af-9820-54f3e0dd2314' and name 'vitis_hls'
+Fri Dec  9 23:07:42 2022: GUIDANCE_SMGR: creating guidance session with uuid: '66925d71-0197-48af-9820-54f3e0dd2314' and name 'vitis_hls'
+Fri Dec  9 23:07:46 2022: STOP_SERVER received, server token: 056deb9b-f656-4437-aacd-920e250a7891, passed token: 056deb9b-f656-4437-aacd-920e250a7891
+Fri Dec  9 23:07:46 2022: Socket received request to stop server.
+Fri Dec  9 23:07:46 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:07:46 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:07:46 2022: XCD main fifo: Stopping
+Fri Dec  9 23:07:46 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:07:46 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:07:46 2022: SERVER: destructor for server bound to port 43487
+Fri Dec  9 23:07:46 2022: XCD main fifo: Good unlink of /tmp/xcdmain056deb9b-f656-4437-aacd-920e250a7891
+Fri Dec  9 23:07:46 2022: Server exiting with status 0.
+Fri Dec  9 23:07:46 2022: Closing log file.
+Fri Dec  9 23:12:23 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:12:23 2022: Server was asked to start on port: '40221'
+Fri Dec  9 23:12:23 2022: Server is using token UUID: '71f72239-a62b-4b5b-b568-1026f82212ee'
+Fri Dec  9 23:12:23 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:12:23 2022: Attempting to start server on port '40221'
+Fri Dec  9 23:12:23 2022: XCD main fifo: created main fifo '/tmp/xcdmain71f72239-a62b-4b5b-b568-1026f82212ee', fd read = 13
+Fri Dec  9 23:12:23 2022: Running Dispatch Server
+Fri Dec  9 23:12:23 2022: Version 2.2.0
+Fri Dec  9 23:12:32 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:12:32 2022: Starting Socket connection
+Fri Dec  9 23:12:32 2022: EXCHANGE_TOKEN received, server token: 71f72239-a62b-4b5b-b568-1026f82212ee, passed token: 71f72239-a62b-4b5b-b568-1026f82212ee
+Fri Dec  9 23:12:32 2022: SESSION_MGR: creating session with session uuid: '501a0c41-17df-4422-a05c-9b337a0a5598' and name 'vitis_hls'
+Fri Dec  9 23:12:32 2022: KERNEL_SVC: creating session with uuid: '501a0c41-17df-4422-a05c-9b337a0a5598' and name 'vitis_hls'
+Fri Dec  9 23:12:32 2022: GUIDANCE_SMGR: creating guidance session with uuid: '501a0c41-17df-4422-a05c-9b337a0a5598' and name 'vitis_hls'
+Fri Dec  9 23:12:35 2022: STOP_SERVER received, server token: 71f72239-a62b-4b5b-b568-1026f82212ee, passed token: 71f72239-a62b-4b5b-b568-1026f82212ee
+Fri Dec  9 23:12:35 2022: Socket received request to stop server.
+Fri Dec  9 23:12:35 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:12:35 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:12:35 2022: XCD main fifo: Stopping
+Fri Dec  9 23:12:35 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:12:35 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:12:35 2022: SERVER: destructor for server bound to port 40221
+Fri Dec  9 23:12:35 2022: XCD main fifo: Good unlink of /tmp/xcdmain71f72239-a62b-4b5b-b568-1026f82212ee
+Fri Dec  9 23:12:35 2022: Server exiting with status 0.
+Fri Dec  9 23:12:35 2022: Closing log file.
+Fri Dec  9 23:14:26 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:14:26 2022: Server was asked to start on port: '43885'
+Fri Dec  9 23:14:26 2022: Server is using token UUID: '7ad30315-b806-46e8-b004-8d9990d2448c'
+Fri Dec  9 23:14:26 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:14:26 2022: Attempting to start server on port '43885'
+Fri Dec  9 23:14:26 2022: XCD main fifo: created main fifo '/tmp/xcdmain7ad30315-b806-46e8-b004-8d9990d2448c', fd read = 13
+Fri Dec  9 23:14:26 2022: Running Dispatch Server
+Fri Dec  9 23:14:26 2022: Version 2.2.0
+Fri Dec  9 23:14:35 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:14:35 2022: Starting Socket connection
+Fri Dec  9 23:14:35 2022: EXCHANGE_TOKEN received, server token: 7ad30315-b806-46e8-b004-8d9990d2448c, passed token: 7ad30315-b806-46e8-b004-8d9990d2448c
+Fri Dec  9 23:14:35 2022: SESSION_MGR: creating session with session uuid: '490b20d8-ab55-453b-8816-ec950aa20d40' and name 'vitis_hls'
+Fri Dec  9 23:14:35 2022: KERNEL_SVC: creating session with uuid: '490b20d8-ab55-453b-8816-ec950aa20d40' and name 'vitis_hls'
+Fri Dec  9 23:14:35 2022: GUIDANCE_SMGR: creating guidance session with uuid: '490b20d8-ab55-453b-8816-ec950aa20d40' and name 'vitis_hls'
+Fri Dec  9 23:14:39 2022: STOP_SERVER received, server token: 7ad30315-b806-46e8-b004-8d9990d2448c, passed token: 7ad30315-b806-46e8-b004-8d9990d2448c
+Fri Dec  9 23:14:39 2022: Socket received request to stop server.
+Fri Dec  9 23:14:39 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:14:39 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:14:39 2022: XCD main fifo: Stopping
+Fri Dec  9 23:14:39 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:14:39 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:14:39 2022: SERVER: destructor for server bound to port 43885
+Fri Dec  9 23:14:39 2022: XCD main fifo: Good unlink of /tmp/xcdmain7ad30315-b806-46e8-b004-8d9990d2448c
+Fri Dec  9 23:14:39 2022: Server exiting with status 0.
+Fri Dec  9 23:14:39 2022: Closing log file.
+Fri Dec  9 23:15:33 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:15:33 2022: Server was asked to start on port: '43521'
+Fri Dec  9 23:15:33 2022: Server is using token UUID: 'd4748d1f-32c1-4e24-9dfc-3613d1999f59'
+Fri Dec  9 23:15:33 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:15:33 2022: Attempting to start server on port '43521'
+Fri Dec  9 23:15:33 2022: XCD main fifo: created main fifo '/tmp/xcdmaind4748d1f-32c1-4e24-9dfc-3613d1999f59', fd read = 13
+Fri Dec  9 23:15:33 2022: Running Dispatch Server
+Fri Dec  9 23:15:33 2022: Version 2.2.0
+Fri Dec  9 23:15:42 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:15:42 2022: Starting Socket connection
+Fri Dec  9 23:15:42 2022: EXCHANGE_TOKEN received, server token: d4748d1f-32c1-4e24-9dfc-3613d1999f59, passed token: d4748d1f-32c1-4e24-9dfc-3613d1999f59
+Fri Dec  9 23:15:42 2022: SESSION_MGR: creating session with session uuid: 'fe086021-b839-43af-9cf5-491a21e96f77' and name 'vitis_hls'
+Fri Dec  9 23:15:42 2022: KERNEL_SVC: creating session with uuid: 'fe086021-b839-43af-9cf5-491a21e96f77' and name 'vitis_hls'
+Fri Dec  9 23:15:42 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'fe086021-b839-43af-9cf5-491a21e96f77' and name 'vitis_hls'
+Fri Dec  9 23:15:46 2022: STOP_SERVER received, server token: d4748d1f-32c1-4e24-9dfc-3613d1999f59, passed token: d4748d1f-32c1-4e24-9dfc-3613d1999f59
+Fri Dec  9 23:15:46 2022: Socket received request to stop server.
+Fri Dec  9 23:15:46 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:15:46 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:15:46 2022: XCD main fifo: Stopping
+Fri Dec  9 23:15:46 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:15:46 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:15:46 2022: SERVER: destructor for server bound to port 43521
+Fri Dec  9 23:15:46 2022: XCD main fifo: Good unlink of /tmp/xcdmaind4748d1f-32c1-4e24-9dfc-3613d1999f59
+Fri Dec  9 23:15:46 2022: Server exiting with status 0.
+Fri Dec  9 23:15:46 2022: Closing log file.
+Fri Dec  9 23:17:55 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:17:55 2022: Server was asked to start on port: '37205'
+Fri Dec  9 23:17:55 2022: Server is using token UUID: 'ca774331-cee6-48b8-bb73-5aae96ad0557'
+Fri Dec  9 23:17:55 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:17:55 2022: Attempting to start server on port '37205'
+Fri Dec  9 23:17:55 2022: XCD main fifo: created main fifo '/tmp/xcdmainca774331-cee6-48b8-bb73-5aae96ad0557', fd read = 13
+Fri Dec  9 23:17:55 2022: Running Dispatch Server
+Fri Dec  9 23:17:55 2022: Version 2.2.0
+Fri Dec  9 23:18:04 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:18:04 2022: Starting Socket connection
+Fri Dec  9 23:18:04 2022: EXCHANGE_TOKEN received, server token: ca774331-cee6-48b8-bb73-5aae96ad0557, passed token: ca774331-cee6-48b8-bb73-5aae96ad0557
+Fri Dec  9 23:18:04 2022: SESSION_MGR: creating session with session uuid: 'f4884f1e-3606-44bc-b16f-966df6fe7a73' and name 'vitis_hls'
+Fri Dec  9 23:18:04 2022: KERNEL_SVC: creating session with uuid: 'f4884f1e-3606-44bc-b16f-966df6fe7a73' and name 'vitis_hls'
+Fri Dec  9 23:18:04 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'f4884f1e-3606-44bc-b16f-966df6fe7a73' and name 'vitis_hls'
+Fri Dec  9 23:18:08 2022: STOP_SERVER received, server token: ca774331-cee6-48b8-bb73-5aae96ad0557, passed token: ca774331-cee6-48b8-bb73-5aae96ad0557
+Fri Dec  9 23:18:08 2022: Socket received request to stop server.
+Fri Dec  9 23:18:08 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:18:08 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:18:08 2022: XCD main fifo: Stopping
+Fri Dec  9 23:18:08 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:18:08 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:18:08 2022: SERVER: destructor for server bound to port 37205
+Fri Dec  9 23:18:08 2022: XCD main fifo: Good unlink of /tmp/xcdmainca774331-cee6-48b8-bb73-5aae96ad0557
+Fri Dec  9 23:18:08 2022: Server exiting with status 0.
+Fri Dec  9 23:18:08 2022: Closing log file.
+Fri Dec  9 23:19:06 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:19:06 2022: Server was asked to start on port: '42181'
+Fri Dec  9 23:19:06 2022: Server is using token UUID: 'f952ec81-4351-414b-b830-8d5fed50f783'
+Fri Dec  9 23:19:06 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:19:06 2022: Attempting to start server on port '42181'
+Fri Dec  9 23:19:06 2022: XCD main fifo: created main fifo '/tmp/xcdmainf952ec81-4351-414b-b830-8d5fed50f783', fd read = 13
+Fri Dec  9 23:19:06 2022: Running Dispatch Server
+Fri Dec  9 23:19:06 2022: Version 2.2.0
+Fri Dec  9 23:19:15 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:19:15 2022: Starting Socket connection
+Fri Dec  9 23:19:15 2022: EXCHANGE_TOKEN received, server token: f952ec81-4351-414b-b830-8d5fed50f783, passed token: f952ec81-4351-414b-b830-8d5fed50f783
+Fri Dec  9 23:19:15 2022: SESSION_MGR: creating session with session uuid: '462e2ca2-d367-4fe2-a432-e864d2075070' and name 'vitis_hls'
+Fri Dec  9 23:19:15 2022: KERNEL_SVC: creating session with uuid: '462e2ca2-d367-4fe2-a432-e864d2075070' and name 'vitis_hls'
+Fri Dec  9 23:19:15 2022: GUIDANCE_SMGR: creating guidance session with uuid: '462e2ca2-d367-4fe2-a432-e864d2075070' and name 'vitis_hls'
+Fri Dec  9 23:19:18 2022: STOP_SERVER received, server token: f952ec81-4351-414b-b830-8d5fed50f783, passed token: f952ec81-4351-414b-b830-8d5fed50f783
+Fri Dec  9 23:19:18 2022: Socket received request to stop server.
+Fri Dec  9 23:19:18 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:19:18 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:19:18 2022: XCD main fifo: Stopping
+Fri Dec  9 23:19:18 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:19:18 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:19:18 2022: SERVER: destructor for server bound to port 42181
+Fri Dec  9 23:19:18 2022: XCD main fifo: Good unlink of /tmp/xcdmainf952ec81-4351-414b-b830-8d5fed50f783
+Fri Dec  9 23:19:18 2022: Server exiting with status 0.
+Fri Dec  9 23:19:18 2022: Closing log file.
+Fri Dec  9 23:19:41 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:19:41 2022: Server was asked to start on port: '40645'
+Fri Dec  9 23:19:41 2022: Server is using token UUID: 'a0bad824-aa04-44fe-907c-eb2e8abaef2c'
+Fri Dec  9 23:19:41 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:19:41 2022: Attempting to start server on port '40645'
+Fri Dec  9 23:19:41 2022: XCD main fifo: created main fifo '/tmp/xcdmaina0bad824-aa04-44fe-907c-eb2e8abaef2c', fd read = 13
+Fri Dec  9 23:19:41 2022: Running Dispatch Server
+Fri Dec  9 23:19:41 2022: Version 2.2.0
+Fri Dec  9 23:19:50 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:19:50 2022: Starting Socket connection
+Fri Dec  9 23:19:50 2022: EXCHANGE_TOKEN received, server token: a0bad824-aa04-44fe-907c-eb2e8abaef2c, passed token: a0bad824-aa04-44fe-907c-eb2e8abaef2c
+Fri Dec  9 23:19:50 2022: SESSION_MGR: creating session with session uuid: 'e542b0d2-c65f-402d-b20d-0d31cb25aa53' and name 'vitis_hls'
+Fri Dec  9 23:19:50 2022: KERNEL_SVC: creating session with uuid: 'e542b0d2-c65f-402d-b20d-0d31cb25aa53' and name 'vitis_hls'
+Fri Dec  9 23:19:50 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'e542b0d2-c65f-402d-b20d-0d31cb25aa53' and name 'vitis_hls'
+Fri Dec  9 23:19:57 2022: STOP_SERVER received, server token: a0bad824-aa04-44fe-907c-eb2e8abaef2c, passed token: a0bad824-aa04-44fe-907c-eb2e8abaef2c
+Fri Dec  9 23:19:57 2022: Socket received request to stop server.
+Fri Dec  9 23:19:57 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:19:57 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:19:57 2022: XCD main fifo: Stopping
+Fri Dec  9 23:19:57 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:19:57 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:19:57 2022: SERVER: destructor for server bound to port 40645
+Fri Dec  9 23:19:57 2022: XCD main fifo: Good unlink of /tmp/xcdmaina0bad824-aa04-44fe-907c-eb2e8abaef2c
+Fri Dec  9 23:19:57 2022: Server exiting with status 0.
+Fri Dec  9 23:19:57 2022: Closing log file.
+Fri Dec  9 23:20:42 2022: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+Fri Dec  9 23:20:42 2022: Server was asked to start on port: '43785'
+Fri Dec  9 23:20:42 2022: Server is using token UUID: 'ffa4090a-7020-48fc-b087-042b443e447b'
+Fri Dec  9 23:20:42 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Dec  9 23:20:42 2022: Attempting to start server on port '43785'
+Fri Dec  9 23:20:42 2022: XCD main fifo: created main fifo '/tmp/xcdmainffa4090a-7020-48fc-b087-042b443e447b', fd read = 13
+Fri Dec  9 23:20:42 2022: Running Dispatch Server
+Fri Dec  9 23:20:42 2022: Version 2.2.0
+Fri Dec  9 23:20:51 2022: Dispatch Server: Accepted socket connection from client
+Fri Dec  9 23:20:51 2022: Starting Socket connection
+Fri Dec  9 23:20:51 2022: EXCHANGE_TOKEN received, server token: ffa4090a-7020-48fc-b087-042b443e447b, passed token: ffa4090a-7020-48fc-b087-042b443e447b
+Fri Dec  9 23:20:51 2022: SESSION_MGR: creating session with session uuid: '6f124d6d-b1a6-46a7-b570-89de2b8654de' and name 'vitis_hls'
+Fri Dec  9 23:20:51 2022: KERNEL_SVC: creating session with uuid: '6f124d6d-b1a6-46a7-b570-89de2b8654de' and name 'vitis_hls'
+Fri Dec  9 23:20:51 2022: GUIDANCE_SMGR: creating guidance session with uuid: '6f124d6d-b1a6-46a7-b570-89de2b8654de' and name 'vitis_hls'
+Fri Dec  9 23:20:55 2022: STOP_SERVER received, server token: ffa4090a-7020-48fc-b087-042b443e447b, passed token: ffa4090a-7020-48fc-b087-042b443e447b
+Fri Dec  9 23:20:55 2022: Socket received request to stop server.
+Fri Dec  9 23:20:55 2022: Dispatch Server: do_await_stop
+Fri Dec  9 23:20:55 2022: Dispatch Server: stopping mainFifo_
+Fri Dec  9 23:20:55 2022: XCD main fifo: Stopping
+Fri Dec  9 23:20:55 2022: XCD main fifo: do_read error code: Operation canceled
+Fri Dec  9 23:20:55 2022: XCD main fifo: bytes_transferred: 0
+Fri Dec  9 23:20:55 2022: SERVER: destructor for server bound to port 43785
+Fri Dec  9 23:20:55 2022: XCD main fifo: Good unlink of /tmp/xcdmainffa4090a-7020-48fc-b087-042b443e447b
+Fri Dec  9 23:20:55 2022: Server exiting with status 0.
+Fri Dec  9 23:20:55 2022: Closing log file.
