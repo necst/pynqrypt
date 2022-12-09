@@ -866,6 +866,1174 @@ endtask
 
 `ifndef POST_SYN
 
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668
+reg [4:0] DEP_address_1_to [1 - 1:0];
+time DEP_time_1_to [1 - 1:0];
+reg [4:0] DEP_address_1_from [1 - 1:0];
+time DEP_time_1_from [1 - 1:0];
+reg DEP_error_1 = 0;
+integer DEP_i_1;
+
+initial begin
+    DEP_address_1_to[0] = 0;
+    DEP_time_1_to[0] = 0;
+    DEP_address_1_from[0] = 0;
+    DEP_time_1_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_operation_18) begin
+                DEP_address_1_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.block_r_address1};
+                DEP_time_1_to[0] = $time;
+            end else begin
+                DEP_address_1_to[0] = {1'b0, 4'b0};
+                DEP_time_1_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_reg_pp0_iter0) begin
+            DEP_address_1_to[0] = {1'b0, 4'b0};
+            DEP_time_1_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_operation_24) begin
+                if (DEP_address_1_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_1_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_1_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.block_r_address0};
+                DEP_time_1_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668.ap_enable_operation_24) begin
+                DEP_i_1 = 0;
+                if (DEP_address_1_to[0][4]) begin
+                    DEP_error_1 = (DEP_address_1_to[0][3:0] == DEP_address_1_from[DEP_i_1][3:0]);
+                    if (DEP_error_1) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_1_from[DEP_i_1][3:0], DEP_time_1_from[DEP_i_1]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_1_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_1_to[0][3:0], DEP_time_1_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block_fu_668
+                    end
+                end
+                DEP_address_1_from[DEP_i_1] = {1'b0, 4'b0};
+                DEP_time_1_from[DEP_i_1] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700
+reg [4:0] DEP_address_3_to [1 - 1:0];
+time DEP_time_3_to [1 - 1:0];
+reg [4:0] DEP_address_3_from [1 - 1:0];
+time DEP_time_3_from [1 - 1:0];
+reg DEP_error_3 = 0;
+integer DEP_i_3;
+
+initial begin
+    DEP_address_3_to[0] = 0;
+    DEP_time_3_to[0] = 0;
+    DEP_address_3_from[0] = 0;
+    DEP_time_3_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_operation_18) begin
+                DEP_address_3_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.block_r_address1};
+                DEP_time_3_to[0] = $time;
+            end else begin
+                DEP_address_3_to[0] = {1'b0, 4'b0};
+                DEP_time_3_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_reg_pp0_iter0) begin
+            DEP_address_3_to[0] = {1'b0, 4'b0};
+            DEP_time_3_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_operation_24) begin
+                if (DEP_address_3_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_3_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_3_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.block_r_address0};
+                DEP_time_3_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700.ap_enable_operation_24) begin
+                DEP_i_3 = 0;
+                if (DEP_address_3_to[0][4]) begin
+                    DEP_error_3 = (DEP_address_3_to[0][3:0] == DEP_address_3_from[DEP_i_3][3:0]);
+                    if (DEP_error_3) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_3_from[DEP_i_3][3:0], DEP_time_3_from[DEP_i_3]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_3_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_3_to[0][3:0], DEP_time_3_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block1_fu_700
+                    end
+                end
+                DEP_address_3_from[DEP_i_3] = {1'b0, 4'b0};
+                DEP_time_3_from[DEP_i_3] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732
+reg [4:0] DEP_address_5_to [1 - 1:0];
+time DEP_time_5_to [1 - 1:0];
+reg [4:0] DEP_address_5_from [1 - 1:0];
+time DEP_time_5_from [1 - 1:0];
+reg DEP_error_5 = 0;
+integer DEP_i_5;
+
+initial begin
+    DEP_address_5_to[0] = 0;
+    DEP_time_5_to[0] = 0;
+    DEP_address_5_from[0] = 0;
+    DEP_time_5_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_operation_18) begin
+                DEP_address_5_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.block_r_address1};
+                DEP_time_5_to[0] = $time;
+            end else begin
+                DEP_address_5_to[0] = {1'b0, 4'b0};
+                DEP_time_5_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_reg_pp0_iter0) begin
+            DEP_address_5_to[0] = {1'b0, 4'b0};
+            DEP_time_5_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_operation_24) begin
+                if (DEP_address_5_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_5_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_5_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.block_r_address0};
+                DEP_time_5_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732.ap_enable_operation_24) begin
+                DEP_i_5 = 0;
+                if (DEP_address_5_to[0][4]) begin
+                    DEP_error_5 = (DEP_address_5_to[0][3:0] == DEP_address_5_from[DEP_i_5][3:0]);
+                    if (DEP_error_5) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_5_from[DEP_i_5][3:0], DEP_time_5_from[DEP_i_5]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_5_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_5_to[0][3:0], DEP_time_5_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block2_fu_732
+                    end
+                end
+                DEP_address_5_from[DEP_i_5] = {1'b0, 4'b0};
+                DEP_time_5_from[DEP_i_5] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764
+reg [4:0] DEP_address_7_to [1 - 1:0];
+time DEP_time_7_to [1 - 1:0];
+reg [4:0] DEP_address_7_from [1 - 1:0];
+time DEP_time_7_from [1 - 1:0];
+reg DEP_error_7 = 0;
+integer DEP_i_7;
+
+initial begin
+    DEP_address_7_to[0] = 0;
+    DEP_time_7_to[0] = 0;
+    DEP_address_7_from[0] = 0;
+    DEP_time_7_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_operation_18) begin
+                DEP_address_7_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.block_r_address1};
+                DEP_time_7_to[0] = $time;
+            end else begin
+                DEP_address_7_to[0] = {1'b0, 4'b0};
+                DEP_time_7_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_reg_pp0_iter0) begin
+            DEP_address_7_to[0] = {1'b0, 4'b0};
+            DEP_time_7_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_operation_24) begin
+                if (DEP_address_7_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_7_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_7_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.block_r_address0};
+                DEP_time_7_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764.ap_enable_operation_24) begin
+                DEP_i_7 = 0;
+                if (DEP_address_7_to[0][4]) begin
+                    DEP_error_7 = (DEP_address_7_to[0][3:0] == DEP_address_7_from[DEP_i_7][3:0]);
+                    if (DEP_error_7) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_7_from[DEP_i_7][3:0], DEP_time_7_from[DEP_i_7]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_7_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_7_to[0][3:0], DEP_time_7_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block3_fu_764
+                    end
+                end
+                DEP_address_7_from[DEP_i_7] = {1'b0, 4'b0};
+                DEP_time_7_from[DEP_i_7] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796
+reg [4:0] DEP_address_9_to [1 - 1:0];
+time DEP_time_9_to [1 - 1:0];
+reg [4:0] DEP_address_9_from [1 - 1:0];
+time DEP_time_9_from [1 - 1:0];
+reg DEP_error_9 = 0;
+integer DEP_i_9;
+
+initial begin
+    DEP_address_9_to[0] = 0;
+    DEP_time_9_to[0] = 0;
+    DEP_address_9_from[0] = 0;
+    DEP_time_9_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_operation_18) begin
+                DEP_address_9_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.block_r_address1};
+                DEP_time_9_to[0] = $time;
+            end else begin
+                DEP_address_9_to[0] = {1'b0, 4'b0};
+                DEP_time_9_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_reg_pp0_iter0) begin
+            DEP_address_9_to[0] = {1'b0, 4'b0};
+            DEP_time_9_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_operation_24) begin
+                if (DEP_address_9_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_9_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_9_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.block_r_address0};
+                DEP_time_9_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796.ap_enable_operation_24) begin
+                DEP_i_9 = 0;
+                if (DEP_address_9_to[0][4]) begin
+                    DEP_error_9 = (DEP_address_9_to[0][3:0] == DEP_address_9_from[DEP_i_9][3:0]);
+                    if (DEP_error_9) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_9_from[DEP_i_9][3:0], DEP_time_9_from[DEP_i_9]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_9_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_9_to[0][3:0], DEP_time_9_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block4_fu_796
+                    end
+                end
+                DEP_address_9_from[DEP_i_9] = {1'b0, 4'b0};
+                DEP_time_9_from[DEP_i_9] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828
+reg [4:0] DEP_address_11_to [1 - 1:0];
+time DEP_time_11_to [1 - 1:0];
+reg [4:0] DEP_address_11_from [1 - 1:0];
+time DEP_time_11_from [1 - 1:0];
+reg DEP_error_11 = 0;
+integer DEP_i_11;
+
+initial begin
+    DEP_address_11_to[0] = 0;
+    DEP_time_11_to[0] = 0;
+    DEP_address_11_from[0] = 0;
+    DEP_time_11_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_operation_18) begin
+                DEP_address_11_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.block_r_address1};
+                DEP_time_11_to[0] = $time;
+            end else begin
+                DEP_address_11_to[0] = {1'b0, 4'b0};
+                DEP_time_11_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_reg_pp0_iter0) begin
+            DEP_address_11_to[0] = {1'b0, 4'b0};
+            DEP_time_11_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_operation_24) begin
+                if (DEP_address_11_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_11_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_11_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.block_r_address0};
+                DEP_time_11_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828.ap_enable_operation_24) begin
+                DEP_i_11 = 0;
+                if (DEP_address_11_to[0][4]) begin
+                    DEP_error_11 = (DEP_address_11_to[0][3:0] == DEP_address_11_from[DEP_i_11][3:0]);
+                    if (DEP_error_11) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_11_from[DEP_i_11][3:0], DEP_time_11_from[DEP_i_11]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_11_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_11_to[0][3:0], DEP_time_11_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block5_fu_828
+                    end
+                end
+                DEP_address_11_from[DEP_i_11] = {1'b0, 4'b0};
+                DEP_time_11_from[DEP_i_11] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860
+reg [4:0] DEP_address_13_to [1 - 1:0];
+time DEP_time_13_to [1 - 1:0];
+reg [4:0] DEP_address_13_from [1 - 1:0];
+time DEP_time_13_from [1 - 1:0];
+reg DEP_error_13 = 0;
+integer DEP_i_13;
+
+initial begin
+    DEP_address_13_to[0] = 0;
+    DEP_time_13_to[0] = 0;
+    DEP_address_13_from[0] = 0;
+    DEP_time_13_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_operation_18) begin
+                DEP_address_13_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.block_r_address1};
+                DEP_time_13_to[0] = $time;
+            end else begin
+                DEP_address_13_to[0] = {1'b0, 4'b0};
+                DEP_time_13_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_reg_pp0_iter0) begin
+            DEP_address_13_to[0] = {1'b0, 4'b0};
+            DEP_time_13_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_operation_24) begin
+                if (DEP_address_13_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_13_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_13_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.block_r_address0};
+                DEP_time_13_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860.ap_enable_operation_24) begin
+                DEP_i_13 = 0;
+                if (DEP_address_13_to[0][4]) begin
+                    DEP_error_13 = (DEP_address_13_to[0][3:0] == DEP_address_13_from[DEP_i_13][3:0]);
+                    if (DEP_error_13) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_13_from[DEP_i_13][3:0], DEP_time_13_from[DEP_i_13]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_13_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_13_to[0][3:0], DEP_time_13_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block6_fu_860
+                    end
+                end
+                DEP_address_13_from[DEP_i_13] = {1'b0, 4'b0};
+                DEP_time_13_from[DEP_i_13] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892
+reg [4:0] DEP_address_15_to [1 - 1:0];
+time DEP_time_15_to [1 - 1:0];
+reg [4:0] DEP_address_15_from [1 - 1:0];
+time DEP_time_15_from [1 - 1:0];
+reg DEP_error_15 = 0;
+integer DEP_i_15;
+
+initial begin
+    DEP_address_15_to[0] = 0;
+    DEP_time_15_to[0] = 0;
+    DEP_address_15_from[0] = 0;
+    DEP_time_15_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_operation_18) begin
+                DEP_address_15_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.block_r_address1};
+                DEP_time_15_to[0] = $time;
+            end else begin
+                DEP_address_15_to[0] = {1'b0, 4'b0};
+                DEP_time_15_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_reg_pp0_iter0) begin
+            DEP_address_15_to[0] = {1'b0, 4'b0};
+            DEP_time_15_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_operation_24) begin
+                if (DEP_address_15_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_15_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_15_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.block_r_address0};
+                DEP_time_15_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892.ap_enable_operation_24) begin
+                DEP_i_15 = 0;
+                if (DEP_address_15_to[0][4]) begin
+                    DEP_error_15 = (DEP_address_15_to[0][3:0] == DEP_address_15_from[DEP_i_15][3:0]);
+                    if (DEP_error_15) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_15_from[DEP_i_15][3:0], DEP_time_15_from[DEP_i_15]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_15_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_15_to[0][3:0], DEP_time_15_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block7_fu_892
+                    end
+                end
+                DEP_address_15_from[DEP_i_15] = {1'b0, 4'b0};
+                DEP_time_15_from[DEP_i_15] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924
+reg [4:0] DEP_address_17_to [1 - 1:0];
+time DEP_time_17_to [1 - 1:0];
+reg [4:0] DEP_address_17_from [1 - 1:0];
+time DEP_time_17_from [1 - 1:0];
+reg DEP_error_17 = 0;
+integer DEP_i_17;
+
+initial begin
+    DEP_address_17_to[0] = 0;
+    DEP_time_17_to[0] = 0;
+    DEP_address_17_from[0] = 0;
+    DEP_time_17_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_operation_18) begin
+                DEP_address_17_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.block_r_address1};
+                DEP_time_17_to[0] = $time;
+            end else begin
+                DEP_address_17_to[0] = {1'b0, 4'b0};
+                DEP_time_17_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_reg_pp0_iter0) begin
+            DEP_address_17_to[0] = {1'b0, 4'b0};
+            DEP_time_17_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_operation_24) begin
+                if (DEP_address_17_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_17_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_17_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.block_r_address0};
+                DEP_time_17_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924.ap_enable_operation_24) begin
+                DEP_i_17 = 0;
+                if (DEP_address_17_to[0][4]) begin
+                    DEP_error_17 = (DEP_address_17_to[0][3:0] == DEP_address_17_from[DEP_i_17][3:0]);
+                    if (DEP_error_17) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_17_from[DEP_i_17][3:0], DEP_time_17_from[DEP_i_17]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_17_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_17_to[0][3:0], DEP_time_17_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block8_fu_924
+                    end
+                end
+                DEP_address_17_from[DEP_i_17] = {1'b0, 4'b0};
+                DEP_time_17_from[DEP_i_17] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956
+reg [4:0] DEP_address_19_to [1 - 1:0];
+time DEP_time_19_to [1 - 1:0];
+reg [4:0] DEP_address_19_from [1 - 1:0];
+time DEP_time_19_from [1 - 1:0];
+reg DEP_error_19 = 0;
+integer DEP_i_19;
+
+initial begin
+    DEP_address_19_to[0] = 0;
+    DEP_time_19_to[0] = 0;
+    DEP_address_19_from[0] = 0;
+    DEP_time_19_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_operation_18) begin
+                DEP_address_19_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.block_r_address1};
+                DEP_time_19_to[0] = $time;
+            end else begin
+                DEP_address_19_to[0] = {1'b0, 4'b0};
+                DEP_time_19_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_reg_pp0_iter0) begin
+            DEP_address_19_to[0] = {1'b0, 4'b0};
+            DEP_time_19_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_operation_24) begin
+                if (DEP_address_19_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_19_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_19_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.block_r_address0};
+                DEP_time_19_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956.ap_enable_operation_24) begin
+                DEP_i_19 = 0;
+                if (DEP_address_19_to[0][4]) begin
+                    DEP_error_19 = (DEP_address_19_to[0][3:0] == DEP_address_19_from[DEP_i_19][3:0]);
+                    if (DEP_error_19) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_19_from[DEP_i_19][3:0], DEP_time_19_from[DEP_i_19]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_19_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_19_to[0][3:0], DEP_time_19_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block9_fu_956
+                    end
+                end
+                DEP_address_19_from[DEP_i_19] = {1'b0, 4'b0};
+                DEP_time_19_from[DEP_i_19] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988
+reg [4:0] DEP_address_21_to [1 - 1:0];
+time DEP_time_21_to [1 - 1:0];
+reg [4:0] DEP_address_21_from [1 - 1:0];
+time DEP_time_21_from [1 - 1:0];
+reg DEP_error_21 = 0;
+integer DEP_i_21;
+
+initial begin
+    DEP_address_21_to[0] = 0;
+    DEP_time_21_to[0] = 0;
+    DEP_address_21_from[0] = 0;
+    DEP_time_21_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_operation_18) begin
+                DEP_address_21_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.block_r_address1};
+                DEP_time_21_to[0] = $time;
+            end else begin
+                DEP_address_21_to[0] = {1'b0, 4'b0};
+                DEP_time_21_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_reg_pp0_iter0) begin
+            DEP_address_21_to[0] = {1'b0, 4'b0};
+            DEP_time_21_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_operation_24) begin
+                if (DEP_address_21_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_21_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_21_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.block_r_address0};
+                DEP_time_21_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988.ap_enable_operation_24) begin
+                DEP_i_21 = 0;
+                if (DEP_address_21_to[0][4]) begin
+                    DEP_error_21 = (DEP_address_21_to[0][3:0] == DEP_address_21_from[DEP_i_21][3:0]);
+                    if (DEP_error_21) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_21_from[DEP_i_21][3:0], DEP_time_21_from[DEP_i_21]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_21_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_21_to[0][3:0], DEP_time_21_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block10_fu_988
+                    end
+                end
+                DEP_address_21_from[DEP_i_21] = {1'b0, 4'b0};
+                DEP_time_21_from[DEP_i_21] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020
+reg [4:0] DEP_address_23_to [1 - 1:0];
+time DEP_time_23_to [1 - 1:0];
+reg [4:0] DEP_address_23_from [1 - 1:0];
+time DEP_time_23_from [1 - 1:0];
+reg DEP_error_23 = 0;
+integer DEP_i_23;
+
+initial begin
+    DEP_address_23_to[0] = 0;
+    DEP_time_23_to[0] = 0;
+    DEP_address_23_from[0] = 0;
+    DEP_time_23_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_operation_18) begin
+                DEP_address_23_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.block_r_address1};
+                DEP_time_23_to[0] = $time;
+            end else begin
+                DEP_address_23_to[0] = {1'b0, 4'b0};
+                DEP_time_23_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_reg_pp0_iter0) begin
+            DEP_address_23_to[0] = {1'b0, 4'b0};
+            DEP_time_23_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_operation_24) begin
+                if (DEP_address_23_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_23_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_23_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.block_r_address0};
+                DEP_time_23_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020.ap_enable_operation_24) begin
+                DEP_i_23 = 0;
+                if (DEP_address_23_to[0][4]) begin
+                    DEP_error_23 = (DEP_address_23_to[0][3:0] == DEP_address_23_from[DEP_i_23][3:0]);
+                    if (DEP_error_23) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_23_from[DEP_i_23][3:0], DEP_time_23_from[DEP_i_23]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_23_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_23_to[0][3:0], DEP_time_23_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block11_fu_1020
+                    end
+                end
+                DEP_address_23_from[DEP_i_23] = {1'b0, 4'b0};
+                DEP_time_23_from[DEP_i_23] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052
+reg [4:0] DEP_address_25_to [1 - 1:0];
+time DEP_time_25_to [1 - 1:0];
+reg [4:0] DEP_address_25_from [1 - 1:0];
+time DEP_time_25_from [1 - 1:0];
+reg DEP_error_25 = 0;
+integer DEP_i_25;
+
+initial begin
+    DEP_address_25_to[0] = 0;
+    DEP_time_25_to[0] = 0;
+    DEP_address_25_from[0] = 0;
+    DEP_time_25_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_operation_18) begin
+                DEP_address_25_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.block_r_address1};
+                DEP_time_25_to[0] = $time;
+            end else begin
+                DEP_address_25_to[0] = {1'b0, 4'b0};
+                DEP_time_25_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_reg_pp0_iter0) begin
+            DEP_address_25_to[0] = {1'b0, 4'b0};
+            DEP_time_25_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_operation_24) begin
+                if (DEP_address_25_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_25_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_25_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.block_r_address0};
+                DEP_time_25_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052.ap_enable_operation_24) begin
+                DEP_i_25 = 0;
+                if (DEP_address_25_to[0][4]) begin
+                    DEP_error_25 = (DEP_address_25_to[0][3:0] == DEP_address_25_from[DEP_i_25][3:0]);
+                    if (DEP_error_25) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_25_from[DEP_i_25][3:0], DEP_time_25_from[DEP_i_25]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_25_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_25_to[0][3:0], DEP_time_25_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block12_fu_1052
+                    end
+                end
+                DEP_address_25_from[DEP_i_25] = {1'b0, 4'b0};
+                DEP_time_25_from[DEP_i_25] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084
+reg [4:0] DEP_address_27_to [1 - 1:0];
+time DEP_time_27_to [1 - 1:0];
+reg [4:0] DEP_address_27_from [1 - 1:0];
+time DEP_time_27_from [1 - 1:0];
+reg DEP_error_27 = 0;
+integer DEP_i_27;
+
+initial begin
+    DEP_address_27_to[0] = 0;
+    DEP_time_27_to[0] = 0;
+    DEP_address_27_from[0] = 0;
+    DEP_time_27_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_operation_18) begin
+                DEP_address_27_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.block_r_address1};
+                DEP_time_27_to[0] = $time;
+            end else begin
+                DEP_address_27_to[0] = {1'b0, 4'b0};
+                DEP_time_27_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_reg_pp0_iter0) begin
+            DEP_address_27_to[0] = {1'b0, 4'b0};
+            DEP_time_27_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_operation_24) begin
+                if (DEP_address_27_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_27_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_27_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.block_r_address0};
+                DEP_time_27_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084.ap_enable_operation_24) begin
+                DEP_i_27 = 0;
+                if (DEP_address_27_to[0][4]) begin
+                    DEP_error_27 = (DEP_address_27_to[0][3:0] == DEP_address_27_from[DEP_i_27][3:0]);
+                    if (DEP_error_27) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_27_from[DEP_i_27][3:0], DEP_time_27_from[DEP_i_27]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_27_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_27_to[0][3:0], DEP_time_27_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block13_fu_1084
+                    end
+                end
+                DEP_address_27_from[DEP_i_27] = {1'b0, 4'b0};
+                DEP_time_27_from[DEP_i_27] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116
+reg [4:0] DEP_address_29_to [1 - 1:0];
+time DEP_time_29_to [1 - 1:0];
+reg [4:0] DEP_address_29_from [1 - 1:0];
+time DEP_time_29_from [1 - 1:0];
+reg DEP_error_29 = 0;
+integer DEP_i_29;
+
+initial begin
+    DEP_address_29_to[0] = 0;
+    DEP_time_29_to[0] = 0;
+    DEP_address_29_from[0] = 0;
+    DEP_time_29_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_operation_18) begin
+                DEP_address_29_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.block_r_address1};
+                DEP_time_29_to[0] = $time;
+            end else begin
+                DEP_address_29_to[0] = {1'b0, 4'b0};
+                DEP_time_29_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_reg_pp0_iter0) begin
+            DEP_address_29_to[0] = {1'b0, 4'b0};
+            DEP_time_29_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_operation_24) begin
+                if (DEP_address_29_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_29_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_29_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.block_r_address0};
+                DEP_time_29_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116.ap_enable_operation_24) begin
+                DEP_i_29 = 0;
+                if (DEP_address_29_to[0][4]) begin
+                    DEP_error_29 = (DEP_address_29_to[0][3:0] == DEP_address_29_from[DEP_i_29][3:0]);
+                    if (DEP_error_29) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_29_from[DEP_i_29][3:0], DEP_time_29_from[DEP_i_29]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_29_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_29_to[0][3:0], DEP_time_29_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block14_fu_1116
+                    end
+                end
+                DEP_address_29_from[DEP_i_29] = {1'b0, 4'b0};
+                DEP_time_29_from[DEP_i_29] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_22"(R:SV0-1) -> "ap_enable_operation_24"(W:SV1-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148
+
+// Dependence Check (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148
+reg [4:0] DEP_address_31_to [1 - 1:0];
+time DEP_time_31_to [1 - 1:0];
+reg [4:0] DEP_address_31_from [1 - 1:0];
+time DEP_time_31_from [1 - 1:0];
+reg DEP_error_31 = 0;
+integer DEP_i_31;
+
+initial begin
+    DEP_address_31_to[0] = 0;
+    DEP_time_31_to[0] = 0;
+    DEP_address_31_from[0] = 0;
+    DEP_time_31_from[0] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_state1_pp0_iter0_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_reg_pp0_iter0) begin 
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_operation_18) begin
+                DEP_address_31_to[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.block_r_address1};
+                DEP_time_31_to[0] = $time;
+            end else begin
+                DEP_address_31_to[0] = {1'b0, 4'b0};
+                DEP_time_31_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_state1_pp0_iter0_stage0||
+            `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_state2_pp0_iter1_stage0)
+            &&  ~`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_reg_pp0_iter0) begin
+            DEP_address_31_to[0] = {1'b0, 4'b0};
+            DEP_time_31_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_operation_24) begin
+                if (DEP_address_31_from[0][4]) begin
+                    $display("// ERROR : \"DEP_address_31_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_31_from[0] = {1'b1, `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.block_r_address0};
+                DEP_time_31_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_reg_pp0_iter1) begin
+            if (`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148.ap_enable_operation_24) begin
+                DEP_i_31 = 0;
+                if (DEP_address_31_to[0][4]) begin
+                    DEP_error_31 = (DEP_address_31_to[0][3:0] == DEP_address_31_from[DEP_i_31][3:0]);
+                    if (DEP_error_31) begin
+                        $display("//Critical WARNING: Due to pragma (hw-impl/src/pynqrypt.cpp:25:9), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148\"");
+                        $display("//                : From memory access \"block_r_address0\" = 0x%0h @ \"%0t\"", DEP_address_31_from[DEP_i_31][3:0], DEP_time_31_from[DEP_i_31]);
+                        $display("//                : To memory access \"block_r_address1\" = DEP_address_31_to[0][3:0] = 0x%0h @ \"%0t\"", DEP_address_31_to[0][3:0], DEP_time_31_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (RAW) "ap_enable_operation_24"(W:SV1-1) -> "ap_enable_operation_18"(R:SV0-1) @ `AUTOTB_DUT_INST.grp_ctr_encrypt_fu_136.grp_ctr_encrypt_Pipeline_loop_ctr_xor_block15_fu_1148
+                    end
+                end
+                DEP_address_31_from[DEP_i_31] = {1'b0, 4'b0};
+                DEP_time_31_from[DEP_i_31] = 0;
+            end
+        end // of check access
+    end 
+end
+
 `endif
 ///////////////////////////////////////////////////////
 // dataflow status monitor

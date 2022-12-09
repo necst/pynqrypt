@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -98,11 +97,16 @@ set_property used_in_implementation false [get_files -all /home/mrindeciso/Docum
 set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_rst_ps7_0_100M_3/main_design_rst_ps7_0_100M_3_board.xdc]
 set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_rst_ps7_0_100M_3/main_design_rst_ps7_0_100M_3.xdc]
 set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_rst_ps7_0_100M_3/main_design_rst_ps7_0_100M_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_xbar_0/main_design_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_pc_0/main_design_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_us_0/main_design_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_us_0/main_design_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_us_0/main_design_auto_us_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_pc_1/main_design_auto_pc_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_ds_0/main_design_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_ds_0/main_design_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_ds_0/main_design_auto_ds_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_auto_pc_2/main_design_auto_pc_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/main_design_ooc.xdc]
 
 OPTRACE "Adding files" END { }

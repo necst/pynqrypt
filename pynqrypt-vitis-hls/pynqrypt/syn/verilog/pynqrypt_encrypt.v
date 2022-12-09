@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=3190,HLS_SYN_LUT=7848,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=15959,HLS_SYN_LUT=32986,HLS_VERSION=2022_2}" *)
 
 module pynqrypt_encrypt (
         ap_clk,
@@ -77,34 +77,12 @@ module pynqrypt_encrypt (
         interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 28'd1;
-parameter    ap_ST_fsm_state2 = 28'd2;
-parameter    ap_ST_fsm_state3 = 28'd4;
-parameter    ap_ST_fsm_state4 = 28'd8;
-parameter    ap_ST_fsm_state5 = 28'd16;
-parameter    ap_ST_fsm_state6 = 28'd32;
-parameter    ap_ST_fsm_state7 = 28'd64;
-parameter    ap_ST_fsm_state8 = 28'd128;
-parameter    ap_ST_fsm_state9 = 28'd256;
-parameter    ap_ST_fsm_state10 = 28'd512;
-parameter    ap_ST_fsm_state11 = 28'd1024;
-parameter    ap_ST_fsm_state12 = 28'd2048;
-parameter    ap_ST_fsm_state13 = 28'd4096;
-parameter    ap_ST_fsm_state14 = 28'd8192;
-parameter    ap_ST_fsm_state15 = 28'd16384;
-parameter    ap_ST_fsm_state16 = 28'd32768;
-parameter    ap_ST_fsm_state17 = 28'd65536;
-parameter    ap_ST_fsm_state18 = 28'd131072;
-parameter    ap_ST_fsm_state19 = 28'd262144;
-parameter    ap_ST_fsm_state20 = 28'd524288;
-parameter    ap_ST_fsm_state21 = 28'd1048576;
-parameter    ap_ST_fsm_state22 = 28'd2097152;
-parameter    ap_ST_fsm_state23 = 28'd4194304;
-parameter    ap_ST_fsm_state24 = 28'd8388608;
-parameter    ap_ST_fsm_state25 = 28'd16777216;
-parameter    ap_ST_fsm_state26 = 28'd33554432;
-parameter    ap_ST_fsm_state27 = 28'd67108864;
-parameter    ap_ST_fsm_state28 = 28'd134217728;
+parameter    ap_ST_fsm_state1 = 6'd1;
+parameter    ap_ST_fsm_state2 = 6'd2;
+parameter    ap_ST_fsm_state3 = 6'd4;
+parameter    ap_ST_fsm_state4 = 6'd8;
+parameter    ap_ST_fsm_state5 = 6'd16;
+parameter    ap_ST_fsm_state6 = 6'd32;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
 parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 7;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -196,7 +174,7 @@ output   interrupt;
 wire    ap_start;
 reg    ap_done;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [27:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
 wire   [7:0] key_q0;
@@ -204,39 +182,10 @@ wire   [7:0] nonce_q0;
 wire   [63:0] plaintext_length;
 wire   [63:0] plaintext;
 wire   [63:0] ciphertext;
-reg   [7:0] crypto_aes_sbox_address0;
-reg    crypto_aes_sbox_ce0;
-wire   [7:0] crypto_aes_sbox_q0;
-reg    crypto_aes_sbox_ce1;
-wire   [7:0] crypto_aes_sbox_q1;
-reg    gmem_blk_n_AR;
-wire    ap_CS_fsm_state6;
-reg   [0:0] icmp_ln25_reg_563;
-reg    gmem_blk_n_AW;
-wire    ap_CS_fsm_state21;
-wire   [0:0] ap_phi_mux_icmp_ln25_pr_phi_fu_234_p4;
-reg    gmem_blk_n_B;
-wire    ap_CS_fsm_state28;
-reg   [0:0] icmp_ln25_pr_reg_230;
-reg   [63:0] ciphertext_read_reg_499;
-wire    ap_CS_fsm_state4;
-reg   [63:0] plaintext_read_reg_504;
-reg   [63:0] plaintext_length_read_reg_509;
-wire   [63:0] xor_ln23_fu_319_p2;
-reg   [63:0] xor_ln23_reg_535;
-wire   [31:0] xor_ln24_fu_325_p2;
-reg   [31:0] xor_ln24_reg_540;
-wire   [31:0] select_ln24_fu_370_p3;
-reg   [31:0] select_ln24_reg_551;
+reg   [63:0] ciphertext_read_reg_152;
 wire    ap_CS_fsm_state5;
-wire   [0:0] icmp_ln23_1_fu_339_p2;
-wire   [63:0] add_ln24_2_fu_378_p2;
-reg   [63:0] add_ln24_2_reg_557;
-wire   [0:0] icmp_ln25_fu_383_p2;
-wire   [63:0] select_ln23_fu_400_p3;
-reg   [63:0] select_ln23_reg_568;
-wire   [63:0] add_ln24_1_fu_408_p2;
-reg   [63:0] add_ln24_1_reg_575;
+reg   [63:0] plaintext_read_reg_157;
+reg   [63:0] plaintext_length_read_reg_162;
 reg   [7:0] pynqrypt_round_keys_address0;
 reg    pynqrypt_round_keys_ce0;
 reg    pynqrypt_round_keys_we0;
@@ -245,23 +194,6 @@ reg   [7:0] pynqrypt_round_keys_address1;
 reg    pynqrypt_round_keys_ce1;
 reg    pynqrypt_round_keys_we1;
 wire   [7:0] pynqrypt_round_keys_q1;
-reg   [3:0] block_nonce_address0;
-reg    block_nonce_ce0;
-reg    block_nonce_we0;
-reg   [7:0] block_nonce_d0;
-wire   [7:0] block_nonce_q0;
-reg   [3:0] block_nonce_address1;
-reg    block_nonce_ce1;
-reg    block_nonce_we1;
-reg   [7:0] block_nonce_d1;
-wire   [7:0] block_nonce_q1;
-reg   [3:0] block_address0;
-reg    block_ce0;
-reg    block_we0;
-reg   [7:0] block_d0;
-wire   [7:0] block_q0;
-reg    block_ce1;
-wire   [7:0] block_q1;
 reg   [3:0] pynqrypt_key_address0;
 reg    pynqrypt_key_ce0;
 reg    pynqrypt_key_we0;
@@ -270,216 +202,103 @@ reg   [3:0] pynqrypt_nonce_address0;
 reg    pynqrypt_nonce_ce0;
 reg    pynqrypt_nonce_we0;
 wire   [7:0] pynqrypt_nonce_q0;
-wire    grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start;
-wire    grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_done;
-wire    grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_idle;
-wire    grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_ready;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_1_fu_242_key_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_1_fu_242_key_ce0;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_ce0;
-wire    grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_we0;
-wire   [7:0] grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_d0;
-wire    grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start;
-wire    grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_done;
-wire    grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_idle;
-wire    grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_ready;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_2_fu_250_nonce_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_2_fu_250_nonce_ce0;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_ce0;
-wire    grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_we0;
-wire   [7:0] grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_d0;
-wire    grp_aes_generate_round_keys_fu_258_ap_start;
-wire    grp_aes_generate_round_keys_fu_258_ap_done;
-wire    grp_aes_generate_round_keys_fu_258_ap_idle;
-wire    grp_aes_generate_round_keys_fu_258_ap_ready;
-wire   [3:0] grp_aes_generate_round_keys_fu_258_this_key_address0;
-wire    grp_aes_generate_round_keys_fu_258_this_key_ce0;
-wire   [7:0] grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_address0;
-wire    grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_ce0;
-wire    grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_we0;
-wire   [7:0] grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_d0;
-wire   [7:0] grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_address1;
-wire    grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_ce1;
-wire    grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_we1;
-wire   [7:0] grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_d1;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_done;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_idle;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_ready;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWVALID;
-wire   [63:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWADDR;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWID;
-wire   [31:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWLEN;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWBURST;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWPROT;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWQOS;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWREGION;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWUSER;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WVALID;
-wire   [7:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WDATA;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WSTRB;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WLAST;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WID;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WUSER;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARVALID;
-wire   [63:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARADDR;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARID;
-wire   [31:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARLEN;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARBURST;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARPROT;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARQOS;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARREGION;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARUSER;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_RREADY;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_BREADY;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_ce0;
-wire    grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_we0;
-wire   [7:0] grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_d0;
-wire    grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start;
-wire    grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_done;
-wire    grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_idle;
-wire    grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_ready;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_4_fu_277_pynqrypt_nonce_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_4_fu_277_pynqrypt_nonce_ce0;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_ce0;
-wire    grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_we0;
-wire   [7:0] grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_d0;
-wire    grp_aes_encrypt_block_fu_283_ap_start;
-wire    grp_aes_encrypt_block_fu_283_ap_done;
-wire    grp_aes_encrypt_block_fu_283_ap_idle;
-wire    grp_aes_encrypt_block_fu_283_ap_ready;
-wire   [7:0] grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_address0;
-wire    grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_ce0;
-wire   [7:0] grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_address1;
-wire    grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_ce1;
-wire   [3:0] grp_aes_encrypt_block_fu_283_state_address0;
-wire    grp_aes_encrypt_block_fu_283_state_ce0;
-wire    grp_aes_encrypt_block_fu_283_state_we0;
-wire   [7:0] grp_aes_encrypt_block_fu_283_state_d0;
-wire   [3:0] grp_aes_encrypt_block_fu_283_state_address1;
-wire    grp_aes_encrypt_block_fu_283_state_ce1;
-wire    grp_aes_encrypt_block_fu_283_state_we1;
-wire   [7:0] grp_aes_encrypt_block_fu_283_state_d1;
-wire   [7:0] grp_aes_encrypt_block_fu_283_crypto_aes_sbox_address0;
-wire    grp_aes_encrypt_block_fu_283_crypto_aes_sbox_ce0;
-wire   [7:0] grp_aes_encrypt_block_fu_283_crypto_aes_sbox_address1;
-wire    grp_aes_encrypt_block_fu_283_crypto_aes_sbox_ce1;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_idle;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_ready;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_nonce_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_nonce_ce0;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_ce0;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_we0;
-wire   [7:0] grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_d0;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_address1;
-wire    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_ce1;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_done;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_idle;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_ready;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWVALID;
-wire   [63:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWADDR;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWID;
-wire   [31:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWLEN;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWBURST;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWPROT;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWQOS;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWREGION;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWUSER;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WVALID;
-wire   [7:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WDATA;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WSTRB;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WLAST;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WID;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WUSER;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARVALID;
-wire   [63:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARADDR;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARID;
-wire   [31:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARLEN;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARBURST;
-wire   [1:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARPROT;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARQOS;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARREGION;
-wire   [0:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARUSER;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_RREADY;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_BREADY;
-wire   [3:0] grp_pynqrypt_encrypt_Pipeline_6_fu_298_block_r_address0;
-wire    grp_pynqrypt_encrypt_Pipeline_6_fu_298_block_r_ce0;
+wire    grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start;
+wire    grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_done;
+wire    grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_idle;
+wire    grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_ready;
+wire   [3:0] grp_pynqrypt_encrypt_Pipeline_1_fu_110_key_address0;
+wire    grp_pynqrypt_encrypt_Pipeline_1_fu_110_key_ce0;
+wire   [3:0] grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_address0;
+wire    grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_ce0;
+wire    grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_we0;
+wire   [7:0] grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_d0;
+wire    grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start;
+wire    grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_done;
+wire    grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_idle;
+wire    grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_ready;
+wire   [3:0] grp_pynqrypt_encrypt_Pipeline_2_fu_118_nonce_address0;
+wire    grp_pynqrypt_encrypt_Pipeline_2_fu_118_nonce_ce0;
+wire   [3:0] grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_address0;
+wire    grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_ce0;
+wire    grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_we0;
+wire   [7:0] grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_d0;
+wire    grp_aes_generate_round_keys_fu_126_ap_start;
+wire    grp_aes_generate_round_keys_fu_126_ap_done;
+wire    grp_aes_generate_round_keys_fu_126_ap_idle;
+wire    grp_aes_generate_round_keys_fu_126_ap_ready;
+wire   [3:0] grp_aes_generate_round_keys_fu_126_this_key_address0;
+wire    grp_aes_generate_round_keys_fu_126_this_key_ce0;
+wire   [7:0] grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_address0;
+wire    grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_ce0;
+wire    grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_we0;
+wire   [7:0] grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_d0;
+wire   [7:0] grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_address1;
+wire    grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_ce1;
+wire    grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_we1;
+wire   [7:0] grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_d1;
+wire    grp_ctr_encrypt_fu_136_ap_start;
+wire    grp_ctr_encrypt_fu_136_ap_done;
+wire    grp_ctr_encrypt_fu_136_ap_idle;
+wire    grp_ctr_encrypt_fu_136_ap_ready;
+wire   [3:0] grp_ctr_encrypt_fu_136_this_nonce_address0;
+wire    grp_ctr_encrypt_fu_136_this_nonce_ce0;
+wire   [7:0] grp_ctr_encrypt_fu_136_pynqrypt_round_keys_address0;
+wire    grp_ctr_encrypt_fu_136_pynqrypt_round_keys_ce0;
+wire   [7:0] grp_ctr_encrypt_fu_136_pynqrypt_round_keys_address1;
+wire    grp_ctr_encrypt_fu_136_pynqrypt_round_keys_ce1;
+wire    grp_ctr_encrypt_fu_136_m_axi_gmem_AWVALID;
+wire   [63:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWADDR;
+wire   [0:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWID;
+wire   [31:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWLEN;
+wire   [2:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWBURST;
+wire   [1:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWPROT;
+wire   [3:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWQOS;
+wire   [3:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWREGION;
+wire   [0:0] grp_ctr_encrypt_fu_136_m_axi_gmem_AWUSER;
+wire    grp_ctr_encrypt_fu_136_m_axi_gmem_WVALID;
+wire   [7:0] grp_ctr_encrypt_fu_136_m_axi_gmem_WDATA;
+wire   [0:0] grp_ctr_encrypt_fu_136_m_axi_gmem_WSTRB;
+wire    grp_ctr_encrypt_fu_136_m_axi_gmem_WLAST;
+wire   [0:0] grp_ctr_encrypt_fu_136_m_axi_gmem_WID;
+wire   [0:0] grp_ctr_encrypt_fu_136_m_axi_gmem_WUSER;
+wire    grp_ctr_encrypt_fu_136_m_axi_gmem_ARVALID;
+wire   [63:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARADDR;
+wire   [0:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARID;
+wire   [31:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARLEN;
+wire   [2:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARBURST;
+wire   [1:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARPROT;
+wire   [3:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARQOS;
+wire   [3:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARREGION;
+wire   [0:0] grp_ctr_encrypt_fu_136_m_axi_gmem_ARUSER;
+wire    grp_ctr_encrypt_fu_136_m_axi_gmem_RREADY;
+wire    grp_ctr_encrypt_fu_136_m_axi_gmem_BREADY;
 reg    gmem_AWVALID;
 wire    gmem_AWREADY;
-reg   [63:0] gmem_AWADDR;
-reg   [31:0] gmem_AWLEN;
 reg    gmem_WVALID;
 wire    gmem_WREADY;
 reg    gmem_ARVALID;
 wire    gmem_ARREADY;
-reg   [63:0] gmem_ARADDR;
-reg   [31:0] gmem_ARLEN;
 wire    gmem_RVALID;
 reg    gmem_RREADY;
 wire   [7:0] gmem_RDATA;
 wire   [10:0] gmem_RFIFONUM;
 wire    gmem_BVALID;
 reg    gmem_BREADY;
-reg    ap_block_state6_io;
-wire    ap_CS_fsm_state14;
-reg    ap_block_state14_on_subcall_done;
-reg    grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start_reg;
+reg    grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start_reg;
 wire    ap_CS_fsm_state2;
-reg    grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start_reg;
-reg    grp_aes_generate_round_keys_fu_258_ap_start_reg;
+reg    grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start_reg;
+reg    grp_aes_generate_round_keys_fu_126_ap_start_reg;
 wire    ap_CS_fsm_state3;
-reg    grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start_reg;
-wire    ap_CS_fsm_state12;
-reg   [27:0] ap_NS_fsm;
-wire    ap_NS_fsm_state13;
-wire    ap_CS_fsm_state13;
-reg    grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start_reg;
-wire    ap_CS_fsm_state15;
-reg    grp_aes_encrypt_block_fu_283_ap_start_reg;
-wire    ap_CS_fsm_state18;
-wire    ap_CS_fsm_state19;
-reg    grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start_reg;
-wire    ap_CS_fsm_state20;
-reg    grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start_reg;
-wire    ap_NS_fsm_state22;
-wire    ap_CS_fsm_state22;
-wire    ap_CS_fsm_state23;
-reg    ap_block_state21_io;
-reg    ap_block_state28;
-reg   [63:0] i_fu_134;
-wire   [63:0] i_5_fu_464_p2;
-reg   [63:0] indvars_iv6_fu_138;
-wire   [63:0] add_ln23_fu_469_p2;
-wire    ap_CS_fsm_state16;
-wire    ap_CS_fsm_state17;
-wire   [31:0] trunc_ln23_fu_315_p1;
-wire   [63:0] add_ln24_fu_348_p2;
-wire   [31:0] trunc_ln24_fu_344_p1;
-wire   [31:0] add_ln24_3_fu_359_p2;
-wire   [0:0] icmp_ln24_fu_353_p2;
-wire   [31:0] xor_ln24_1_fu_364_p2;
-wire   [0:0] icmp_ln23_fu_388_p2;
-wire   [63:0] xor_ln23_1_fu_394_p2;
+wire    ap_CS_fsm_state4;
+reg    grp_ctr_encrypt_fu_136_ap_start_reg;
+wire    ap_CS_fsm_state6;
+reg   [5:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_block_state2_on_subcall_done;
 reg    ap_ST_fsm_state2_blk;
@@ -487,57 +306,16 @@ wire    ap_ST_fsm_state3_blk;
 reg    ap_ST_fsm_state4_blk;
 wire    ap_ST_fsm_state5_blk;
 reg    ap_ST_fsm_state6_blk;
-wire    ap_ST_fsm_state7_blk;
-wire    ap_ST_fsm_state8_blk;
-wire    ap_ST_fsm_state9_blk;
-wire    ap_ST_fsm_state10_blk;
-wire    ap_ST_fsm_state11_blk;
-wire    ap_ST_fsm_state12_blk;
-wire    ap_ST_fsm_state13_blk;
-reg    ap_ST_fsm_state14_blk;
-reg    ap_ST_fsm_state15_blk;
-wire    ap_ST_fsm_state16_blk;
-wire    ap_ST_fsm_state17_blk;
-wire    ap_ST_fsm_state18_blk;
-reg    ap_ST_fsm_state19_blk;
-wire    ap_ST_fsm_state20_blk;
-reg    ap_ST_fsm_state21_blk;
-wire    ap_ST_fsm_state22_blk;
-reg    ap_ST_fsm_state23_blk;
-wire    ap_ST_fsm_state24_blk;
-wire    ap_ST_fsm_state25_blk;
-wire    ap_ST_fsm_state26_blk;
-wire    ap_ST_fsm_state27_blk;
-reg    ap_ST_fsm_state28_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 28'd1;
-#0 grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start_reg = 1'b0;
-#0 grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start_reg = 1'b0;
-#0 grp_aes_generate_round_keys_fu_258_ap_start_reg = 1'b0;
-#0 grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start_reg = 1'b0;
-#0 grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start_reg = 1'b0;
-#0 grp_aes_encrypt_block_fu_283_ap_start_reg = 1'b0;
-#0 grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start_reg = 1'b0;
-#0 grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 6'd1;
+#0 grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start_reg = 1'b0;
+#0 grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start_reg = 1'b0;
+#0 grp_aes_generate_round_keys_fu_126_ap_start_reg = 1'b0;
+#0 grp_ctr_encrypt_fu_136_ap_start_reg = 1'b0;
 end
-
-pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R #(
-    .DataWidth( 8 ),
-    .AddressRange( 256 ),
-    .AddressWidth( 8 ))
-crypto_aes_sbox_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .address0(crypto_aes_sbox_address0),
-    .ce0(crypto_aes_sbox_ce0),
-    .q0(crypto_aes_sbox_q0),
-    .address1(grp_aes_encrypt_block_fu_283_crypto_aes_sbox_address1),
-    .ce1(crypto_aes_sbox_ce1),
-    .q1(crypto_aes_sbox_q1)
-);
 
 pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W #(
     .DataWidth( 8 ),
@@ -549,49 +327,13 @@ pynqrypt_round_keys_U(
     .address0(pynqrypt_round_keys_address0),
     .ce0(pynqrypt_round_keys_ce0),
     .we0(pynqrypt_round_keys_we0),
-    .d0(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_d0),
+    .d0(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_d0),
     .q0(pynqrypt_round_keys_q0),
     .address1(pynqrypt_round_keys_address1),
     .ce1(pynqrypt_round_keys_ce1),
     .we1(pynqrypt_round_keys_we1),
-    .d1(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_d1),
+    .d1(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_d1),
     .q1(pynqrypt_round_keys_q1)
-);
-
-pynqrypt_encrypt_block_nonce_RAM_AUTO_1R1W #(
-    .DataWidth( 8 ),
-    .AddressRange( 16 ),
-    .AddressWidth( 4 ))
-block_nonce_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .address0(block_nonce_address0),
-    .ce0(block_nonce_ce0),
-    .we0(block_nonce_we0),
-    .d0(block_nonce_d0),
-    .q0(block_nonce_q0),
-    .address1(block_nonce_address1),
-    .ce1(block_nonce_ce1),
-    .we1(block_nonce_we1),
-    .d1(block_nonce_d1),
-    .q1(block_nonce_q1)
-);
-
-pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W #(
-    .DataWidth( 8 ),
-    .AddressRange( 16 ),
-    .AddressWidth( 4 ))
-block_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .address0(block_address0),
-    .ce0(block_ce0),
-    .we0(block_we0),
-    .d0(block_d0),
-    .q0(block_q0),
-    .address1(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_address1),
-    .ce1(block_ce1),
-    .q1(block_q1)
 );
 
 pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W #(
@@ -604,7 +346,7 @@ pynqrypt_key_U(
     .address0(pynqrypt_key_address0),
     .ce0(pynqrypt_key_ce0),
     .we0(pynqrypt_key_we0),
-    .d0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_d0),
+    .d0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_d0),
     .q0(pynqrypt_key_q0)
 );
 
@@ -618,250 +360,129 @@ pynqrypt_nonce_U(
     .address0(pynqrypt_nonce_address0),
     .ce0(pynqrypt_nonce_ce0),
     .we0(pynqrypt_nonce_we0),
-    .d0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_d0),
+    .d0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_d0),
     .q0(pynqrypt_nonce_q0)
 );
 
-pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_1 grp_pynqrypt_encrypt_Pipeline_1_fu_242(
+pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_1 grp_pynqrypt_encrypt_Pipeline_1_fu_110(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start),
-    .ap_done(grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_done),
-    .ap_idle(grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_idle),
-    .ap_ready(grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_ready),
-    .key_address0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_key_address0),
-    .key_ce0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_key_ce0),
+    .ap_start(grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start),
+    .ap_done(grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_done),
+    .ap_idle(grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_idle),
+    .ap_ready(grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_ready),
+    .key_address0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_key_address0),
+    .key_ce0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_key_ce0),
     .key_q0(key_q0),
-    .pynqrypt_key_address0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_address0),
-    .pynqrypt_key_ce0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_ce0),
-    .pynqrypt_key_we0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_we0),
-    .pynqrypt_key_d0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_d0)
+    .pynqrypt_key_address0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_address0),
+    .pynqrypt_key_ce0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_ce0),
+    .pynqrypt_key_we0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_we0),
+    .pynqrypt_key_d0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_d0)
 );
 
-pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_2 grp_pynqrypt_encrypt_Pipeline_2_fu_250(
+pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_2 grp_pynqrypt_encrypt_Pipeline_2_fu_118(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start),
-    .ap_done(grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_done),
-    .ap_idle(grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_idle),
-    .ap_ready(grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_ready),
-    .nonce_address0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_nonce_address0),
-    .nonce_ce0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_nonce_ce0),
+    .ap_start(grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start),
+    .ap_done(grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_done),
+    .ap_idle(grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_idle),
+    .ap_ready(grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_ready),
+    .nonce_address0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_nonce_address0),
+    .nonce_ce0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_nonce_ce0),
     .nonce_q0(nonce_q0),
-    .pynqrypt_nonce_address0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_address0),
-    .pynqrypt_nonce_ce0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_ce0),
-    .pynqrypt_nonce_we0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_we0),
-    .pynqrypt_nonce_d0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_d0)
+    .pynqrypt_nonce_address0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_address0),
+    .pynqrypt_nonce_ce0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_ce0),
+    .pynqrypt_nonce_we0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_we0),
+    .pynqrypt_nonce_d0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_d0)
 );
 
-pynqrypt_encrypt_aes_generate_round_keys grp_aes_generate_round_keys_fu_258(
+pynqrypt_encrypt_aes_generate_round_keys grp_aes_generate_round_keys_fu_126(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_aes_generate_round_keys_fu_258_ap_start),
-    .ap_done(grp_aes_generate_round_keys_fu_258_ap_done),
-    .ap_idle(grp_aes_generate_round_keys_fu_258_ap_idle),
-    .ap_ready(grp_aes_generate_round_keys_fu_258_ap_ready),
-    .this_key_address0(grp_aes_generate_round_keys_fu_258_this_key_address0),
-    .this_key_ce0(grp_aes_generate_round_keys_fu_258_this_key_ce0),
+    .ap_start(grp_aes_generate_round_keys_fu_126_ap_start),
+    .ap_done(grp_aes_generate_round_keys_fu_126_ap_done),
+    .ap_idle(grp_aes_generate_round_keys_fu_126_ap_idle),
+    .ap_ready(grp_aes_generate_round_keys_fu_126_ap_ready),
+    .this_key_address0(grp_aes_generate_round_keys_fu_126_this_key_address0),
+    .this_key_ce0(grp_aes_generate_round_keys_fu_126_this_key_ce0),
     .this_key_q0(pynqrypt_key_q0),
-    .pynqrypt_round_keys_address0(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_address0),
-    .pynqrypt_round_keys_ce0(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_ce0),
-    .pynqrypt_round_keys_we0(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_we0),
-    .pynqrypt_round_keys_d0(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_d0),
+    .pynqrypt_round_keys_address0(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_address0),
+    .pynqrypt_round_keys_ce0(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_ce0),
+    .pynqrypt_round_keys_we0(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_we0),
+    .pynqrypt_round_keys_d0(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_d0),
     .pynqrypt_round_keys_q0(pynqrypt_round_keys_q0),
-    .pynqrypt_round_keys_address1(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_address1),
-    .pynqrypt_round_keys_ce1(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_ce1),
-    .pynqrypt_round_keys_we1(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_we1),
-    .pynqrypt_round_keys_d1(grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_d1),
+    .pynqrypt_round_keys_address1(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_address1),
+    .pynqrypt_round_keys_ce1(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_ce1),
+    .pynqrypt_round_keys_we1(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_we1),
+    .pynqrypt_round_keys_d1(grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_d1),
     .pynqrypt_round_keys_q1(pynqrypt_round_keys_q1)
 );
 
-pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_3 grp_pynqrypt_encrypt_Pipeline_3_fu_268(
+pynqrypt_encrypt_ctr_encrypt grp_ctr_encrypt_fu_136(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start),
-    .ap_done(grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_done),
-    .ap_idle(grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_idle),
-    .ap_ready(grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_ready),
-    .m_axi_gmem_AWVALID(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWVALID),
-    .m_axi_gmem_AWREADY(1'b0),
-    .m_axi_gmem_AWADDR(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WVALID),
-    .m_axi_gmem_WREADY(1'b0),
-    .m_axi_gmem_WDATA(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARVALID),
+    .ap_start(grp_ctr_encrypt_fu_136_ap_start),
+    .ap_done(grp_ctr_encrypt_fu_136_ap_done),
+    .ap_idle(grp_ctr_encrypt_fu_136_ap_idle),
+    .ap_ready(grp_ctr_encrypt_fu_136_ap_ready),
+    .this_nonce_address0(grp_ctr_encrypt_fu_136_this_nonce_address0),
+    .this_nonce_ce0(grp_ctr_encrypt_fu_136_this_nonce_ce0),
+    .this_nonce_q0(pynqrypt_nonce_q0),
+    .pynqrypt_round_keys_address0(grp_ctr_encrypt_fu_136_pynqrypt_round_keys_address0),
+    .pynqrypt_round_keys_ce0(grp_ctr_encrypt_fu_136_pynqrypt_round_keys_ce0),
+    .pynqrypt_round_keys_q0(pynqrypt_round_keys_q0),
+    .pynqrypt_round_keys_address1(grp_ctr_encrypt_fu_136_pynqrypt_round_keys_address1),
+    .pynqrypt_round_keys_ce1(grp_ctr_encrypt_fu_136_pynqrypt_round_keys_ce1),
+    .pynqrypt_round_keys_q1(pynqrypt_round_keys_q1),
+    .plaintext_length(plaintext_length_read_reg_162),
+    .m_axi_gmem_AWVALID(grp_ctr_encrypt_fu_136_m_axi_gmem_AWVALID),
+    .m_axi_gmem_AWREADY(gmem_AWREADY),
+    .m_axi_gmem_AWADDR(grp_ctr_encrypt_fu_136_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_ctr_encrypt_fu_136_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_ctr_encrypt_fu_136_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_ctr_encrypt_fu_136_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_ctr_encrypt_fu_136_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_ctr_encrypt_fu_136_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_ctr_encrypt_fu_136_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_ctr_encrypt_fu_136_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_ctr_encrypt_fu_136_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_ctr_encrypt_fu_136_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_ctr_encrypt_fu_136_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_ctr_encrypt_fu_136_m_axi_gmem_WVALID),
+    .m_axi_gmem_WREADY(gmem_WREADY),
+    .m_axi_gmem_WDATA(grp_ctr_encrypt_fu_136_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_ctr_encrypt_fu_136_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_ctr_encrypt_fu_136_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_ctr_encrypt_fu_136_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_ctr_encrypt_fu_136_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_ctr_encrypt_fu_136_m_axi_gmem_ARVALID),
     .m_axi_gmem_ARREADY(gmem_ARREADY),
-    .m_axi_gmem_ARADDR(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARUSER),
+    .m_axi_gmem_ARADDR(grp_ctr_encrypt_fu_136_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_ctr_encrypt_fu_136_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_ctr_encrypt_fu_136_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_ctr_encrypt_fu_136_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_ctr_encrypt_fu_136_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_ctr_encrypt_fu_136_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_ctr_encrypt_fu_136_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_ctr_encrypt_fu_136_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_ctr_encrypt_fu_136_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_ctr_encrypt_fu_136_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_ctr_encrypt_fu_136_m_axi_gmem_ARUSER),
     .m_axi_gmem_RVALID(gmem_RVALID),
-    .m_axi_gmem_RREADY(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_RREADY),
+    .m_axi_gmem_RREADY(grp_ctr_encrypt_fu_136_m_axi_gmem_RREADY),
     .m_axi_gmem_RDATA(gmem_RDATA),
     .m_axi_gmem_RLAST(1'b0),
     .m_axi_gmem_RID(1'd0),
     .m_axi_gmem_RFIFONUM(gmem_RFIFONUM),
     .m_axi_gmem_RUSER(1'd0),
     .m_axi_gmem_RRESP(2'd0),
-    .m_axi_gmem_BVALID(1'b0),
-    .m_axi_gmem_BREADY(grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_BREADY),
-    .m_axi_gmem_BRESP(2'd0),
-    .m_axi_gmem_BID(1'd0),
-    .m_axi_gmem_BUSER(1'd0),
-    .add_ln24_2(add_ln24_2_reg_557),
-    .block_r_address0(grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_address0),
-    .block_r_ce0(grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_ce0),
-    .block_r_we0(grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_we0),
-    .block_r_d0(grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_d0),
-    .select_ln23(select_ln23_reg_568)
-);
-
-pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_4 grp_pynqrypt_encrypt_Pipeline_4_fu_277(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start),
-    .ap_done(grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_done),
-    .ap_idle(grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_idle),
-    .ap_ready(grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_ready),
-    .pynqrypt_nonce_address0(grp_pynqrypt_encrypt_Pipeline_4_fu_277_pynqrypt_nonce_address0),
-    .pynqrypt_nonce_ce0(grp_pynqrypt_encrypt_Pipeline_4_fu_277_pynqrypt_nonce_ce0),
-    .pynqrypt_nonce_q0(pynqrypt_nonce_q0),
-    .block_nonce_address0(grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_address0),
-    .block_nonce_ce0(grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_ce0),
-    .block_nonce_we0(grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_we0),
-    .block_nonce_d0(grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_d0)
-);
-
-pynqrypt_encrypt_aes_encrypt_block grp_aes_encrypt_block_fu_283(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_aes_encrypt_block_fu_283_ap_start),
-    .ap_done(grp_aes_encrypt_block_fu_283_ap_done),
-    .ap_idle(grp_aes_encrypt_block_fu_283_ap_idle),
-    .ap_ready(grp_aes_encrypt_block_fu_283_ap_ready),
-    .pynqrypt_round_keys_address0(grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_address0),
-    .pynqrypt_round_keys_ce0(grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_ce0),
-    .pynqrypt_round_keys_q0(pynqrypt_round_keys_q0),
-    .pynqrypt_round_keys_address1(grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_address1),
-    .pynqrypt_round_keys_ce1(grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_ce1),
-    .pynqrypt_round_keys_q1(pynqrypt_round_keys_q1),
-    .state_address0(grp_aes_encrypt_block_fu_283_state_address0),
-    .state_ce0(grp_aes_encrypt_block_fu_283_state_ce0),
-    .state_we0(grp_aes_encrypt_block_fu_283_state_we0),
-    .state_d0(grp_aes_encrypt_block_fu_283_state_d0),
-    .state_q0(block_nonce_q0),
-    .state_address1(grp_aes_encrypt_block_fu_283_state_address1),
-    .state_ce1(grp_aes_encrypt_block_fu_283_state_ce1),
-    .state_we1(grp_aes_encrypt_block_fu_283_state_we1),
-    .state_d1(grp_aes_encrypt_block_fu_283_state_d1),
-    .state_q1(block_nonce_q1),
-    .crypto_aes_sbox_address0(grp_aes_encrypt_block_fu_283_crypto_aes_sbox_address0),
-    .crypto_aes_sbox_ce0(grp_aes_encrypt_block_fu_283_crypto_aes_sbox_ce0),
-    .crypto_aes_sbox_q0(crypto_aes_sbox_q0),
-    .crypto_aes_sbox_address1(grp_aes_encrypt_block_fu_283_crypto_aes_sbox_address1),
-    .crypto_aes_sbox_ce1(grp_aes_encrypt_block_fu_283_crypto_aes_sbox_ce1),
-    .crypto_aes_sbox_q1(crypto_aes_sbox_q1)
-);
-
-pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start),
-    .ap_done(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done),
-    .ap_idle(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_idle),
-    .ap_ready(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_ready),
-    .select_ln23(select_ln23_reg_568),
-    .block_nonce_address0(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_nonce_address0),
-    .block_nonce_ce0(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_nonce_ce0),
-    .block_nonce_q0(block_nonce_q0),
-    .block_r_address0(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_address0),
-    .block_r_ce0(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_ce0),
-    .block_r_we0(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_we0),
-    .block_r_d0(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_d0),
-    .block_r_address1(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_address1),
-    .block_r_ce1(grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_ce1),
-    .block_r_q1(block_q1)
-);
-
-pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_6 grp_pynqrypt_encrypt_Pipeline_6_fu_298(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start),
-    .ap_done(grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_done),
-    .ap_idle(grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_idle),
-    .ap_ready(grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_ready),
-    .m_axi_gmem_AWVALID(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWVALID),
-    .m_axi_gmem_AWREADY(gmem_AWREADY),
-    .m_axi_gmem_AWADDR(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WVALID),
-    .m_axi_gmem_WREADY(gmem_WREADY),
-    .m_axi_gmem_WDATA(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARVALID),
-    .m_axi_gmem_ARREADY(1'b0),
-    .m_axi_gmem_ARADDR(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_ARUSER),
-    .m_axi_gmem_RVALID(1'b0),
-    .m_axi_gmem_RREADY(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_RREADY),
-    .m_axi_gmem_RDATA(8'd0),
-    .m_axi_gmem_RLAST(1'b0),
-    .m_axi_gmem_RID(1'd0),
-    .m_axi_gmem_RFIFONUM(11'd0),
-    .m_axi_gmem_RUSER(1'd0),
-    .m_axi_gmem_RRESP(2'd0),
     .m_axi_gmem_BVALID(gmem_BVALID),
-    .m_axi_gmem_BREADY(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_BREADY),
+    .m_axi_gmem_BREADY(grp_ctr_encrypt_fu_136_m_axi_gmem_BREADY),
     .m_axi_gmem_BRESP(2'd0),
     .m_axi_gmem_BID(1'd0),
     .m_axi_gmem_BUSER(1'd0),
-    .add_ln24_1(add_ln24_1_reg_575),
-    .block_r_address0(grp_pynqrypt_encrypt_Pipeline_6_fu_298_block_r_address0),
-    .block_r_ce0(grp_pynqrypt_encrypt_Pipeline_6_fu_298_block_r_ce0),
-    .block_r_q0(block_q0),
-    .select_ln23(select_ln23_reg_568)
+    .plaintext(plaintext_read_reg_157),
+    .ciphertext(ciphertext_read_reg_152)
 );
 
 pynqrypt_encrypt_control_s_axi #(
@@ -888,11 +509,11 @@ control_s_axi_U(
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
-    .key_address0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_key_address0),
-    .key_ce0(grp_pynqrypt_encrypt_Pipeline_1_fu_242_key_ce0),
+    .key_address0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_key_address0),
+    .key_ce0(grp_pynqrypt_encrypt_Pipeline_1_fu_110_key_ce0),
     .key_q0(key_q0),
-    .nonce_address0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_nonce_address0),
-    .nonce_ce0(grp_pynqrypt_encrypt_Pipeline_2_fu_250_nonce_ce0),
+    .nonce_address0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_nonce_address0),
+    .nonce_ce0(grp_pynqrypt_encrypt_Pipeline_2_fu_118_nonce_ce0),
     .nonce_q0(nonce_q0),
     .plaintext_length(plaintext_length),
     .plaintext(plaintext),
@@ -976,20 +597,20 @@ gmem_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(gmem_ARVALID),
     .I_ARREADY(gmem_ARREADY),
-    .I_ARADDR(gmem_ARADDR),
-    .I_ARLEN(gmem_ARLEN),
+    .I_ARADDR(grp_ctr_encrypt_fu_136_m_axi_gmem_ARADDR),
+    .I_ARLEN(grp_ctr_encrypt_fu_136_m_axi_gmem_ARLEN),
     .I_RVALID(gmem_RVALID),
     .I_RREADY(gmem_RREADY),
     .I_RDATA(gmem_RDATA),
     .I_RFIFONUM(gmem_RFIFONUM),
     .I_AWVALID(gmem_AWVALID),
     .I_AWREADY(gmem_AWREADY),
-    .I_AWADDR(gmem_AWADDR),
-    .I_AWLEN(gmem_AWLEN),
+    .I_AWADDR(grp_ctr_encrypt_fu_136_m_axi_gmem_AWADDR),
+    .I_AWLEN(grp_ctr_encrypt_fu_136_m_axi_gmem_AWLEN),
     .I_WVALID(gmem_WVALID),
     .I_WREADY(gmem_WREADY),
-    .I_WDATA(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WDATA),
-    .I_WSTRB(grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WSTRB),
+    .I_WDATA(grp_ctr_encrypt_fu_136_m_axi_gmem_WDATA),
+    .I_WSTRB(grp_ctr_encrypt_fu_136_m_axi_gmem_WSTRB),
     .I_BVALID(gmem_BVALID),
     .I_BREADY(gmem_BREADY)
 );
@@ -1004,184 +625,57 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_aes_encrypt_block_fu_283_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state18)) begin
-            grp_aes_encrypt_block_fu_283_ap_start_reg <= 1'b1;
-        end else if ((grp_aes_encrypt_block_fu_283_ap_ready == 1'b1)) begin
-            grp_aes_encrypt_block_fu_283_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_aes_generate_round_keys_fu_258_ap_start_reg <= 1'b0;
+        grp_aes_generate_round_keys_fu_126_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_aes_generate_round_keys_fu_258_ap_start_reg <= 1'b1;
-        end else if ((grp_aes_generate_round_keys_fu_258_ap_ready == 1'b1)) begin
-            grp_aes_generate_round_keys_fu_258_ap_start_reg <= 1'b0;
+            grp_aes_generate_round_keys_fu_126_ap_start_reg <= 1'b1;
+        end else if ((grp_aes_generate_round_keys_fu_126_ap_ready == 1'b1)) begin
+            grp_aes_generate_round_keys_fu_126_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start_reg <= 1'b0;
+        grp_ctr_encrypt_fu_136_ap_start_reg <= 1'b0;
     end else begin
-        if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start_reg <= 1'b1;
-        end else if ((grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_ready == 1'b1)) begin
-            grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state5)) begin
+            grp_ctr_encrypt_fu_136_ap_start_reg <= 1'b1;
+        end else if ((grp_ctr_encrypt_fu_136_ap_ready == 1'b1)) begin
+            grp_ctr_encrypt_fu_136_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start_reg <= 1'b0;
+        grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start_reg <= 1'b0;
     end else begin
-        if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start_reg <= 1'b1;
-        end else if ((grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_ready == 1'b1)) begin
-            grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start_reg <= 1'b0;
+        if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start_reg <= 1'b1;
+        end else if ((grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_ready == 1'b1)) begin
+            grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start_reg <= 1'b0;
+        grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b1 == ap_NS_fsm_state13) & (1'b1 == ap_CS_fsm_state12))) begin
-            grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start_reg <= 1'b1;
-        end else if ((grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_ready == 1'b1)) begin
-            grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start_reg <= 1'b0;
+        if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start_reg <= 1'b1;
+        end else if ((grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_ready == 1'b1)) begin
+            grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start_reg <= 1'b0;
-    end else begin
-        if (((1'b0 == ap_block_state14_on_subcall_done) & (1'b1 == ap_CS_fsm_state14))) begin
-            grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start_reg <= 1'b1;
-        end else if ((grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_ready == 1'b1)) begin
-            grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start_reg <= 1'b0;
-    end else begin
-        if (((1'b1 == ap_NS_fsm_state22) & (1'b1 == ap_CS_fsm_state21))) begin
-            grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start_reg <= 1'b1;
-        end else if ((grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_ready == 1'b1)) begin
-            grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state20)) begin
-            grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start_reg <= 1'b1;
-        end else if ((grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_ready == 1'b1)) begin
-            grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        i_fu_134 <= 64'd0;
-    end else if ((~((gmem_BVALID == 1'b0) & (icmp_ln25_pr_reg_230 == 1'd1)) & (1'b1 == ap_CS_fsm_state28))) begin
-        i_fu_134 <= i_5_fu_464_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_state14_on_subcall_done) & (1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1))) begin
-        icmp_ln25_pr_reg_230 <= icmp_ln25_reg_563;
-    end else if (((1'b0 == ap_block_state6_io) & (1'b1 == ap_CS_fsm_state6) & (icmp_ln25_reg_563 == 1'd0))) begin
-        icmp_ln25_pr_reg_230 <= 1'd0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((grp_aes_generate_round_keys_fu_258_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
-        indvars_iv6_fu_138 <= xor_ln23_fu_319_p2;
-    end else if ((~((gmem_BVALID == 1'b0) & (icmp_ln25_pr_reg_230 == 1'd1)) & (1'b1 == ap_CS_fsm_state28))) begin
-        indvars_iv6_fu_138 <= add_ln23_fu_469_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        add_ln24_1_reg_575 <= add_ln24_1_fu_408_p2;
-        select_ln23_reg_568 <= select_ln23_fu_400_p3;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln23_1_fu_339_p2 == 1'd1))) begin
-        add_ln24_2_reg_557 <= add_ln24_2_fu_378_p2;
-        icmp_ln25_reg_563 <= icmp_ln25_fu_383_p2;
-        select_ln24_reg_551 <= select_ln24_fu_370_p3;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        ciphertext_read_reg_499 <= ciphertext;
-        plaintext_length_read_reg_509 <= plaintext_length;
-        plaintext_read_reg_504 <= plaintext;
-        xor_ln23_reg_535 <= xor_ln23_fu_319_p2;
-        xor_ln24_reg_540 <= xor_ln24_fu_325_p2;
-    end
-end
-
-assign ap_ST_fsm_state10_blk = 1'b0;
-
-assign ap_ST_fsm_state11_blk = 1'b0;
-
-assign ap_ST_fsm_state12_blk = 1'b0;
-
-assign ap_ST_fsm_state13_blk = 1'b0;
-
-always @ (*) begin
-    if ((1'b1 == ap_block_state14_on_subcall_done)) begin
-        ap_ST_fsm_state14_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state14_blk = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_done == 1'b0)) begin
-        ap_ST_fsm_state15_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state15_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state16_blk = 1'b0;
-
-assign ap_ST_fsm_state17_blk = 1'b0;
-
-assign ap_ST_fsm_state18_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_aes_encrypt_block_fu_283_ap_done == 1'b0)) begin
-        ap_ST_fsm_state19_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state19_blk = 1'b0;
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        ciphertext_read_reg_152 <= ciphertext;
+        plaintext_length_read_reg_162 <= plaintext_length;
+        plaintext_read_reg_157 <= plaintext;
     end
 end
 
@@ -1190,42 +684,6 @@ always @ (*) begin
         ap_ST_fsm_state1_blk = 1'b1;
     end else begin
         ap_ST_fsm_state1_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state20_blk = 1'b0;
-
-always @ (*) begin
-    if (((1'b1 == ap_block_state21_io) | (grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done == 1'b0))) begin
-        ap_ST_fsm_state21_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state21_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state22_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_done == 1'b0)) begin
-        ap_ST_fsm_state23_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state23_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state24_blk = 1'b0;
-
-assign ap_ST_fsm_state25_blk = 1'b0;
-
-assign ap_ST_fsm_state26_blk = 1'b0;
-
-assign ap_ST_fsm_state27_blk = 1'b0;
-
-always @ (*) begin
-    if (((gmem_BVALID == 1'b0) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-        ap_ST_fsm_state28_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state28_blk = 1'b0;
     end
 end
 
@@ -1240,7 +698,7 @@ end
 assign ap_ST_fsm_state3_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_aes_generate_round_keys_fu_258_ap_done == 1'b0)) begin
+    if ((grp_aes_generate_round_keys_fu_126_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
@@ -1250,21 +708,15 @@ end
 assign ap_ST_fsm_state5_blk = 1'b0;
 
 always @ (*) begin
-    if ((1'b1 == ap_block_state6_io)) begin
+    if ((grp_ctr_encrypt_fu_136_ap_done == 1'b0)) begin
         ap_ST_fsm_state6_blk = 1'b1;
     end else begin
         ap_ST_fsm_state6_blk = 1'b0;
     end
 end
 
-assign ap_ST_fsm_state7_blk = 1'b0;
-
-assign ap_ST_fsm_state8_blk = 1'b0;
-
-assign ap_ST_fsm_state9_blk = 1'b0;
-
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln23_1_fu_339_p2 == 1'd0))) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (grp_ctr_encrypt_fu_136_ap_done == 1'b1))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -1272,7 +724,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -1280,7 +732,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln23_1_fu_339_p2 == 1'd0))) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (grp_ctr_encrypt_fu_136_ap_done == 1'b1))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -1288,300 +740,50 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state23)) begin
-        block_address0 = grp_pynqrypt_encrypt_Pipeline_6_fu_298_block_r_address0;
-    end else if ((1'b1 == ap_CS_fsm_state21)) begin
-        block_address0 = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1))) begin
-        block_address0 = grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_address0;
-    end else begin
-        block_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state23)) begin
-        block_ce0 = grp_pynqrypt_encrypt_Pipeline_6_fu_298_block_r_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state21)) begin
-        block_ce0 = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1))) begin
-        block_ce0 = grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_ce0;
-    end else begin
-        block_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state21)) begin
-        block_ce1 = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_ce1;
-    end else begin
-        block_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state21)) begin
-        block_d0 = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_d0;
-    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1))) begin
-        block_d0 = grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_d0;
-    end else begin
-        block_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state17)) begin
-        block_nonce_address0 = 64'd15;
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        block_nonce_address0 = 64'd13;
-    end else if ((1'b1 == ap_CS_fsm_state21)) begin
-        block_nonce_address0 = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_nonce_address0;
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_address0 = grp_aes_encrypt_block_fu_283_state_address0;
-    end else if ((1'b1 == ap_CS_fsm_state15)) begin
-        block_nonce_address0 = grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_address0;
-    end else begin
-        block_nonce_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state17)) begin
-        block_nonce_address1 = 64'd14;
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        block_nonce_address1 = 64'd12;
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_address1 = grp_aes_encrypt_block_fu_283_state_address1;
-    end else begin
-        block_nonce_address1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state16))) begin
-        block_nonce_ce0 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state21)) begin
-        block_nonce_ce0 = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_nonce_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_ce0 = grp_aes_encrypt_block_fu_283_state_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state15)) begin
-        block_nonce_ce0 = grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_ce0;
-    end else begin
-        block_nonce_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state16))) begin
-        block_nonce_ce1 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_ce1 = grp_aes_encrypt_block_fu_283_state_ce1;
-    end else begin
-        block_nonce_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state17)) begin
-        block_nonce_d0 = {{i_fu_134[11:4]}};
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        block_nonce_d0 = {{i_fu_134[27:20]}};
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_d0 = grp_aes_encrypt_block_fu_283_state_d0;
-    end else if ((1'b1 == ap_CS_fsm_state15)) begin
-        block_nonce_d0 = grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_d0;
-    end else begin
-        block_nonce_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state17)) begin
-        block_nonce_d1 = {{i_fu_134[19:12]}};
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        block_nonce_d1 = {{i_fu_134[35:28]}};
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_d1 = grp_aes_encrypt_block_fu_283_state_d1;
-    end else begin
-        block_nonce_d1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state16))) begin
-        block_nonce_we0 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_we0 = grp_aes_encrypt_block_fu_283_state_we0;
-    end else if ((1'b1 == ap_CS_fsm_state15)) begin
-        block_nonce_we0 = grp_pynqrypt_encrypt_Pipeline_4_fu_277_block_nonce_we0;
-    end else begin
-        block_nonce_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state16))) begin
-        block_nonce_we1 = 1'b1;
-    end else if ((1'b1 == ap_CS_fsm_state19)) begin
-        block_nonce_we1 = grp_aes_encrypt_block_fu_283_state_we1;
-    end else begin
-        block_nonce_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state21)) begin
-        block_we0 = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_block_r_we0;
-    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1))) begin
-        block_we0 = grp_pynqrypt_encrypt_Pipeline_3_fu_268_block_r_we0;
-    end else begin
-        block_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state19)) begin
-        crypto_aes_sbox_address0 = grp_aes_encrypt_block_fu_283_crypto_aes_sbox_address0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        crypto_aes_sbox_address0 = 8'd0;
-    end else begin
-        crypto_aes_sbox_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state19)) begin
-        crypto_aes_sbox_ce0 = grp_aes_encrypt_block_fu_283_crypto_aes_sbox_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        crypto_aes_sbox_ce0 = 1'b0;
-    end else begin
-        crypto_aes_sbox_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state19)) begin
-        crypto_aes_sbox_ce1 = grp_aes_encrypt_block_fu_283_crypto_aes_sbox_ce1;
-    end else begin
-        crypto_aes_sbox_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_state6_io) & (1'b1 == ap_CS_fsm_state6) & (icmp_ln25_reg_563 == 1'd1))) begin
-        gmem_ARADDR = add_ln24_2_reg_557;
-    end else if (((1'b1 == ap_CS_fsm_state13) | ((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1)))) begin
-        gmem_ARADDR = grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARADDR;
-    end else begin
-        gmem_ARADDR = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_state6_io) & (1'b1 == ap_CS_fsm_state6) & (icmp_ln25_reg_563 == 1'd1))) begin
-        gmem_ARLEN = select_ln24_reg_551;
-    end else if (((1'b1 == ap_CS_fsm_state13) | ((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1)))) begin
-        gmem_ARLEN = grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARLEN;
-    end else begin
-        gmem_ARLEN = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_state6_io) & (1'b1 == ap_CS_fsm_state6) & (icmp_ln25_reg_563 == 1'd1))) begin
-        gmem_ARVALID = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state13) | ((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1)))) begin
-        gmem_ARVALID = grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_ARVALID;
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
+        gmem_ARVALID = grp_ctr_encrypt_fu_136_m_axi_gmem_ARVALID;
     end else begin
         gmem_ARVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((~((1'b1 == ap_block_state21_io) | (grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done == 1'b0)) & (1'b1 == ap_CS_fsm_state21) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-        gmem_AWADDR = add_ln24_1_reg_575;
-    end else if (((1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22))) begin
-        gmem_AWADDR = grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWADDR;
-    end else begin
-        gmem_AWADDR = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((~((1'b1 == ap_block_state21_io) | (grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done == 1'b0)) & (1'b1 == ap_CS_fsm_state21) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-        gmem_AWLEN = select_ln24_reg_551;
-    end else if (((1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22))) begin
-        gmem_AWLEN = grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWLEN;
-    end else begin
-        gmem_AWLEN = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((~((1'b1 == ap_block_state21_io) | (grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done == 1'b0)) & (1'b1 == ap_CS_fsm_state21) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-        gmem_AWVALID = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22))) begin
-        gmem_AWVALID = grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_AWVALID;
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
+        gmem_AWVALID = grp_ctr_encrypt_fu_136_m_axi_gmem_AWVALID;
     end else begin
         gmem_AWVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((~((gmem_BVALID == 1'b0) & (icmp_ln25_pr_reg_230 == 1'd1)) & (1'b1 == ap_CS_fsm_state28) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-        gmem_BREADY = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22))) begin
-        gmem_BREADY = grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_BREADY;
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
+        gmem_BREADY = grp_ctr_encrypt_fu_136_m_axi_gmem_BREADY;
     end else begin
         gmem_BREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) | ((1'b1 == ap_CS_fsm_state14) & (icmp_ln25_reg_563 == 1'd1)))) begin
-        gmem_RREADY = grp_pynqrypt_encrypt_Pipeline_3_fu_268_m_axi_gmem_RREADY;
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
+        gmem_RREADY = grp_ctr_encrypt_fu_136_m_axi_gmem_RREADY;
     end else begin
         gmem_RREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22))) begin
-        gmem_WVALID = grp_pynqrypt_encrypt_Pipeline_6_fu_298_m_axi_gmem_WVALID;
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
+        gmem_WVALID = grp_ctr_encrypt_fu_136_m_axi_gmem_WVALID;
     end else begin
         gmem_WVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) & (icmp_ln25_reg_563 == 1'd1))) begin
-        gmem_blk_n_AR = m_axi_gmem_ARREADY;
-    end else begin
-        gmem_blk_n_AR = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state21) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-        gmem_blk_n_AW = m_axi_gmem_AWREADY;
-    end else begin
-        gmem_blk_n_AW = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state28) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-        gmem_blk_n_B = m_axi_gmem_BVALID;
-    end else begin
-        gmem_blk_n_B = 1'b1;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_key_address0 = grp_aes_generate_round_keys_fu_258_this_key_address0;
+        pynqrypt_key_address0 = grp_aes_generate_round_keys_fu_126_this_key_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        pynqrypt_key_address0 = grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_address0;
+        pynqrypt_key_address0 = grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_address0;
     end else begin
         pynqrypt_key_address0 = 'bx;
     end
@@ -1589,9 +791,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_key_ce0 = grp_aes_generate_round_keys_fu_258_this_key_ce0;
+        pynqrypt_key_ce0 = grp_aes_generate_round_keys_fu_126_this_key_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        pynqrypt_key_ce0 = grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_ce0;
+        pynqrypt_key_ce0 = grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_ce0;
     end else begin
         pynqrypt_key_ce0 = 1'b0;
     end
@@ -1599,27 +801,27 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        pynqrypt_key_we0 = grp_pynqrypt_encrypt_Pipeline_1_fu_242_pynqrypt_key_we0;
+        pynqrypt_key_we0 = grp_pynqrypt_encrypt_Pipeline_1_fu_110_pynqrypt_key_we0;
     end else begin
         pynqrypt_key_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state15)) begin
-        pynqrypt_nonce_address0 = grp_pynqrypt_encrypt_Pipeline_4_fu_277_pynqrypt_nonce_address0;
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        pynqrypt_nonce_address0 = grp_ctr_encrypt_fu_136_this_nonce_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        pynqrypt_nonce_address0 = grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_address0;
+        pynqrypt_nonce_address0 = grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_address0;
     end else begin
         pynqrypt_nonce_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state15)) begin
-        pynqrypt_nonce_ce0 = grp_pynqrypt_encrypt_Pipeline_4_fu_277_pynqrypt_nonce_ce0;
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        pynqrypt_nonce_ce0 = grp_ctr_encrypt_fu_136_this_nonce_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        pynqrypt_nonce_ce0 = grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_ce0;
+        pynqrypt_nonce_ce0 = grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_ce0;
     end else begin
         pynqrypt_nonce_ce0 = 1'b0;
     end
@@ -1627,47 +829,47 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        pynqrypt_nonce_we0 = grp_pynqrypt_encrypt_Pipeline_2_fu_250_pynqrypt_nonce_we0;
+        pynqrypt_nonce_we0 = grp_pynqrypt_encrypt_Pipeline_2_fu_118_pynqrypt_nonce_we0;
     end else begin
         pynqrypt_nonce_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state19)) begin
-        pynqrypt_round_keys_address0 = grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_address0;
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        pynqrypt_round_keys_address0 = grp_ctr_encrypt_fu_136_pynqrypt_round_keys_address0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_address0 = grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_address0;
+        pynqrypt_round_keys_address0 = grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_address0;
     end else begin
         pynqrypt_round_keys_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state19)) begin
-        pynqrypt_round_keys_address1 = grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_address1;
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        pynqrypt_round_keys_address1 = grp_ctr_encrypt_fu_136_pynqrypt_round_keys_address1;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_address1 = grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_address1;
+        pynqrypt_round_keys_address1 = grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_address1;
     end else begin
         pynqrypt_round_keys_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state19)) begin
-        pynqrypt_round_keys_ce0 = grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_ce0;
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        pynqrypt_round_keys_ce0 = grp_ctr_encrypt_fu_136_pynqrypt_round_keys_ce0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_ce0 = grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_ce0;
+        pynqrypt_round_keys_ce0 = grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_ce0;
     end else begin
         pynqrypt_round_keys_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state19)) begin
-        pynqrypt_round_keys_ce1 = grp_aes_encrypt_block_fu_283_pynqrypt_round_keys_ce1;
+    if ((1'b1 == ap_CS_fsm_state6)) begin
+        pynqrypt_round_keys_ce1 = grp_ctr_encrypt_fu_136_pynqrypt_round_keys_ce1;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_ce1 = grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_ce1;
+        pynqrypt_round_keys_ce1 = grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_ce1;
     end else begin
         pynqrypt_round_keys_ce1 = 1'b0;
     end
@@ -1675,7 +877,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_we0 = grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_we0;
+        pynqrypt_round_keys_we0 = grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_we0;
     end else begin
         pynqrypt_round_keys_we0 = 1'b0;
     end
@@ -1683,7 +885,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        pynqrypt_round_keys_we1 = grp_aes_generate_round_keys_fu_258_pynqrypt_round_keys_we1;
+        pynqrypt_round_keys_we1 = grp_aes_generate_round_keys_fu_126_pynqrypt_round_keys_we1;
     end else begin
         pynqrypt_round_keys_we1 = 1'b0;
     end
@@ -1692,7 +894,7 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
@@ -1709,118 +911,20 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((grp_aes_generate_round_keys_fu_258_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((1'b1 == ap_CS_fsm_state4) & (grp_aes_generate_round_keys_fu_126_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
         ap_ST_fsm_state5 : begin
-            if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln23_1_fu_339_p2 == 1'd0))) begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state6 : begin
+            if (((1'b1 == ap_CS_fsm_state6) & (grp_ctr_encrypt_fu_136_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
-            end
-        end
-        ap_ST_fsm_state6 : begin
-            if (((1'b0 == ap_block_state6_io) & (1'b1 == ap_CS_fsm_state6) & (icmp_ln25_reg_563 == 1'd0))) begin
-                ap_NS_fsm = ap_ST_fsm_state14;
-            end else if (((1'b0 == ap_block_state6_io) & (1'b1 == ap_CS_fsm_state6) & (icmp_ln25_reg_563 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_state7;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state6;
-            end
-        end
-        ap_ST_fsm_state7 : begin
-            ap_NS_fsm = ap_ST_fsm_state8;
-        end
-        ap_ST_fsm_state8 : begin
-            ap_NS_fsm = ap_ST_fsm_state9;
-        end
-        ap_ST_fsm_state9 : begin
-            ap_NS_fsm = ap_ST_fsm_state10;
-        end
-        ap_ST_fsm_state10 : begin
-            ap_NS_fsm = ap_ST_fsm_state11;
-        end
-        ap_ST_fsm_state11 : begin
-            ap_NS_fsm = ap_ST_fsm_state12;
-        end
-        ap_ST_fsm_state12 : begin
-            ap_NS_fsm = ap_ST_fsm_state13;
-        end
-        ap_ST_fsm_state13 : begin
-            ap_NS_fsm = ap_ST_fsm_state14;
-        end
-        ap_ST_fsm_state14 : begin
-            if (((1'b0 == ap_block_state14_on_subcall_done) & (1'b1 == ap_CS_fsm_state14))) begin
-                ap_NS_fsm = ap_ST_fsm_state15;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state14;
-            end
-        end
-        ap_ST_fsm_state15 : begin
-            if (((grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state15))) begin
-                ap_NS_fsm = ap_ST_fsm_state16;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state15;
-            end
-        end
-        ap_ST_fsm_state16 : begin
-            ap_NS_fsm = ap_ST_fsm_state17;
-        end
-        ap_ST_fsm_state17 : begin
-            ap_NS_fsm = ap_ST_fsm_state18;
-        end
-        ap_ST_fsm_state18 : begin
-            ap_NS_fsm = ap_ST_fsm_state19;
-        end
-        ap_ST_fsm_state19 : begin
-            if (((grp_aes_encrypt_block_fu_283_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state19))) begin
-                ap_NS_fsm = ap_ST_fsm_state20;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state19;
-            end
-        end
-        ap_ST_fsm_state20 : begin
-            ap_NS_fsm = ap_ST_fsm_state21;
-        end
-        ap_ST_fsm_state21 : begin
-            if ((~((1'b1 == ap_block_state21_io) | (grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done == 1'b0)) & (1'b1 == ap_CS_fsm_state21) & (ap_phi_mux_icmp_ln25_pr_phi_fu_234_p4 == 1'd0))) begin
-                ap_NS_fsm = ap_ST_fsm_state28;
-            end else if ((~((1'b1 == ap_block_state21_io) | (grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_done == 1'b0)) & (1'b1 == ap_CS_fsm_state21) & (icmp_ln25_pr_reg_230 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_state22;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state21;
-            end
-        end
-        ap_ST_fsm_state22 : begin
-            ap_NS_fsm = ap_ST_fsm_state23;
-        end
-        ap_ST_fsm_state23 : begin
-            if (((grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state23))) begin
-                ap_NS_fsm = ap_ST_fsm_state24;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state23;
-            end
-        end
-        ap_ST_fsm_state24 : begin
-            ap_NS_fsm = ap_ST_fsm_state25;
-        end
-        ap_ST_fsm_state25 : begin
-            ap_NS_fsm = ap_ST_fsm_state26;
-        end
-        ap_ST_fsm_state26 : begin
-            ap_NS_fsm = ap_ST_fsm_state27;
-        end
-        ap_ST_fsm_state27 : begin
-            ap_NS_fsm = ap_ST_fsm_state28;
-        end
-        ap_ST_fsm_state28 : begin
-            if ((~((gmem_BVALID == 1'b0) & (icmp_ln25_pr_reg_230 == 1'd1)) & (1'b1 == ap_CS_fsm_state28))) begin
-                ap_NS_fsm = ap_ST_fsm_state5;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state28;
             end
         end
         default : begin
@@ -1829,45 +933,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln23_fu_469_p2 = (indvars_iv6_fu_138 + 64'd16);
-
-assign add_ln24_1_fu_408_p2 = (i_fu_134 + ciphertext_read_reg_499);
-
-assign add_ln24_2_fu_378_p2 = (i_fu_134 + plaintext_read_reg_504);
-
-assign add_ln24_3_fu_359_p2 = (trunc_ln24_fu_344_p1 + xor_ln24_reg_540);
-
-assign add_ln24_fu_348_p2 = (i_fu_134 + xor_ln23_reg_535);
-
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
-
-assign ap_CS_fsm_state13 = ap_CS_fsm[32'd12];
-
-assign ap_CS_fsm_state14 = ap_CS_fsm[32'd13];
-
-assign ap_CS_fsm_state15 = ap_CS_fsm[32'd14];
-
-assign ap_CS_fsm_state16 = ap_CS_fsm[32'd15];
-
-assign ap_CS_fsm_state17 = ap_CS_fsm[32'd16];
-
-assign ap_CS_fsm_state18 = ap_CS_fsm[32'd17];
-
-assign ap_CS_fsm_state19 = ap_CS_fsm[32'd18];
-
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
-
-assign ap_CS_fsm_state20 = ap_CS_fsm[32'd19];
-
-assign ap_CS_fsm_state21 = ap_CS_fsm[32'd20];
-
-assign ap_CS_fsm_state22 = ap_CS_fsm[32'd21];
-
-assign ap_CS_fsm_state23 = ap_CS_fsm[32'd22];
-
-assign ap_CS_fsm_state28 = ap_CS_fsm[32'd27];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
@@ -1877,76 +945,20 @@ assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
 assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
 
-assign ap_NS_fsm_state13 = ap_NS_fsm[32'd12];
-
-assign ap_NS_fsm_state22 = ap_NS_fsm[32'd21];
-
 always @ (*) begin
-    ap_block_state14_on_subcall_done = ((grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_done == 1'b0) & (icmp_ln25_reg_563 == 1'd1));
+    ap_block_state2_on_subcall_done = ((grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_done == 1'b0) | (grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_done == 1'b0));
 end
-
-always @ (*) begin
-    ap_block_state21_io = ((gmem_AWREADY == 1'b0) & (icmp_ln25_pr_reg_230 == 1'd1));
-end
-
-always @ (*) begin
-    ap_block_state28 = ((gmem_BVALID == 1'b0) & (icmp_ln25_pr_reg_230 == 1'd1));
-end
-
-always @ (*) begin
-    ap_block_state2_on_subcall_done = ((grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_done == 1'b0) | (grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_done == 1'b0));
-end
-
-always @ (*) begin
-    ap_block_state6_io = ((gmem_ARREADY == 1'b0) & (icmp_ln25_reg_563 == 1'd1));
-end
-
-assign ap_phi_mux_icmp_ln25_pr_phi_fu_234_p4 = icmp_ln25_pr_reg_230;
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign grp_aes_encrypt_block_fu_283_ap_start = grp_aes_encrypt_block_fu_283_ap_start_reg;
+assign grp_aes_generate_round_keys_fu_126_ap_start = grp_aes_generate_round_keys_fu_126_ap_start_reg;
 
-assign grp_aes_generate_round_keys_fu_258_ap_start = grp_aes_generate_round_keys_fu_258_ap_start_reg;
+assign grp_ctr_encrypt_fu_136_ap_start = grp_ctr_encrypt_fu_136_ap_start_reg;
 
-assign grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start = grp_pynqrypt_encrypt_Pipeline_1_fu_242_ap_start_reg;
+assign grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start = grp_pynqrypt_encrypt_Pipeline_1_fu_110_ap_start_reg;
 
-assign grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start = grp_pynqrypt_encrypt_Pipeline_2_fu_250_ap_start_reg;
-
-assign grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start = grp_pynqrypt_encrypt_Pipeline_3_fu_268_ap_start_reg;
-
-assign grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start = grp_pynqrypt_encrypt_Pipeline_4_fu_277_ap_start_reg;
-
-assign grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start = grp_pynqrypt_encrypt_Pipeline_6_fu_298_ap_start_reg;
-
-assign grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start = grp_pynqrypt_encrypt_Pipeline_loop_ctr_xor_block_fu_291_ap_start_reg;
-
-assign i_5_fu_464_p2 = (i_fu_134 + 64'd16);
-
-assign icmp_ln23_1_fu_339_p2 = ((i_fu_134 < plaintext_length_read_reg_509) ? 1'b1 : 1'b0);
-
-assign icmp_ln23_fu_388_p2 = ((indvars_iv6_fu_138 > 64'd18446744073709551599) ? 1'b1 : 1'b0);
-
-assign icmp_ln24_fu_353_p2 = ((add_ln24_fu_348_p2 > 64'd18446744073709551599) ? 1'b1 : 1'b0);
-
-assign icmp_ln25_fu_383_p2 = ((i_fu_134 != plaintext_length_read_reg_509) ? 1'b1 : 1'b0);
-
-assign select_ln23_fu_400_p3 = ((icmp_ln23_fu_388_p2[0:0] == 1'b1) ? xor_ln23_1_fu_394_p2 : 64'd16);
-
-assign select_ln24_fu_370_p3 = ((icmp_ln24_fu_353_p2[0:0] == 1'b1) ? xor_ln24_1_fu_364_p2 : 32'd16);
-
-assign trunc_ln23_fu_315_p1 = plaintext_length[31:0];
-
-assign trunc_ln24_fu_344_p1 = i_fu_134[31:0];
-
-assign xor_ln23_1_fu_394_p2 = (indvars_iv6_fu_138 ^ 64'd18446744073709551615);
-
-assign xor_ln23_fu_319_p2 = (plaintext_length ^ 64'd18446744073709551615);
-
-assign xor_ln24_1_fu_364_p2 = (32'd4294967295 ^ add_ln24_3_fu_359_p2);
-
-assign xor_ln24_fu_325_p2 = (trunc_ln23_fu_315_p1 ^ 32'd4294967295);
+assign grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start = grp_pynqrypt_encrypt_Pipeline_2_fu_118_ap_start_reg;
 
 endmodule //pynqrypt_encrypt

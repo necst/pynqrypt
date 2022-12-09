@@ -130,10 +130,10 @@ load-store-loop4.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipelin
 
 <Node id="11" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-load-store-loop4.i:2 %exitcond97 = icmp_eq  i5 %loop_index5_i_load, i5 16
+load-store-loop4.i:2 %exitcond13 = icmp_eq  i5 %loop_index5_i_load, i5 16
 
 ]]></Node>
-<StgValue><ssdm name="exitcond97"/></StgValue>
+<StgValue><ssdm name="exitcond13"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -160,10 +160,10 @@ load-store-loop4.i:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount,
 
 <Node id="13" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-load-store-loop4.i:4 %empty_29 = add i5 %loop_index5_i_load, i5 1
+load-store-loop4.i:4 %empty_26 = add i5 %loop_index5_i_load, i5 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_29"/></StgValue>
+<StgValue><ssdm name="empty_26"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -175,7 +175,7 @@ load-store-loop4.i:4 %empty_29 = add i5 %loop_index5_i_load, i5 1
 
 <Node id="14" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-load-store-loop4.i:5 %br_ln0 = br i1 %exitcond97, void %load-store-loop4.i.split, void %load-store-loop.i.preheader.exitStub
+load-store-loop4.i:5 %br_ln0 = br i1 %exitcond13, void %load-store-loop4.i.split, void %load-store-loop.i.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -185,7 +185,7 @@ load-store-loop4.i:5 %br_ln0 = br i1 %exitcond97, void %load-store-loop4.i.split
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond97" val="0"/>
+<or_exp><and_exp><literal name="exitcond13" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -201,7 +201,7 @@ load-store-loop4.i.split:0 %loop_index5_i_cast = zext i5 %loop_index5_i_load
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond97" val="0"/>
+<or_exp><and_exp><literal name="exitcond13" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -217,7 +217,7 @@ load-store-loop4.i.split:1 %key_addr = getelementptr i8 %key, i64 0, i64 %loop_i
 <core>RAM_1P</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond97" val="0"/>
+<or_exp><and_exp><literal name="exitcond13" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -233,13 +233,13 @@ load-store-loop4.i.split:2 %key_load = load i4 %key_addr
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond97" val="0"/>
+<or_exp><and_exp><literal name="exitcond13" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="21" bw="0" op_0_bw="5" op_1_bw="5" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-load-store-loop4.i.split:5 %store_ln0 = store i5 %empty_29, i5 %loop_index5_i
+load-store-loop4.i.split:5 %store_ln0 = store i5 %empty_26, i5 %loop_index5_i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -249,7 +249,7 @@ load-store-loop4.i.split:5 %store_ln0 = store i5 %empty_29, i5 %loop_index5_i
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond97" val="1"/>
+<or_exp><and_exp><literal name="exitcond13" val="1"/>
 </and_exp></or_exp>
 </condition>
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_encrypt_block'" level="0">
-<item name = "Date">Fri Dec  9 00:07:20 2022
+<item name = "Date">Fri Dec  9 00:45:34 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -52,7 +52,7 @@
 <column name="Expression">-, -, 0, 144, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">1, -, 453, 1503, -</column>
-<column name="Memory">0, -, 16, 2, 0</column>
+<column name="Memory">1, -, 16, 2, 0</column>
 <column name="Multiplexer">-, -, -, 971, -</column>
 <column name="Register">-, -, 152, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
@@ -73,6 +73,7 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="crypto_aes_sbox_U">aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
 <column name="temp_U">aes_encrypt_block_temp_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
 </table>
 </item>
@@ -84,22 +85,22 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="grp_fu_902_p2">xor, 0, 0, 8, 8, 8</column>
 <column name="grp_fu_909_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_10_fu_990_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_11_fu_996_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_12_fu_1002_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_13_fu_1008_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_14_fu_1015_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_15_fu_1022_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_1_fu_934_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_2_fu_941_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_3_fu_948_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_4_fu_954_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_5_fu_960_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_6_fu_966_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_7_fu_972_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_8_fu_978_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_9_fu_984_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln233_fu_928_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_10_fu_990_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_11_fu_996_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_12_fu_1002_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_13_fu_1008_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_14_fu_1015_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_15_fu_1022_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_1_fu_934_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_2_fu_941_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_3_fu_948_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_4_fu_954_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_5_fu_960_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_6_fu_966_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_7_fu_972_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_8_fu_978_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_9_fu_984_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln238_fu_928_p2">xor, 0, 0, 8, 8, 8</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -143,7 +144,7 @@
 <column name="state_load_7_reg_1324">8, 0, 8, 0</column>
 <column name="state_load_8_reg_1329">8, 0, 8, 0</column>
 <column name="state_load_9_reg_1346">8, 0, 8, 0</column>
-<column name="xor_ln233_reg_1400">8, 0, 8, 0</column>
+<column name="xor_ln238_reg_1400">8, 0, 8, 0</column>
 </table>
 </item>
 </section>
@@ -175,12 +176,6 @@
 <column name="state_we1">out, 1, ap_memory, state, array</column>
 <column name="state_d1">out, 8, ap_memory, state, array</column>
 <column name="state_q1">in, 8, ap_memory, state, array</column>
-<column name="crypto_aes_sbox_address0">out, 8, ap_memory, crypto_aes_sbox, array</column>
-<column name="crypto_aes_sbox_ce0">out, 1, ap_memory, crypto_aes_sbox, array</column>
-<column name="crypto_aes_sbox_q0">in, 8, ap_memory, crypto_aes_sbox, array</column>
-<column name="crypto_aes_sbox_address1">out, 8, ap_memory, crypto_aes_sbox, array</column>
-<column name="crypto_aes_sbox_ce1">out, 1, ap_memory, crypto_aes_sbox, array</column>
-<column name="crypto_aes_sbox_q1">in, 8, ap_memory, crypto_aes_sbox, array</column>
 </table>
 </item>
 </section>

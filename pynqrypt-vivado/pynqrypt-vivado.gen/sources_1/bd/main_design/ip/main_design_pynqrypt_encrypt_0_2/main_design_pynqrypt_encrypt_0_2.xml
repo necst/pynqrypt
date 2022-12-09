@@ -153,7 +153,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_CONTROL.ADDR_WIDTH">6</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_CONTROL.ADDR_WIDTH">7</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>DATA_WIDTH</spirit:name>
@@ -1484,10 +1484,56 @@
           </spirit:field>
         </spirit:register>
         <spirit:register>
+          <spirit:name>plaintext_length_1</spirit:name>
+          <spirit:displayName>plaintext_length_1</spirit:displayName>
+          <spirit:description>Data signal of plaintext_length</spirit:description>
+          <spirit:addressOffset>48</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>plaintext_length</spirit:name>
+            <spirit:description>Bit 31 to 0 of plaintext_length</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>plaintext_length_2</spirit:name>
+          <spirit:displayName>plaintext_length_2</spirit:displayName>
+          <spirit:description>Data signal of plaintext_length</spirit:description>
+          <spirit:addressOffset>52</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>plaintext_length</spirit:name>
+            <spirit:description>Bit 63 to 32 of plaintext_length</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
           <spirit:name>plaintext_1</spirit:name>
           <spirit:displayName>plaintext_1</spirit:displayName>
           <spirit:description>Data signal of plaintext</spirit:description>
-          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:addressOffset>60</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1510,7 +1556,7 @@
           <spirit:name>plaintext_2</spirit:name>
           <spirit:displayName>plaintext_2</spirit:displayName>
           <spirit:description>Data signal of plaintext</spirit:description>
-          <spirit:addressOffset>20</spirit:addressOffset>
+          <spirit:addressOffset>64</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1533,7 +1579,7 @@
           <spirit:name>ciphertext_1</spirit:name>
           <spirit:displayName>ciphertext_1</spirit:displayName>
           <spirit:description>Data signal of ciphertext</spirit:description>
-          <spirit:addressOffset>28</spirit:addressOffset>
+          <spirit:addressOffset>72</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1556,7 +1602,7 @@
           <spirit:name>ciphertext_2</spirit:name>
           <spirit:displayName>ciphertext_2</spirit:displayName>
           <spirit:description>Data signal of ciphertext</spirit:description>
-          <spirit:addressOffset>32</spirit:addressOffset>
+          <spirit:addressOffset>76</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1575,6 +1621,28 @@
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
+        <spirit:register>
+          <spirit:name>Memory_key</spirit:name>
+          <spirit:displayName>Memory_key</spirit:displayName>
+          <spirit:description>Memory key</spirit:description>
+          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:size spirit:format="long">16</spirit:size>
+          <spirit:access>read-write</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>Memory_nonce</spirit:name>
+          <spirit:displayName>Memory_nonce</spirit:displayName>
+          <spirit:description>Memory nonce</spirit:description>
+          <spirit:addressOffset>32</spirit:addressOffset>
+          <spirit:size spirit:format="long">16</spirit:size>
+          <spirit:access>read-write</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
       </spirit:addressBlock>
     </spirit:memoryMap>
   </spirit:memoryMaps>
@@ -1592,11 +1660,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 00:03:03 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 08 23:48:53 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bf1bca07</spirit:value>
+            <spirit:value>9:4c0282e1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1607,7 +1675,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bf1bca07</spirit:value>
+            <spirit:value>9:4c0282e1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1623,11 +1691,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 00:03:03 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 08 23:48:53 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bf1bca07</spirit:value>
+            <spirit:value>9:4c0282e1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1643,11 +1711,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 00:03:03 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 08 23:48:53 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b7123eda</spirit:value>
+            <spirit:value>9:5ad16bb2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1663,11 +1731,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 00:03:03 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 08 23:48:53 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b7123eda</spirit:value>
+            <spirit:value>9:5ad16bb2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1681,11 +1749,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 00:03:03 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 08 23:48:53 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bf1bca07</spirit:value>
+            <spirit:value>9:4c0282e1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1699,11 +1767,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 00:04:08 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 08 23:54:18 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bf1bca07</spirit:value>
+            <spirit:value>9:4c0282e1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1714,7 +1782,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1860,7 +1928,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2794,7 +2862,7 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>C_S_AXI_CONTROL_ADDR_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH">6</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH">7</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_CONTROL_DATA_WIDTH</spirit:name>
@@ -2915,67 +2983,355 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.dat</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb.dat</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_nonce_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_control_s_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_control_s_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_4.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_5.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_8.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_9.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_10.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_13.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_14.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_16.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_17.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_18.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_20.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_21.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_22.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_24.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_25.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_26.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_28.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_29.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_30.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_32.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_33.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_34.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_36.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_37.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_38.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_40.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_41.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_42.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_44.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_45.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_46.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_48.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_49.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_50.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_52.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_53.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_54.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_56.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_57.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_58.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_60.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_61.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_62.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_64.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block4.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block5.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block7.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block8.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block9.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block10.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block11.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block13.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block14.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block15.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2990,79 +3346,439 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.dat</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb.dat</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_nonce_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_control_s_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R.dat</spirit:name>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a392/hdl/verilog/pynqrypt_encrypt.v</spirit:name>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_control_s_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_4.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_5.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_8.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_9.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_10.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_13.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_14.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_16.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_17.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_18.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_20.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_21.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_22.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_24.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_25.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_26.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_28.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_29.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_30.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_32.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_33.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_34.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_36.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_37.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_38.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_40.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_41.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_42.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_44.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_45.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_46.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_48.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_49.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_50.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_52.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_53.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_54.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_56.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_57.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_58.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_60.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_61.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_62.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_64.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block4.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block5.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block7.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block8.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block9.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block10.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block11.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block13.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block14.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block15.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/86a9/hdl/verilog/pynqrypt_encrypt.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3297,7 +4013,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="17">342028</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="17">undef</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -3322,7 +4038,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Pynqrypt_encrypt</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112801972</xilinx:coreRevision>
+      <xilinx:coreRevision>2112804887</xilinx:coreRevision>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -3406,13 +4122,13 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="8d16b310"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2fd0c0cb"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="2c1df7e3"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="7a619a5f"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="80b7c2a7"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="bbb23a4e"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="312b7b30"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b4d3c45d"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="52fd8b96"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="49ff2859"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="07a9111f"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2e845cac"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="40eebeb5"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

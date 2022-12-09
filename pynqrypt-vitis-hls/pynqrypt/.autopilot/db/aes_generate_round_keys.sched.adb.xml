@@ -106,10 +106,10 @@ entry:1 %call_ln0 = call void @aes_generate_round_keys_Pipeline_loop_generate_ro
 
 <Node id="7" bw="0">
 <![CDATA[
-entry:2 %ret_ln225 = ret
+entry:2 %ret_ln230 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln225"/></StgValue>
+<StgValue><ssdm name="ret_ln230"/></StgValue>
 </operation>
 </state>
 </state_list>

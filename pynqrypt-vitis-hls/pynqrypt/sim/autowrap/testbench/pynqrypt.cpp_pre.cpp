@@ -24479,6 +24479,9 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_atom *plaintext, aes_ato
     aes_atom block[16];
 
     loop_ctr_encrypt: for (size_t i = 0; i < plaintext_length; i += 16) {
+#pragma HLS DEPENDENCE variable=block_nonce type=inter false
+#pragma HLS DEPENDENCE variable=block type=inter false
+#pragma HLS UNROLL factor=16
         size_t block_size = ((plaintext_length - i > (size_t)16) ? ((size_t)16) : (plaintext_length - i));
         memcpy(block, &plaintext[i], block_size);
         ctr_compute_nonce(block_nonce, offset + i / 16);
@@ -24490,6 +24493,7 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_atom *plaintext, aes_ato
 
 void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
 {
+#pragma HLS INLINE
     memcpy(block_nonce, nonce, NONCE_SIZE);
 
     block_nonce[12] = (offset >> 24) & 0xFF;
@@ -24500,6 +24504,7 @@ void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
 
 void Pynqrypt::ctr_xor_block(aes_atom *block, size_t block_size, aes_atom block_nonce[16])
 {
+#pragma HLS INLINE
     loop_ctr_xor_block: for (size_t i = 0; i < block_size; i++)
         block[i] ^= block_nonce[i];
 }

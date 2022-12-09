@@ -54,20 +54,91 @@ vcom -work xpm -93  \
 "/xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ee60/hdl" "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_2/drivers/pynqrypt_encrypt_v1_0/src" "+incdir+/xilinx/Vivado/2022.2/data/xilinx_vip/include" \
-"../../../bd/main_design/sim/main_design.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_pynqrypt_round_keys_ROM_AUTbkb.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_nonce_RAM_AUTO_1R1W.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_block_RAM_AUTO_1R1W.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_control_s_axi.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_ROM_AUTO_1R.v" \
-"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/a392/hdl/verilog/pynqrypt_encrypt.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_2.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_ROM_AUTO_1R.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_temp_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_1.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_rcon_ROMcud.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_generate_round_keys_crypto_aes_sbox_ROMbkb.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_control_s_axi.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_block_nonce_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_1.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_2.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_4.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_5.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_6.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_8.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_9.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_10.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_12.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_13.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_14.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_16.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_17.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_18.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_20.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_21.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_22.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_24.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_25.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_26.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_28.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_29.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_30.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_32.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_33.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_34.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_36.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_37.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_38.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_40.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_41.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_42.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_44.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_45.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_46.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_48.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_49.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_50.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_52.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_53.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_54.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_56.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_57.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_58.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_60.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_61.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_62.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_64.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block1.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block2.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block3.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block4.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block5.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block6.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block7.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block8.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block9.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block10.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block11.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block12.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block13.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block14.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_ctr_encrypt_Pipeline_loop_ctr_xor_block15.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_1.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_2.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_key_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_nonce_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt_pynqrypt_round_keys_RAM_AUTO_1R1W.v" \
+"../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/86a9/hdl/verilog/pynqrypt_encrypt.v" \
 "../../../bd/main_design/ip/main_design_pynqrypt_encrypt_0_2/sim/main_design_pynqrypt_encrypt_0_2.v" \
 
 vlog -work axi_infrastructure_v1_1_0  -v2k5 "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ee60/hdl" "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_2/drivers/pynqrypt_encrypt_v1_0/src" "+incdir+/xilinx/Vivado/2022.2/data/xilinx_vip/include" \
@@ -127,6 +198,7 @@ vlog -work axi_dwidth_converter_v2_1_27  -v2k5 "+incdir+../../../../pynqrypt-viv
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ec67/hdl" "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/ee60/hdl" "+incdir+../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_2/drivers/pynqrypt_encrypt_v1_0/src" "+incdir+/xilinx/Vivado/2022.2/data/xilinx_vip/include" \
 "../../../bd/main_design/ip/main_design_auto_us_0/sim/main_design_auto_us_0.v" \
+"../../../bd/main_design/sim/main_design.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

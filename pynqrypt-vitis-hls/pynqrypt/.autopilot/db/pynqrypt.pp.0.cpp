@@ -24405,7 +24405,10 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_atom *plaintext, aes_ato
     aes_atom block[16];
 
     loop_ctr_encrypt: for (size_t i = 0; i < plaintext_length; i += 16) {
-        size_t block_size = ((plaintext_length - i > (size_t)16) ? ((size_t)16) : (plaintext_length - i));
+#pragma HLS DEPENDENCE variable=block_nonce type=inter false
+#pragma HLS DEPENDENCE variable=block type=inter false
+#pragma HLS UNROLL factor=16
+ size_t block_size = ((plaintext_length - i > (size_t)16) ? ((size_t)16) : (plaintext_length - i));
         memcpy(block, &plaintext[i], block_size);
         ctr_compute_nonce(block_nonce, offset + i / 16);
         aes_encrypt_block(block_nonce);
@@ -24416,7 +24419,8 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_atom *plaintext, aes_ato
 
 void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
 {
-    memcpy(block_nonce, nonce, NONCE_SIZE);
+#pragma HLS INLINE
+ memcpy(block_nonce, nonce, NONCE_SIZE);
 
     block_nonce[12] = (offset >> 24) & 0xFF;
     block_nonce[13] = (offset >> 16) & 0xFF;
@@ -24426,7 +24430,8 @@ void Pynqrypt::ctr_compute_nonce(aes_atom block_nonce[16], off64_t offset)
 
 void Pynqrypt::ctr_xor_block(aes_atom *block, size_t block_size, aes_atom block_nonce[16])
 {
-    loop_ctr_xor_block: for (size_t i = 0; i < block_size; i++)
+#pragma HLS INLINE
+ loop_ctr_xor_block: for (size_t i = 0; i < block_size; i++)
         block[i] ^= block_nonce[i];
 }
 
@@ -24451,7 +24456,7 @@ void Pynqrypt::aes_sub_bytes(aes_atom state[BLOCK_SIZE])
 {
 #pragma HLS INLINE
 
- VITIS_LOOP_70_1: for (int i = 0; i < BLOCK_SIZE; i++)
+ VITIS_LOOP_75_1: for (int i = 0; i < BLOCK_SIZE; i++)
 #pragma HLS UNROLL
  state[i] = aes_sbox[state[i]];
 }
@@ -24487,7 +24492,7 @@ void Pynqrypt::aes_mix_columns(aes_atom state[BLOCK_SIZE])
 
  aes_atom tmp1, tmp2, tmp3;
 
-    VITIS_LOOP_106_1: for (int i = 0; i < 4; i++) {
+    VITIS_LOOP_111_1: for (int i = 0; i < 4; i++) {
 #pragma HLS UNROLL
  tmp3 = state[(i * 4)];
         tmp1 = state[(i * 4)] ^ state[(i * 4) + 1] ^ state[(i * 4) + 2] ^ state[(i * 4) + 3] ;
@@ -24514,7 +24519,7 @@ void Pynqrypt::aes_decrypt_block(aes_atom state[BLOCK_SIZE])
 {
     aes_add_round_key(state, NUM_ROUNDS);
 
-    VITIS_LOOP_133_1: for (int i = NUM_ROUNDS - 1; i > 0; i--) {
+    VITIS_LOOP_138_1: for (int i = NUM_ROUNDS - 1; i > 0; i--) {
         aes_inv_shift_rows(state);
         aes_inv_sub_bytes(state);
         aes_add_round_key(state, i);
@@ -24528,7 +24533,7 @@ void Pynqrypt::aes_decrypt_block(aes_atom state[BLOCK_SIZE])
 
 void Pynqrypt::aes_inv_sub_bytes(aes_atom state[BLOCK_SIZE])
 {
-    VITIS_LOOP_147_1: for (int i = 0; i < BLOCK_SIZE; i++)
+    VITIS_LOOP_152_1: for (int i = 0; i < BLOCK_SIZE; i++)
         state[i] = aes_inv_sbox[state[i]];
 }
 
@@ -24559,7 +24564,7 @@ void Pynqrypt::aes_inv_mix_columns(aes_atom state[BLOCK_SIZE])
 {
     aes_atom tmp1, tmp2, tmp3, tmp4;
 
-    VITIS_LOOP_178_1: for (int i = 0; i < 4; i++) {
+    VITIS_LOOP_183_1: for (int i = 0; i < 4; i++) {
         tmp1 = state[(i * 4)];
         tmp2 = state[(i * 4) + 1];
         tmp3 = state[(i * 4) + 2];
@@ -24612,7 +24617,7 @@ void Pynqrypt::aes_add_round_key(aes_atom state[BLOCK_SIZE], off_t round_key_ind
 {
 #pragma HLS INLINE
 
- VITIS_LOOP_231_1: for (int i = 0; i < BLOCK_SIZE; i++)
+ VITIS_LOOP_236_1: for (int i = 0; i < BLOCK_SIZE; i++)
 #pragma HLS UNROLL
  state[i] ^= round_keys[round_key_index][i];
 }
@@ -24646,7 +24651,7 @@ void Pynqrypt::aes_rotate_word(aes_word &word)
 void Pynqrypt::aes_sub_word(aes_word &word)
 {
     auto atoms = static_cast<aes_atom*>(static_cast<void*>(&word));
-    VITIS_LOOP_265_1: for (int i = 0; i < 4; i++)
+    VITIS_LOOP_270_1: for (int i = 0; i < 4; i++)
         atoms[i] = aes_sbox[atoms[i]];
 }
 
@@ -24663,6 +24668,6 @@ void Pynqrypt::aes_xor_words(const aes_word word1, const aes_word word2, aes_wor
     auto atoms2 = static_cast<const aes_atom*>(static_cast<const void*>(&word2));
     auto atoms_result = static_cast<aes_atom*>(static_cast<void*>(&result));
 
-    VITIS_LOOP_282_1: for (int i = 0; i < 4; i++)
+    VITIS_LOOP_287_1: for (int i = 0; i < 4; i++)
         atoms_result[i] = atoms1[i] ^ atoms2[i];
 }
