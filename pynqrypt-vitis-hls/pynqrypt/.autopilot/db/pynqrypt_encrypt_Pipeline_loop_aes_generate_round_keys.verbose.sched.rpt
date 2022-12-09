@@ -1,0 +1,259 @@
+
+
+================================================================
+== Vitis HLS Report for 'pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys'
+================================================================
+* Date:           Fri Dec  9 23:28:06 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        pynqrypt-vitis-hls
+* Solution:       pynqrypt (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020i-clg400-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.508 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       82|       82|  0.820 us|  0.820 us|   82|   82|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name           |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_aes_generate_round_keys  |       80|       80|         8|          8|          1|    10|       yes|
+        +--------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 8, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 8, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.07>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 11 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln0 = store i6 4, i6 %i"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i.i"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_1 = load i6 %i" [hw-impl/src/pynqrypt.cpp:143]   --->   Operation 14 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 15 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.42ns)   --->   "%icmp_ln142 = icmp_ult  i6 %i_1, i6 44" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 16 'icmp' 'icmp_ln142' <Predicate = true> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 17 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln142 = br i1 %icmp_ln142, void %for.inc92.i.i.preheader.exitStub, void %for.inc.i.i.split" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 18 'br' 'br_ln142' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.82ns)   --->   "%add_ln143 = add i6 %i_1, i6 63" [hw-impl/src/pynqrypt.cpp:143]   --->   Operation 19 'add' 'add_ln143' <Predicate = (icmp_ln142)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln143 = zext i6 %add_ln143" [hw-impl/src/pynqrypt.cpp:143]   --->   Operation 20 'zext' 'zext_ln143' <Predicate = (icmp_ln142)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_round_key_V_addr = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln143" [hw-impl/src/pynqrypt.cpp:143]   --->   Operation 21 'getelementptr' 'p_round_key_V_addr' <Predicate = (icmp_ln142)> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (3.25ns)   --->   "%lhs_V_3 = load i6 %p_round_key_V_addr" [hw-impl/src/pynqrypt.cpp:143]   --->   Operation 22 'load' 'lhs_V_3' <Predicate = (icmp_ln142)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %i_1, i32 2, i32 5" [hw-impl/src/pynqrypt.cpp:147]   --->   Operation 23 'partselect' 'trunc_ln1' <Predicate = (icmp_ln142)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.73ns)   --->   "%add_ln147 = add i4 %trunc_ln1, i4 15" [hw-impl/src/pynqrypt.cpp:147]   --->   Operation 24 'add' 'add_ln147' <Predicate = (icmp_ln142)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln628 = zext i4 %add_ln147"   --->   Operation 25 'zext' 'zext_ln628' <Predicate = (icmp_ln142)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%crypto_aes_rcon_V_addr = getelementptr i8 %crypto_aes_rcon_V, i64 0, i64 %zext_ln628"   --->   Operation 26 'getelementptr' 'crypto_aes_rcon_V_addr' <Predicate = (icmp_ln142)> <Delay = 0.00>
+ST_1 : Operation 27 [2/2] (2.32ns)   --->   "%crypto_aes_rcon_V_load = load i4 %crypto_aes_rcon_V_addr"   --->   Operation 27 'load' 'crypto_aes_rcon_V_load' <Predicate = (icmp_ln142)> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 10> <ROM>
+ST_1 : Operation 28 [1/1] (1.82ns)   --->   "%add_ln149 = add i6 %i_1, i6 60" [hw-impl/src/pynqrypt.cpp:149]   --->   Operation 28 'add' 'add_ln149' <Predicate = (icmp_ln142)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln149 = zext i6 %add_ln149" [hw-impl/src/pynqrypt.cpp:149]   --->   Operation 29 'zext' 'zext_ln149' <Predicate = (icmp_ln142)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_1 = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln149" [hw-impl/src/pynqrypt.cpp:149]   --->   Operation 30 'getelementptr' 'p_round_key_V_addr_1' <Predicate = (icmp_ln142)> <Delay = 0.00>
+ST_1 : Operation 31 [2/2] (3.25ns)   --->   "%lhs_V = load i6 %p_round_key_V_addr_1"   --->   Operation 31 'load' 'lhs_V' <Predicate = (icmp_ln142)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 90 'ret' 'ret_ln0' <Predicate = (!icmp_ln142)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.50>
+ST_2 : Operation 32 [1/2] (3.25ns)   --->   "%lhs_V_3 = load i6 %p_round_key_V_addr" [hw-impl/src/pynqrypt.cpp:143]   --->   Operation 32 'load' 'lhs_V_3' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%r_p = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %lhs_V_3, i32 24, i32 31"   --->   Operation 33 'partselect' 'r_p' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln541 = zext i8 %r_p"   --->   Operation 34 'zext' 'zext_ln541' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln541" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 35 'getelementptr' 'crypto_aes_sbox_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 36 'load' 'crypto_aes_sbox_V_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln541 = trunc i32 %lhs_V_3"   --->   Operation 37 'trunc' 'trunc_ln541' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %lhs_V_3, i32 8, i32 15"   --->   Operation 38 'partselect' 'lshr_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%lshr_ln541_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %lhs_V_3, i32 16, i32 23"   --->   Operation 39 'partselect' 'lshr_ln541_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/2] (2.32ns)   --->   "%crypto_aes_rcon_V_load = load i4 %crypto_aes_rcon_V_addr"   --->   Operation 40 'load' 'crypto_aes_rcon_V_load' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 10> <ROM>
+ST_2 : Operation 41 [1/2] (3.25ns)   --->   "%lhs_V = load i6 %p_round_key_V_addr_1"   --->   Operation 41 'load' 'lhs_V' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_2 : Operation 42 [1/1] (1.82ns)   --->   "%add_ln150 = add i6 %i_1, i6 61" [hw-impl/src/pynqrypt.cpp:150]   --->   Operation 42 'add' 'add_ln150' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln150 = zext i6 %add_ln150" [hw-impl/src/pynqrypt.cpp:150]   --->   Operation 43 'zext' 'zext_ln150' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_3 = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln150" [hw-impl/src/pynqrypt.cpp:150]   --->   Operation 44 'getelementptr' 'p_round_key_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [2/2] (3.25ns)   --->   "%lhs_V_1 = load i6 %p_round_key_V_addr_3"   --->   Operation 45 'load' 'lhs_V_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_2 : Operation 46 [1/1] (1.82ns)   --->   "%add_ln151 = add i6 %i_1, i6 62" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 46 'add' 'add_ln151' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln151 = zext i6 %add_ln151" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 47 'zext' 'zext_ln151' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_5 = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln151" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 48 'getelementptr' 'p_round_key_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [2/2] (3.25ns)   --->   "%lhs_V_2 = load i6 %p_round_key_V_addr_5"   --->   Operation 49 'load' 'lhs_V_2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 50 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 50 'load' 'crypto_aes_sbox_V_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln541_1 = zext i8 %trunc_ln541"   --->   Operation 51 'zext' 'zext_ln541_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr_1 = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln541_1" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 52 'getelementptr' 'crypto_aes_sbox_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load_1 = load i8 %crypto_aes_sbox_V_addr_1" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 53 'load' 'crypto_aes_sbox_V_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 54 [1/2] (3.25ns)   --->   "%lhs_V_1 = load i6 %p_round_key_V_addr_3"   --->   Operation 54 'load' 'lhs_V_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_3 : Operation 55 [1/2] (3.25ns)   --->   "%lhs_V_2 = load i6 %p_round_key_V_addr_5"   --->   Operation 55 'load' 'lhs_V_2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 56 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load_1 = load i8 %crypto_aes_sbox_V_addr_1" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 56 'load' 'crypto_aes_sbox_V_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln541_2 = zext i8 %lshr_ln"   --->   Operation 57 'zext' 'zext_ln541_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr_2 = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln541_2" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 58 'getelementptr' 'crypto_aes_sbox_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load_2 = load i8 %crypto_aes_sbox_V_addr_2" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 59 'load' 'crypto_aes_sbox_V_load_2' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 60 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load_2 = load i8 %crypto_aes_sbox_V_addr_2" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 60 'load' 'crypto_aes_sbox_V_load_2' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln541_3 = zext i8 %lshr_ln541_1"   --->   Operation 61 'zext' 'zext_ln541_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr_3 = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln541_3" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 62 'getelementptr' 'crypto_aes_sbox_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 63 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load_3 = load i8 %crypto_aes_sbox_V_addr_3" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 63 'load' 'crypto_aes_sbox_V_load_3' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 6 <SV = 5> <Delay = 4.24>
+ST_6 : Operation 64 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load_3 = load i8 %crypto_aes_sbox_V_addr_3" [hw-impl/src/pynqrypt.cpp:172]   --->   Operation 64 'load' 'crypto_aes_sbox_V_load_3' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node ret_V_4)   --->   "%xor_ln1499 = xor i8 %crypto_aes_rcon_V_load, i8 %crypto_aes_sbox_V_load_3"   --->   Operation 65 'xor' 'xor_ln1499' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node ret_V_4)   --->   "%p_Result_s = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %xor_ln1499, i8 %crypto_aes_sbox_V_load_2, i8 %crypto_aes_sbox_V_load_1, i8 %crypto_aes_sbox_V_load"   --->   Operation 66 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.99ns) (out node of the LUT)   --->   "%ret_V_4 = xor i32 %lhs_V, i32 %p_Result_s"   --->   Operation 67 'xor' 'ret_V_4' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.24>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%i_cast2 = zext i6 %i_1" [hw-impl/src/pynqrypt.cpp:143]   --->   Operation 68 'zext' 'i_cast2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_2 = getelementptr i32 %p_round_key_V, i64 0, i64 %i_cast2" [hw-impl/src/pynqrypt.cpp:149]   --->   Operation 69 'getelementptr' 'p_round_key_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/1] (3.25ns)   --->   "%store_ln149 = store i32 %ret_V_4, i6 %p_round_key_V_addr_2" [hw-impl/src/pynqrypt.cpp:149]   --->   Operation 70 'store' 'store_ln149' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_7 : Operation 71 [1/1] (0.99ns)   --->   "%ret_V_5 = xor i32 %lhs_V_1, i32 %ret_V_4"   --->   Operation 71 'xor' 'ret_V_5' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 72 [1/1] (0.00ns)   --->   "%or_ln150 = or i6 %i_1, i6 1" [hw-impl/src/pynqrypt.cpp:150]   --->   Operation 72 'or' 'or_ln150' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln150_1 = zext i6 %or_ln150" [hw-impl/src/pynqrypt.cpp:150]   --->   Operation 73 'zext' 'zext_ln150_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 74 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_4 = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln150_1" [hw-impl/src/pynqrypt.cpp:150]   --->   Operation 74 'getelementptr' 'p_round_key_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 75 [1/1] (3.25ns)   --->   "%store_ln150 = store i32 %ret_V_5, i6 %p_round_key_V_addr_4" [hw-impl/src/pynqrypt.cpp:150]   --->   Operation 75 'store' 'store_ln150' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_7 : Operation 76 [1/1] (0.99ns)   --->   "%ret_V_6 = xor i32 %lhs_V_2, i32 %ret_V_5"   --->   Operation 76 'xor' 'ret_V_6' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.24>
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 77 'specloopname' 'specloopname_ln142' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%or_ln151 = or i6 %i_1, i6 2" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 78 'or' 'or_ln151' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln151_1 = zext i6 %or_ln151" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 79 'zext' 'zext_ln151_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_6 = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln151_1" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 80 'getelementptr' 'p_round_key_V_addr_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 81 [1/1] (3.25ns)   --->   "%store_ln151 = store i32 %ret_V_6, i6 %p_round_key_V_addr_6" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 81 'store' 'store_ln151' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_8 : Operation 82 [1/1] (0.99ns)   --->   "%ret_V = xor i32 %lhs_V_3, i32 %ret_V_6"   --->   Operation 82 'xor' 'ret_V' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%or_ln152 = or i6 %i_1, i6 3" [hw-impl/src/pynqrypt.cpp:152]   --->   Operation 83 'or' 'or_ln152' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln152 = zext i6 %or_ln152" [hw-impl/src/pynqrypt.cpp:152]   --->   Operation 84 'zext' 'zext_ln152' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 85 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_7 = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln152" [hw-impl/src/pynqrypt.cpp:152]   --->   Operation 85 'getelementptr' 'p_round_key_V_addr_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 86 [1/1] (3.25ns)   --->   "%store_ln152 = store i32 %ret_V, i6 %p_round_key_V_addr_7" [hw-impl/src/pynqrypt.cpp:152]   --->   Operation 86 'store' 'store_ln152' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44> <RAM>
+ST_8 : Operation 87 [1/1] (1.82ns)   --->   "%add_ln142 = add i6 %i_1, i6 4" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 87 'add' 'add_ln142' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 88 [1/1] (1.58ns)   --->   "%store_ln142 = store i6 %add_ln142, i6 %i" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 88 'store' 'store_ln142' <Predicate = true> <Delay = 1.58>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln142 = br void %for.inc.i.i" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 89 'br' 'br_ln142' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 5.08ns
+The critical path consists of the following:
+	'alloca' operation ('i') [4]  (0 ns)
+	'load' operation ('i', hw-impl/src/pynqrypt.cpp:143) on local variable 'i' [8]  (0 ns)
+	'add' operation ('add_ln143', hw-impl/src/pynqrypt.cpp:143) [16]  (1.83 ns)
+	'getelementptr' operation ('p_round_key_V_addr', hw-impl/src/pynqrypt.cpp:143) [18]  (0 ns)
+	'load' operation ('lhs.V', hw-impl/src/pynqrypt.cpp:143) on array 'p_round_key_V' [19]  (3.25 ns)
+
+ <State 2>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('lhs.V', hw-impl/src/pynqrypt.cpp:143) on array 'p_round_key_V' [19]  (3.25 ns)
+	'getelementptr' operation ('crypto_aes_sbox_V_addr', hw-impl/src/pynqrypt.cpp:172) [22]  (0 ns)
+	'load' operation ('crypto_aes_sbox_V_load', hw-impl/src/pynqrypt.cpp:172) on array 'crypto_aes_sbox_V' [23]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('crypto_aes_sbox_V_load', hw-impl/src/pynqrypt.cpp:172) on array 'crypto_aes_sbox_V' [23]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('crypto_aes_sbox_V_load_1', hw-impl/src/pynqrypt.cpp:172) on array 'crypto_aes_sbox_V' [27]  (3.25 ns)
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('crypto_aes_sbox_V_load_2', hw-impl/src/pynqrypt.cpp:172) on array 'crypto_aes_sbox_V' [31]  (3.25 ns)
+
+ <State 6>: 4.25ns
+The critical path consists of the following:
+	'load' operation ('crypto_aes_sbox_V_load_3', hw-impl/src/pynqrypt.cpp:172) on array 'crypto_aes_sbox_V' [35]  (3.25 ns)
+	'xor' operation ('xor_ln1499') [41]  (0 ns)
+	'xor' operation ('ret.V') [47]  (0.993 ns)
+
+ <State 7>: 4.25ns
+The critical path consists of the following:
+	'xor' operation ('ret.V') [54]  (0.993 ns)
+	'store' operation ('store_ln150', hw-impl/src/pynqrypt.cpp:150) of variable 'ret.V' on array 'p_round_key_V' [58]  (3.25 ns)
+
+ <State 8>: 4.25ns
+The critical path consists of the following:
+	'xor' operation ('ret.V') [68]  (0.993 ns)
+	'store' operation ('store_ln152', hw-impl/src/pynqrypt.cpp:152) of variable 'ret.V' on array 'p_round_key_V' [72]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

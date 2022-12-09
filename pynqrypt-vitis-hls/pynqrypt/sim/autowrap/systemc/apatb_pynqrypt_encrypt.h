@@ -5,8 +5,8 @@
 // ==============================================================
 
 extern "C" void AESL_WRAP_pynqrypt_encrypt (
-volatile void* key,
-volatile void* nonce,
+__cosim_s16__ key,
+__cosim_s12__ nonce,
 long long plaintext_length,
 volatile void* plaintext,
 volatile void* ciphertext);
