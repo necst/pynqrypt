@@ -6,8 +6,8 @@
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/mrindeciso\/Documents\/pynqrypt\/pynqrypt-vitis-hls\/pynqrypt\/csynth.tcl",
-          "sourceLine": "22",
+          "sourceFile": "\/home\/mrindeciso\/Documents\/pynqrypt\/pynqrypt-vitis-hls\/pynqrypt\/directives.tcl",
+          "sourceLine": "6",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -22,7 +22,7 @@
           "functionLabel": "",
           "id": "2",
           "sourceFile": "\/home\/mrindeciso\/Documents\/pynqrypt\/pynqrypt-vitis-hls\/pynqrypt\/csynth.tcl",
-          "sourceLine": "22",
+          "sourceLine": "23",
           "pragma": {
             "name": "TOP",
             "option": [{

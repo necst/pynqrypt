@@ -1,0 +1,49 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>error</string>
+      <key>filename</key>
+      <string>hw-impl/src/pynqrypt.cpp</string>
+      <key>line</key>
+      <integer>19</integer>
+      <key>column</key>
+      <integer>14</integer>
+      <key>message</key>
+      <string>no member named &apos;cout&apos; in namespace &apos;std&apos;</string>
+      <key>ID</key>
+      <integer>2972</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>error</string>
+      <key>filename</key>
+      <string>hw-impl/src/pynqrypt.cpp</string>
+      <key>line</key>
+      <integer>19</integer>
+      <key>column</key>
+      <integer>56</integer>
+      <key>message</key>
+      <string>no member named &apos;hex&apos; in namespace &apos;std&apos;</string>
+      <key>ID</key>
+      <integer>2972</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>error</string>
+      <key>filename</key>
+      <string>hw-impl/src/pynqrypt.cpp</string>
+      <key>line</key>
+      <integer>19</integer>
+      <key>column</key>
+      <integer>85</integer>
+      <key>message</key>
+      <string>no member named &apos;endl&apos; in namespace &apos;std&apos;</string>
+      <key>ID</key>
+      <integer>2972</integer>
+    </dict>
+  </array>
+</dict>
