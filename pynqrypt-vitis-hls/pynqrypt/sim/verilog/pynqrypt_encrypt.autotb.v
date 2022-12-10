@@ -867,6 +867,12 @@ endtask
 `ifndef POST_SYN
 
 `endif
+
+AESL_deadlock_detector deadlock_detector(
+    .dl_reset(AESL_reset),
+    .all_finish(all_finish),
+    .dl_clock(AESL_clock));
+
 ///////////////////////////////////////////////////////
 // dataflow status monitor
 ///////////////////////////////////////////////////////

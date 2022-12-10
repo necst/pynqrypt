@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309582877</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>128</bitwidth>
@@ -92,7 +92,7 @@
             <Obj>
               <type>0</type>
               <id>6</id>
-              <name>p_read_2</name>
+              <name>p_read_7</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -104,13 +104,13 @@
               </inlineStackInfo>
               <originalName/>
               <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
+              <control>auto</control>
+              <opType>fifo</opType>
+              <implIndex>srl</implIndex>
+              <coreName>FIFO_SRL</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>108</coreId>
+              <coreId>81</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>128</bitwidth>
@@ -126,7 +126,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
+          <m_delay>3.63</m_delay>
           <m_topoIndex>5</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -251,7 +251,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080582000</coreId>
+              <coreId>1869422707</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -471,7 +471,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080665424</coreId>
+              <coreId>90734896</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>128</bitwidth>
@@ -514,7 +514,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3079454336</coreId>
+              <coreId>448</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -560,7 +560,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3079475488</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>128</bitwidth>
@@ -617,7 +617,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081174240</coreId>
+              <coreId>90914176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -676,7 +676,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>608</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -703,7 +703,7 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>tmp_31</name>
+              <name>tmp_2</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -728,14 +728,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_31_fu_178_p4</rtlName>
+              <rtlName>tmp_2_fu_178_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080894832</coreId>
+              <coreId>90733888</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -794,7 +794,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>90545480</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -818,7 +818,7 @@
             <Obj>
               <type>0</type>
               <id>20</id>
-              <name>tmp_32</name>
+              <name>tmp_3</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -843,14 +843,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_32_fu_192_p4</rtlName>
+              <rtlName>tmp_3_fu_192_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>90733888</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -877,7 +877,7 @@
             <Obj>
               <type>0</type>
               <id>21</id>
-              <name>tmp_33</name>
+              <name>tmp_4</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -902,14 +902,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_33_fu_202_p4</rtlName>
+              <rtlName>tmp_4_fu_202_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>90809256</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -936,7 +936,7 @@
             <Obj>
               <type>0</type>
               <id>22</id>
-              <name>tmp_34</name>
+              <name>tmp_5</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -961,14 +961,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_34_fu_212_p4</rtlName>
+              <rtlName>tmp_5_fu_212_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>4223872087</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -995,7 +995,7 @@
             <Obj>
               <type>0</type>
               <id>23</id>
-              <name>tmp_35</name>
+              <name>tmp_6</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1020,14 +1020,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_35_fu_222_p4</rtlName>
+              <rtlName>tmp_6_fu_222_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>90733888</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1054,7 +1054,7 @@
             <Obj>
               <type>0</type>
               <id>24</id>
-              <name>tmp_36</name>
+              <name>tmp_7</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1079,14 +1079,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_36_fu_232_p4</rtlName>
+              <rtlName>tmp_7_fu_232_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>90733888</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1113,7 +1113,7 @@
             <Obj>
               <type>0</type>
               <id>25</id>
-              <name>tmp_37</name>
+              <name>tmp_8</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1138,14 +1138,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_37_fu_242_p4</rtlName>
+              <rtlName>tmp_8_fu_242_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1311215749</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1172,7 +1172,7 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>tmp_38</name>
+              <name>tmp_9</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1197,14 +1197,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_38_fu_252_p4</rtlName>
+              <rtlName>tmp_9_fu_252_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309421333</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1231,7 +1231,7 @@
             <Obj>
               <type>0</type>
               <id>27</id>
-              <name>tmp_39</name>
+              <name>tmp_10</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1256,14 +1256,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_39_fu_262_p4</rtlName>
+              <rtlName>tmp_10_fu_262_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1290,7 +1290,7 @@
             <Obj>
               <type>0</type>
               <id>28</id>
-              <name>tmp_40</name>
+              <name>tmp_11</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1315,14 +1315,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_40_fu_272_p4</rtlName>
+              <rtlName>tmp_11_fu_272_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>90713760</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1349,7 +1349,7 @@
             <Obj>
               <type>0</type>
               <id>29</id>
-              <name>tmp_41</name>
+              <name>tmp_12</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1374,14 +1374,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_41_fu_282_p4</rtlName>
+              <rtlName>tmp_12_fu_282_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>91041416</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1408,7 +1408,7 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>tmp_42</name>
+              <name>tmp_13</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1433,14 +1433,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_42_fu_292_p4</rtlName>
+              <rtlName>tmp_13_fu_292_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>90733888</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1467,7 +1467,7 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>tmp_43</name>
+              <name>tmp_14</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1492,14 +1492,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_43_fu_302_p4</rtlName>
+              <rtlName>tmp_14_fu_302_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309329211</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1558,7 +1558,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080831672</coreId>
+              <coreId>1330007625</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>128</bitwidth>
@@ -1630,7 +1630,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080830800</coreId>
+              <coreId>4224454277</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -1713,7 +1713,7 @@
             <Obj>
               <type>0</type>
               <id>35</id>
-              <name>xor_ln859_1</name>
+              <name>xor_ln859_2</name>
               <fileName>/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>859</lineNumber>
@@ -1738,7 +1738,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>xor_ln859_1_fu_348_p2</rtlName>
+              <rtlName>ap_return</rtlName>
               <control>auto</control>
               <opType>xor</opType>
               <implIndex>auto</implIndex>
@@ -1770,10 +1770,10 @@
             <Obj>
               <type>0</type>
               <id>36</id>
-              <name>_ln62</name>
+              <name>_ln57</name>
               <fileName>hw-impl/src/pynqrypt.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>62</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>aes_encrypt_block</contextFuncName>
               <contextNormFuncName>aes_encrypt_block</contextNormFuncName>
               <inlineStackInfo>
@@ -1789,7 +1789,7 @@
                         <first>hw-impl/src/pynqrypt.cpp</first>
                         <second>aes_encrypt_block</second>
                       </first>
-                      <second>62</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
@@ -1802,7 +1802,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>90490048</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1848,7 +1848,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>544433253</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1879,7 +1879,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>90472208</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1910,7 +1910,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>4226816372</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1941,7 +1941,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>7955819</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1972,7 +1972,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>90733888</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2003,7 +2003,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080632896</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2034,7 +2034,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309631762</coreId>
+              <coreId>91040848</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2065,7 +2065,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309628834</coreId>
+              <coreId>91040848</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2096,7 +2096,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309629650</coreId>
+              <coreId>90487584</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2127,7 +2127,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080987360</coreId>
+              <coreId>90769976</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2158,7 +2158,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309255325</coreId>
+              <coreId>90770784</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2189,7 +2189,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>90544608</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2220,7 +2220,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309517934</coreId>
+              <coreId>91038640</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2251,7 +2251,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080812480</coreId>
+              <coreId>91039752</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2282,7 +2282,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>784</coreId>
+              <coreId>91436960</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2313,7 +2313,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>91434384</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2344,7 +2344,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2375,7 +2375,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2406,7 +2406,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>89202832</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2437,7 +2437,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>480</coreId>
+              <coreId>89202832</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2468,7 +2468,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3080988816</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2499,7 +2499,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2530,7 +2530,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>91050528</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2561,7 +2561,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>480</coreId>
+              <coreId>90735208</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2592,7 +2592,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1633644404</coreId>
+              <coreId>48</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2623,7 +2623,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309604744</coreId>
+              <coreId>608</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2654,7 +2654,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>90631008</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2685,7 +2685,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>91049960</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2716,7 +2716,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1601398113</coreId>
+              <coreId>1819113532</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2747,7 +2747,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081246624</coreId>
+              <coreId>90628304</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2778,7 +2778,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>90628480</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2809,7 +2809,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>480</coreId>
+              <coreId>90630208</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2840,7 +2840,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1700880239</coreId>
+              <coreId>90630968</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2871,7 +2871,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1309421652</coreId>
+              <coreId>90486624</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2902,7 +2902,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3081078432</coreId>
+              <coreId>91049376</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -4048,10 +4048,33 @@
         </item>
       </dp_component_resource>
       <dp_expression_resource>
-        <count>2</count>
+        <count>3</count>
         <item_version>0</item_version>
         <item>
-          <first>xor_ln859_1_fu_348_p2 ( xor ) </first>
+          <first>ap_block_state1 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>ap_return ( xor ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -4132,7 +4155,7 @@
           </second>
         </item>
         <item>
-          <first>ap_return</first>
+          <first>ap_done</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -4142,11 +4165,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>128</second>
+              <second>1</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>256</second>
+              <second>2</second>
             </item>
             <item>
               <first>LUT</first>
@@ -4224,13 +4247,13 @@
           </second>
         </item>
         <item>
-          <first>ap_return_preg</first>
+          <first>ap_done_reg</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>128</second>
+              <second>1</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -4238,7 +4261,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>128</second>
+              <second>1</second>
             </item>
           </second>
         </item>
@@ -4361,7 +4384,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>xor_ln859_1_fu_348_p2 ( xor ) </first>
+          <first>ap_return ( xor ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4907,71 +4930,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_31_fu_178</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>18</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_32_fu_192</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>20</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_33_fu_202</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>21</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_34_fu_212</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>22</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_35_fu_222</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>23</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_36_fu_232</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>24</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_37_fu_242</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>25</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_38_fu_252</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>26</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_39_fu_262</first>
+        <first>tmp_10_fu_262</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4979,7 +4938,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_40_fu_272</first>
+        <first>tmp_11_fu_272</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4987,7 +4946,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_41_fu_282</first>
+        <first>tmp_12_fu_282</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4995,7 +4954,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_42_fu_292</first>
+        <first>tmp_13_fu_292</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5003,11 +4962,75 @@
         </second>
       </item>
       <item>
-        <first>tmp_43_fu_302</first>
+        <first>tmp_14_fu_302</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>31</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_2_fu_178</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>18</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_3_fu_192</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>20</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_4_fu_202</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>21</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_5_fu_212</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>22</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_6_fu_222</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>23</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_7_fu_232</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>24</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_8_fu_242</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>25</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_fu_252</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>26</item>
         </second>
       </item>
       <item>
@@ -5035,7 +5058,7 @@
         </second>
       </item>
       <item>
-        <first>xor_ln859_1_fu_348</first>
+        <first>xor_ln859_2_fu_348</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5077,7 +5100,7 @@
       <count>3</count>
       <item_version>0</item_version>
       <item>
-        <first>p_read_2_read_fu_94</first>
+        <first>p_read_7_read_fu_94</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5337,8 +5360,15 @@
       </item>
     </port2core>
     <node2core>
-      <count>6</count>
+      <count>7</count>
       <item_version>0</item_version>
+      <item>
+        <first>6</first>
+        <second>
+          <first>666</first>
+          <second>10</second>
+        </second>
+      </item>
       <item>
         <first>10</first>
         <second>

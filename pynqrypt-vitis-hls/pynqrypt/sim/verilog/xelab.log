@@ -11,16 +11,34 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/py
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_152_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_152_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_entry_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_entry_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_assign_swap_endianness.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_assign_swap_endianness
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_ctr_compute_nonce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_ctr_compute_nonce
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_encrypt_block.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_encrypt_block
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_ctr_xor_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_ctr_xor_block
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_assign_swap_endianness_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_assign_swap_endianness_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_dataflow_in_loop_loop_ctr_encrypt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_dataflow_in_loop_loop_ctr_encrypt
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_ctr_encrypt.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_ctr_encrypt
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt.v" into library xil_defaultlib
@@ -37,6 +55,18 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/py
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_fifo_w64_d5_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w64_d5_S
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w64_d5_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_fifo_w60_d4_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w60_d4_S
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w60_d4_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_fifo_w128_d3_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w128_d3_S
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w128_d3_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_fifo_w128_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w128_d2_S
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w128_d2_S_ShiftReg
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W.v" into library xil_defaultlib
@@ -70,12 +100,26 @@ Compiling module xil_defaultlib.pynqrypt_encrypt_pynqrypt_encryp...
 Compiling module xil_defaultlib.pynqrypt_encrypt_flow_control_lo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_pynqrypt_encryp...
 Compiling module xil_defaultlib.pynqrypt_encrypt_pynqrypt_encryp...
+Compiling module xil_defaultlib.pynqrypt_encrypt_entry_proc
+Compiling module xil_defaultlib.pynqrypt_encrypt_assign_swap_end...
+Compiling module xil_defaultlib.pynqrypt_encrypt_ctr_compute_non...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
+Compiling module xil_defaultlib.pynqrypt_encrypt_ctr_xor_block
+Compiling module xil_defaultlib.pynqrypt_encrypt_assign_swap_end...
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w64_d5_S_S...
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w64_d5_S
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w60_d4_S_S...
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w60_d4_S
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w128_d3_S_...
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w128_d3_S
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w128_d2_S_...
+Compiling module xil_defaultlib.pynqrypt_encrypt_fifo_w128_d2_S
+Compiling module xil_defaultlib.pynqrypt_encrypt_dataflow_in_loo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_ctr_encrypt
 Compiling module xil_defaultlib.pynqrypt_encrypt_control_s_axi
 Compiling module xil_defaultlib.pynqrypt_encrypt_gmem_m_axi_srl(...
@@ -107,8 +151,18 @@ Compiling module xil_defaultlib.pynqrypt_encrypt_gmem_m_axi(CONS...
 Compiling module xil_defaultlib.pynqrypt_encrypt
 Compiling module xil_defaultlib.AESL_axi_master_gmem
 Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.df_fifo_intf
+Compiling module xil_defaultlib.df_process_intf
 Compiling module xil_defaultlib.nodf_module_intf
-Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=16)
+Compiling module xil_defaultlib.df_loop_intf
 Compiling module xil_defaultlib.upc_loop_intf
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=10)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)

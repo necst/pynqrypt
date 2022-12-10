@@ -61995,21 +61995,16 @@ Pynqrypt::Pynqrypt(aes_block key, aes_nonce nonce)
     aes_generate_round_keys();
 }
 
-void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_block *plaintext, aes_block *ciphertext)
+void Pynqrypt::ctr_encrypt(size_t block_count, aes_block *plaintext, aes_block *ciphertext)
 {
-    loop_ctr_encrypt: for (size_t i = 0; i < (plaintext_length / 16); i++) {
+    loop_ctr_encrypt: for (size_t i = 0; i < block_count; i++) {
+#pragma HLS DATAFLOW
         aes_block block_nonce, block;
-
-
-        assign_swap_endianness(plaintext[i], block);
-
+        aes_block plaintext_block = plaintext[i];
+        assign_swap_endianness(plaintext_block, block);
         ctr_compute_nonce(block_nonce, i);
         aes_encrypt_block(block_nonce);
-
         ctr_xor_block(block, block_nonce);
-
-
-
         assign_swap_endianness(block, ciphertext[i]);
     }
 }

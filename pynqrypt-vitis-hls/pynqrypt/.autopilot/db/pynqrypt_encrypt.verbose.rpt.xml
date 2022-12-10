@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pynqrypt_encrypt'" level="0">
-<item name = "Date">Sat Dec 10 12:09:52 2022
+<item name = "Date">Sat Dec 10 12:35:00 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -31,9 +31,9 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_177">pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys, 82, 82, 0.820 us, 0.820 us, 82, 82, no</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1_fu_186">pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1, 24, 24, 0.240 us, 0.240 us, 24, 24, no</column>
-<column name="grp_ctr_encrypt_fu_192">ctr_encrypt, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_181">pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys, 82, 82, 0.820 us, 0.820 us, 82, 82, no</column>
+<column name="grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_152_1_fu_190">pynqrypt_encrypt_Pipeline_VITIS_LOOP_152_1, 24, 24, 0.240 us, 0.240 us, 24, 24, no</column>
+<column name="grp_ctr_encrypt_fu_196">ctr_encrypt, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,14 +50,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 4, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">4, -, 3787, 6360, -</column>
+<column name="Instance">4, -, 5272, 7214, -</column>
 <column name="Memory">7, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, -, 311, -</column>
-<column name="Register">-, -, 363, -, -</column>
+<column name="Register">-, -, 361, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">3, 0, 3, 12, 0</specialColumn>
+<specialColumn name="Utilization (%)">3, 0, 5, 14, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -65,10 +65,10 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 482, 872, 0</column>
-<column name="grp_ctr_encrypt_fu_192">ctr_encrypt, 4, 0, 2123, 3396, 0</column>
+<column name="grp_ctr_encrypt_fu_196">ctr_encrypt, 4, 0, 3608, 4250, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 819, 1525, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1_fu_186">pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1, 0, 0, 86, 140, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_177">pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys, 0, 0, 277, 427, 0</column>
+<column name="grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_152_1_fu_190">pynqrypt_encrypt_Pipeline_VITIS_LOOP_152_1, 0, 0, 86, 140, 0</column>
+<column name="grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_181">pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys, 0, 0, 277, 427, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -88,6 +88,8 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_sync_grp_ctr_encrypt_fu_196_ap_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_grp_ctr_encrypt_fu_196_ap_ready">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -116,15 +118,17 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">8, 0, 8, 0</column>
-<column name="ciphertext_read_reg_245">64, 0, 64, 0</column>
-<column name="grp_ctr_encrypt_fu_192_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1_fu_186_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_177_ap_start_reg">1, 0, 1, 0</column>
-<column name="nonce_read_reg_260">96, 0, 96, 0</column>
-<column name="plaintext_length_read_reg_255">64, 0, 64, 0</column>
-<column name="plaintext_read_reg_250">64, 0, 64, 0</column>
-<column name="tmp_1_reg_265">32, 0, 32, 0</column>
-<column name="trunc_ln628_reg_270">32, 0, 32, 0</column>
+<column name="ap_sync_reg_grp_ctr_encrypt_fu_196_ap_done">1, 0, 1, 0</column>
+<column name="ap_sync_reg_grp_ctr_encrypt_fu_196_ap_ready">1, 0, 1, 0</column>
+<column name="ciphertext_read_reg_259">64, 0, 64, 0</column>
+<column name="grp_ctr_encrypt_fu_196_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_152_1_fu_190_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_181_ap_start_reg">1, 0, 1, 0</column>
+<column name="nonce_read_reg_269">96, 0, 96, 0</column>
+<column name="plaintext_read_reg_264">64, 0, 64, 0</column>
+<column name="tmp_1_reg_274">32, 0, 32, 0</column>
+<column name="trunc_ln2_reg_284">60, 0, 60, 0</column>
+<column name="trunc_ln628_reg_279">32, 0, 32, 0</column>
 </table>
 </item>
 </section>

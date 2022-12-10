@@ -45,7 +45,7 @@ wire    ap_CS_fsm_pp0_stage1;
 wire    ap_block_state2_pp0_stage1_iter0;
 wire    ap_block_state5_pp0_stage1_iter1;
 wire    ap_block_pp0_stage1_subdone;
-wire   [0:0] icmp_ln66_fu_91_p2;
+wire   [0:0] icmp_ln61_fu_91_p2;
 reg    ap_condition_exit_pp0_iter0_stage1;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -58,7 +58,7 @@ wire   [7:0] crypto_aes_sbox_V_q0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state4_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_11001;
-reg   [0:0] icmp_ln66_reg_200;
+reg   [0:0] icmp_ln61_reg_200;
 wire    ap_block_pp0_stage1_11001;
 reg   [127:0] p_Val2_load_1_reg_204;
 wire   [6:0] shl_ln_fu_110_p3;
@@ -79,7 +79,7 @@ reg   [127:0] p_Val2_s_fu_48;
 reg   [127:0] ap_sig_allocacmp_p_Val2_load_1;
 wire    ap_block_pp0_stage1_01001;
 wire    ap_block_pp0_stage0;
-wire   [3:0] trunc_ln67_fu_106_p1;
+wire   [3:0] trunc_ln62_fu_106_p1;
 wire   [127:0] zext_ln668_1_fu_118_p1;
 wire   [127:0] lshr_ln668_fu_122_p2;
 wire   [127:0] zext_ln368_fu_141_p1;
@@ -180,7 +180,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
         i_fu_44 <= 5'd0;
-    end else if (((icmp_ln66_fu_91_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    end else if (((icmp_ln61_fu_91_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         i_fu_44 <= i_4_fu_97_p2;
     end
 end
@@ -195,18 +195,18 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        icmp_ln66_reg_200 <= icmp_ln66_fu_91_p2;
+        icmp_ln61_reg_200 <= icmp_ln61_fu_91_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln66_reg_200 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln61_reg_200 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_Result_s_reg_224 <= p_Result_s_fu_171_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln66_fu_91_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((icmp_ln61_fu_91_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         p_Val2_load_1_reg_204 <= ap_sig_allocacmp_p_Val2_load_1;
         shl_ln_reg_209[6 : 3] <= shl_ln_fu_110_p3[6 : 3];
         trunc_ln668_reg_214 <= trunc_ln668_fu_128_p1;
@@ -214,7 +214,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln66_fu_91_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((icmp_ln61_fu_91_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         ap_condition_exit_pp0_iter0_stage1 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage1 = 1'b0;
@@ -286,7 +286,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln66_fu_91_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((icmp_ln61_fu_91_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         t_out_ap_vld = 1'b1;
     end else begin
         t_out_ap_vld = 1'b0;
@@ -370,7 +370,7 @@ assign crypto_aes_sbox_V_address0 = zext_ln668_fu_137_p1;
 
 assign i_4_fu_97_p2 = (i_fu_44 + 5'd1);
 
-assign icmp_ln66_fu_91_p2 = ((i_fu_44 == 5'd16) ? 1'b1 : 1'b0);
+assign icmp_ln61_fu_91_p2 = ((i_fu_44 == 5'd16) ? 1'b1 : 1'b0);
 
 assign lshr_ln668_fu_122_p2 = ap_sig_allocacmp_p_Val2_load_1 >> zext_ln668_1_fu_118_p1;
 
@@ -380,13 +380,13 @@ assign shl_ln368_1_fu_165_p2 = zext_ln368_1_fu_161_p1 << zext_ln368_fu_141_p1;
 
 assign shl_ln368_fu_144_p2 = 128'd255 << zext_ln368_fu_141_p1;
 
-assign shl_ln_fu_110_p3 = {{trunc_ln67_fu_106_p1}, {3'd0}};
+assign shl_ln_fu_110_p3 = {{trunc_ln62_fu_106_p1}, {3'd0}};
 
 assign t_out = p_Val2_s_fu_48;
 
-assign trunc_ln668_fu_128_p1 = lshr_ln668_fu_122_p2[7:0];
+assign trunc_ln62_fu_106_p1 = i_fu_44[3:0];
 
-assign trunc_ln67_fu_106_p1 = i_fu_44[3:0];
+assign trunc_ln668_fu_128_p1 = lshr_ln668_fu_122_p2[7:0];
 
 assign xor_ln368_fu_150_p2 = (shl_ln368_fu_144_p2 ^ 128'd340282366920938463463374607431768211455);
 

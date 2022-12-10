@@ -12,6 +12,7 @@ module pynqrypt_encrypt_aes_encrypt_block (
         ap_rst,
         ap_start,
         ap_done,
+        ap_continue,
         ap_idle,
         ap_ready,
         this_round_keys_address0,
@@ -33,6 +34,7 @@ input   ap_clk;
 input   ap_rst;
 input   ap_start;
 output   ap_done;
+input   ap_continue;
 output   ap_idle;
 output   ap_ready;
 output  [3:0] this_round_keys_address0;
@@ -46,8 +48,8 @@ reg ap_idle;
 reg ap_ready;
 reg[3:0] this_round_keys_address0;
 reg this_round_keys_ce0;
-reg[127:0] ap_return;
 
+reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [6:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg   [127:0] this_round_keys_load_reg_371;
@@ -75,25 +77,24 @@ wire    ap_CS_fsm_state4;
 reg    grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_start_reg;
 wire    ap_CS_fsm_state5;
 wire    ap_CS_fsm_state7;
+reg    ap_block_state1;
 wire   [7:0] tmp_fu_158_p4;
 wire   [7:0] tmp_s_fu_168_p4;
-wire   [7:0] tmp_31_fu_178_p4;
+wire   [7:0] tmp_2_fu_178_p4;
 wire   [7:0] trunc_ln628_fu_188_p1;
-wire   [7:0] tmp_32_fu_192_p4;
-wire   [7:0] tmp_33_fu_202_p4;
-wire   [7:0] tmp_34_fu_212_p4;
-wire   [7:0] tmp_35_fu_222_p4;
-wire   [7:0] tmp_36_fu_232_p4;
-wire   [7:0] tmp_37_fu_242_p4;
-wire   [7:0] tmp_38_fu_252_p4;
-wire   [7:0] tmp_39_fu_262_p4;
-wire   [7:0] tmp_40_fu_272_p4;
-wire   [7:0] tmp_41_fu_282_p4;
-wire   [7:0] tmp_42_fu_292_p4;
-wire   [7:0] tmp_43_fu_302_p4;
+wire   [7:0] tmp_3_fu_192_p4;
+wire   [7:0] tmp_4_fu_202_p4;
+wire   [7:0] tmp_5_fu_212_p4;
+wire   [7:0] tmp_6_fu_222_p4;
+wire   [7:0] tmp_7_fu_232_p4;
+wire   [7:0] tmp_8_fu_242_p4;
+wire   [7:0] tmp_9_fu_252_p4;
+wire   [7:0] tmp_10_fu_262_p4;
+wire   [7:0] tmp_11_fu_272_p4;
+wire   [7:0] tmp_12_fu_282_p4;
+wire   [7:0] tmp_13_fu_292_p4;
+wire   [7:0] tmp_14_fu_302_p4;
 wire   [127:0] p_Result_s_fu_312_p17;
-wire   [127:0] xor_ln859_1_fu_348_p2;
-reg   [127:0] ap_return_preg;
 reg   [6:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
@@ -106,10 +107,10 @@ wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
+#0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 7'd1;
 #0 grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123_ap_start_reg = 1'b0;
 #0 grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_start_reg = 1'b0;
-#0 ap_return_preg = 128'd0;
 end
 
 pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123(
@@ -149,10 +150,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_return_preg <= 128'd0;
+        ap_done_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state7)) begin
-            ap_return_preg <= xor_ln859_1_fu_348_p2;
+        if ((ap_continue == 1'b1)) begin
+            ap_done_reg <= 1'b0;
+        end else if ((1'b1 == ap_CS_fsm_state7)) begin
+            ap_done_reg <= 1'b1;
         end
     end
 end
@@ -194,7 +197,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if ((ap_start == 1'b0)) begin
+    if (((ap_done_reg == 1'b1) | (ap_start == 1'b0))) begin
         ap_ST_fsm_state1_blk = 1'b1;
     end else begin
         ap_ST_fsm_state1_blk = 1'b0;
@@ -226,10 +229,10 @@ end
 assign ap_ST_fsm_state7_blk = 1'b0;
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state7) | ((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)))) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
         ap_done = 1'b1;
     end else begin
-        ap_done = 1'b0;
+        ap_done = ap_done_reg;
     end
 end
 
@@ -250,14 +253,6 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
-        ap_return = xor_ln859_1_fu_348_p2;
-    end else begin
-        ap_return = ap_return_preg;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
         this_round_keys_address0 = 64'd10;
     end else if ((1'b1 == ap_CS_fsm_state1)) begin
@@ -270,7 +265,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1)) | ((grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6)))) begin
+    if ((((grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6)) | (~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
         this_round_keys_ce0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
         this_round_keys_ce0 = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123_this_round_keys_ce0;
@@ -282,7 +277,7 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
@@ -334,45 +329,49 @@ assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
 
 assign ap_CS_fsm_state7 = ap_CS_fsm[32'd6];
 
+always @ (*) begin
+    ap_block_state1 = ((ap_done_reg == 1'b1) | (ap_start == 1'b0));
+end
+
+assign ap_return = (this_round_keys_q0 ^ p_Result_s_fu_312_p17);
+
 assign grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123_ap_start = grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123_ap_start_reg;
 
 assign grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_start = grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_start_reg;
 
-assign p_Result_s_fu_312_p17 = {{{{{{{{{{{{{{{{tmp_fu_158_p4}, {tmp_s_fu_168_p4}}, {tmp_31_fu_178_p4}}, {trunc_ln628_fu_188_p1}}, {tmp_32_fu_192_p4}}, {tmp_33_fu_202_p4}}, {tmp_34_fu_212_p4}}, {tmp_35_fu_222_p4}}, {tmp_36_fu_232_p4}}, {tmp_37_fu_242_p4}}, {tmp_38_fu_252_p4}}, {tmp_39_fu_262_p4}}, {tmp_40_fu_272_p4}}, {tmp_41_fu_282_p4}}, {tmp_42_fu_292_p4}}, {tmp_43_fu_302_p4}};
+assign p_Result_s_fu_312_p17 = {{{{{{{{{{{{{{{{tmp_fu_158_p4}, {tmp_s_fu_168_p4}}, {tmp_2_fu_178_p4}}, {trunc_ln628_fu_188_p1}}, {tmp_3_fu_192_p4}}, {tmp_4_fu_202_p4}}, {tmp_5_fu_212_p4}}, {tmp_6_fu_222_p4}}, {tmp_7_fu_232_p4}}, {tmp_8_fu_242_p4}}, {tmp_9_fu_252_p4}}, {tmp_10_fu_262_p4}}, {tmp_11_fu_272_p4}}, {tmp_12_fu_282_p4}}, {tmp_13_fu_292_p4}}, {tmp_14_fu_302_p4}};
 
-assign tmp_31_fu_178_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[47:40]}};
+assign tmp_10_fu_262_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[71:64]}};
 
-assign tmp_32_fu_192_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[95:88]}};
+assign tmp_11_fu_272_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[31:24]}};
 
-assign tmp_33_fu_202_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[55:48]}};
+assign tmp_12_fu_282_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[119:112]}};
 
-assign tmp_34_fu_212_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[15:8]}};
+assign tmp_13_fu_292_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[79:72]}};
 
-assign tmp_35_fu_222_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[103:96]}};
+assign tmp_14_fu_302_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[39:32]}};
 
-assign tmp_36_fu_232_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[63:56]}};
+assign tmp_2_fu_178_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[47:40]}};
 
-assign tmp_37_fu_242_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[23:16]}};
+assign tmp_3_fu_192_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[95:88]}};
 
-assign tmp_38_fu_252_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[111:104]}};
+assign tmp_4_fu_202_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[55:48]}};
 
-assign tmp_39_fu_262_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[71:64]}};
+assign tmp_5_fu_212_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[15:8]}};
 
-assign tmp_40_fu_272_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[31:24]}};
+assign tmp_6_fu_222_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[103:96]}};
 
-assign tmp_41_fu_282_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[119:112]}};
+assign tmp_7_fu_232_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[63:56]}};
 
-assign tmp_42_fu_292_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[79:72]}};
+assign tmp_8_fu_242_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[23:16]}};
 
-assign tmp_43_fu_302_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[39:32]}};
+assign tmp_9_fu_252_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[111:104]}};
 
 assign tmp_fu_158_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[127:120]}};
 
 assign tmp_s_fu_168_p4 = {{grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[87:80]}};
 
 assign trunc_ln628_fu_188_p1 = grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_t_out[7:0];
-
-assign xor_ln859_1_fu_348_p2 = (this_round_keys_q0 ^ p_Result_s_fu_312_p17);
 
 assign xor_ln859_fu_145_p2 = (this_round_keys_load_reg_371 ^ p_read);
 

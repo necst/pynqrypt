@@ -19,5 +19,5 @@ void pynqrypt_encrypt(
 
 	crypto::Pynqrypt pynqrypt(key, nonce);
 
-	pynqrypt.ctr_encrypt(plaintext_length, plaintext, ciphertext);
+	pynqrypt.ctr_encrypt(plaintext_length / 16, plaintext, ciphertext);
 }

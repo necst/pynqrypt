@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'ctr_encrypt'" level="0">
-<item name = "Date">Sat Dec 10 12:09:50 2022
+<item name = "Date">Sat Dec 10 12:34:58 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_ctr_encrypt">?, ?, 152, -, -, ?, no</column>
+<column name="- loop_ctr_encrypt">?, ?, 150, -, -, ?, no</column>
 </table>
 </item>
 </section>
