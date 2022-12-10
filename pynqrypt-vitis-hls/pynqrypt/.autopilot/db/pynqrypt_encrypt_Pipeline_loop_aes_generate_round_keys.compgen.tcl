@@ -31,25 +31,6 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 3 \
-    name crypto_aes_sbox_V \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename crypto_aes_sbox_V \
-    op interface \
-    ports { crypto_aes_sbox_V_address0 { O 8 vector } crypto_aes_sbox_V_ce0 { O 1 bit } crypto_aes_sbox_V_q0 { I 8 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'crypto_aes_sbox_V'"
-}
-}
-
-
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \

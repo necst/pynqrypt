@@ -47,6 +47,7 @@ void Pynqrypt::aes_encrypt_block(aes_block &state)
     loop_aes_encrypt_block: for (int i = 1; i < NUM_ROUNDS; i++) {
         aes_sub_bytes(state);
         aes_shift_rows(state);
+        // aes_shift_sub_bytes(state);
         aes_mix_columns(state);
         state ^= round_keys[i];
     }
@@ -58,6 +59,8 @@ void Pynqrypt::aes_encrypt_block(aes_block &state)
 
 void Pynqrypt::aes_sub_bytes(aes_block &state)
 {
+	#pragma HLS ARRAY_RESHAPE variable=aes_sbox type=complete dim=1
+
     loop_aes_sub_bytes: for (int i = 0; i < BLOCK_SIZE; i++)
         state.range(i * 8 + 7, i * 8) = aes_sbox[state.range(i * 8 + 7, i * 8)];
 }
@@ -87,6 +90,32 @@ void Pynqrypt::aes_shift_rows(aes_block &block)
     block.range(23, 16) = temp.range(119, 112);
     block.range(15, 8) = temp.range(79, 72);
     block.range(7, 0) = temp.range(39, 32);
+}
+
+void Pynqrypt::aes_shift_sub_bytes(aes_block &block)
+{
+    aes_block temp;
+    temp.range(127, 0) = block;
+
+    block.range(127, 120) = aes_sbox[temp.range(127, 120)];
+    block.range(119, 112) = aes_sbox[temp.range(87, 80)];
+    block.range(111, 104) = aes_sbox[temp.range(47, 40)];
+    block.range(103, 96) = aes_sbox[temp.range(7, 0)];
+
+    block.range(95, 88) = aes_sbox[temp.range(95, 88)];
+    block.range(87, 80) = aes_sbox[temp.range(55, 48)];
+    block.range(79, 72) = aes_sbox[temp.range(15, 8)];
+    block.range(71, 64) = aes_sbox[temp.range(103, 96)];
+
+    block.range(63, 56) = aes_sbox[temp.range(63, 56)];
+    block.range(55, 48) = aes_sbox[temp.range(23, 16)];
+    block.range(47, 40) = aes_sbox[temp.range(111, 104)];
+    block.range(39, 32) = aes_sbox[temp.range(71, 64)];
+
+    block.range(31, 24) = aes_sbox[temp.range(31, 24)];
+    block.range(23, 16) = aes_sbox[temp.range(119, 112)];
+    block.range(15, 8) = aes_sbox[temp.range(79, 72)];
+    block.range(7, 0) = aes_sbox[temp.range(39, 32)];
 }
 
 void Pynqrypt::aes_mix_columns(aes_block &block)

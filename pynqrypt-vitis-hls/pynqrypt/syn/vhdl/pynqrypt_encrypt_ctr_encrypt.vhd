@@ -87,7 +87,7 @@ end;
 architecture behav of pynqrypt_encrypt_ctr_encrypt is 
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_const_lv128_lc_1 : STD_LOGIC_VECTOR (127 downto 0) := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    constant ap_const_lv128_lc_2 : STD_LOGIC_VECTOR (127 downto 0) := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv60_0 : STD_LOGIC_VECTOR (59 downto 0) := "000000000000000000000000000000000000000000000000000000000000";
     constant ap_const_lv60_1 : STD_LOGIC_VECTOR (59 downto 0) := "000000000000000000000000000000000000000000000000000000000001";
@@ -281,7 +281,7 @@ begin
         this_round_keys_address1 => dataflow_in_loop_loop_ctr_encrypt_U0_this_round_keys_address1,
         this_round_keys_ce1 => dataflow_in_loop_loop_ctr_encrypt_U0_this_round_keys_ce1,
         this_round_keys_d1 => dataflow_in_loop_loop_ctr_encrypt_U0_this_round_keys_d1,
-        this_round_keys_q1 => ap_const_lv128_lc_1,
+        this_round_keys_q1 => ap_const_lv128_lc_2,
         this_round_keys_we1 => dataflow_in_loop_loop_ctr_encrypt_U0_this_round_keys_we1,
         ciphertext => ciphertext,
         ap_clk => ap_clk,
@@ -409,8 +409,8 @@ begin
     this_round_keys_address1 <= ap_const_lv4_0;
     this_round_keys_ce0 <= dataflow_in_loop_loop_ctr_encrypt_U0_this_round_keys_ce0;
     this_round_keys_ce1 <= ap_const_logic_0;
-    this_round_keys_d0 <= ap_const_lv128_lc_1;
-    this_round_keys_d1 <= ap_const_lv128_lc_1;
+    this_round_keys_d0 <= ap_const_lv128_lc_2;
+    this_round_keys_d1 <= ap_const_lv128_lc_2;
     this_round_keys_we0 <= ap_const_logic_0;
     this_round_keys_we1 <= ap_const_logic_0;
 end behav;

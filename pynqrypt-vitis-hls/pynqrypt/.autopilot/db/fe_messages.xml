@@ -11,6 +11,9 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:19:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ctr_encrypt" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="aes_sub_bytes" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=aes_sbox type=complete dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
@@ -53,13 +56,13 @@
     <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="hw-impl/src/pynqrypt.cpp:22:9" msg_body="Duplicating function 'crypto::Pynqrypt::assign_swap_endianness(ap_uint&lt;128&gt;, ap_uint&lt;128&gt;&amp;)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
         <args Name="crypto::Pynqrypt::assign_swap_endianness(ap_uint&lt;128&gt;, ap_uint&lt;128&gt;&amp;)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:128:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_rotate_word(ap_uint&lt;32&gt;&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:157:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_rotate_word(ap_uint&lt;32&gt;&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
         <args Callee="crypto::Pynqrypt::aes_rotate_word(ap_uint&lt;32&gt;&amp;)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:128:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_word(ap_uint&lt;32&gt;&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:157:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_word(ap_uint&lt;32&gt;&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
         <args Callee="crypto::Pynqrypt::aes_sub_word(ap_uint&lt;32&gt;&amp;)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:128:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(ap_uint&lt;32&gt;&amp;, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:157:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(ap_uint&lt;32&gt;&amp;, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
         <args Callee="crypto::Pynqrypt::aes_xor_round_constant(ap_uint&lt;32&gt;&amp;, int)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt.cpp:9:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_generate_round_keys()' into 'crypto::Pynqrypt::Pynqrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;)'">
@@ -76,6 +79,9 @@
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw-impl/src/pynqrypt_hls.cpp:9:0" msg_body="Inlining function 'crypto::Pynqrypt::Pynqrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;)' into 'pynqrypt_encrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;, unsigned long, ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*)'">
         <args Callee="crypto::Pynqrypt::Pynqrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;)" Caller="pynqrypt_encrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;, unsigned long, ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="hw-impl/src/constants.hpp:7:0" msg_body="Applying array_reshape to '_ZN6cryptoL8aes_sboxE': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZN6cryptoL8aes_sboxE"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 10 12:15:09 2022" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 10 13:11:56 2022" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -4253,7 +4253,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2112807011" FULLNAME="/pynqrypt_encrypt_0" HWVERSION="1.0" INSTANCE="pynqrypt_encrypt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pynqrypt_encrypt" VLNV="xilinx.com:hls:pynqrypt_encrypt:1.0">
+    <MODULE COREREVISION="2112807070" FULLNAME="/pynqrypt_encrypt_0" HWVERSION="1.0" INSTANCE="pynqrypt_encrypt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pynqrypt_encrypt" VLNV="xilinx.com:hls:pynqrypt_encrypt:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_control" NAME="Reg" RANGE="65536" USAGE="register">

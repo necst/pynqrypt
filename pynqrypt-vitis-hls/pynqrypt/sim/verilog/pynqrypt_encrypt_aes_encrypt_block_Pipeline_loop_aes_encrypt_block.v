@@ -58,19 +58,13 @@ reg    ap_idle_pp0;
 wire    ap_CS_fsm_pp0_stage1;
 wire    ap_block_state2_pp0_stage1_iter0;
 wire    ap_block_pp0_stage1_subdone;
-wire   [0:0] icmp_ln47_fu_562_p2;
+wire   [0:0] icmp_ln47_fu_429_p2;
 reg    ap_condition_exit_pp0_iter0_stage1;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_CS_fsm_pp0_stage9;
 wire    ap_block_state10_pp0_stage9_iter0;
 wire    ap_block_pp0_stage9_subdone;
-reg   [7:0] crypto_aes_sbox_V_address0;
-reg    crypto_aes_sbox_V_ce0;
-wire   [7:0] crypto_aes_sbox_V_q0;
-reg   [7:0] crypto_aes_sbox_V_address1;
-reg    crypto_aes_sbox_V_ce1;
-wire   [7:0] crypto_aes_sbox_V_q1;
 reg   [7:0] crypto_aes_mul2_V_address0;
 reg    crypto_aes_mul2_V_ce0;
 wire   [7:0] crypto_aes_mul2_V_q0;
@@ -83,193 +77,241 @@ wire   [7:0] crypto_aes_mul3_V_q0;
 reg   [7:0] crypto_aes_mul3_V_address1;
 reg    crypto_aes_mul3_V_ce1;
 wire   [7:0] crypto_aes_mul3_V_q1;
+wire   [7:0] trunc_ln186_1_fu_465_p1;
+reg   [7:0] trunc_ln186_1_reg_1322;
 wire    ap_block_pp0_stage1_11001;
-reg   [7:0] tmp_60_1_reg_1209;
-reg   [7:0] tmp_60_2_reg_1214;
-reg   [7:0] tmp_60_3_reg_1219;
-reg   [7:0] tmp_60_4_reg_1224;
-reg   [7:0] tmp_60_5_reg_1229;
-reg   [7:0] tmp_60_6_reg_1234;
-reg   [7:0] tmp_60_7_reg_1239;
-reg   [7:0] tmp_60_8_reg_1244;
-reg   [7:0] tmp_60_9_reg_1249;
-reg   [7:0] tmp_60_10_reg_1254;
-reg   [7:0] tmp_60_11_reg_1259;
-reg   [7:0] tmp_60_12_reg_1264;
-reg   [7:0] tmp_60_13_reg_1269;
-reg   [7:0] tmp_60_14_reg_1274;
-reg   [7:0] crypto_aes_sbox_V_load_reg_1284;
+wire   [7:0] trunc_ln186_2_fu_497_p1;
+reg   [7:0] trunc_ln186_2_reg_1329;
+reg   [7:0] tmp_2_reg_1336;
+reg   [7:0] tmp_3_reg_1341;
+reg   [7:0] tmp_4_reg_1346;
+reg   [7:0] tmp_5_reg_1351;
+reg   [7:0] tmp_6_reg_1356;
+reg   [7:0] tmp_7_reg_1361;
+reg   [7:0] tmp_8_reg_1366;
+reg   [7:0] tmp_9_reg_1371;
+reg   [7:0] tmp_10_reg_1376;
+reg   [7:0] tmp_11_reg_1381;
+reg   [7:0] tmp_12_reg_1386;
+reg   [7:0] tmp_13_reg_1391;
+reg   [7:0] tmp_14_reg_1396;
+reg   [7:0] tmp_15_reg_1401;
+wire   [7:0] trunc_ln186_3_fu_669_p1;
+reg   [7:0] trunc_ln186_3_reg_1411;
 wire    ap_CS_fsm_pp0_stage2;
 wire    ap_block_state3_pp0_stage2_iter0;
 wire    ap_block_pp0_stage2_11001;
-reg   [7:0] crypto_aes_sbox_V_load_4_reg_1290;
-reg   [127:0] this_round_keys_load_reg_1326;
-reg   [7:0] crypto_aes_sbox_V_load_5_reg_1331;
+wire   [7:0] trunc_ln186_4_fu_690_p1;
+reg   [7:0] trunc_ln186_4_reg_1418;
+reg   [127:0] this_round_keys_load_reg_1445;
+wire   [7:0] trunc_ln186_5_fu_721_p1;
+reg   [7:0] trunc_ln186_5_reg_1450;
 wire    ap_CS_fsm_pp0_stage3;
 wire    ap_block_state4_pp0_stage3_iter0;
 wire    ap_block_pp0_stage3_11001;
-reg   [7:0] crypto_aes_sbox_V_load_6_reg_1337;
-reg   [7:0] crypto_aes_mul3_V_load_9_reg_1373;
-reg   [7:0] crypto_aes_mul2_V_load_10_reg_1378;
-reg   [7:0] crypto_aes_mul3_V_load_14_reg_1383;
-reg   [7:0] crypto_aes_mul2_V_load_15_reg_1388;
-reg   [7:0] crypto_aes_sbox_V_load_7_reg_1393;
+wire   [7:0] trunc_ln186_6_fu_742_p1;
+reg   [7:0] trunc_ln186_6_reg_1457;
+reg   [7:0] crypto_aes_mul3_V_load_9_reg_1484;
+reg   [7:0] crypto_aes_mul2_V_load_10_reg_1489;
+reg   [7:0] crypto_aes_mul3_V_load_14_reg_1494;
+reg   [7:0] crypto_aes_mul2_V_load_15_reg_1499;
+wire   [7:0] trunc_ln186_7_fu_773_p1;
+reg   [7:0] trunc_ln186_7_reg_1504;
 wire    ap_CS_fsm_pp0_stage4;
 wire    ap_block_state5_pp0_stage4_iter0;
 wire    ap_block_pp0_stage4_11001;
-reg   [7:0] crypto_aes_sbox_V_load_8_reg_1399;
-reg   [7:0] crypto_aes_mul2_V_load_reg_1415;
-reg   [7:0] crypto_aes_mul3_V_load_3_reg_1425;
-reg   [7:0] crypto_aes_mul3_V_load_4_reg_1435;
-reg   [7:0] crypto_aes_mul2_V_load_5_reg_1440;
-reg   [7:0] crypto_aes_sbox_V_load_9_reg_1455;
+wire   [7:0] trunc_ln186_8_fu_794_p1;
+reg   [7:0] trunc_ln186_8_reg_1511;
+reg   [7:0] crypto_aes_mul2_V_load_reg_1518;
+reg   [7:0] crypto_aes_mul3_V_load_3_reg_1528;
+reg   [7:0] crypto_aes_mul3_V_load_4_reg_1538;
+reg   [7:0] crypto_aes_mul2_V_load_5_reg_1543;
+wire   [7:0] trunc_ln186_9_fu_825_p1;
+reg   [7:0] trunc_ln186_9_reg_1558;
 wire    ap_CS_fsm_pp0_stage5;
 wire    ap_block_state6_pp0_stage5_iter0;
 wire    ap_block_pp0_stage5_11001;
-reg   [7:0] crypto_aes_sbox_V_load_10_reg_1461;
-reg   [7:0] crypto_aes_mul3_V_load_2_reg_1477;
-reg   [7:0] crypto_aes_mul2_V_load_3_reg_1482;
-reg   [7:0] crypto_aes_mul3_V_load_13_reg_1507;
-reg   [7:0] crypto_aes_mul2_V_load_14_reg_1512;
-reg   [7:0] crypto_aes_sbox_V_load_11_reg_1517;
+wire   [7:0] trunc_ln186_10_fu_846_p1;
+reg   [7:0] trunc_ln186_10_reg_1565;
+reg   [7:0] crypto_aes_mul3_V_load_2_reg_1572;
+reg   [7:0] crypto_aes_mul2_V_load_3_reg_1577;
+reg   [7:0] crypto_aes_mul3_V_load_13_reg_1602;
+reg   [7:0] crypto_aes_mul2_V_load_14_reg_1607;
+wire   [7:0] trunc_ln186_11_fu_877_p1;
+reg   [7:0] trunc_ln186_11_reg_1612;
 wire    ap_CS_fsm_pp0_stage6;
 wire    ap_block_state7_pp0_stage6_iter0;
 wire    ap_block_pp0_stage6_11001;
-reg   [7:0] crypto_aes_sbox_V_load_12_reg_1523;
-reg   [7:0] crypto_aes_mul2_V_load_4_reg_1549;
-reg   [7:0] crypto_aes_mul3_V_load_7_reg_1559;
-reg   [7:0] crypto_aes_mul3_V_load_8_reg_1569;
-reg   [7:0] crypto_aes_mul2_V_load_9_reg_1574;
-reg   [7:0] crypto_aes_sbox_V_load_13_reg_1579;
+wire   [7:0] trunc_ln186_12_fu_898_p1;
+reg   [7:0] trunc_ln186_12_reg_1619;
+reg   [7:0] crypto_aes_mul2_V_load_4_reg_1636;
+reg   [7:0] crypto_aes_mul3_V_load_7_reg_1646;
+reg   [7:0] crypto_aes_mul3_V_load_8_reg_1656;
+reg   [7:0] crypto_aes_mul2_V_load_9_reg_1661;
+wire   [7:0] trunc_ln186_13_fu_929_p1;
+reg   [7:0] trunc_ln186_13_reg_1666;
 wire    ap_CS_fsm_pp0_stage7;
 wire    ap_block_state8_pp0_stage7_iter0;
 wire    ap_block_pp0_stage7_11001;
-reg   [7:0] crypto_aes_sbox_V_load_14_reg_1585;
-reg   [7:0] crypto_aes_mul3_V_load_1_reg_1601;
-reg   [7:0] crypto_aes_mul2_V_load_2_reg_1606;
-reg   [7:0] crypto_aes_mul3_V_load_6_reg_1611;
-reg   [7:0] crypto_aes_mul2_V_load_7_reg_1616;
-reg   [7:0] crypto_aes_sbox_V_load_15_reg_1641;
+wire   [7:0] trunc_ln186_14_fu_950_p1;
+reg   [7:0] trunc_ln186_14_reg_1673;
+reg   [7:0] crypto_aes_mul3_V_load_1_reg_1680;
+reg   [7:0] crypto_aes_mul2_V_load_2_reg_1685;
+reg   [7:0] crypto_aes_mul3_V_load_6_reg_1690;
+reg   [7:0] crypto_aes_mul2_V_load_7_reg_1695;
+wire   [7:0] trunc_ln186_15_fu_981_p1;
+reg   [7:0] trunc_ln186_15_reg_1720;
 wire    ap_CS_fsm_pp0_stage8;
 wire    ap_block_state9_pp0_stage8_iter0;
 wire    ap_block_pp0_stage8_11001;
-reg   [7:0] crypto_aes_sbox_V_load_16_reg_1647;
-reg   [7:0] crypto_aes_mul2_V_load_8_reg_1673;
-reg   [7:0] crypto_aes_mul3_V_load_11_reg_1683;
-reg   [7:0] crypto_aes_mul3_V_load_12_reg_1693;
-reg   [7:0] crypto_aes_mul2_V_load_13_reg_1698;
-reg   [7:0] crypto_aes_sbox_V_load_17_reg_1703;
+wire   [7:0] trunc_ln186_16_fu_1002_p1;
+reg   [7:0] trunc_ln186_16_reg_1727;
+reg   [7:0] crypto_aes_mul2_V_load_8_reg_1744;
+reg   [7:0] crypto_aes_mul3_V_load_11_reg_1754;
+reg   [7:0] crypto_aes_mul3_V_load_12_reg_1764;
+reg   [7:0] crypto_aes_mul2_V_load_13_reg_1769;
 wire    ap_block_pp0_stage9_11001;
-reg   [7:0] crypto_aes_sbox_V_load_18_reg_1709;
-reg   [7:0] crypto_aes_mul3_V_load_5_reg_1725;
-reg   [7:0] crypto_aes_mul2_V_load_6_reg_1730;
-reg   [7:0] crypto_aes_mul3_V_load_10_reg_1735;
-reg   [7:0] crypto_aes_mul2_V_load_11_reg_1740;
+reg   [7:0] crypto_aes_mul3_V_load_5_reg_1784;
+reg   [7:0] crypto_aes_mul2_V_load_6_reg_1789;
+reg   [7:0] crypto_aes_mul3_V_load_10_reg_1794;
+reg   [7:0] crypto_aes_mul2_V_load_11_reg_1799;
 reg    ap_enable_reg_pp0_iter0_reg;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state11_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_subdone;
-wire   [63:0] zext_ln668_1_fu_580_p1;
+wire   [63:0] i_cast_fu_438_p1;
 wire    ap_block_pp0_stage1;
-wire   [63:0] zext_ln668_fu_595_p1;
-wire   [63:0] i_cast_fu_571_p1;
-wire   [63:0] zext_ln668_2_fu_751_p1;
+wire   [63:0] zext_ln668_10_fu_694_p1;
 wire    ap_block_pp0_stage2;
-wire   [63:0] zext_ln668_3_fu_755_p1;
-wire   [63:0] zext_ln668_26_fu_759_p1;
-wire   [63:0] zext_ln668_31_fu_765_p1;
-wire   [63:0] zext_ln668_4_fu_771_p1;
+wire   [63:0] zext_ln668_15_fu_699_p1;
+wire   [63:0] zext_ln668_fu_746_p1;
 wire    ap_block_pp0_stage3;
-wire   [63:0] zext_ln668_5_fu_775_p1;
-wire   [63:0] zext_ln668_16_fu_779_p1;
-wire   [63:0] zext_ln668_21_fu_785_p1;
-wire   [63:0] zext_ln668_6_fu_791_p1;
+wire   [63:0] zext_ln668_5_fu_751_p1;
+wire   [63:0] zext_ln668_3_fu_798_p1;
 wire    ap_block_pp0_stage4;
-wire   [63:0] zext_ln668_7_fu_795_p1;
-wire   [63:0] zext_ln668_19_fu_799_p1;
-wire   [63:0] zext_ln668_30_fu_805_p1;
-wire   [63:0] zext_ln668_8_fu_811_p1;
+wire   [63:0] zext_ln668_14_fu_803_p1;
+wire   [63:0] zext_ln668_4_fu_850_p1;
 wire    ap_block_pp0_stage5;
-wire   [63:0] zext_ln668_9_fu_815_p1;
-wire   [63:0] zext_ln668_20_fu_819_p1;
-wire   [63:0] zext_ln668_25_fu_825_p1;
-wire   [63:0] zext_ln668_10_fu_831_p1;
+wire   [63:0] zext_ln668_9_fu_855_p1;
+wire   [63:0] zext_ln668_2_fu_902_p1;
 wire    ap_block_pp0_stage6;
-wire   [63:0] zext_ln668_11_fu_835_p1;
-wire   [63:0] zext_ln668_18_fu_839_p1;
-wire   [63:0] zext_ln668_23_fu_845_p1;
-wire   [63:0] zext_ln668_12_fu_851_p1;
+wire   [63:0] zext_ln668_7_fu_907_p1;
+wire   [63:0] zext_ln668_8_fu_954_p1;
 wire    ap_block_pp0_stage7;
-wire   [63:0] zext_ln668_13_fu_855_p1;
-wire   [63:0] zext_ln668_24_fu_859_p1;
-wire   [63:0] zext_ln668_29_fu_865_p1;
-wire   [63:0] zext_ln668_14_fu_871_p1;
+wire   [63:0] zext_ln668_13_fu_959_p1;
+wire   [63:0] zext_ln668_6_fu_1006_p1;
 wire    ap_block_pp0_stage8;
-wire   [63:0] zext_ln668_15_fu_875_p1;
-wire   [63:0] zext_ln668_22_fu_879_p1;
-wire   [63:0] zext_ln668_27_fu_885_p1;
-wire   [63:0] zext_ln668_17_fu_891_p1;
+wire   [63:0] zext_ln668_11_fu_1011_p1;
+wire   [63:0] zext_ln668_1_fu_1016_p1;
 wire    ap_block_pp0_stage9;
-wire   [63:0] zext_ln668_28_fu_897_p1;
-reg   [127:0] state_promoted_i_fu_104;
-wire   [127:0] xor_ln859_1_fu_1167_p2;
+wire   [63:0] zext_ln668_12_fu_1021_p1;
+reg   [127:0] state_promoted_i_fu_108;
+wire   [127:0] xor_ln859_1_fu_1290_p2;
 wire    ap_block_pp0_stage0_11001;
 wire    ap_loop_init;
-reg   [3:0] i_fu_108;
-wire   [3:0] add_ln47_fu_740_p2;
+reg   [3:0] i_fu_112;
+wire   [3:0] add_ln47_fu_641_p2;
 wire    ap_block_pp0_stage1_01001;
 wire    ap_block_pp0_stage0;
-wire   [7:0] trunc_ln668_fu_576_p1;
-wire   [7:0] tmp_60_s_fu_585_p4;
-wire   [7:0] xor_ln1499_5_fu_903_p2;
-wire   [7:0] xor_ln1499_fu_907_p2;
-wire   [7:0] xor_ln1499_8_fu_922_p2;
-wire   [7:0] xor_ln1499_7_fu_918_p2;
-wire   [7:0] xor_ln1499_11_fu_937_p2;
-wire   [7:0] xor_ln1499_10_fu_933_p2;
-wire   [7:0] xor_ln1499_13_fu_947_p2;
-wire   [7:0] xor_ln1499_14_fu_951_p2;
-wire   [7:0] xor_ln1499_17_fu_961_p2;
-wire   [7:0] xor_ln1499_16_fu_965_p2;
-wire   [7:0] xor_ln1499_19_fu_975_p2;
-wire   [7:0] xor_ln1499_20_fu_979_p2;
-wire   [7:0] xor_ln1499_23_fu_993_p2;
-wire   [7:0] xor_ln1499_22_fu_989_p2;
-wire   [7:0] xor_ln1499_26_fu_1007_p2;
-wire   [7:0] xor_ln1499_25_fu_1003_p2;
-wire   [7:0] xor_ln1499_29_fu_1021_p2;
-wire   [7:0] xor_ln1499_28_fu_1017_p2;
-wire   [7:0] xor_ln1499_31_fu_1031_p2;
-wire   [7:0] xor_ln1499_32_fu_1035_p2;
-wire   [7:0] xor_ln1499_34_fu_1045_p2;
-wire   [7:0] xor_ln1499_35_fu_1049_p2;
-wire   [7:0] xor_ln1499_38_fu_1063_p2;
-wire   [7:0] xor_ln1499_37_fu_1059_p2;
-wire   [7:0] xor_ln1499_41_fu_1078_p2;
-wire   [7:0] xor_ln1499_40_fu_1073_p2;
-wire   [7:0] xor_ln1499_44_fu_1092_p2;
-wire   [7:0] xor_ln1499_43_fu_1088_p2;
-wire   [7:0] xor_ln1499_46_fu_1102_p2;
-wire   [7:0] xor_ln1499_47_fu_1106_p2;
-wire   [7:0] xor_ln1499_49_fu_1116_p2;
-wire   [7:0] xor_ln1499_50_fu_1120_p2;
-wire   [7:0] xor_ln1499_42_fu_1082_p2;
-wire   [7:0] xor_ln1499_45_fu_1096_p2;
-wire   [7:0] xor_ln1499_48_fu_1111_p2;
-wire   [7:0] xor_ln1499_51_fu_1126_p2;
-wire   [7:0] xor_ln1499_30_fu_1025_p2;
-wire   [7:0] xor_ln1499_33_fu_1040_p2;
-wire   [7:0] xor_ln1499_36_fu_1054_p2;
-wire   [7:0] xor_ln1499_39_fu_1067_p2;
-wire   [7:0] xor_ln1499_18_fu_970_p2;
-wire   [7:0] xor_ln1499_21_fu_984_p2;
-wire   [7:0] xor_ln1499_24_fu_997_p2;
-wire   [7:0] xor_ln1499_27_fu_1011_p2;
-wire   [7:0] xor_ln1499_6_fu_913_p2;
-wire   [7:0] xor_ln1499_9_fu_927_p2;
-wire   [7:0] xor_ln1499_12_fu_941_p2;
-wire   [7:0] xor_ln1499_15_fu_956_p2;
-wire   [127:0] p_Result_16_3_fu_1131_p17;
+wire   [7:0] trunc_ln186_fu_443_p1;
+wire   [10:0] shl_ln186_1_fu_447_p3;
+wire   [2047:0] zext_ln186_fu_455_p1;
+wire   [2047:0] lshr_ln186_fu_459_p2;
+wire   [7:0] tmp_s_fu_469_p4;
+wire   [10:0] shl_ln186_2_fu_479_p3;
+wire   [2047:0] zext_ln186_4_fu_487_p1;
+wire   [2047:0] lshr_ln186_1_fu_491_p2;
+wire   [10:0] shl_ln186_3_fu_652_p3;
+wire   [2047:0] zext_ln186_5_fu_659_p1;
+wire   [2047:0] lshr_ln186_2_fu_663_p2;
+wire   [10:0] shl_ln186_4_fu_673_p3;
+wire   [2047:0] zext_ln186_6_fu_680_p1;
+wire   [2047:0] lshr_ln186_3_fu_684_p2;
+wire   [10:0] shl_ln186_5_fu_704_p3;
+wire   [2047:0] zext_ln186_7_fu_711_p1;
+wire   [2047:0] lshr_ln186_4_fu_715_p2;
+wire   [10:0] shl_ln186_6_fu_725_p3;
+wire   [2047:0] zext_ln186_8_fu_732_p1;
+wire   [2047:0] lshr_ln186_5_fu_736_p2;
+wire   [10:0] shl_ln186_7_fu_756_p3;
+wire   [2047:0] zext_ln186_9_fu_763_p1;
+wire   [2047:0] lshr_ln186_6_fu_767_p2;
+wire   [10:0] shl_ln186_8_fu_777_p3;
+wire   [2047:0] zext_ln186_10_fu_784_p1;
+wire   [2047:0] lshr_ln186_7_fu_788_p2;
+wire   [10:0] shl_ln186_9_fu_808_p3;
+wire   [2047:0] zext_ln186_11_fu_815_p1;
+wire   [2047:0] lshr_ln186_8_fu_819_p2;
+wire   [10:0] shl_ln186_s_fu_829_p3;
+wire   [2047:0] zext_ln186_12_fu_836_p1;
+wire   [2047:0] lshr_ln186_9_fu_840_p2;
+wire   [10:0] shl_ln186_10_fu_860_p3;
+wire   [2047:0] zext_ln186_13_fu_867_p1;
+wire   [2047:0] lshr_ln186_10_fu_871_p2;
+wire   [10:0] shl_ln186_11_fu_881_p3;
+wire   [2047:0] zext_ln186_14_fu_888_p1;
+wire   [2047:0] lshr_ln186_11_fu_892_p2;
+wire   [10:0] shl_ln186_12_fu_912_p3;
+wire   [2047:0] zext_ln186_15_fu_919_p1;
+wire   [2047:0] lshr_ln186_12_fu_923_p2;
+wire   [10:0] shl_ln186_13_fu_933_p3;
+wire   [2047:0] zext_ln186_16_fu_940_p1;
+wire   [2047:0] lshr_ln186_13_fu_944_p2;
+wire   [10:0] shl_ln186_14_fu_964_p3;
+wire   [2047:0] zext_ln186_17_fu_971_p1;
+wire   [2047:0] lshr_ln186_14_fu_975_p2;
+wire   [10:0] shl_ln186_15_fu_985_p3;
+wire   [2047:0] zext_ln186_18_fu_992_p1;
+wire   [2047:0] lshr_ln186_15_fu_996_p2;
+wire   [7:0] xor_ln1499_5_fu_1031_p2;
+wire   [7:0] xor_ln1499_fu_1026_p2;
+wire   [7:0] xor_ln1499_8_fu_1046_p2;
+wire   [7:0] xor_ln1499_7_fu_1041_p2;
+wire   [7:0] xor_ln1499_11_fu_1060_p2;
+wire   [7:0] xor_ln1499_10_fu_1056_p2;
+wire   [7:0] xor_ln1499_14_fu_1074_p2;
+wire   [7:0] xor_ln1499_13_fu_1070_p2;
+wire   [7:0] xor_ln1499_17_fu_1088_p2;
+wire   [7:0] xor_ln1499_16_fu_1084_p2;
+wire   [7:0] xor_ln1499_20_fu_1102_p2;
+wire   [7:0] xor_ln1499_19_fu_1098_p2;
+wire   [7:0] xor_ln1499_23_fu_1116_p2;
+wire   [7:0] xor_ln1499_22_fu_1112_p2;
+wire   [7:0] xor_ln1499_26_fu_1130_p2;
+wire   [7:0] xor_ln1499_25_fu_1126_p2;
+wire   [7:0] xor_ln1499_29_fu_1144_p2;
+wire   [7:0] xor_ln1499_28_fu_1140_p2;
+wire   [7:0] xor_ln1499_32_fu_1158_p2;
+wire   [7:0] xor_ln1499_31_fu_1154_p2;
+wire   [7:0] xor_ln1499_35_fu_1172_p2;
+wire   [7:0] xor_ln1499_34_fu_1168_p2;
+wire   [7:0] xor_ln1499_38_fu_1186_p2;
+wire   [7:0] xor_ln1499_37_fu_1182_p2;
+wire   [7:0] xor_ln1499_41_fu_1201_p2;
+wire   [7:0] xor_ln1499_40_fu_1196_p2;
+wire   [7:0] xor_ln1499_44_fu_1215_p2;
+wire   [7:0] xor_ln1499_43_fu_1211_p2;
+wire   [7:0] xor_ln1499_47_fu_1225_p2;
+wire   [7:0] xor_ln1499_46_fu_1229_p2;
+wire   [7:0] xor_ln1499_50_fu_1239_p2;
+wire   [7:0] xor_ln1499_49_fu_1243_p2;
+wire   [7:0] xor_ln1499_42_fu_1205_p2;
+wire   [7:0] xor_ln1499_45_fu_1219_p2;
+wire   [7:0] xor_ln1499_48_fu_1234_p2;
+wire   [7:0] xor_ln1499_51_fu_1249_p2;
+wire   [7:0] xor_ln1499_30_fu_1148_p2;
+wire   [7:0] xor_ln1499_33_fu_1162_p2;
+wire   [7:0] xor_ln1499_36_fu_1176_p2;
+wire   [7:0] xor_ln1499_39_fu_1190_p2;
+wire   [7:0] xor_ln1499_18_fu_1092_p2;
+wire   [7:0] xor_ln1499_21_fu_1106_p2;
+wire   [7:0] xor_ln1499_24_fu_1120_p2;
+wire   [7:0] xor_ln1499_27_fu_1134_p2;
+wire   [7:0] xor_ln1499_6_fu_1035_p2;
+wire   [7:0] xor_ln1499_9_fu_1050_p2;
+wire   [7:0] xor_ln1499_12_fu_1064_p2;
+wire   [7:0] xor_ln1499_15_fu_1078_p2;
+wire   [127:0] p_Result_16_3_fu_1254_p17;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -293,21 +335,6 @@ initial begin
 #0 ap_enable_reg_pp0_iter0_reg = 1'b0;
 #0 ap_done_reg = 1'b0;
 end
-
-pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R #(
-    .DataWidth( 8 ),
-    .AddressRange( 256 ),
-    .AddressWidth( 8 ))
-crypto_aes_sbox_V_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(crypto_aes_sbox_V_address0),
-    .ce0(crypto_aes_sbox_V_ce0),
-    .q0(crypto_aes_sbox_V_q0),
-    .address1(crypto_aes_sbox_V_address1),
-    .ce1(crypto_aes_sbox_V_ce1),
-    .q1(crypto_aes_sbox_V_q1)
-);
 
 pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R #(
     .DataWidth( 8 ),
@@ -400,133 +427,158 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        i_fu_108 <= 4'd1;
-    end else if (((icmp_ln47_fu_562_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        i_fu_108 <= add_ln47_fu_740_p2;
+        i_fu_112 <= 4'd1;
+    end else if (((icmp_ln47_fu_429_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        i_fu_112 <= add_ln47_fu_641_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            state_promoted_i_fu_104 <= xor_ln859;
+            state_promoted_i_fu_108 <= xor_ln859;
         end else if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
-            state_promoted_i_fu_104 <= xor_ln859_1_fu_1167_p2;
+            state_promoted_i_fu_108 <= xor_ln859_1_fu_1290_p2;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage3_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-        crypto_aes_mul2_V_load_10_reg_1378 <= crypto_aes_mul2_V_q1;
-        crypto_aes_mul2_V_load_15_reg_1388 <= crypto_aes_mul2_V_q0;
-        crypto_aes_mul3_V_load_14_reg_1383 <= crypto_aes_mul3_V_q0;
-        crypto_aes_mul3_V_load_9_reg_1373 <= crypto_aes_mul3_V_q1;
-        crypto_aes_sbox_V_load_5_reg_1331 <= crypto_aes_sbox_V_q1;
-        crypto_aes_sbox_V_load_6_reg_1337 <= crypto_aes_sbox_V_q0;
+        crypto_aes_mul2_V_load_10_reg_1489 <= crypto_aes_mul2_V_q1;
+        crypto_aes_mul2_V_load_15_reg_1499 <= crypto_aes_mul2_V_q0;
+        crypto_aes_mul3_V_load_14_reg_1494 <= crypto_aes_mul3_V_q0;
+        crypto_aes_mul3_V_load_9_reg_1484 <= crypto_aes_mul3_V_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage9_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage9))) begin
-        crypto_aes_mul2_V_load_11_reg_1740 <= crypto_aes_mul2_V_q0;
-        crypto_aes_mul2_V_load_6_reg_1730 <= crypto_aes_mul2_V_q1;
-        crypto_aes_mul3_V_load_10_reg_1735 <= crypto_aes_mul3_V_q0;
-        crypto_aes_mul3_V_load_5_reg_1725 <= crypto_aes_mul3_V_q1;
-        crypto_aes_sbox_V_load_17_reg_1703 <= crypto_aes_sbox_V_q1;
-        crypto_aes_sbox_V_load_18_reg_1709 <= crypto_aes_sbox_V_q0;
+        crypto_aes_mul2_V_load_11_reg_1799 <= crypto_aes_mul2_V_q0;
+        crypto_aes_mul2_V_load_6_reg_1789 <= crypto_aes_mul2_V_q1;
+        crypto_aes_mul3_V_load_10_reg_1794 <= crypto_aes_mul3_V_q0;
+        crypto_aes_mul3_V_load_5_reg_1784 <= crypto_aes_mul3_V_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage8_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
-        crypto_aes_mul2_V_load_13_reg_1698 <= crypto_aes_mul2_V_q0;
-        crypto_aes_mul2_V_load_8_reg_1673 <= crypto_aes_mul2_V_q1;
-        crypto_aes_mul3_V_load_11_reg_1683 <= crypto_aes_mul3_V_q1;
-        crypto_aes_mul3_V_load_12_reg_1693 <= crypto_aes_mul3_V_q0;
-        crypto_aes_sbox_V_load_15_reg_1641 <= crypto_aes_sbox_V_q1;
-        crypto_aes_sbox_V_load_16_reg_1647 <= crypto_aes_sbox_V_q0;
+        crypto_aes_mul2_V_load_13_reg_1769 <= crypto_aes_mul2_V_q0;
+        crypto_aes_mul2_V_load_8_reg_1744 <= crypto_aes_mul2_V_q1;
+        crypto_aes_mul3_V_load_11_reg_1754 <= crypto_aes_mul3_V_q1;
+        crypto_aes_mul3_V_load_12_reg_1764 <= crypto_aes_mul3_V_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage5_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-        crypto_aes_mul2_V_load_14_reg_1512 <= crypto_aes_mul2_V_q0;
-        crypto_aes_mul2_V_load_3_reg_1482 <= crypto_aes_mul2_V_q1;
-        crypto_aes_mul3_V_load_13_reg_1507 <= crypto_aes_mul3_V_q0;
-        crypto_aes_mul3_V_load_2_reg_1477 <= crypto_aes_mul3_V_q1;
-        crypto_aes_sbox_V_load_10_reg_1461 <= crypto_aes_sbox_V_q0;
-        crypto_aes_sbox_V_load_9_reg_1455 <= crypto_aes_sbox_V_q1;
+        crypto_aes_mul2_V_load_14_reg_1607 <= crypto_aes_mul2_V_q0;
+        crypto_aes_mul2_V_load_3_reg_1577 <= crypto_aes_mul2_V_q1;
+        crypto_aes_mul3_V_load_13_reg_1602 <= crypto_aes_mul3_V_q0;
+        crypto_aes_mul3_V_load_2_reg_1572 <= crypto_aes_mul3_V_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-        crypto_aes_mul2_V_load_2_reg_1606 <= crypto_aes_mul2_V_q1;
-        crypto_aes_mul2_V_load_7_reg_1616 <= crypto_aes_mul2_V_q0;
-        crypto_aes_mul3_V_load_1_reg_1601 <= crypto_aes_mul3_V_q1;
-        crypto_aes_mul3_V_load_6_reg_1611 <= crypto_aes_mul3_V_q0;
-        crypto_aes_sbox_V_load_13_reg_1579 <= crypto_aes_sbox_V_q1;
-        crypto_aes_sbox_V_load_14_reg_1585 <= crypto_aes_sbox_V_q0;
+        crypto_aes_mul2_V_load_2_reg_1685 <= crypto_aes_mul2_V_q1;
+        crypto_aes_mul2_V_load_7_reg_1695 <= crypto_aes_mul2_V_q0;
+        crypto_aes_mul3_V_load_1_reg_1680 <= crypto_aes_mul3_V_q1;
+        crypto_aes_mul3_V_load_6_reg_1690 <= crypto_aes_mul3_V_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage6_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-        crypto_aes_mul2_V_load_4_reg_1549 <= crypto_aes_mul2_V_q1;
-        crypto_aes_mul2_V_load_9_reg_1574 <= crypto_aes_mul2_V_q0;
-        crypto_aes_mul3_V_load_7_reg_1559 <= crypto_aes_mul3_V_q1;
-        crypto_aes_mul3_V_load_8_reg_1569 <= crypto_aes_mul3_V_q0;
-        crypto_aes_sbox_V_load_11_reg_1517 <= crypto_aes_sbox_V_q1;
-        crypto_aes_sbox_V_load_12_reg_1523 <= crypto_aes_sbox_V_q0;
+        crypto_aes_mul2_V_load_4_reg_1636 <= crypto_aes_mul2_V_q1;
+        crypto_aes_mul2_V_load_9_reg_1661 <= crypto_aes_mul2_V_q0;
+        crypto_aes_mul3_V_load_7_reg_1646 <= crypto_aes_mul3_V_q1;
+        crypto_aes_mul3_V_load_8_reg_1656 <= crypto_aes_mul3_V_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage4_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-        crypto_aes_mul2_V_load_5_reg_1440 <= crypto_aes_mul2_V_q0;
-        crypto_aes_mul2_V_load_reg_1415 <= crypto_aes_mul2_V_q1;
-        crypto_aes_mul3_V_load_3_reg_1425 <= crypto_aes_mul3_V_q1;
-        crypto_aes_mul3_V_load_4_reg_1435 <= crypto_aes_mul3_V_q0;
-        crypto_aes_sbox_V_load_7_reg_1393 <= crypto_aes_sbox_V_q1;
-        crypto_aes_sbox_V_load_8_reg_1399 <= crypto_aes_sbox_V_q0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage2_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-        crypto_aes_sbox_V_load_4_reg_1290 <= crypto_aes_sbox_V_q0;
-        crypto_aes_sbox_V_load_reg_1284 <= crypto_aes_sbox_V_q1;
+        crypto_aes_mul2_V_load_5_reg_1543 <= crypto_aes_mul2_V_q0;
+        crypto_aes_mul2_V_load_reg_1518 <= crypto_aes_mul2_V_q1;
+        crypto_aes_mul3_V_load_3_reg_1528 <= crypto_aes_mul3_V_q1;
+        crypto_aes_mul3_V_load_4_reg_1538 <= crypto_aes_mul3_V_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage2_11001) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-        this_round_keys_load_reg_1326 <= this_round_keys_q0;
+        this_round_keys_load_reg_1445 <= this_round_keys_q0;
+        trunc_ln186_3_reg_1411 <= trunc_ln186_3_fu_669_p1;
+        trunc_ln186_4_reg_1418 <= trunc_ln186_4_fu_690_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln47_fu_562_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        tmp_60_10_reg_1254 <= {{state_promoted_i_fu_104[95:88]}};
-        tmp_60_11_reg_1259 <= {{state_promoted_i_fu_104[103:96]}};
-        tmp_60_12_reg_1264 <= {{state_promoted_i_fu_104[111:104]}};
-        tmp_60_13_reg_1269 <= {{state_promoted_i_fu_104[119:112]}};
-        tmp_60_14_reg_1274 <= {{state_promoted_i_fu_104[127:120]}};
-        tmp_60_1_reg_1209 <= {{state_promoted_i_fu_104[23:16]}};
-        tmp_60_2_reg_1214 <= {{state_promoted_i_fu_104[31:24]}};
-        tmp_60_3_reg_1219 <= {{state_promoted_i_fu_104[39:32]}};
-        tmp_60_4_reg_1224 <= {{state_promoted_i_fu_104[47:40]}};
-        tmp_60_5_reg_1229 <= {{state_promoted_i_fu_104[55:48]}};
-        tmp_60_6_reg_1234 <= {{state_promoted_i_fu_104[63:56]}};
-        tmp_60_7_reg_1239 <= {{state_promoted_i_fu_104[71:64]}};
-        tmp_60_8_reg_1244 <= {{state_promoted_i_fu_104[79:72]}};
-        tmp_60_9_reg_1249 <= {{state_promoted_i_fu_104[87:80]}};
+    if (((icmp_ln47_fu_429_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        tmp_10_reg_1376 <= {{state_promoted_i_fu_108[87:80]}};
+        tmp_11_reg_1381 <= {{state_promoted_i_fu_108[95:88]}};
+        tmp_12_reg_1386 <= {{state_promoted_i_fu_108[103:96]}};
+        tmp_13_reg_1391 <= {{state_promoted_i_fu_108[111:104]}};
+        tmp_14_reg_1396 <= {{state_promoted_i_fu_108[119:112]}};
+        tmp_15_reg_1401 <= {{state_promoted_i_fu_108[127:120]}};
+        tmp_2_reg_1336 <= {{state_promoted_i_fu_108[23:16]}};
+        tmp_3_reg_1341 <= {{state_promoted_i_fu_108[31:24]}};
+        tmp_4_reg_1346 <= {{state_promoted_i_fu_108[39:32]}};
+        tmp_5_reg_1351 <= {{state_promoted_i_fu_108[47:40]}};
+        tmp_6_reg_1356 <= {{state_promoted_i_fu_108[55:48]}};
+        tmp_7_reg_1361 <= {{state_promoted_i_fu_108[63:56]}};
+        tmp_8_reg_1366 <= {{state_promoted_i_fu_108[71:64]}};
+        tmp_9_reg_1371 <= {{state_promoted_i_fu_108[79:72]}};
+        trunc_ln186_1_reg_1322 <= trunc_ln186_1_fu_465_p1;
+        trunc_ln186_2_reg_1329 <= trunc_ln186_2_fu_497_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage5_11001) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
+        trunc_ln186_10_reg_1565 <= trunc_ln186_10_fu_846_p1;
+        trunc_ln186_9_reg_1558 <= trunc_ln186_9_fu_825_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage6_11001) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
+        trunc_ln186_11_reg_1612 <= trunc_ln186_11_fu_877_p1;
+        trunc_ln186_12_reg_1619 <= trunc_ln186_12_fu_898_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage7_11001) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        trunc_ln186_13_reg_1666 <= trunc_ln186_13_fu_929_p1;
+        trunc_ln186_14_reg_1673 <= trunc_ln186_14_fu_950_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage8_11001) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
+        trunc_ln186_15_reg_1720 <= trunc_ln186_15_fu_981_p1;
+        trunc_ln186_16_reg_1727 <= trunc_ln186_16_fu_1002_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage3_11001) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
+        trunc_ln186_5_reg_1450 <= trunc_ln186_5_fu_721_p1;
+        trunc_ln186_6_reg_1457 <= trunc_ln186_6_fu_742_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage4_11001) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
+        trunc_ln186_7_reg_1504 <= trunc_ln186_7_fu_773_p1;
+        trunc_ln186_8_reg_1511 <= trunc_ln186_8_fu_794_p1;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln47_fu_562_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((icmp_ln47_fu_429_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         ap_condition_exit_pp0_iter0_stage1 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage1 = 1'b0;
@@ -550,7 +602,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b0) & (ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_start_int == 1'b0))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -584,21 +636,21 @@ end
 always @ (*) begin
     if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
         if (((1'b0 == ap_block_pp0_stage9) & (1'b1 == ap_CS_fsm_pp0_stage9))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_28_fu_897_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_12_fu_1021_p1;
         end else if (((1'b0 == ap_block_pp0_stage8) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_27_fu_885_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_11_fu_1011_p1;
         end else if (((1'b0 == ap_block_pp0_stage7) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_29_fu_865_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_13_fu_959_p1;
         end else if (((1'b0 == ap_block_pp0_stage6) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_23_fu_845_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_7_fu_907_p1;
         end else if (((1'b0 == ap_block_pp0_stage5) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_25_fu_825_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_9_fu_855_p1;
         end else if (((1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_30_fu_805_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_14_fu_803_p1;
         end else if (((1'b0 == ap_block_pp0_stage3) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_21_fu_785_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_5_fu_751_p1;
         end else if (((1'b0 == ap_block_pp0_stage2) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-            crypto_aes_mul2_V_address0 = zext_ln668_31_fu_765_p1;
+            crypto_aes_mul2_V_address0 = zext_ln668_15_fu_699_p1;
         end else begin
             crypto_aes_mul2_V_address0 = 'bx;
         end
@@ -610,21 +662,21 @@ end
 always @ (*) begin
     if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
         if (((1'b0 == ap_block_pp0_stage9) & (1'b1 == ap_CS_fsm_pp0_stage9))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_17_fu_891_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_1_fu_1016_p1;
         end else if (((1'b0 == ap_block_pp0_stage8) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_22_fu_879_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_6_fu_1006_p1;
         end else if (((1'b0 == ap_block_pp0_stage7) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_24_fu_859_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_8_fu_954_p1;
         end else if (((1'b0 == ap_block_pp0_stage6) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_18_fu_839_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_2_fu_902_p1;
         end else if (((1'b0 == ap_block_pp0_stage5) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_20_fu_819_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_4_fu_850_p1;
         end else if (((1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_19_fu_799_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_3_fu_798_p1;
         end else if (((1'b0 == ap_block_pp0_stage3) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_16_fu_779_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_fu_746_p1;
         end else if (((1'b0 == ap_block_pp0_stage2) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-            crypto_aes_mul2_V_address1 = zext_ln668_26_fu_759_p1;
+            crypto_aes_mul2_V_address1 = zext_ln668_10_fu_694_p1;
         end else begin
             crypto_aes_mul2_V_address1 = 'bx;
         end
@@ -652,21 +704,21 @@ end
 always @ (*) begin
     if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
         if (((1'b0 == ap_block_pp0_stage9) & (1'b1 == ap_CS_fsm_pp0_stage9))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_28_fu_897_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_12_fu_1021_p1;
         end else if (((1'b0 == ap_block_pp0_stage8) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_27_fu_885_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_11_fu_1011_p1;
         end else if (((1'b0 == ap_block_pp0_stage7) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_29_fu_865_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_13_fu_959_p1;
         end else if (((1'b0 == ap_block_pp0_stage6) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_23_fu_845_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_7_fu_907_p1;
         end else if (((1'b0 == ap_block_pp0_stage5) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_25_fu_825_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_9_fu_855_p1;
         end else if (((1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_30_fu_805_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_14_fu_803_p1;
         end else if (((1'b0 == ap_block_pp0_stage3) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_21_fu_785_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_5_fu_751_p1;
         end else if (((1'b0 == ap_block_pp0_stage2) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-            crypto_aes_mul3_V_address0 = zext_ln668_31_fu_765_p1;
+            crypto_aes_mul3_V_address0 = zext_ln668_15_fu_699_p1;
         end else begin
             crypto_aes_mul3_V_address0 = 'bx;
         end
@@ -678,21 +730,21 @@ end
 always @ (*) begin
     if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
         if (((1'b0 == ap_block_pp0_stage9) & (1'b1 == ap_CS_fsm_pp0_stage9))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_17_fu_891_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_1_fu_1016_p1;
         end else if (((1'b0 == ap_block_pp0_stage8) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_22_fu_879_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_6_fu_1006_p1;
         end else if (((1'b0 == ap_block_pp0_stage7) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_24_fu_859_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_8_fu_954_p1;
         end else if (((1'b0 == ap_block_pp0_stage6) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_18_fu_839_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_2_fu_902_p1;
         end else if (((1'b0 == ap_block_pp0_stage5) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_20_fu_819_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_4_fu_850_p1;
         end else if (((1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_19_fu_799_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_3_fu_798_p1;
         end else if (((1'b0 == ap_block_pp0_stage3) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_16_fu_779_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_fu_746_p1;
         end else if (((1'b0 == ap_block_pp0_stage2) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-            crypto_aes_mul3_V_address1 = zext_ln668_26_fu_759_p1;
+            crypto_aes_mul3_V_address1 = zext_ln668_10_fu_694_p1;
         end else begin
             crypto_aes_mul3_V_address1 = 'bx;
         end
@@ -718,75 +770,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
-        if (((1'b0 == ap_block_pp0_stage8) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_15_fu_875_p1;
-        end else if (((1'b0 == ap_block_pp0_stage7) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_13_fu_855_p1;
-        end else if (((1'b0 == ap_block_pp0_stage6) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_11_fu_835_p1;
-        end else if (((1'b0 == ap_block_pp0_stage5) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_9_fu_815_p1;
-        end else if (((1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_7_fu_795_p1;
-        end else if (((1'b0 == ap_block_pp0_stage3) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_5_fu_775_p1;
-        end else if (((1'b0 == ap_block_pp0_stage2) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_3_fu_755_p1;
-        end else if (((1'b0 == ap_block_pp0_stage1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-            crypto_aes_sbox_V_address0 = zext_ln668_fu_595_p1;
-        end else begin
-            crypto_aes_sbox_V_address0 = 'bx;
-        end
-    end else begin
-        crypto_aes_sbox_V_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
-        if (((1'b0 == ap_block_pp0_stage8) & (1'b1 == ap_CS_fsm_pp0_stage8))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_14_fu_871_p1;
-        end else if (((1'b0 == ap_block_pp0_stage7) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_12_fu_851_p1;
-        end else if (((1'b0 == ap_block_pp0_stage6) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_10_fu_831_p1;
-        end else if (((1'b0 == ap_block_pp0_stage5) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_8_fu_811_p1;
-        end else if (((1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_6_fu_791_p1;
-        end else if (((1'b0 == ap_block_pp0_stage3) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_4_fu_771_p1;
-        end else if (((1'b0 == ap_block_pp0_stage2) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_2_fu_751_p1;
-        end else if (((1'b0 == ap_block_pp0_stage1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-            crypto_aes_sbox_V_address1 = zext_ln668_1_fu_580_p1;
-        end else begin
-            crypto_aes_sbox_V_address1 = 'bx;
-        end
-    end else begin
-        crypto_aes_sbox_V_address1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((1'b0 == ap_block_pp0_stage8_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage8)) | ((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7)) | ((1'b0 == ap_block_pp0_stage6_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6)) | ((1'b0 == ap_block_pp0_stage5_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5)) | ((1'b0 == ap_block_pp0_stage4_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4)) | ((1'b0 == ap_block_pp0_stage3_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3)) | ((1'b0 == ap_block_pp0_stage2_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2)) | ((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
-        crypto_aes_sbox_V_ce0 = 1'b1;
-    end else begin
-        crypto_aes_sbox_V_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((1'b0 == ap_block_pp0_stage8_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage8)) | ((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7)) | ((1'b0 == ap_block_pp0_stage6_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6)) | ((1'b0 == ap_block_pp0_stage5_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5)) | ((1'b0 == ap_block_pp0_stage4_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4)) | ((1'b0 == ap_block_pp0_stage3_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3)) | ((1'b0 == ap_block_pp0_stage2_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2)) | ((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
-        crypto_aes_sbox_V_ce1 = 1'b1;
-    end else begin
-        crypto_aes_sbox_V_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln47_fu_562_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((icmp_ln47_fu_429_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         state_promoted_i_out_ap_vld = 1'b1;
     end else begin
         state_promoted_i_out_ap_vld = 1'b0;
@@ -881,7 +865,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln47_fu_740_p2 = (i_fu_108 + 4'd1);
+assign add_ln47_fu_641_p2 = (i_fu_112 + 4'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -991,180 +975,276 @@ assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage1;
 
-assign i_cast_fu_571_p1 = i_fu_108;
+assign i_cast_fu_438_p1 = i_fu_112;
 
-assign icmp_ln47_fu_562_p2 = ((i_fu_108 == 4'd10) ? 1'b1 : 1'b0);
+assign icmp_ln47_fu_429_p2 = ((i_fu_112 == 4'd10) ? 1'b1 : 1'b0);
 
-assign p_Result_16_3_fu_1131_p17 = {{{{{{{{{{{{{{{{xor_ln1499_42_fu_1082_p2}, {xor_ln1499_45_fu_1096_p2}}, {xor_ln1499_48_fu_1111_p2}}, {xor_ln1499_51_fu_1126_p2}}, {xor_ln1499_30_fu_1025_p2}}, {xor_ln1499_33_fu_1040_p2}}, {xor_ln1499_36_fu_1054_p2}}, {xor_ln1499_39_fu_1067_p2}}, {xor_ln1499_18_fu_970_p2}}, {xor_ln1499_21_fu_984_p2}}, {xor_ln1499_24_fu_997_p2}}, {xor_ln1499_27_fu_1011_p2}}, {xor_ln1499_6_fu_913_p2}}, {xor_ln1499_9_fu_927_p2}}, {xor_ln1499_12_fu_941_p2}}, {xor_ln1499_15_fu_956_p2}};
+assign lshr_ln186_10_fu_871_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_13_fu_867_p1;
 
-assign state_promoted_i_out = state_promoted_i_fu_104;
+assign lshr_ln186_11_fu_892_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_14_fu_888_p1;
 
-assign this_round_keys_address0 = i_cast_fu_571_p1;
+assign lshr_ln186_12_fu_923_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_15_fu_919_p1;
 
-assign tmp_60_s_fu_585_p4 = {{state_promoted_i_fu_104[15:8]}};
+assign lshr_ln186_13_fu_944_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_16_fu_940_p1;
 
-assign trunc_ln668_fu_576_p1 = state_promoted_i_fu_104[7:0];
+assign lshr_ln186_14_fu_975_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_17_fu_971_p1;
 
-assign xor_ln1499_10_fu_933_p2 = (crypto_aes_sbox_V_load_6_reg_1337 ^ crypto_aes_sbox_V_load_17_reg_1703);
+assign lshr_ln186_15_fu_996_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_18_fu_992_p1;
 
-assign xor_ln1499_11_fu_937_p2 = (crypto_aes_mul3_V_load_2_reg_1477 ^ crypto_aes_mul2_V_load_2_reg_1606);
+assign lshr_ln186_1_fu_491_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_4_fu_487_p1;
 
-assign xor_ln1499_12_fu_941_p2 = (xor_ln1499_11_fu_937_p2 ^ xor_ln1499_10_fu_933_p2);
+assign lshr_ln186_2_fu_663_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_5_fu_659_p1;
 
-assign xor_ln1499_13_fu_947_p2 = (crypto_aes_sbox_V_load_17_reg_1703 ^ crypto_aes_sbox_V_load_12_reg_1523);
+assign lshr_ln186_3_fu_684_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_6_fu_680_p1;
 
-assign xor_ln1499_14_fu_951_p2 = (xor_ln1499_13_fu_947_p2 ^ crypto_aes_mul2_V_load_3_reg_1482);
+assign lshr_ln186_4_fu_715_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_7_fu_711_p1;
 
-assign xor_ln1499_15_fu_956_p2 = (xor_ln1499_14_fu_951_p2 ^ crypto_aes_mul3_V_load_3_reg_1425);
+assign lshr_ln186_5_fu_736_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_8_fu_732_p1;
 
-assign xor_ln1499_16_fu_965_p2 = (xor_ln1499_17_fu_961_p2 ^ crypto_aes_mul2_V_load_4_reg_1549);
+assign lshr_ln186_6_fu_767_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_9_fu_763_p1;
 
-assign xor_ln1499_17_fu_961_p2 = (crypto_aes_sbox_V_load_16_reg_1647 ^ crypto_aes_sbox_V_load_11_reg_1517);
+assign lshr_ln186_7_fu_788_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_10_fu_784_p1;
 
-assign xor_ln1499_18_fu_970_p2 = (xor_ln1499_16_fu_965_p2 ^ crypto_aes_mul3_V_load_4_reg_1435);
+assign lshr_ln186_8_fu_819_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_11_fu_815_p1;
 
-assign xor_ln1499_19_fu_975_p2 = (crypto_aes_sbox_V_load_11_reg_1517 ^ crypto_aes_sbox_V_load_10_reg_1461);
+assign lshr_ln186_9_fu_840_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_12_fu_836_p1;
 
-assign xor_ln1499_20_fu_979_p2 = (xor_ln1499_19_fu_975_p2 ^ crypto_aes_mul3_V_load_5_reg_1725);
+assign lshr_ln186_fu_459_p2 = 2048'd2869618975290639062594974519597816386035077209210385677284518162336985023502962151465775969507961862820568736543004676439868535775640188584098917533413284844376797297285941524888791401501466624530423689326528054213168201056672989590893583853414110162539122864583953358348775951166211353578440977400428507475679327181038682772945817200201960445064847785221508011893952350688324234443749897213621340677040612747745615276448919507935121141307752692835344166708617454322778699219895865633266409040561742768581056182730443599545881830075941537620590442514083341749674612746994879540562701631131184186066652929592955206755 >> zext_ln186_fu_455_p1;
 
-assign xor_ln1499_21_fu_984_p2 = (xor_ln1499_20_fu_979_p2 ^ crypto_aes_mul2_V_load_5_reg_1440);
+assign p_Result_16_3_fu_1254_p17 = {{{{{{{{{{{{{{{{xor_ln1499_42_fu_1205_p2}, {xor_ln1499_45_fu_1219_p2}}, {xor_ln1499_48_fu_1234_p2}}, {xor_ln1499_51_fu_1249_p2}}, {xor_ln1499_30_fu_1148_p2}}, {xor_ln1499_33_fu_1162_p2}}, {xor_ln1499_36_fu_1176_p2}}, {xor_ln1499_39_fu_1190_p2}}, {xor_ln1499_18_fu_1092_p2}}, {xor_ln1499_21_fu_1106_p2}}, {xor_ln1499_24_fu_1120_p2}}, {xor_ln1499_27_fu_1134_p2}}, {xor_ln1499_6_fu_1035_p2}}, {xor_ln1499_9_fu_1050_p2}}, {xor_ln1499_12_fu_1064_p2}}, {xor_ln1499_15_fu_1078_p2}};
 
-assign xor_ln1499_22_fu_989_p2 = (crypto_aes_sbox_V_load_5_reg_1331 ^ crypto_aes_sbox_V_load_10_reg_1461);
+assign shl_ln186_10_fu_860_p3 = {{tmp_10_reg_1376}, {3'd0}};
 
-assign xor_ln1499_23_fu_993_p2 = (crypto_aes_mul3_V_load_6_reg_1611 ^ crypto_aes_mul2_V_load_6_reg_1730);
+assign shl_ln186_11_fu_881_p3 = {{tmp_11_reg_1381}, {3'd0}};
 
-assign xor_ln1499_24_fu_997_p2 = (xor_ln1499_23_fu_993_p2 ^ xor_ln1499_22_fu_989_p2);
+assign shl_ln186_12_fu_912_p3 = {{tmp_12_reg_1386}, {3'd0}};
 
-assign xor_ln1499_25_fu_1003_p2 = (crypto_aes_sbox_V_load_5_reg_1331 ^ crypto_aes_sbox_V_load_16_reg_1647);
+assign shl_ln186_13_fu_933_p3 = {{tmp_13_reg_1391}, {3'd0}};
 
-assign xor_ln1499_26_fu_1007_p2 = (crypto_aes_mul3_V_load_7_reg_1559 ^ crypto_aes_mul2_V_load_7_reg_1616);
+assign shl_ln186_14_fu_964_p3 = {{tmp_14_reg_1396}, {3'd0}};
 
-assign xor_ln1499_27_fu_1011_p2 = (xor_ln1499_26_fu_1007_p2 ^ xor_ln1499_25_fu_1003_p2);
+assign shl_ln186_15_fu_985_p3 = {{tmp_15_reg_1401}, {3'd0}};
 
-assign xor_ln1499_28_fu_1017_p2 = (crypto_aes_mul3_V_load_8_reg_1569 ^ crypto_aes_mul2_V_load_8_reg_1673);
+assign shl_ln186_1_fu_447_p3 = {{trunc_ln186_fu_443_p1}, {3'd0}};
 
-assign xor_ln1499_29_fu_1021_p2 = (crypto_aes_sbox_V_load_4_reg_1290 ^ crypto_aes_sbox_V_load_15_reg_1641);
+assign shl_ln186_2_fu_479_p3 = {{tmp_s_fu_469_p4}, {3'd0}};
 
-assign xor_ln1499_30_fu_1025_p2 = (xor_ln1499_29_fu_1021_p2 ^ xor_ln1499_28_fu_1017_p2);
+assign shl_ln186_3_fu_652_p3 = {{tmp_2_reg_1336}, {3'd0}};
 
-assign xor_ln1499_31_fu_1031_p2 = (crypto_aes_sbox_V_load_15_reg_1641 ^ crypto_aes_sbox_V_load_14_reg_1585);
+assign shl_ln186_4_fu_673_p3 = {{tmp_3_reg_1341}, {3'd0}};
 
-assign xor_ln1499_32_fu_1035_p2 = (xor_ln1499_31_fu_1031_p2 ^ crypto_aes_mul2_V_load_9_reg_1574);
+assign shl_ln186_5_fu_704_p3 = {{tmp_4_reg_1346}, {3'd0}};
 
-assign xor_ln1499_33_fu_1040_p2 = (xor_ln1499_32_fu_1035_p2 ^ crypto_aes_mul3_V_load_9_reg_1373);
+assign shl_ln186_6_fu_725_p3 = {{tmp_5_reg_1351}, {3'd0}};
 
-assign xor_ln1499_34_fu_1045_p2 = (crypto_aes_sbox_V_load_9_reg_1455 ^ crypto_aes_sbox_V_load_14_reg_1585);
+assign shl_ln186_7_fu_756_p3 = {{tmp_6_reg_1356}, {3'd0}};
 
-assign xor_ln1499_35_fu_1049_p2 = (xor_ln1499_34_fu_1045_p2 ^ crypto_aes_mul3_V_load_10_reg_1735);
+assign shl_ln186_8_fu_777_p3 = {{tmp_7_reg_1361}, {3'd0}};
 
-assign xor_ln1499_36_fu_1054_p2 = (xor_ln1499_35_fu_1049_p2 ^ crypto_aes_mul2_V_load_10_reg_1378);
+assign shl_ln186_9_fu_808_p3 = {{tmp_8_reg_1366}, {3'd0}};
 
-assign xor_ln1499_37_fu_1059_p2 = (crypto_aes_sbox_V_load_9_reg_1455 ^ crypto_aes_sbox_V_load_4_reg_1290);
+assign shl_ln186_s_fu_829_p3 = {{tmp_9_reg_1371}, {3'd0}};
 
-assign xor_ln1499_38_fu_1063_p2 = (crypto_aes_mul3_V_load_11_reg_1683 ^ crypto_aes_mul2_V_load_11_reg_1740);
+assign state_promoted_i_out = state_promoted_i_fu_108;
 
-assign xor_ln1499_39_fu_1067_p2 = (xor_ln1499_38_fu_1063_p2 ^ xor_ln1499_37_fu_1059_p2);
+assign this_round_keys_address0 = i_cast_fu_438_p1;
 
-assign xor_ln1499_40_fu_1073_p2 = (crypto_aes_mul3_V_load_12_reg_1693 ^ crypto_aes_mul2_V_q0);
+assign tmp_s_fu_469_p4 = {{state_promoted_i_fu_108[15:8]}};
 
-assign xor_ln1499_41_fu_1078_p2 = (crypto_aes_sbox_V_load_reg_1284 ^ crypto_aes_sbox_V_load_8_reg_1399);
+assign trunc_ln186_10_fu_846_p1 = lshr_ln186_9_fu_840_p2[7:0];
 
-assign xor_ln1499_42_fu_1082_p2 = (xor_ln1499_41_fu_1078_p2 ^ xor_ln1499_40_fu_1073_p2);
+assign trunc_ln186_11_fu_877_p1 = lshr_ln186_10_fu_871_p2[7:0];
 
-assign xor_ln1499_43_fu_1088_p2 = (crypto_aes_sbox_V_load_reg_1284 ^ crypto_aes_sbox_V_load_18_reg_1709);
+assign trunc_ln186_12_fu_898_p1 = lshr_ln186_11_fu_892_p2[7:0];
 
-assign xor_ln1499_44_fu_1092_p2 = (crypto_aes_mul3_V_load_13_reg_1507 ^ crypto_aes_mul2_V_load_13_reg_1698);
+assign trunc_ln186_13_fu_929_p1 = lshr_ln186_12_fu_923_p2[7:0];
 
-assign xor_ln1499_45_fu_1096_p2 = (xor_ln1499_44_fu_1092_p2 ^ xor_ln1499_43_fu_1088_p2);
+assign trunc_ln186_14_fu_950_p1 = lshr_ln186_13_fu_944_p2[7:0];
 
-assign xor_ln1499_46_fu_1102_p2 = (crypto_aes_sbox_V_load_18_reg_1709 ^ crypto_aes_sbox_V_load_13_reg_1579);
+assign trunc_ln186_15_fu_981_p1 = lshr_ln186_14_fu_975_p2[7:0];
 
-assign xor_ln1499_47_fu_1106_p2 = (xor_ln1499_46_fu_1102_p2 ^ crypto_aes_mul2_V_load_14_reg_1512);
+assign trunc_ln186_16_fu_1002_p1 = lshr_ln186_15_fu_996_p2[7:0];
 
-assign xor_ln1499_48_fu_1111_p2 = (xor_ln1499_47_fu_1106_p2 ^ crypto_aes_mul3_V_load_14_reg_1383);
+assign trunc_ln186_1_fu_465_p1 = lshr_ln186_fu_459_p2[7:0];
 
-assign xor_ln1499_49_fu_1116_p2 = (crypto_aes_sbox_V_load_8_reg_1399 ^ crypto_aes_sbox_V_load_13_reg_1579);
+assign trunc_ln186_2_fu_497_p1 = lshr_ln186_1_fu_491_p2[7:0];
 
-assign xor_ln1499_50_fu_1120_p2 = (xor_ln1499_49_fu_1116_p2 ^ crypto_aes_mul3_V_q0);
+assign trunc_ln186_3_fu_669_p1 = lshr_ln186_2_fu_663_p2[7:0];
 
-assign xor_ln1499_51_fu_1126_p2 = (xor_ln1499_50_fu_1120_p2 ^ crypto_aes_mul2_V_load_15_reg_1388);
+assign trunc_ln186_4_fu_690_p1 = lshr_ln186_3_fu_684_p2[7:0];
 
-assign xor_ln1499_5_fu_903_p2 = (crypto_aes_sbox_V_load_7_reg_1393 ^ crypto_aes_sbox_V_load_12_reg_1523);
+assign trunc_ln186_5_fu_721_p1 = lshr_ln186_4_fu_715_p2[7:0];
 
-assign xor_ln1499_6_fu_913_p2 = (xor_ln1499_fu_907_p2 ^ crypto_aes_mul2_V_load_reg_1415);
+assign trunc_ln186_6_fu_742_p1 = lshr_ln186_5_fu_736_p2[7:0];
 
-assign xor_ln1499_7_fu_918_p2 = (crypto_aes_sbox_V_load_7_reg_1393 ^ crypto_aes_sbox_V_load_6_reg_1337);
+assign trunc_ln186_7_fu_773_p1 = lshr_ln186_6_fu_767_p2[7:0];
 
-assign xor_ln1499_8_fu_922_p2 = (crypto_aes_mul3_V_load_1_reg_1601 ^ crypto_aes_mul2_V_q1);
+assign trunc_ln186_8_fu_794_p1 = lshr_ln186_7_fu_788_p2[7:0];
 
-assign xor_ln1499_9_fu_927_p2 = (xor_ln1499_8_fu_922_p2 ^ xor_ln1499_7_fu_918_p2);
+assign trunc_ln186_9_fu_825_p1 = lshr_ln186_8_fu_819_p2[7:0];
 
-assign xor_ln1499_fu_907_p2 = (xor_ln1499_5_fu_903_p2 ^ crypto_aes_mul3_V_q1);
+assign trunc_ln186_fu_443_p1 = state_promoted_i_fu_108[7:0];
 
-assign xor_ln859_1_fu_1167_p2 = (this_round_keys_load_reg_1326 ^ p_Result_16_3_fu_1131_p17);
+assign xor_ln1499_10_fu_1056_p2 = (crypto_aes_mul3_V_load_2_reg_1572 ^ crypto_aes_mul2_V_load_2_reg_1685);
 
-assign zext_ln668_10_fu_831_p1 = tmp_60_9_reg_1249;
+assign xor_ln1499_11_fu_1060_p2 = (trunc_ln186_4_reg_1418 ^ trunc_ln186_15_reg_1720);
 
-assign zext_ln668_11_fu_835_p1 = tmp_60_10_reg_1254;
+assign xor_ln1499_12_fu_1064_p2 = (xor_ln1499_11_fu_1060_p2 ^ xor_ln1499_10_fu_1056_p2);
 
-assign zext_ln668_12_fu_851_p1 = tmp_60_11_reg_1259;
+assign xor_ln1499_13_fu_1070_p2 = (crypto_aes_mul3_V_load_3_reg_1528 ^ crypto_aes_mul2_V_load_3_reg_1577);
 
-assign zext_ln668_13_fu_855_p1 = tmp_60_12_reg_1264;
+assign xor_ln1499_14_fu_1074_p2 = (trunc_ln186_15_reg_1720 ^ trunc_ln186_10_reg_1565);
 
-assign zext_ln668_14_fu_871_p1 = tmp_60_13_reg_1269;
+assign xor_ln1499_15_fu_1078_p2 = (xor_ln1499_14_fu_1074_p2 ^ xor_ln1499_13_fu_1070_p2);
 
-assign zext_ln668_15_fu_875_p1 = tmp_60_14_reg_1274;
+assign xor_ln1499_16_fu_1084_p2 = (crypto_aes_mul3_V_load_4_reg_1538 ^ crypto_aes_mul2_V_load_4_reg_1636);
 
-assign zext_ln668_16_fu_779_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_17_fu_1088_p2 = (trunc_ln186_9_reg_1558 ^ trunc_ln186_14_reg_1673);
 
-assign zext_ln668_17_fu_891_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_18_fu_1092_p2 = (xor_ln1499_17_fu_1088_p2 ^ xor_ln1499_16_fu_1084_p2);
 
-assign zext_ln668_18_fu_839_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_19_fu_1098_p2 = (crypto_aes_mul3_V_load_5_reg_1784 ^ crypto_aes_mul2_V_load_5_reg_1543);
 
-assign zext_ln668_19_fu_799_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_20_fu_1102_p2 = (trunc_ln186_9_reg_1558 ^ trunc_ln186_8_reg_1511);
 
-assign zext_ln668_1_fu_580_p1 = trunc_ln668_fu_576_p1;
+assign xor_ln1499_21_fu_1106_p2 = (xor_ln1499_20_fu_1102_p2 ^ xor_ln1499_19_fu_1098_p2);
 
-assign zext_ln668_20_fu_819_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_22_fu_1112_p2 = (crypto_aes_mul3_V_load_6_reg_1690 ^ crypto_aes_mul2_V_load_6_reg_1789);
 
-assign zext_ln668_21_fu_785_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_23_fu_1116_p2 = (trunc_ln186_8_reg_1511 ^ trunc_ln186_3_reg_1411);
 
-assign zext_ln668_22_fu_879_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_24_fu_1120_p2 = (xor_ln1499_23_fu_1116_p2 ^ xor_ln1499_22_fu_1112_p2);
 
-assign zext_ln668_23_fu_845_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_25_fu_1126_p2 = (crypto_aes_mul3_V_load_7_reg_1646 ^ crypto_aes_mul2_V_load_7_reg_1695);
 
-assign zext_ln668_24_fu_859_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_26_fu_1130_p2 = (trunc_ln186_3_reg_1411 ^ trunc_ln186_14_reg_1673);
 
-assign zext_ln668_25_fu_825_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_27_fu_1134_p2 = (xor_ln1499_26_fu_1130_p2 ^ xor_ln1499_25_fu_1126_p2);
 
-assign zext_ln668_26_fu_759_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_28_fu_1140_p2 = (crypto_aes_mul3_V_load_8_reg_1656 ^ crypto_aes_mul2_V_load_8_reg_1744);
 
-assign zext_ln668_27_fu_885_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_29_fu_1144_p2 = (trunc_ln186_2_reg_1329 ^ trunc_ln186_13_reg_1666);
 
-assign zext_ln668_28_fu_897_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_30_fu_1148_p2 = (xor_ln1499_29_fu_1144_p2 ^ xor_ln1499_28_fu_1140_p2);
 
-assign zext_ln668_29_fu_865_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_31_fu_1154_p2 = (crypto_aes_mul3_V_load_9_reg_1484 ^ crypto_aes_mul2_V_load_9_reg_1661);
 
-assign zext_ln668_2_fu_751_p1 = tmp_60_1_reg_1209;
+assign xor_ln1499_32_fu_1158_p2 = (trunc_ln186_13_reg_1666 ^ trunc_ln186_12_reg_1619);
 
-assign zext_ln668_30_fu_805_p1 = crypto_aes_sbox_V_q0;
+assign xor_ln1499_33_fu_1162_p2 = (xor_ln1499_32_fu_1158_p2 ^ xor_ln1499_31_fu_1154_p2);
 
-assign zext_ln668_31_fu_765_p1 = crypto_aes_sbox_V_q1;
+assign xor_ln1499_34_fu_1168_p2 = (crypto_aes_mul3_V_load_10_reg_1794 ^ crypto_aes_mul2_V_load_10_reg_1489);
 
-assign zext_ln668_3_fu_755_p1 = tmp_60_2_reg_1214;
+assign xor_ln1499_35_fu_1172_p2 = (trunc_ln186_7_reg_1504 ^ trunc_ln186_12_reg_1619);
 
-assign zext_ln668_4_fu_771_p1 = tmp_60_3_reg_1219;
+assign xor_ln1499_36_fu_1176_p2 = (xor_ln1499_35_fu_1172_p2 ^ xor_ln1499_34_fu_1168_p2);
 
-assign zext_ln668_5_fu_775_p1 = tmp_60_4_reg_1224;
+assign xor_ln1499_37_fu_1182_p2 = (crypto_aes_mul3_V_load_11_reg_1754 ^ crypto_aes_mul2_V_load_11_reg_1799);
 
-assign zext_ln668_6_fu_791_p1 = tmp_60_5_reg_1229;
+assign xor_ln1499_38_fu_1186_p2 = (trunc_ln186_7_reg_1504 ^ trunc_ln186_2_reg_1329);
 
-assign zext_ln668_7_fu_795_p1 = tmp_60_6_reg_1234;
+assign xor_ln1499_39_fu_1190_p2 = (xor_ln1499_38_fu_1186_p2 ^ xor_ln1499_37_fu_1182_p2);
 
-assign zext_ln668_8_fu_811_p1 = tmp_60_7_reg_1239;
+assign xor_ln1499_40_fu_1196_p2 = (crypto_aes_mul3_V_load_12_reg_1764 ^ crypto_aes_mul2_V_q0);
 
-assign zext_ln668_9_fu_815_p1 = tmp_60_8_reg_1244;
+assign xor_ln1499_41_fu_1201_p2 = (trunc_ln186_6_reg_1457 ^ trunc_ln186_1_reg_1322);
 
-assign zext_ln668_fu_595_p1 = tmp_60_s_fu_585_p4;
+assign xor_ln1499_42_fu_1205_p2 = (xor_ln1499_41_fu_1201_p2 ^ xor_ln1499_40_fu_1196_p2);
+
+assign xor_ln1499_43_fu_1211_p2 = (crypto_aes_mul3_V_load_13_reg_1602 ^ crypto_aes_mul2_V_load_13_reg_1769);
+
+assign xor_ln1499_44_fu_1215_p2 = (trunc_ln186_1_reg_1322 ^ trunc_ln186_16_reg_1727);
+
+assign xor_ln1499_45_fu_1219_p2 = (xor_ln1499_44_fu_1215_p2 ^ xor_ln1499_43_fu_1211_p2);
+
+assign xor_ln1499_46_fu_1229_p2 = (xor_ln1499_47_fu_1225_p2 ^ crypto_aes_mul2_V_load_14_reg_1607);
+
+assign xor_ln1499_47_fu_1225_p2 = (trunc_ln186_16_reg_1727 ^ trunc_ln186_11_reg_1612);
+
+assign xor_ln1499_48_fu_1234_p2 = (xor_ln1499_46_fu_1229_p2 ^ crypto_aes_mul3_V_load_14_reg_1494);
+
+assign xor_ln1499_49_fu_1243_p2 = (xor_ln1499_50_fu_1239_p2 ^ crypto_aes_mul3_V_q0);
+
+assign xor_ln1499_50_fu_1239_p2 = (trunc_ln186_6_reg_1457 ^ trunc_ln186_11_reg_1612);
+
+assign xor_ln1499_51_fu_1249_p2 = (xor_ln1499_49_fu_1243_p2 ^ crypto_aes_mul2_V_load_15_reg_1499);
+
+assign xor_ln1499_5_fu_1031_p2 = (trunc_ln186_5_reg_1450 ^ trunc_ln186_10_reg_1565);
+
+assign xor_ln1499_6_fu_1035_p2 = (xor_ln1499_fu_1026_p2 ^ xor_ln1499_5_fu_1031_p2);
+
+assign xor_ln1499_7_fu_1041_p2 = (crypto_aes_mul3_V_load_1_reg_1680 ^ crypto_aes_mul2_V_q1);
+
+assign xor_ln1499_8_fu_1046_p2 = (trunc_ln186_5_reg_1450 ^ trunc_ln186_4_reg_1418);
+
+assign xor_ln1499_9_fu_1050_p2 = (xor_ln1499_8_fu_1046_p2 ^ xor_ln1499_7_fu_1041_p2);
+
+assign xor_ln1499_fu_1026_p2 = (crypto_aes_mul3_V_q1 ^ crypto_aes_mul2_V_load_reg_1518);
+
+assign xor_ln859_1_fu_1290_p2 = (this_round_keys_load_reg_1445 ^ p_Result_16_3_fu_1254_p17);
+
+assign zext_ln186_10_fu_784_p1 = shl_ln186_8_fu_777_p3;
+
+assign zext_ln186_11_fu_815_p1 = shl_ln186_9_fu_808_p3;
+
+assign zext_ln186_12_fu_836_p1 = shl_ln186_s_fu_829_p3;
+
+assign zext_ln186_13_fu_867_p1 = shl_ln186_10_fu_860_p3;
+
+assign zext_ln186_14_fu_888_p1 = shl_ln186_11_fu_881_p3;
+
+assign zext_ln186_15_fu_919_p1 = shl_ln186_12_fu_912_p3;
+
+assign zext_ln186_16_fu_940_p1 = shl_ln186_13_fu_933_p3;
+
+assign zext_ln186_17_fu_971_p1 = shl_ln186_14_fu_964_p3;
+
+assign zext_ln186_18_fu_992_p1 = shl_ln186_15_fu_985_p3;
+
+assign zext_ln186_4_fu_487_p1 = shl_ln186_2_fu_479_p3;
+
+assign zext_ln186_5_fu_659_p1 = shl_ln186_3_fu_652_p3;
+
+assign zext_ln186_6_fu_680_p1 = shl_ln186_4_fu_673_p3;
+
+assign zext_ln186_7_fu_711_p1 = shl_ln186_5_fu_704_p3;
+
+assign zext_ln186_8_fu_732_p1 = shl_ln186_6_fu_725_p3;
+
+assign zext_ln186_9_fu_763_p1 = shl_ln186_7_fu_756_p3;
+
+assign zext_ln186_fu_455_p1 = shl_ln186_1_fu_447_p3;
+
+assign zext_ln668_10_fu_694_p1 = trunc_ln186_2_reg_1329;
+
+assign zext_ln668_11_fu_1011_p1 = trunc_ln186_13_reg_1666;
+
+assign zext_ln668_12_fu_1021_p1 = trunc_ln186_16_reg_1727;
+
+assign zext_ln668_13_fu_959_p1 = trunc_ln186_11_reg_1612;
+
+assign zext_ln668_14_fu_803_p1 = trunc_ln186_6_reg_1457;
+
+assign zext_ln668_15_fu_699_p1 = trunc_ln186_1_reg_1322;
+
+assign zext_ln668_1_fu_1016_p1 = trunc_ln186_15_reg_1720;
+
+assign zext_ln668_2_fu_902_p1 = trunc_ln186_10_reg_1565;
+
+assign zext_ln668_3_fu_798_p1 = trunc_ln186_5_reg_1450;
+
+assign zext_ln668_4_fu_850_p1 = trunc_ln186_8_reg_1511;
+
+assign zext_ln668_5_fu_751_p1 = trunc_ln186_3_reg_1411;
+
+assign zext_ln668_6_fu_1006_p1 = trunc_ln186_14_reg_1673;
+
+assign zext_ln668_7_fu_907_p1 = trunc_ln186_9_reg_1558;
+
+assign zext_ln668_8_fu_954_p1 = trunc_ln186_12_reg_1619;
+
+assign zext_ln668_9_fu_855_p1 = trunc_ln186_7_reg_1504;
+
+assign zext_ln668_fu_746_p1 = trunc_ln186_4_reg_1418;
 
 endmodule //pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block

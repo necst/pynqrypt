@@ -37,9 +37,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<Node id="9" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %gmem, void @empty_2, i32 0, i32 0, void @empty_12, i32 0, i32 1024, void @empty_13, void @empty_10, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 1024, void @empty_11, void @empty_3, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -52,7 +52,7 @@ entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %g
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="64" op_0_bw="64" op_1_bw="64">
+<Node id="10" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
 entry:1 %ciphertext_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %ciphertext
 
@@ -67,7 +67,7 @@ entry:1 %ciphertext_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %ciphertext
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="12" bw="64" op_0_bw="64" op_1_bw="64">
+<Node id="11" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
 entry:2 %plaintext_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %plaintext
 
@@ -82,7 +82,7 @@ entry:2 %plaintext_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %plaintext
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="13" bw="60" op_0_bw="60" op_1_bw="60">
+<Node id="12" bw="60" op_0_bw="60" op_1_bw="60">
 <![CDATA[
 entry:3 %block_count_read = read i60 @_ssdm_op_Read.ap_auto.i60, i60 %block_count
 
@@ -97,7 +97,7 @@ entry:3 %block_count_read = read i60 @_ssdm_op_Read.ap_auto.i60, i60 %block_coun
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="14" bw="96" op_0_bw="96" op_1_bw="96">
+<Node id="13" bw="96" op_0_bw="96" op_1_bw="96">
 <![CDATA[
 entry:4 %p_read_4 = read i96 @_ssdm_op_Read.ap_auto.i96, i96 %p_read
 
@@ -112,7 +112,7 @@ entry:4 %p_read_4 = read i96 @_ssdm_op_Read.ap_auto.i96, i96 %p_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="0" op_0_bw="0">
+<Node id="14" bw="0" op_0_bw="0">
 <![CDATA[
 entry:5 %br_ln18 = br void %for.cond
 
@@ -130,7 +130,7 @@ entry:5 %br_ln18 = br void %for.cond
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="60" op_0_bw="60" op_1_bw="0" op_2_bw="60" op_3_bw="0">
+<Node id="16" bw="60" op_0_bw="60" op_1_bw="0" op_2_bw="60" op_3_bw="0">
 <![CDATA[
 for.cond:0 %i = phi i60 0, void %entry, i60 %i_2, void %for.inc
 
@@ -145,7 +145,7 @@ for.cond:0 %i = phi i60 0, void %entry, i60 %i_2, void %for.inc
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="18" bw="1" op_0_bw="60" op_1_bw="60">
+<Node id="17" bw="1" op_0_bw="60" op_1_bw="60">
 <![CDATA[
 for.cond:1 %icmp_ln18 = icmp_eq  i60 %i, i60 %block_count_read
 
@@ -160,7 +160,7 @@ for.cond:1 %icmp_ln18 = icmp_eq  i60 %i, i60 %block_count_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="60" op_5_bw="60" op_6_bw="32">
+<Node id="18" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="60" op_5_bw="60" op_6_bw="32">
 <![CDATA[
 for.cond:2 %specdataflowpipeline_ln18 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @dataflow_parent_loop_str, i60 %i, i60 %block_count, i32 0
 
@@ -175,7 +175,7 @@ for.cond:2 %specdataflowpipeline_ln18 = specdataflowpipeline void @_ssdm_op_Spec
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="60" op_0_bw="60" op_1_bw="60">
+<Node id="19" bw="60" op_0_bw="60" op_1_bw="60">
 <![CDATA[
 for.cond:3 %i_2 = add i60 %i, i60 1
 
@@ -190,7 +190,7 @@ for.cond:3 %i_2 = add i60 %i, i60 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="20" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
 for.cond:4 %br_ln18 = br i1 %icmp_ln18, void %for.inc, void %for.end
 
@@ -206,9 +206,9 @@ for.cond:4 %br_ln18 = br i1 %icmp_ln18, void %for.inc, void %for.end
 </and_exp></or_exp>
 </condition>
 
-<Node id="24" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64" op_7_bw="8" op_8_bw="8" op_9_bw="8">
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read, i8 %crypto_aes_sbox_V, i8 %crypto_aes_mul2_V, i8 %crypto_aes_mul3_V
+for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read, i8 %crypto_aes_mul2_V, i8 %crypto_aes_mul3_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln26"/></StgValue>
@@ -222,7 +222,7 @@ for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem,
 </and_exp></or_exp>
 </condition>
 
-<Node id="27" bw="0">
+<Node id="26" bw="0">
 <![CDATA[
 for.end:0 %ret_ln28 = ret
 
@@ -241,9 +241,9 @@ for.end:0 %ret_ln28 = ret
 </and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="0" op_0_bw="0" op_1_bw="0">
+<Node id="22" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc:0 %specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
+for.inc:0 %specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln20"/></StgValue>
@@ -257,9 +257,9 @@ for.inc:0 %specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @e
 </and_exp></or_exp>
 </condition>
 
-<Node id="24" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64" op_7_bw="8" op_8_bw="8" op_9_bw="8">
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read, i8 %crypto_aes_sbox_V, i8 %crypto_aes_mul2_V, i8 %crypto_aes_mul3_V
+for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read, i8 %crypto_aes_mul2_V, i8 %crypto_aes_mul3_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln26"/></StgValue>
@@ -273,7 +273,7 @@ for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem,
 </and_exp></or_exp>
 </condition>
 
-<Node id="25" bw="0" op_0_bw="0">
+<Node id="24" bw="0" op_0_bw="0">
 <![CDATA[
 for.inc:2 %br_ln18 = br void %for.cond
 

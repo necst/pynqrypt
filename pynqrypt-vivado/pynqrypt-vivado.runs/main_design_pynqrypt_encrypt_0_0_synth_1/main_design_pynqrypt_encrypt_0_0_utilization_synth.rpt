@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Sat Dec 10 12:16:15 2022
+| Date         : Sat Dec 10 13:14:09 2022
 | Host         : SSD-UBUNTU running 64-bit Ubuntu 22.04.1 LTS
 | Command      : report_utilization -file main_design_pynqrypt_encrypt_0_0_utilization_synth.rpt -pb main_design_pynqrypt_encrypt_0_0_utilization_synth.pb
 | Design       : main_design_pynqrypt_encrypt_0_0
@@ -31,16 +31,16 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 3230 |     0 |          0 |     53200 |  6.07 |
-|   LUT as Logic             | 2830 |     0 |          0 |     53200 |  5.32 |
-|   LUT as Memory            |  400 |     0 |          0 |     17400 |  2.30 |
+| Slice LUTs*                | 4746 |     0 |          0 |     53200 |  8.92 |
+|   LUT as Logic             | 4159 |     0 |          0 |     53200 |  7.82 |
+|   LUT as Memory            |  587 |     0 |          0 |     17400 |  3.37 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
-|     LUT as Shift Register  |  400 |     0 |            |           |       |
-| Slice Registers            | 5338 |     0 |          0 |    106400 |  5.02 |
-|   Register as Flip Flop    | 5338 |     0 |          0 |    106400 |  5.02 |
+|     LUT as Shift Register  |  587 |     0 |            |           |       |
+| Slice Registers            | 5880 |     0 |          0 |    106400 |  5.53 |
+|   Register as Flip Flop    | 5880 |     0 |          0 |    106400 |  5.53 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
-| F7 Muxes                   |   32 |     0 |          0 |     26600 |  0.12 |
-| F8 Muxes                   |    0 |     0 |          0 |     13300 |  0.00 |
+| F7 Muxes                   |  344 |     0 |          0 |     26600 |  1.29 |
+| F8 Muxes                   |  136 |     0 |          0 |     13300 |  1.02 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -60,8 +60,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 14    |          Yes |         Set |            - |
-| 5324  |          Yes |       Reset |            - |
+| 36    |          Yes |         Set |            - |
+| 5844  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -71,11 +71,11 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-------------------+------+-------+------------+-----------+-------+
 |     Site Type     | Used | Fixed | Prohibited | Available | Util% |
 +-------------------+------+-------+------------+-----------+-------+
-| Block RAM Tile    |    9 |     0 |          0 |       140 |  6.43 |
+| Block RAM Tile    |    8 |     0 |          0 |       140 |  5.71 |
 |   RAMB36/FIFO*    |    7 |     0 |          0 |       140 |  5.00 |
 |     RAMB36E1 only |    7 |       |            |           |       |
-|   RAMB18          |    4 |     0 |          0 |       280 |  1.43 |
-|     RAMB18E1 only |    4 |       |            |           |       |
+|   RAMB18          |    2 |     0 |          0 |       280 |  0.71 |
+|     RAMB18E1 only |    2 |       |            |           |       |
 +-------------------+------+-------+------------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -152,19 +152,20 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 5324 |        Flop & Latch |
-| LUT3     | 1017 |                 LUT |
-| LUT6     |  807 |                 LUT |
-| LUT5     |  662 |                 LUT |
-| LUT4     |  638 |                 LUT |
-| SRL16E   |  400 |  Distributed Memory |
-| LUT2     |  320 |                 LUT |
-| CARRY4   |  144 |          CarryLogic |
-| LUT1     |   84 |                 LUT |
-| MUXF7    |   32 |               MuxFx |
-| FDSE     |   14 |        Flop & Latch |
+| FDRE     | 5844 |        Flop & Latch |
+| LUT6     | 1799 |                 LUT |
+| LUT3     | 1151 |                 LUT |
+| LUT4     |  705 |                 LUT |
+| LUT5     |  663 |                 LUT |
+| SRL16E   |  587 |  Distributed Memory |
+| LUT2     |  432 |                 LUT |
+| MUXF7    |  344 |               MuxFx |
+| CARRY4   |  197 |          CarryLogic |
+| MUXF8    |  136 |               MuxFx |
+| LUT1     |   91 |                 LUT |
+| FDSE     |   36 |        Flop & Latch |
 | RAMB36E1 |    7 |        Block Memory |
-| RAMB18E1 |    4 |        Block Memory |
+| RAMB18E1 |    2 |        Block Memory |
 +----------+------+---------------------+
 
 

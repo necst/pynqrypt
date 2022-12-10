@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'assign_swap_endianness'
 ================================================================
-* Date:           Sat Dec 10 12:34:56 2022
+* Date:           Sat Dec 10 13:08:38 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -115,7 +115,7 @@ ST_8 : Operation 24 [1/7] (7.30ns)   --->   "%p_Val2_req = readreq i1 @_ssdm_op_
 
 State 9 <SV = 8> <Delay = 7.30>
 ST_9 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i60 %i_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %gmem, void @empty_2, i32 0, i32 0, void @empty_12, i32 0, i32 1024, void @empty_13, void @empty_10, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 1024, void @empty_11, void @empty_3, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 27 [1/1] (7.30ns)   --->   "%p_Val2_s = read i128 @_ssdm_op_Read.m_axi.i128P1A, i128 %gmem_addr" [hw-impl/src/pynqrypt.cpp:22]   --->   Operation 27 'read' 'p_Val2_s' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_9 : Operation 28 [1/1] (0.00ns)   --->   "%trunc_ln628 = trunc i128 %p_Val2_s"   --->   Operation 28 'trunc' 'trunc_ln628' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_i3 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32 8, i32 15"   --->   Operation 29 'partselect' 'tmp_i3' <Predicate = true> <Delay = 0.00>
