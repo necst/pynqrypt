@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_encrypt_block'
 ================================================================
-* Date:           Sat Dec 10 14:02:49 2022
+* Date:           Sat Dec 10 15:24:53 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -110,24 +110,24 @@ State 7 <SV = 6> <Delay = 4.28>
 ST_7 : Operation 22 [1/1] (0.00ns)   --->   "%t_loc_load = load i128 %t_loc"   --->   Operation 22 'load' 't_loc_load' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 23 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 120, i32 127"   --->   Operation 23 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 80, i32 87"   --->   Operation 24 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_15 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 40, i32 47"   --->   Operation 25 'partselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_16 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 40, i32 47"   --->   Operation 25 'partselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln628 = trunc i128 %t_loc_load"   --->   Operation 26 'trunc' 'trunc_ln628' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_16 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 88, i32 95"   --->   Operation 27 'partselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_17 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 48, i32 55"   --->   Operation 28 'partselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_18 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 8, i32 15"   --->   Operation 29 'partselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_19 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 96, i32 103"   --->   Operation 30 'partselect' 'tmp_19' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_20 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 56, i32 63"   --->   Operation 31 'partselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_21 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 16, i32 23"   --->   Operation 32 'partselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_22 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 104, i32 111"   --->   Operation 33 'partselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_23 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 64, i32 71"   --->   Operation 34 'partselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_24 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 24, i32 31"   --->   Operation 35 'partselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_25 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 112, i32 119"   --->   Operation 36 'partselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_26 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 72, i32 79"   --->   Operation 37 'partselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_27 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 32, i32 39"   --->   Operation 38 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %tmp, i8 %tmp_s, i8 %tmp_15, i8 %trunc_ln628, i8 %tmp_16, i8 %tmp_17, i8 %tmp_18, i8 %tmp_19, i8 %tmp_20, i8 %tmp_21, i8 %tmp_22, i8 %tmp_23, i8 %tmp_24, i8 %tmp_25, i8 %tmp_26, i8 %tmp_27"   --->   Operation 39 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_17 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 88, i32 95"   --->   Operation 27 'partselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_18 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 48, i32 55"   --->   Operation 28 'partselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_19 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 8, i32 15"   --->   Operation 29 'partselect' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_20 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 96, i32 103"   --->   Operation 30 'partselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_21 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 56, i32 63"   --->   Operation 31 'partselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_22 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 16, i32 23"   --->   Operation 32 'partselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_23 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 104, i32 111"   --->   Operation 33 'partselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_24 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 64, i32 71"   --->   Operation 34 'partselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_25 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 24, i32 31"   --->   Operation 35 'partselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_26 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 112, i32 119"   --->   Operation 36 'partselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_27 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 72, i32 79"   --->   Operation 37 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_28 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 32, i32 39"   --->   Operation 38 'partselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %tmp, i8 %tmp_s, i8 %tmp_16, i8 %trunc_ln628, i8 %tmp_17, i8 %tmp_18, i8 %tmp_19, i8 %tmp_20, i8 %tmp_21, i8 %tmp_22, i8 %tmp_23, i8 %tmp_24, i8 %tmp_25, i8 %tmp_26, i8 %tmp_27, i8 %tmp_28"   --->   Operation 39 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 40 [1/2] (3.25ns)   --->   "%this_round_keys_load_1 = load i4 %this_round_keys_addr_1"   --->   Operation 40 'load' 'this_round_keys_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 11> <RAM>
 ST_7 : Operation 41 [1/1] (1.03ns)   --->   "%xor_ln859_2 = xor i128 %this_round_keys_load_1, i128 %p_Result_s"   --->   Operation 41 'xor' 'xor_ln859_2' <Predicate = true> <Delay = 1.03> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln58 = ret i128 %xor_ln859_2" [hw-impl/src/pynqrypt.cpp:58]   --->   Operation 42 'ret' 'ret_ln58' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln57 = ret i128 %xor_ln859_2" [hw-impl/src/pynqrypt.cpp:57]   --->   Operation 42 'ret' 'ret_ln57' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================

@@ -1,7 +1,7 @@
-Running: xsim.dir/pynqrypt_encrypt/xsimk -simmode gui -wdb pynqrypt_encrypt.wdb -simrunnum 0 -socket 53161
+Running: xsim.dir/pynqrypt_encrypt/xsimk -simmode gui -wdb pynqrypt_encrypt.wdb -simrunnum 0 -socket 60559
 Design successfully loaded
-Design Loading Memory Usage: 24412 KB (Peak: 24420 KB)
-Design Loading CPU Usage: 10 ms
+Design Loading Memory Usage: 24548 KB (Peak: 24548 KB)
+Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 111216 KB (Peak: 163680 KB)
-Simulation CPU Usage: 2540 ms
+Simulation Memory Usage: 127744 KB (Peak: 163816 KB)
+Simulation CPU Usage: 3390 ms

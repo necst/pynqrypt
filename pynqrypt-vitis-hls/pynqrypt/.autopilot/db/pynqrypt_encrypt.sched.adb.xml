@@ -196,7 +196,7 @@ entry:25 %call_ln22 = call void @ctr_encrypt, i96 %nonce_read, i128 %pynqrypt_ro
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:0 %spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8
+entry:0 %spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_16
 
 ]]></Node>
 <StgValue><ssdm name="spectopmodule_ln3"/></StgValue>

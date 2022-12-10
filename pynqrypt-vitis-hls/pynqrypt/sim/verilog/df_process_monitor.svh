@@ -8,6 +8,7 @@
         logic [31:0] write_stall_time;
         logic [31:0] noContinue_stall_time;
         logic [31:0] noRealStart_stall_time;
+        logic [31:0] rt_stall_arr[$];
         logic first_start_in_region_run;
         logic [31:0] start_time_arr[$];
         logic [31:0] done_time_arr[$];
@@ -39,6 +40,7 @@
             this.performance_file.dump_1_line(start_time_arr,done_time_arr);
             this.performance_file.finish_dump();
             this.file_dumper.open_file();
+            this.file_dumper.dump_1_col(rt_stall_arr);
             this.file_dumper.finish_dump();
         endfunction
 
@@ -110,6 +112,27 @@
             wait(in_intf.reset == 0);
             forever begin
                 @(posedge in_intf.clock);
+                if (in_intf.region_idle == 1'b1) begin
+                    for(integer i=bkup_start_offset;i<this.rt_stall_arr.size;i++) begin
+                        tmp_stall_type = this.rt_stall_arr[i] & 32'h7;
+                        this.rt_stall_arr.delete(i);
+                        this.rt_stall_arr.insert(i,tmp_stall_type);
+                    end
+                    bkup_start_offset = this.rt_stall_arr.size;
+                end
+                if (in_intf.ap_start == 1'b1 && in_intf.ap_ready == 1'b1) begin
+                    bkup_start_offset = this.rt_stall_arr.size + 1;
+                end
+                rt_stall_type = 32'h0;
+                if (in_intf.pin_stall == 1'b1)
+                    rt_stall_type = rt_stall_type | 32'h1;
+                else if (in_intf.pout_stall == 1'b1)
+                    rt_stall_type = rt_stall_type | 32'h2;
+                else if (in_intf.ap_done == 1'b1 && in_intf.ap_continue == 1'b0 && in_intf.cout_stall == 1'b1)
+                    rt_stall_type = rt_stall_type | 32'h4;
+                else if (in_intf.cin_stall == 1'b1 && this.first_start_in_region_run == 1'b0)
+                    rt_stall_type = rt_stall_type | 32'h8;
+                this.rt_stall_arr.push_back(rt_stall_type);
                 if (in_intf.finish == 1'b1)
                     break;
             end

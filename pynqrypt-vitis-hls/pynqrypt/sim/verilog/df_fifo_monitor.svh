@@ -3,6 +3,8 @@
     class df_fifo_monitor extends sample_agent;
         virtual df_fifo_intf in_intf;
         logic [31:0] rt_depth;
+        logic [31:0] rt_depth_arr[$];
+        logic [1:0] rt_block_arr[$];
         logic chan_status_wb;
         logic chan_status_rb;
         logic [31:0] total_run_time;
@@ -35,6 +37,7 @@
         this.chan_file.dump_1_col(chan_status);
         this.chan_file.finish_dump();
         this.file_dumper.open_file();
+        this.file_dumper.dump_2_col(rt_depth_arr,rt_block_arr);
         this.file_dumper.finish_dump();
     endfunction
 
@@ -49,6 +52,7 @@
         wait (in_intf.reset == 0);
         forever begin
             @(posedge in_intf.clock);
+            this.rt_depth_arr.push_back(this.rt_depth);
             if (in_intf.wr_en == 1'b1 && in_intf.rd_en == 1'b1)
                 this.rt_depth = this.rt_depth;
             else if (in_intf.wr_en == 1'b1)
@@ -68,14 +72,17 @@
             @(posedge in_intf.clock);
             this.total_run_time = this.total_run_time + 32'h1;
             if (in_intf.fifo_wr_block == 1) begin
+                this.rt_block_arr.push_back(2'b1);
                 this.chan_status_wb = 1'b1;
                 this.total_wb_time = this.total_wb_time + 32'h1;
             end
             else if (in_intf.fifo_rd_block == 1) begin
+                this.rt_block_arr.push_back(2'b10);
                 this.chan_status_rb = 1'b1;
                 this.total_rb_time = this.total_rb_time + 32'h1;
             end
             else
+                this.rt_block_arr.push_back(2'b0);
             if (in_intf.finish == 1)
                 break;
         end
