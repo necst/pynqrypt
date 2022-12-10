@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_encrypt_block'" level="0">
-<item name = "Date">Sat Dec 10 12:34:59 2022
+<item name = "Date">Sat Dec 10 13:08:42 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.508 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.256 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">148, 148, 1.480 us, 1.480 us, 148, 148, no</column>
+<column name="">116, 116, 1.160 us, 1.160 us, 116, 116, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123">aes_encrypt_block_Pipeline_loop_aes_encrypt_block, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137">aes_encrypt_block_Pipeline_loop_aes_sub_bytes, 50, 50, 0.500 us, 0.500 us, 50, 50, no</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121">aes_encrypt_block_Pipeline_loop_aes_encrypt_block, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_133">aes_encrypt_block_Pipeline_loop_aes_sub_bytes, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,20 +51,20 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 258, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">4, -, 1145, 2698, -</column>
+<column name="Instance">2, -, 1002, 39480, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 85, -</column>
 <column name="Register">-, -, 266, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, 0, 1, 5, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 1, 74, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123">aes_encrypt_block_Pipeline_loop_aes_encrypt_block, 3, 0, 737, 937, 0</column>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137">aes_encrypt_block_Pipeline_loop_aes_sub_bytes, 1, 0, 408, 1761, 0</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121">aes_encrypt_block_Pipeline_loop_aes_encrypt_block, 2, 0, 737, 35577, 0</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_133">aes_encrypt_block_Pipeline_loop_aes_sub_bytes, 0, 0, 265, 3903, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -83,7 +83,7 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_return">xor, 0, 0, 128, 128, 128</column>
-<column name="xor_ln859_fu_145_p2">xor, 0, 0, 128, 128, 128</column>
+<column name="xor_ln859_fu_139_p2">xor, 0, 0, 128, 128, 128</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -98,10 +98,10 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">7, 0, 7, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_start_reg">1, 0, 1, 0</column>
-<column name="this_round_keys_load_reg_371">128, 0, 128, 0</column>
-<column name="xor_ln859_reg_376">128, 0, 128, 0</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_133_ap_start_reg">1, 0, 1, 0</column>
+<column name="this_round_keys_load_reg_365">128, 0, 128, 0</column>
+<column name="xor_ln859_reg_370">128, 0, 128, 0</column>
 </table>
 </item>
 </section>

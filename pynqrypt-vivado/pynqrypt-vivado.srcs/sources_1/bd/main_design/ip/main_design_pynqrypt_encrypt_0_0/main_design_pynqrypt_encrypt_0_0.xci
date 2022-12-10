@@ -4,7 +4,7 @@
     "xci_name": "main_design_pynqrypt_encrypt_0_0",
     "cell_name": "pynqrypt_encrypt_0",
     "component_reference": "xilinx.com:hls:pynqrypt_encrypt:1.0",
-    "ip_revision": "2112807011",
+    "ip_revision": "2112807070",
     "gen_directory": "../../../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_0",
     "parameters": {
       "component_parameters": {
@@ -59,7 +59,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2112807011" } ],
+        "IPREVISION": [ { "value": "2112807070" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

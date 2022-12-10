@@ -22,23 +22,23 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>148</Best-caseLatency>
-<Average-caseLatency>148</Average-caseLatency>
-<Worst-caseLatency>148</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.480 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.480 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.480 us</Worst-caseRealTimeLatency>
-<DataflowPipelineThroughput>149</DataflowPipelineThroughput>
-<Interval-min>149</Interval-min>
-<Interval-max>149</Interval-max>
+<Best-caseLatency>116</Best-caseLatency>
+<Average-caseLatency>116</Average-caseLatency>
+<Worst-caseLatency>116</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.160 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.160 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.160 us</Worst-caseRealTimeLatency>
+<DataflowPipelineThroughput>117</DataflowPipelineThroughput>
+<Interval-min>117</Interval-min>
+<Interval-max>117</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>4</BRAM_18K>
-<FF>2666</FF>
-<LUT>4040</LUT>
+<BRAM_18K>2</BRAM_18K>
+<FF>2523</FF>
+<LUT>40822</LUT>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>

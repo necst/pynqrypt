@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sat Dec 10 12:15:17 2022
-# Process ID: 26411
+# Start of session at: Sat Dec 10 13:12:29 2022
+# Process ID: 50186
 # Current directory: /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/main_design_pynqrypt_encrypt_0_0_synth_1
 # Command line: vivado -log main_design_pynqrypt_encrypt_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_pynqrypt_encrypt_0_0.tcl
 # Log file: /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/main_design_pynqrypt_encrypt_0_0_synth_1/main_design_pynqrypt_encrypt_0_0.vds
@@ -22,109 +22,131 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26470
+INFO: [Synth 8-7075] Helper process launched with PID 50210
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1972.078 ; gain = 371.770 ; free physical = 162 ; free virtual = 17719
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1400.729; parent = 1191.585; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 2964.508; parent = 1978.020; children = 986.488
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1974.492 ; gain = 369.770 ; free physical = 172 ; free virtual = 17132
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1399.960; parent = 1190.863; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3008.867; parent = 1980.434; children = 1028.434
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_design_pynqrypt_encrypt_0_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_0/synth/main_design_pynqrypt_encrypt_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W.v:7]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W.v:7]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.v:7]
-INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.v:7]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_flow_control_loop_pipe_sequential_init' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_flow_control_loop_pipe_sequential_init' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_ctr_encrypt' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_ctr_encrypt' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v:10]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_control_s_axi' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:7]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:252]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_control_s_axi' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:7]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:11]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_store' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:781]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_store' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:781]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_load' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:325]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized3' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized3' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_load' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:325]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_write' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1716]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized4' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized4' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_throttle' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2224]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized5' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized3' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized3' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized5' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized6' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized4' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized4' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized6' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_throttle' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2224]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2216]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2219]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_write' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1716]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_read' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1332]
-INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1708]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_read' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1332]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.v:7]
+INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb.v:7]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_flow_control_loop_pipe_sequential_init' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_flow_control_loop_pipe_sequential_init' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_ctr_encrypt' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_dataflow_in_loop_loop_ctr_encrypt' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_dataflow_in_loop_loop_ctr_encrypt.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_entry_proc' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_entry_proc.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_entry_proc' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_entry_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_assign_swap_endianness' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_assign_swap_endianness.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_assign_swap_endianness' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_assign_swap_endianness.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_ctr_compute_nonce' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_ctr_compute_nonce.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_ctr_compute_nonce' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_ctr_compute_nonce.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.dat' is read successfully [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_aes_encrypt_block' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_aes_encrypt_block.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_ctr_xor_block' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_ctr_xor_block.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_ctr_xor_block' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_ctr_xor_block.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_assign_swap_endianness_1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_assign_swap_endianness_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_assign_swap_endianness_1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_assign_swap_endianness_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w64_d5_S' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w64_d5_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w64_d5_S_ShiftReg' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w64_d5_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w64_d5_S_ShiftReg' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w64_d5_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w64_d5_S' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w64_d5_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w60_d4_S' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w60_d4_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w60_d4_S_ShiftReg' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w60_d4_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w60_d4_S_ShiftReg' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w60_d4_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w60_d4_S' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w60_d4_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w128_d3_S' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d3_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w128_d3_S_ShiftReg' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d3_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w128_d3_S_ShiftReg' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d3_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w128_d3_S' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d3_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w128_d2_S' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d2_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_fifo_w128_d2_S_ShiftReg' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d2_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w128_d2_S_ShiftReg' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d2_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_fifo_w128_d2_S' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_fifo_w128_d2_S.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_dataflow_in_loop_loop_ctr_encrypt' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_dataflow_in_loop_loop_ctr_encrypt.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_ctr_encrypt' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_control_s_axi' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:252]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_control_s_axi' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_store' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_store' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_load' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized3' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_mem__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized3' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_load' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_write' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized4' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized4' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_throttle' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized5' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized3' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized3' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized5' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized6' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized4' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_srl__parameterized4' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_fifo__parameterized6' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_throttle' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2216]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2219]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_write' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_read' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1332]
+INFO: [Synth 8-6157] synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1708]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi_read' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:1332]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt_gmem_m_axi' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_gmem_m_axi.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'pynqrypt_encrypt' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_pynqrypt_encrypt_0_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_pynqrypt_encrypt_0_0/synth/main_design_pynqrypt_encrypt_0_0.v:53]
-WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/8a92/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:353]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ipshared/0b57/hdl/verilog/pynqrypt_encrypt_control_s_axi.v:353]
 WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module pynqrypt_encrypt_gmem_m_axi_read is either unconnected or has no load
 WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module pynqrypt_encrypt_gmem_m_axi_read is either unconnected or has no load
 WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module pynqrypt_encrypt_gmem_m_axi_read is either unconnected or has no load
@@ -135,62 +157,116 @@ WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module pynqrypt_encrypt_gmem_m_a
 WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module pynqrypt_encrypt_gmem_m_axi_write is either unconnected or has no load
 WARNING: [Synth 8-7129] Port raddr[2] in module pynqrypt_encrypt_gmem_m_axi_srl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port raddr[2] in module pynqrypt_encrypt_gmem_m_axi_srl__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reset in module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_crypto_aes_sbox_V_ROM_AUTO_1R is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reset in module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul3_V_ROM_AUTO_1R is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reset in module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_mul2_V_ROM_AUTO_1R is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reset in module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_crypto_aes_sbox_V_ROM_AUTO_1R is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RLAST in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RID[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[8] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[7] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[6] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[5] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[4] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RUSER[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RRESP[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RRESP[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BRESP[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BRESP[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BID[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BUSER[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reset in module pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_crypto_aes_rcon_V_ROM_bkb is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reset in module pynqrypt_encrypt_pynqrypt_round_keys_V_RAM_AUTO_1R1W is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reset in module pynqrypt_encrypt_p_round_key_V_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_ARREADY in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RVALID in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[127] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[126] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[125] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[124] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[123] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[122] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[121] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[120] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[119] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[118] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[117] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[116] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[115] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[114] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[113] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[112] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[111] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[110] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[109] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[108] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[107] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[106] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[105] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[104] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[103] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[102] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[101] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[100] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[99] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[98] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[97] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[96] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[95] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[94] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[93] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[92] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[91] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[90] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[89] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[88] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[87] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[86] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[85] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[84] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[83] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[82] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[81] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[80] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[79] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[78] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[77] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[76] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[75] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[74] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[73] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[72] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[71] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[70] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[69] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[68] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[67] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[66] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[65] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[64] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[63] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[62] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[61] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[60] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[59] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[58] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[57] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[56] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[55] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[54] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[53] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[52] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[51] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[50] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[49] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[48] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[47] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[46] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[45] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[44] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[43] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[42] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[41] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RDATA[40] in module pynqrypt_encrypt_assign_swap_endianness_1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2074.984 ; gain = 474.676 ; free physical = 308 ; free virtual = 17784
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1400.729; parent = 1191.585; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3061.477; parent = 2074.988; children = 986.488
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2088.398 ; gain = 483.676 ; free physical = 300 ; free virtual = 17194
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1399.960; parent = 1190.863; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3116.836; parent = 2088.402; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2092.797 ; gain = 492.488 ; free physical = 308 ; free virtual = 17784
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1400.729; parent = 1191.585; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3079.289; parent = 2092.801; children = 986.488
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2103.242 ; gain = 498.520 ; free physical = 298 ; free virtual = 17192
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1399.960; parent = 1190.863; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3131.680; parent = 2103.246; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2092.797 ; gain = 492.488 ; free physical = 310 ; free virtual = 17786
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1400.729; parent = 1191.585; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3079.289; parent = 2092.801; children = 986.488
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2103.242 ; gain = 498.520 ; free physical = 298 ; free virtual = 17192
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1399.960; parent = 1190.863; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3131.680; parent = 2103.246; children = 1028.434
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2092.797 ; gain = 0.000 ; free physical = 308 ; free virtual = 17784
+Netlist sorting complete. Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2103.242 ; gain = 0.000 ; free physical = 286 ; free virtual = 17180
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -201,37 +277,36 @@ Parsing XDC File [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-v
 Finished Parsing XDC File [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/main_design_pynqrypt_encrypt_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2250.547 ; gain = 0.000 ; free physical = 173 ; free virtual = 17665
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2264.992 ; gain = 0.000 ; free physical = 158 ; free virtual = 17067
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2250.547 ; gain = 0.000 ; free physical = 168 ; free virtual = 17661
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2264.992 ; gain = 0.000 ; free physical = 153 ; free virtual = 17062
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 259 ; free virtual = 17754
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1410.309; parent = 1201.861; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 270 ; free virtual = 17181
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1501.112; parent = 1292.692; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 259 ; free virtual = 17754
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1410.309; parent = 1201.861; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 270 ; free virtual = 17181
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1501.112; parent = 1292.692; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/main_design_pynqrypt_encrypt_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 259 ; free virtual = 17754
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1410.309; parent = 1201.861; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 270 ; free virtual = 17181
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1501.112; parent = 1292.692; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
@@ -299,16 +374,17 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'pynqrypt_encrypt_gmem_m_axi_reg_slice__parameterized2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 189 ; free virtual = 17721
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1410.309; parent = 1201.861; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 257 ; free virtual = 17170
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1501.112; parent = 1292.692; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   64 Bit       Adders := 4     
+	   2 Input   64 Bit       Adders := 6     
+	   2 Input   60 Bit       Adders := 1     
 	   2 Input   52 Bit       Adders := 2     
 	   2 Input   32 Bit       Adders := 2     
 	   2 Input   12 Bit       Adders := 2     
@@ -316,79 +392,76 @@ Detailed RTL Component Info :
 	   2 Input    8 Bit       Adders := 3     
 	   2 Input    6 Bit       Adders := 6     
 	   2 Input    5 Bit       Adders := 18    
-	   2 Input    4 Bit       Adders := 19    
-	   2 Input    3 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 21    
+	   2 Input    3 Bit       Adders := 10    
+	   2 Input    2 Bit       Adders := 6     
 +---XORs : 
 	   2 Input    128 Bit         XORs := 5     
 	   2 Input     32 Bit         XORs := 4     
-	   2 Input      8 Bit         XORs := 1     
 	   4 Input      8 Bit         XORs := 16    
-	   2 Input      1 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 10    
 +---Registers : 
 	              145 Bit    Registers := 1     
 	              144 Bit    Registers := 1     
 	              130 Bit    Registers := 1     
 	              129 Bit    Registers := 2     
-	              128 Bit    Registers := 11    
+	              128 Bit    Registers := 17    
 	               96 Bit    Registers := 7     
 	               72 Bit    Registers := 3     
-	               64 Bit    Registers := 13    
-	               60 Bit    Registers := 1     
+	               64 Bit    Registers := 12    
+	               60 Bit    Registers := 3     
 	               52 Bit    Registers := 2     
-	               32 Bit    Registers := 30    
-	               16 Bit    Registers := 2     
+	               32 Bit    Registers := 27    
+	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
-	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 120   
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 92    
 	                7 Bit    Registers := 2     
 	                6 Bit    Registers := 4     
-	                5 Bit    Registers := 10    
+	                5 Bit    Registers := 11    
 	                4 Bit    Registers := 17    
 	                3 Bit    Registers := 5     
-	                2 Bit    Registers := 7     
-	                1 Bit    Registers := 98    
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 124   
 +---RAMs : 
 	              32K Bit	(255 X 130 bit)          RAMs := 1     
 	               2K Bit	(15 X 144 bit)          RAMs := 1     
 	               1K Bit	(44 X 32 bit)          RAMs := 1     
 	               1K Bit	(11 X 128 bit)          RAMs := 1     
 +---ROMs : 
-	                    ROMs := 9     
+	                    ROMs := 4     
 +---Muxes : 
 	   2 Input  129 Bit        Muxes := 1     
-	   2 Input  128 Bit        Muxes := 7     
+	   2 Input  128 Bit        Muxes := 14    
 	   2 Input   96 Bit        Muxes := 2     
 	   2 Input   72 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 8     
 	   2 Input   52 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 6     
-	   2 Input   16 Bit        Muxes := 3     
-	  17 Input   16 Bit        Muxes := 1     
-	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 2     
 	   4 Input   12 Bit        Muxes := 2     
-	   2 Input   11 Bit        Muxes := 2     
 	  11 Input   10 Bit        Muxes := 1     
-	   2 Input   10 Bit        Muxes := 1     
-	   2 Input    9 Bit        Muxes := 2     
-	  11 Input    8 Bit        Muxes := 1     
-	   9 Input    8 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 16    
-	   7 Input    8 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 3     
+	  10 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 12    
 	   4 Input    8 Bit        Muxes := 2     
+	  11 Input    8 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 2     
 	   8 Input    7 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 15    
 	   2 Input    5 Bit        Muxes := 19    
-	   2 Input    4 Bit        Muxes := 21    
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 23    
 	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 6     
-	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 11    
 	   3 Input    3 Bit        Muxes := 1     
-	   3 Input    2 Bit        Muxes := 16    
 	   5 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 63    
+	   2 Input    2 Bit        Muxes := 68    
+	   3 Input    2 Bit        Muxes := 16    
 	   4 Input    2 Bit        Muxes := 5     
-	   2 Input    1 Bit        Muxes := 127   
+	   2 Input    1 Bit        Muxes := 162   
+	   3 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -405,51 +478,11 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module pynqrypt_encrypt_gmem_m_axi_read is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module pynqrypt_encrypt_gmem_m_axi_read is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module pynqrypt_encrypt_gmem_m_axi_read is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module pynqrypt_encrypt_gmem_m_axi_read is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module pynqrypt_encrypt_gmem_m_axi_write is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module pynqrypt_encrypt_gmem_m_axi_write is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module pynqrypt_encrypt_gmem_m_axi_write is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module pynqrypt_encrypt_gmem_m_axi_write is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext_length[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RLAST in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RID[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[8] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[7] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[6] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[5] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[4] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RUSER[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RRESP[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_RRESP[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BRESP[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BRESP[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BID[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_gmem_BUSER[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port plaintext[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[3] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[2] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[1] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ciphertext[0] in module pynqrypt_encrypt_ctr_encrypt is either unconnected or has no load
 INFO: [Synth 8-3971] The signal "inst/p_round_key_V_U/ram_reg" was recognized as a true dual port RAM template.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module pynqrypt_encrypt_control_s_axi.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module pynqrypt_encrypt_control_s_axi.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 153 ; free virtual = 17694
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1420.303; parent = 1212.034; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 342 ; free virtual = 17138
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1527.735; parent = 1319.572; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -459,26 +492,22 @@ ROM: Preliminary Mapping Report
 +-------------------------------------------------------------------+----------------------------+---------------+----------------+
 |Module Name                                                        | RTL Object                 | Depth x Width | Implemented As | 
 +-------------------------------------------------------------------+----------------------------+---------------+----------------+
-|pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block | crypto_aes_sbox_V_U/q0_reg | 256x8         | Block RAM      | 
-|pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block | crypto_aes_sbox_V_U/q1_reg | 256x8         | Block RAM      | 
 |pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block | crypto_aes_mul2_V_U/q1_reg | 256x8         | Block RAM      | 
 |pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block | crypto_aes_mul3_V_U/q1_reg | 256x8         | Block RAM      | 
 |pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block | crypto_aes_mul2_V_U/q0_reg | 256x8         | Block RAM      | 
 |pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block | crypto_aes_mul3_V_U/q0_reg | 256x8         | Block RAM      | 
-|pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_sub_bytes     | trunc_ln668_reg_214_reg    | 256x8         | Block RAM      | 
-|pynqrypt_encrypt                                                   | crypto_aes_sbox_V_U/q0_reg | 256x8         | Block RAM      | 
 +-------------------------------------------------------------------+----------------------------+---------------+----------------+
 
 
 Block RAM: Preliminary Mapping Report (see note below)
-+------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name       | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|inst              | p_round_key_V_U/ram_reg                  | 44 x 32(READ_FIRST)    | W | R | 44 x 32(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
-|inst              | pynqrypt_round_keys_V_U/ram_reg          | 11 x 128(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
-|inst/gmem_m_axi_U | store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 144(READ_FIRST)   | W |   | 15 x 144(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
-|inst/gmem_m_axi_U | load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 130(READ_FIRST)  | W |   | 255 x 130(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      | 
-+------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | p_round_key_V_U/ram_reg                               | 44 x 32(READ_FIRST)    | W | R | 44 x 32(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
+|inst        | pynqrypt_round_keys_V_U/ram_reg                       | 11 x 128(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
+|inst        | gmem_m_axi_U/store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 144(READ_FIRST)   | W |   | 15 x 144(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|inst        | gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 130(READ_FIRST)  | W |   | 255 x 130(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
@@ -488,31 +517,31 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 120 ; free virtual = 17592
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1540.932; parent = 1332.683; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 223 ; free virtual = 17027
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1555.032; parent = 1346.891; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 149 ; free virtual = 17574
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1552.049; parent = 1343.810; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 168 ; free virtual = 16982
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name       | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|inst              | p_round_key_V_U/ram_reg                  | 44 x 32(READ_FIRST)    | W | R | 44 x 32(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
-|inst              | pynqrypt_round_keys_V_U/ram_reg          | 11 x 128(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
-|inst/gmem_m_axi_U | store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 144(READ_FIRST)   | W |   | 15 x 144(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
-|inst/gmem_m_axi_U | load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 130(READ_FIRST)  | W |   | 255 x 130(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      | 
-+------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | p_round_key_V_U/ram_reg                               | 44 x 32(READ_FIRST)    | W | R | 44 x 32(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
+|inst        | pynqrypt_round_keys_V_U/ram_reg                       | 11 x 128(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
+|inst        | gmem_m_axi_U/store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 144(READ_FIRST)   | W |   | 15 x 144(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|inst        | gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 130(READ_FIRST)  | W |   | 255 x 130(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -526,18 +555,16 @@ INFO: [Synth 8-7052] The timing for the instance inst/pynqrypt_round_keys_V_U/ra
 INFO: [Synth 8-7052] The timing for the instance inst/pynqrypt_round_keys_V_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/pynqrypt_round_keys_V_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/pynqrypt_round_keys_V_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/grp_aes_encrypt_block_fu_190/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123/crypto_aes_sbox_V_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/grp_aes_encrypt_block_fu_190/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123/crypto_aes_sbox_V_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/grp_aes_encrypt_block_fu_190/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123/crypto_aes_mul2_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/grp_aes_encrypt_block_fu_190/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123/crypto_aes_mul2_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/grp_aes_encrypt_block_fu_190/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123/crypto_aes_mul3_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/grp_aes_encrypt_block_fu_190/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123/crypto_aes_mul3_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/grp_aes_encrypt_block_fu_190/grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137/trunc_ln668_reg_214_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/dataflow_in_loop_loop_ctr_encrypt_U0/aes_encrypt_block_U0/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121/crypto_aes_mul2_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/dataflow_in_loop_loop_ctr_encrypt_U0/aes_encrypt_block_U0/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121/crypto_aes_mul2_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/dataflow_in_loop_loop_ctr_encrypt_U0/aes_encrypt_block_U0/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121/crypto_aes_mul3_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ctr_encrypt_fu_192/dataflow_in_loop_loop_ctr_encrypt_U0/aes_encrypt_block_U0/grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121/crypto_aes_mul3_V_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 130 ; free virtual = 17537
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1560.264; parent = 1352.024; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 167 ; free virtual = 16981
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -555,65 +582,68 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 147 ; free virtual = 17554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1560.939; parent = 1352.722; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished IO Insertion : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 185 ; free virtual = 16999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 147 ; free virtual = 17554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1560.939; parent = 1352.722; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 185 ; free virtual = 16999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 147 ; free virtual = 17554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1561.596; parent = 1353.378; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 185 ; free virtual = 16999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 147 ; free virtual = 17554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1561.596; parent = 1353.378; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 185 ; free virtual = 16999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 147 ; free virtual = 17554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1562.018; parent = 1353.800; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 185 ; free virtual = 16999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 147 ; free virtual = 17554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1562.018; parent = 1353.800; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 185 ; free virtual = 16999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Dynamic Shift Register Report:
-+------------+-------------+--------+------------+--------+---------+--------+--------+--------+
-|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
-+------------+-------------+--------+------------+--------+---------+--------+--------+--------+
-|dsrl        | mem_reg[3]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
-|dsrl__1     | mem_reg[14] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
-|dsrl__2     | mem_reg[3]  | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
-|dsrl__3     | mem_reg[14] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
-|dsrl__4     | mem_reg[14] | 72     | 72         | 72     | 0       | 0      | 0      | 0      | 
-|dsrl__5     | mem_reg[14] | 145    | 145        | 145    | 0       | 0      | 0      | 0      | 
-+------------+-------------+--------+------------+--------+---------+--------+--------+--------+
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[4] | 64     | 64         | 64     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | SRL_SIG_reg[3] | 60     | 60         | 60     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | SRL_SIG_reg[2] | 128    | 128        | 128    | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[3]     | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | mem_reg[14]    | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__5     | mem_reg[3]     | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__6     | mem_reg[14]    | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | mem_reg[14]    | 72     | 72         | 72     | 0       | 0      | 0      | 0      | 
+|dsrl__8     | mem_reg[14]    | 145    | 145        | 145    | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -632,46 +662,47 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |   144|
-|2     |LUT1     |    84|
-|3     |LUT2     |   320|
-|4     |LUT3     |  1017|
-|5     |LUT4     |   638|
-|6     |LUT5     |   662|
-|7     |LUT6     |   807|
-|8     |MUXF7    |    32|
-|9     |RAMB18E1 |     4|
-|13    |RAMB36E1 |     7|
-|17    |SRL16E   |   400|
-|18    |FDRE     |  5324|
-|19    |FDSE     |    14|
+|1     |CARRY4   |   197|
+|2     |LUT1     |    91|
+|3     |LUT2     |   432|
+|4     |LUT3     |  1151|
+|5     |LUT4     |   705|
+|6     |LUT5     |   663|
+|7     |LUT6     |  1799|
+|8     |MUXF7    |   344|
+|9     |MUXF8    |   136|
+|10    |RAMB18E1 |     2|
+|12    |RAMB36E1 |     7|
+|15    |SRL16E   |   587|
+|16    |FDRE     |  5844|
+|17    |FDSE     |    36|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 147 ; free virtual = 17554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1562.018; parent = 1353.800; children = 209.144
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.023; parent = 2218.535; children = 986.488
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 185 ; free virtual = 16999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.747; parent = 1427.615; children = 209.097
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3293.430; parent = 2264.996; children = 1028.434
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2250.547 ; gain = 492.488 ; free physical = 197 ; free virtual = 17604
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2250.547 ; gain = 650.238 ; free physical = 197 ; free virtual = 17604
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 2264.992 ; gain = 498.520 ; free physical = 234 ; free virtual = 17049
+Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2264.992 ; gain = 660.270 ; free physical = 234 ; free virtual = 17049
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2250.547 ; gain = 0.000 ; free physical = 303 ; free virtual = 17710
-INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2264.992 ; gain = 0.000 ; free physical = 341 ; free virtual = 17156
+INFO: [Netlist 29-17] Analyzing 686 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2250.547 ; gain = 0.000 ; free physical = 247 ; free virtual = 17656
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2264.992 ; gain = 0.000 ; free physical = 285 ; free virtual = 17100
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 783b69b
+Synth Design complete, checksum: 514f5289
 INFO: [Common 17-83] Releasing license: Synthesis
-150 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
+170 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:48 . Memory (MB): peak = 2250.547 ; gain = 980.895 ; free physical = 470 ; free virtual = 17880
+synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:01:29 . Memory (MB): peak = 2264.992 ; gain = 935.684 ; free physical = 503 ; free virtual = 17318
 INFO: [Common 17-1381] The checkpoint '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/main_design_pynqrypt_encrypt_0_0_synth_1/main_design_pynqrypt_encrypt_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_pynqrypt_encrypt_0_0, cache-ID = f497e852dfc50649
-INFO: [Coretcl 2-1174] Renamed 51 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_pynqrypt_encrypt_0_0, cache-ID = a1ff4d92886f0611
+INFO: [Coretcl 2-1174] Renamed 67 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/main_design_pynqrypt_encrypt_0_0_synth_1/main_design_pynqrypt_encrypt_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_design_pynqrypt_encrypt_0_0_utilization_synth.rpt -pb main_design_pynqrypt_encrypt_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 12:16:16 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 13:14:10 2022...

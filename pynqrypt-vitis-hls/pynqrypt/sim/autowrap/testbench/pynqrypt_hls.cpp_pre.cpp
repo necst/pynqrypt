@@ -61872,6 +61872,7 @@ class Pynqrypt {
         void aes_encrypt_block(aes_block &state);
         void aes_sub_bytes(aes_block &state);
         void aes_shift_rows(aes_block &state);
+        void aes_shift_sub_bytes(aes_block &state);
         void aes_mix_columns(aes_block &state);
 
 
