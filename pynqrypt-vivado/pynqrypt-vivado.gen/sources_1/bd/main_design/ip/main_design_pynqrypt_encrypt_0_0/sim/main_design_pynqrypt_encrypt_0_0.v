@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:pynqrypt_encrypt:1.0
-// IP Revision: 2112807070
+// IP Revision: 2112807124
 
 `timescale 1ns/1ps
 

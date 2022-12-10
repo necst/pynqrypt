@@ -5,64 +5,72 @@
 <ModuleName>pynqrypt_encrypt</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_179</InstName>
-<ModuleName>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</ModuleName>
+<InstName>grp_aes_generate_round_keys_fu_108</InstName>
+<ModuleName>aes_generate_round_keys</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>179</ID>
+<ID>108</ID>
+<InstancesList>
+<Instance>
+<InstName>grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_87</InstName>
+<ModuleName>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>87</ID>
 </Instance>
 <Instance>
-<InstName>grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1_fu_186</InstName>
-<ModuleName>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</ModuleName>
+<InstName>grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1_fu_94</InstName>
+<ModuleName>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>186</ID>
+<ID>94</ID>
+</Instance>
+</InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_ctr_encrypt_fu_192</InstName>
+<InstName>grp_ctr_encrypt_fu_118</InstName>
 <ModuleName>ctr_encrypt</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>192</ID>
+<ID>118</ID>
 <InstancesList>
 <Instance>
 <InstName>dataflow_in_loop_loop_ctr_encrypt_U0</InstName>
 <ModuleName>dataflow_in_loop_loop_ctr_encrypt</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>90</ID>
+<ID>86</ID>
 <InstancesList>
 <Instance>
 <InstName>entry_proc_U0</InstName>
 <ModuleName>entry_proc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>106</ID>
+<ID>102</ID>
 </Instance>
 <Instance>
 <InstName>ctr_compute_nonce_U0</InstName>
 <ModuleName>ctr_compute_nonce</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>113</ID>
+<ID>109</ID>
 </Instance>
 <Instance>
 <InstName>assign_swap_endianness_U0</InstName>
 <ModuleName>assign_swap_endianness</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>120</ID>
+<ID>116</ID>
 </Instance>
 <Instance>
 <InstName>aes_encrypt_block_U0</InstName>
 <ModuleName>aes_encrypt_block</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>130</ID>
+<ID>126</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121</InstName>
+<InstName>grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_117</InstName>
 <ModuleName>aes_encrypt_block_Pipeline_loop_aes_encrypt_block</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>121</ID>
+<ID>117</ID>
 </Instance>
 <Instance>
-<InstName>grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_133</InstName>
+<InstName>grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_125</InstName>
 <ModuleName>aes_encrypt_block_Pipeline_loop_aes_sub_bytes</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>133</ID>
+<ID>125</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -70,13 +78,13 @@
 <InstName>ctr_xor_block_U0</InstName>
 <ModuleName>ctr_xor_block</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>141</ID>
+<ID>133</ID>
 </Instance>
 <Instance>
 <InstName>assign_swap_endianness_1_U0</InstName>
 <ModuleName>assign_swap_endianness_1</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>147</ID>
+<ID>139</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -88,7 +96,7 @@
 
 <ModuleInformation>
 <Module>
-<Name>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</Name>
+<Name>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</Name>
 <Loops>
 <loop_aes_generate_round_keys></loop_aes_generate_round_keys>
 </Loops>
@@ -145,7 +153,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</Object>
+<Object>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -156,7 +164,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</Object>
+<Object>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -167,7 +175,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</Object>
+<Object>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -178,7 +186,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</Object>
+<Object>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -189,7 +197,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</Object>
+<Object>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -200,7 +208,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys</Object>
+<Object>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -322,9 +330,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</Name>
+<Name>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</Name>
 <Loops>
-<VITIS_LOOP_181_1></VITIS_LOOP_181_1>
+<VITIS_LOOP_184_1></VITIS_LOOP_184_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -343,8 +351,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_181_1>
-<Name>VITIS_LOOP_181_1</Name>
+<VITIS_LOOP_184_1>
+<Name>VITIS_LOOP_184_1</Name>
 <Slack>7.30</Slack>
 <TripCount>11</TripCount>
 <Latency>22</Latency>
@@ -354,7 +362,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_181_1>
+</VITIS_LOOP_184_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -379,7 +387,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -390,7 +398,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -401,7 +409,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -412,7 +420,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -423,7 +431,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -434,7 +442,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -510,8 +518,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>pynqrypt_round_keys_V_address0</name>
-<Object>pynqrypt_round_keys_V</Object>
+<name>this_round_keys_address0</name>
+<Object>this_round_keys</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -521,8 +529,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>pynqrypt_round_keys_V_ce0</name>
-<Object>pynqrypt_round_keys_V</Object>
+<name>this_round_keys_ce0</name>
+<Object>this_round_keys</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -532,8 +540,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>pynqrypt_round_keys_V_we0</name>
-<Object>pynqrypt_round_keys_V</Object>
+<name>this_round_keys_we0</name>
+<Object>this_round_keys</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -543,8 +551,170 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>pynqrypt_round_keys_V_d0</name>
-<Object>pynqrypt_round_keys_V</Object>
+<name>this_round_keys_d0</name>
+<Object>this_round_keys</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>128</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
+<Module>
+<Name>aes_generate_round_keys</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>81</Best-caseLatency>
+<Average-caseLatency>81</Average-caseLatency>
+<Worst-caseLatency>81</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.810 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.810 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.810 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>81</PipelineInitiationInterval>
+<PipelineType>no</PipelineType>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<BRAM_18K>2</BRAM_18K>
+<AVAIL_BRAM>280</AVAIL_BRAM>
+<UTIL_BRAM>~0</UTIL_BRAM>
+<FF>352</FF>
+<AVAIL_FF>106400</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>9413</LUT>
+<AVAIL_LUT>53200</AVAIL_LUT>
+<UTIL_LUT>17</UTIL_LUT>
+<URAM>0</URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
+<UTIL_URAM>0</UTIL_URAM>
+<DSP>0</DSP>
+<AVAIL_DSP>220</AVAIL_DSP>
+<UTIL_DSP>0</UTIL_DSP>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>aes_generate_round_keys</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>aes_generate_round_keys</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>aes_generate_round_keys</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>aes_generate_round_keys</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>aes_generate_round_keys</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>aes_generate_round_keys</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read</name>
+<Object>p_read</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>128</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>this_round_keys_address0</name>
+<Object>this_round_keys</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>this_round_keys_ce0</name>
+<Object>this_round_keys</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>this_round_keys_we0</name>
+<Object>this_round_keys</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>this_round_keys_d0</name>
+<Object>this_round_keys</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1614,13 +1784,13 @@
 <EstimatedClockPeriod>5.944</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>92</Best-caseLatency>
-<Average-caseLatency>92</Average-caseLatency>
-<Worst-caseLatency>92</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.920 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.920 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.920 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>92</PipelineInitiationInterval>
+<Best-caseLatency>21</Best-caseLatency>
+<Average-caseLatency>21</Average-caseLatency>
+<Worst-caseLatency>21</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.210 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.210 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.210 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>21</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -1628,10 +1798,10 @@
 <Name>loop_aes_encrypt_block</Name>
 <Slack>7.30</Slack>
 <TripCount>9</TripCount>
-<Latency>90</Latency>
-<AbsoluteTimeLatency>0.900 us</AbsoluteTimeLatency>
-<PipelineII>10</PipelineII>
-<PipelineDepth>10</PipelineDepth>
+<Latency>19</Latency>
+<AbsoluteTimeLatency>0.190 us</AbsoluteTimeLatency>
+<PipelineII>2</PipelineII>
+<PipelineDepth>4</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -1640,15 +1810,15 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>2</BRAM_18K>
-<AVAIL_BRAM>280</AVAIL_BRAM>
-<UTIL_BRAM>~0</UTIL_BRAM>
-<FF>737</FF>
+<FF>522</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>35577</LUT>
+<LUT>104821</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>66</UTIL_LUT>
+<UTIL_LUT>197</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>280</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
 <DSP>0</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>0</UTIL_DSP>
@@ -1958,27 +2128,27 @@
 <EstimatedClockPeriod>6.256</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>116</Best-caseLatency>
-<Average-caseLatency>116</Average-caseLatency>
-<Worst-caseLatency>116</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.160 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.160 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.160 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>116</PipelineInitiationInterval>
+<Best-caseLatency>45</Best-caseLatency>
+<Average-caseLatency>45</Average-caseLatency>
+<Worst-caseLatency>45</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.450 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.450 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.450 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>45</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>2</BRAM_18K>
-<AVAIL_BRAM>280</AVAIL_BRAM>
-<UTIL_BRAM>~0</UTIL_BRAM>
-<FF>1268</FF>
+<FF>1053</FF>
 <AVAIL_FF>106400</AVAIL_FF>
-<UTIL_FF>1</UTIL_FF>
-<LUT>39823</LUT>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>109067</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>74</UTIL_LUT>
+<UTIL_LUT>205</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>280</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
 <DSP>0</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>0</UTIL_DSP>
@@ -3027,28 +3197,28 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>116</Best-caseLatency>
-<Average-caseLatency>116</Average-caseLatency>
-<Worst-caseLatency>116</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.160 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.160 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.160 us</Worst-caseRealTimeLatency>
-<DataflowPipelineThroughput>117</DataflowPipelineThroughput>
-<PipelineInitiationInterval>117</PipelineInitiationInterval>
+<Best-caseLatency>45</Best-caseLatency>
+<Average-caseLatency>45</Average-caseLatency>
+<Worst-caseLatency>45</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.450 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.450 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.450 us</Worst-caseRealTimeLatency>
+<DataflowPipelineThroughput>46</DataflowPipelineThroughput>
+<PipelineInitiationInterval>46</PipelineInitiationInterval>
 <PipelineType>dataflow</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>2</BRAM_18K>
-<AVAIL_BRAM>280</AVAIL_BRAM>
-<UTIL_BRAM>~0</UTIL_BRAM>
-<FF>2523</FF>
+<FF>2308</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>2</UTIL_FF>
-<LUT>40822</LUT>
+<LUT>110066</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>76</UTIL_LUT>
+<UTIL_LUT>206</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>280</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
 <DSP>0</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>0</UTIL_DSP>
@@ -3869,7 +4039,7 @@
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<DataflowPipelineThroughput>117</DataflowPipelineThroughput>
+<DataflowPipelineThroughput>46</DataflowPipelineThroughput>
 <PipelineDepth>undef</PipelineDepth>
 <PipelineType>dataflow</PipelineType>
 <InstanceList>
@@ -3880,15 +4050,15 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>2</BRAM_18K>
-<AVAIL_BRAM>280</AVAIL_BRAM>
-<UTIL_BRAM>~0</UTIL_BRAM>
-<FF>3465</FF>
+<FF>3250</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>3</UTIL_FF>
-<LUT>41032</LUT>
+<LUT>110276</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>77</UTIL_LUT>
+<UTIL_LUT>207</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>280</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
 <DSP>0</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>0</UTIL_DSP>
@@ -4691,15 +4861,15 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>8</BRAM_18K>
+<BRAM_18K>6</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>2</UTIL_BRAM>
-<FF>5407</FF>
+<FF>5323</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>5</UTIL_FF>
-<LUT>52939</LUT>
+<LUT>122197</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>99</UTIL_LUT>
+<UTIL_LUT>229</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

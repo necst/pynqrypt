@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_encrypt_block'" level="0">
-<item name = "Date">Sat Dec 10 13:08:40 2022
+<item name = "Date">Sat Dec 10 14:02:49 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">116, 116, 1.160 us, 1.160 us, 116, 116, no</column>
+<column name="">45, 45, 0.450 us, 0.450 us, 45, 45, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121">aes_encrypt_block_Pipeline_loop_aes_encrypt_block, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
-<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_133">aes_encrypt_block_Pipeline_loop_aes_sub_bytes, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_117">aes_encrypt_block_Pipeline_loop_aes_encrypt_block, 21, 21, 0.210 us, 0.210 us, 21, 21, no</column>
+<column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_125">aes_encrypt_block_Pipeline_loop_aes_sub_bytes, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

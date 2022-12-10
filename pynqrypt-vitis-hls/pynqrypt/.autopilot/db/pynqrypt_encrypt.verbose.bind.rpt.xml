@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pynqrypt_encrypt'" level="0">
-<item name = "Date">Sat Dec 10 13:08:41 2022
+<item name = "Date">Sat Dec 10 14:02:50 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -31,9 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys_fu_179">pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys, 52, 52, 0.520 us, 0.520 us, 52, 52, no</column>
-<column name="grp_pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1_fu_186">pynqrypt_encrypt_Pipeline_VITIS_LOOP_181_1, 24, 24, 0.240 us, 0.240 us, 24, 24, no</column>
-<column name="grp_ctr_encrypt_fu_192">ctr_encrypt, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_aes_generate_round_keys_fu_108">aes_generate_round_keys, 81, 81, 0.810 us, 0.810 us, 81, 81, no</column>
+<column name="grp_ctr_encrypt_fu_118">ctr_encrypt, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

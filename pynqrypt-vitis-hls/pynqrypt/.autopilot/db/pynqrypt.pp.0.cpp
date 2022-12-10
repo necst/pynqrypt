@@ -6299,7 +6299,10 @@ void Pynqrypt::aes_shift_sub_bytes(aes_block &block)
 
 void Pynqrypt::aes_mix_columns(aes_block &block)
 {
-    aes_atom s0, s1, a, b;
+#pragma HLS ARRAY_RESHAPE variable=aes_mul2 type=complete
+#pragma HLS ARRAY_RESHAPE variable=aes_mul3 type=complete
+
+ aes_atom s0, s1, a, b;
     aes_block temp;
 
     loop_aes_mix_columns: for (int i = 0; i < 4; i++) {
@@ -6357,7 +6360,7 @@ void Pynqrypt::aes_generate_round_keys()
         _round_key[i + 3] = _round_key[i - 1] ^ _round_key[i + 2];
     }
 
-    VITIS_LOOP_181_1: for (int i = 0; i < 44; i += 4) {
+    VITIS_LOOP_184_1: for (int i = 0; i < 44; i += 4) {
         round_keys[i / 4].range(127, 96) = _round_key[i + 0];
         round_keys[i / 4].range(95, 64) = _round_key[i + 1];
         round_keys[i / 4].range(63, 32) = _round_key[i + 2];
@@ -6372,9 +6375,8 @@ void Pynqrypt::aes_rotate_word(aes_word &word)
 
 void Pynqrypt::aes_sub_word(aes_word &word)
 {
-    auto atoms = static_cast<aes_atom*>(static_cast<void*>(&word));
-    VITIS_LOOP_197_1: for (int i = 0; i < 4; i++)
-        atoms[i] = aes_sbox[atoms[i]];
+    VITIS_LOOP_199_1: for (int i = 0; i < 4; i++)
+        word.range(i * 8 + 7, i * 8) = aes_sbox[word.range(i * 8 + 7, i * 8)];
 }
 
 void Pynqrypt::aes_xor_round_constant(aes_word &word, int round)

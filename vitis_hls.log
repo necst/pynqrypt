@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'mrindeciso' on host 'SSD-UBUNTU' (Linux_x86_64 version 5.15.0-56-generic) on Sat Dec 10 13:09:59 CET 2022
+INFO: [HLS 200-10] For user 'mrindeciso' on host 'SSD-UBUNTU' (Linux_x86_64 version 5.15.0-56-generic) on Sat Dec 10 14:04:16 CET 2022
 INFO: [HLS 200-10] On os Ubuntu 22.04.1 LTS
 INFO: [HLS 200-10] In directory '/home/mrindeciso/Documents/pynqrypt'
 Sourcing Tcl script '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/export.tcl'
@@ -7,26 +7,26 @@ INFO: [HLS 200-1510] Running: source /home/mrindeciso/Documents/pynqrypt/pynqryp
 INFO: [HLS 200-1510] Running: open_project pynqrypt-vitis-hls 
 INFO: [HLS 200-10] Opening project '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls'.
 INFO: [HLS 200-1510] Running: set_top pynqrypt_encrypt 
-INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt_hls.hpp 
-INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt_hls.hpp' to the project
-INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt_hls.cpp 
-INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt_hls.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt.hpp 
-INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt.hpp' to the project
-INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt.cpp 
-INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files hw-impl/src/constants.hpp 
 INFO: [HLS 200-10] Adding design file 'hw-impl/src/constants.hpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/test.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/nonce.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/nonce.bin' to the project
-INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/key.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/key.bin' to the project
-INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/data_enc_openssl.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/data_enc_openssl.bin' to the project
-INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/data.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt.cpp 
+INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt.hpp 
+INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt_hls.cpp 
+INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files hw-impl/src/pynqrypt_hls.hpp 
+INFO: [HLS 200-10] Adding design file 'hw-impl/src/pynqrypt_hls.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/data.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/data.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/data_enc_openssl.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/data_enc_openssl.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/key.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/key.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/nonce.bin -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/nonce.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw-impl/src/test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'hw-impl/src/test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution pynqrypt -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -42,7 +42,7 @@ INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/mri
 INFO: [HLS 200-1510] Running: source ./pynqrypt-vitis-hls/pynqrypt/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name pynqrypt_encrypt pynqrypt_encrypt 
 INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls 
-Running Dispatch Server on port: 46501
+Running Dispatch Server on port: 36869
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
 ****** Vivado v2022.2 (64-bit)
@@ -54,7 +54,7 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/xilinx/Vivado/2022.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 13:10:21 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 14:04:38 2022...
 INFO: [HLS 200-802] Generated output file pynqrypt-vitis-hls/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 11 seconds. CPU system time: 0.58 seconds. Elapsed time: 21.66 seconds; current allocated memory: 8.906 MB.
-INFO: [HLS 200-112] Total CPU user time: 12.15 seconds. Total CPU system time: 0.72 seconds. Total elapsed time: 32.82 seconds; peak allocated memory: 210.820 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 10.98 seconds. CPU system time: 0.66 seconds. Elapsed time: 21.61 seconds; current allocated memory: 8.945 MB.
+INFO: [HLS 200-112] Total CPU user time: 12.11 seconds. Total CPU system time: 0.79 seconds. Total elapsed time: 32.75 seconds; peak allocated memory: 210.863 MB.

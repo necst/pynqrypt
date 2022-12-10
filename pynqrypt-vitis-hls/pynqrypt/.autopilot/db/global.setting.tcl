@@ -42,10 +42,10 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020i:-clg400:-1L
-set SourceFiles {sc {} c {../../hw-impl/src/pynqrypt.cpp ../../hw-impl/src/pynqrypt_hls.cpp}}
+set SourceFiles {sc {} c {../../hw-impl/src/pynqrypt_hls.cpp ../../hw-impl/src/pynqrypt.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt.directive
-set TBFiles {verilog {../../hw-impl/src/data.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/key.bin ../../hw-impl/src/nonce.bin ../../hw-impl/src/test.cpp} bc {../../hw-impl/src/data.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/key.bin ../../hw-impl/src/nonce.bin ../../hw-impl/src/test.cpp} vhdl {../../hw-impl/src/data.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/key.bin ../../hw-impl/src/nonce.bin ../../hw-impl/src/test.cpp} sc {../../hw-impl/src/data.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/key.bin ../../hw-impl/src/nonce.bin ../../hw-impl/src/test.cpp} cas {../../hw-impl/src/data.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/key.bin ../../hw-impl/src/nonce.bin ../../hw-impl/src/test.cpp} c {}}
+set TBFiles {verilog {../../hw-impl/src/test.cpp ../../hw-impl/src/nonce.bin ../../hw-impl/src/key.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/data.bin} bc {../../hw-impl/src/test.cpp ../../hw-impl/src/nonce.bin ../../hw-impl/src/key.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/data.bin} vhdl {../../hw-impl/src/test.cpp ../../hw-impl/src/nonce.bin ../../hw-impl/src/key.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/data.bin} sc {../../hw-impl/src/test.cpp ../../hw-impl/src/nonce.bin ../../hw-impl/src/key.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/data.bin} cas {../../hw-impl/src/test.cpp ../../hw-impl/src/nonce.bin ../../hw-impl/src/key.bin ../../hw-impl/src/data_enc_openssl.bin ../../hw-impl/src/data.bin} c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

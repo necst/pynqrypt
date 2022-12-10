@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_loop_ctr_encrypt'" level="0">
-<item name = "Date">Sat Dec 10 13:08:43 2022
+<item name = "Date">Sat Dec 10 14:02:52 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">116, 116, 1.160 us, 1.160 us, 117, 117, dataflow</column>
+<column name="">45, 45, 0.450 us, 0.450 us, 46, 46, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -34,7 +34,7 @@
 <column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="ctr_compute_nonce_U0">ctr_compute_nonce, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="assign_swap_endianness_U0">assign_swap_endianness, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
-<column name="aes_encrypt_block_U0">aes_encrypt_block, 116, 116, 1.160 us, 1.160 us, 116, 116, no</column>
+<column name="aes_encrypt_block_U0">aes_encrypt_block, 45, 45, 0.450 us, 0.450 us, 45, 45, no</column>
 <column name="ctr_xor_block_U0">ctr_xor_block, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="assign_swap_endianness_1_U0">assign_swap_endianness_1, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
 </table>
@@ -55,19 +55,19 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 22, -</column>
 <column name="FIFO">-, -, 594, 407, -</column>
-<column name="Instance">2, -, 1925, 40357, -</column>
+<column name="Instance">-, -, 1710, 109601, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 36, -</column>
 <column name="Register">-, -, 4, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">~0, 0, 2, 76, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 2, 206, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="aes_encrypt_block_U0">aes_encrypt_block, 2, 0, 1268, 39823, 0</column>
+<column name="aes_encrypt_block_U0">aes_encrypt_block, 0, 0, 1053, 109067, 0</column>
 <column name="assign_swap_endianness_U0">assign_swap_endianness, 0, 0, 198, 171, 0</column>
 <column name="assign_swap_endianness_1_U0">assign_swap_endianness_1, 0, 0, 197, 175, 0</column>
 <column name="ctr_compute_nonce_U0">ctr_compute_nonce, 0, 0, 130, 20, 0</column>

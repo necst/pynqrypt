@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block'" level="0">
-<item name = "Date">Sat Dec 10 13:08:39 2022
+<item name = "Date">Sat Dec 10 14:02:48 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
+<column name="">21, 21, 0.210 us, 0.210 us, 21, 21, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_aes_encrypt_block">90, 90, 10, 10, 1, 9, yes</column>
+<column name="- loop_aes_encrypt_block">19, 19, 4, 2, 1, 9, yes</column>
 </table>
 </item>
 </section>

@@ -67,13 +67,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="5"/>
-    <Option Name="WTModelSimExportSim" Val="5"/>
-    <Option Name="WTQuestaExportSim" Val="5"/>
+    <Option Name="WTXSimExportSim" Val="6"/>
+    <Option Name="WTModelSimExportSim" Val="6"/>
+    <Option Name="WTQuestaExportSim" Val="6"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="5"/>
-    <Option Name="WTRivieraExportSim" Val="5"/>
-    <Option Name="WTActivehdlExportSim" Val="5"/>
+    <Option Name="WTVcsExportSim" Val="6"/>
+    <Option Name="WTRivieraExportSim" Val="6"/>
+    <Option Name="WTActivehdlExportSim" Val="6"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -97,17 +97,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_xbar_0/main_design_xbar_0.xci">
-          <Proxy FileSetName="main_design_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_pynqrypt_encrypt_0_0/main_design_pynqrypt_encrypt_0_0.xci">
+          <Proxy FileSetName="main_design_pynqrypt_encrypt_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_rst_ps7_0_100M_0/main_design_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="main_design_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_xbar_0/main_design_xbar_0.xci">
+          <Proxy FileSetName="main_design_xbar_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_processing_system7_0_0/main_design_processing_system7_0_0.xci">
           <Proxy FileSetName="main_design_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_pynqrypt_encrypt_0_0/main_design_pynqrypt_encrypt_0_0.xci">
-          <Proxy FileSetName="main_design_pynqrypt_encrypt_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/main_design/hdl/main_design_wrapper.v">

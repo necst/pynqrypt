@@ -37,7 +37,7 @@
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<DataflowPipelineThroughput>117</DataflowPipelineThroughput>
+<DataflowPipelineThroughput>46</DataflowPipelineThroughput>
 <InstanceList>
 </InstanceList>
 </loop_ctr_encrypt>
@@ -46,9 +46,9 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>2</BRAM_18K>
-<FF>3465</FF>
-<LUT>41032</LUT>
+<FF>3250</FF>
+<LUT>110276</LUT>
+<BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
