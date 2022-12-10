@@ -15,10 +15,13 @@ proc df_record_move {} {
     if {[file isdirectory $loop_record_directory] == 0} {
         file mkdir $loop_record_directory
     }
+    exec zip channel.zip -m {*}[glob -nocomplain chan_status*.csv]
+    df_move_file_type "channel.zip" $fifo_record_directory
     exec zip process.zip -m {*}[glob -nocomplain status*.csv module_status*.csv]
     df_move_file_type "process.zip" $process_record_directory
     exec zip loop.zip -m {*}[glob -nocomplain *_loop_status*.csv]
     df_move_file_type "loop.zip" $loop_record_directory
+ exec zip nouse.zip -m {*}[glob -nocomplain *.csv]
 }
 
 proc df_move_file_type {file_format target_dir} {

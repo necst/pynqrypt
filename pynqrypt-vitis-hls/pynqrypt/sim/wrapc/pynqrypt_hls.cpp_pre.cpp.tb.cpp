@@ -61921,7 +61921,7 @@ void pynqrypt_encrypt(
 
  crypto::Pynqrypt pynqrypt(key, nonce);
 
- pynqrypt.ctr_encrypt(plaintext_length, plaintext, ciphertext);
+ pynqrypt.ctr_encrypt(plaintext_length / 16, plaintext, ciphertext);
 }
 #ifndef HLS_FASTSIM
 struct __cosim_s1__{char data[sizeof(ap_uint<128>)];};

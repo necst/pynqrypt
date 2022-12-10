@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_encrypt_block'" level="0">
-<item name = "Date">Sat Dec 10 12:09:52 2022
+<item name = "Date">Sat Dec 10 12:34:59 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -49,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 256, -</column>
+<column name="Expression">-, -, 0, 258, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">4, -, 1145, 2698, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 85, -</column>
-<column name="Register">-, -, 393, -, -</column>
+<column name="Register">-, -, 266, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">1, 0, 1, 5, 0</specialColumn>
 </table>
@@ -81,14 +81,15 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="xor_ln859_1_fu_348_p2">xor, 0, 0, 128, 128, 128</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_return">xor, 0, 0, 128, 128, 128</column>
 <column name="xor_ln859_fu_145_p2">xor, 0, 0, 128, 128, 128</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">42, 8, 1, 8</column>
-<column name="ap_return">9, 2, 128, 256</column>
+<column name="ap_done">9, 2, 1, 2</column>
 <column name="this_round_keys_address0">20, 4, 4, 16</column>
 <column name="this_round_keys_ce0">14, 3, 1, 3</column>
 </table>
@@ -96,7 +97,7 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">7, 0, 7, 0</column>
-<column name="ap_return_preg">128, 0, 128, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137_ap_start_reg">1, 0, 1, 0</column>
 <column name="this_round_keys_load_reg_371">128, 0, 128, 0</column>
@@ -114,6 +115,7 @@
 <column name="ap_rst">in, 1, ap_ctrl_hs, aes_encrypt_block, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, aes_encrypt_block, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, aes_encrypt_block, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, aes_encrypt_block, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, aes_encrypt_block, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, aes_encrypt_block, return value</column>
 <column name="ap_return">out, 128, ap_ctrl_hs, aes_encrypt_block, return value</column>

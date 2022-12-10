@@ -6210,21 +6210,16 @@ Pynqrypt::Pynqrypt(aes_block key, aes_nonce nonce)
     aes_generate_round_keys();
 }
 
-void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_block *plaintext, aes_block *ciphertext)
+void Pynqrypt::ctr_encrypt(size_t block_count, aes_block *plaintext, aes_block *ciphertext)
 {
-    loop_ctr_encrypt: for (size_t i = 0; i < (plaintext_length / 16); i++) {
-        aes_block block_nonce, block;
-
-
-        assign_swap_endianness(plaintext[i], block);
-
+    loop_ctr_encrypt: for (size_t i = 0; i < block_count; i++) {
+#pragma HLS DATAFLOW
+ aes_block block_nonce, block;
+        aes_block plaintext_block = plaintext[i];
+        assign_swap_endianness(plaintext_block, block);
         ctr_compute_nonce(block_nonce, i);
         aes_encrypt_block(block_nonce);
-
         ctr_xor_block(block, block_nonce);
-
-
-
         assign_swap_endianness(block, ciphertext[i]);
     }
 }
@@ -6351,7 +6346,7 @@ void Pynqrypt::aes_generate_round_keys()
         _round_key[i + 3] = _round_key[i - 1] ^ _round_key[i + 2];
     }
 
-    VITIS_LOOP_157_1: for (int i = 0; i < 44; i += 4) {
+    VITIS_LOOP_152_1: for (int i = 0; i < 44; i += 4) {
         round_keys[i / 4].range(127, 96) = _round_key[i + 0];
         round_keys[i / 4].range(95, 64) = _round_key[i + 1];
         round_keys[i / 4].range(63, 32) = _round_key[i + 2];
@@ -6367,7 +6362,7 @@ void Pynqrypt::aes_rotate_word(aes_word &word)
 void Pynqrypt::aes_sub_word(aes_word &word)
 {
     auto atoms = static_cast<aes_atom*>(static_cast<void*>(&word));
-    VITIS_LOOP_173_1: for (int i = 0; i < 4; i++)
+    VITIS_LOOP_168_1: for (int i = 0; i < 4; i++)
         atoms[i] = aes_sbox[atoms[i]];
 }
 

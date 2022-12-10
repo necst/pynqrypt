@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 18 \
+    id 44 \
     name this_round_keys \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename this_round_keys \
     op interface \
-    ports { this_round_keys_address0 { O 4 vector } this_round_keys_ce0 { O 1 bit } this_round_keys_q0 { I 128 vector } } \
+    ports { this_round_keys_address0 { O 4 vector } this_round_keys_ce0 { O 1 bit } this_round_keys_d0 { O 128 vector } this_round_keys_q0 { I 128 vector } this_round_keys_we0 { O 1 bit } this_round_keys_address1 { O 4 vector } this_round_keys_ce1 { O 1 bit } this_round_keys_d1 { O 128 vector } this_round_keys_q1 { I 128 vector } this_round_keys_we1 { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'this_round_keys'"
@@ -29,7 +29,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 43 \
     name p_read \
     type other \
     dir I \
@@ -37,29 +37,29 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_p_read \
     op interface \
-    ports { p_read { I 96 vector } } \
+    ports { p_read { I 96 vector } p_read_ap_vld { I 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
-    name plaintext_length \
+    id 45 \
+    name block_count \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_plaintext_length \
+    corename dc_block_count \
     op interface \
-    ports { plaintext_length { I 64 vector } } \
+    ports { block_count { I 60 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 20 \
+    id 46 \
     name gmem \
     type other \
     dir IO \
@@ -74,7 +74,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 21 \
+    id 47 \
     name plaintext \
     type other \
     dir I \
@@ -82,14 +82,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_plaintext \
     op interface \
-    ports { plaintext { I 64 vector } } \
+    ports { plaintext { I 64 vector } plaintext_ap_vld { I 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 22 \
+    id 48 \
     name ciphertext \
     type other \
     dir I \
@@ -97,7 +97,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ciphertext \
     op interface \
-    ports { ciphertext { I 64 vector } } \
+    ports { ciphertext { I 64 vector } ciphertext_ap_vld { I 1 bit } } \
 } "
 }
 
@@ -111,7 +111,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_ctrl \
     op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
+    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
 } "
 }
 

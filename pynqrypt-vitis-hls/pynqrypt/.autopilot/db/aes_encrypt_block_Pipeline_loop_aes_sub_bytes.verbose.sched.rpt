@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_encrypt_block_Pipeline_loop_aes_sub_bytes'
 ================================================================
-* Date:           Sat Dec 10 12:09:50 2022
+* Date:           Sat Dec 10 12:34:57 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -96,42 +96,42 @@ ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %i"   -
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i13"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 4.89>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%i_3 = load i5 %i" [hw-impl/src/pynqrypt.cpp:67]   --->   Operation 13 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%i_3 = load i5 %i" [hw-impl/src/pynqrypt.cpp:62]   --->   Operation 13 'load' 'i_3' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 14 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 15 [1/1] (1.36ns)   --->   "%icmp_ln66 = icmp_eq  i5 %i_3, i5 16" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 15 'icmp' 'icmp_ln66' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (1.36ns)   --->   "%icmp_ln61 = icmp_eq  i5 %i_3, i5 16" [hw-impl/src/pynqrypt.cpp:61]   --->   Operation 15 'icmp' 'icmp_ln61' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (1.78ns)   --->   "%i_4 = add i5 %i_3, i5 1" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 17 'add' 'i_4' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln66 = br i1 %icmp_ln66, void %for.inc.i13.split, void %_ZN6crypto8Pynqrypt13aes_sub_bytesER7ap_uintILi128EE.exit14.exitStub" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 18 'br' 'br_ln66' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%p_Val2_load_1 = load i128 %p_Val2_s"   --->   Operation 19 'load' 'p_Val2_load_1' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln67 = trunc i5 %i_3" [hw-impl/src/pynqrypt.cpp:67]   --->   Operation 20 'trunc' 'trunc_ln67' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %trunc_ln67, i3 0" [hw-impl/src/pynqrypt.cpp:67]   --->   Operation 21 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln668_1 = zext i7 %shl_ln"   --->   Operation 22 'zext' 'zext_ln668_1' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (4.89ns)   --->   "%lshr_ln668 = lshr i128 %p_Val2_load_1, i128 %zext_ln668_1"   --->   Operation 23 'lshr' 'lshr_ln668' <Predicate = (!icmp_ln66)> <Delay = 4.89> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln668 = trunc i128 %lshr_ln668"   --->   Operation 24 'trunc' 'trunc_ln668' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln66 = store i5 %i_4, i5 %i" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 25 'store' 'store_ln66' <Predicate = (!icmp_ln66)> <Delay = 1.58>
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_Val2_load = load i128 %p_Val2_s"   --->   Operation 40 'load' 'p_Val2_load' <Predicate = (icmp_ln66)> <Delay = 0.00>
-ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i128P0A, i128 %t_out, i128 %p_Val2_load"   --->   Operation 41 'write' 'write_ln0' <Predicate = (icmp_ln66)> <Delay = 0.00>
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 42 'ret' 'ret_ln0' <Predicate = (icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (1.78ns)   --->   "%i_4 = add i5 %i_3, i5 1" [hw-impl/src/pynqrypt.cpp:61]   --->   Operation 17 'add' 'i_4' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln61 = br i1 %icmp_ln61, void %for.inc.i13.split, void %_ZN6crypto8Pynqrypt13aes_sub_bytesER7ap_uintILi128EE.exit14.exitStub" [hw-impl/src/pynqrypt.cpp:61]   --->   Operation 18 'br' 'br_ln61' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%p_Val2_load_1 = load i128 %p_Val2_s"   --->   Operation 19 'load' 'p_Val2_load_1' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln62 = trunc i5 %i_3" [hw-impl/src/pynqrypt.cpp:62]   --->   Operation 20 'trunc' 'trunc_ln62' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %trunc_ln62, i3 0" [hw-impl/src/pynqrypt.cpp:62]   --->   Operation 21 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln668_1 = zext i7 %shl_ln"   --->   Operation 22 'zext' 'zext_ln668_1' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (4.89ns)   --->   "%lshr_ln668 = lshr i128 %p_Val2_load_1, i128 %zext_ln668_1"   --->   Operation 23 'lshr' 'lshr_ln668' <Predicate = (!icmp_ln61)> <Delay = 4.89> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln668 = trunc i128 %lshr_ln668"   --->   Operation 24 'trunc' 'trunc_ln668' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln61 = store i5 %i_4, i5 %i" [hw-impl/src/pynqrypt.cpp:61]   --->   Operation 25 'store' 'store_ln61' <Predicate = (!icmp_ln61)> <Delay = 1.58>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_Val2_load = load i128 %p_Val2_s"   --->   Operation 40 'load' 'p_Val2_load' <Predicate = (icmp_ln61)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i128P0A, i128 %t_out, i128 %p_Val2_load"   --->   Operation 41 'write' 'write_ln0' <Predicate = (icmp_ln61)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 42 'ret' 'ret_ln0' <Predicate = (icmp_ln61)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 3.25>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln668 = zext i8 %trunc_ln668"   --->   Operation 26 'zext' 'zext_ln668' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln668"   --->   Operation 27 'getelementptr' 'crypto_aes_sbox_V_addr' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_3 : Operation 28 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 28 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln66)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln668 = zext i8 %trunc_ln668"   --->   Operation 26 'zext' 'zext_ln668' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln668"   --->   Operation 27 'getelementptr' 'crypto_aes_sbox_V_addr' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_3 : Operation 28 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 28 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln61)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
 
 State 4 <SV = 3> <Delay = 6.50>
-ST_4 : Operation 29 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 29 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln66)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
-ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln368 = zext i7 %shl_ln"   --->   Operation 30 'zext' 'zext_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_4 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368 = shl i128 255, i128 %zext_ln368"   --->   Operation 31 'shl' 'shl_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.25> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%xor_ln368 = xor i128 %shl_ln368, i128 340282366920938463463374607431768211455"   --->   Operation 32 'xor' 'xor_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%and_ln368 = and i128 %p_Val2_load_1, i128 %xor_ln368"   --->   Operation 33 'and' 'and_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%zext_ln368_1 = zext i8 %crypto_aes_sbox_V_load"   --->   Operation 34 'zext' 'zext_ln368_1' <Predicate = (!icmp_ln66)> <Delay = 0.00>
-ST_4 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368_1 = shl i128 %zext_ln368_1, i128 %zext_ln368"   --->   Operation 35 'shl' 'shl_ln368_1' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 36 [1/1] (3.25ns) (out node of the LUT)   --->   "%p_Result_s = or i128 %and_ln368, i128 %shl_ln368_1"   --->   Operation 36 'or' 'p_Result_s' <Predicate = (!icmp_ln66)> <Delay = 3.25> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 29 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 29 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln61)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln368 = zext i7 %shl_ln"   --->   Operation 30 'zext' 'zext_ln368' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368 = shl i128 255, i128 %zext_ln368"   --->   Operation 31 'shl' 'shl_ln368' <Predicate = (!icmp_ln61)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.25> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%xor_ln368 = xor i128 %shl_ln368, i128 340282366920938463463374607431768211455"   --->   Operation 32 'xor' 'xor_ln368' <Predicate = (!icmp_ln61)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%and_ln368 = and i128 %p_Val2_load_1, i128 %xor_ln368"   --->   Operation 33 'and' 'and_ln368' <Predicate = (!icmp_ln61)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%zext_ln368_1 = zext i8 %crypto_aes_sbox_V_load"   --->   Operation 34 'zext' 'zext_ln368_1' <Predicate = (!icmp_ln61)> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368_1 = shl i128 %zext_ln368_1, i128 %zext_ln368"   --->   Operation 35 'shl' 'shl_ln368_1' <Predicate = (!icmp_ln61)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/1] (3.25ns) (out node of the LUT)   --->   "%p_Result_s = or i128 %and_ln368, i128 %shl_ln368_1"   --->   Operation 36 'or' 'p_Result_s' <Predicate = (!icmp_ln61)> <Delay = 3.25> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 1.58>
-ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specloopname_ln66 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 37 'specloopname' 'specloopname_ln66' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 38 [1/1] (1.58ns)   --->   "%store_ln66 = store i128 %p_Result_s, i128 %p_Val2_s" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 38 'store' 'store_ln66' <Predicate = true> <Delay = 1.58>
-ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln66 = br void %for.inc.i13" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 39 'br' 'br_ln66' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [hw-impl/src/pynqrypt.cpp:61]   --->   Operation 37 'specloopname' 'specloopname_ln61' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (1.58ns)   --->   "%store_ln61 = store i128 %p_Result_s, i128 %p_Val2_s" [hw-impl/src/pynqrypt.cpp:61]   --->   Operation 38 'store' 'store_ln61' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln61 = br void %for.inc.i13" [hw-impl/src/pynqrypt.cpp:61]   --->   Operation 39 'br' 'br_ln61' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -146,7 +146,7 @@ The critical path consists of the following:
 
  <State 2>: 4.89ns
 The critical path consists of the following:
-	'load' operation ('i', hw-impl/src/pynqrypt.cpp:67) on local variable 'i' [11]  (0 ns)
+	'load' operation ('i', hw-impl/src/pynqrypt.cpp:62) on local variable 'i' [11]  (0 ns)
 	'lshr' operation ('lshr_ln668') [23]  (4.89 ns)
 
  <State 3>: 3.25ns
@@ -162,7 +162,7 @@ The critical path consists of the following:
 
  <State 5>: 1.59ns
 The critical path consists of the following:
-	'store' operation ('store_ln66', hw-impl/src/pynqrypt.cpp:66) of variable '__Result__' on local variable '__Val2__' [35]  (1.59 ns)
+	'store' operation ('store_ln61', hw-impl/src/pynqrypt.cpp:61) of variable '__Result__' on local variable '__Val2__' [35]  (1.59 ns)
 
 
 ============================================================
