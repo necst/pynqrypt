@@ -1268,7 +1268,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9efacc60</spirit:value>
+            <spirit:value>08cb0ddf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1284,7 +1284,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a4dff3c9</spirit:value>
+            <spirit:value>d9a5de66</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1300,7 +1300,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5f91ee6f</spirit:value>
+            <spirit:value>1dcb7c2c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1316,7 +1316,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a7a6b921</spirit:value>
+            <spirit:value>6812f198</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2640,6 +2640,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -2664,7 +2668,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_155_1.v</spirit:name>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2735,6 +2739,11 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_ctr_encrypt.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -2764,7 +2773,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_155_1.v</spirit:name>
+        <spirit:name>hdl/verilog/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2819,6 +2828,10 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/pynqrypt_encrypt_ctr_encrypt.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -2839,7 +2852,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_155_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2849,7 +2862,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/pynqrypt_encrypt.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_2dc92ab6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_27f02195</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2895,6 +2908,11 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/pynqrypt_encrypt_ctr_encrypt.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/pynqrypt_encrypt_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -2920,7 +2938,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_155_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/pynqrypt_encrypt_pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3148,8 +3166,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Pynqrypt_encrypt</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112806988</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-12-10T10:48:47Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112807011</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-12-10T11:11:51Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -3160,7 +3178,7 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2fd0c0cb"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="2c1df7e3"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f81c71a6"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="841299d8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9616e303"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="6865de4f"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="afb4fec1"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="36e87dad"/>

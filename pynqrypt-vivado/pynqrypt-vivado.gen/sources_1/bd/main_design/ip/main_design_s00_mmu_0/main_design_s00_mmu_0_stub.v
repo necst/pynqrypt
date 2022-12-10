@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Sat Dec 10 11:51:10 2022
+// Date        : Sat Dec 10 11:51:09 2022
 // Host        : SSD-UBUNTU running 64-bit Ubuntu 22.04.1 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/ip/main_design_s00_mmu_0/main_design_s00_mmu_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top main_design_s00_mmu_0 -prefix
+//               main_design_s00_mmu_0_ main_design_s00_mmu_0_stub.v
 // Design      : main_design_s00_mmu_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

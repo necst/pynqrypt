@@ -7,7 +7,7 @@
     </downStreamTool>
     <synthesis askAgain="false"/>
     <config>
-        <config_export format="ip_catalog" output="/home/mrindeciso/Documents/pynqrypt/hw-impl" rtl="verilog"/>
+        <config_export format="ip_catalog" output="/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls" rtl="verilog"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -40,7 +40,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/mrindeciso/Documents/pynqrypt/hw-impl" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls" rtl="verilog" rtlButton="true" rtlCombo="verilog">
         <Format formatName="ip_catalog" description="" vendor="" library="" ipname="pynqrypt_encrypt" version="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>

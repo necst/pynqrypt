@@ -6096,7 +6096,7 @@ class Pynqrypt {
         void aes_xor_round_constant(aes_word &word, int round);
 
 
-        void swap_block_endianness(aes_block &word);
+        void assign_swap_endianness(aes_block from, aes_block &to);
 
     public:
         Pynqrypt(aes_block key, aes_nonce nonce);
@@ -6213,17 +6213,19 @@ Pynqrypt::Pynqrypt(aes_block key, aes_nonce nonce)
 void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_block *plaintext, aes_block *ciphertext)
 {
     loop_ctr_encrypt: for (size_t i = 0; i < (plaintext_length / 16); i++) {
-        aes_block block_nonce;
-        aes_block block = plaintext[i];
-        swap_block_endianness(block);
+        aes_block block_nonce, block;
+
+
+        assign_swap_endianness(plaintext[i], block);
 
         ctr_compute_nonce(block_nonce, i);
         aes_encrypt_block(block_nonce);
 
         ctr_xor_block(block, block_nonce);
 
-        swap_block_endianness(block);
-        ciphertext[i] = block;
+
+
+        assign_swap_endianness(block, ciphertext[i]);
     }
 }
 
@@ -6349,7 +6351,7 @@ void Pynqrypt::aes_generate_round_keys()
         _round_key[i + 3] = _round_key[i - 1] ^ _round_key[i + 2];
     }
 
-    VITIS_LOOP_155_1: for (int i = 0; i < 44; i += 4) {
+    VITIS_LOOP_157_1: for (int i = 0; i < 44; i += 4) {
         round_keys[i / 4].range(127, 96) = _round_key[i + 0];
         round_keys[i / 4].range(95, 64) = _round_key[i + 1];
         round_keys[i / 4].range(63, 32) = _round_key[i + 2];
@@ -6365,7 +6367,7 @@ void Pynqrypt::aes_rotate_word(aes_word &word)
 void Pynqrypt::aes_sub_word(aes_word &word)
 {
     auto atoms = static_cast<aes_atom*>(static_cast<void*>(&word));
-    VITIS_LOOP_171_1: for (int i = 0; i < 4; i++)
+    VITIS_LOOP_173_1: for (int i = 0; i < 4; i++)
         atoms[i] = aes_sbox[atoms[i]];
 }
 
@@ -6374,12 +6376,24 @@ void Pynqrypt::aes_xor_round_constant(aes_word &word, int round)
     word.range(31, 24) = word.range(31, 24) ^ aes_rcon[round];
 }
 
-void Pynqrypt::swap_block_endianness(aes_block &block)
+void Pynqrypt::assign_swap_endianness(aes_block from, aes_block &to)
 {
-    aes_atom temp;
-    VITIS_LOOP_183_1: for (int i = 0; i < 8; i++) {
-        temp = block.range(i * 8 + 7, i * 8);
-        block.range(i * 8 + 7, i * 8) = block.range(127 - i * 8, 120 - i * 8);
-        block.range(127 - i * 8, 120 - i * 8) = temp;
-    }
+
+
+    to.range(127, 120) = from.range(7, 0);
+    to.range(119, 112) = from.range(15, 8);
+    to.range(111, 104) = from.range(23, 16);
+    to.range(103, 96) = from.range(31, 24);
+    to.range(95, 88) = from.range(39, 32);
+    to.range(87, 80) = from.range(47, 40);
+    to.range(79, 72) = from.range(55, 48);
+    to.range(71, 64) = from.range(63, 56);
+    to.range(63, 56) = from.range(71, 64);
+    to.range(55, 48) = from.range(79, 72);
+    to.range(47, 40) = from.range(87, 80);
+    to.range(39, 32) = from.range(95, 88);
+    to.range(31, 24) = from.range(103, 96);
+    to.range(23, 16) = from.range(111, 104);
+    to.range(15, 8) = from.range(119, 112);
+    to.range(7, 0) = from.range(127, 120);
 }

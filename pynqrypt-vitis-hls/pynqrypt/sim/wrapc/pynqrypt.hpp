@@ -43,7 +43,7 @@ class Pynqrypt {
         void aes_xor_round_constant(aes_word &word, int round);
 
         // utils
-        void swap_block_endianness(aes_block &word);
+        void assign_swap_endianness(aes_block from, aes_block &to);
 
     public:
         Pynqrypt(aes_block key, aes_nonce nonce);

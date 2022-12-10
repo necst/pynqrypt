@@ -24,43 +24,43 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10104
+INFO: [Synth 8-7075] Helper process launched with PID 26948
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1993.562 ; gain = 370.770 ; free physical = 1162 ; free virtual = 17913
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3027.941; parent = 1999.504; children = 1028.438
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1993.531 ; gain = 370.770 ; free physical = 175 ; free virtual = 17604
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3027.910; parent = 1999.473; children = 1028.438
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_design_wrapper' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/hdl/main_design_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'main_design' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:1476]
 INFO: [Synth 8-6157] synthesizing module 'main_design_axi_mem_intercon_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2191]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_PEI69B' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:12]
-INFO: [Synth 8-6157] synthesizing module 'main_design_auto_ds_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_ds_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_ds_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_ds_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_ds_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_ds_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_1_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_PEI69B' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1IH6ZE9' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:500]
-INFO: [Synth 8-6157] synthesizing module 'main_design_auto_ds_1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_ds_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_ds_1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_ds_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_ds_1' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_ds_1' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_2_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1IH6ZE9' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:500]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1H2Q24Y' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:988]
-INFO: [Synth 8-6157] synthesizing module 'main_design_auto_ds_2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_ds_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_ds_2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_ds_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_3' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_3' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_ds_2' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_ds_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_ds_2' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_ds_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_3' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_3' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_3_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1H2Q24Y' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:988]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1EXEZPB' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:4021]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1EXEZPB' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:4021]
-INFO: [Synth 8-6157] synthesizing module 'main_design_s00_mmu_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_s00_mmu_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_s00_mmu_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_s00_mmu_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_design_xbar_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_xbar_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_s00_mmu_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_s00_mmu_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_s00_mmu_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_s00_mmu_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_xbar_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_xbar_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_xbar_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_axi_mem_intercon_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2191]
-INFO: [Synth 8-6157] synthesizing module 'main_design_processing_system7_0_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_processing_system7_0_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_processing_system7_0_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_processing_system7_0_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_processing_system7_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'main_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:1884]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'main_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:1884]
 WARNING: [Synth 8-7071] port 'S_AXI_GP0_BID' of module 'main_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:1884]
@@ -80,22 +80,22 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP1_WACOUNT' of module 'main_design_processi
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'main_design_processing_system7_0_0' has 194 connections declared, but only 178 given [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:1884]
 INFO: [Synth 8-6157] synthesizing module 'main_design_ps7_0_axi_periph_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:3421]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_15E0VTY' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:3726]
-INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_auto_pc_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_auto_pc_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_auto_pc_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'main_design_auto_pc_0' is unconnected for instance 'auto_pc' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:3961]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'main_design_auto_pc_0' is unconnected for instance 'auto_pc' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:3961]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'main_design_auto_pc_0' has 59 connections declared, but only 57 given [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:3961]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_15E0VTY' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:3726]
 INFO: [Synth 8-6155] done synthesizing module 'main_design_ps7_0_axi_periph_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:3421]
-INFO: [Synth 8-6157] synthesizing module 'main_design_pynqrypt_encrypt_0_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_pynqrypt_encrypt_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_pynqrypt_encrypt_0_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_pynqrypt_encrypt_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_pynqrypt_encrypt_0_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_pynqrypt_encrypt_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_pynqrypt_encrypt_0_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_pynqrypt_encrypt_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'main_design_pynqrypt_encrypt_0_0' is unconnected for instance 'pynqrypt_encrypt_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2125]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'main_design_pynqrypt_encrypt_0_0' is unconnected for instance 'pynqrypt_encrypt_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2125]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_WID' of module 'main_design_pynqrypt_encrypt_0_0' is unconnected for instance 'pynqrypt_encrypt_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2125]
 WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'main_design_pynqrypt_encrypt_0_0' is unconnected for instance 'pynqrypt_encrypt_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2125]
 WARNING: [Synth 8-7023] instance 'pynqrypt_encrypt_0' of module 'main_design_pynqrypt_encrypt_0_0' has 60 connections declared, but only 56 given [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2125]
-INFO: [Synth 8-6157] synthesizing module 'main_design_rst_ps7_0_100M_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_rst_ps7_0_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_design_rst_ps7_0_100M_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-10065-SSD-UBUNTU/realtime/main_design_rst_ps7_0_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_design_rst_ps7_0_100M_0' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_rst_ps7_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_design_rst_ps7_0_100M_0' (0#1) [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/.Xil/Vivado-26920-SSD-UBUNTU/realtime/main_design_rst_ps7_0_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'main_design_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2182]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'main_design_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2182]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'main_design_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.gen/sources_1/bd/main_design/synth/main_design.v:2182]
@@ -205,24 +205,24 @@ WARNING: [Synth 8-7129] Port S_AXI_araddr[41] in module m01_couplers_imp_1IH6ZE9
 WARNING: [Synth 8-7129] Port S_AXI_araddr[40] in module m01_couplers_imp_1IH6ZE9 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2071.469 ; gain = 448.676 ; free physical = 1213 ; free virtual = 17964
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.910; parent = 2071.473; children = 1028.438
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2071.438 ; gain = 448.676 ; free physical = 326 ; free virtual = 17740
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.879; parent = 2071.441; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2089.281 ; gain = 466.488 ; free physical = 1212 ; free virtual = 17964
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3117.723; parent = 2089.285; children = 1028.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2089.250 ; gain = 466.488 ; free physical = 318 ; free virtual = 17734
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3117.691; parent = 2089.254; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2089.281 ; gain = 466.488 ; free physical = 1212 ; free virtual = 17964
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3117.723; parent = 2089.285; children = 1028.438
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2089.250 ; gain = 466.488 ; free physical = 313 ; free virtual = 17729
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3117.691; parent = 2089.254; children = 1028.438
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2089.281 ; gain = 0.000 ; free physical = 1208 ; free virtual = 17959
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2089.250 ; gain = 0.000 ; free physical = 305 ; free virtual = 17721
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -255,27 +255,27 @@ Parsing XDC File [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-v
 Finished Parsing XDC File [/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2165.188 ; gain = 0.000 ; free physical = 1122 ; free virtual = 17874
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2162.188 ; gain = 0.000 ; free physical = 231 ; free virtual = 17647
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2165.188 ; gain = 0.000 ; free physical = 1122 ; free virtual = 17874
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2162.188 ; gain = 0.000 ; free physical = 231 ; free virtual = 17647
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1208 ; free virtual = 17960
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 300 ; free virtual = 17717
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1208 ; free virtual = 17960
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 300 ; free virtual = 17717
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -556,14 +556,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/axi_mem_intercon/s0
 Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/axi_mem_intercon. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for main_design_i/pynqrypt_encrypt_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1208 ; free virtual = 17960
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 300 ; free virtual = 17717
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1209 ; free virtual = 17963
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 302 ; free virtual = 17719
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -586,33 +586,33 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1185 ; free virtual = 17943
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.142; parent = 1216.604; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 287 ; free virtual = 17709
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.013; parent = 1212.424; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1076 ; free virtual = 17834
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.405; parent = 1303.615; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 165 ; free virtual = 17588
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1506.912; parent = 1298.071; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1076 ; free virtual = 17834
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.667; parent = 1303.908; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 165 ; free virtual = 17588
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.174; parent = 1298.364; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1074 ; free virtual = 17832
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1516.823; parent = 1305.064; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 163 ; free virtual = 17586
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.330; parent = 1299.521; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -630,49 +630,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1074 ; free virtual = 17832
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1517.151; parent = 1305.393; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 143 ; free virtual = 17565
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.658; parent = 1299.849; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1074 ; free virtual = 17832
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1517.151; parent = 1305.393; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 143 ; free virtual = 17565
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.658; parent = 1299.849; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1074 ; free virtual = 17832
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1517.233; parent = 1305.475; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 143 ; free virtual = 17566
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.740; parent = 1299.931; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1072 ; free virtual = 17830
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1517.233; parent = 1305.475; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 143 ; free virtual = 17566
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.740; parent = 1299.931; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1066 ; free virtual = 17825
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1517.233; parent = 1305.475; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 143 ; free virtual = 17566
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.740; parent = 1299.931; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1066 ; free virtual = 17825
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1517.233; parent = 1305.475; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 143 ; free virtual = 17566
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.740; parent = 1299.931; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -709,18 +709,18 @@ Report Cell Usage:
 |12    |main_design_xbar                 |     1|
 +------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1066 ; free virtual = 17825
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1517.265; parent = 1305.506; children = 212.538
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3161.613; parent = 2133.176; children = 1028.438
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 143 ; free virtual = 17566
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1508.771; parent = 1299.962; children = 209.589
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.613; parent = 2130.176; children = 1028.438
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2165.188 ; gain = 466.488 ; free physical = 1118 ; free virtual = 17876
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2165.188 ; gain = 542.395 ; free physical = 1118 ; free virtual = 17876
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2162.188 ; gain = 466.488 ; free physical = 199 ; free virtual = 17622
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2162.188 ; gain = 539.426 ; free physical = 199 ; free virtual = 17622
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2165.188 ; gain = 0.000 ; free physical = 1229 ; free virtual = 17987
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2162.188 ; gain = 0.000 ; free physical = 304 ; free virtual = 17726
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2165.188 ; gain = 0.000 ; free physical = 1159 ; free virtual = 17918
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2162.188 ; gain = 0.000 ; free physical = 234 ; free virtual = 17657
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -728,7 +728,7 @@ Synth Design complete, checksum: 6d839a89
 INFO: [Common 17-83] Releasing license: Synthesis
 66 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2165.188 ; gain = 835.020 ; free physical = 1360 ; free virtual = 18119
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2162.188 ; gain = 832.051 ; free physical = 430 ; free virtual = 17853
 INFO: [Common 17-1381] The checkpoint '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vivado/pynqrypt-vivado.runs/synth_1/main_design_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_design_wrapper_utilization_synth.rpt -pb main_design_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 11:52:42 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 12:18:08 2022...

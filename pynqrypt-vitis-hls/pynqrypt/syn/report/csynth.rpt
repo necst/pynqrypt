@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'pynqrypt_encrypt'
 ================================================================
 + General Information: 
-    * Date:           Sat Dec 10 11:47:24 2022
+    * Date:           Sat Dec 10 12:09:53 2022
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        pynqrypt-vitis-hls
     * Solution:       pynqrypt (Vivado IP Flow Target)
@@ -15,24 +15,23 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-------------+-----+
-    |                          Modules                          | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |             |     |
-    |                          & Loops                          | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |     LUT     | URAM|
-    +-----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-------------+-----+
-    |+ pynqrypt_encrypt                                         |     -|  0.00|        -|          -|         -|        -|     -|        no|  11 (3%)|   -|  5047 (4%)|  16536 (31%)|    -|
-    | + pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys  |     -|  0.79|       82|    820.000|         -|       82|     -|        no|        -|   -|  277 (~0%)|    427 (~0%)|    -|
-    |  o loop_aes_generate_round_keys                           |    II|  7.30|       80|    800.000|         8|        8|    10|       yes|        -|   -|          -|            -|    -|
-    | + pynqrypt_encrypt_Pipeline_VITIS_LOOP_155_1              |     -|  0.79|       24|    240.000|         -|       24|     -|        no|        -|   -|   86 (~0%)|    140 (~0%)|    -|
-    |  o VITIS_LOOP_155_1                                       |    II|  7.30|       22|    220.000|         3|        2|    11|       yes|        -|   -|          -|            -|    -|
-    | o loop_ctr_encrypt                                        |     -|  7.30|        -|          -|       203|        -|     -|        no|        -|   -|          -|            -|    -|
-    |  + aes_encrypt_block                                      |     -|  0.79|      148|  1.480e+03|         -|      148|     -|        no|   4 (1%)|   -|  1538 (1%)|    3039 (5%)|    -|
-    |   + aes_encrypt_block_Pipeline_loop_aes_encrypt_block     |     -|  0.79|       92|    920.000|         -|       92|     -|        no|   3 (1%)|   -|  737 (~0%)|     937 (1%)|    -|
-    |    o loop_aes_encrypt_block                               |    II|  7.30|       90|    900.000|        10|       10|     9|       yes|        -|   -|          -|            -|    -|
-    |   + aes_encrypt_block_Pipeline_loop_aes_sub_bytes         |     -|  0.79|       50|    500.000|         -|       50|     -|        no|  1 (~0%)|   -|  408 (~0%)|    1761 (3%)|    -|
-    |    o loop_aes_sub_bytes                                   |    II|  7.30|       48|    480.000|         4|        3|    16|       yes|        -|   -|          -|            -|    -|
-    |  o VITIS_LOOP_183_1                                       |     -|  7.30|       24|    240.000|         3|        -|     8|        no|        -|   -|          -|            -|    -|
-    |  o VITIS_LOOP_183_1                                       |     -|  7.30|       24|    240.000|         3|        -|     8|        no|        -|   -|          -|            -|    -|
-    +-----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-------------+-----+
+    +-----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |                          Modules                          | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |            |     |
+    |                          & Loops                          | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |     LUT    | URAM|
+    +-----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |+ pynqrypt_encrypt                                         |     -|  0.00|        -|          -|         -|        -|     -|        no|  11 (3%)|   -|  4150 (3%)|  6671 (12%)|    -|
+    | + pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys  |     -|  0.79|       82|    820.000|         -|       82|     -|        no|        -|   -|  277 (~0%)|   427 (~0%)|    -|
+    |  o loop_aes_generate_round_keys                           |    II|  7.30|       80|    800.000|         8|        8|    10|       yes|        -|   -|          -|           -|    -|
+    | + pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1              |     -|  0.79|       24|    240.000|         -|       24|     -|        no|        -|   -|   86 (~0%)|   140 (~0%)|    -|
+    |  o VITIS_LOOP_157_1                                       |    II|  7.30|       22|    220.000|         3|        2|    11|       yes|        -|   -|          -|           -|    -|
+    | + ctr_encrypt                                             |     -|  0.00|        -|          -|         -|        -|     -|        no|   4 (1%)|   -|  2123 (1%)|   3396 (6%)|    -|
+    |  o loop_ctr_encrypt                                       |     -|  7.30|        -|          -|       152|        -|     -|        no|        -|   -|          -|           -|    -|
+    |   + aes_encrypt_block                                     |     -|  0.79|      148|  1.480e+03|         -|      148|     -|        no|   4 (1%)|   -|  1538 (1%)|   3039 (5%)|    -|
+    |    + aes_encrypt_block_Pipeline_loop_aes_encrypt_block    |     -|  0.79|       92|    920.000|         -|       92|     -|        no|   3 (1%)|   -|  737 (~0%)|    937 (1%)|    -|
+    |     o loop_aes_encrypt_block                              |    II|  7.30|       90|    900.000|        10|       10|     9|       yes|        -|   -|          -|           -|    -|
+    |    + aes_encrypt_block_Pipeline_loop_aes_sub_bytes        |     -|  0.79|       50|    500.000|         -|       50|     -|        no|  1 (~0%)|   -|  408 (~0%)|   1761 (3%)|    -|
+    |     o loop_aes_sub_bytes                                  |    II|  7.30|       48|    480.000|         4|        3|    16|       yes|        -|   -|          -|           -|    -|
+    +-----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
 
 
 ================================================================
@@ -140,8 +139,8 @@
 +--------------+------------+------------------+--------------------------------------------------------------------------------------------------------+------------+--------------------------------+
 | HW Interface | Variable   | Loop             | Problem                                                                                                | Resolution | Location                       |
 +--------------+------------+------------------+--------------------------------------------------------------------------------------------------------+------------+--------------------------------+
-| m_axi_gmem   | ciphertext | loop_ctr_encrypt | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | hw-impl/src/pynqrypt.cpp:18:23 |
 | m_axi_gmem   | plaintext  | loop_ctr_encrypt | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | hw-impl/src/pynqrypt.cpp:18:23 |
+| m_axi_gmem   | ciphertext | loop_ctr_encrypt | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | hw-impl/src/pynqrypt.cpp:18:23 |
 +--------------+------------+------------------+--------------------------------------------------------------------------------------------------------+------------+--------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -149,34 +148,27 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
-| Name                                                      | DSP | Pragma | Variable    | Op  | Impl   | Latency |
-+-----------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
-| + pynqrypt_encrypt                                        | 0   |        |             |     |        |         |
-|   i_3_fu_450_p2                                           | -   |        | i_3         | add | fabric | 0       |
-|   i_2_fu_461_p2                                           | -   |        | i_2         | add | fabric | 0       |
-|   sub_ln185_fu_489_p2                                     | -   |        | sub_ln185   | sub | fabric | 0       |
-|   sub_ln628_fu_520_p2                                     | -   |        | sub_ln628   | sub | fabric | 0       |
-|   sub_ln628_1_fu_537_p2                                   | -   |        | sub_ln628_1 | sub | fabric | 0       |
-|   i_5_fu_780_p2                                           | -   |        | i_5         | add | fabric | 0       |
-|   sub_ln185_1_fu_808_p2                                   | -   |        | sub_ln185_1 | sub | fabric | 0       |
-|   sub_ln628_2_fu_832_p2                                   | -   |        | sub_ln628_2 | sub | fabric | 0       |
-|   sub_ln628_3_fu_849_p2                                   | -   |        | sub_ln628_3 | sub | fabric | 0       |
-|  + pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys | 0   |        |             |     |        |         |
-|    add_ln143_fu_209_p2                                    | -   |        | add_ln143   | add | fabric | 0       |
-|    add_ln147_fu_230_p2                                    | -   |        | add_ln147   | add | fabric | 0       |
-|    add_ln149_fu_241_p2                                    | -   |        | add_ln149   | add | fabric | 0       |
-|    add_ln150_fu_291_p2                                    | -   |        | add_ln150   | add | fabric | 0       |
-|    add_ln151_fu_301_p2                                    | -   |        | add_ln151   | add | fabric | 0       |
-|    add_ln142_fu_391_p2                                    | -   |        | add_ln142   | add | fabric | 0       |
-|  + pynqrypt_encrypt_Pipeline_VITIS_LOOP_155_1             | 0   |        |             |     |        |         |
-|    add_ln155_fu_161_p2                                    | -   |        | add_ln155   | add | fabric | 0       |
-|  + aes_encrypt_block                                      | 0   |        |             |     |        |         |
-|   + aes_encrypt_block_Pipeline_loop_aes_encrypt_block     | 0   |        |             |     |        |         |
-|     add_ln50_fu_740_p2                                    | -   |        | add_ln50    | add | fabric | 0       |
-|   + aes_encrypt_block_Pipeline_loop_aes_sub_bytes         | 0   |        |             |     |        |         |
-|     i_8_fu_97_p2                                          | -   |        | i_8         | add | fabric | 0       |
-+-----------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
++-----------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                                                      | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++-----------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + pynqrypt_encrypt                                        | 0   |        |           |     |        |         |
+|  + pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys | 0   |        |           |     |        |         |
+|    add_ln145_fu_209_p2                                    | -   |        | add_ln145 | add | fabric | 0       |
+|    add_ln149_fu_230_p2                                    | -   |        | add_ln149 | add | fabric | 0       |
+|    add_ln151_fu_241_p2                                    | -   |        | add_ln151 | add | fabric | 0       |
+|    add_ln152_fu_291_p2                                    | -   |        | add_ln152 | add | fabric | 0       |
+|    add_ln153_fu_301_p2                                    | -   |        | add_ln153 | add | fabric | 0       |
+|    add_ln144_fu_391_p2                                    | -   |        | add_ln144 | add | fabric | 0       |
+|  + pynqrypt_encrypt_Pipeline_VITIS_LOOP_157_1             | 0   |        |           |     |        |         |
+|    add_ln157_fu_161_p2                                    | -   |        | add_ln157 | add | fabric | 0       |
+|  + ctr_encrypt                                            | 0   |        |           |     |        |         |
+|    i_fu_279_p2                                            | -   |        | i         | add | fabric | 0       |
+|   + aes_encrypt_block                                     | 0   |        |           |     |        |         |
+|    + aes_encrypt_block_Pipeline_loop_aes_encrypt_block    | 0   |        |           |     |        |         |
+|      add_ln52_fu_740_p2                                   | -   |        | add_ln52  | add | fabric | 0       |
+|    + aes_encrypt_block_Pipeline_loop_aes_sub_bytes        | 0   |        |           |     |        |         |
+|      i_4_fu_97_p2                                         | -   |        | i_4       | add | fabric | 0       |
++-----------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
 
 
 ================================================================
@@ -191,13 +183,14 @@
 |   crypto_aes_sbox_V_U                                     | 1    | -    |        | crypto_aes_sbox_V     | rom_2p  | auto | 1       |
 |  + pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys | 0    | 0    |        |                       |         |      |         |
 |    crypto_aes_rcon_V_U                                    | -    | -    |        | crypto_aes_rcon_V     | rom_1p  | auto | 1       |
-|  + aes_encrypt_block                                      | 4    | 0    |        |                       |         |      |         |
-|   + aes_encrypt_block_Pipeline_loop_aes_encrypt_block     | 3    | 0    |        |                       |         |      |         |
-|     crypto_aes_sbox_V_U                                   | 1    | -    |        | crypto_aes_sbox_V     | rom_2p  | auto | 1       |
-|     crypto_aes_mul2_V_U                                   | 1    | -    |        | crypto_aes_mul2_V     | rom_2p  | auto | 1       |
-|     crypto_aes_mul3_V_U                                   | 1    | -    |        | crypto_aes_mul3_V     | rom_2p  | auto | 1       |
-|   + aes_encrypt_block_Pipeline_loop_aes_sub_bytes         | 1    | 0    |        |                       |         |      |         |
-|     crypto_aes_sbox_V_U                                   | 1    | -    |        | crypto_aes_sbox_V     | rom_1p  | auto | 1       |
+|  + ctr_encrypt                                            | 4    | 0    |        |                       |         |      |         |
+|   + aes_encrypt_block                                     | 4    | 0    |        |                       |         |      |         |
+|    + aes_encrypt_block_Pipeline_loop_aes_encrypt_block    | 3    | 0    |        |                       |         |      |         |
+|      crypto_aes_sbox_V_U                                  | 1    | -    |        | crypto_aes_sbox_V     | rom_2p  | auto | 1       |
+|      crypto_aes_mul2_V_U                                  | 1    | -    |        | crypto_aes_mul2_V     | rom_2p  | auto | 1       |
+|      crypto_aes_mul3_V_U                                  | 1    | -    |        | crypto_aes_mul3_V     | rom_2p  | auto | 1       |
+|    + aes_encrypt_block_Pipeline_loop_aes_sub_bytes        | 1    | 0    |        |                       |         |      |         |
+|      crypto_aes_sbox_V_U                                  | 1    | -    |        | crypto_aes_sbox_V     | rom_1p  | auto | 1       |
 +-----------------------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
 
 
