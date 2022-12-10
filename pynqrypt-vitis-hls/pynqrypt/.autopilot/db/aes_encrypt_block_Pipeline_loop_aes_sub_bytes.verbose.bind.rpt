@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_encrypt_block_Pipeline_loop_aes_sub_bytes'
 ================================================================
-* Date:           Sat Dec 10 11:47:21 2022
+* Date:           Sat Dec 10 12:09:50 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -96,42 +96,42 @@ ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %i"   -
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i13"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 4.89>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%i_7 = load i5 %i" [hw-impl/src/pynqrypt.cpp:65]   --->   Operation 13 'load' 'i_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%i_3 = load i5 %i" [hw-impl/src/pynqrypt.cpp:67]   --->   Operation 13 'load' 'i_3' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 14 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 15 [1/1] (1.36ns)   --->   "%icmp_ln64 = icmp_eq  i5 %i_7, i5 16" [hw-impl/src/pynqrypt.cpp:64]   --->   Operation 15 'icmp' 'icmp_ln64' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (1.36ns)   --->   "%icmp_ln66 = icmp_eq  i5 %i_3, i5 16" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 15 'icmp' 'icmp_ln66' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (1.78ns)   --->   "%i_8 = add i5 %i_7, i5 1" [hw-impl/src/pynqrypt.cpp:64]   --->   Operation 17 'add' 'i_8' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln64 = br i1 %icmp_ln64, void %for.inc.i13.split, void %_ZN6crypto8Pynqrypt13aes_sub_bytesER7ap_uintILi128EE.exit14.exitStub" [hw-impl/src/pynqrypt.cpp:64]   --->   Operation 18 'br' 'br_ln64' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%p_Val2_load_1 = load i128 %p_Val2_s"   --->   Operation 19 'load' 'p_Val2_load_1' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln65 = trunc i5 %i_7" [hw-impl/src/pynqrypt.cpp:65]   --->   Operation 20 'trunc' 'trunc_ln65' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %trunc_ln65, i3 0" [hw-impl/src/pynqrypt.cpp:65]   --->   Operation 21 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln668_1 = zext i7 %shl_ln"   --->   Operation 22 'zext' 'zext_ln668_1' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (4.89ns)   --->   "%lshr_ln668 = lshr i128 %p_Val2_load_1, i128 %zext_ln668_1"   --->   Operation 23 'lshr' 'lshr_ln668' <Predicate = (!icmp_ln64)> <Delay = 4.89> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln668 = trunc i128 %lshr_ln668"   --->   Operation 24 'trunc' 'trunc_ln668' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln64 = store i5 %i_8, i5 %i" [hw-impl/src/pynqrypt.cpp:64]   --->   Operation 25 'store' 'store_ln64' <Predicate = (!icmp_ln64)> <Delay = 1.58>
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_Val2_load = load i128 %p_Val2_s"   --->   Operation 40 'load' 'p_Val2_load' <Predicate = (icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i128P0A, i128 %t_out, i128 %p_Val2_load"   --->   Operation 41 'write' 'write_ln0' <Predicate = (icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 42 'ret' 'ret_ln0' <Predicate = (icmp_ln64)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (1.78ns)   --->   "%i_4 = add i5 %i_3, i5 1" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 17 'add' 'i_4' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln66 = br i1 %icmp_ln66, void %for.inc.i13.split, void %_ZN6crypto8Pynqrypt13aes_sub_bytesER7ap_uintILi128EE.exit14.exitStub" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 18 'br' 'br_ln66' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%p_Val2_load_1 = load i128 %p_Val2_s"   --->   Operation 19 'load' 'p_Val2_load_1' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln67 = trunc i5 %i_3" [hw-impl/src/pynqrypt.cpp:67]   --->   Operation 20 'trunc' 'trunc_ln67' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %trunc_ln67, i3 0" [hw-impl/src/pynqrypt.cpp:67]   --->   Operation 21 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln668_1 = zext i7 %shl_ln"   --->   Operation 22 'zext' 'zext_ln668_1' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (4.89ns)   --->   "%lshr_ln668 = lshr i128 %p_Val2_load_1, i128 %zext_ln668_1"   --->   Operation 23 'lshr' 'lshr_ln668' <Predicate = (!icmp_ln66)> <Delay = 4.89> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln668 = trunc i128 %lshr_ln668"   --->   Operation 24 'trunc' 'trunc_ln668' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln66 = store i5 %i_4, i5 %i" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 25 'store' 'store_ln66' <Predicate = (!icmp_ln66)> <Delay = 1.58>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_Val2_load = load i128 %p_Val2_s"   --->   Operation 40 'load' 'p_Val2_load' <Predicate = (icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i128P0A, i128 %t_out, i128 %p_Val2_load"   --->   Operation 41 'write' 'write_ln0' <Predicate = (icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 42 'ret' 'ret_ln0' <Predicate = (icmp_ln66)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 3.25>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln668 = zext i8 %trunc_ln668"   --->   Operation 26 'zext' 'zext_ln668' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln668"   --->   Operation 27 'getelementptr' 'crypto_aes_sbox_V_addr' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_3 : Operation 28 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 28 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln64)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln668 = zext i8 %trunc_ln668"   --->   Operation 26 'zext' 'zext_ln668' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%crypto_aes_sbox_V_addr = getelementptr i8 %crypto_aes_sbox_V, i64 0, i64 %zext_ln668"   --->   Operation 27 'getelementptr' 'crypto_aes_sbox_V_addr' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_3 : Operation 28 [2/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 28 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln66)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
 
 State 4 <SV = 3> <Delay = 6.50>
-ST_4 : Operation 29 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 29 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln64)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
-ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln368 = zext i7 %shl_ln"   --->   Operation 30 'zext' 'zext_ln368' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_4 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368 = shl i128 255, i128 %zext_ln368"   --->   Operation 31 'shl' 'shl_ln368' <Predicate = (!icmp_ln64)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.25> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%xor_ln368 = xor i128 %shl_ln368, i128 340282366920938463463374607431768211455"   --->   Operation 32 'xor' 'xor_ln368' <Predicate = (!icmp_ln64)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%and_ln368 = and i128 %p_Val2_load_1, i128 %xor_ln368"   --->   Operation 33 'and' 'and_ln368' <Predicate = (!icmp_ln64)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%zext_ln368_10 = zext i8 %crypto_aes_sbox_V_load"   --->   Operation 34 'zext' 'zext_ln368_10' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_4 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368_8 = shl i128 %zext_ln368_10, i128 %zext_ln368"   --->   Operation 35 'shl' 'shl_ln368_8' <Predicate = (!icmp_ln64)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 36 [1/1] (3.25ns) (out node of the LUT)   --->   "%p_Result_s = or i128 %and_ln368, i128 %shl_ln368_8"   --->   Operation 36 'or' 'p_Result_s' <Predicate = (!icmp_ln64)> <Delay = 3.25> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 29 [1/2] (3.25ns)   --->   "%crypto_aes_sbox_V_load = load i8 %crypto_aes_sbox_V_addr"   --->   Operation 29 'load' 'crypto_aes_sbox_V_load' <Predicate = (!icmp_ln66)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln368 = zext i7 %shl_ln"   --->   Operation 30 'zext' 'zext_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368 = shl i128 255, i128 %zext_ln368"   --->   Operation 31 'shl' 'shl_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.25> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%xor_ln368 = xor i128 %shl_ln368, i128 340282366920938463463374607431768211455"   --->   Operation 32 'xor' 'xor_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%and_ln368 = and i128 %p_Val2_load_1, i128 %xor_ln368"   --->   Operation 33 'and' 'and_ln368' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%zext_ln368_1 = zext i8 %crypto_aes_sbox_V_load"   --->   Operation 34 'zext' 'zext_ln368_1' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%shl_ln368_1 = shl i128 %zext_ln368_1, i128 %zext_ln368"   --->   Operation 35 'shl' 'shl_ln368_1' <Predicate = (!icmp_ln66)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/1] (3.25ns) (out node of the LUT)   --->   "%p_Result_s = or i128 %and_ln368, i128 %shl_ln368_1"   --->   Operation 36 'or' 'p_Result_s' <Predicate = (!icmp_ln66)> <Delay = 3.25> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 1.58>
-ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specloopname_ln64 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [hw-impl/src/pynqrypt.cpp:64]   --->   Operation 37 'specloopname' 'specloopname_ln64' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 38 [1/1] (1.58ns)   --->   "%store_ln64 = store i128 %p_Result_s, i128 %p_Val2_s" [hw-impl/src/pynqrypt.cpp:64]   --->   Operation 38 'store' 'store_ln64' <Predicate = true> <Delay = 1.58>
-ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln64 = br void %for.inc.i13" [hw-impl/src/pynqrypt.cpp:64]   --->   Operation 39 'br' 'br_ln64' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specloopname_ln66 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 37 'specloopname' 'specloopname_ln66' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (1.58ns)   --->   "%store_ln66 = store i128 %p_Result_s, i128 %p_Val2_s" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 38 'store' 'store_ln66' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln66 = br void %for.inc.i13" [hw-impl/src/pynqrypt.cpp:66]   --->   Operation 39 'br' 'br_ln66' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -160,19 +160,19 @@ state_promoted_i_reload_read (read             ) [ 000000]
 store_ln0                    (store            ) [ 000000]
 store_ln0                    (store            ) [ 000000]
 br_ln0                       (br               ) [ 000000]
-i_7                          (load             ) [ 000000]
+i_3                          (load             ) [ 000000]
 specpipeline_ln0             (specpipeline     ) [ 000000]
-icmp_ln64                    (icmp             ) [ 011110]
+icmp_ln66                    (icmp             ) [ 011110]
 empty                        (speclooptripcount) [ 000000]
-i_8                          (add              ) [ 000000]
-br_ln64                      (br               ) [ 000000]
+i_4                          (add              ) [ 000000]
+br_ln66                      (br               ) [ 000000]
 p_Val2_load_1                (load             ) [ 010110]
-trunc_ln65                   (trunc            ) [ 000000]
+trunc_ln67                   (trunc            ) [ 000000]
 shl_ln                       (bitconcatenate   ) [ 010110]
 zext_ln668_1                 (zext             ) [ 000000]
 lshr_ln668                   (lshr             ) [ 000000]
 trunc_ln668                  (trunc            ) [ 000100]
-store_ln64                   (store            ) [ 000000]
+store_ln66                   (store            ) [ 000000]
 zext_ln668                   (zext             ) [ 000000]
 crypto_aes_sbox_V_addr       (getelementptr    ) [ 010010]
 crypto_aes_sbox_V_load       (load             ) [ 000000]
@@ -180,12 +180,12 @@ zext_ln368                   (zext             ) [ 000000]
 shl_ln368                    (shl              ) [ 000000]
 xor_ln368                    (xor              ) [ 000000]
 and_ln368                    (and              ) [ 000000]
-zext_ln368_10                (zext             ) [ 000000]
-shl_ln368_8                  (shl              ) [ 000000]
+zext_ln368_1                 (zext             ) [ 000000]
+shl_ln368_1                  (shl              ) [ 000000]
 p_Result_s                   (or               ) [ 001001]
-specloopname_ln64            (specloopname     ) [ 000000]
-store_ln64                   (store            ) [ 000000]
-br_ln64                      (br               ) [ 000000]
+specloopname_ln66            (specloopname     ) [ 000000]
+store_ln66                   (store            ) [ 000000]
+br_ln66                      (br               ) [ 000000]
 p_Val2_load                  (load             ) [ 000000]
 write_ln0                    (write            ) [ 000000]
 ret_ln0                      (ret              ) [ 000000]
@@ -380,7 +380,7 @@ ret_ln0                      (ret              ) [ 000000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_6"/></StgValue>
 </bind>
 </comp>
 
@@ -490,18 +490,18 @@ ret_ln0                      (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="88" class="1004" name="i_7_load_fu_88">
+<comp id="88" class="1004" name="i_3_load_fu_88">
 <pin_list>
 <pin id="89" dir="0" index="0" bw="5" slack="1"/>
 <pin id="90" dir="1" index="1" bw="5" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="i_7/2 "/>
+<opset="i_3/2 "/>
 </bind>
 </comp>
 
-<comp id="91" class="1004" name="icmp_ln64_fu_91">
+<comp id="91" class="1004" name="icmp_ln66_fu_91">
 <pin_list>
 <pin id="92" dir="0" index="0" bw="5" slack="0"/>
 <pin id="93" dir="0" index="1" bw="5" slack="0"/>
@@ -509,11 +509,11 @@ ret_ln0                      (ret              ) [ 000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln64/2 "/>
+<opset="icmp_ln66/2 "/>
 </bind>
 </comp>
 
-<comp id="97" class="1004" name="i_8_fu_97">
+<comp id="97" class="1004" name="i_4_fu_97">
 <pin_list>
 <pin id="98" dir="0" index="0" bw="5" slack="0"/>
 <pin id="99" dir="0" index="1" bw="1" slack="0"/>
@@ -521,7 +521,7 @@ ret_ln0                      (ret              ) [ 000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="i_8/2 "/>
+<opset="i_4/2 "/>
 </bind>
 </comp>
 
@@ -536,14 +536,14 @@ ret_ln0                      (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="106" class="1004" name="trunc_ln65_fu_106">
+<comp id="106" class="1004" name="trunc_ln67_fu_106">
 <pin_list>
 <pin id="107" dir="0" index="0" bw="5" slack="0"/>
 <pin id="108" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln65/2 "/>
+<opset="trunc_ln67/2 "/>
 </bind>
 </comp>
 
@@ -594,7 +594,7 @@ ret_ln0                      (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="132" class="1004" name="store_ln64_store_fu_132">
+<comp id="132" class="1004" name="store_ln66_store_fu_132">
 <pin_list>
 <pin id="133" dir="0" index="0" bw="5" slack="0"/>
 <pin id="134" dir="0" index="1" bw="5" slack="1"/>
@@ -602,7 +602,7 @@ ret_ln0                      (ret              ) [ 000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln64/2 "/>
+<opset="store_ln66/2 "/>
 </bind>
 </comp>
 
@@ -664,18 +664,18 @@ ret_ln0                      (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="161" class="1004" name="zext_ln368_10_fu_161">
+<comp id="161" class="1004" name="zext_ln368_1_fu_161">
 <pin_list>
 <pin id="162" dir="0" index="0" bw="8" slack="0"/>
 <pin id="163" dir="1" index="1" bw="128" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln368_10/4 "/>
+<opset="zext_ln368_1/4 "/>
 </bind>
 </comp>
 
-<comp id="165" class="1004" name="shl_ln368_8_fu_165">
+<comp id="165" class="1004" name="shl_ln368_1_fu_165">
 <pin_list>
 <pin id="166" dir="0" index="0" bw="8" slack="0"/>
 <pin id="167" dir="0" index="1" bw="7" slack="0"/>
@@ -683,7 +683,7 @@ ret_ln0                      (ret              ) [ 000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="shl_ln368_8/4 "/>
+<opset="shl_ln368_1/4 "/>
 </bind>
 </comp>
 
@@ -699,7 +699,7 @@ ret_ln0                      (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="177" class="1004" name="store_ln64_store_fu_177">
+<comp id="177" class="1004" name="store_ln66_store_fu_177">
 <pin_list>
 <pin id="178" dir="0" index="0" bw="128" slack="1"/>
 <pin id="179" dir="0" index="1" bw="128" slack="4"/>
@@ -707,7 +707,7 @@ ret_ln0                      (ret              ) [ 000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln64/5 "/>
+<opset="store_ln66/5 "/>
 </bind>
 </comp>
 
@@ -742,13 +742,13 @@ ret_ln0                      (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="200" class="1005" name="icmp_ln64_reg_200">
+<comp id="200" class="1005" name="icmp_ln66_reg_200">
 <pin_list>
 <pin id="201" dir="0" index="0" bw="1" slack="1"/>
 <pin id="202" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="icmp_ln64 "/>
+<opset="icmp_ln66 "/>
 </bind>
 </comp>
 
@@ -932,15 +932,15 @@ ret_ln0                      (ret              ) [ 000000]
 	State 1
 		store_ln0 : 1
 	State 2
-		icmp_ln64 : 1
-		i_8 : 1
-		br_ln64 : 2
-		trunc_ln65 : 1
+		icmp_ln66 : 1
+		i_4 : 1
+		br_ln66 : 2
+		trunc_ln67 : 1
 		shl_ln : 2
 		zext_ln668_1 : 3
 		lshr_ln668 : 4
 		trunc_ln668 : 5
-		store_ln64 : 2
+		store_ln66 : 2
 		write_ln0 : 1
 	State 3
 		crypto_aes_sbox_V_addr : 1
@@ -949,8 +949,8 @@ ret_ln0                      (ret              ) [ 000000]
 		shl_ln368 : 1
 		xor_ln368 : 2
 		and_ln368 : 2
-		zext_ln368_10 : 1
-		shl_ln368_8 : 2
+		zext_ln368_1 : 1
+		shl_ln368_1 : 2
 		p_Result_s : 2
 	State 5
 
@@ -972,17 +972,17 @@ ret_ln0                      (ret              ) [ 000000]
 |    or    |            p_Result_s_fu_171            |    0    |   128   |
 |----------|-----------------------------------------|---------|---------|
 |    shl   |             shl_ln368_fu_144            |    0    |    19   |
-|          |            shl_ln368_8_fu_165           |    0    |    17   |
+|          |            shl_ln368_1_fu_165           |    0    |    17   |
 |----------|-----------------------------------------|---------|---------|
-|    add   |                i_8_fu_97                |    0    |    13   |
+|    add   |                i_4_fu_97                |    0    |    13   |
 |----------|-----------------------------------------|---------|---------|
-|   icmp   |             icmp_ln64_fu_91             |    0    |    9    |
+|   icmp   |             icmp_ln66_fu_91             |    0    |    9    |
 |----------|-----------------------------------------|---------|---------|
 |   read   | state_promoted_i_reload_read_read_fu_52 |    0    |    0    |
 |----------|-----------------------------------------|---------|---------|
 |   write  |          write_ln0_write_fu_58          |    0    |    0    |
 |----------|-----------------------------------------|---------|---------|
-|   trunc  |            trunc_ln65_fu_106            |    0    |    0    |
+|   trunc  |            trunc_ln67_fu_106            |    0    |    0    |
 |          |            trunc_ln668_fu_128           |    0    |    0    |
 |----------|-----------------------------------------|---------|---------|
 |bitconcatenate|              shl_ln_fu_110              |    0    |    0    |
@@ -990,7 +990,7 @@ ret_ln0                      (ret              ) [ 000000]
 |          |           zext_ln668_1_fu_118           |    0    |    0    |
 |   zext   |            zext_ln668_fu_137            |    0    |    0    |
 |          |            zext_ln368_fu_141            |    0    |    0    |
-|          |           zext_ln368_10_fu_161          |    0    |    0    |
+|          |           zext_ln368_1_fu_161           |    0    |    0    |
 |----------|-----------------------------------------|---------|---------|
 |   Total  |                                         |    0    |   865   |
 |----------|-----------------------------------------|---------|---------|
@@ -1004,7 +1004,7 @@ N/A
 +------------------------------+--------+
 |crypto_aes_sbox_V_addr_reg_219|    8   |
 |           i_reg_185          |    5   |
-|       icmp_ln64_reg_200      |    1   |
+|       icmp_ln66_reg_200      |    1   |
 |      p_Result_s_reg_224      |   128  |
 |     p_Val2_load_1_reg_204    |   128  |
 |       p_Val2_s_reg_192       |   128  |

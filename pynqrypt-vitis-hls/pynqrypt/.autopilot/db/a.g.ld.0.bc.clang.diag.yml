@@ -1,43 +1,53 @@
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 22, Column: 9 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'crypto::Pynqrypt::assign_swap_endianness(ap_uint<128>, ap_uint<128>&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 133, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_rotate_word(ap_uint<32>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 164, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 166, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 133, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 133, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_word(ap_uint<32>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 169, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 171, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 133, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 133, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xor_round_constant(ap_uint<32>&, int)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 176, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 178, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 133, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -48,7 +58,7 @@ Function:        _ZN6crypto8PynqryptC2E7ap_uintILi128EES1_ILi96EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 133, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::Pynqrypt(ap_uint<128>, ap_uint<96>)'
     DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
@@ -57,43 +67,43 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 47, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockER7ap_uintILi128EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_bytes(ap_uint<128>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 63, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 65, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(ap_uint<128>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 47, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 47, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockER7ap_uintILi128EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_shift_rows(ap_uint<128>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 69, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 71, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(ap_uint<128>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 47, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 47, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt17aes_encrypt_blockER7ap_uintILi128EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_mix_columns(ap_uint<128>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 96, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 98, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_encrypt_block(ap_uint<128>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 47, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 49, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -103,8 +113,8 @@ DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::swap_block_endianness(ap_uint<128>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 181, Column: 0 }
+  - Callee:          'crypto::Pynqrypt::assign_swap_endianness(ap_uint<128>, ap_uint<128>&) (.188)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 183, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
@@ -118,7 +128,7 @@ Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::ctr_compute_nonce(ap_uint<128>&, unsigned long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 36, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
@@ -132,7 +142,21 @@ Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::ctr_xor_block(ap_uint<128>&, ap_uint<128>)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 41, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 43, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::assign_swap_endianness(ap_uint<128>, ap_uint<128>&)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 183, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
@@ -153,24 +177,10 @@ Args:
   - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
-  - String:          ''''
-...
---- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -179,7 +189,7 @@ Args:
   - String:          ' length'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
-  - String:          for.inc.i.load.5
+  - String:          for.inc.load.6
   - String:          ', '
   - String:          ' _XLX_SEP_ '
   - AccessID:        plaintextseq
@@ -192,15 +202,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -209,7 +219,7 @@ Args:
   - String:          ' length'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
-  - String:          _ZN6crypto8Pynqrypt21swap_block_endiannessER7ap_uintILi128EE.exit16.i.store.4
+  - String:          for.inc.store.171
   - String:          ', '
   - String:          ' _XLX_SEP_ '
   - AccessID:        ciphertextseq
@@ -222,40 +232,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i128
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        ciphertextseq
-  - String:          ' '
-  - ArrayName:       ciphertext
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        loop_ctr_encrypt
-  - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
-  - String:          ' '
-  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Could not widen since type '
   - Type:            i128
@@ -272,15 +257,40 @@ Args:
   - String:          ' '
   - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        ciphertextseq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        loop_ctr_encrypt
+  - String:          ' '
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
+  - String:          ' '
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -301,15 +311,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -331,7 +341,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -352,15 +362,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
-  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - Function:        'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*) (.1)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes

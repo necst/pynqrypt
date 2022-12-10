@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_encrypt_block'
 ================================================================
-* Date:           Sat Dec 10 11:47:22 2022
+* Date:           Sat Dec 10 12:09:52 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -198,8 +198,8 @@ State 2 <SV = 1> <Delay = 3.25>
 ST_2 : Operation 12 [1/2] (3.25ns)   --->   "%this_round_keys_load = load i4 %this_round_keys_addr"   --->   Operation 12 'load' 'this_round_keys_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 11> <RAM>
 
 State 3 <SV = 2> <Delay = 2.62>
-ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%p_read_1 = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read"   --->   Operation 13 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 14 [1/1] (1.03ns)   --->   "%xor_ln859 = xor i128 %this_round_keys_load, i128 %p_read_1"   --->   Operation 14 'xor' 'xor_ln859' <Predicate = true> <Delay = 1.03> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%p_read_2 = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read"   --->   Operation 13 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (1.03ns)   --->   "%xor_ln859 = xor i128 %this_round_keys_load, i128 %p_read_2"   --->   Operation 14 'xor' 'xor_ln859' <Predicate = true> <Delay = 1.03> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 15 [2/2] (1.58ns)   --->   "%call_ln859 = call void @aes_encrypt_block_Pipeline_loop_aes_encrypt_block, i128 %xor_ln859, i128 %this_round_keys, i128 %state_promoted_i_loc, i8 %crypto_aes_sbox_V, i8 %crypto_aes_mul2_V, i8 %crypto_aes_mul3_V"   --->   Operation 15 'call' 'call_ln859' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 1.30>
@@ -216,26 +216,26 @@ ST_6 : Operation 21 [2/2] (3.25ns)   --->   "%this_round_keys_load_1 = load i4 %
 
 State 7 <SV = 6> <Delay = 4.28>
 ST_7 : Operation 22 [1/1] (0.00ns)   --->   "%t_loc_load = load i128 %t_loc"   --->   Operation 22 'load' 't_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 23 [1/1] (0.00ns)   --->   "%tmp3 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 120, i32 127"   --->   Operation 23 'partselect' 'tmp3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 23 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 120, i32 127"   --->   Operation 23 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 80, i32 87"   --->   Operation 24 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 40, i32 47"   --->   Operation 25 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_31 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 40, i32 47"   --->   Operation 25 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln628 = trunc i128 %t_loc_load"   --->   Operation 26 'trunc' 'trunc_ln628' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 88, i32 95"   --->   Operation 27 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 48, i32 55"   --->   Operation 28 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 8, i32 15"   --->   Operation 29 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 96, i32 103"   --->   Operation 30 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_7 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 56, i32 63"   --->   Operation 31 'partselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_8 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 16, i32 23"   --->   Operation 32 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_9 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 104, i32 111"   --->   Operation 33 'partselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_10 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 64, i32 71"   --->   Operation 34 'partselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_11 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 24, i32 31"   --->   Operation 35 'partselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_12 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 112, i32 119"   --->   Operation 36 'partselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_13 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 72, i32 79"   --->   Operation 37 'partselect' 'tmp_13' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_14 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 32, i32 39"   --->   Operation 38 'partselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %tmp3, i8 %tmp_s, i8 %tmp_2, i8 %trunc_ln628, i8 %tmp_3, i8 %tmp_4, i8 %tmp_5, i8 %tmp_6, i8 %tmp_7, i8 %tmp_8, i8 %tmp_9, i8 %tmp_10, i8 %tmp_11, i8 %tmp_12, i8 %tmp_13, i8 %tmp_14"   --->   Operation 39 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_32 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 88, i32 95"   --->   Operation 27 'partselect' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_33 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 48, i32 55"   --->   Operation 28 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_34 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 8, i32 15"   --->   Operation 29 'partselect' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_35 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 96, i32 103"   --->   Operation 30 'partselect' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_36 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 56, i32 63"   --->   Operation 31 'partselect' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_37 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 16, i32 23"   --->   Operation 32 'partselect' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_38 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 104, i32 111"   --->   Operation 33 'partselect' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_39 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 64, i32 71"   --->   Operation 34 'partselect' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_40 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 24, i32 31"   --->   Operation 35 'partselect' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_41 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 112, i32 119"   --->   Operation 36 'partselect' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_42 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 72, i32 79"   --->   Operation 37 'partselect' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_43 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %t_loc_load, i32 32, i32 39"   --->   Operation 38 'partselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %tmp, i8 %tmp_s, i8 %tmp_31, i8 %trunc_ln628, i8 %tmp_32, i8 %tmp_33, i8 %tmp_34, i8 %tmp_35, i8 %tmp_36, i8 %tmp_37, i8 %tmp_38, i8 %tmp_39, i8 %tmp_40, i8 %tmp_41, i8 %tmp_42, i8 %tmp_43"   --->   Operation 39 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 40 [1/2] (3.25ns)   --->   "%this_round_keys_load_1 = load i4 %this_round_keys_addr_1"   --->   Operation 40 'load' 'this_round_keys_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 11> <RAM>
 ST_7 : Operation 41 [1/1] (1.03ns)   --->   "%xor_ln859_1 = xor i128 %this_round_keys_load_1, i128 %p_Result_s"   --->   Operation 41 'xor' 'xor_ln859_1' <Predicate = true> <Delay = 1.03> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln60 = ret i128 %xor_ln859_1" [hw-impl/src/pynqrypt.cpp:60]   --->   Operation 42 'ret' 'ret_ln60' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln62 = ret i128 %xor_ln859_1" [hw-impl/src/pynqrypt.cpp:62]   --->   Operation 42 'ret' 'ret_ln62' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -264,33 +264,33 @@ t_loc                     (alloca        ) [ 00111111]
 state_promoted_i_loc      (alloca        ) [ 00111100]
 this_round_keys_addr      (getelementptr ) [ 00100000]
 this_round_keys_load      (load          ) [ 00010000]
-p_read_1                  (read          ) [ 00000000]
+p_read_2                  (read          ) [ 00000000]
 xor_ln859                 (xor           ) [ 00001000]
 call_ln859                (call          ) [ 00000000]
 state_promoted_i_loc_load (load          ) [ 00000010]
 call_ln0                  (call          ) [ 00000000]
 this_round_keys_addr_1    (getelementptr ) [ 00000001]
 t_loc_load                (load          ) [ 00000000]
-tmp3                      (partselect    ) [ 00000000]
+tmp                       (partselect    ) [ 00000000]
 tmp_s                     (partselect    ) [ 00000000]
-tmp_2                     (partselect    ) [ 00000000]
+tmp_31                    (partselect    ) [ 00000000]
 trunc_ln628               (trunc         ) [ 00000000]
-tmp_3                     (partselect    ) [ 00000000]
-tmp_4                     (partselect    ) [ 00000000]
-tmp_5                     (partselect    ) [ 00000000]
-tmp_6                     (partselect    ) [ 00000000]
-tmp_7                     (partselect    ) [ 00000000]
-tmp_8                     (partselect    ) [ 00000000]
-tmp_9                     (partselect    ) [ 00000000]
-tmp_10                    (partselect    ) [ 00000000]
-tmp_11                    (partselect    ) [ 00000000]
-tmp_12                    (partselect    ) [ 00000000]
-tmp_13                    (partselect    ) [ 00000000]
-tmp_14                    (partselect    ) [ 00000000]
+tmp_32                    (partselect    ) [ 00000000]
+tmp_33                    (partselect    ) [ 00000000]
+tmp_34                    (partselect    ) [ 00000000]
+tmp_35                    (partselect    ) [ 00000000]
+tmp_36                    (partselect    ) [ 00000000]
+tmp_37                    (partselect    ) [ 00000000]
+tmp_38                    (partselect    ) [ 00000000]
+tmp_39                    (partselect    ) [ 00000000]
+tmp_40                    (partselect    ) [ 00000000]
+tmp_41                    (partselect    ) [ 00000000]
+tmp_42                    (partselect    ) [ 00000000]
+tmp_43                    (partselect    ) [ 00000000]
 p_Result_s                (bitconcatenate) [ 00000000]
 this_round_keys_load_1    (load          ) [ 00000000]
 xor_ln859_1               (xor           ) [ 00000000]
-ret_ln60                  (ret           ) [ 00000000]
+ret_ln62                  (ret           ) [ 00000000]
 </LifeTime>
 
 <model>
@@ -709,7 +709,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </bind>
 </comp>
 
-<comp id="94" class="1004" name="p_read_1_read_fu_94">
+<comp id="94" class="1004" name="p_read_2_read_fu_94">
 <pin_list>
 <pin id="95" dir="0" index="0" bw="128" slack="0"/>
 <pin id="96" dir="0" index="1" bw="128" slack="0"/>
@@ -717,7 +717,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="p_read_1/3 "/>
+<opset="p_read_2/3 "/>
 </bind>
 </comp>
 
@@ -825,7 +825,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </bind>
 </comp>
 
-<comp id="158" class="1004" name="tmp3_fu_158">
+<comp id="158" class="1004" name="tmp_fu_158">
 <pin_list>
 <pin id="159" dir="0" index="0" bw="8" slack="0"/>
 <pin id="160" dir="0" index="1" bw="128" slack="0"/>
@@ -835,7 +835,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp3/7 "/>
+<opset="tmp/7 "/>
 </bind>
 </comp>
 
@@ -853,7 +853,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </bind>
 </comp>
 
-<comp id="178" class="1004" name="tmp_2_fu_178">
+<comp id="178" class="1004" name="tmp_31_fu_178">
 <pin_list>
 <pin id="179" dir="0" index="0" bw="8" slack="0"/>
 <pin id="180" dir="0" index="1" bw="128" slack="0"/>
@@ -863,7 +863,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_2/7 "/>
+<opset="tmp_31/7 "/>
 </bind>
 </comp>
 
@@ -878,7 +878,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </bind>
 </comp>
 
-<comp id="192" class="1004" name="tmp_3_fu_192">
+<comp id="192" class="1004" name="tmp_32_fu_192">
 <pin_list>
 <pin id="193" dir="0" index="0" bw="8" slack="0"/>
 <pin id="194" dir="0" index="1" bw="128" slack="0"/>
@@ -888,11 +888,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_3/7 "/>
+<opset="tmp_32/7 "/>
 </bind>
 </comp>
 
-<comp id="202" class="1004" name="tmp_4_fu_202">
+<comp id="202" class="1004" name="tmp_33_fu_202">
 <pin_list>
 <pin id="203" dir="0" index="0" bw="8" slack="0"/>
 <pin id="204" dir="0" index="1" bw="128" slack="0"/>
@@ -902,11 +902,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_4/7 "/>
+<opset="tmp_33/7 "/>
 </bind>
 </comp>
 
-<comp id="212" class="1004" name="tmp_5_fu_212">
+<comp id="212" class="1004" name="tmp_34_fu_212">
 <pin_list>
 <pin id="213" dir="0" index="0" bw="8" slack="0"/>
 <pin id="214" dir="0" index="1" bw="128" slack="0"/>
@@ -916,11 +916,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_5/7 "/>
+<opset="tmp_34/7 "/>
 </bind>
 </comp>
 
-<comp id="222" class="1004" name="tmp_6_fu_222">
+<comp id="222" class="1004" name="tmp_35_fu_222">
 <pin_list>
 <pin id="223" dir="0" index="0" bw="8" slack="0"/>
 <pin id="224" dir="0" index="1" bw="128" slack="0"/>
@@ -930,11 +930,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_6/7 "/>
+<opset="tmp_35/7 "/>
 </bind>
 </comp>
 
-<comp id="232" class="1004" name="tmp_7_fu_232">
+<comp id="232" class="1004" name="tmp_36_fu_232">
 <pin_list>
 <pin id="233" dir="0" index="0" bw="8" slack="0"/>
 <pin id="234" dir="0" index="1" bw="128" slack="0"/>
@@ -944,11 +944,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_7/7 "/>
+<opset="tmp_36/7 "/>
 </bind>
 </comp>
 
-<comp id="242" class="1004" name="tmp_8_fu_242">
+<comp id="242" class="1004" name="tmp_37_fu_242">
 <pin_list>
 <pin id="243" dir="0" index="0" bw="8" slack="0"/>
 <pin id="244" dir="0" index="1" bw="128" slack="0"/>
@@ -958,11 +958,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_8/7 "/>
+<opset="tmp_37/7 "/>
 </bind>
 </comp>
 
-<comp id="252" class="1004" name="tmp_9_fu_252">
+<comp id="252" class="1004" name="tmp_38_fu_252">
 <pin_list>
 <pin id="253" dir="0" index="0" bw="8" slack="0"/>
 <pin id="254" dir="0" index="1" bw="128" slack="0"/>
@@ -972,11 +972,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_9/7 "/>
+<opset="tmp_38/7 "/>
 </bind>
 </comp>
 
-<comp id="262" class="1004" name="tmp_10_fu_262">
+<comp id="262" class="1004" name="tmp_39_fu_262">
 <pin_list>
 <pin id="263" dir="0" index="0" bw="8" slack="0"/>
 <pin id="264" dir="0" index="1" bw="128" slack="0"/>
@@ -986,11 +986,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_10/7 "/>
+<opset="tmp_39/7 "/>
 </bind>
 </comp>
 
-<comp id="272" class="1004" name="tmp_11_fu_272">
+<comp id="272" class="1004" name="tmp_40_fu_272">
 <pin_list>
 <pin id="273" dir="0" index="0" bw="8" slack="0"/>
 <pin id="274" dir="0" index="1" bw="128" slack="0"/>
@@ -1000,11 +1000,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_11/7 "/>
+<opset="tmp_40/7 "/>
 </bind>
 </comp>
 
-<comp id="282" class="1004" name="tmp_12_fu_282">
+<comp id="282" class="1004" name="tmp_41_fu_282">
 <pin_list>
 <pin id="283" dir="0" index="0" bw="8" slack="0"/>
 <pin id="284" dir="0" index="1" bw="128" slack="0"/>
@@ -1014,11 +1014,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_12/7 "/>
+<opset="tmp_41/7 "/>
 </bind>
 </comp>
 
-<comp id="292" class="1004" name="tmp_13_fu_292">
+<comp id="292" class="1004" name="tmp_42_fu_292">
 <pin_list>
 <pin id="293" dir="0" index="0" bw="8" slack="0"/>
 <pin id="294" dir="0" index="1" bw="128" slack="0"/>
@@ -1028,11 +1028,11 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_13/7 "/>
+<opset="tmp_42/7 "/>
 </bind>
 </comp>
 
-<comp id="302" class="1004" name="tmp_14_fu_302">
+<comp id="302" class="1004" name="tmp_43_fu_302">
 <pin_list>
 <pin id="303" dir="0" index="0" bw="8" slack="0"/>
 <pin id="304" dir="0" index="1" bw="128" slack="0"/>
@@ -1042,7 +1042,7 @@ ret_ln60                  (ret           ) [ 00000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_14/7 "/>
+<opset="tmp_43/7 "/>
 </bind>
 </comp>
 
@@ -1387,6 +1387,7 @@ ret_ln60                  (ret           ) [ 00000000]
 
 * FSMD analyzer results:
   - Output states:
+	Port: this_round_keys | {}
 	Port: crypto_aes_sbox_V | {}
 	Port: crypto_aes_mul2_V | {}
 	Port: crypto_aes_mul3_V | {}
@@ -1407,25 +1408,25 @@ ret_ln60                  (ret           ) [ 00000000]
 	State 6
 		this_round_keys_load_1 : 1
 	State 7
-		tmp3 : 1
+		tmp : 1
 		tmp_s : 1
-		tmp_2 : 1
+		tmp_31 : 1
 		trunc_ln628 : 1
-		tmp_3 : 1
-		tmp_4 : 1
-		tmp_5 : 1
-		tmp_6 : 1
-		tmp_7 : 1
-		tmp_8 : 1
-		tmp_9 : 1
-		tmp_10 : 1
-		tmp_11 : 1
-		tmp_12 : 1
-		tmp_13 : 1
-		tmp_14 : 1
+		tmp_32 : 1
+		tmp_33 : 1
+		tmp_34 : 1
+		tmp_35 : 1
+		tmp_36 : 1
+		tmp_37 : 1
+		tmp_38 : 1
+		tmp_39 : 1
+		tmp_40 : 1
+		tmp_41 : 1
+		tmp_42 : 1
+		tmp_43 : 1
 		p_Result_s : 2
 		xor_ln859_1 : 3
-		ret_ln60 : 3
+		ret_ln62 : 3
 
 
 ============================================================
@@ -1442,23 +1443,23 @@ ret_ln60                  (ret           ) [ 00000000]
 |    xor   |                       xor_ln859_fu_145                       |    0    |    0    |   128   |
 |          |                      xor_ln859_1_fu_348                      |    0    |    0    |   128   |
 |----------|--------------------------------------------------------------|---------|---------|---------|
-|   read   |                      p_read_1_read_fu_94                     |    0    |    0    |    0    |
+|   read   |                      p_read_2_read_fu_94                     |    0    |    0    |    0    |
 |----------|--------------------------------------------------------------|---------|---------|---------|
-|          |                          tmp3_fu_158                         |    0    |    0    |    0    |
+|          |                          tmp_fu_158                          |    0    |    0    |    0    |
 |          |                         tmp_s_fu_168                         |    0    |    0    |    0    |
-|          |                         tmp_2_fu_178                         |    0    |    0    |    0    |
-|          |                         tmp_3_fu_192                         |    0    |    0    |    0    |
-|          |                         tmp_4_fu_202                         |    0    |    0    |    0    |
-|          |                         tmp_5_fu_212                         |    0    |    0    |    0    |
-|          |                         tmp_6_fu_222                         |    0    |    0    |    0    |
-|partselect|                         tmp_7_fu_232                         |    0    |    0    |    0    |
-|          |                         tmp_8_fu_242                         |    0    |    0    |    0    |
-|          |                         tmp_9_fu_252                         |    0    |    0    |    0    |
-|          |                         tmp_10_fu_262                        |    0    |    0    |    0    |
-|          |                         tmp_11_fu_272                        |    0    |    0    |    0    |
-|          |                         tmp_12_fu_282                        |    0    |    0    |    0    |
-|          |                         tmp_13_fu_292                        |    0    |    0    |    0    |
-|          |                         tmp_14_fu_302                        |    0    |    0    |    0    |
+|          |                         tmp_31_fu_178                        |    0    |    0    |    0    |
+|          |                         tmp_32_fu_192                        |    0    |    0    |    0    |
+|          |                         tmp_33_fu_202                        |    0    |    0    |    0    |
+|          |                         tmp_34_fu_212                        |    0    |    0    |    0    |
+|          |                         tmp_35_fu_222                        |    0    |    0    |    0    |
+|partselect|                         tmp_36_fu_232                        |    0    |    0    |    0    |
+|          |                         tmp_37_fu_242                        |    0    |    0    |    0    |
+|          |                         tmp_38_fu_252                        |    0    |    0    |    0    |
+|          |                         tmp_39_fu_262                        |    0    |    0    |    0    |
+|          |                         tmp_40_fu_272                        |    0    |    0    |    0    |
+|          |                         tmp_41_fu_282                        |    0    |    0    |    0    |
+|          |                         tmp_42_fu_292                        |    0    |    0    |    0    |
+|          |                         tmp_43_fu_302                        |    0    |    0    |    0    |
 |----------|--------------------------------------------------------------|---------|---------|---------|
 |   trunc  |                      trunc_ln628_fu_188                      |    0    |    0    |    0    |
 |----------|--------------------------------------------------------------|---------|---------|---------|

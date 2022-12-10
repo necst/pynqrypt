@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block'" level="0">
-<item name = "Date">Sat Dec 10 11:47:22 2022
+<item name = "Date">Sat Dec 10 12:09:51 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -81,8 +81,8 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln50_fu_740_p2">+, 0, 0, 13, 4, 1</column>
-<column name="icmp_ln50_fu_562_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="add_ln52_fu_740_p2">+, 0, 0, 13, 4, 1</column>
+<column name="icmp_ln52_fu_562_p2">icmp, 0, 0, 9, 4, 4</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="xor_ln1499_10_fu_933_p2">xor, 0, 0, 8, 8, 8</column>
 <column name="xor_ln1499_11_fu_937_p2">xor, 0, 0, 8, 8, 8</column>
@@ -205,20 +205,20 @@
 <column name="i_fu_108">4, 0, 4, 0</column>
 <column name="state_promoted_i_fu_104">128, 0, 128, 0</column>
 <column name="this_round_keys_load_reg_1326">128, 0, 128, 0</column>
-<column name="tmp_32_10_reg_1254">8, 0, 8, 0</column>
-<column name="tmp_32_11_reg_1259">8, 0, 8, 0</column>
-<column name="tmp_32_12_reg_1264">8, 0, 8, 0</column>
-<column name="tmp_32_13_reg_1269">8, 0, 8, 0</column>
-<column name="tmp_32_14_reg_1274">8, 0, 8, 0</column>
-<column name="tmp_32_1_reg_1209">8, 0, 8, 0</column>
-<column name="tmp_32_2_reg_1214">8, 0, 8, 0</column>
-<column name="tmp_32_3_reg_1219">8, 0, 8, 0</column>
-<column name="tmp_32_4_reg_1224">8, 0, 8, 0</column>
-<column name="tmp_32_5_reg_1229">8, 0, 8, 0</column>
-<column name="tmp_32_6_reg_1234">8, 0, 8, 0</column>
-<column name="tmp_32_7_reg_1239">8, 0, 8, 0</column>
-<column name="tmp_32_8_reg_1244">8, 0, 8, 0</column>
-<column name="tmp_32_9_reg_1249">8, 0, 8, 0</column>
+<column name="tmp_62_10_reg_1254">8, 0, 8, 0</column>
+<column name="tmp_62_11_reg_1259">8, 0, 8, 0</column>
+<column name="tmp_62_12_reg_1264">8, 0, 8, 0</column>
+<column name="tmp_62_13_reg_1269">8, 0, 8, 0</column>
+<column name="tmp_62_14_reg_1274">8, 0, 8, 0</column>
+<column name="tmp_62_1_reg_1209">8, 0, 8, 0</column>
+<column name="tmp_62_2_reg_1214">8, 0, 8, 0</column>
+<column name="tmp_62_3_reg_1219">8, 0, 8, 0</column>
+<column name="tmp_62_4_reg_1224">8, 0, 8, 0</column>
+<column name="tmp_62_5_reg_1229">8, 0, 8, 0</column>
+<column name="tmp_62_6_reg_1234">8, 0, 8, 0</column>
+<column name="tmp_62_7_reg_1239">8, 0, 8, 0</column>
+<column name="tmp_62_8_reg_1244">8, 0, 8, 0</column>
+<column name="tmp_62_9_reg_1249">8, 0, 8, 0</column>
 </table>
 </item>
 </section>
