@@ -5,12 +5,8 @@ set SynModuleInfo {
       {MODELNAME pynqrypt_encrypt_flow_control_loop_pipe_sequential_init RTLNAME pynqrypt_encrypt_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME pynqrypt_encrypt_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1 MODELNAME aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1 RTLNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1}
-  {SRCNAME aes_generate_round_keys MODELNAME aes_generate_round_keys RTLNAME pynqrypt_encrypt_aes_generate_round_keys
-    SUBMODULES {
-      {MODELNAME pynqrypt_encrypt_aes_generate_round_keys_p_round_key_V_RAM_AUTO_1R1W RTLNAME pynqrypt_encrypt_aes_generate_round_keys_p_round_key_V_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-    }
-  }
+  {SRCNAME aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1 MODELNAME aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1 RTLNAME pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1}
+  {SRCNAME aes_generate_round_keys MODELNAME aes_generate_round_keys RTLNAME pynqrypt_encrypt_aes_generate_round_keys}
   {SRCNAME entry_proc MODELNAME entry_proc RTLNAME pynqrypt_encrypt_entry_proc}
   {SRCNAME assign_swap_endianness MODELNAME assign_swap_endianness RTLNAME pynqrypt_encrypt_assign_swap_endianness}
   {SRCNAME ctr_compute_nonce MODELNAME ctr_compute_nonce RTLNAME pynqrypt_encrypt_ctr_compute_nonce}

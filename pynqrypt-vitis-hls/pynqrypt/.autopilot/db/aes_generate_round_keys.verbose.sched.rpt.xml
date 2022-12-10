@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_generate_round_keys'" level="0">
-<item name = "Date">Sat Dec 10 14:02:48 2022
+<item name = "Date">Sat Dec 10 15:24:51 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.508 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.086 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">81, 81, 0.810 us, 0.810 us, 81, 81, no</column>
+<column name="">99, 99, 0.990 us, 0.990 us, 99, 99, no</column>
 </table>
 </item>
 <item name = "Detail">

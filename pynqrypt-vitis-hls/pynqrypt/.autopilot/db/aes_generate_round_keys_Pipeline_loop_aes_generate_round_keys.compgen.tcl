@@ -12,24 +12,35 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+eval "cg_default_interface_gen_dc { \
     id 2 \
     name p_round_key_V \
+    type other \
+    dir I \
     reset_level 1 \
     sync_rst true \
-    dir IO \
-    corename p_round_key_V \
+    corename dc_p_round_key_V \
     op interface \
-    ports { p_round_key_V_address0 { O 6 vector } p_round_key_V_ce0 { O 1 bit } p_round_key_V_we0 { O 1 bit } p_round_key_V_d0 { O 32 vector } p_round_key_V_q0 { I 32 vector } p_round_key_V_address1 { O 6 vector } p_round_key_V_ce1 { O 1 bit } p_round_key_V_we1 { O 1 bit } p_round_key_V_d1 { O 32 vector } p_round_key_V_q1 { I 32 vector } } \
+    ports { p_round_key_V { I 1408 vector } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_round_key_V'"
-}
 }
 
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3 \
+    name p_round_key_V_1_out \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_round_key_V_1_out \
+    op interface \
+    ports { p_round_key_V_1_out { O 1408 vector } p_round_key_V_1_out_ap_vld { O 1 bit } } \
+} "
+}
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

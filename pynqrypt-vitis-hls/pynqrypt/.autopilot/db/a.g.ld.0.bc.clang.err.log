@@ -1,7 +1,7 @@
 warning: hw-impl/src/pynqrypt.cpp:22:9: Duplicating function 'crypto::Pynqrypt::assign_swap_endianness(ap_uint<128>, ap_uint<128>&)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.
-remark: hw-impl/src/pynqrypt.cpp:160:0: Inlining function 'crypto::Pynqrypt::aes_rotate_word(ap_uint<32>&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
-remark: hw-impl/src/pynqrypt.cpp:160:0: Inlining function 'crypto::Pynqrypt::aes_sub_word(ap_uint<32>&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
-remark: hw-impl/src/pynqrypt.cpp:160:0: Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(ap_uint<32>&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:131:0: Inlining function 'crypto::Pynqrypt::aes_rotate_word(ap_uint<32>&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:131:0: Inlining function 'crypto::Pynqrypt::aes_sub_word(ap_uint<32>&)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
+remark: hw-impl/src/pynqrypt.cpp:131:0: Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(ap_uint<32>&, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'
 remark: hw-impl/src/pynqrypt.cpp:44:0: Inlining function 'crypto::Pynqrypt::aes_sub_bytes(ap_uint<128>&)' into 'crypto::Pynqrypt::aes_encrypt_block(ap_uint<128>&)'
 remark: hw-impl/src/pynqrypt.cpp:44:0: Inlining function 'crypto::Pynqrypt::aes_shift_rows(ap_uint<128>&)' into 'crypto::Pynqrypt::aes_encrypt_block(ap_uint<128>&)'
 remark: hw-impl/src/pynqrypt.cpp:44:0: Inlining function 'crypto::Pynqrypt::aes_mix_columns(ap_uint<128>&)' into 'crypto::Pynqrypt::aes_encrypt_block(ap_uint<128>&)'
@@ -9,4 +9,5 @@ remark: hw-impl/src/pynqrypt_hls.cpp:9:0: Inlining function 'crypto::Pynqrypt::P
 remark: hw-impl/src/constants.hpp:7:0: Applying array_reshape to '_ZN6cryptoL8aes_sboxE': Complete reshaping on dimension 1.
 remark: hw-impl/src/constants.hpp:46:0: Applying array_reshape to '_ZN6cryptoL8aes_mul3E': Complete reshaping on dimension 1.
 remark: hw-impl/src/constants.hpp:27:0: Applying array_reshape to '_ZN6cryptoL8aes_mul2E': Complete reshaping on dimension 1.
+remark: hw-impl/src/pynqrypt.cpp:135:14: Applying array_reshape to '_round_key': Complete reshaping on dimension 1.
 remark: hw-impl/src/pynqrypt.cpp:22:32: Skip burst inference for loop 'loop_ctr_encrypt' since access may be exposed into dataflow region _XLX_SEP_ for.inc.load.5 plaintext gmem crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*) 

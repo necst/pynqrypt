@@ -197,7 +197,7 @@ entry:25 %call_ln22 = call void @ctr_encrypt, i96 %nonce_read, i128 %pynqrypt_ro
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:0 %spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8
+entry:0 %spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_16
 
 ]]></Node>
 <StgValue><ssdm name="spectopmodule_ln3"/></StgValue>
@@ -565,7 +565,7 @@ entry:26 %ret_ln23 = ret
 </dataflow>
 <dataflow id="84" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln3" fromId="83" toId="15">
 </dataflow>
-<dataflow id="86" from="empty_8" to="spectopmodule_ln3" fromId="85" toId="15">
+<dataflow id="86" from="empty_16" to="spectopmodule_ln3" fromId="85" toId="15">
 </dataflow>
 <dataflow id="88" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="87" toId="16">
 </dataflow>

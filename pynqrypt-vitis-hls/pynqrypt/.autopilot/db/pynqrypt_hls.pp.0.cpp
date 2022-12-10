@@ -6087,7 +6087,6 @@ class Pynqrypt {
         void aes_encrypt_block(aes_block &state);
         void aes_sub_bytes(aes_block &state);
         void aes_shift_rows(aes_block &state);
-        void aes_shift_sub_bytes(aes_block &state);
         void aes_mix_columns(aes_block &state);
 
 
@@ -6120,7 +6119,7 @@ __attribute__((sdx_kernel("pynqrypt_encrypt", 0))) void pynqrypt_encrypt(
  crypto::aes_block *plaintext,
  crypto::aes_block *ciphertext
 ) {
-#line 23 "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/csynth.tcl"
+#line 24 "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=pynqrypt_encrypt
 # 9 "hw-impl/src/pynqrypt_hls.cpp"
 

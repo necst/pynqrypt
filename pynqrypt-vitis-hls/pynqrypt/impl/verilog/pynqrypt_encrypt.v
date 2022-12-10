@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=6,HLS_SYN_DSP=0,HLS_SYN_FF=5323,HLS_SYN_LUT=122197,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=15171,HLS_SYN_LUT=173591,HLS_VERSION=2022_2}" *)
 
 module pynqrypt_encrypt (
         ap_clk,
@@ -755,11 +755,4 @@ assign grp_aes_generate_round_keys_fu_108_ap_start = grp_aes_generate_round_keys
 
 assign grp_ctr_encrypt_fu_118_ap_start = grp_ctr_encrypt_fu_118_ap_start_reg;
 
-
-reg find_df_deadlock = 0;
-// synthesis translate_off
-`include "pynqrypt_encrypt_hls_deadlock_detector.vh"
-// synthesis translate_on
-
 endmodule //pynqrypt_encrypt
-

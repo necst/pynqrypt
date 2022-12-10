@@ -230,8 +230,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "assign_swap_endianness_1_U0", "Port" : "gmem"},
-					{"ID" : "3", "SubInstance" : "assign_swap_endianness_U0", "Port" : "gmem"}]},
+					{"ID" : "3", "SubInstance" : "assign_swap_endianness_U0", "Port" : "gmem"},
+					{"ID" : "11", "SubInstance" : "assign_swap_endianness_1_U0", "Port" : "gmem"}]},
 			{"Name" : "i", "Type" : "None", "Direction" : "I"},
 			{"Name" : "plaintext", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_read", "Type" : "None", "Direction" : "I"},

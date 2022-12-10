@@ -94,7 +94,7 @@ architecture behav of pynqrypt_encrypt_assign_swap_endianness is
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-    constant ap_const_lv128_lc_2 : STD_LOGIC_VECTOR (127 downto 0) := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    constant ap_const_lv128_lc_4 : STD_LOGIC_VECTOR (127 downto 0) := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     constant ap_const_lv16_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_8 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001000";
@@ -216,7 +216,7 @@ begin
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                ap_return_preg <= ap_const_lv128_lc_2;
+                ap_return_preg <= ap_const_lv128_lc_4;
             else
                 if (((m_axi_gmem_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state9))) then 
                     ap_return_preg <= p_Result_s_fu_336_p17;
@@ -442,7 +442,7 @@ begin
         end if; 
     end process;
 
-    m_axi_gmem_WDATA <= ap_const_lv128_lc_2;
+    m_axi_gmem_WDATA <= ap_const_lv128_lc_4;
     m_axi_gmem_WID <= ap_const_lv1_0;
     m_axi_gmem_WLAST <= ap_const_logic_0;
     m_axi_gmem_WSTRB <= ap_const_lv16_0;

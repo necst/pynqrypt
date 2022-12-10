@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670677373501">
-  <ports id="1" name="p_read" type="PortType" coreId="303894144" bitwidth="96">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670682297730">
+  <ports id="1" name="p_read" type="PortType" coreId="2385162672" bitwidth="96">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="this_round_keys" type="PortType" coreName="RAM" coreId="303700752" bitwidth="128" iftype="IfTypeRegister" arraysize="11">
+  <ports id="2" name="this_round_keys" type="PortType" coreName="RAM" coreId="2384680512" bitwidth="128" iftype="IfTypeRegister" arraysize="11">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="block_count" type="PortType" coreId="0" bitwidth="60">
+  <ports id="3" name="block_count" type="PortType" coreId="2101063989" bitwidth="60">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="gmem" type="PortType" coreId="304443632" bitwidth="128" direction="DirInOut" iftype="IfTypeFifo">
+  <ports id="4" name="gmem" type="PortType" coreId="2385252272" bitwidth="128" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="plaintext" type="PortType" coreId="305017832" bitwidth="64">
+  <ports id="5" name="plaintext" type="PortType" coreId="2385804064" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="ciphertext" type="PortType" coreId="3958314739" bitwidth="64">
+  <ports id="6" name="ciphertext" type="PortType" coreId="2100620657" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="28" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -79,7 +79,7 @@
   <blocks id="25" name="for.end" type="BlockType">
     <controlInputObjs>for.cond</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln28" lineNumber="28" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="304960096" contextFuncName="ctr_encrypt" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln28" lineNumber="28" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2385252832" contextFuncName="ctr_encrypt" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="28" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
     </node_objs>
     <fileValidLineNumbers fileName="hw-impl/src/pynqrypt.cpp">
@@ -115,7 +115,7 @@
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln18" lineNumber="18" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="298774384" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln18" lineNumber="18" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2385288528" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="18" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc</controlInputObjs>
@@ -130,7 +130,7 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.cond</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln26" lineNumber="26" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="dataflow_in_loop_loop_ctr_encrypt_U0" coreId="1919906418" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.63" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln26" lineNumber="26" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." rtlName="dataflow_in_loop_loop_ctr_encrypt_U0" coreId="2385252832" contextFuncName="ctr_encrypt" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.63" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="26" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
         <dataInputObjs>gmem</dataInputObjs>
         <dataInputObjs>phi</dataInputObjs>
@@ -141,7 +141,7 @@
         <dataOutputObjs>gmem</dataOutputObjs>
         <constName>dataflow_in_loop_loop_ctr_encrypt</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln18" lineNumber="18" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="305138400" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln18" lineNumber="18" fileName="hw-impl/src/pynqrypt.cpp" fileDirectory=".." coreId="2384680512" contextFuncName="ctr_encrypt" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="hw-impl/src/pynqrypt.cpp" linenumber="18" fileDirectory="/home/mrindeciso/Documents/pynqrypt" functionName="ctr_encrypt"/>
         <controlInputObjs>for.cond</controlInputObjs>
       </node_objs>

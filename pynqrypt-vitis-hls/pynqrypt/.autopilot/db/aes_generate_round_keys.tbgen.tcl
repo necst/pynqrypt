@@ -48,13 +48,13 @@ set NewPortList {[
  	{ "name": "this_round_keys_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":128, "type": "signal", "bundle":{"name": "this_round_keys", "role": "d0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "5"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "4"],
 		"CDFG" : "aes_generate_round_keys",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "81", "EstimateLatencyMax" : "81",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "99", "EstimateLatencyMax" : "99",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -66,18 +66,17 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "this_round_keys", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1_fu_94", "Port" : "this_round_keys", "Inst_start_state" : "5", "Inst_end_state" : "6"}]},
+					{"ID" : "4", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1_fu_54", "Port" : "this_round_keys", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "crypto_aes_rcon_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_87", "Port" : "crypto_aes_rcon_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.p_round_key_V_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_87", "Parent" : "0", "Child" : ["3", "4"],
+					{"ID" : "1", "SubInstance" : "grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46", "Port" : "crypto_aes_rcon_V", "Inst_start_state" : "1", "Inst_end_state" : "2"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46", "Parent" : "0", "Child" : ["2", "3"],
 		"CDFG" : "aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "52", "EstimateLatencyMax" : "52",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "82", "EstimateLatencyMax" : "82",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -86,19 +85,21 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "p_round_key_V", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "p_round_key_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "p_round_key_V_1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "crypto_aes_rcon_V", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "loop_aes_generate_round_keys", "PipelineType" : "NotSupport"}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_87.crypto_aes_rcon_V_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_87.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1_fu_94", "Parent" : "0", "Child" : ["6"],
-		"CDFG" : "aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1",
+			{"Name" : "loop_aes_generate_round_keys", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "8", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46.crypto_aes_rcon_V_U", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1_fu_54", "Parent" : "0", "Child" : ["5"],
+		"CDFG" : "aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "24", "EstimateLatencyMax" : "24",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "14", "EstimateLatencyMax" : "14",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -107,12 +108,12 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "p_round_key_V", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "p_round_key_V_1_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "this_round_keys", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_184_1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1_fu_94.flow_control_loop_pipe_sequential_init_U", "Parent" : "5"}]}
+			{"Name" : "VITIS_LOOP_157_1", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1_fu_54.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -121,17 +122,18 @@ set ArgLastReadFirstWriteLatency {
 		this_round_keys {Type O LastRead -1 FirstWrite 2}
 		crypto_aes_rcon_V {Type I LastRead -1 FirstWrite -1}}
 	aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys {
-		p_round_key_V {Type IO LastRead 2 FirstWrite 3}
+		p_round_key_V {Type I LastRead 0 FirstWrite -1}
+		p_round_key_V_1_out {Type O LastRead -1 FirstWrite 0}
 		crypto_aes_rcon_V {Type I LastRead -1 FirstWrite -1}}
-	aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1 {
-		p_round_key_V {Type I LastRead 2 FirstWrite -1}
+	aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1 {
+		p_round_key_V_1_reload {Type I LastRead 0 FirstWrite -1}
 		this_round_keys {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "81", "Max" : "81"}
-	, {"Name" : "Interval", "Min" : "81", "Max" : "81"}
+	{"Name" : "Latency", "Min" : "99", "Max" : "99"}
+	, {"Name" : "Interval", "Min" : "99", "Max" : "99"}
 ]}
 
 set PipelineEnableSignalInfo {[

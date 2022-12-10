@@ -96,7 +96,7 @@ end;
 architecture behav of pynqrypt_encrypt is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=6,HLS_SYN_DSP=0,HLS_SYN_FF=5323,HLS_SYN_LUT=122197,HLS_VERSION=2022_2}";
+    "pynqrypt_encrypt_pynqrypt_encrypt,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020i-clg400-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=15171,HLS_SYN_LUT=173591,HLS_VERSION=2022_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
@@ -113,7 +113,7 @@ architecture behav of pynqrypt_encrypt is
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv32_3F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000111111";
-    constant ap_const_lv128_lc_2 : STD_LOGIC_VECTOR (127 downto 0) := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    constant ap_const_lv128_lc_4 : STD_LOGIC_VECTOR (127 downto 0) := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
 
@@ -504,7 +504,7 @@ begin
         this_round_keys_address1 => grp_ctr_encrypt_fu_118_this_round_keys_address1,
         this_round_keys_ce1 => grp_ctr_encrypt_fu_118_this_round_keys_ce1,
         this_round_keys_d1 => grp_ctr_encrypt_fu_118_this_round_keys_d1,
-        this_round_keys_q1 => ap_const_lv128_lc_2,
+        this_round_keys_q1 => ap_const_lv128_lc_4,
         this_round_keys_we1 => grp_ctr_encrypt_fu_118_this_round_keys_we1,
         block_count => trunc_ln_reg_159,
         m_axi_gmem_AWVALID => grp_ctr_encrypt_fu_118_m_axi_gmem_AWVALID,

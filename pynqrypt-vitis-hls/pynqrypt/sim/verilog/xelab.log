@@ -19,8 +19,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/py
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_184_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_157_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_entry_proc.v" into library xil_defaultlib
@@ -49,8 +49,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/py
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_flow_control_loop_pipe_sequential_init
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_crypto_aes_rconbkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_crypto_aes_rconbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_p_round_key_V_RAM_AUTO_1R1W.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_p_round_key_V_RAM_AUTO_1R1W
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/sim/verilog/pynqrypt_encrypt_fifo_w64_d5_S.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w64_d5_S
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_fifo_w64_d5_S_ShiftReg
@@ -88,7 +86,6 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
 Compiling module xil_defaultlib.pynqrypt_encrypt_pynqrypt_round_...
-Compiling module xil_defaultlib.pynqrypt_encrypt_aes_generate_ro...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_generate_ro...
 Compiling module xil_defaultlib.pynqrypt_encrypt_flow_control_lo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_generate_ro...
@@ -154,8 +151,9 @@ Compiling module xil_defaultlib.df_fifo_intf
 Compiling module xil_defaultlib.df_process_intf
 Compiling module xil_defaultlib.nodf_module_intf
 Compiling module xil_defaultlib.df_loop_intf
-Compiling module xil_defaultlib.upc_loop_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=8)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf
 Compiling module xil_defaultlib.dataflow_monitor_1
 Compiling module xil_defaultlib.apatb_pynqrypt_encrypt_top
 Compiling module work.glbl
