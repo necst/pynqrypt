@@ -43,7 +43,7 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 11, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
 Function:        _ZN6crypto8PynqryptC2E7ap_uintILi128EES1_ILi96EE
 Args:            
   - String:          'Inlining function '''
@@ -51,7 +51,7 @@ Args:
     DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 131, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::Pynqrypt(ap_uint<128>, ap_uint<96>)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 11, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -99,21 +99,35 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::ctr_compute_nonce(ap_uint<128>&, long)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 34, Column: 0 }
+  - Callee:          'crypto::Pynqrypt::swap_block_endianness(ap_uint<128>&)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 181, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'crypto::Pynqrypt::ctr_compute_nonce(ap_uint<128>&, unsigned long)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt11ctr_encryptEmP7ap_uintILi128EES3_
 Args:            
   - String:          'Inlining function '''
@@ -121,7 +135,7 @@ Args:
     DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 41, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -132,7 +146,7 @@ Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::Pynqrypt(ap_uint<128>, ap_uint<96>)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 11, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
   - String:          ''' into '''
   - Caller:          'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -146,7 +160,7 @@ Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::ctr_encrypt(unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 17, Column: 0 }
   - String:          ''' into '''
   - Caller:          'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -155,7 +169,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
 Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Sequential '
@@ -176,7 +190,7 @@ Args:
   - String:          ' '
   - LoopName:        loop_ctr_encrypt
   - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
   - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -185,7 +199,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
 Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Sequential '
@@ -195,7 +209,7 @@ Args:
   - String:          ' length'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
-  - String:          for.inc.i.store.34
+  - String:          _ZN6crypto8Pynqrypt21swap_block_endiannessER7ap_uintILi128EE.exit16.i.store.4
   - String:          ', '
   - String:          ' _XLX_SEP_ '
   - AccessID:        ciphertextseq
@@ -206,7 +220,7 @@ Args:
   - String:          ' '
   - LoopName:        loop_ctr_encrypt
   - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
   - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -215,7 +229,32 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
+Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        ciphertextseq
+  - String:          ' '
+  - ArrayName:       ciphertext
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        loop_ctr_encrypt
+  - String:          ' '
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
+  - String:          ' '
+  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
+    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
 Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Could not widen since type '
@@ -231,32 +270,7 @@ Args:
   - String:          ' '
   - LoopName:        loop_ctr_encrypt
   - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
-  - String:          ' '
-  - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
-Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i128
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        ciphertextseq
-  - String:          ' '
-  - ArrayName:       ciphertext
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        loop_ctr_encrypt
-  - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
   - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -265,7 +279,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
 Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Multiple burst '
@@ -285,7 +299,7 @@ Args:
   - String:          ' '
   - LoopName:        loop_ctr_encrypt
   - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
   - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -294,7 +308,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
 Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Multiple burst '
@@ -306,7 +320,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        loop_ctr_encrypt
   - String:          '''('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem
@@ -316,7 +330,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
 Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Multiple burst '
@@ -336,7 +350,7 @@ Args:
   - String:          ' '
   - LoopName:        loop_ctr_encrypt
   - String:          ' '
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ' '
   - Function:        'pynqrypt_encrypt(ap_uint<128>, ap_uint<96>, unsigned long, ap_uint<128>*, ap_uint<128>*)'
     DebugLoc:        { File: hw-impl/src/pynqrypt_hls.cpp, Line: 9, Column: 0 }
@@ -345,7 +359,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 20, Column: 23 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 18, Column: 23 }
 Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
 Args:            
   - String:          'Multiple burst '
@@ -357,7 +371,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        loop_ctr_encrypt
   - String:          '''('
-  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:20:23'
+  - LoopLoc:         'hw-impl/src/pynqrypt.cpp:18:23'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem

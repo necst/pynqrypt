@@ -1,8 +1,7 @@
 #pragma once
 
-#include <stdexcept>
-#include <vector>
-
+#include <cstdint>
+#include <cstddef>
 #include <ap_int.h>
 
 namespace crypto {
@@ -17,6 +16,7 @@ using aes_atom = ap_uint<8>;
 using aes_word = ap_uint<32>;
 using aes_block = ap_uint<128>;
 using aes_nonce = ap_uint<96>;
+using off64_t = size_t;
 
 class Pynqrypt {
 
@@ -41,6 +41,9 @@ class Pynqrypt {
         void aes_rotate_word(aes_word &word);
         void aes_sub_word(aes_word &word);
         void aes_xor_round_constant(aes_word &word, int round);
+
+        // utils
+        void swap_block_endianness(aes_block &word);
 
     public:
         Pynqrypt(aes_block key, aes_nonce nonce);

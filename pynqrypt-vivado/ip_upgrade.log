@@ -1,29 +1,16 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Dec  9 00:48:48 2022
+| Date         : Sat Dec 10 11:49:55 2022
 | Host         : SSD-UBUNTU running 64-bit Ubuntu 22.04.1 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg400-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'main_design_pynqrypt_encrypt_0_2'
+Upgrade Log for IP 'main_design_pynqrypt_encrypt_0_0'
 
 1. Summary
 ----------
 
-CAUTION (success, with warnings) in the upgrade of main_design_pynqrypt_encrypt_0_2 (xilinx.com:hls:pynqrypt_encrypt:1.0) from (Rev. 2112801972) to (Rev. 2112804887)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'main_design_pynqrypt_encrypt_0_2'. These changes may impact your design.
-
-
--Upgraded port 's_axi_control_ARADDR' width 7 differs from original width 6
-
--Upgraded port 's_axi_control_AWADDR' width 7 differs from original width 6
-
+SUCCESS in the upgrade of main_design_pynqrypt_encrypt_0_0 (xilinx.com:hls:pynqrypt_encrypt:1.0) from (Rev. 2112806250) to (Rev. 2112806988)
 

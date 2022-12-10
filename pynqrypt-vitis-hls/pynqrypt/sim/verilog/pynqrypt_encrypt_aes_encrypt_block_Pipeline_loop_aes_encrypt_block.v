@@ -269,7 +269,7 @@ wire   [7:0] xor_ln1499_6_fu_913_p2;
 wire   [7:0] xor_ln1499_9_fu_927_p2;
 wire   [7:0] xor_ln1499_12_fu_941_p2;
 wire   [7:0] xor_ln1499_15_fu_956_p2;
-wire   [127:0] p_Result_18_3_fu_1131_p17;
+wire   [127:0] p_Result_28_3_fu_1131_p17;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -995,7 +995,7 @@ assign i_cast_fu_571_p1 = i_fu_108;
 
 assign icmp_ln50_fu_562_p2 = ((i_fu_108 == 4'd10) ? 1'b1 : 1'b0);
 
-assign p_Result_18_3_fu_1131_p17 = {{{{{{{{{{{{{{{{xor_ln1499_42_fu_1082_p2}, {xor_ln1499_45_fu_1096_p2}}, {xor_ln1499_48_fu_1111_p2}}, {xor_ln1499_51_fu_1126_p2}}, {xor_ln1499_30_fu_1025_p2}}, {xor_ln1499_33_fu_1040_p2}}, {xor_ln1499_36_fu_1054_p2}}, {xor_ln1499_39_fu_1067_p2}}, {xor_ln1499_18_fu_970_p2}}, {xor_ln1499_21_fu_984_p2}}, {xor_ln1499_24_fu_997_p2}}, {xor_ln1499_27_fu_1011_p2}}, {xor_ln1499_6_fu_913_p2}}, {xor_ln1499_9_fu_927_p2}}, {xor_ln1499_12_fu_941_p2}}, {xor_ln1499_15_fu_956_p2}};
+assign p_Result_28_3_fu_1131_p17 = {{{{{{{{{{{{{{{{xor_ln1499_42_fu_1082_p2}, {xor_ln1499_45_fu_1096_p2}}, {xor_ln1499_48_fu_1111_p2}}, {xor_ln1499_51_fu_1126_p2}}, {xor_ln1499_30_fu_1025_p2}}, {xor_ln1499_33_fu_1040_p2}}, {xor_ln1499_36_fu_1054_p2}}, {xor_ln1499_39_fu_1067_p2}}, {xor_ln1499_18_fu_970_p2}}, {xor_ln1499_21_fu_984_p2}}, {xor_ln1499_24_fu_997_p2}}, {xor_ln1499_27_fu_1011_p2}}, {xor_ln1499_6_fu_913_p2}}, {xor_ln1499_9_fu_927_p2}}, {xor_ln1499_12_fu_941_p2}}, {xor_ln1499_15_fu_956_p2}};
 
 assign state_promoted_i_out = state_promoted_i_fu_104;
 
@@ -1101,7 +1101,7 @@ assign xor_ln1499_9_fu_927_p2 = (xor_ln1499_8_fu_922_p2 ^ xor_ln1499_7_fu_918_p2
 
 assign xor_ln1499_fu_907_p2 = (xor_ln1499_5_fu_903_p2 ^ crypto_aes_mul3_V_q1);
 
-assign xor_ln859_1_fu_1167_p2 = (this_round_keys_load_reg_1326 ^ p_Result_18_3_fu_1131_p17);
+assign xor_ln859_1_fu_1167_p2 = (this_round_keys_load_reg_1326 ^ p_Result_28_3_fu_1131_p17);
 
 assign zext_ln668_10_fu_831_p1 = tmp_32_9_reg_1249;
 

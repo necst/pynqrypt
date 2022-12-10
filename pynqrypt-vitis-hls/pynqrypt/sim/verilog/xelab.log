@@ -105,7 +105,7 @@ Compiling module xil_defaultlib.pynqrypt_encrypt
 Compiling module xil_defaultlib.AESL_axi_master_gmem
 Compiling module xil_defaultlib.AESL_axi_slave_control
 Compiling module xil_defaultlib.nodf_module_intf
-Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=17)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=23)
 Compiling module xil_defaultlib.upc_loop_intf
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=10)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)

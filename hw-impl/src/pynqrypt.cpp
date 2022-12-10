@@ -1,8 +1,6 @@
 #include "pynqrypt.hpp"
 #include "constants.hpp"
 
-#include <cstring>
-
 using namespace crypto;
 
 #define min(a, b) ((a > b) ? (b) : (a))
@@ -20,12 +18,14 @@ void Pynqrypt::ctr_encrypt(size_t plaintext_length, aes_block *plaintext, aes_bl
     loop_ctr_encrypt: for (size_t i = 0; i < (plaintext_length / 16); i++) {
         aes_block block_nonce;
         aes_block block = plaintext[i];
+        swap_block_endianness(block);
 
         ctr_compute_nonce(block_nonce, i);
         aes_encrypt_block(block_nonce);
 
         ctr_xor_block(block, block_nonce);
 
+        swap_block_endianness(block);
         ciphertext[i] = block;
     }
 }
@@ -175,4 +175,14 @@ void Pynqrypt::aes_sub_word(aes_word &word)
 void Pynqrypt::aes_xor_round_constant(aes_word &word, int round)
 {
     word.range(31, 24) = word.range(31, 24) ^ aes_rcon[round];
+}
+
+void Pynqrypt::swap_block_endianness(aes_block &block)
+{
+    aes_atom temp;
+    for (int i = 0; i < 8; i++) {
+        temp = block.range(i * 8 + 7, i * 8);
+        block.range(i * 8 + 7, i * 8) = block.range(127 - i * 8, 120 - i * 8);
+        block.range(127 - i * 8, 120 - i * 8) = temp;
+    }
 }

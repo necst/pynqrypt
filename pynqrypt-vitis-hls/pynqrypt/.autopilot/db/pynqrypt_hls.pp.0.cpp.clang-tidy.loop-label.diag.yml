@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp
-        Offset:          675477
+        Offset:          62571
         Length:          0
         ReplacementText: 'VITIS_LOOP_1211_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp
-        Offset:          882409
+        Offset:          269503
         Length:          0
         ReplacementText: 'VITIS_LOOP_676_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        /xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp
-        Offset:          882848
+        Offset:          269942
         Length:          0
         ReplacementText: 'VITIS_LOOP_690_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        /xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp
-        Offset:          883288
+        Offset:          270382
         Length:          0
         ReplacementText: 'VITIS_LOOP_704_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        /xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
     Replacements:    
       - FilePath:        /home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/.autopilot/db/pynqrypt_hls.pp.0.cpp
-        Offset:          1144908
+        Offset:          532002
         Length:          0
         ReplacementText: 'VITIS_LOOP_1245_1: '
 ...

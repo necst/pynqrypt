@@ -493,7 +493,7 @@ for.inc92.i.i.split:22 %store_ln155 = store i6 %add_ln155, i6 %i_1
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc92.i.i.split:1 %specloopname_ln155 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17
+for.inc92.i.i.split:1 %specloopname_ln155 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln155"/></StgValue>
@@ -728,7 +728,7 @@ for.inc92.i.i.split:23 %br_ln155 = br void %for.inc92.i.i
 </dataflow>
 <dataflow id="127" from="_ssdm_op_SpecLoopName" to="specloopname_ln155" fromId="126" toId="34">
 </dataflow>
-<dataflow id="129" from="empty_17" to="specloopname_ln155" fromId="128" toId="34">
+<dataflow id="129" from="empty_8" to="specloopname_ln155" fromId="128" toId="34">
 </dataflow>
 <dataflow id="130" from="tmp_4" to="zext_ln186" fromId="21" toId="35">
 </dataflow>

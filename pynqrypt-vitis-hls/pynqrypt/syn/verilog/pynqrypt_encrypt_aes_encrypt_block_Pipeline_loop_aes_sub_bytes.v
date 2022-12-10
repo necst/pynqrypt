@@ -72,7 +72,7 @@ reg    ap_enable_reg_pp0_iter0_reg;
 wire   [63:0] zext_ln668_fu_137_p1;
 wire    ap_block_pp0_stage2;
 reg   [4:0] i_fu_44;
-wire   [4:0] i_4_fu_97_p2;
+wire   [4:0] i_8_fu_97_p2;
 wire    ap_loop_init;
 wire    ap_block_pp0_stage1;
 reg   [127:0] p_Val2_s_fu_48;
@@ -85,9 +85,9 @@ wire   [127:0] lshr_ln668_fu_122_p2;
 wire   [127:0] zext_ln368_fu_141_p1;
 wire   [127:0] shl_ln368_fu_144_p2;
 wire   [127:0] xor_ln368_fu_150_p2;
-wire   [127:0] zext_ln368_1_fu_161_p1;
+wire   [127:0] zext_ln368_10_fu_161_p1;
 wire   [127:0] and_ln368_fu_156_p2;
-wire   [127:0] shl_ln368_1_fu_165_p2;
+wire   [127:0] shl_ln368_8_fu_165_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -181,7 +181,7 @@ always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
         i_fu_44 <= 5'd0;
     end else if (((icmp_ln64_fu_91_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        i_fu_44 <= i_4_fu_97_p2;
+        i_fu_44 <= i_8_fu_97_p2;
     end
 end
 
@@ -368,15 +368,15 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage1;
 
 assign crypto_aes_sbox_V_address0 = zext_ln668_fu_137_p1;
 
-assign i_4_fu_97_p2 = (i_fu_44 + 5'd1);
+assign i_8_fu_97_p2 = (i_fu_44 + 5'd1);
 
 assign icmp_ln64_fu_91_p2 = ((i_fu_44 == 5'd16) ? 1'b1 : 1'b0);
 
 assign lshr_ln668_fu_122_p2 = ap_sig_allocacmp_p_Val2_load_1 >> zext_ln668_1_fu_118_p1;
 
-assign p_Result_s_fu_171_p2 = (shl_ln368_1_fu_165_p2 | and_ln368_fu_156_p2);
+assign p_Result_s_fu_171_p2 = (shl_ln368_8_fu_165_p2 | and_ln368_fu_156_p2);
 
-assign shl_ln368_1_fu_165_p2 = zext_ln368_1_fu_161_p1 << zext_ln368_fu_141_p1;
+assign shl_ln368_8_fu_165_p2 = zext_ln368_10_fu_161_p1 << zext_ln368_fu_141_p1;
 
 assign shl_ln368_fu_144_p2 = 128'd255 << zext_ln368_fu_141_p1;
 
@@ -390,7 +390,7 @@ assign trunc_ln668_fu_128_p1 = lshr_ln668_fu_122_p2[7:0];
 
 assign xor_ln368_fu_150_p2 = (shl_ln368_fu_144_p2 ^ 128'd340282366920938463463374607431768211455);
 
-assign zext_ln368_1_fu_161_p1 = crypto_aes_sbox_V_q0;
+assign zext_ln368_10_fu_161_p1 = crypto_aes_sbox_V_q0;
 
 assign zext_ln368_fu_141_p1 = shl_ln_reg_209;
 

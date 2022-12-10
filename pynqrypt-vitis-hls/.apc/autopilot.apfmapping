@@ -8,10 +8,10 @@
     <originFiles name="constants.hpp" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/constants.hpp"/>
   </source>
   <testbench>
-    <originFiles name="data.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/data.bin"/>
-    <originFiles name="data_enc_openssl.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/data_enc_openssl.bin"/>
-    <originFiles name="key.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/key.bin"/>
-    <originFiles name="nonce.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/nonce.bin"/>
     <originFiles name="test.cpp" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/test.cpp"/>
+    <originFiles name="nonce.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/nonce.bin"/>
+    <originFiles name="key.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/key.bin"/>
+    <originFiles name="data_enc_openssl.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/data_enc_openssl.bin"/>
+    <originFiles name="data.bin" path="/home/mrindeciso/Documents/pynqrypt/hw-impl/src/data.bin"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

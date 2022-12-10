@@ -34776,8 +34776,27 @@ namespace std __attribute__ ((__visibility__ ("default")))
        
 
 
+# 1 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 1 3
+# 42 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 3
+       
+# 43 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 3
 
 
+
+
+
+
+
+# 1 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
+# 51 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 2 3
+
+
+namespace std
+{
+
+  using ::max_align_t;
+}
+# 5 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.hpp" 2
 # 1 "/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 1
 # 10 "/xilinx/Vitis_HLS/2022.2/include/ap_int.h"
 # 1 "/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 1
@@ -42168,27 +42187,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 15 "/xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h" 2
 
 
-# 1 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 1 3
-# 42 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 3
-       
-# 43 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 3
 
-
-
-
-
-
-
-# 1 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 51 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstddef" 2 3
-
-
-namespace std
-{
-
-  using ::max_align_t;
-}
-# 18 "/xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h" 2
 # 1 "/xilinx/Vitis_HLS/2022.2/include/hls_fpo.h" 1
 # 14 "/xilinx/Vitis_HLS/2022.2/include/hls_fpo.h"
 # 1 "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/math.h" 1 3
@@ -67674,7 +67673,7 @@ inline bool operator!=(
 }
 # 366 "/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
 # 361 "/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
-# 7 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.hpp" 2
+# 6 "/home/mrindeciso/Documents/pynqrypt/hw-impl/src/pynqrypt.hpp" 2
 
 namespace crypto {
 
@@ -67688,6 +67687,7 @@ using aes_atom = ap_uint<8>;
 using aes_word = ap_uint<32>;
 using aes_block = ap_uint<128>;
 using aes_nonce = ap_uint<96>;
+using off64_t = size_t;
 
 class Pynqrypt {
 
@@ -67712,6 +67712,9 @@ class Pynqrypt {
         void aes_rotate_word(aes_word &word);
         void aes_sub_word(aes_word &word);
         void aes_xor_round_constant(aes_word &word, int round);
+
+
+        void swap_block_endianness(aes_block &word);
 
     public:
         Pynqrypt(aes_block key, aes_nonce nonce);
@@ -67776,13 +67779,13 @@ int main(int argc, char *argv[])
     std::vector<crypto::aes_block> input_vec(16384 / 16);
 
     for (int i = 0; i < 16384 / 16; i++)
-        for (int j = 15; j >= 0; j--)
+        for (int j = 0; j < 16; j++)
             input_vec[i].range((j + 1) * 8 - 1, j * 8) = (uint8_t) input.get();
 
     std::vector<crypto::aes_block> golden_sample_vec(16384 / 16);
 
     for (int i = 0; i < 16384 / 16; i++)
-        for (int j = 15; j >= 0; j--)
+        for (int j = 0; j < 16; j++)
             golden_sample_vec[i].range((j + 1) * 8 - 1, j * 8) = (uint8_t) golden_sample.get();
 
     crypto::aes_block *output = new crypto::aes_block[input_vec.size()];

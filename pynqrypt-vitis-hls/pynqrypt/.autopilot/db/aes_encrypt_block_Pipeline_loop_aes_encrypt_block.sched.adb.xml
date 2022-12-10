@@ -172,10 +172,10 @@ newFuncRoot:5 %br_ln0 = br void %for.inc
 
 <Node id="14" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-for.inc:0 %i_5 = load i4 %i
+for.inc:0 %i_9 = load i4 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_5"/></StgValue>
+<StgValue><ssdm name="i_9"/></StgValue>
 </operation>
 
 <operation id="20" st_id="2" stage="1" lat="1">
@@ -202,7 +202,7 @@ for.inc:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294
 
 <Node id="16" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.inc:2 %icmp_ln50 = icmp_eq  i4 %i_5, i4 10
+for.inc:2 %icmp_ln50 = icmp_eq  i4 %i_9, i4 10
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln50"/></StgValue>
@@ -264,7 +264,7 @@ for.inc.split:0 %state_promoted_i_load = load i128 %state_promoted_i
 
 <Node id="21" bw="64" op_0_bw="4">
 <![CDATA[
-for.inc.split:1 %i_cast = zext i4 %i_5
+for.inc.split:1 %i_cast = zext i4 %i_9
 
 ]]></Node>
 <StgValue><ssdm name="i_cast"/></StgValue>
@@ -664,7 +664,7 @@ for.inc.split:197 %this_round_keys_load = load i4 %this_round_keys_addr
 
 <Node id="219" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.inc.split:199 %add_ln50 = add i4 %i_5, i4 1
+for.inc.split:199 %add_ln50 = add i4 %i_9, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln50"/></StgValue>
@@ -3275,7 +3275,7 @@ for.inc.split:189 %crypto_aes_mul3_V_load_15 = load i8 %crypto_aes_mul3_V_addr_1
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:2 %specloopname_ln50 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8
+for.inc.split:2 %specloopname_ln50 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln50"/></StgValue>
@@ -4070,10 +4070,10 @@ for.inc.split:194 %xor_ln1499_51 = xor i8 %xor_ln1499_50, i8 %crypto_aes_mul2_V_
 
 <Node id="215" bw="128" op_0_bw="128" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8">
 <![CDATA[
-for.inc.split:195 %p_Result_18_3 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %xor_ln1499_42, i8 %xor_ln1499_45, i8 %xor_ln1499_48, i8 %xor_ln1499_51, i8 %xor_ln1499_30, i8 %xor_ln1499_33, i8 %xor_ln1499_36, i8 %xor_ln1499_39, i8 %xor_ln1499_18, i8 %xor_ln1499_21, i8 %xor_ln1499_24, i8 %xor_ln1499_27, i8 %xor_ln1499_6, i8 %xor_ln1499_9, i8 %xor_ln1499_12, i8 %xor_ln1499_15
+for.inc.split:195 %p_Result_28_3 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %xor_ln1499_42, i8 %xor_ln1499_45, i8 %xor_ln1499_48, i8 %xor_ln1499_51, i8 %xor_ln1499_30, i8 %xor_ln1499_33, i8 %xor_ln1499_36, i8 %xor_ln1499_39, i8 %xor_ln1499_18, i8 %xor_ln1499_21, i8 %xor_ln1499_24, i8 %xor_ln1499_27, i8 %xor_ln1499_6, i8 %xor_ln1499_9, i8 %xor_ln1499_12, i8 %xor_ln1499_15
 
 ]]></Node>
-<StgValue><ssdm name="p_Result_18_3"/></StgValue>
+<StgValue><ssdm name="p_Result_28_3"/></StgValue>
 </operation>
 
 <operation id="273" st_id="11" stage="1" lat="1">
@@ -4085,7 +4085,7 @@ for.inc.split:195 %p_Result_18_3 = bitconcatenate i128 @_ssdm_op_BitConcatenate.
 
 <Node id="218" bw="128" op_0_bw="128" op_1_bw="128">
 <![CDATA[
-for.inc.split:198 %xor_ln859_1 = xor i128 %this_round_keys_load, i128 %p_Result_18_3
+for.inc.split:198 %xor_ln859_1 = xor i128 %this_round_keys_load, i128 %p_Result_28_3
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln859_1"/></StgValue>

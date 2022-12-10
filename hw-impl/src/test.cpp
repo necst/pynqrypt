@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
     std::vector<crypto::aes_block> input_vec(SIZE / 16);
 
     for (int i = 0; i < SIZE / 16; i++)
-        for (int j = 15; j >= 0; j--)
+        for (int j = 0; j < 16; j++)
             input_vec[i].range((j + 1) * 8 - 1, j * 8) = (uint8_t) input.get();
 
     std::vector<crypto::aes_block> golden_sample_vec(SIZE / 16);
 
     for (int i = 0; i < SIZE / 16; i++)
-        for (int j = 15; j >= 0; j--)
+        for (int j = 0; j < 16; j++)
             golden_sample_vec[i].range((j + 1) * 8 - 1, j * 8) = (uint8_t) golden_sample.get();
 
     crypto::aes_block *output = new crypto::aes_block[input_vec.size()];

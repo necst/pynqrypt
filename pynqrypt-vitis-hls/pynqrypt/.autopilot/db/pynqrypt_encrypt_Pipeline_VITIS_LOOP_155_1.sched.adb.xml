@@ -493,7 +493,7 @@ for.inc92.i.i.split:22 %store_ln155 = store i6 %add_ln155, i6 %i_1
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc92.i.i.split:1 %specloopname_ln155 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17
+for.inc92.i.i.split:1 %specloopname_ln155 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln155"/></StgValue>

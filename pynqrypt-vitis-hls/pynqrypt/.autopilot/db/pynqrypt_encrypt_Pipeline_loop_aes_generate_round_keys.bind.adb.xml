@@ -1101,7 +1101,7 @@ for.inc.i.i.split:49 %ret_V_6 = xor i32 %lhs_V_2, i32 %ret_V_5
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:1 %specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6
+for.inc.i.i.split:1 %specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln142"/></StgValue>
@@ -1559,7 +1559,7 @@ for.inc.i.i.split:61 %br_ln142 = br void %for.inc.i.i
 </dataflow>
 <dataflow id="268" from="_ssdm_op_SpecLoopName" to="specloopname_ln142" fromId="267" toId="77">
 </dataflow>
-<dataflow id="270" from="empty_6" to="specloopname_ln142" fromId="269" toId="77">
+<dataflow id="270" from="empty_9" to="specloopname_ln142" fromId="269" toId="77">
 </dataflow>
 <dataflow id="271" from="i_1" to="or_ln151" fromId="14" toId="78">
 </dataflow>

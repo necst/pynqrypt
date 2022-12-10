@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'pynqrypt_encrypt_Pipeline_loop_aes_generate_round_keys'
 ================================================================
-* Date:           Fri Dec  9 23:28:06 2022
+* Date:           Sat Dec 10 11:47:19 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt-vitis-hls
@@ -172,7 +172,7 @@ ST_7 : Operation 75 [1/1] (3.25ns)   --->   "%store_ln150 = store i32 %ret_V_5, 
 ST_7 : Operation 76 [1/1] (0.99ns)   --->   "%ret_V_6 = xor i32 %lhs_V_2, i32 %ret_V_5"   --->   Operation 76 'xor' 'ret_V_6' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 4.24>
-ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 77 'specloopname' 'specloopname_ln142' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [hw-impl/src/pynqrypt.cpp:142]   --->   Operation 77 'specloopname' 'specloopname_ln142' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%or_ln151 = or i6 %i_1, i6 2" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 78 'or' 'or_ln151' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln151_1 = zext i6 %or_ln151" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 79 'zext' 'zext_ln151_1' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%p_round_key_V_addr_6 = getelementptr i32 %p_round_key_V, i64 0, i64 %zext_ln151_1" [hw-impl/src/pynqrypt.cpp:151]   --->   Operation 80 'getelementptr' 'p_round_key_V_addr_6' <Predicate = true> <Delay = 0.00>
@@ -570,7 +570,7 @@ ret_ln0                  (ret              ) [ 000000000]
 <pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_6"/></StgValue>
+<StgValue><ssdm name="empty_9"/></StgValue>
 </bind>
 </comp>
 
