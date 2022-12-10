@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'assign_swap_endianness_1'" level="0">
-<item name = "Date">Sat Dec 10 13:08:42 2022
+<item name = "Date">Sat Dec 10 14:02:52 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt-vitis-hls</item>
@@ -101,16 +101,16 @@
 <column name="tmp_12_i_reg_433">8, 0, 8, 0</column>
 <column name="tmp_13_i_reg_438">8, 0, 8, 0</column>
 <column name="tmp_14_i_reg_443">8, 0, 8, 0</column>
-<column name="tmp_1_i5_reg_388">8, 0, 8, 0</column>
-<column name="tmp_2_i6_reg_393">8, 0, 8, 0</column>
-<column name="tmp_3_i7_reg_398">8, 0, 8, 0</column>
-<column name="tmp_4_i8_reg_403">8, 0, 8, 0</column>
-<column name="tmp_5_i9_reg_408">8, 0, 8, 0</column>
-<column name="tmp_6_i_reg_413">8, 0, 8, 0</column>
-<column name="tmp_7_i_reg_418">8, 0, 8, 0</column>
-<column name="tmp_8_i2_reg_373">8, 0, 8, 0</column>
-<column name="tmp_9_i3_reg_378">8, 0, 8, 0</column>
-<column name="tmp_i4_reg_383">8, 0, 8, 0</column>
+<column name="tmp_1_i2_reg_373">8, 0, 8, 0</column>
+<column name="tmp_2_i3_reg_378">8, 0, 8, 0</column>
+<column name="tmp_3_i4_reg_383">8, 0, 8, 0</column>
+<column name="tmp_4_i5_reg_388">8, 0, 8, 0</column>
+<column name="tmp_5_i6_reg_393">8, 0, 8, 0</column>
+<column name="tmp_6_i7_reg_398">8, 0, 8, 0</column>
+<column name="tmp_7_i8_reg_403">8, 0, 8, 0</column>
+<column name="tmp_8_i9_reg_408">8, 0, 8, 0</column>
+<column name="tmp_9_i_reg_413">8, 0, 8, 0</column>
+<column name="tmp_i_reg_418">8, 0, 8, 0</column>
 <column name="trunc_ln628_reg_368">8, 0, 8, 0</column>
 <column name="trunc_ln_reg_363">60, 0, 60, 0</column>
 </table>

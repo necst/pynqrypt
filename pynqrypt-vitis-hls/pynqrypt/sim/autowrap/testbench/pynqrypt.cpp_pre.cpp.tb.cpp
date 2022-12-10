@@ -62089,6 +62089,9 @@ void Pynqrypt::aes_shift_sub_bytes(aes_block &block)
 
 void Pynqrypt::aes_mix_columns(aes_block &block)
 {
+#pragma HLS ARRAY_RESHAPE variable=aes_mul2 type=complete
+#pragma HLS ARRAY_RESHAPE variable=aes_mul3 type=complete
+
     aes_atom s0, s1, a, b;
     aes_block temp;
 
@@ -62162,9 +62165,8 @@ void Pynqrypt::aes_rotate_word(aes_word &word)
 
 void Pynqrypt::aes_sub_word(aes_word &word)
 {
-    auto atoms = static_cast<aes_atom*>(static_cast<void*>(&word));
     for (int i = 0; i < 4; i++)
-        atoms[i] = aes_sbox[atoms[i]];
+        word.range(i * 8 + 7, i * 8) = aes_sbox[word.range(i * 8 + 7, i * 8)];
 }
 
 void Pynqrypt::aes_xor_round_constant(aes_word &word, int round)

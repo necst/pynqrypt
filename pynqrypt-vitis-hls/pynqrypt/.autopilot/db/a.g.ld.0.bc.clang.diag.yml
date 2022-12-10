@@ -11,57 +11,43 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 157, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 160, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_rotate_word(ap_uint<32>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 190, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 193, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 157, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 160, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 157, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 160, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_sub_word(ap_uint<32>&)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 195, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 198, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 157, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 160, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 157, Column: 0 }
+DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 160, Column: 0 }
 Function:        _ZN6crypto8Pynqrypt23aes_generate_round_keysEv
 Args:            
   - String:          'Inlining function '''
   - Callee:          'crypto::Pynqrypt::aes_xor_round_constant(ap_uint<32>&, int)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 202, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 204, Column: 0 }
   - String:          ''' into '''
   - Caller:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 157, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
-Function:        _ZN6crypto8PynqryptC2E7ap_uintILi128EES1_ILi96EE
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'crypto::Pynqrypt::aes_generate_round_keys()'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 157, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'crypto::Pynqrypt::Pynqrypt(ap_uint<128>, ap_uint<96>)'
-    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 9, Column: 0 }
+    DebugLoc:        { File: hw-impl/src/pynqrypt.cpp, Line: 160, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -130,6 +116,42 @@ Args:
   - String:          array_reshape
   - String:          ' to '''
   - UOName:          _ZN6cryptoL8aes_sboxE
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' reshaping'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-reshape
+Name:            ArrayXform
+DebugLoc:        { File: hw-impl/src/constants.hpp, Line: 46, Column: 0 }
+Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_reshape
+  - String:          ' to '''
+  - UOName:          _ZN6cryptoL8aes_mul3E
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' reshaping'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-reshape
+Name:            ArrayXform
+DebugLoc:        { File: hw-impl/src/constants.hpp, Line: 27, Column: 0 }
+Function:        _Z16pynqrypt_encrypt7ap_uintILi128EES_ILi96EEmPS0_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_reshape
+  - String:          ' to '''
+  - UOName:          _ZN6cryptoL8aes_mul2E
   - String:          ''':'
   - String:          ' '
   - Mode:            Complete

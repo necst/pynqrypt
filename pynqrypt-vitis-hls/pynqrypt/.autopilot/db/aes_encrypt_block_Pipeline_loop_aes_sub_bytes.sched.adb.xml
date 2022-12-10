@@ -247,10 +247,10 @@ for.inc.i13.split:2 %trunc_ln65 = trunc i5 %i_3
 
 <Node id="20" bw="7" op_0_bw="7" op_1_bw="4" op_2_bw="3">
 <![CDATA[
-for.inc.i13.split:3 %shl_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %trunc_ln65, i3 0
+for.inc.i13.split:3 %shl_ln4 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %trunc_ln65, i3 0
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln"/></StgValue>
+<StgValue><ssdm name="shl_ln4"/></StgValue>
 </operation>
 
 <operation id="20" st_id="2" stage="1" lat="1">
@@ -263,7 +263,7 @@ for.inc.i13.split:3 %shl_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i
 
 <Node id="21" bw="128" op_0_bw="7">
 <![CDATA[
-for.inc.i13.split:4 %zext_ln668 = zext i7 %shl_ln
+for.inc.i13.split:4 %zext_ln668 = zext i7 %shl_ln4
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln668"/></StgValue>
@@ -311,10 +311,10 @@ for.inc.i13.split:6 %trunc_ln668 = trunc i128 %lshr_ln668
 
 <Node id="24" bw="11" op_0_bw="11" op_1_bw="8" op_2_bw="3">
 <![CDATA[
-for.inc.i13.split:7 %shl_ln1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i8.i3, i8 %trunc_ln668, i3 0
+for.inc.i13.split:7 %shl_ln5 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i8.i3, i8 %trunc_ln668, i3 0
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln1"/></StgValue>
+<StgValue><ssdm name="shl_ln5"/></StgValue>
 </operation>
 
 <operation id="24" st_id="2" stage="1" lat="1">
@@ -327,7 +327,7 @@ for.inc.i13.split:7 %shl_ln1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i
 
 <Node id="25" bw="2048" op_0_bw="11">
 <![CDATA[
-for.inc.i13.split:8 %zext_ln186 = zext i11 %shl_ln1
+for.inc.i13.split:8 %zext_ln186 = zext i11 %shl_ln5
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln186"/></StgValue>
@@ -375,7 +375,7 @@ for.inc.i13.split:10 %trunc_ln186 = trunc i2048 %lshr_ln186
 
 <Node id="28" bw="128" op_0_bw="7">
 <![CDATA[
-for.inc.i13.split:11 %zext_ln368 = zext i7 %shl_ln
+for.inc.i13.split:11 %zext_ln368 = zext i7 %shl_ln4
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln368"/></StgValue>
@@ -553,7 +553,7 @@ _ZN6crypto8Pynqrypt13aes_sub_bytesER7ap_uintILi128EE.exit14.exitStub:2 %ret_ln0 
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i13.split:1 %specloopname_ln64 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
+for.inc.i13.split:1 %specloopname_ln64 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln64"/></StgValue>

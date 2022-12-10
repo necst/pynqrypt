@@ -157,37 +157,37 @@ module AESL_deadlock_detector (
     wire token_clear;
     wire [5:0] origin;
 
-    reg ap_done_reg_0;// for module AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0
+    reg ap_done_reg_0;// for module AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_0 <= 'b0;
         end
         else begin
-            ap_done_reg_0 <= AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_done & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_continue;
+            ap_done_reg_0 <= AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_done & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_continue;
         end
     end
 
-    reg ap_done_reg_1;// for module AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0
+    reg ap_done_reg_1;// for module AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_1 <= 'b0;
         end
         else begin
-            ap_done_reg_1 <= AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_done & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_continue;
+            ap_done_reg_1 <= AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_done & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_continue;
         end
     end
 
-    reg ap_done_reg_2;// for module AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0
+    reg ap_done_reg_2;// for module AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_2 <= 'b0;
         end
         else begin
-            ap_done_reg_2 <= AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ap_done & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ap_continue;
+            ap_done_reg_2 <= AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ap_done & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ap_continue;
         end
     end
 
-    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0
+    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0
     AESL_deadlock_detect_unit #(6, 0, 4, 4) AESL_deadlock_detect_unit_0 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -203,7 +203,7 @@ module AESL_deadlock_detector (
         .token_out_vec(token_out_vec_0),
         .dl_detect_out(dl_in_vec[0]));
 
-    assign proc_0_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ciphertext_c_blk_n);
+    assign proc_0_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ciphertext_c_blk_n);
     assign proc_0_data_PIPO_blk[0] = 1'b0;
     assign proc_0_start_FIFO_blk[0] = 1'b0;
     assign proc_0_TLF_FIFO_blk[0] = 1'b0;
@@ -214,21 +214,21 @@ module AESL_deadlock_detector (
     assign proc_0_data_PIPO_blk[1] = 1'b0;
     assign proc_0_start_FIFO_blk[1] = 1'b0;
     assign proc_0_TLF_FIFO_blk[1] = 1'b0;
-    assign proc_0_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready);
+    assign proc_0_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready);
     assign proc_0_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_0[1] = dl_detect_out ? proc_dep_vld_vec_0_reg[1] : (proc_0_data_FIFO_blk[1] | proc_0_data_PIPO_blk[1] | proc_0_start_FIFO_blk[1] | proc_0_TLF_FIFO_blk[1] | proc_0_input_sync_blk[1] | proc_0_output_sync_blk[1]);
     assign proc_0_data_FIFO_blk[2] = 1'b0;
     assign proc_0_data_PIPO_blk[2] = 1'b0;
     assign proc_0_start_FIFO_blk[2] = 1'b0;
     assign proc_0_TLF_FIFO_blk[2] = 1'b0;
-    assign proc_0_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready);
+    assign proc_0_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready);
     assign proc_0_output_sync_blk[2] = 1'b0;
     assign proc_dep_vld_vec_0[2] = dl_detect_out ? proc_dep_vld_vec_0_reg[2] : (proc_0_data_FIFO_blk[2] | proc_0_data_PIPO_blk[2] | proc_0_start_FIFO_blk[2] | proc_0_TLF_FIFO_blk[2] | proc_0_input_sync_blk[2] | proc_0_output_sync_blk[2]);
     assign proc_0_data_FIFO_blk[3] = 1'b0;
     assign proc_0_data_PIPO_blk[3] = 1'b0;
     assign proc_0_start_FIFO_blk[3] = 1'b0;
     assign proc_0_TLF_FIFO_blk[3] = 1'b0;
-    assign proc_0_input_sync_blk[3] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready);
+    assign proc_0_input_sync_blk[3] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.entry_proc_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready);
     assign proc_0_output_sync_blk[3] = 1'b0;
     assign proc_dep_vld_vec_0[3] = dl_detect_out ? proc_dep_vld_vec_0_reg[3] : (proc_0_data_FIFO_blk[3] | proc_0_data_PIPO_blk[3] | proc_0_start_FIFO_blk[3] | proc_0_TLF_FIFO_blk[3] | proc_0_input_sync_blk[3] | proc_0_output_sync_blk[3]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -264,7 +264,7 @@ module AESL_deadlock_detector (
     assign dep_chan_data_0_3 = out_chan_dep_data_0;
     assign token_0_3 = token_out_vec_0[3];
 
-    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0
+    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0
     AESL_deadlock_detect_unit #(6, 1, 5, 4) AESL_deadlock_detect_unit_1 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -280,7 +280,7 @@ module AESL_deadlock_detector (
         .token_out_vec(token_out_vec_1),
         .dl_detect_out(dl_in_vec[1]));
 
-    assign proc_1_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.i_c_blk_n);
+    assign proc_1_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.i_c_blk_n);
     assign proc_1_data_PIPO_blk[0] = 1'b0;
     assign proc_1_start_FIFO_blk[0] = 1'b0;
     assign proc_1_TLF_FIFO_blk[0] = 1'b0;
@@ -291,21 +291,21 @@ module AESL_deadlock_detector (
     assign proc_1_data_PIPO_blk[1] = 1'b0;
     assign proc_1_start_FIFO_blk[1] = 1'b0;
     assign proc_1_TLF_FIFO_blk[1] = 1'b0;
-    assign proc_1_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready);
+    assign proc_1_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready);
     assign proc_1_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_1[1] = dl_detect_out ? proc_dep_vld_vec_1_reg[1] : (proc_1_data_FIFO_blk[1] | proc_1_data_PIPO_blk[1] | proc_1_start_FIFO_blk[1] | proc_1_TLF_FIFO_blk[1] | proc_1_input_sync_blk[1] | proc_1_output_sync_blk[1]);
     assign proc_1_data_FIFO_blk[2] = 1'b0;
     assign proc_1_data_PIPO_blk[2] = 1'b0;
     assign proc_1_start_FIFO_blk[2] = 1'b0;
     assign proc_1_TLF_FIFO_blk[2] = 1'b0;
-    assign proc_1_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready);
+    assign proc_1_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready);
     assign proc_1_output_sync_blk[2] = 1'b0;
     assign proc_dep_vld_vec_1[2] = dl_detect_out ? proc_dep_vld_vec_1_reg[2] : (proc_1_data_FIFO_blk[2] | proc_1_data_PIPO_blk[2] | proc_1_start_FIFO_blk[2] | proc_1_TLF_FIFO_blk[2] | proc_1_input_sync_blk[2] | proc_1_output_sync_blk[2]);
     assign proc_1_data_FIFO_blk[3] = 1'b0;
     assign proc_1_data_PIPO_blk[3] = 1'b0;
     assign proc_1_start_FIFO_blk[3] = 1'b0;
     assign proc_1_TLF_FIFO_blk[3] = 1'b0;
-    assign proc_1_input_sync_blk[3] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready);
+    assign proc_1_input_sync_blk[3] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready);
     assign proc_1_output_sync_blk[3] = 1'b0;
     assign proc_dep_vld_vec_1[3] = dl_detect_out ? proc_dep_vld_vec_1_reg[3] : (proc_1_data_FIFO_blk[3] | proc_1_data_PIPO_blk[3] | proc_1_start_FIFO_blk[3] | proc_1_TLF_FIFO_blk[3] | proc_1_input_sync_blk[3] | proc_1_output_sync_blk[3]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -344,7 +344,7 @@ module AESL_deadlock_detector (
     assign dep_chan_data_1_3 = out_chan_dep_data_1;
     assign token_1_3 = token_out_vec_1[3];
 
-    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0
+    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0
     AESL_deadlock_detect_unit #(6, 2, 3, 3) AESL_deadlock_detect_unit_2 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -364,21 +364,21 @@ module AESL_deadlock_detector (
     assign proc_2_data_PIPO_blk[0] = 1'b0;
     assign proc_2_start_FIFO_blk[0] = 1'b0;
     assign proc_2_TLF_FIFO_blk[0] = 1'b0;
-    assign proc_2_input_sync_blk[0] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready);
+    assign proc_2_input_sync_blk[0] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready);
     assign proc_2_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_2[0] = dl_detect_out ? proc_dep_vld_vec_2_reg[0] : (proc_2_data_FIFO_blk[0] | proc_2_data_PIPO_blk[0] | proc_2_start_FIFO_blk[0] | proc_2_TLF_FIFO_blk[0] | proc_2_input_sync_blk[0] | proc_2_output_sync_blk[0]);
     assign proc_2_data_FIFO_blk[1] = 1'b0;
     assign proc_2_data_PIPO_blk[1] = 1'b0;
     assign proc_2_start_FIFO_blk[1] = 1'b0;
     assign proc_2_TLF_FIFO_blk[1] = 1'b0;
-    assign proc_2_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready);
+    assign proc_2_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready);
     assign proc_2_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_2[1] = dl_detect_out ? proc_dep_vld_vec_2_reg[1] : (proc_2_data_FIFO_blk[1] | proc_2_data_PIPO_blk[1] | proc_2_start_FIFO_blk[1] | proc_2_TLF_FIFO_blk[1] | proc_2_input_sync_blk[1] | proc_2_output_sync_blk[1]);
     assign proc_2_data_FIFO_blk[2] = 1'b0;
     assign proc_2_data_PIPO_blk[2] = 1'b0;
     assign proc_2_start_FIFO_blk[2] = 1'b0;
     assign proc_2_TLF_FIFO_blk[2] = 1'b0;
-    assign proc_2_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready);
+    assign proc_2_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_compute_nonce_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready);
     assign proc_2_output_sync_blk[2] = 1'b0;
     assign proc_dep_vld_vec_2[2] = dl_detect_out ? proc_dep_vld_vec_2_reg[2] : (proc_2_data_FIFO_blk[2] | proc_2_data_PIPO_blk[2] | proc_2_start_FIFO_blk[2] | proc_2_TLF_FIFO_blk[2] | proc_2_input_sync_blk[2] | proc_2_output_sync_blk[2]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -408,7 +408,7 @@ module AESL_deadlock_detector (
     assign dep_chan_data_2_3 = out_chan_dep_data_2;
     assign token_2_3 = token_out_vec_2[2];
 
-    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0
+    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0
     AESL_deadlock_detect_unit #(6, 3, 4, 3) AESL_deadlock_detect_unit_3 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -427,22 +427,22 @@ module AESL_deadlock_detector (
     assign proc_3_data_FIFO_blk[0] = 1'b0;
     assign proc_3_data_PIPO_blk[0] = 1'b0;
     assign proc_3_start_FIFO_blk[0] = 1'b0;
-    assign proc_3_TLF_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.tmp_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.tmp_U.if_write);
-    assign proc_3_input_sync_blk[0] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready);
+    assign proc_3_TLF_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.tmp_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.tmp_U.if_write);
+    assign proc_3_input_sync_blk[0] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_ctr_compute_nonce_U0_ap_ready);
     assign proc_3_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_3[0] = dl_detect_out ? proc_dep_vld_vec_3_reg[0] : (proc_3_data_FIFO_blk[0] | proc_3_data_PIPO_blk[0] | proc_3_start_FIFO_blk[0] | proc_3_TLF_FIFO_blk[0] | proc_3_input_sync_blk[0] | proc_3_output_sync_blk[0]);
     assign proc_3_data_FIFO_blk[1] = 1'b0;
     assign proc_3_data_PIPO_blk[1] = 1'b0;
     assign proc_3_start_FIFO_blk[1] = 1'b0;
     assign proc_3_TLF_FIFO_blk[1] = 1'b0;
-    assign proc_3_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready);
+    assign proc_3_input_sync_blk[1] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_entry_proc_U0_ap_ready);
     assign proc_3_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_3[1] = dl_detect_out ? proc_dep_vld_vec_3_reg[1] : (proc_3_data_FIFO_blk[1] | proc_3_data_PIPO_blk[1] | proc_3_start_FIFO_blk[1] | proc_3_TLF_FIFO_blk[1] | proc_3_input_sync_blk[1] | proc_3_output_sync_blk[1]);
     assign proc_3_data_FIFO_blk[2] = 1'b0;
     assign proc_3_data_PIPO_blk[2] = 1'b0;
     assign proc_3_start_FIFO_blk[2] = 1'b0;
     assign proc_3_TLF_FIFO_blk[2] = 1'b0;
-    assign proc_3_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready);
+    assign proc_3_input_sync_blk[2] = 1'b0 | (AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_aes_encrypt_block_U0_ap_ready & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.aes_encrypt_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ap_sync_assign_swap_endianness_U0_ap_ready);
     assign proc_3_output_sync_blk[2] = 1'b0;
     assign proc_dep_vld_vec_3[2] = dl_detect_out ? proc_dep_vld_vec_3_reg[2] : (proc_3_data_FIFO_blk[2] | proc_3_data_PIPO_blk[2] | proc_3_start_FIFO_blk[2] | proc_3_TLF_FIFO_blk[2] | proc_3_input_sync_blk[2] | proc_3_output_sync_blk[2]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -475,7 +475,7 @@ module AESL_deadlock_detector (
     assign dep_chan_data_3_1 = out_chan_dep_data_3;
     assign token_3_1 = token_out_vec_3[2];
 
-    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0
+    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0
     AESL_deadlock_detect_unit #(6, 4, 1, 2) AESL_deadlock_detect_unit_4 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -494,14 +494,14 @@ module AESL_deadlock_detector (
     assign proc_4_data_FIFO_blk[0] = 1'b0;
     assign proc_4_data_PIPO_blk[0] = 1'b0;
     assign proc_4_start_FIFO_blk[0] = 1'b0;
-    assign proc_4_TLF_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.block_V1_out_tmp_channel_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.block_V1_out_tmp_channel_U.if_write);
+    assign proc_4_TLF_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.block_V1_out_tmp_channel_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.block_V1_out_tmp_channel_U.if_write);
     assign proc_4_input_sync_blk[0] = 1'b0;
     assign proc_4_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_4[0] = dl_detect_out ? proc_dep_vld_vec_4_reg[0] : (proc_4_data_FIFO_blk[0] | proc_4_data_PIPO_blk[0] | proc_4_start_FIFO_blk[0] | proc_4_TLF_FIFO_blk[0] | proc_4_input_sync_blk[0] | proc_4_output_sync_blk[0]);
     assign proc_4_data_FIFO_blk[1] = 1'b0;
     assign proc_4_data_PIPO_blk[1] = 1'b0;
     assign proc_4_start_FIFO_blk[1] = 1'b0;
-    assign proc_4_TLF_FIFO_blk[1] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.block_nonce_V_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.block_nonce_V_U.if_write);
+    assign proc_4_TLF_FIFO_blk[1] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.block_nonce_V_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.ctr_xor_block_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.block_nonce_V_U.if_write);
     assign proc_4_input_sync_blk[1] = 1'b0;
     assign proc_4_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_4[1] = dl_detect_out ? proc_dep_vld_vec_4_reg[1] : (proc_4_data_FIFO_blk[1] | proc_4_data_PIPO_blk[1] | proc_4_start_FIFO_blk[1] | proc_4_TLF_FIFO_blk[1] | proc_4_input_sync_blk[1] | proc_4_output_sync_blk[1]);
@@ -523,7 +523,7 @@ module AESL_deadlock_detector (
     assign dep_chan_data_4_3 = out_chan_dep_data_4;
     assign token_4_3 = token_out_vec_4[1];
 
-    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0
+    // Process: AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0
     AESL_deadlock_detect_unit #(6, 5, 2, 3) AESL_deadlock_detect_unit_5 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -542,18 +542,18 @@ module AESL_deadlock_detector (
     assign proc_5_data_FIFO_blk[0] = 1'b0;
     assign proc_5_data_PIPO_blk[0] = 1'b0;
     assign proc_5_start_FIFO_blk[0] = 1'b0;
-    assign proc_5_TLF_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.block_V_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.block_V_U.if_write);
+    assign proc_5_TLF_FIFO_blk[0] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.block_V_U.if_empty_n & AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ap_idle & ~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.block_V_U.if_write);
     assign proc_5_input_sync_blk[0] = 1'b0;
     assign proc_5_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_5[0] = dl_detect_out ? proc_dep_vld_vec_5_reg[0] : (proc_5_data_FIFO_blk[0] | proc_5_data_PIPO_blk[0] | proc_5_start_FIFO_blk[0] | proc_5_TLF_FIFO_blk[0] | proc_5_input_sync_blk[0] | proc_5_output_sync_blk[0]);
-    assign proc_5_data_FIFO_blk[1] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.i_blk_n);
+    assign proc_5_data_FIFO_blk[1] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.i_blk_n);
     assign proc_5_data_PIPO_blk[1] = 1'b0;
     assign proc_5_start_FIFO_blk[1] = 1'b0;
     assign proc_5_TLF_FIFO_blk[1] = 1'b0;
     assign proc_5_input_sync_blk[1] = 1'b0;
     assign proc_5_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_5[1] = dl_detect_out ? proc_dep_vld_vec_5_reg[1] : (proc_5_data_FIFO_blk[1] | proc_5_data_PIPO_blk[1] | proc_5_start_FIFO_blk[1] | proc_5_TLF_FIFO_blk[1] | proc_5_input_sync_blk[1] | proc_5_output_sync_blk[1]);
-    assign proc_5_data_FIFO_blk[2] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_192.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ciphertext_blk_n);
+    assign proc_5_data_FIFO_blk[2] = 1'b0 | (~AESL_inst_pynqrypt_encrypt.grp_ctr_encrypt_fu_118.dataflow_in_loop_loop_ctr_encrypt_U0.assign_swap_endianness_1_U0.ciphertext_blk_n);
     assign proc_5_data_PIPO_blk[2] = 1'b0;
     assign proc_5_start_FIFO_blk[2] = 1'b0;
     assign proc_5_TLF_FIFO_blk[2] = 1'b0;

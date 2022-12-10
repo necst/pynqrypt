@@ -51,13 +51,13 @@ set NewPortList {[
  	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":128, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "5"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "3"],
 		"CDFG" : "aes_encrypt_block",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "116", "EstimateLatencyMax" : "116",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "45", "EstimateLatencyMax" : "45",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -68,21 +68,15 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "this_round_keys", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121", "Port" : "this_round_keys", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
-			{"Name" : "crypto_aes_mul2_V", "Type" : "Memory", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121", "Port" : "crypto_aes_mul2_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "crypto_aes_mul3_V", "Type" : "Memory", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121", "Port" : "crypto_aes_mul3_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121", "Parent" : "0", "Child" : ["2", "3", "4"],
+					{"ID" : "1", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_117", "Port" : "this_round_keys", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_117", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "aes_encrypt_block_Pipeline_loop_aes_encrypt_block",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "92", "EstimateLatencyMax" : "92",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "21", "EstimateLatencyMax" : "21",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -93,16 +87,12 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "xor_ln859", "Type" : "None", "Direction" : "I"},
 			{"Name" : "this_round_keys", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "state_promoted_i_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "crypto_aes_mul2_V", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "crypto_aes_mul3_V", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "state_promoted_i_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "loop_aes_encrypt_block", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "10", "FirstState" : "ap_ST_fsm_pp0_stage1", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage1_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121.crypto_aes_mul2_V_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121.crypto_aes_mul3_V_U", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_121.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_133", "Parent" : "0", "Child" : ["6"],
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_117.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_125", "Parent" : "0", "Child" : ["4"],
 		"CDFG" : "aes_encrypt_block_Pipeline_loop_aes_sub_bytes",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -122,21 +112,17 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "loop_aes_sub_bytes", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_133.flow_control_loop_pipe_sequential_init_U", "Parent" : "5"}]}
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_125.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	aes_encrypt_block {
 		this_round_keys {Type I LastRead 5 FirstWrite -1}
-		p_read {Type I LastRead 2 FirstWrite -1}
-		crypto_aes_mul2_V {Type I LastRead -1 FirstWrite -1}
-		crypto_aes_mul3_V {Type I LastRead -1 FirstWrite -1}}
+		p_read {Type I LastRead 2 FirstWrite -1}}
 	aes_encrypt_block_Pipeline_loop_aes_encrypt_block {
 		xor_ln859 {Type I LastRead 0 FirstWrite -1}
-		this_round_keys {Type I LastRead 1 FirstWrite -1}
-		state_promoted_i_out {Type O LastRead -1 FirstWrite 1}
-		crypto_aes_mul2_V {Type I LastRead -1 FirstWrite -1}
-		crypto_aes_mul3_V {Type I LastRead -1 FirstWrite -1}}
+		this_round_keys {Type I LastRead 0 FirstWrite -1}
+		state_promoted_i_out {Type O LastRead -1 FirstWrite 1}}
 	aes_encrypt_block_Pipeline_loop_aes_sub_bytes {
 		state_promoted_i_reload {Type I LastRead 0 FirstWrite -1}
 		t_out {Type O LastRead -1 FirstWrite 1}}}
@@ -144,8 +130,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "116", "Max" : "116"}
-	, {"Name" : "Interval", "Min" : "116", "Max" : "116"}
+	{"Name" : "Latency", "Min" : "45", "Max" : "45"}
+	, {"Name" : "Interval", "Min" : "45", "Max" : "45"}
 ]}
 
 set PipelineEnableSignalInfo {[

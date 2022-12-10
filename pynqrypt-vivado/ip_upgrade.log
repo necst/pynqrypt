@@ -1,6 +1,27 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Sat Dec 10 14:05:54 2022
+| Host         : SSD-UBUNTU running 64-bit Ubuntu 22.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_design_pynqrypt_encrypt_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_design_pynqrypt_encrypt_0_0 (xilinx.com:hls:pynqrypt_encrypt:1.0) from (Rev. 2112807070) to (Rev. 2112807124)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 | Date         : Sat Dec 10 13:11:36 2022
 | Host         : SSD-UBUNTU running 64-bit Ubuntu 22.04.1 LTS
 | Command      : upgrade_ip
