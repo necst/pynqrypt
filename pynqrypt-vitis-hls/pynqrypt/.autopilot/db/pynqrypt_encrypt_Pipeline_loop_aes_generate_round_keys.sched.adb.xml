@@ -1101,7 +1101,7 @@ for.inc.i.i.split:49 %ret_V_6 = xor i32 %lhs_V_2, i32 %ret_V_5
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:1 %specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6
+for.inc.i.i.split:1 %specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln142"/></StgValue>

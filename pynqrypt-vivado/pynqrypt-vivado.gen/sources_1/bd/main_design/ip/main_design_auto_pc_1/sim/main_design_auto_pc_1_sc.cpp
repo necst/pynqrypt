@@ -75,7 +75,7 @@ main_design_auto_pc_1_sc::main_design_auto_pc_1_sc(const sc_core::sc_module_name
     model_param_props.addLong("C_AXI_WUSER_WIDTH", "1");
     model_param_props.addLong("C_AXI_RUSER_WIDTH", "1");
     model_param_props.addLong("C_AXI_BUSER_WIDTH", "1");
-    model_param_props.addLong("C_TRANSLATION_MODE", "2");
+    model_param_props.addLong("C_TRANSLATION_MODE", "0");
     model_param_props.addString("C_FAMILY", "zynq");
     model_param_props.addString("COMPONENT_NAME", "main_design_auto_pc_1");
 

@@ -70,8 +70,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "crypto_aes_sbox_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137", "Port" : "crypto_aes_sbox_V", "Inst_start_state" : "5", "Inst_end_state" : "6"},
-					{"ID" : "1", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123", "Port" : "crypto_aes_sbox_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "1", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123", "Port" : "crypto_aes_sbox_V", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "6", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_sub_bytes_fu_137", "Port" : "crypto_aes_sbox_V", "Inst_start_state" : "5", "Inst_end_state" : "6"}]},
 			{"Name" : "crypto_aes_mul2_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "grp_aes_encrypt_block_Pipeline_loop_aes_encrypt_block_fu_123", "Port" : "crypto_aes_mul2_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
