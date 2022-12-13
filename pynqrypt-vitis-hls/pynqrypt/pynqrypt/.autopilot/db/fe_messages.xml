@@ -1,0 +1,102 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ctr_encrypt" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="aes_sub_bytes" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=aes_sbox type=complete dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt.cpp:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="aes_mix_columns" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=aes_mul2 type=complete" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt.cpp:117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="aes_mix_columns" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=aes_mul3 type=complete" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt.cpp:157:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="aes_generate_round_keys" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_round_key type=complete" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/csynth.tcl:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pynqrypt_encrypt" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pynqrypt_encrypt" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=plaintext offset=slave bundle=gmem depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=ciphertext offset=slave bundle=gmem depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=key bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=nonce bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=plaintext_length bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=plaintext bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=ciphertext bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pynqrypt_encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="../hw-impl/src/pynqrypt.cpp:22:9" msg_body="Duplicating function 'crypto::Pynqrypt::assign_swap_endianness(ap_uint&lt;128&gt;, ap_uint&lt;128&gt;&amp;)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
+        <args Name="crypto::Pynqrypt::assign_swap_endianness(ap_uint&lt;128&gt;, ap_uint&lt;128&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt.cpp:151:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_rotate_word(ap_uint&lt;32&gt;&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+        <args Callee="crypto::Pynqrypt::aes_rotate_word(ap_uint&lt;32&gt;&amp;)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt.cpp:151:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_word(ap_uint&lt;32&gt;&amp;)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+        <args Callee="crypto::Pynqrypt::aes_sub_word(ap_uint&lt;32&gt;&amp;)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt.cpp:151:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_xor_round_constant(ap_uint&lt;32&gt;&amp;, int)' into 'crypto::Pynqrypt::aes_generate_round_keys()'">
+        <args Callee="crypto::Pynqrypt::aes_xor_round_constant(ap_uint&lt;32&gt;&amp;, int)" Caller="crypto::Pynqrypt::aes_generate_round_keys()"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt.cpp:44:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_sub_bytes(ap_uint&lt;128&gt;&amp;)' into 'crypto::Pynqrypt::aes_encrypt_block(ap_uint&lt;128&gt;&amp;)'">
+        <args Callee="crypto::Pynqrypt::aes_sub_bytes(ap_uint&lt;128&gt;&amp;)" Caller="crypto::Pynqrypt::aes_encrypt_block(ap_uint&lt;128&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt.cpp:44:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_shift_rows(ap_uint&lt;128&gt;&amp;)' into 'crypto::Pynqrypt::aes_encrypt_block(ap_uint&lt;128&gt;&amp;)'">
+        <args Callee="crypto::Pynqrypt::aes_shift_rows(ap_uint&lt;128&gt;&amp;)" Caller="crypto::Pynqrypt::aes_encrypt_block(ap_uint&lt;128&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt.cpp:44:0" msg_body="Inlining function 'crypto::Pynqrypt::aes_mix_columns(ap_uint&lt;128&gt;&amp;)' into 'crypto::Pynqrypt::aes_encrypt_block(ap_uint&lt;128&gt;&amp;)'">
+        <args Callee="crypto::Pynqrypt::aes_mix_columns(ap_uint&lt;128&gt;&amp;)" Caller="crypto::Pynqrypt::aes_encrypt_block(ap_uint&lt;128&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt_hls.cpp:9:0" msg_body="Inlining function 'crypto::Pynqrypt::Pynqrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;)' into 'pynqrypt_encrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;, unsigned long, ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*)'">
+        <args Callee="crypto::Pynqrypt::Pynqrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;)" Caller="pynqrypt_encrypt(ap_uint&lt;128&gt;, ap_uint&lt;96&gt;, unsigned long, ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../hw-impl/src/constants.hpp:46:0" msg_body="Applying array_reshape to '_ZN6cryptoL8aes_mul3E': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZN6cryptoL8aes_mul3E"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../hw-impl/src/constants.hpp:27:0" msg_body="Applying array_reshape to '_ZN6cryptoL8aes_mul2E': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZN6cryptoL8aes_mul2E"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../hw-impl/src/constants.hpp:7:0" msg_body="Applying array_reshape to '_ZN6cryptoL8aes_sboxE': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZN6cryptoL8aes_sboxE"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../hw-impl/src/pynqrypt.cpp:155:14" msg_body="Applying array_reshape to '_round_key': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_round_key"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

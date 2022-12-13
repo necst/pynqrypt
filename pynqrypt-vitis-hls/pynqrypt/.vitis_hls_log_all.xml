@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:24.622+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1020] Increasing the depth of FIFO block_V1_out_tmp_channel (from assign_swap_endianness_U0 to ctr_xor_block_U0) to 3 to improve performance and/or avoid deadlocks." projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:20.637+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'aes_encrypt_block_Pipeline_loop_aes_encrypt_block' (loop 'loop_aes_encrypt_block'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'xor' operation ('xor_ln859_1') and 'lshr' operation ('lshr_ln84', ../hw-impl/src/pynqrypt.cpp:84).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:19.596+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys' (loop 'loop_aes_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'or' operation ('_round_key.V', ../hw-impl/src/pynqrypt.cpp:174) and 'lshr' operation ('lshr_ln165', ../hw-impl/src/pynqrypt.cpp:165).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.812+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys' (loop 'loop_aes_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'or' operation ('_round_key.V', ../hw-impl/src/pynqrypt.cpp:174) and 'lshr' operation ('lshr_ln165', ../hw-impl/src/pynqrypt.cpp:165).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.801+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys' (loop 'loop_aes_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'or' operation ('_round_key.V', ../hw-impl/src/pynqrypt.cpp:174) and 'lshr' operation ('lshr_ln165', ../hw-impl/src/pynqrypt.cpp:165).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.789+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys' (loop 'loop_aes_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'or' operation ('_round_key.V', ../hw-impl/src/pynqrypt.cpp:174) and 'lshr' operation ('lshr_ln165', ../hw-impl/src/pynqrypt.cpp:165).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.787+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys' (loop 'loop_aes_generate_round_keys'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'or' operation ('_round_key.V', ../hw-impl/src/pynqrypt.cpp:174) and 'lshr' operation ('lshr_ln165', ../hw-impl/src/pynqrypt.cpp:165).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.785+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'assign_swap_endianness.1' to 'assign_swap_endianness_1'." projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.727+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1449] Process dataflow_in_loop_loop_ctr_encrypt has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process." projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.681+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1449] Process aes_encrypt_block has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process." projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.678+0100" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] ../hw-impl/src/pynqrypt.cpp:165: variable-indexed range selection may cause suboptimal QoR." projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.328+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-366] Duplicating function 'crypto::Pynqrypt::assign_swap_endianness(ap_uint&lt;128>, ap_uint&lt;128>&amp;)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (../hw-impl/src/pynqrypt.cpp:22:9)" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:18.205+0100" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="pynqrypt" solutionName="pynqrypt" date="2022-12-13T19:17:53.213+0100" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
