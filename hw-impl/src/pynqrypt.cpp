@@ -51,9 +51,29 @@ void Pynqrypt::aes_encrypt_block(aes_block &state)
         state ^= round_keys[i];
     }
 
-    aes_sub_bytes(state);
-    aes_shift_rows(state);
-    state ^= round_keys[NUM_ROUNDS];
+    aes_block block;
+
+    block.range(127, 120) = aes_sbox[state.range(127, 120)];
+    block.range(119, 112) = aes_sbox[state.range(87, 80)];
+    block.range(111, 104) = aes_sbox[state.range(47, 40)];
+    block.range(103, 96) = aes_sbox[state.range(7, 0)];
+
+    block.range(95, 88) = aes_sbox[state.range(95, 88)];
+    block.range(87, 80) = aes_sbox[state.range(55, 48)];
+    block.range(79, 72) = aes_sbox[state.range(15, 8)];
+    block.range(71, 64) = aes_sbox[state.range(103, 96)];
+
+    block.range(63, 56) = aes_sbox[state.range(63, 56)];
+    block.range(55, 48) = aes_sbox[state.range(23, 16)];
+    block.range(47, 40) = aes_sbox[state.range(111, 104)];
+    block.range(39, 32) = aes_sbox[state.range(71, 64)];
+
+    block.range(31, 24) = aes_sbox[state.range(31, 24)];
+    block.range(23, 16) = aes_sbox[state.range(119, 112)];
+    block.range(15, 8) = aes_sbox[state.range(79, 72)];
+    block.range(7, 0) = aes_sbox[state.range(39, 32)];
+
+    state = block ^ round_keys[NUM_ROUNDS];
 }
 
 void Pynqrypt::aes_sub_bytes(aes_block &state)
