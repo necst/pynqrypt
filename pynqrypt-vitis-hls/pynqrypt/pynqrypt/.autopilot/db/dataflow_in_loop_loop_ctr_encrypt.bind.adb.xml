@@ -271,10 +271,10 @@ entry:17 %block_V = call i128 @ctr_xor_block, i128 %block_V1_out_tmp_channel, i1
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="128" op_3_bw="60" op_4_bw="64" op_5_bw="0" op_6_bw="0" op_7_bw="0">
 <![CDATA[
-entry:18 %call_ln26 = call void @assign_swap_endianness.1, i128 %block_V, i128 %gmem, i60 %i_c, i64 %ciphertext_c
+entry:18 %call_ln27 = call void @assign_swap_endianness.1, i128 %block_V, i128 %gmem, i60 %i_c, i64 %ciphertext_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln26"/></StgValue>
+<StgValue><ssdm name="call_ln27"/></StgValue>
 </operation>
 </state>
 
@@ -379,10 +379,10 @@ entry:12 %specdataflowpipeline_ln19 = specdataflowpipeline void @_ssdm_op_SpecDa
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="128" op_3_bw="60" op_4_bw="64" op_5_bw="0" op_6_bw="0" op_7_bw="0">
 <![CDATA[
-entry:18 %call_ln26 = call void @assign_swap_endianness.1, i128 %block_V, i128 %gmem, i60 %i_c, i64 %ciphertext_c
+entry:18 %call_ln27 = call void @assign_swap_endianness.1, i128 %block_V, i128 %gmem, i60 %i_c, i64 %ciphertext_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln26"/></StgValue>
+<StgValue><ssdm name="call_ln27"/></StgValue>
 </operation>
 
 <operation id="29" st_id="6" stage="1" lat="1">
@@ -394,10 +394,10 @@ entry:18 %call_ln26 = call void @assign_swap_endianness.1, i128 %block_V, i128 %
 
 <Node id="26" bw="0">
 <![CDATA[
-entry:19 %ret_ln26 = ret
+entry:19 %ret_ln27 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln26"/></StgValue>
+<StgValue><ssdm name="ret_ln27"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -499,15 +499,15 @@ entry:19 %ret_ln26 = ret
 </dataflow>
 <dataflow id="86" from="block_nonce_V" to="block_V" fromId="19" toId="20">
 </dataflow>
-<dataflow id="88" from="assign_swap_endianness.1" to="call_ln26" fromId="87" toId="21">
+<dataflow id="88" from="assign_swap_endianness.1" to="call_ln27" fromId="87" toId="21">
 </dataflow>
-<dataflow id="89" from="block_V" to="call_ln26" fromId="20" toId="21">
+<dataflow id="89" from="block_V" to="call_ln27" fromId="20" toId="21">
 </dataflow>
-<dataflow id="90" from="gmem" to="call_ln26" fromId="36" toId="21">
+<dataflow id="90" from="gmem" to="call_ln27" fromId="36" toId="21">
 </dataflow>
-<dataflow id="91" from="i_c" to="call_ln26" fromId="12" toId="21">
+<dataflow id="91" from="i_c" to="call_ln27" fromId="12" toId="21">
 </dataflow>
-<dataflow id="92" from="ciphertext_c" to="call_ln26" fromId="11" toId="21">
+<dataflow id="92" from="ciphertext_c" to="call_ln27" fromId="11" toId="21">
 </dataflow>
 <dataflow id="94" from="_ssdm_op_SpecChannel" to="empty_35" fromId="93" toId="22">
 </dataflow>
@@ -667,15 +667,15 @@ entry:19 %ret_ln26 = ret
 </dataflow>
 <dataflow id="190" from="empty_0" to="specdataflowpipeline_ln19" fromId="168" toId="27">
 </dataflow>
-<dataflow id="191" from="assign_swap_endianness.1" to="call_ln26" fromId="87" toId="28">
+<dataflow id="191" from="assign_swap_endianness.1" to="call_ln27" fromId="87" toId="28">
 </dataflow>
-<dataflow id="192" from="block_V" to="call_ln26" fromId="20" toId="28">
+<dataflow id="192" from="block_V" to="call_ln27" fromId="20" toId="28">
 </dataflow>
-<dataflow id="193" from="gmem" to="call_ln26" fromId="36" toId="28">
+<dataflow id="193" from="gmem" to="call_ln27" fromId="36" toId="28">
 </dataflow>
-<dataflow id="194" from="i_c" to="call_ln26" fromId="12" toId="28">
+<dataflow id="194" from="i_c" to="call_ln27" fromId="12" toId="28">
 </dataflow>
-<dataflow id="195" from="ciphertext_c" to="call_ln26" fromId="11" toId="28">
+<dataflow id="195" from="ciphertext_c" to="call_ln27" fromId="11" toId="28">
 </dataflow>
 </dataflows>
 

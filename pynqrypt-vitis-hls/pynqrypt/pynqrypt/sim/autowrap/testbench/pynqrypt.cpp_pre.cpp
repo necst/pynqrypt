@@ -61980,9 +61980,10 @@ void Pynqrypt::ctr_encrypt(size_t block_count, aes_block *plaintext, aes_block *
 {
     loop_ctr_encrypt: for (size_t i = 0; i < block_count; i++) {
 #pragma HLS DATAFLOW
+#pragma HLS LOOP_TRIPCOUNT min=1024 max=1024 avg=1024
+
         aes_block block_nonce, block;
-        aes_block plaintext_block = plaintext[i];
-        assign_swap_endianness(plaintext_block, block);
+        assign_swap_endianness(plaintext[i], block);
         ctr_compute_nonce(block_nonce, i);
         aes_encrypt_block(block_nonce);
         ctr_xor_block(block, block_nonce);
@@ -62163,23 +62164,8 @@ void Pynqrypt::aes_xor_round_constant(aes_word &word, int round)
 
 void Pynqrypt::assign_swap_endianness(aes_block from, aes_block &to)
 {
-
-
-
-    to.range(127, 120) = from.range(7, 0);
-    to.range(119, 112) = from.range(15, 8);
-    to.range(111, 104) = from.range(23, 16);
-    to.range(103, 96) = from.range(31, 24);
-    to.range(95, 88) = from.range(39, 32);
-    to.range(87, 80) = from.range(47, 40);
-    to.range(79, 72) = from.range(55, 48);
-    to.range(71, 64) = from.range(63, 56);
-    to.range(63, 56) = from.range(71, 64);
-    to.range(55, 48) = from.range(79, 72);
-    to.range(47, 40) = from.range(87, 80);
-    to.range(39, 32) = from.range(95, 88);
-    to.range(31, 24) = from.range(103, 96);
-    to.range(23, 16) = from.range(111, 104);
-    to.range(15, 8) = from.range(119, 112);
-    to.range(7, 0) = from.range(127, 120);
+ loop_assign_swap_endianness: for (int i = 0; i < BLOCK_SIZE; i++) {
+#pragma HLS UNROLL
+  to.range(i * 8 + 7, i * 8) = from.range(127 - i * 8, 120 - i * 8);
+ }
 }

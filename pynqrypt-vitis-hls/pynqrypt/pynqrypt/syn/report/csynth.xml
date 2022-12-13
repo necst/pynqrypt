@@ -19,14 +19,14 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>undef</Best-caseLatency>
-            <Average-caseLatency>undef</Average-caseLatency>
-            <Worst-caseLatency>undef</Worst-caseLatency>
-            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-            <Interval-min>undef</Interval-min>
-            <Interval-max>undef</Interval-max>
+            <Best-caseLatency>28775</Best-caseLatency>
+            <Average-caseLatency>28775</Average-caseLatency>
+            <Worst-caseLatency>28775</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.288 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.288 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.288 ms</Worst-caseRealTimeLatency>
+            <Interval-min>28776</Interval-min>
+            <Interval-max>28776</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
@@ -822,14 +822,14 @@
                             <ModuleName>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>46</ID>
-                            <BindInstances>add_ln165_fu_145_p2 add_ln169_fu_161_p2 add_ln171_fu_184_p2 add_ln172_fu_377_p2 add_ln173_fu_440_p2 add_ln173_1_fu_462_p2 add_ln164_fu_530_p2 crypto_aes_rcon_U</BindInstances>
+                            <BindInstances>add_ln166_fu_145_p2 add_ln170_fu_161_p2 add_ln172_fu_184_p2 add_ln173_fu_377_p2 add_ln174_fu_440_p2 add_ln174_1_fu_462_p2 add_ln165_fu_530_p2 crypto_aes_rcon_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1_fu_54</InstName>
-                            <ModuleName>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</ModuleName>
+                            <InstName>grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1_fu_54</InstName>
+                            <ModuleName>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>54</ID>
-                            <BindInstances>add_ln186_fu_109_p2 add_ln177_fu_115_p2</BindInstances>
+                            <BindInstances>add_ln186_fu_109_p2 add_ln178_fu_115_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                 </Instance>
@@ -843,7 +843,7 @@
                             <InstName>dataflow_in_loop_loop_ctr_encrypt_U0</InstName>
                             <ModuleName>dataflow_in_loop_loop_ctr_encrypt</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>86</ID>
+                            <ID>90</ID>
                             <InstancesList>
                                 <Instance>
                                     <InstName>entry_proc_U0</InstName>
@@ -862,7 +862,7 @@
                                     <ModuleName>assign_swap_endianness</ModuleName>
                                     <IsCompInst>true</IsCompInst>
                                     <ID>116</ID>
-                                    <BindInstances>add_ln21_fu_156_p2</BindInstances>
+                                    <BindInstances>add_ln23_fu_156_p2</BindInstances>
                                 </Instance>
                                 <Instance>
                                     <InstName>aes_encrypt_block_U0</InstName>
@@ -875,7 +875,7 @@
                                             <ModuleName>aes_encrypt_block_Pipeline_loop_aes_encrypt_block</ModuleName>
                                             <IsCompInst>true</IsCompInst>
                                             <ID>117</ID>
-                                            <BindInstances>add_ln47_fu_166_p2</BindInstances>
+                                            <BindInstances>add_ln48_fu_166_p2</BindInstances>
                                         </Instance>
                                     </InstancesList>
                                 </Instance>
@@ -957,20 +957,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln165_fu_145_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:165" URAM="0" VARIABLE="add_ln165"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln169_fu_161_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:169" URAM="0" VARIABLE="add_ln169"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln171_fu_184_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:171" URAM="0" VARIABLE="add_ln171"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln172_fu_377_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:172" URAM="0" VARIABLE="add_ln172"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln173_fu_440_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:173" URAM="0" VARIABLE="add_ln173"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln173_1_fu_462_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:173" URAM="0" VARIABLE="add_ln173_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln164_fu_530_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:164" URAM="0" VARIABLE="add_ln164"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln166_fu_145_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:166" URAM="0" VARIABLE="add_ln166"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln170_fu_161_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:170" URAM="0" VARIABLE="add_ln170"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln172_fu_184_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:172" URAM="0" VARIABLE="add_ln172"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln173_fu_377_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:173" URAM="0" VARIABLE="add_ln173"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln174_fu_440_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:174" URAM="0" VARIABLE="add_ln174"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln174_1_fu_462_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:174" URAM="0" VARIABLE="add_ln174_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln165_fu_530_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:165" URAM="0" VARIABLE="add_ln165"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="crypto_aes_rcon_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_rcon"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Name>
+            <Name>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Name>
             <Loops>
-                <VITIS_LOOP_177_1/>
+                <VITIS_LOOP_178_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -989,8 +989,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_177_1>
-                        <Name>VITIS_LOOP_177_1</Name>
+                    <VITIS_LOOP_178_1>
+                        <Name>VITIS_LOOP_178_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>11</TripCount>
                         <Latency>12</Latency>
@@ -999,7 +999,7 @@
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_177_1>
+                    </VITIS_LOOP_178_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1022,8 +1022,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_177_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_109_p2" SOURCE="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186" URAM="0" VARIABLE="add_ln186"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_177_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln177_fu_115_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:177" URAM="0" VARIABLE="add_ln177"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_178_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_109_p2" SOURCE="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186" URAM="0" VARIABLE="add_ln186"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_178_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln178_fu_115_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:178" URAM="0" VARIABLE="add_ln178"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1143,7 +1143,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln21_fu_156_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:21" URAM="0" VARIABLE="add_ln21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_156_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:23" URAM="0" VARIABLE="add_ln23"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1240,7 +1240,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_encrypt_block" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_fu_166_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:47" URAM="0" VARIABLE="add_ln47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_encrypt_block" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_166_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:48" URAM="0" VARIABLE="add_ln48"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1360,7 +1360,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="p_Val2_s_fu_162_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:26" URAM="0" VARIABLE="p_Val2_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="p_Val2_s_fu_162_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:27" URAM="0" VARIABLE="p_Val2_s"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1405,10 +1405,10 @@
             <BindNodes>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ciphertext_c_U" SOURCE="" URAM="0" VARIABLE="ciphertext_c"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="i_c_U" SOURCE="" URAM="0" VARIABLE="i_c"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="block_V1_out_tmp_channel_U" SOURCE="../hw-impl/src/pynqrypt.cpp:22" URAM="0" VARIABLE="block_V1_out_tmp_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="tmp_U" SOURCE="../hw-impl/src/pynqrypt.cpp:23" URAM="0" VARIABLE="tmp"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="block_nonce_V_U" SOURCE="../hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="block_nonce_V"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="block_V_U" SOURCE="../hw-impl/src/pynqrypt.cpp:25" URAM="0" VARIABLE="block_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="block_V1_out_tmp_channel_U" SOURCE="../hw-impl/src/pynqrypt.cpp:23" URAM="0" VARIABLE="block_V1_out_tmp_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="tmp_U" SOURCE="../hw-impl/src/pynqrypt.cpp:24" URAM="0" VARIABLE="tmp"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="block_nonce_V_U" SOURCE="../hw-impl/src/pynqrypt.cpp:25" URAM="0" VARIABLE="block_nonce_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="block_V_U" SOURCE="../hw-impl/src/pynqrypt.cpp:26" URAM="0" VARIABLE="block_V"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1423,24 +1423,24 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>undef</Best-caseLatency>
-                    <Average-caseLatency>undef</Average-caseLatency>
-                    <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <Best-caseLatency>28673</Best-caseLatency>
+                    <Average-caseLatency>28673</Average-caseLatency>
+                    <Worst-caseLatency>28673</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.287 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.287 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.287 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>28673</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <loop_ctr_encrypt>
                         <Name>loop_ctr_encrypt</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>undef</TripCount>
-                        <Latency>undef</Latency>
-                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <TripCount>1024</TripCount>
+                        <Latency>28672</Latency>
+                        <AbsoluteTimeLatency>0.287 ms</AbsoluteTimeLatency>
                         <DataflowPipelineThroughput>28</DataflowPipelineThroughput>
-                        <PipelineDepth>undef</PipelineDepth>
+                        <PipelineDepth>28672</PipelineDepth>
                         <PipelineType>dataflow</PipelineType>
                         <InstanceList>
                             <Instance>dataflow_in_loop_loop_ctr_encrypt_U0</Instance>
@@ -1477,13 +1477,13 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>undef</Best-caseLatency>
-                    <Average-caseLatency>undef</Average-caseLatency>
-                    <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <Best-caseLatency>28775</Best-caseLatency>
+                    <Average-caseLatency>28775</Average-caseLatency>
+                    <Worst-caseLatency>28775</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.288 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.288 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.288 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>28776</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -1866,17 +1866,19 @@
             <item name="Inferred Bursts and Widening Missed">
                 <table>
                     <keys size="5">HW Interface, Variable, Loop, Problem, Location</keys>
-                    <column name="m_axi_gmem">plaintext, loop_ctr_encrypt, Skip burst inference for loop 'loop_ctr_encrypt' since access may be exposed into dataflow region, ../hw-impl/src/pynqrypt.cpp:22:32</column>
+                    <column name="m_axi_gmem">plaintext, loop_ctr_encrypt, Skip burst inference for loop 'loop_ctr_encrypt' since access may be exposed into dataflow region, ../hw-impl/src/pynqrypt.cpp:23:32</column>
                 </table>
             </item>
         </section>
     </ReportBurst>
     <PragmaReport>
         <Pragma type="dataflow" location="../hw-impl/src/pynqrypt.cpp:19" status="valid" parentFunction="ctr_encrypt" variable="" isDirective="0" options=""/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:81" status="valid" parentFunction="aes_sub_bytes" variable="aes_sbox" isDirective="0" options="variable=aes_sbox type=complete dim=1"/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:116" status="valid" parentFunction="aes_mix_columns" variable="aes_mul2" isDirective="0" options="variable=aes_mul2 type=complete"/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:117" status="valid" parentFunction="aes_mix_columns" variable="aes_mul3" isDirective="0" options="variable=aes_mul3 type=complete"/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:157" status="valid" parentFunction="aes_generate_round_keys" variable="_round_key" isDirective="0" options="variable=_round_key type=complete"/>
+        <Pragma type="loop_tripcount" location="../hw-impl/src/pynqrypt.cpp:20" status="valid" parentFunction="ctr_encrypt" variable="" isDirective="0" options="min=1024 max=1024 avg=1024"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:82" status="valid" parentFunction="aes_sub_bytes" variable="aes_sbox" isDirective="0" options="variable=aes_sbox type=complete dim=1"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:117" status="valid" parentFunction="aes_mix_columns" variable="aes_mul2" isDirective="0" options="variable=aes_mul2 type=complete"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:118" status="valid" parentFunction="aes_mix_columns" variable="aes_mul3" isDirective="0" options="variable=aes_mul3 type=complete"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:158" status="valid" parentFunction="aes_generate_round_keys" variable="_round_key" isDirective="0" options="variable=_round_key type=complete"/>
+        <Pragma type="unroll" location="../hw-impl/src/pynqrypt.cpp:205" status="valid" parentFunction="assign_swap_endianness" variable="" isDirective="0" options=""/>
         <Pragma type="interface" location="../hw-impl/src/pynqrypt_hls.cpp:10" status="valid" parentFunction="pynqrypt_encrypt" variable="plaintext" isDirective="0" options="mode=m_axi port=plaintext offset=slave bundle=gmem depth=1024"/>
         <Pragma type="interface" location="../hw-impl/src/pynqrypt_hls.cpp:11" status="valid" parentFunction="pynqrypt_encrypt" variable="ciphertext" isDirective="0" options="mode=m_axi port=ciphertext offset=slave bundle=gmem depth=1024"/>
         <Pragma type="interface" location="../hw-impl/src/pynqrypt_hls.cpp:13" status="valid" parentFunction="pynqrypt_encrypt" variable="key" isDirective="0" options="mode=s_axilite port=key bundle=control"/>

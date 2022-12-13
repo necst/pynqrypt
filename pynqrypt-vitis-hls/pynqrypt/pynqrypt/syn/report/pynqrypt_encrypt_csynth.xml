@@ -22,14 +22,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>undef</Best-caseLatency>
-<Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>undef</Worst-caseLatency>
-<Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-<Interval-min>undef</Interval-min>
-<Interval-max>undef</Interval-max>
+<Best-caseLatency>28775</Best-caseLatency>
+<Average-caseLatency>28775</Average-caseLatency>
+<Worst-caseLatency>28775</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.288 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.288 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.288 ms</Worst-caseRealTimeLatency>
+<Interval-min>28776</Interval-min>
+<Interval-max>28776</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 

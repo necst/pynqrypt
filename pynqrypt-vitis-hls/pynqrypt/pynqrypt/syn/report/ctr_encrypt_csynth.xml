@@ -22,21 +22,21 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>undef</Best-caseLatency>
-<Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>undef</Worst-caseLatency>
-<Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-<Interval-min>undef</Interval-min>
-<Interval-max>undef</Interval-max>
+<Best-caseLatency>28673</Best-caseLatency>
+<Average-caseLatency>28673</Average-caseLatency>
+<Worst-caseLatency>28673</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.287 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.287 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.287 ms</Worst-caseRealTimeLatency>
+<Interval-min>28673</Interval-min>
+<Interval-max>28673</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <loop_ctr_encrypt>
 <Slack>7.30</Slack>
-<TripCount>undef</TripCount>
-<Latency>undef</Latency>
-<AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+<TripCount>1024</TripCount>
+<Latency>28672</Latency>
+<AbsoluteTimeLatency>286720</AbsoluteTimeLatency>
 <DataflowPipelineThroughput>28</DataflowPipelineThroughput>
 <InstanceList>
 </InstanceList>

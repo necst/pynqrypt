@@ -64,10 +64,10 @@ entry:2 %xor_ln859 = xor i128 %p_read_3, i128 %p_read_2
 
 <Node id="6" bw="0" op_0_bw="128">
 <![CDATA[
-entry:3 %ret_ln25 = ret i128 %xor_ln859
+entry:3 %ret_ln26 = ret i128 %xor_ln859
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln25"/></StgValue>
+<StgValue><ssdm name="ret_ln26"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -96,7 +96,7 @@ entry:3 %ret_ln25 = ret i128 %xor_ln859
 </dataflow>
 <dataflow id="14" from="p_read_2" to="xor_ln859" fromId="2" toId="4">
 </dataflow>
-<dataflow id="15" from="xor_ln859" to="ret_ln25" fromId="4" toId="5">
+<dataflow id="15" from="xor_ln859" to="ret_ln26" fromId="4" toId="5">
 </dataflow>
 </dataflows>
 

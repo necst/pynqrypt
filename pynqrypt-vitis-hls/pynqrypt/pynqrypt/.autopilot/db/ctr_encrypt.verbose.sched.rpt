@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'ctr_encrypt'
 ================================================================
-* Date:           Tue Dec 13 19:17:21 2022
+* Date:           Tue Dec 13 20:14:37 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt
@@ -25,12 +25,12 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-----+-----+---------+
-    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
-    |   min   |   max   |    min   |    max   | min | max |   Type  |
-    +---------+---------+----------+----------+-----+-----+---------+
-    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
-    +---------+---------+----------+----------+-----+-----+---------+
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    28673|    28673|  0.287 ms|  0.287 ms|  28673|  28673|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
 
     + Detail: 
         * Instance: 
@@ -41,7 +41,7 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- loop_ctr_encrypt  |        ?|        ?|        29|          -|          -|     ?|        no|
+        |- loop_ctr_encrypt  |    28672|    28672|        29|          -|          -|  1024|        no|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -96,13 +96,14 @@ ST_2 : Operation 11 [1/1] (2.81ns)   --->   "%icmp_ln18 = icmp_eq  i60 %i, i60 %
 ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln18 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @dataflow_parent_loop_str, i60 %i, i60 %block_count, i32 0" [../hw-impl/src/pynqrypt.cpp:18]   --->   Operation 12 'specdataflowpipeline' 'specdataflowpipeline_ln18' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 13 [1/1] (3.41ns)   --->   "%i_1 = add i60 %i, i60 1" [../hw-impl/src/pynqrypt.cpp:18]   --->   Operation 13 'add' 'i_1' <Predicate = true> <Delay = 3.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln18 = br i1 %icmp_ln18, void %for.inc, void %for.end" [../hw-impl/src/pynqrypt.cpp:18]   --->   Operation 14 'br' 'br_ln18' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 15 [2/2] (3.63ns)   --->   "%call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read" [../hw-impl/src/pynqrypt.cpp:26]   --->   Operation 15 'call' 'call_ln26' <Predicate = (!icmp_ln18)> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%ret_ln28 = ret" [../hw-impl/src/pynqrypt.cpp:28]   --->   Operation 16 'ret' 'ret_ln28' <Predicate = (icmp_ln18)> <Delay = 0.00>
+ST_2 : Operation 15 [2/2] (3.63ns)   --->   "%call_ln27 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read" [../hw-impl/src/pynqrypt.cpp:27]   --->   Operation 15 'call' 'call_ln27' <Predicate = (!icmp_ln18)> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%ret_ln29 = ret" [../hw-impl/src/pynqrypt.cpp:29]   --->   Operation 16 'ret' 'ret_ln29' <Predicate = (icmp_ln18)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [../hw-impl/src/pynqrypt.cpp:20]   --->   Operation 17 'specloopname' 'specloopname_ln20' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read" [../hw-impl/src/pynqrypt.cpp:26]   --->   Operation 18 'call' 'call_ln26' <Predicate = (!icmp_ln18)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln18 = br void %for.cond" [../hw-impl/src/pynqrypt.cpp:18]   --->   Operation 19 'br' 'br_ln18' <Predicate = (!icmp_ln18)> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%speclooptripcount_ln20 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024" [../hw-impl/src/pynqrypt.cpp:20]   --->   Operation 17 'speclooptripcount' 'speclooptripcount_ln20' <Predicate = (!icmp_ln18)> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln22 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [../hw-impl/src/pynqrypt.cpp:22]   --->   Operation 18 'specloopname' 'specloopname_ln22' <Predicate = (!icmp_ln18)> <Delay = 0.00>
+ST_3 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln27 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read" [../hw-impl/src/pynqrypt.cpp:27]   --->   Operation 19 'call' 'call_ln27' <Predicate = (!icmp_ln18)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln18 = br void %for.cond" [../hw-impl/src/pynqrypt.cpp:18]   --->   Operation 20 'br' 'br_ln18' <Predicate = (!icmp_ln18)> <Delay = 0.00>
 
 
 ============================================================
@@ -117,7 +118,7 @@ The critical path consists of the following:
  <State 2>: 6.45ns
 The critical path consists of the following:
 	'phi' operation ('i') with incoming values : ('i', ../hw-impl/src/pynqrypt.cpp:18) [14]  (0 ns)
-	'call' operation ('call_ln26', ../hw-impl/src/pynqrypt.cpp:26) to 'dataflow_in_loop_loop_ctr_encrypt' [21]  (3.63 ns)
+	'call' operation ('call_ln27', ../hw-impl/src/pynqrypt.cpp:27) to 'dataflow_in_loop_loop_ctr_encrypt' [22]  (3.63 ns)
 	blocking operation 2.82 ns on control path)
 
  <State 3>: 0ns

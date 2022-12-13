@@ -17,8 +17,8 @@
 <ID>46</ID>
 </Instance>
 <Instance>
-<InstName>grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1_fu_54</InstName>
-<ModuleName>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</ModuleName>
+<InstName>grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1_fu_54</InstName>
+<ModuleName>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>54</ID>
 </Instance>
@@ -34,7 +34,7 @@
 <InstName>dataflow_in_loop_loop_ctr_encrypt_U0</InstName>
 <ModuleName>dataflow_in_loop_loop_ctr_encrypt</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>86</ID>
+<ID>90</ID>
 <InstancesList>
 <Instance>
 <InstName>entry_proc_U0</InstName>
@@ -247,9 +247,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Name>
+<Name>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Name>
 <Loops>
-<VITIS_LOOP_177_1></VITIS_LOOP_177_1>
+<VITIS_LOOP_178_1></VITIS_LOOP_178_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -268,8 +268,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_177_1>
-<Name>VITIS_LOOP_177_1</Name>
+<VITIS_LOOP_178_1>
+<Name>VITIS_LOOP_178_1</Name>
 <Slack>7.30</Slack>
 <TripCount>11</TripCount>
 <Latency>12</Latency>
@@ -279,7 +279,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_177_1>
+</VITIS_LOOP_178_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -304,7 +304,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -315,7 +315,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -326,7 +326,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -337,7 +337,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -348,7 +348,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -359,7 +359,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1</Object>
+<Object>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3728,24 +3728,24 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>undef</Best-caseLatency>
-<Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>undef</Worst-caseLatency>
-<Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>undef</PipelineInitiationInterval>
+<Best-caseLatency>28673</Best-caseLatency>
+<Average-caseLatency>28673</Average-caseLatency>
+<Worst-caseLatency>28673</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.287 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.287 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.287 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>28673</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <loop_ctr_encrypt>
 <Name>loop_ctr_encrypt</Name>
 <Slack>7.30</Slack>
-<TripCount>undef</TripCount>
-<Latency>undef</Latency>
-<AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+<TripCount>1024</TripCount>
+<Latency>28672</Latency>
+<AbsoluteTimeLatency>0.287 ms</AbsoluteTimeLatency>
 <DataflowPipelineThroughput>28</DataflowPipelineThroughput>
-<PipelineDepth>undef</PipelineDepth>
+<PipelineDepth>28672</PipelineDepth>
 <PipelineType>dataflow</PipelineType>
 <InstanceList>
 <Instance>dataflow_in_loop_loop_ctr_encrypt_U0</Instance>
@@ -4554,13 +4554,13 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>undef</Best-caseLatency>
-<Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>undef</Worst-caseLatency>
-<Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>undef</PipelineInitiationInterval>
+<Best-caseLatency>28775</Best-caseLatency>
+<Average-caseLatency>28775</Average-caseLatency>
+<Worst-caseLatency>28775</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.288 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.288 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.288 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>28776</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>

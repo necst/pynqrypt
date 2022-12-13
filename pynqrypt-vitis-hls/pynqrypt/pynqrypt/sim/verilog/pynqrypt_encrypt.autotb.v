@@ -39,7 +39,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = -1;
+parameter LATENCY_ESTIMATION = 28775;
 parameter LENGTH_ciphertext = 1;
 parameter LENGTH_gmem = 2048;
 parameter LENGTH_key = 1;

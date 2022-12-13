@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_loop_ctr_encrypt'" level="0">
-<item name = "Date">Tue Dec 13 19:17:20 2022
+<item name = "Date">Tue Dec 13 20:14:36 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt</item>
