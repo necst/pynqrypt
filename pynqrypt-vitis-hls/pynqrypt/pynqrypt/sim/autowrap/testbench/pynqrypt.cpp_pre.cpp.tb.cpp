@@ -62014,6 +62014,7 @@ void Pynqrypt::aes_encrypt_block(aes_block &state)
     state ^= round_keys[0];
 
     loop_aes_encrypt_block: for (int i = 1; i < NUM_ROUNDS; i++) {
+#pragma HLS PIPELINE style=frp
         aes_sub_bytes(state);
         aes_shift_rows(state);
         aes_mix_columns(state);

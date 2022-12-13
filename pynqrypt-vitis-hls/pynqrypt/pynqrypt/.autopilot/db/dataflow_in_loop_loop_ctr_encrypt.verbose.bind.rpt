@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_loop_ctr_encrypt'
 ================================================================
-* Date:           Tue Dec 13 20:14:36 2022
+* Date:           Tue Dec 13 20:52:11 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.532 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
     |   min   |   max   |    min   |    max   | min | max |   Type   |
     +---------+---------+----------+----------+-----+-----+----------+
-    |       27|       27|  0.270 us|  0.270 us|   28|   28|  dataflow|
+    |       26|       26|  0.260 us|  0.260 us|   27|   27|  dataflow|
     +---------+---------+----------+----------+-----+-----+----------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |call_ln0_entry_proc_fu_102           |entry_proc                |        0|        0|       0 ns|       0 ns|    0|    0|       no|
         |tmp_ctr_compute_nonce_fu_109         |ctr_compute_nonce         |        0|        0|       0 ns|       0 ns|    0|    0|       no|
         |grp_assign_swap_endianness_fu_116    |assign_swap_endianness    |        8|        8|  80.000 ns|  80.000 ns|    8|    8|       no|
-        |grp_aes_encrypt_block_fu_126         |aes_encrypt_block         |       27|       27|   0.270 us|   0.270 us|   27|   27|       no|
+        |grp_aes_encrypt_block_fu_126         |aes_encrypt_block         |       26|       26|   0.260 us|   0.260 us|   26|   26|       no|
         |block_V_ctr_xor_block_fu_133         |ctr_xor_block             |        0|        0|       0 ns|       0 ns|    0|    0|       no|
         |grp_assign_swap_endianness_1_fu_139  |assign_swap_endianness_1  |        7|        7|  70.000 ns|  70.000 ns|    7|    7|       no|
         +-------------------------------------+--------------------------+---------+---------+-----------+-----------+-----+-----+---------+
@@ -100,10 +100,10 @@ ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_c = alloca i64 1"   --->   Opera
 ST_1 : Operation 13 [1/1] (3.61ns)   --->   "%call_ln0 = call void @entry_proc, i64 %ciphertext_read, i64 %ciphertext_c"   --->   Operation 13 'call' 'call_ln0' <Predicate = true> <Delay = 3.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_1 : Operation 14 [1/1] (3.63ns)   --->   "%tmp = call i128 @ctr_compute_nonce, i96 %p_read_1, i32 %empty" [../hw-impl/src/pynqrypt.cpp:24]   --->   Operation 14 'call' 'tmp' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
 
-State 2 <SV = 1> <Delay = 6.25>
+State 2 <SV = 1> <Delay = 4.66>
 ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%plaintext_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %plaintext"   --->   Operation 15 'read' 'plaintext_read' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 16 [2/2] (3.63ns)   --->   "%block_V1_out_tmp_channel = call i128 @assign_swap_endianness, i128 %gmem, i60 %i_read, i64 %plaintext_read, i60 %i_c" [../hw-impl/src/pynqrypt.cpp:23]   --->   Operation 16 'call' 'block_V1_out_tmp_channel' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
-ST_2 : Operation 17 [2/2] (6.25ns)   --->   "%block_nonce_V = call i128 @aes_encrypt_block, i128 %this_round_keys, i128 %tmp" [../hw-impl/src/pynqrypt.cpp:25]   --->   Operation 17 'call' 'block_nonce_V' <Predicate = true> <Delay = 6.25> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+ST_2 : Operation 17 [2/2] (4.66ns)   --->   "%block_nonce_V = call i128 @aes_encrypt_block, i128 %this_round_keys, i128 %tmp" [../hw-impl/src/pynqrypt.cpp:25]   --->   Operation 17 'call' 'block_nonce_V' <Predicate = true> <Delay = 4.66> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
 
 State 3 <SV = 2> <Delay = 7.30>
 ST_3 : Operation 18 [1/2] (7.30ns)   --->   "%block_V1_out_tmp_channel = call i128 @assign_swap_endianness, i128 %gmem, i60 %i_read, i64 %plaintext_read, i60 %i_c" [../hw-impl/src/pynqrypt.cpp:23]   --->   Operation 18 'call' 'block_V1_out_tmp_channel' <Predicate = true> <Delay = 7.30> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
@@ -857,7 +857,7 @@ ret_ln27                  (ret                 ) [ 0000000]
 |          |      call_ln0_entry_proc_fu_102     |    0    |    0    |    0    |
 |          |     tmp_ctr_compute_nonce_fu_109    |    0    |    0    |    0    |
 |   call   |  grp_assign_swap_endianness_fu_116  |  1.588  |   188   |    80   |
-|          |     grp_aes_encrypt_block_fu_126    |  5.0026 |   913   |  139772 |
+|          |     grp_aes_encrypt_block_fu_126    |  3.4146 |   789   |  139763 |
 |          |     block_V_ctr_xor_block_fu_133    |    0    |    0    |   128   |
 |          | grp_assign_swap_endianness_1_fu_139 |  3.176  |   316   |    80   |
 |----------|-------------------------------------|---------|---------|---------|
@@ -868,7 +868,7 @@ ret_ln27                  (ret                 ) [ 0000000]
 |----------|-------------------------------------|---------|---------|---------|
 |   trunc  |             empty_fu_148            |    0    |    0    |    0    |
 |----------|-------------------------------------|---------|---------|---------|
-|   Total  |                                     |  9.7666 |   1417  |  140060 |
+|   Total  |                                     |  8.1786 |   1293  |  140051 |
 |----------|-------------------------------------|---------|---------|---------|
 
 Memories:
@@ -905,10 +905,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    9   |  1417  | 140060 |
+|  Function |    8   |  1293  | 140051 |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    1   |    -   |    9   |
 |  Register |    -   |   760  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |   11   |  2177  | 140069 |
+|   Total   |    9   |  2053  | 140060 |
 +-----------+--------+--------+--------+

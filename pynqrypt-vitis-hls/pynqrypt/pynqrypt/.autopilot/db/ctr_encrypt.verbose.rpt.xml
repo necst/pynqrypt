@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'ctr_encrypt'" level="0">
-<item name = "Date">Tue Dec 13 20:14:40 2022
+<item name = "Date">Tue Dec 13 20:52:15 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.532 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,19 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">28673, 28673, 0.287 ms, 0.287 ms, 28673, 28673, no</column>
+<column name="">27649, 27649, 0.276 ms, 0.276 ms, 27649, 27649, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="dataflow_in_loop_loop_ctr_encrypt_U0">dataflow_in_loop_loop_ctr_encrypt, 27, 27, 0.270 us, 0.270 us, 28, 28, dataflow</column>
+<column name="dataflow_in_loop_loop_ctr_encrypt_U0">dataflow_in_loop_loop_ctr_encrypt, 26, 26, 0.260 us, 0.260 us, 27, 27, dataflow</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_ctr_encrypt">28672, 28672, 29, -, -, 1024, no</column>
+<column name="- loop_ctr_encrypt">27648, 27648, 28, -, -, 1024, no</column>
 </table>
 </item>
 </section>
@@ -51,7 +51,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 822, 192, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 2042, 140899, -</column>
+<column name="Instance">-, -, 1918, 140913, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 18, -</column>
 <column name="Register">-, -, 120, -, -</column>
@@ -63,7 +63,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="dataflow_in_loop_loop_ctr_encrypt_U0">dataflow_in_loop_loop_ctr_encrypt, 0, 0, 2042, 140899, 0</column>
+<column name="dataflow_in_loop_loop_ctr_encrypt_U0">dataflow_in_loop_loop_ctr_encrypt, 0, 0, 1918, 140913, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">

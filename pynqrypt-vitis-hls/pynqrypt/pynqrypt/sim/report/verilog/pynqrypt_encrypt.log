@@ -36,8 +36,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/py
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_179_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_179_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_entry_proc.v" into library xil_defaultlib
@@ -46,6 +46,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/py
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_assign_swap_endianness
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_ctr_compute_nonce.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_ctr_compute_nonce
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_mix_columns.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_mix_columns
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_encrypt_block_Pipeline_loop_aes_encrypt_block
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_encrypt_block.v" into library xil_defaultlib
@@ -109,6 +111,7 @@ Compiling module xil_defaultlib.pynqrypt_encrypt_aes_generate_ro...
 Compiling module xil_defaultlib.pynqrypt_encrypt_entry_proc
 Compiling module xil_defaultlib.pynqrypt_encrypt_assign_swap_end...
 Compiling module xil_defaultlib.pynqrypt_encrypt_ctr_compute_non...
+Compiling module xil_defaultlib.pynqrypt_encrypt_aes_mix_columns
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_aes_encrypt_blo...
 Compiling module xil_defaultlib.pynqrypt_encrypt_ctr_xor_block
@@ -190,10 +193,10 @@ source pynqrypt_encrypt.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [0.00%] @ "125000"
-// RTL Simulation : 1 / 1 [100.00%] @ "278675000"
+// RTL Simulation : 1 / 1 [100.00%] @ "268445000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 278735 ns : File "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt.autotb.v" Line 443
+$finish called at time : 268505 ns : File "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt.autotb.v" Line 443
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Dec 13 20:15:19 2022...
+INFO: [Common 17-206] Exiting xsim at Tue Dec 13 20:52:54 2022...
 INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
