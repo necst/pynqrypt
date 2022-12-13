@@ -6224,7 +6224,8 @@ void Pynqrypt::aes_encrypt_block(aes_block &state)
     state ^= round_keys[0];
 
     loop_aes_encrypt_block: for (int i = 1; i < NUM_ROUNDS; i++) {
-        aes_sub_bytes(state);
+#pragma HLS PIPELINE style=frp
+ aes_sub_bytes(state);
         aes_shift_rows(state);
         aes_mix_columns(state);
         state ^= round_keys[i];
@@ -6353,7 +6354,7 @@ void Pynqrypt::aes_generate_round_keys()
         _round_key[i + 3] = _round_key[i - 1] ^ _round_key[i + 2];
     }
 
-    VITIS_LOOP_178_1: for (int i = 0; i < 44; i += 4) {
+    VITIS_LOOP_179_1: for (int i = 0; i < 44; i += 4) {
         round_keys[i / 4].range(127, 96) = _round_key[i + 0];
         round_keys[i / 4].range(95, 64) = _round_key[i + 1];
         round_keys[i / 4].range(63, 32) = _round_key[i + 2];
@@ -6368,7 +6369,7 @@ void Pynqrypt::aes_rotate_word(aes_word &word)
 
 void Pynqrypt::aes_sub_word(aes_word &word)
 {
-    VITIS_LOOP_193_1: for (int i = 0; i < 4; i++)
+    VITIS_LOOP_194_1: for (int i = 0; i < 4; i++)
         word.range(i * 8 + 7, i * 8) = aes_sbox[word.range(i * 8 + 7, i * 8)];
 }
 

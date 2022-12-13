@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3621216858</coreId>
+						<coreId>1885414944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -110,7 +110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>203</coreId>
+						<coreId>1210086249</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -135,7 +135,7 @@
 					<Obj>
 						<type>0</type>
 						<id>4</id>
-						<name>state_promoted_i_loc</name>
+						<name>t_loc</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -209,7 +209,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>192</coreId>
+						<coreId>3380401632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -267,7 +267,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>448</coreId>
+						<coreId>60356096</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -323,7 +323,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -380,7 +380,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484799120</coreId>
+						<coreId>941723936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -396,10 +396,10 @@
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isOnCriticalPath>1</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.58</m_delay>
+				<m_isStartOfPath>1</m_isStartOfPath>
+				<m_delay>7.53</m_delay>
 				<m_topoIndex>6</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -408,7 +408,7 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>state_promoted_i_loc_load</name>
+						<name>t_loc_load</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -426,7 +426,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484786352</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -454,7 +454,7 @@
 						<name>tmp</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -470,7 +470,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -483,7 +483,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3377475904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -513,7 +513,7 @@
 						<name>shl_ln</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -529,7 +529,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -542,7 +542,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484787872</coreId>
+						<coreId>1599294536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>11</bitwidth>
@@ -568,10 +568,10 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>zext_ln57</name>
+						<name>zext_ln58</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -587,7 +587,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -600,7 +600,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -624,10 +624,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>lshr_ln57</name>
+						<name>lshr_ln58</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -643,7 +643,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -681,10 +681,10 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>trunc_ln57</name>
+						<name>trunc_ln58</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -700,7 +700,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -713,7 +713,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1006633888</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -737,10 +737,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>tmp_s</name>
+						<name>tmp_36</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -756,7 +756,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -796,10 +796,10 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>shl_ln3</name>
+						<name>shl_ln6</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -815,7 +815,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -828,7 +828,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>941651406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>11</bitwidth>
@@ -854,292 +854,6 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>zext_ln58</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>58</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>58</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4015279320</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>140</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>17</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_18">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>18</id>
-						<name>lshr_ln58</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>58</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>58</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4015293032</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>141</item>
-					<item>142</item>
-				</oprand_edges>
-				<opcode>lshr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>18</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_19">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>19</id>
-						<name>trunc_ln58</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>58</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>58</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4015278072</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>143</item>
-				</oprand_edges>
-				<opcode>trunc</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>19</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_20">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>20</id>
-						<name>tmp_16</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>59</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>59</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4015276488</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>144</item>
-					<item>145</item>
-					<item>147</item>
-					<item>149</item>
-				</oprand_edges>
-				<opcode>partselect</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>20</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_21">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>21</id>
-						<name>shl_ln4</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>59</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>59</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>484806240</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>150</item>
-					<item>151</item>
-					<item>152</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>21</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_22">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>22</id>
 						<name>zext_ln59</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -1172,7 +886,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>50</coreId>
+						<coreId>941651278</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -1180,7 +894,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>153</item>
+					<item>140</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -1188,14 +902,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>22</m_topoIndex>
+				<m_topoIndex>17</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_23">
+			<item class_id_reference="9" object_id="_18">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>23</id>
+						<id>18</id>
 						<name>lshr_ln59</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -1228,7 +942,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484846208</coreId>
+						<coreId>20</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -1236,8 +950,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>154</item>
-					<item>155</item>
+					<item>141</item>
+					<item>142</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -1245,14 +959,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>23</m_topoIndex>
+				<m_topoIndex>18</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_24">
+			<item class_id_reference="9" object_id="_19">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>24</id>
+						<id>19</id>
 						<name>trunc_ln59</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -1285,7 +999,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3380354304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1293,7 +1007,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>156</item>
+					<item>143</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -1301,15 +1015,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>24</m_topoIndex>
+				<m_topoIndex>19</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_25">
+			<item class_id_reference="9" object_id="_20">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>25</id>
-						<name>trunc_ln60</name>
+						<id>20</id>
+						<name>tmp_38</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
 						<lineNumber>60</lineNumber>
@@ -1341,31 +1055,34 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1006634128</coreId>
+						<coreId>3380358104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>1</count>
+					<count>4</count>
 					<item_version>0</item_version>
-					<item>157</item>
+					<item>144</item>
+					<item>145</item>
+					<item>147</item>
+					<item>149</item>
 				</oprand_edges>
-				<opcode>trunc</opcode>
+				<opcode>partselect</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>25</m_topoIndex>
+				<m_topoIndex>20</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_26">
+			<item class_id_reference="9" object_id="_21">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>26</id>
-						<name>shl_ln5</name>
+						<id>21</id>
+						<name>shl_ln7</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
 						<lineNumber>60</lineNumber>
@@ -1397,7 +1114,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484796816</coreId>
+						<coreId>3379723792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>11</bitwidth>
@@ -1405,9 +1122,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>158</item>
-					<item>159</item>
-					<item>160</item>
+					<item>150</item>
+					<item>151</item>
+					<item>152</item>
 				</oprand_edges>
 				<opcode>bitconcatenate</opcode>
 				<m_Display>0</m_Display>
@@ -1415,14 +1132,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>26</m_topoIndex>
+				<m_topoIndex>21</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_27">
+			<item class_id_reference="9" object_id="_22">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>27</id>
+						<id>22</id>
 						<name>zext_ln60</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -1455,7 +1172,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>672</coreId>
+						<coreId>3380415768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -1463,7 +1180,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>161</item>
+					<item>153</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -1471,14 +1188,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>27</m_topoIndex>
+				<m_topoIndex>22</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_28">
+			<item class_id_reference="9" object_id="_23">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>28</id>
+						<id>23</id>
 						<name>lshr_ln60</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -1511,7 +1228,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>485219664</coreId>
+						<coreId>941726736</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -1519,8 +1236,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>162</item>
-					<item>163</item>
+					<item>154</item>
+					<item>155</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -1528,15 +1245,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>28</m_topoIndex>
+				<m_topoIndex>23</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_29">
+			<item class_id_reference="9" object_id="_24">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>29</id>
-						<name>trunc_ln60_1</name>
+						<id>24</id>
+						<name>trunc_ln60</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
 						<lineNumber>60</lineNumber>
@@ -1568,7 +1285,290 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>485226992</coreId>
+						<coreId>3380416960</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>156</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>24</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_25">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>25</id>
+						<name>trunc_ln61</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>61</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>61</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380418000</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>157</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>25</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_26">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>26</id>
+						<name>shl_ln8</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>61</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>61</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>941657105</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>158</item>
+					<item>159</item>
+					<item>160</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>26</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_27">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>27</id>
+						<name>zext_ln61</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>61</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>61</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380353352</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>161</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>27</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_28">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>28</id>
+						<name>lshr_ln61</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>61</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>61</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380354368</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>162</item>
+					<item>163</item>
+				</oprand_edges>
+				<opcode>lshr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>28</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_29">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>29</id>
+						<name>trunc_ln61_1</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>61</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>61</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380400256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1592,10 +1592,10 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_17</name>
+						<name>tmp_42</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>62</lineNumber>
+						<lineNumber>63</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -1611,7 +1611,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>62</second>
+										<second>63</second>
 									</item>
 								</second>
 							</item>
@@ -1624,7 +1624,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3379723792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1651,10 +1651,10 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>shl_ln6</name>
+						<name>shl_ln9</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>62</lineNumber>
+						<lineNumber>63</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -1670,7 +1670,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>62</second>
+										<second>63</second>
 									</item>
 								</second>
 							</item>
@@ -1683,7 +1683,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>485229096</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>11</bitwidth>
@@ -1709,292 +1709,6 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>zext_ln62</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>62</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>62</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>485229856</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>174</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>32</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_33">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>33</id>
-						<name>lshr_ln62</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>62</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>62</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>175</item>
-					<item>176</item>
-				</oprand_edges>
-				<opcode>lshr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>33</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_34">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>34</id>
-						<name>trunc_ln62</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>62</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>62</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>177</item>
-				</oprand_edges>
-				<opcode>trunc</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>34</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_35">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>35</id>
-						<name>tmp_18</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>63</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>63</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>178</item>
-					<item>179</item>
-					<item>181</item>
-					<item>183</item>
-				</oprand_edges>
-				<opcode>partselect</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>35</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_36">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>36</id>
-						<name>shl_ln7</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>63</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>63</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>184</item>
-					<item>185</item>
-					<item>186</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>36</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_37">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>37</id>
 						<name>zext_ln63</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -2027,7 +1741,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484846208</coreId>
+						<coreId>3380348112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -2035,7 +1749,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>187</item>
+					<item>174</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -2043,14 +1757,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>37</m_topoIndex>
+				<m_topoIndex>32</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_38">
+			<item class_id_reference="9" object_id="_33">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>38</id>
+						<id>33</id>
 						<name>lshr_ln63</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -2083,7 +1797,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484873072</coreId>
+						<coreId>3380349168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -2091,8 +1805,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>188</item>
-					<item>189</item>
+					<item>175</item>
+					<item>176</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -2100,14 +1814,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>38</m_topoIndex>
+				<m_topoIndex>33</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_39">
+			<item class_id_reference="9" object_id="_34">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>39</id>
+						<id>34</id>
 						<name>trunc_ln63</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -2140,7 +1854,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1919105907</coreId>
+						<coreId>3380130704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2148,7 +1862,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>190</item>
+					<item>177</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -2156,15 +1870,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>39</m_topoIndex>
+				<m_topoIndex>34</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_40">
+			<item class_id_reference="9" object_id="_35">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>40</id>
-						<name>tmp_19</name>
+						<id>35</id>
+						<name>tmp_s</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
 						<lineNumber>64</lineNumber>
@@ -2196,7 +1910,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484875176</coreId>
+						<coreId>1748857915</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2204,10 +1918,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>191</item>
-					<item>192</item>
-					<item>194</item>
-					<item>196</item>
+					<item>178</item>
+					<item>179</item>
+					<item>181</item>
+					<item>183</item>
 				</oprand_edges>
 				<opcode>partselect</opcode>
 				<m_Display>0</m_Display>
@@ -2215,15 +1929,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>40</m_topoIndex>
+				<m_topoIndex>35</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_41">
+			<item class_id_reference="9" object_id="_36">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>41</id>
-						<name>shl_ln8</name>
+						<id>36</id>
+						<name>shl_ln1</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
 						<lineNumber>64</lineNumber>
@@ -2255,7 +1969,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484875936</coreId>
+						<coreId>1852403809</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>11</bitwidth>
@@ -2263,9 +1977,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>197</item>
-					<item>198</item>
-					<item>199</item>
+					<item>184</item>
+					<item>185</item>
+					<item>186</item>
 				</oprand_edges>
 				<opcode>bitconcatenate</opcode>
 				<m_Display>0</m_Display>
@@ -2273,14 +1987,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>41</m_topoIndex>
+				<m_topoIndex>36</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_42">
+			<item class_id_reference="9" object_id="_37">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>42</id>
+						<id>37</id>
 						<name>zext_ln64</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -2313,7 +2027,293 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1700880240</coreId>
+						<coreId>3380304144</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>187</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>37</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_38">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>38</id>
+						<name>lshr_ln64</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>64</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>64</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380305736</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>188</item>
+					<item>189</item>
+				</oprand_edges>
+				<opcode>lshr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>38</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_39">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>39</id>
+						<name>trunc_ln64</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>64</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>64</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1397508187</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>190</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>39</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_40">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>40</id>
+						<name>tmp_44</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>65</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>65</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380859472</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>191</item>
+					<item>192</item>
+					<item>194</item>
+					<item>196</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>40</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_41">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>41</id>
+						<name>shl_ln2</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>65</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>65</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380871264</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>197</item>
+					<item>198</item>
+					<item>199</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>41</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_42">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>42</id>
+						<name>zext_ln65</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>65</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>65</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380872384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -2337,10 +2337,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>lshr_ln64</name>
+						<name>lshr_ln65</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>65</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -2356,7 +2356,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>64</second>
+										<second>65</second>
 									</item>
 								</second>
 							</item>
@@ -2394,292 +2394,6 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>trunc_ln64</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>64</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>64</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>203</item>
-				</oprand_edges>
-				<opcode>trunc</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>44</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_45">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>45</id>
-						<name>tmp_20</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>65</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>65</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>484880496</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>204</item>
-					<item>205</item>
-					<item>207</item>
-					<item>209</item>
-				</oprand_edges>
-				<opcode>partselect</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>45</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_46">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>46</id>
-						<name>shl_ln9</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>65</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>65</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>210</item>
-					<item>211</item>
-					<item>212</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>46</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_47">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>47</id>
-						<name>zext_ln65</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>65</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>65</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>213</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>47</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_48">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>48</id>
-						<name>lshr_ln65</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>65</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>65</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>825307487</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>214</item>
-					<item>215</item>
-				</oprand_edges>
-				<opcode>lshr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>48</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_49">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>49</id>
 						<name>trunc_ln65</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -2712,7 +2426,293 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1735289188</coreId>
+						<coreId>3380874656</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>203</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>44</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_45">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>45</id>
+						<name>tmp_45</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>66</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>66</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>204</item>
+					<item>205</item>
+					<item>207</item>
+					<item>209</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>45</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_46">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>46</id>
+						<name>shl_ln3</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>66</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>66</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380370880</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>210</item>
+					<item>211</item>
+					<item>212</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>46</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_47">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>47</id>
+						<name>zext_ln66</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>66</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>66</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380340472</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>213</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>47</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_48">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>48</id>
+						<name>lshr_ln66</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>66</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>66</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1887007345</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>214</item>
+					<item>215</item>
+				</oprand_edges>
+				<opcode>lshr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>48</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_49">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>49</id>
+						<name>trunc_ln66</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>66</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>66</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2736,10 +2736,10 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>tmp_21</name>
+						<name>tmp_46</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>68</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -2755,7 +2755,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>67</second>
+										<second>68</second>
 									</item>
 								</second>
 							</item>
@@ -2768,7 +2768,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2035300922</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2795,10 +2795,10 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>shl_ln10</name>
+						<name>shl_ln4</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>68</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -2814,7 +2814,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>67</second>
+										<second>68</second>
 									</item>
 								</second>
 							</item>
@@ -2827,7 +2827,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484857472</coreId>
+						<coreId>3379723792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>11</bitwidth>
@@ -2853,292 +2853,6 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>zext_ln67</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>67</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>67</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>542329856</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>226</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>52</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_53">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>53</id>
-						<name>lshr_ln67</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>67</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>67</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>484859904</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>227</item>
-					<item>228</item>
-				</oprand_edges>
-				<opcode>lshr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>53</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_54">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>54</id>
-						<name>trunc_ln67</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>67</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>67</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>229</item>
-				</oprand_edges>
-				<opcode>trunc</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>54</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_55">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>55</id>
-						<name>tmp_22</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>68</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>68</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>484862256</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>230</item>
-					<item>231</item>
-					<item>233</item>
-					<item>235</item>
-				</oprand_edges>
-				<opcode>partselect</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>55</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_56">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>56</id>
-						<name>shl_ln11</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>68</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>68</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1634561908</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>236</item>
-					<item>237</item>
-					<item>238</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>56</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_57">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>57</id>
 						<name>zext_ln68</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -3171,7 +2885,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484846208</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -3179,7 +2893,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>239</item>
+					<item>226</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -3187,14 +2901,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>57</m_topoIndex>
+				<m_topoIndex>52</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_58">
+			<item class_id_reference="9" object_id="_53">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>58</id>
+						<id>53</id>
 						<name>lshr_ln68</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -3227,7 +2941,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2004049774</coreId>
+						<coreId>3380305216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -3235,8 +2949,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>240</item>
-					<item>241</item>
+					<item>227</item>
+					<item>228</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -3244,14 +2958,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>58</m_topoIndex>
+				<m_topoIndex>53</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_59">
+			<item class_id_reference="9" object_id="_54">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>59</id>
+						<id>54</id>
 						<name>trunc_ln68</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -3284,7 +2998,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>480</coreId>
+						<coreId>3380361800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3292,7 +3006,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>242</item>
+					<item>229</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -3300,15 +3014,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>59</m_topoIndex>
+				<m_topoIndex>54</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_60">
+			<item class_id_reference="9" object_id="_55">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>60</id>
-						<name>tmp_23</name>
+						<id>55</id>
+						<name>tmp_47</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
 						<lineNumber>69</lineNumber>
@@ -3340,7 +3054,293 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4015501752</coreId>
+						<coreId>3380363040</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>230</item>
+					<item>231</item>
+					<item>233</item>
+					<item>235</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>55</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_56">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>56</id>
+						<name>shl_ln5</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>69</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>69</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1886413614</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>236</item>
+					<item>237</item>
+					<item>238</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>56</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_57">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>57</id>
+						<name>zext_ln69</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>69</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>69</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>239</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>57</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_58">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>58</id>
+						<name>lshr_ln69</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>69</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>69</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380366768</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>240</item>
+					<item>241</item>
+				</oprand_edges>
+				<opcode>lshr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>58</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_59">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>59</id>
+						<name>trunc_ln69</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>69</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>69</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1162692948</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>242</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>59</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_60">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>60</id>
+						<name>tmp_48</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>70</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>70</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3379723792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3367,10 +3367,10 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>shl_ln12</name>
+						<name>shl_ln10</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<lineNumber>70</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -3386,7 +3386,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>69</second>
+										<second>70</second>
 									</item>
 								</second>
 							</item>
@@ -3425,292 +3425,6 @@
 					<Obj>
 						<type>0</type>
 						<id>62</id>
-						<name>zext_ln69</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>69</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>69</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>171847458</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>252</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>62</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_63">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>63</id>
-						<name>lshr_ln69</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>69</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>69</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>484846208</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>253</item>
-					<item>254</item>
-				</oprand_edges>
-				<opcode>lshr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>63</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_64">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>64</id>
-						<name>trunc_ln69</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>69</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>69</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4015459468</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>255</item>
-				</oprand_edges>
-				<opcode>trunc</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>64</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_65">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>65</id>
-						<name>tmp_24</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>70</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>70</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>256</item>
-					<item>257</item>
-					<item>259</item>
-					<item>261</item>
-				</oprand_edges>
-				<opcode>partselect</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>65</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_66">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>66</id>
-						<name>shl_ln13</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>70</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>70</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>484789584</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>262</item>
-					<item>263</item>
-					<item>264</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>66</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_67">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>67</id>
 						<name>zext_ln70</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -3743,7 +3457,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>622880884</coreId>
+						<coreId>784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -3751,7 +3465,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>265</item>
+					<item>252</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -3759,14 +3473,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>67</m_topoIndex>
+				<m_topoIndex>62</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_68">
+			<item class_id_reference="9" object_id="_63">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>68</id>
+						<id>63</id>
 						<name>lshr_ln70</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -3799,7 +3513,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>48</coreId>
+						<coreId>3380296656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -3807,8 +3521,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>266</item>
-					<item>267</item>
+					<item>253</item>
+					<item>254</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -3816,14 +3530,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>68</m_topoIndex>
+				<m_topoIndex>63</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_69">
+			<item class_id_reference="9" object_id="_64">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>69</id>
+						<id>64</id>
 						<name>trunc_ln70</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -3856,7 +3570,293 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484892928</coreId>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>255</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>64</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_65">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>65</id>
+						<name>tmp_49</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>71</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>71</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380404128</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>256</item>
+					<item>257</item>
+					<item>259</item>
+					<item>261</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>65</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_66">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>66</id>
+						<name>shl_ln11</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>71</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>71</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>7955819</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>262</item>
+					<item>263</item>
+					<item>264</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>66</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_67">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>67</id>
+						<name>zext_ln71</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>71</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>71</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380882592</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>265</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>67</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_68">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>68</id>
+						<name>lshr_ln71</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>71</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>71</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380884760</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>266</item>
+					<item>267</item>
+				</oprand_edges>
+				<opcode>lshr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>68</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_69">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>69</id>
+						<name>trunc_ln71</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>71</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>71</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>953721587</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3880,10 +3880,10 @@
 					<Obj>
 						<type>0</type>
 						<id>70</id>
-						<name>tmp_25</name>
+						<name>tmp_50</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -3899,7 +3899,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>72</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -3912,7 +3912,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4015467854</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3939,10 +3939,10 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>shl_ln14</name>
+						<name>shl_ln12</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>72</lineNumber>
+						<lineNumber>73</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -3958,7 +3958,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>72</second>
+										<second>73</second>
 									</item>
 								</second>
 							</item>
@@ -3971,7 +3971,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3380888512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>11</bitwidth>
@@ -3997,292 +3997,6 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>zext_ln72</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>72</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>72</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>224</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>278</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>72</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_73">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>73</id>
-						<name>lshr_ln72</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>72</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>72</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>279</item>
-					<item>280</item>
-				</oprand_edges>
-				<opcode>lshr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>73</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_74">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>74</id>
-						<name>trunc_ln72</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>72</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>72</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>281</item>
-				</oprand_edges>
-				<opcode>trunc</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>74</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_75">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>75</id>
-						<name>tmp_26</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>73</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>73</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>282</item>
-					<item>283</item>
-					<item>285</item>
-					<item>287</item>
-				</oprand_edges>
-				<opcode>partselect</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>75</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_76">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>76</id>
-						<name>shl_ln15</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>73</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>73</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>288</item>
-					<item>289</item>
-					<item>290</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>76</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_77">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>77</id>
 						<name>zext_ln73</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -4315,7 +4029,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484902464</coreId>
+						<coreId>941689236</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -4323,7 +4037,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>291</item>
+					<item>278</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -4331,14 +4045,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>77</m_topoIndex>
+				<m_topoIndex>72</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_78">
+			<item class_id_reference="9" object_id="_73">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>78</id>
+						<id>73</id>
 						<name>lshr_ln73</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -4371,7 +4085,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539110958</coreId>
+						<coreId>3379723792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -4379,8 +4093,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>292</item>
-					<item>293</item>
+					<item>279</item>
+					<item>280</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -4388,14 +4102,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>78</m_topoIndex>
+				<m_topoIndex>73</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_79">
+			<item class_id_reference="9" object_id="_74">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>79</id>
+						<id>74</id>
 						<name>trunc_ln73</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -4428,7 +4142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>757935405</coreId>
+						<coreId>942092442</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -4436,7 +4150,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>294</item>
+					<item>281</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -4444,15 +4158,15 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>79</m_topoIndex>
+				<m_topoIndex>74</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_80">
+			<item class_id_reference="9" object_id="_75">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>80</id>
-						<name>tmp_27</name>
+						<id>75</id>
+						<name>tmp_51</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
 						<lineNumber>74</lineNumber>
@@ -4484,7 +4198,293 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>151666223</coreId>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>282</item>
+					<item>283</item>
+					<item>285</item>
+					<item>287</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>75</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_76">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>76</id>
+						<name>shl_ln13</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>74</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>74</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>176</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>288</item>
+					<item>289</item>
+					<item>290</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>76</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_77">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>77</id>
+						<name>zext_ln74</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>74</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>74</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>942088747</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>291</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>77</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_78">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>78</id>
+						<name>lshr_ln74</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>74</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>74</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>176</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>292</item>
+					<item>293</item>
+				</oprand_edges>
+				<opcode>lshr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>78</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_79">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>79</id>
+						<name>trunc_ln74</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>74</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>74</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>224</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>294</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>79</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_80">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>80</id>
+						<name>tmp_52</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>75</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>75</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>942101436</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -4511,10 +4511,10 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>shl_ln16</name>
+						<name>shl_ln14</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>74</lineNumber>
+						<lineNumber>75</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -4530,7 +4530,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>74</second>
+										<second>75</second>
 									</item>
 								</second>
 							</item>
@@ -4569,292 +4569,6 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>zext_ln74</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>74</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>74</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1635000354</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>304</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>82</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_83">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>83</id>
-						<name>lshr_ln74</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>74</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>74</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1769104758</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2048</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>305</item>
-					<item>306</item>
-				</oprand_edges>
-				<opcode>lshr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>83</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_84">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>84</id>
-						<name>trunc_ln74</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>74</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>74</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1734439795</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>307</item>
-				</oprand_edges>
-				<opcode>trunc</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>84</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_85">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>85</id>
-						<name>tmp_28</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>75</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>75</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>691288122</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>308</item>
-					<item>309</item>
-					<item>311</item>
-					<item>313</item>
-				</oprand_edges>
-				<opcode>partselect</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>85</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_86">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>86</id>
-						<name>shl_ln17</name>
-						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
-						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>75</lineNumber>
-						<contextFuncName>aes_encrypt_block</contextFuncName>
-						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../hw-impl/src/pynqrypt.cpp</first>
-											<second>aes_encrypt_block</second>
-										</first>
-										<second>75</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1936942413</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>314</item>
-					<item>315</item>
-					<item>316</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>86</m_topoIndex>
-				<m_clusterGroupNumber>1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_87">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>87</id>
 						<name>zext_ln75</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -4887,7 +4601,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2003134838</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -4895,7 +4609,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>317</item>
+					<item>304</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -4903,14 +4617,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>87</m_topoIndex>
+				<m_topoIndex>82</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_88">
+			<item class_id_reference="9" object_id="_83">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>88</id>
+						<id>83</id>
 						<name>lshr_ln75</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -4943,7 +4657,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1970238047</coreId>
+						<coreId>840972800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -4951,8 +4665,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>318</item>
-					<item>319</item>
+					<item>305</item>
+					<item>306</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -4960,14 +4674,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>88</m_topoIndex>
+				<m_topoIndex>83</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_89">
+			<item class_id_reference="9" object_id="_84">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>89</id>
+						<id>84</id>
 						<name>trunc_ln75</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -5000,7 +4714,293 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1767252041</coreId>
+						<coreId>3380336640</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>307</item>
+				</oprand_edges>
+				<opcode>trunc</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>84</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_85">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>85</id>
+						<name>tmp_53</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>76</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>76</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>539110971</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>308</item>
+					<item>309</item>
+					<item>311</item>
+					<item>313</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>85</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_86">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>86</id>
+						<name>shl_ln15</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>76</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>76</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1852142194</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>314</item>
+					<item>315</item>
+					<item>316</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>86</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_87">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>87</id>
+						<name>zext_ln76</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>76</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>76</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380310088</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>317</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>87</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_88">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>88</id>
+						<name>lshr_ln76</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>76</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>76</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2048</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>318</item>
+					<item>319</item>
+				</oprand_edges>
+				<opcode>lshr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>88</m_topoIndex>
+				<m_clusterGroupNumber>1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_89">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>89</id>
+						<name>trunc_ln76</name>
+						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
+						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
+						<lineNumber>76</lineNumber>
+						<contextFuncName>aes_encrypt_block</contextFuncName>
+						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../hw-impl/src/pynqrypt.cpp</first>
+											<second>aes_encrypt_block</second>
+										</first>
+										<second>76</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3380312560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -5056,7 +5056,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330792532</coreId>
+						<coreId>942139607</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -5099,7 +5099,7 @@
 						<name>this_round_keys_addr_1</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>77</lineNumber>
+						<lineNumber>78</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -5115,7 +5115,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>77</second>
+										<second>78</second>
 									</item>
 								</second>
 							</item>
@@ -5128,7 +5128,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702127976</coreId>
+						<coreId>256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -5186,7 +5186,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1007225406</coreId>
+						<coreId>942081225</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -5243,7 +5243,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1313415680</coreId>
+						<coreId>3380315088</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -5268,10 +5268,10 @@
 					<Obj>
 						<type>0</type>
 						<id>94</id>
-						<name>_ln78</name>
+						<name>_ln79</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>78</lineNumber>
+						<lineNumber>79</lineNumber>
 						<contextFuncName>aes_encrypt_block</contextFuncName>
 						<contextNormFuncName>aes_encrypt_block</contextNormFuncName>
 						<inlineStackInfo>
@@ -5287,7 +5287,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>aes_encrypt_block</second>
 										</first>
-										<second>78</second>
+										<second>79</second>
 									</item>
 								</second>
 							</item>
@@ -5300,7 +5300,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1313415680</coreId>
+						<coreId>1007225406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5346,7 +5346,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484372864</coreId>
+						<coreId>3379550352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -5408,7 +5408,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1635000320</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5439,7 +5439,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852793632</coreId>
+						<coreId>575620686</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5470,7 +5470,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1881145423</coreId>
+						<coreId>2037672306</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5501,7 +5501,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869833586</coreId>
+						<coreId>151666223</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -5532,7 +5532,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>536879616</coreId>
+						<coreId>953715857</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2048</bitwidth>
@@ -5563,7 +5563,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825504049</coreId>
+						<coreId>542329928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5594,7 +5594,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>828330828</coreId>
+						<coreId>825504049</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5625,7 +5625,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1970561893</coreId>
+						<coreId>1851880563</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5656,7 +5656,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>574454117</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5687,7 +5687,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>32784</coreId>
+						<coreId>1667855457</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5718,7 +5718,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1864397423</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5749,7 +5749,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484960000</coreId>
+						<coreId>1629892910</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5780,7 +5780,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484806688</coreId>
+						<coreId>542329928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5811,7 +5811,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484959264</coreId>
+						<coreId>3380477504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5842,7 +5842,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>560</coreId>
+						<coreId>1734439968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5873,7 +5873,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1853190002</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5904,7 +5904,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1818191214</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5935,7 +5935,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1819307369</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5966,7 +5966,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484965416</coreId>
+						<coreId>1970238047</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5997,7 +5997,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484965944</coreId>
+						<coreId>1852402793</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6028,7 +6028,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484966552</coreId>
+						<coreId>1885432901</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6059,7 +6059,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4015405456</coreId>
+						<coreId>536888653</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6090,7 +6090,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4015639248</coreId>
+						<coreId>757935405</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6121,7 +6121,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1768715620</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6152,7 +6152,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1563504689</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6183,7 +6183,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484970272</coreId>
+						<coreId>1210187897</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6214,7 +6214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>942945838</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6245,7 +6245,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484965632</coreId>
+						<coreId>1702125923</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6276,7 +6276,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1701519360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6307,7 +6307,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484965632</coreId>
+						<coreId>1868767232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6338,7 +6338,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484965632</coreId>
+						<coreId>7955819</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6369,7 +6369,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484977184</coreId>
+						<coreId>570453615</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6400,7 +6400,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>484977664</coreId>
+						<coreId>757935405</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6431,7 +6431,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2037146996</coreId>
+						<coreId>1769239137</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -6465,7 +6465,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>996566128</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -7859,8 +7859,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>27</mMinLatency>
-			<mMaxLatency>27</mMaxLatency>
+			<mMinLatency>26</mMinLatency>
+			<mMaxLatency>26</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -7873,7 +7873,7 @@
 		<item class_id="27" tracking_level="0" version="0">
 			<first>3</first>
 			<second class_id="28" tracking_level="0" version="0">
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -7901,7 +7901,7 @@
 		<item>
 			<first>7</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>

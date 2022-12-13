@@ -18,27 +18,27 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>5.944</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.978</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>21</Best-caseLatency>
-<Average-caseLatency>21</Average-caseLatency>
-<Worst-caseLatency>21</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.210 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.210 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.210 us</Worst-caseRealTimeLatency>
-<Interval-min>21</Interval-min>
-<Interval-max>21</Interval-max>
+<Best-caseLatency>20</Best-caseLatency>
+<Average-caseLatency>20</Average-caseLatency>
+<Worst-caseLatency>20</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.200 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.200 us</Worst-caseRealTimeLatency>
+<Interval-min>20</Interval-min>
+<Interval-max>20</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <loop_aes_encrypt_block>
 <Slack>7.30</Slack>
 <TripCount>9</TripCount>
-<Latency>19</Latency>
-<AbsoluteTimeLatency>190</AbsoluteTimeLatency>
+<Latency>18</Latency>
+<AbsoluteTimeLatency>180</AbsoluteTimeLatency>
 <PipelineII>2</PipelineII>
-<PipelineDepth>4</PipelineDepth>
+<PipelineDepth>3</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </loop_aes_encrypt_block>
@@ -47,8 +47,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>522</FF>
-<LUT>104821</LUT>
+<FF>398</FF>
+<LUT>104835</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -174,8 +174,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>state_promoted_i_out</name>
-<Object>state_promoted_i_out</Object>
+<name>t_out</name>
+<Object>t_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -185,8 +185,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>state_promoted_i_out_ap_vld</name>
-<Object>state_promoted_i_out</Object>
+<name>t_out_ap_vld</name>
+<Object>t_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>

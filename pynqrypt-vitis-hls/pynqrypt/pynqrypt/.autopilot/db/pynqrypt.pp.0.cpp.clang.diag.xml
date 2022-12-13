@@ -89,7 +89,23 @@
       <key>filename</key>
       <string>../hw-impl/src/pynqrypt.cpp</string>
       <key>line</key>
-      <integer>82</integer>
+      <integer>49</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=aes_encrypt_block_XLX_SEP_ PragmaOptions=style=frp_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../hw-impl/src/pynqrypt.cpp</string>
+      <key>line</key>
+      <integer>83</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,7 +121,7 @@
       <key>filename</key>
       <string>../hw-impl/src/pynqrypt.cpp</string>
       <key>line</key>
-      <integer>117</integer>
+      <integer>118</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -121,7 +137,7 @@
       <key>filename</key>
       <string>../hw-impl/src/pynqrypt.cpp</string>
       <key>line</key>
-      <integer>118</integer>
+      <integer>119</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -137,7 +153,7 @@
       <key>filename</key>
       <string>../hw-impl/src/pynqrypt.cpp</string>
       <key>line</key>
-      <integer>158</integer>
+      <integer>159</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -153,7 +169,7 @@
       <key>filename</key>
       <string>../hw-impl/src/pynqrypt.cpp</string>
       <key>line</key>
-      <integer>205</integer>
+      <integer>206</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

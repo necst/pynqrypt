@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'aes_generate_round_keys'" level="0">
-<item name = "Date">Tue Dec 13 20:14:35 2022
+<item name = "Date">Tue Dec 13 20:52:10 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt</item>
@@ -32,7 +32,7 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46">aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys, 82, 82, 0.820 us, 0.820 us, 82, 82, no</column>
-<column name="grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1_fu_54">aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_179_1_fu_54">aes_generate_round_keys_Pipeline_VITIS_LOOP_179_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

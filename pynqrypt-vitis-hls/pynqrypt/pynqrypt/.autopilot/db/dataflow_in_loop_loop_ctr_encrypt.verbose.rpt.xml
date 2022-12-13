@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_loop_ctr_encrypt'" level="0">
-<item name = "Date">Tue Dec 13 20:14:39 2022
+<item name = "Date">Tue Dec 13 20:52:15 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">pynqrypt</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.532 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">27, 27, 0.270 us, 0.270 us, 28, 28, dataflow</column>
+<column name="">26, 26, 0.260 us, 0.260 us, 27, 27, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -34,7 +34,7 @@
 <column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="ctr_compute_nonce_U0">ctr_compute_nonce, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="assign_swap_endianness_U0">assign_swap_endianness, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
-<column name="aes_encrypt_block_U0">aes_encrypt_block, 27, 27, 0.270 us, 0.270 us, 27, 27, no</column>
+<column name="aes_encrypt_block_U0">aes_encrypt_block, 26, 26, 0.260 us, 0.260 us, 26, 26, no</column>
 <column name="ctr_xor_block_U0">ctr_xor_block, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="assign_swap_endianness_1_U0">assign_swap_endianness_1, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
 </table>
@@ -55,7 +55,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 22, -</column>
 <column name="FIFO">-, -, 594, 407, -</column>
-<column name="Instance">-, -, 1444, 140434, -</column>
+<column name="Instance">-, -, 1320, 140448, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 36, -</column>
 <column name="Register">-, -, 4, -, -</column>
@@ -67,7 +67,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="aes_encrypt_block_U0">aes_encrypt_block, 0, 0, 787, 139900, 0</column>
+<column name="aes_encrypt_block_U0">aes_encrypt_block, 0, 0, 663, 139914, 0</column>
 <column name="assign_swap_endianness_U0">assign_swap_endianness, 0, 0, 198, 171, 0</column>
 <column name="assign_swap_endianness_1_U0">assign_swap_endianness_1, 0, 0, 197, 175, 0</column>
 <column name="ctr_compute_nonce_U0">ctr_compute_nonce, 0, 0, 130, 20, 0</column>

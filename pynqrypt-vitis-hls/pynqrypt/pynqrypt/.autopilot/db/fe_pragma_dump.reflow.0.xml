@@ -25,7 +25,7 @@
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>& ap_range_ref<128, false>::operator=<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<128>::ap_uint()" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<96>::ap_uint()" off="0" region="0" recursive="0"/>
-<pragma file="../hw-impl/src/pynqrypt.cpp" line="158" pragmaType="array_reshape" parentfunction="aes_generate_round_keys" dim="1" factor="0" mode="complete" variable="_round_key"/>
+<pragma file="../hw-impl/src/pynqrypt.cpp" line="159" pragmaType="array_reshape" parentfunction="aes_generate_round_keys" dim="1" factor="0" mode="complete" variable="_round_key"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint()" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(int)" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="1045" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
@@ -53,11 +53,13 @@
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="357" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<128, false>(ap_range_ref<128, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="626" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="175" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="303" pragmaType="inline" parentfunction="ap_range_ref<128, false>::ap_range_ref(ap_int_base<128, false>*, int, int)" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="175" pragmaType="inline" parentfunction="ap_int_base<96, false>::ap_int_base()" off="0" region="0" recursive="0"/>
-<pragma file="../hw-impl/src/pynqrypt.cpp" line="205" pragmaType="unroll" parentfunction="assign_swap_endianness" factor="-1" skip_exit_check="0"/>
+<pragma file="../hw-impl/src/pynqrypt.cpp" line="206" pragmaType="unroll" parentfunction="assign_swap_endianness" factor="-1" skip_exit_check="0"/>
 <pragma file="../hw-impl/src/pynqrypt.cpp" line="20" pragmaType="loop_tripcount" parentfunction="ctr_encrypt" min="1024" max="1024" avg="1024"/>
 <pragma file="../hw-impl/src/pynqrypt.cpp" line="19" pragmaType="dataflow" parentfunction="ctr_encrypt" disable_start_propagation="0"/>
+<pragma file="../hw-impl/src/pynqrypt.cpp" line="49" pragmaType="pipeline" parentfunction="aes_encrypt_block" off="0" ii="-1" rewind="0" style="frp"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="315" pragmaType="inline" parentfunction="ap_range_ref<128, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="1499" pragmaType="inline" parentfunction="ap_int_base<128, false>::RType<128, false>::logic operator^<128, false, 128, false>(ap_int_base<128, false> const&, ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="214" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
@@ -78,12 +80,11 @@
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<32, false>::ssdm_int()" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="lrotate" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<128, false>::ssdm_int()" off="0" region="0" recursive="0"/>
-<pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<96, false>::ssdm_int()" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>& ap_int_base<128, false>::operator^=<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
-<pragma file="../hw-impl/src/pynqrypt.cpp" line="82" pragmaType="array_reshape" parentfunction="aes_sub_bytes" dim="1" factor="0" mode="complete" variable="_ZN6cryptoL8aes_sboxE"/>
-<pragma file="../hw-impl/src/pynqrypt.cpp" line="117" pragmaType="array_reshape" parentfunction="aes_mix_columns" dim="1" factor="0" mode="complete" variable="_ZN6cryptoL8aes_mul2E"/>
-<pragma file="../hw-impl/src/pynqrypt.cpp" line="118" pragmaType="array_reshape" parentfunction="aes_mix_columns" dim="1" factor="0" mode="complete" variable="_ZN6cryptoL8aes_mul3E"/>
+<pragma file="../hw-impl/src/pynqrypt.cpp" line="83" pragmaType="array_reshape" parentfunction="aes_sub_bytes" dim="1" factor="0" mode="complete" variable="_ZN6cryptoL8aes_sboxE"/>
+<pragma file="../hw-impl/src/pynqrypt.cpp" line="118" pragmaType="array_reshape" parentfunction="aes_mix_columns" dim="1" factor="0" mode="complete" variable="_ZN6cryptoL8aes_mul2E"/>
+<pragma file="../hw-impl/src/pynqrypt.cpp" line="119" pragmaType="array_reshape" parentfunction="aes_mix_columns" dim="1" factor="0" mode="complete" variable="_ZN6cryptoL8aes_mul3E"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::operator=(unsigned char)" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>& ap_range_ref<128, false>::operator=<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>

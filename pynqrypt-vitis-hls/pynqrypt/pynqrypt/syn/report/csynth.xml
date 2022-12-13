@@ -15,25 +15,25 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.532</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>28775</Best-caseLatency>
-            <Average-caseLatency>28775</Average-caseLatency>
-            <Worst-caseLatency>28775</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.288 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.288 ms</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.288 ms</Worst-caseRealTimeLatency>
-            <Interval-min>28776</Interval-min>
-            <Interval-max>28776</Interval-max>
+            <Best-caseLatency>27751</Best-caseLatency>
+            <Average-caseLatency>27751</Average-caseLatency>
+            <Worst-caseLatency>27751</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.278 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.278 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.278 ms</Worst-caseRealTimeLatency>
+            <Interval-min>27752</Interval-min>
+            <Interval-max>27752</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>4</BRAM_18K>
-            <FF>14905</FF>
-            <LUT>204424</LUT>
+            <FF>14781</FF>
+            <LUT>204438</LUT>
             <URAM>0</URAM>
             <DSP>0</DSP>
         </Resources>
@@ -822,14 +822,14 @@
                             <ModuleName>aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>46</ID>
-                            <BindInstances>add_ln166_fu_145_p2 add_ln170_fu_161_p2 add_ln172_fu_184_p2 add_ln173_fu_377_p2 add_ln174_fu_440_p2 add_ln174_1_fu_462_p2 add_ln165_fu_530_p2 crypto_aes_rcon_U</BindInstances>
+                            <BindInstances>add_ln167_fu_145_p2 add_ln171_fu_161_p2 add_ln173_fu_184_p2 add_ln174_fu_377_p2 add_ln175_fu_440_p2 add_ln175_1_fu_462_p2 add_ln166_fu_530_p2 crypto_aes_rcon_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1_fu_54</InstName>
-                            <ModuleName>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</ModuleName>
+                            <InstName>grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_179_1_fu_54</InstName>
+                            <ModuleName>aes_generate_round_keys_Pipeline_VITIS_LOOP_179_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>54</ID>
-                            <BindInstances>add_ln186_fu_109_p2 add_ln178_fu_115_p2</BindInstances>
+                            <BindInstances>add_ln186_fu_109_p2 add_ln179_fu_115_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                 </Instance>
@@ -875,7 +875,15 @@
                                             <ModuleName>aes_encrypt_block_Pipeline_loop_aes_encrypt_block</ModuleName>
                                             <IsCompInst>true</IsCompInst>
                                             <ID>117</ID>
-                                            <BindInstances>add_ln48_fu_166_p2</BindInstances>
+                                            <InstancesList>
+                                                <Instance>
+                                                    <InstName>call_ret_aes_mix_columns_fu_142</InstName>
+                                                    <ModuleName>aes_mix_columns</ModuleName>
+                                                    <IsCompInst>true</IsCompInst>
+                                                    <ID>142</ID>
+                                                </Instance>
+                                            </InstancesList>
+                                            <BindInstances>add_ln48_fu_707_p2</BindInstances>
                                         </Instance>
                                     </InstancesList>
                                 </Instance>
@@ -957,20 +965,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln166_fu_145_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:166" URAM="0" VARIABLE="add_ln166"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln170_fu_161_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:170" URAM="0" VARIABLE="add_ln170"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln172_fu_184_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:172" URAM="0" VARIABLE="add_ln172"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln173_fu_377_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:173" URAM="0" VARIABLE="add_ln173"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln174_fu_440_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:174" URAM="0" VARIABLE="add_ln174"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln174_1_fu_462_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:174" URAM="0" VARIABLE="add_ln174_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln165_fu_530_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:165" URAM="0" VARIABLE="add_ln165"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln167_fu_145_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:167" URAM="0" VARIABLE="add_ln167"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln171_fu_161_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:171" URAM="0" VARIABLE="add_ln171"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln173_fu_184_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:173" URAM="0" VARIABLE="add_ln173"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln174_fu_377_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:174" URAM="0" VARIABLE="add_ln174"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln175_fu_440_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:175" URAM="0" VARIABLE="add_ln175"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln175_1_fu_462_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:175" URAM="0" VARIABLE="add_ln175_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_generate_round_keys" OPTYPE="add" PRAGMA="" RTLNAME="add_ln166_fu_530_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:166" URAM="0" VARIABLE="add_ln166"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="crypto_aes_rcon_U" SOURCE="" URAM="0" VARIABLE="crypto_aes_rcon"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1</Name>
+            <Name>aes_generate_round_keys_Pipeline_VITIS_LOOP_179_1</Name>
             <Loops>
-                <VITIS_LOOP_178_1/>
+                <VITIS_LOOP_179_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -989,8 +997,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_178_1>
-                        <Name>VITIS_LOOP_178_1</Name>
+                    <VITIS_LOOP_179_1>
+                        <Name>VITIS_LOOP_179_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>11</TripCount>
                         <Latency>12</Latency>
@@ -999,7 +1007,7 @@
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_178_1>
+                    </VITIS_LOOP_179_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1022,8 +1030,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_178_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_109_p2" SOURCE="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186" URAM="0" VARIABLE="add_ln186"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_178_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln178_fu_115_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:178" URAM="0" VARIABLE="add_ln178"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_179_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_109_p2" SOURCE="/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186" URAM="0" VARIABLE="add_ln186"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_179_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln179_fu_115_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:179" URAM="0" VARIABLE="add_ln179"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1186,6 +1194,47 @@
             </AreaEstimates>
         </Module>
         <Module>
+            <Name>aes_mix_columns</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>5.944</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>69856</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>131</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
             <Name>aes_encrypt_block_Pipeline_loop_aes_encrypt_block</Name>
             <Loops>
                 <loop_aes_encrypt_block/>
@@ -1194,16 +1243,16 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>5.944</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.978</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>21</Best-caseLatency>
-                    <Average-caseLatency>21</Average-caseLatency>
-                    <Worst-caseLatency>21</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.210 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.210 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.210 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>21</PipelineInitiationInterval>
+                    <Best-caseLatency>20</Best-caseLatency>
+                    <Average-caseLatency>20</Average-caseLatency>
+                    <Worst-caseLatency>20</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.200 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.200 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>20</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -1211,21 +1260,23 @@
                         <Name>loop_aes_encrypt_block</Name>
                         <Slack>7.30</Slack>
                         <TripCount>9</TripCount>
-                        <Latency>19</Latency>
-                        <AbsoluteTimeLatency>0.190 us</AbsoluteTimeLatency>
+                        <Latency>18</Latency>
+                        <AbsoluteTimeLatency>0.180 us</AbsoluteTimeLatency>
                         <PipelineII>2</PipelineII>
-                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
-                        <InstanceList/>
+                        <InstanceList>
+                            <Instance>call_ret_aes_mix_columns_fu_142</Instance>
+                        </InstanceList>
                     </loop_aes_encrypt_block>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>522</FF>
+                    <FF>398</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>104821</LUT>
+                    <LUT>104835</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>197</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1240,7 +1291,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_encrypt_block" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_166_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:48" URAM="0" VARIABLE="add_ln48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_aes_encrypt_block" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_707_p2" SOURCE="../hw-impl/src/pynqrypt.cpp:48" URAM="0" VARIABLE="add_ln48"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1249,25 +1300,25 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>6.256</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.532</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>27</Best-caseLatency>
-                    <Average-caseLatency>27</Average-caseLatency>
-                    <Worst-caseLatency>27</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.270 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.270 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.270 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>27</PipelineInitiationInterval>
+                    <Best-caseLatency>26</Best-caseLatency>
+                    <Average-caseLatency>26</Average-caseLatency>
+                    <Worst-caseLatency>26</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.260 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.260 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.260 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>26</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>787</FF>
+                    <FF>663</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>139900</LUT>
+                    <LUT>139914</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>262</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1369,26 +1420,26 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.532</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>27</Best-caseLatency>
-                    <Average-caseLatency>27</Average-caseLatency>
-                    <Worst-caseLatency>27</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.270 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.270 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.270 us</Worst-caseRealTimeLatency>
-                    <DataflowPipelineThroughput>28</DataflowPipelineThroughput>
-                    <PipelineInitiationInterval>28</PipelineInitiationInterval>
+                    <Best-caseLatency>26</Best-caseLatency>
+                    <Average-caseLatency>26</Average-caseLatency>
+                    <Worst-caseLatency>26</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.260 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.260 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.260 us</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>27</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>27</PipelineInitiationInterval>
                     <PipelineType>dataflow</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>2042</FF>
+                    <FF>1918</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>140899</LUT>
+                    <LUT>140913</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>264</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1420,16 +1471,16 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.532</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>28673</Best-caseLatency>
-                    <Average-caseLatency>28673</Average-caseLatency>
-                    <Worst-caseLatency>28673</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.287 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.287 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.287 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>28673</PipelineInitiationInterval>
+                    <Best-caseLatency>27649</Best-caseLatency>
+                    <Average-caseLatency>27649</Average-caseLatency>
+                    <Worst-caseLatency>27649</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.276 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.276 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.276 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>27649</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -1437,10 +1488,10 @@
                         <Name>loop_ctr_encrypt</Name>
                         <Slack>7.30</Slack>
                         <TripCount>1024</TripCount>
-                        <Latency>28672</Latency>
-                        <AbsoluteTimeLatency>0.287 ms</AbsoluteTimeLatency>
-                        <DataflowPipelineThroughput>28</DataflowPipelineThroughput>
-                        <PipelineDepth>28672</PipelineDepth>
+                        <Latency>27648</Latency>
+                        <AbsoluteTimeLatency>0.276 ms</AbsoluteTimeLatency>
+                        <DataflowPipelineThroughput>27</DataflowPipelineThroughput>
+                        <PipelineDepth>27648</PipelineDepth>
                         <PipelineType>dataflow</PipelineType>
                         <InstanceList>
                             <Instance>dataflow_in_loop_loop_ctr_encrypt_U0</Instance>
@@ -1450,10 +1501,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>2984</FF>
+                    <FF>2860</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>2</UTIL_FF>
-                    <LUT>141109</LUT>
+                    <LUT>141123</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>265</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1474,16 +1525,16 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.532</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>28775</Best-caseLatency>
-                    <Average-caseLatency>28775</Average-caseLatency>
-                    <Worst-caseLatency>28775</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.288 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.288 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.288 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>28776</PipelineInitiationInterval>
+                    <Best-caseLatency>27751</Best-caseLatency>
+                    <Average-caseLatency>27751</Average-caseLatency>
+                    <Worst-caseLatency>27751</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.278 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.278 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.278 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>27752</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -1492,10 +1543,10 @@
                     <BRAM_18K>4</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>1</UTIL_BRAM>
-                    <FF>14905</FF>
+                    <FF>14781</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>14</UTIL_FF>
-                    <LUT>204424</LUT>
+                    <UTIL_FF>13</UTIL_FF>
+                    <LUT>204438</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>384</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1874,11 +1925,12 @@
     <PragmaReport>
         <Pragma type="dataflow" location="../hw-impl/src/pynqrypt.cpp:19" status="valid" parentFunction="ctr_encrypt" variable="" isDirective="0" options=""/>
         <Pragma type="loop_tripcount" location="../hw-impl/src/pynqrypt.cpp:20" status="valid" parentFunction="ctr_encrypt" variable="" isDirective="0" options="min=1024 max=1024 avg=1024"/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:82" status="valid" parentFunction="aes_sub_bytes" variable="aes_sbox" isDirective="0" options="variable=aes_sbox type=complete dim=1"/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:117" status="valid" parentFunction="aes_mix_columns" variable="aes_mul2" isDirective="0" options="variable=aes_mul2 type=complete"/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:118" status="valid" parentFunction="aes_mix_columns" variable="aes_mul3" isDirective="0" options="variable=aes_mul3 type=complete"/>
-        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:158" status="valid" parentFunction="aes_generate_round_keys" variable="_round_key" isDirective="0" options="variable=_round_key type=complete"/>
-        <Pragma type="unroll" location="../hw-impl/src/pynqrypt.cpp:205" status="valid" parentFunction="assign_swap_endianness" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../hw-impl/src/pynqrypt.cpp:49" status="valid" parentFunction="aes_encrypt_block" variable="" isDirective="0" options="style=frp"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:83" status="valid" parentFunction="aes_sub_bytes" variable="aes_sbox" isDirective="0" options="variable=aes_sbox type=complete dim=1"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:118" status="valid" parentFunction="aes_mix_columns" variable="aes_mul2" isDirective="0" options="variable=aes_mul2 type=complete"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:119" status="valid" parentFunction="aes_mix_columns" variable="aes_mul3" isDirective="0" options="variable=aes_mul3 type=complete"/>
+        <Pragma type="array_reshape" location="../hw-impl/src/pynqrypt.cpp:159" status="valid" parentFunction="aes_generate_round_keys" variable="_round_key" isDirective="0" options="variable=_round_key type=complete"/>
+        <Pragma type="unroll" location="../hw-impl/src/pynqrypt.cpp:206" status="valid" parentFunction="assign_swap_endianness" variable="" isDirective="0" options=""/>
         <Pragma type="interface" location="../hw-impl/src/pynqrypt_hls.cpp:10" status="valid" parentFunction="pynqrypt_encrypt" variable="plaintext" isDirective="0" options="mode=m_axi port=plaintext offset=slave bundle=gmem depth=1024"/>
         <Pragma type="interface" location="../hw-impl/src/pynqrypt_hls.cpp:11" status="valid" parentFunction="pynqrypt_encrypt" variable="ciphertext" isDirective="0" options="mode=m_axi port=ciphertext offset=slave bundle=gmem depth=1024"/>
         <Pragma type="interface" location="../hw-impl/src/pynqrypt_hls.cpp:13" status="valid" parentFunction="pynqrypt_encrypt" variable="key" isDirective="0" options="mode=s_axilite port=key bundle=control"/>
