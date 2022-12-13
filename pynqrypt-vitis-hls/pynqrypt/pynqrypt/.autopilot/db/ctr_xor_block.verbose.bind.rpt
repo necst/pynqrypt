@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'ctr_xor_block'
 ================================================================
-* Date:           Tue Dec 13 19:17:20 2022
+* Date:           Tue Dec 13 20:14:36 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt
@@ -78,7 +78,7 @@ State 1 <SV = 0> <Delay = 4.66>
 ST_1 : Operation 2 [1/1] (3.63ns)   --->   "%p_read_2 = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read2"   --->   Operation 2 'read' 'p_read_2' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
 ST_1 : Operation 3 [1/1] (3.63ns)   --->   "%p_read_3 = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read"   --->   Operation 3 'read' 'p_read_3' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
 ST_1 : Operation 4 [1/1] (1.03ns)   --->   "%xor_ln859 = xor i128 %p_read_3, i128 %p_read_2"   --->   Operation 4 'xor' 'xor_ln859' <Predicate = true> <Delay = 1.03> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.03> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ret_ln25 = ret i128 %xor_ln859" [../hw-impl/src/pynqrypt.cpp:25]   --->   Operation 5 'ret' 'ret_ln25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ret_ln26 = ret i128 %xor_ln859" [../hw-impl/src/pynqrypt.cpp:26]   --->   Operation 5 'ret' 'ret_ln26' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -103,7 +103,7 @@ Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; ex
 p_read_2  (read) [ 00]
 p_read_3  (read) [ 00]
 xor_ln859 (xor ) [ 00]
-ret_ln25  (ret ) [ 00]
+ret_ln26  (ret ) [ 00]
 </LifeTime>
 
 <model>

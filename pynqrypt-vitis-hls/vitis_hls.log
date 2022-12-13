@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'mrindeciso' on host 'mrindeciso-MS-7C91' (Linux_x86_64 version 5.15.0-56-generic) on Tue Dec 13 19:17:30 CET 2022
+INFO: [HLS 200-10] For user 'mrindeciso' on host 'mrindeciso-MS-7C91' (Linux_x86_64 version 5.15.0-56-generic) on Tue Dec 13 20:14:46 CET 2022
 INFO: [HLS 200-10] On os Ubuntu 22.04.1 LTS
 INFO: [HLS 200-10] In directory '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls'
 Sourcing Tcl script '/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/cosim.tcl'
@@ -38,7 +38,7 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: source ./pynqrypt/pynqrypt/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name pynqrypt_encrypt pynqrypt_encrypt 
 INFO: [HLS 200-1510] Running: cosim_design 
-Running Dispatch Server on port: 45897
+Running Dispatch Server on port: 40271
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
    Build using "/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
@@ -76,8 +76,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/py
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_aes_generate_round_keys.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pynqrypt_encrypt_aes_generate_round_keys
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt_entry_proc.v" into library xil_defaultlib
@@ -229,14 +229,14 @@ source pynqrypt_encrypt.tcl
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 1 [n/a] @ "125000"
-// RTL Simulation : 1 / 1 [n/a] @ "278675000"
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "278675000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 278735 ns : File "/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls/pynqrypt/pynqrypt/sim/verilog/pynqrypt_encrypt.autotb.v" Line 443
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Dec 13 19:18:03 2022...
+INFO: [Common 17-206] Exiting xsim at Tue Dec 13 20:15:19 2022...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 30.89 seconds. CPU system time: 1.28 seconds. Elapsed time: 22.61 seconds; current allocated memory: 16.578 MB.
-INFO: [HLS 200-112] Total CPU user time: 31.77 seconds. Total CPU system time: 1.41 seconds. Total elapsed time: 33.51 seconds; peak allocated memory: 218.355 MB.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 30.58 seconds. CPU system time: 1.44 seconds. Elapsed time: 22.26 seconds; current allocated memory: 16.332 MB.
+INFO: [HLS 200-112] Total CPU user time: 31.48 seconds. Total CPU system time: 1.54 seconds. Total elapsed time: 33.16 seconds; peak allocated memory: 218.109 MB.

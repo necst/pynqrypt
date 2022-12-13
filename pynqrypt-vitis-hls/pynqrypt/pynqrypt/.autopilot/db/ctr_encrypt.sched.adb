@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1022248080</coreId>
+						<coreId>485920720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>96</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1022514656</coreId>
+						<coreId>485197008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1022576944</coreId>
+						<coreId>486290784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>60</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>4015184896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1023010984</coreId>
+						<coreId>485197008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3422168238</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -268,7 +268,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>485443456</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -276,8 +276,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>27</item>
 					<item>28</item>
+					<item>29</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -325,7 +325,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>4015949636</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -333,8 +333,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>29</item>
 					<item>30</item>
+					<item>31</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -382,7 +382,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>60</bitwidth>
@@ -390,8 +390,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>32</item>
 					<item>33</item>
+					<item>34</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -439,7 +439,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>485443712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>96</bitwidth>
@@ -447,8 +447,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>35</item>
 					<item>36</item>
+					<item>37</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -496,7 +496,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -504,7 +504,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>37</item>
+					<item>38</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1865577955</coreId>
+						<coreId>484643984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>60</bitwidth>
@@ -546,10 +546,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>39</item>
 					<item>40</item>
 					<item>41</item>
 					<item>42</item>
+					<item>43</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -597,7 +597,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1362038054</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -605,8 +605,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>43</item>
 					<item>44</item>
+					<item>45</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -654,7 +654,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1019406192</coreId>
+						<coreId>485756616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>60</bitwidth>
@@ -662,8 +662,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>45</item>
-					<item>47</item>
+					<item>46</item>
+					<item>48</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -711,7 +711,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>485786160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -719,9 +719,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>48</item>
 					<item>49</item>
 					<item>50</item>
+					<item>51</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -736,11 +736,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>21</id>
-						<name>_ln26</name>
+						<id>22</id>
+						<name>_ln27</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>ctr_encrypt</contextFuncName>
 						<contextNormFuncName>ctr_encrypt</contextNormFuncName>
 						<inlineStackInfo>
@@ -756,7 +756,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>ctr_encrypt</second>
 										</first>
-										<second>26</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -769,7 +769,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3418433022</coreId>
+						<coreId>484643984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -777,13 +777,13 @@
 				<oprand_edges>
 					<count>7</count>
 					<item_version>0</item_version>
-					<item>52</item>
 					<item>53</item>
 					<item>54</item>
 					<item>55</item>
 					<item>56</item>
 					<item>57</item>
 					<item>58</item>
+					<item>59</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -798,7 +798,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>22</id>
+						<id>23</id>
 						<name>br_ln18</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
@@ -831,7 +831,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1022978800</coreId>
+						<coreId>1414419794</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -839,7 +839,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>59</item>
+					<item>60</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -854,11 +854,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>24</id>
-						<name>_ln28</name>
+						<id>25</id>
+						<name>_ln29</name>
 						<fileName>../hw-impl/src/pynqrypt.cpp</fileName>
 						<fileDirectory>/home/mrindeciso/Documents/pynqrypt/pynqrypt-vitis-hls</fileDirectory>
-						<lineNumber>28</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>ctr_encrypt</contextFuncName>
 						<contextNormFuncName>ctr_encrypt</contextNormFuncName>
 						<inlineStackInfo>
@@ -874,7 +874,7 @@
 											<first>../hw-impl/src/pynqrypt.cpp</first>
 											<second>ctr_encrypt</second>
 										</first>
-										<second>28</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -887,7 +887,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>484610928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -913,7 +913,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>38</id>
+						<id>39</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -932,7 +932,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1022458352</coreId>
+						<coreId>6775156</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>60</bitwidth>
@@ -944,7 +944,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>46</id>
+						<id>47</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -963,7 +963,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1022458064</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>60</bitwidth>
@@ -975,7 +975,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>51</id>
+						<id>52</id>
 						<name>dataflow_in_loop_loop_ctr_encrypt</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -994,7 +994,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1063,7 +1063,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>5</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1078,7 +1078,7 @@
 			<item class_id_reference="18" object_id="_24">
 				<Obj>
 					<type>3</type>
-					<id>23</id>
+					<id>24</id>
 					<name>for.inc</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -1097,20 +1097,20 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1022038448</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>21</item>
 					<item>22</item>
+					<item>23</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_25">
 				<Obj>
 					<type>3</type>
-					<id>25</id>
+					<id>26</id>
 					<name>for.end</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -1129,13 +1129,13 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>108</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>24</item>
+					<item>25</item>
 				</node_objs>
 			</item>
 		</blocks>
@@ -1143,198 +1143,198 @@
 			<count>28</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_26">
-				<id>28</id>
+				<id>29</id>
 				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
 				<sink_obj>8</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_27">
-				<id>30</id>
+				<id>31</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>9</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_28">
-				<id>33</id>
+				<id>34</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
 				<sink_obj>10</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_29">
-				<id>36</id>
+				<id>37</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
 				<sink_obj>11</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_30">
-				<id>37</id>
+				<id>38</id>
 				<edge_type>2</edge_type>
 				<source_obj>19</source_obj>
 				<sink_obj>12</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_31">
-				<id>39</id>
+				<id>40</id>
 				<edge_type>1</edge_type>
-				<source_obj>38</source_obj>
+				<source_obj>39</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_32">
-				<id>40</id>
+				<id>41</id>
 				<edge_type>2</edge_type>
 				<source_obj>13</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_33">
-				<id>41</id>
+				<id>42</id>
 				<edge_type>1</edge_type>
 				<source_obj>17</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_34">
-				<id>42</id>
+				<id>43</id>
 				<edge_type>2</edge_type>
-				<source_obj>23</source_obj>
+				<source_obj>24</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_35">
-				<id>43</id>
+				<id>44</id>
 				<edge_type>1</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>15</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_36">
-				<id>44</id>
+				<id>45</id>
 				<edge_type>1</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>15</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_37">
-				<id>45</id>
+				<id>46</id>
 				<edge_type>1</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>17</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_38">
-				<id>47</id>
+				<id>48</id>
 				<edge_type>1</edge_type>
-				<source_obj>46</source_obj>
+				<source_obj>47</source_obj>
 				<sink_obj>17</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_39">
-				<id>48</id>
+				<id>49</id>
 				<edge_type>1</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>18</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_40">
-				<id>49</id>
+				<id>50</id>
 				<edge_type>2</edge_type>
-				<source_obj>23</source_obj>
+				<source_obj>24</source_obj>
 				<sink_obj>18</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_41">
-				<id>50</id>
+				<id>51</id>
 				<edge_type>2</edge_type>
-				<source_obj>25</source_obj>
+				<source_obj>26</source_obj>
 				<sink_obj>18</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_42">
-				<id>52</id>
-				<edge_type>1</edge_type>
-				<source_obj>51</source_obj>
-				<sink_obj>21</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_43">
 				<id>53</id>
 				<edge_type>1</edge_type>
-				<source_obj>4</source_obj>
-				<sink_obj>21</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_44">
-				<id>54</id>
-				<edge_type>1</edge_type>
-				<source_obj>14</source_obj>
-				<sink_obj>21</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_45">
-				<id>55</id>
-				<edge_type>1</edge_type>
-				<source_obj>9</source_obj>
-				<sink_obj>21</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_46">
-				<id>56</id>
-				<edge_type>1</edge_type>
-				<source_obj>11</source_obj>
-				<sink_obj>21</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_47">
-				<id>57</id>
-				<edge_type>1</edge_type>
-				<source_obj>2</source_obj>
-				<sink_obj>21</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_48">
-				<id>58</id>
-				<edge_type>1</edge_type>
-				<source_obj>8</source_obj>
-				<sink_obj>21</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_49">
-				<id>59</id>
-				<edge_type>2</edge_type>
-				<source_obj>19</source_obj>
+				<source_obj>52</source_obj>
 				<sink_obj>22</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
+			<item class_id_reference="20" object_id="_43">
+				<id>54</id>
+				<edge_type>1</edge_type>
+				<source_obj>4</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_44">
+				<id>55</id>
+				<edge_type>1</edge_type>
+				<source_obj>14</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_45">
+				<id>56</id>
+				<edge_type>1</edge_type>
+				<source_obj>9</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_46">
+				<id>57</id>
+				<edge_type>1</edge_type>
+				<source_obj>11</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_47">
+				<id>58</id>
+				<edge_type>1</edge_type>
+				<source_obj>2</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_48">
+				<id>59</id>
+				<edge_type>1</edge_type>
+				<source_obj>8</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_49">
+				<id>60</id>
+				<edge_type>2</edge_type>
+				<source_obj>19</source_obj>
+				<sink_obj>23</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
 			<item class_id_reference="20" object_id="_50">
-				<id>101</id>
+				<id>108</id>
 				<edge_type>2</edge_type>
 				<source_obj>13</source_obj>
 				<sink_obj>19</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_51">
-				<id>102</id>
+				<id>109</id>
 				<edge_type>2</edge_type>
 				<source_obj>19</source_obj>
-				<sink_obj>25</sink_obj>
+				<sink_obj>26</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_52">
-				<id>103</id>
+				<id>110</id>
 				<edge_type>2</edge_type>
 				<source_obj>19</source_obj>
-				<sink_obj>23</sink_obj>
+				<sink_obj>24</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_53">
-				<id>104</id>
+				<id>111</id>
 				<edge_type>2</edge_type>
-				<source_obj>23</source_obj>
+				<source_obj>24</source_obj>
 				<sink_obj>19</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
@@ -1363,8 +1363,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>-1</mMinLatency>
-			<mMaxLatency>-1</mMaxLatency>
+			<mMinLatency>28673</mMinLatency>
+			<mMaxLatency>28673</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -1404,14 +1404,14 @@
 				<count>2</count>
 				<item_version>0</item_version>
 				<item>19</item>
-				<item>23</item>
+				<item>24</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>-1</mMinTripCount>
-			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>-1</mMinLatency>
-			<mMaxLatency>-1</mMaxLatency>
+			<mMinTripCount>1024</mMinTripCount>
+			<mMaxTripCount>1024</mMaxTripCount>
+			<mMinLatency>28672</mMinLatency>
+			<mMaxLatency>28672</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
 			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_57">
 				<port_list class_id="24" tracking_level="0" version="0">
@@ -1472,7 +1472,7 @@
 					<item class_id="28" tracking_level="1" version="0" object_id="_64">
 						<type>0</type>
 						<name>dataflow_in_loop_loop_ctr_encrypt_U0</name>
-						<ssdmobj_id>21</ssdmobj_id>
+						<ssdmobj_id>22</ssdmobj_id>
 						<pins class_id="29" tracking_level="0" version="0">
 							<count>6</count>
 							<item_version>0</item_version>
@@ -1488,7 +1488,7 @@
 								<inst class_id="31" tracking_level="1" version="0" object_id="_67">
 									<type>0</type>
 									<name>dataflow_in_loop_loop_ctr_encrypt_U0</name>
-									<ssdmobj_id>21</ssdmobj_id>
+									<ssdmobj_id>22</ssdmobj_id>
 								</inst>
 							</item>
 							<item class_id_reference="30" object_id="_68">
@@ -1574,7 +1574,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>25</item>
+				<item>26</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -1655,21 +1655,21 @@
 			</second>
 		</item>
 		<item>
-			<first>21</first>
+			<first>22</first>
 			<second>
 				<first>1</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
-			<first>22</first>
+			<first>23</first>
 			<second>
 				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>24</first>
+			<first>25</first>
 			<second>
 				<first>1</first>
 				<second>0</second>
@@ -1694,14 +1694,14 @@
 			</second>
 		</item>
 		<item>
-			<first>23</first>
+			<first>24</first>
 			<second>
 				<first>1</first>
 				<second>2</second>
 			</second>
 		</item>
 		<item>
-			<first>25</first>
+			<first>26</first>
 			<second>
 				<first>1</first>
 				<second>1</second>
@@ -1717,10 +1717,10 @@
 				<count>2</count>
 				<item_version>0</item_version>
 				<item>19</item>
-				<item>23</item>
+				<item>24</item>
 			</basic_blocks>
 			<nodes>
-				<count>8</count>
+				<count>9</count>
 				<item_version>0</item_version>
 				<item>14</item>
 				<item>15</item>
@@ -1730,6 +1730,7 @@
 				<item>20</item>
 				<item>21</item>
 				<item>22</item>
+				<item>23</item>
 			</nodes>
 			<anchor_node>-1</anchor_node>
 			<region_type>16</region_type>

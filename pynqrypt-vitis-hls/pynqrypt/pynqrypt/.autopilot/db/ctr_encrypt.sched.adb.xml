@@ -3,20 +3,20 @@
 
 <trans_list>
 
-<trans id="20" from="1" to="2">
+<trans id="21" from="1" to="2">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="21" from="2" to="3">
+<trans id="22" from="2" to="3">
 <condition id="-1">
 <or_exp><and_exp><literal name="icmp_ln18" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="23" from="3" to="2">
+<trans id="24" from="3" to="2">
 <condition id="-1">
 <or_exp><and_exp><literal name="icmp_ln18" val="0"/>
 </and_exp></or_exp>
@@ -206,12 +206,12 @@ for.cond:4 %br_ln18 = br i1 %icmp_ln18, void %for.inc, void %for.end
 </and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64">
+<Node id="22" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64">
 <![CDATA[
-for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read
+for.inc:2 %call_ln27 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read
 
 ]]></Node>
-<StgValue><ssdm name="call_ln26"/></StgValue>
+<StgValue><ssdm name="call_ln27"/></StgValue>
 </operation>
 
 <operation id="16" st_id="2" stage="1" lat="1">
@@ -222,12 +222,12 @@ for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem,
 </and_exp></or_exp>
 </condition>
 
-<Node id="24" bw="0">
+<Node id="25" bw="0">
 <![CDATA[
-for.end:0 %ret_ln28 = ret
+for.end:0 %ret_ln29 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln28"/></StgValue>
+<StgValue><ssdm name="ret_ln29"/></StgValue>
 </operation>
 </state>
 
@@ -241,31 +241,15 @@ for.end:0 %ret_ln28 = ret
 </and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="0" op_0_bw="0" op_1_bw="0">
+<Node id="20" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc:0 %specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.inc:0 %speclooptripcount_ln20 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024
 
 ]]></Node>
-<StgValue><ssdm name="specloopname_ln20"/></StgValue>
+<StgValue><ssdm name="speclooptripcount_ln20"/></StgValue>
 </operation>
 
-<operation id="18" st_id="3" stage="1" lat="2">
-<core></core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln18" val="0"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="21" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64">
-<![CDATA[
-for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read
-
-]]></Node>
-<StgValue><ssdm name="call_ln26"/></StgValue>
-</operation>
-
-<operation id="19" st_id="3" stage="1" lat="1">
+<operation id="18" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -273,9 +257,41 @@ for.inc:1 %call_ln26 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem,
 </and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="0" op_0_bw="0">
+<Node id="21" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc:2 %br_ln18 = br void %for.cond
+for.inc:1 %specloopname_ln22 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+
+]]></Node>
+<StgValue><ssdm name="specloopname_ln22"/></StgValue>
+</operation>
+
+<operation id="19" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln18" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="60" op_3_bw="64" op_4_bw="96" op_5_bw="128" op_6_bw="64">
+<![CDATA[
+for.inc:2 %call_ln27 = call void @dataflow_in_loop_loop_ctr_encrypt, i128 %gmem, i60 %i, i64 %plaintext_read, i96 %p_read_4, i128 %this_round_keys, i64 %ciphertext_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln27"/></StgValue>
+</operation>
+
+<operation id="20" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln18" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0" op_0_bw="0">
+<![CDATA[
+for.inc:3 %br_ln18 = br void %for.cond
 
 ]]></Node>
 <StgValue><ssdm name="br_ln18"/></StgValue>

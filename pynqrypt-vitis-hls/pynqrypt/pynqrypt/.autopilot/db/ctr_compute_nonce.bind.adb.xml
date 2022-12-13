@@ -64,10 +64,10 @@ entry:2 %p_Result_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i96.i32,
 
 <Node id="6" bw="0" op_0_bw="128">
 <![CDATA[
-entry:3 %ret_ln23 = ret i128 %p_Result_s
+entry:3 %ret_ln24 = ret i128 %p_Result_s
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln23"/></StgValue>
+<StgValue><ssdm name="ret_ln24"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -98,7 +98,7 @@ entry:3 %ret_ln23 = ret i128 %p_Result_s
 </dataflow>
 <dataflow id="17" from="offword_V" to="p_Result_s" fromId="2" toId="4">
 </dataflow>
-<dataflow id="18" from="p_Result_s" to="ret_ln23" fromId="4" toId="5">
+<dataflow id="18" from="p_Result_s" to="ret_ln24" fromId="4" toId="5">
 </dataflow>
 </dataflows>
 

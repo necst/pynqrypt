@@ -152,12 +152,12 @@ entry:1 %p_read_6 = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="13" bw="8" op_0_bw="128">
+<Node id="13" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:8 %trunc_ln628 = trunc i128 %p_read_6
+entry:8 %tmp_i2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 120, i32 127
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln628"/></StgValue>
+<StgValue><ssdm name="tmp_i2"/></StgValue>
 </operation>
 
 <operation id="16" st_id="2" stage="1" lat="1">
@@ -169,10 +169,10 @@ entry:8 %trunc_ln628 = trunc i128 %p_read_6
 
 <Node id="14" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:9 %tmp_1_i2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 8, i32 15
+entry:9 %tmp_1_i3 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 112, i32 119
 
 ]]></Node>
-<StgValue><ssdm name="tmp_1_i2"/></StgValue>
+<StgValue><ssdm name="tmp_1_i3"/></StgValue>
 </operation>
 
 <operation id="17" st_id="2" stage="1" lat="1">
@@ -184,10 +184,10 @@ entry:9 %tmp_1_i2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_
 
 <Node id="15" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:10 %tmp_2_i3 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 16, i32 23
+entry:10 %tmp_2_i4 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 104, i32 111
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2_i3"/></StgValue>
+<StgValue><ssdm name="tmp_2_i4"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -199,10 +199,10 @@ entry:10 %tmp_2_i3 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="16" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:11 %tmp_3_i4 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 24, i32 31
+entry:11 %tmp_3_i5 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 96, i32 103
 
 ]]></Node>
-<StgValue><ssdm name="tmp_3_i4"/></StgValue>
+<StgValue><ssdm name="tmp_3_i5"/></StgValue>
 </operation>
 
 <operation id="19" st_id="2" stage="1" lat="1">
@@ -214,10 +214,10 @@ entry:11 %tmp_3_i4 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="17" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:12 %tmp_4_i5 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 32, i32 39
+entry:12 %tmp_4_i6 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 88, i32 95
 
 ]]></Node>
-<StgValue><ssdm name="tmp_4_i5"/></StgValue>
+<StgValue><ssdm name="tmp_4_i6"/></StgValue>
 </operation>
 
 <operation id="20" st_id="2" stage="1" lat="1">
@@ -229,10 +229,10 @@ entry:12 %tmp_4_i5 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="18" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:13 %tmp_5_i6 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 40, i32 47
+entry:13 %tmp_5_i7 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 80, i32 87
 
 ]]></Node>
-<StgValue><ssdm name="tmp_5_i6"/></StgValue>
+<StgValue><ssdm name="tmp_5_i7"/></StgValue>
 </operation>
 
 <operation id="21" st_id="2" stage="1" lat="1">
@@ -244,10 +244,10 @@ entry:13 %tmp_5_i6 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="19" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:14 %tmp_6_i7 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 48, i32 55
+entry:14 %tmp_6_i8 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 72, i32 79
 
 ]]></Node>
-<StgValue><ssdm name="tmp_6_i7"/></StgValue>
+<StgValue><ssdm name="tmp_6_i8"/></StgValue>
 </operation>
 
 <operation id="22" st_id="2" stage="1" lat="1">
@@ -259,10 +259,10 @@ entry:14 %tmp_6_i7 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="20" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:15 %tmp_7_i8 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 56, i32 63
+entry:15 %tmp_7_i9 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 64, i32 71
 
 ]]></Node>
-<StgValue><ssdm name="tmp_7_i8"/></StgValue>
+<StgValue><ssdm name="tmp_7_i9"/></StgValue>
 </operation>
 
 <operation id="23" st_id="2" stage="1" lat="1">
@@ -274,10 +274,10 @@ entry:15 %tmp_7_i8 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="21" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:16 %tmp_8_i9 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 64, i32 71
+entry:16 %tmp_8_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 56, i32 63
 
 ]]></Node>
-<StgValue><ssdm name="tmp_8_i9"/></StgValue>
+<StgValue><ssdm name="tmp_8_i"/></StgValue>
 </operation>
 
 <operation id="24" st_id="2" stage="1" lat="1">
@@ -289,7 +289,7 @@ entry:16 %tmp_8_i9 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="22" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:17 %tmp_9_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 72, i32 79
+entry:17 %tmp_9_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 48, i32 55
 
 ]]></Node>
 <StgValue><ssdm name="tmp_9_i"/></StgValue>
@@ -304,7 +304,7 @@ entry:17 %tmp_9_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_
 
 <Node id="23" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:18 %tmp_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 80, i32 87
+entry:18 %tmp_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 40, i32 47
 
 ]]></Node>
 <StgValue><ssdm name="tmp_i"/></StgValue>
@@ -319,7 +319,7 @@ entry:18 %tmp_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_re
 
 <Node id="24" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:19 %tmp_10_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 88, i32 95
+entry:19 %tmp_10_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 32, i32 39
 
 ]]></Node>
 <StgValue><ssdm name="tmp_10_i"/></StgValue>
@@ -334,7 +334,7 @@ entry:19 %tmp_10_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="25" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:20 %tmp_11_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 96, i32 103
+entry:20 %tmp_11_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 24, i32 31
 
 ]]></Node>
 <StgValue><ssdm name="tmp_11_i"/></StgValue>
@@ -349,7 +349,7 @@ entry:20 %tmp_11_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="26" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:21 %tmp_12_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 104, i32 111
+entry:21 %tmp_12_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 16, i32 23
 
 ]]></Node>
 <StgValue><ssdm name="tmp_12_i"/></StgValue>
@@ -364,7 +364,7 @@ entry:21 %tmp_12_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 
 <Node id="27" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:22 %tmp_13_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 112, i32 119
+entry:22 %tmp_13_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 8, i32 15
 
 ]]></Node>
 <StgValue><ssdm name="tmp_13_i"/></StgValue>
@@ -377,12 +377,12 @@ entry:22 %tmp_13_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="8" op_0_bw="8" op_1_bw="128" op_2_bw="32" op_3_bw="32">
+<Node id="28" bw="8" op_0_bw="128">
 <![CDATA[
-entry:23 %tmp_14_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_6, i32 120, i32 127
+entry:23 %trunc_ln628 = trunc i128 %p_read_6
 
 ]]></Node>
-<StgValue><ssdm name="tmp_14_i"/></StgValue>
+<StgValue><ssdm name="trunc_ln628"/></StgValue>
 </operation>
 
 <operation id="31" st_id="2" stage="1" lat="1">
@@ -442,7 +442,7 @@ entry:28 %gmem_addr_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i128P1A, i128 %gm
 
 <Node id="29" bw="128" op_0_bw="128" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8">
 <![CDATA[
-entry:24 %p_Result_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %trunc_ln628, i8 %tmp_1_i2, i8 %tmp_2_i3, i8 %tmp_3_i4, i8 %tmp_4_i5, i8 %tmp_5_i6, i8 %tmp_6_i7, i8 %tmp_7_i8, i8 %tmp_8_i9, i8 %tmp_9_i, i8 %tmp_i, i8 %tmp_10_i, i8 %tmp_11_i, i8 %tmp_12_i, i8 %tmp_13_i, i8 %tmp_14_i
+entry:24 %p_Result_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8, i8 %trunc_ln628, i8 %tmp_13_i, i8 %tmp_12_i, i8 %tmp_11_i, i8 %tmp_10_i, i8 %tmp_i, i8 %tmp_9_i, i8 %tmp_8_i, i8 %tmp_7_i9, i8 %tmp_6_i8, i8 %tmp_5_i7, i8 %tmp_4_i6, i8 %tmp_3_i5, i8 %tmp_2_i4, i8 %tmp_1_i3, i8 %tmp_i2
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_s"/></StgValue>
@@ -607,10 +607,10 @@ entry:30 %gmem_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i128P1A, i128 
 
 <Node id="36" bw="0">
 <![CDATA[
-entry:31 %ret_ln26 = ret
+entry:31 %ret_ln27 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln26"/></StgValue>
+<StgValue><ssdm name="ret_ln27"/></StgValue>
 </operation>
 </state>
 </state_list>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'aes_generate_round_keys'
 ================================================================
-* Date:           Tue Dec 13 19:17:22 2022
+* Date:           Tue Dec 13 20:14:38 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        pynqrypt
@@ -39,7 +39,7 @@
         |                                 Instance                                |                             Module                            |   min   |   max   |    min   |    max   | min | max |   Type  |
         +-------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
         |grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46  |aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys  |       82|       82|  0.820 us|  0.820 us|   82|   82|       no|
-        |grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1_fu_54              |aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1              |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
+        |grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1_fu_54              |aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1              |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
         +-------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -74,7 +74,7 @@
     +-------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+------+-------+-----+
     |                                 Instance                                |                             Module                            | BRAM_18K| DSP|  FF  |  LUT  | URAM|
     +-------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+------+-------+-----+
-    |grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1_fu_54              |aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1              |        0|   0|   163|   8780|    0|
+    |grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1_fu_54              |aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1              |        0|   0|   163|   8780|    0|
     |grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46  |aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys  |        0|   0|  8623|  52002|    0|
     +-------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+------+-------+-----+
     |Total                                                                    |                                                               |        0|   0|  8786|  60782|    0|
@@ -106,7 +106,7 @@
     |                                         Name                                         |  FF  | LUT| Bits | Const Bits|
     +--------------------------------------------------------------------------------------+------+----+------+-----------+
     |ap_CS_fsm                                                                             |     4|   0|     4|          0|
-    |grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_177_1_fu_54_ap_start_reg              |     1|   0|     1|          0|
+    |grp_aes_generate_round_keys_Pipeline_VITIS_LOOP_178_1_fu_54_ap_start_reg              |     1|   0|     1|          0|
     |grp_aes_generate_round_keys_Pipeline_loop_aes_generate_round_keys_fu_46_ap_start_reg  |     1|   0|     1|          0|
     |p_round_key_V_reg_130                                                                 |  1408|   0|  1408|          0|
     +--------------------------------------------------------------------------------------+------+----+------+-----------+
