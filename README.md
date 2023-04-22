@@ -68,7 +68,7 @@ If you find this repository useful, please use the following citation:
 ```
 @inproceedings{bertolini2023pynqript,
   title={Co-designing an FPGA-Accelerated Encryption Library With PYNQ: The Pynqrypt Case Study},
-  author={Bertolini, Roberto Alessandro and Carloni, Filippo and \textbf{Conficconi}, \textbf{Davide}},
+  author={Bertolini, Roberto Alessandro and Carloni, Filippo and Conficconi, Davide},
   booktitle={IEEE EUROCON 2023 International Conference on Smart Technologies},
   year={2023}
 }
