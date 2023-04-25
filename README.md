@@ -60,13 +60,11 @@ tester.run_bench_suite()
 # sizes, printing the times along with how much it takes on the CPU
 ```
 
-## Can I trust any of this code for my project?
-No
-
+## Citation
 If you find this repository useful, please use the following citation:
 
 ```
-@inproceedings{bertolini2023pynqript,
+@inproceedings{bertolini2023pynqrypt,
   title={Co-designing an FPGA-Accelerated Encryption Library With PYNQ: The Pynqrypt Case Study},
   author={Bertolini, Roberto Alessandro and Carloni, Filippo and Conficconi, Davide},
   booktitle={IEEE EUROCON 2023 International Conference on Smart Technologies},
